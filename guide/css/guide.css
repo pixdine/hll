@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+html, body{width:100%;height:100%;}
+body{font-family:'NotoSansKR','Malgun Gothic',sans-serif;font-size:13px;font-weight:400;color:#222;letter-spacing:-0.03em;line-height:1.5;-webkit-text-size-adjust:none;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;box-sizing:border-box;-webkit-box-sizing:border-box;word-break:keep-all;word-wrap:break-word;white-space:normal;font-family:'NotoSansKR','Malgun Gothic',sans-serif;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section{display:block;}
+ol, ul, li{list-style:none}
+table{width:100%;border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+hr{height:0;display:none;}
+i, em, address{font-style:normal;}
+strong, b{font-weight:700;}
+sup {font-size:10px;line-height:1;}
+form, fieldset, iframe{display:block;border:0;}
+caption, legend{overflow:hidden;position:absolute;top:-9999px;left:-9999px;width:0;height:0;font-size:0;line-height:0;}
+input, textarea{opacity:1;-webkit-text-fill-color:inherit;}
+input, textarea, select{margin:0;padding:0;font-family:'NotoSansKR','Malgun Gothic',sans-serif;font-size:13px;font-weight:400;color:#222;box-sizing:border-box;-webkit-box-sizing:border-box;line-height:normal;-webkit-appearance:none;appearance:none;outline:none;}
+textarea, select{outline:none;}
+select::-ms-expand{display:none;}
+select:disabled{pointer-events:none;}
+
+button{overflow:visible;display:inline-block;margin:0;padding:0;border:0;background:none;font-family:'NotoSansKR','Malgun Gothic',sans-serif;font-size:13px;font-weight:400;color:#222;line-height:inherit;vertical-align:top;text-decoration:none;cursor:pointer;touch-action:manipulation;}
+button::-moz-focus-inner{padding:0;border:0;}
+button:hover,
+button:focus{color:#000;}
+button span,
+button:after{position:relative;}
+
+a{display:inline-block;color:#222;text-decoration:none;word-break:break-all;cursor:pointer;}
+a:link,
+a:visited,
+a:active,
+a:focus{text-decoration:none;}
+a:hover {text-decoration:none;}
+
+/* Common */
+:root{--vh:100vh}
+
+.wrap{min-width:1280px;}
+.selectbox{overflow:hidden;display:block;position:relative;width:100%;}
+.selectbox select{width:100%;height:50px;padding:0 38px 0 15px;border:1px solid #e9e9e9;border-radius:5px;font-size:13px;line-height:100%;background:#fff url('./images/ico_select.png') no-repeat top 11px right 15px / 10px auto;cursor:pointer;}
+.selectbox select:focus{border-color:#444;background-image:url('./images/ico_select_on.png');}
+.selectbox select:disabled{background-color:#f5f5f5;color:#444;cursor:default;}
+
+.guide_head{display:flex;width:100%;height:100px;background:#212121;align-items:center;}
+.guide_head h1{font-size:24px;font-weight:700;color:#fff;margin-left:40px;}
+.guide_cont{padding:40px;}
+
+.guide_state{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;}
+.page_state label{display:inline-block;margin-right:5px;vertical-align:middle;}
+.page_state .selectbox{display:inline-block;width:100px;vertical-align:middle;}
+.page_state .selectbox select{height:30px;font-size:13px;line-height:28px;}
+.page_count{color:#666;text-align:right;}
+.page_count .ing{color:#f78e16;}
+.page_count .complete{color:#0d7feb;}
+.page_count .modify{color:#80001c;}
+
+.guide_tbl thead th{height:30px;border-right:1px #999 solid;background:#333;color:#fff;text-align:center;}
+.guide_tbl tbody td{min-height:30px;padding:5px 10px;border-right:1px #dbdbdb solid;border-bottom:1px #dbdbdb solid;color:#666;text-align:center;}
+.guide_tbl thead th:last-child,
+.guide_tbl tbody td:last-child{border-right:0;}
+.guide_tbl thead tr:nth-child(2) th:last-child{border-right:1px #999 solid;}
+.guide_tbl tr.comon > td{background:#fff5da;color:#212121;}
+.guide_tbl tr.comon > td:nth-child(9){color:#f78e16}
+.guide_tbl tr.complete > td{background:#def7ff;color:#212121;}
+.guide_tbl tr.complete > td:nth-child(9){color:#1683ff;}
+.guide_tbl tr.hold > td{background:#f6f6f6;color:#ccc;}
+.guide_tbl tr.del > td{background:#f6f6f6;opacity:0.5;text-decoration:line-through;}
+.guide_tbl tr.del a,
+.guide_tbl tr.hold a{pointer-events:none;color:#ccc;text-decoration:none;}
+.guide_tbl tr.modify > td{background:#ffe3f1;color:#80001c;}
+.guide_tbl .tal{text-align:left;}
+.guide_tbl a{color:#222;text-decoration:underline;}
+.line_top td{border-top:2px solid #666;}

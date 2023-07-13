@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>하퍼스 바자 코리아 | Harper's BAZAAR Korea</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+	<div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+		<div id="wrap" class="wrap">
+			<!-- header -->
+			<header id="header" class="header">
+				<div class="header_top">
+					<div class="cont_inner">
+						<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+						<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+						<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
+					</div>
+				</div>
+				<div class="header_bottom">
+					<div class="cont_inner">
+						<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+						<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+						<div class="header_navi">
+							<ul>
+								<li><a href="#">바자 화보</a></li>
+								<li class="line"><a href="#">예술산책</a></li><!-- D: 메뉴 사이 구분할 경우 line 클래스 추가 -->
+								<li><a href="#">FASHION</a></li>
+								<li><a href="#">BEAUTY</a></li>
+								<li><a href="#">ART</a></li>
+								<li><a href="#">SUSTAINABILITY</a></li>
+							</ul>
+						</div>
+						<div class="header_util">
+							<div class="aside">
+								<a href="#">LOGIN</a>
+								<a href="#">SIGNUP</a>
+							</div>
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- //header -->
+
+			<!-- container -->
+			<div id="container" class="container">
+				<div id="content" class="content">
+					<!-- 
+						여기서 부터 해주시면 될거같습니다 
+						<div class="cont_inner">~</div>는 width 1200에 좌우여백 40씩 공통 설정
+					-->
+					<div class="cont_inner">
+						기사내용 입력<br><br>
+
+						1. 인용구 파티클<br/>
+						<div class="tag_quotation">Part1. 서강준이 팬들에게 쓴 손편지 내용은?</div>
+
+						2. 인터뷰 질문/답변 파티클<br/>
+						<div class="tag_interview"><div class="tag_question">오랜만에 화보 촬영하니까 어때요?</div></div>
+						<div class="tag_interview"><div class="tag_answer">모든 게 어색했어요. 메이크업 받을 때도 머리를 만질 때도 새로운 옷을 입을 때도요. ‘내가 지금 여기서 이렇게 있어도 되나?’ 싶은 생각이 자꾸 들었죠. 낯설다는 표현이 더 적절할지도 모르겠네요. 처음 화보 촬영했던 때로 돌아간 것 같았어요. 1년 6개월이라는 시간이 길긴 길었나 봐요.&nbsp;</div></div>
+
+						3. 중간제목 파티클<br/>
+						<div class="ab_sub_heading"><div class="dim" style="display: none;"><br/>&nbsp;</div><div class="dim" style="display: none;">━<br>&nbsp;</div><div class="ab_sub_headingline"><h2>가장 마음에 들었던 아이템은 뭐예요?</h2></div><div class="dim" style="display: none;"><br>&nbsp;</div></div>
+
+						4. 강조문 파티클<br/>
+						<div class="ab_emphasis"><span class="ab_emphasis_dim_lt">「</span><p class="ab_emphasis_content">어떨 때 민간인으로 돌아온 게 실감이 나요?</p><span class="ab_emphasis_dim_rt">」</span></div>
+
+						5. 이미지 파티클<br/>
+						<div class="ab_photo photo_center"><div class="image"><img alt="이미지 캡션 영역" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg"/><span class="mask"></span></div><p class="caption">이미지 캡션 영역</p></div>
+
+						6. 사진묶음 파티클<br/>
+						<div class="tag_photobundle"><img alt="서강준" caption="서강준" index="0" iscoverimage="false" link="" linktarget="" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg" wrappercss="photo_center" wrapperwidth="580px"/><img alt="서강준" caption="서강준" index="1" iscoverimage="false" link="" linktarget="" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/4c858f3c-2d7b-4b93-87d3-c3aa58108611.jpg" wrappercss="photo_center" wrapperwidth="580px"/><img alt="서강준" caption="서강준" index="2" iscoverimage="false" link="" linktarget="" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/39792bbd-dc99-42c5-af2e-34e55c3b8ce6.jpg" wrappercss="photo_center" wrapperwidth="580px"/><img alt="서강준" caption="서강준" index="3" iscoverimage="false" link="" linktarget="" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/3066584f-6f71-4aee-842a-82f25723a97d.jpg" wrappercss="photo_center" wrapperwidth="580px"/></div>
+
+						7. 가로선 파티클<br/>
+						<hr>장르를 특정하진 않아요. 이것저것 다 듣죠. 최근엔 가수 이바다의 ‘러닝 백’이랑 JVKE의 ‘골든 아워’를 다운로드했어요. 
+
+						8. 유튜브 영상 파티클
+						<div class="tag_vod" data-id="https://www.youtube.com/embed/CcT7n007Vuc" data-service="youtube" data-thumPath="" data-ro="" data-rc="" data-autoplay="false" data-mute="false" data-loop="false" data-old-type="" data-option="0"></div>
+
+						9. 인스타그램 파티클<br/>
+						<div class="tag_sns" data-service="instagram" data-type="sns" data-url="https://www.instagram.com/p/CtiX21hv75q/"></div>
+
+						10. HTML TAG 파티클<br/>
+						<div id="htmlTag"><div class="blive-responsive-iframe-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:transparent;"><iframe title="Video and content" class="blive_iframe blive_iframe_responsive" id="blive_3833" allowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen" mozallowfullscreen="true" webkitallowfullscreen mozallowfullscreen scrolling="no" marginheight="0" marginwidth="0" frameborder="0" src="//install.blivenyc.com/speed/landing/campaign/3833/responsive/1/tags/distro,not-integrated" width="" height="551" style="position:absolute; top:0; left:0; margin:0; width:100%; height:100%;"></iframe></div><!-- Embed code support including mute & autoplay settings at blive.nyc/support --></div>
+
+						<br/>
+						<br/>
+
+						와이드형
+						<br/>
+
+						1. 이미지 기본 파티클<br/>
+						<div class="ab_photo photo_center"><div class="image"><img alt="Unsplash" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/8ab0ce23-8698-4fbb-a536-3e8da48b8250.jpg"/><span class="mask"></span></div><p class="caption">Unsplash</p></div>
+
+						<br/>
+							
+						2. 이미지 와이드뷰 파티클<br/>
+						<div class="ab_photo photo_center ab_full"><div class="image"><img alt="Unsplash" src="http://image.jtbcplus.kr/data/contents/jam_photo/202306/22/8ab0ce23-8698-4fbb-a536-3e8da48b8250.jpg"/><span class="mask"></span></div><p class="caption">Unsplash</p></div>
+
+					</div>
+				</div>
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<footer id="footer" class="footer">
+				<div class="footer_top">
+					<div class="cont_inner">
+						<div class="footer_link">
+							<ul>
+								<li><a href="#" target="_blank">매체소개</a></li>
+								<li><a href="#" target="_blank">고객센터</a></li>
+								<li><a href="#" target="_blank">포인트정책</a></li>
+								<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+								<li><a href="#" target="_blank">이용약관</a></li>
+								<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+								<li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+								<li><a href="#" target="_blank">윤리경영</a></li>
+							</ul>
+						</div>
+						<div class="footer_sns">
+							<ul>
+								<li><a href="https://www.facebook.com/bazaarkorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/sure" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
+								<li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="cont_inner">
+						<div class="footer_logo">
+							<img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
+						</div>
+						<div class="footer_info">
+							<address class="addr_wrap">
+								<em>허스트중앙(유)</em>
+								<div class="addr_txt">
+									<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+									<span class="ceo">대표자 : 강주연</span>
+									<br class="pc_br">
+									<span class="num">사업자등록번호 : 104-81-55280</span>
+									<br class="mo_br">
+									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+									<span class="email">이메일 : <a href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
+								</div>
+							</address>
+							<p class="copyright">© 2020 Heast Joongang. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+				<div class="family_wrap">
+					<button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+					<div class="familysite">
+						<div class="cont_inner">
+							<ul class="family">
+								<li><a href="http://www.harpersbazaar.co.kr" target="_blank" title="새창열림"><img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR"></a></li>
+								<li><a href="http://www.elle.co.kr" target="_blank" title="새창열림"><img src="../resources/images/logo_elle.svg" alt="ELLE"></a></li>
+								<li><a href="http://www.cosmopolitan.co.kr" target="_blank" title="새창열림"><img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN"></a></li>
+								<li><a href="http://www.esquirekorea.co.kr" target="_blank" title="새창열림"><img src="../resources/images/logo_esquire.svg" alt="ESQUIRE"></a></li>
+							</ul>
+							<ul class="global">
+								<li><a href="https://www.harpersbazaar.com/" target="_blank" title="새창열림">USA</a></li>
+								<li><a href="https://www.harpersbazaar.com/uk/" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+								<li><a href="https://www.harpersbazaar.com/es/" target="_blank" title="새창열림">SPAIN</a></li>
+								<li><a href="https://www.harpersbazaar.com/nl/" target="_blank" title="새창열림">NETHERLANDS</a></li>
+								<li><a href="https://www.harpersbazaar.com/tw/" target="_blank" title="새창열림">TAWAN</a></li>
+								<li><a href="https://www.harpersbazaar.com/jp/" target="_blank" title="새창열림">JAPAN</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+	<!-- //js -->
+</body>
+</html>

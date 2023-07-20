@@ -92,7 +92,7 @@
 .tag_sns .link_source em { color: #0095F6; display:inline-block; margin-left:4px }  
 
 /* 기사상세 > body > 기사작성자 정보 */
-.atc_dtline_box { padding:80px 0}
+.atc_dtline_box { padding:80px 0; border-top:1px solid #D9D9D9; }
 .atc_dtline_box h3.title {font-family:'Didot'; font-weight:500; font-size:28px; line-height:36px; margin:0px 0 16px}
 .atc_dtline_box .list_credit {font-size:16px; line-height:23px; color:#666}
 .atc_dtline_box .list_credit li {margin-bottom:4px}
@@ -101,9 +101,9 @@
 .atc_dtline_box .list_tag_type_01 li a { display:block; padding:0 20px}
 
 /* 기사상세 > 키워드 */
-.keyword_atc_area {width:792px; margin:0 auto 24px; border-top:1px solid #D9D9D9; padding-top:80px; text-align:center}
+.keyword_atc_area {width:792px; margin:0 auto 24px; padding-top:80px; text-align:center}
 .keyword_atc_area h2 {font-size:28px; text-align:left; line-height: 40px; font-weight:500; margin-bottom:40px}
-.keyword_atc_area .tag_list_box { position:relative}
+.keyword_atc_area .tag_list_box { position:relative; width:calc(100% - 30px);}
 .keyword_atc_list {display:flex; flex-wrap:nowrap; justify-content: space-between; flex-direction:row; margin-bottom:80px}
 .keyword_atc_list li { margin-left:3.03% ; text-align:left}
 .keyword_atc_list li:first-child {margin-left:0}
@@ -113,7 +113,7 @@
 
 /* 기사상세 > 키워드 > 키워드리스트 */
 .tag_list_type01 {margin-bottom:48px; text-align:left; display:flex; flex-direction:row; flex-wrap: wrap  } 
-.tag_list_type01 li {border:1px solid #ccc; white-space:nowrap; font-size:14px;  margin-right:4px; line-height:34px;margin-bottom:12px; box-sizing:border-box}
+.tag_list_type01 li {border:1px solid #ccc; white-space:nowrap; font-size:14px;  margin-right:8px; line-height:34px;margin-bottom:12px; box-sizing:border-box}
 .tag_list_type01 li a { display:block; padding:0 20px; box-sizing:border-box }
 .tag_list_type01 li.on a { background-color: #111; color: #fff;}
 .tag_list_box { overflow:hidden; position:relative;}
@@ -163,7 +163,8 @@
     .photo_third02 div { display:flex; flex-direction:column; align-items:normal; width:48% }
     .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 3% 0}
     .photo_third02 div:nth-child(3) {margin-left:3%; margin-top:0 }
-
+    
+    .keyword_atc_box { margin-right:20px}
     .keyword_atc_area { width:auto; margin-right:-20px; padding-top:61px}
     .keyword_atc_area .tag_list_box { }
     .keyword_atc_area .tag_list_type01 {flex-wrap: nowrap; /*justify-content: space-between;*/ overflow-x:auto;  margin-bottom:32px; -ms-overflow-style: none;} 

@@ -17,6 +17,12 @@
 	src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff");
 	unicode-range: U+000-5ff,U+06??
 }
+@font-face {
+	font-family: Gotham Book;
+	font-style: normal;
+	font-weight: 400;
+	src: url(../font/Gotham-Book.woff) format("woff");
+}
 
 /* reset */
 html, body{width:100%;height:100%;font-size:10px;}

@@ -7,7 +7,8 @@
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-top: 24px;}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px; margin-top: 14px;line-height: 23px;padding-bottom: 48px }
 .atc_wrap .atc_header .txt_meta {text-align: center;display: flex;justify-content: center; align-items: center }
-.atc_wrap .atc_header .txt_meta .profile_pic {display: inline-block;width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box;}
+.atc_wrap .atc_header .txt_meta .profile_pic {display: inline-block;width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden}
+.atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
 .atc_wrap .atc_header .txt_meta em,.atc_header .txt_meta span { font-family: 'Gotham Book';font-size: 14px; color: #666; line-height: 1;font-weight: 400;}
 .atc_wrap .atc_header .txt_meta span a { color: #666 }
 .atc_wrap .atc_header .txt_meta .time { position: relative; font-size: 14px; padding-left: 12px; line-height: 1;margin-left: 12px}
@@ -15,7 +16,7 @@
 .atc_header_img { margin:0 auto; text-align:center; display:none}
 /* 기사상세 > 헤더 > 프로필 기본사진 */
 .btn_ico_picbig { display:inline-block; width:48px; height:48px; border-radius:48px 48px; background:#fff url('../images/btn_expand.svg') center center no-repeat; overflow:hidden}
-.btn_ico_picbig img { width:100%; height:100%; object-fit: cover; }
+.btn_ico_picbig img { width:100%; height:100%;  }
 
 /* 기사상세 > 헤더 > wide */
 .container .content .atc_wrap.wide { padding-top:0}
@@ -92,7 +93,7 @@
 .tag_sns .link_source em { color: #0095F6; display:inline-block; margin-left:4px }  
 
 /* 기사상세 > body > 기사작성자 정보 */
-.atc_dtline_box { padding:80px 0; border-top:1px solid #D9D9D9; }
+.atc_dtline_box { padding:80px 0; border-bottom:1px solid #D9D9D9; }
 .atc_dtline_box h3.title {font-family:'Didot'; font-weight:500; font-size:28px; line-height:36px; margin:0px 0 16px}
 .atc_dtline_box .list_credit {font-size:16px; line-height:23px; color:#666}
 .atc_dtline_box .list_credit li {margin-bottom:4px}
@@ -102,7 +103,8 @@
 
 /* 기사상세 > 키워드 */
 .keyword_atc_area {width:792px; margin:0 auto 24px; padding-top:80px; text-align:center}
-.keyword_atc_area h2 {font-size:28px; text-align:left; line-height: 40px; font-weight:500; margin-bottom:40px}
+.keyword_atc_area .tit_wrap { margin-bottom:40px}
+.keyword_atc_area .tit_wrap h2 {font-size:28px; text-align:left; line-height: 40px; font-weight:500;}
 .keyword_atc_area .tag_list_box { position:relative; width:calc(100% - 30px);}
 .keyword_atc_list {display:flex; flex-wrap:nowrap; justify-content: space-between; flex-direction:row; margin-bottom:80px}
 .keyword_atc_list li { margin-left:3.03% ; text-align:left}
@@ -166,7 +168,7 @@
     
     .keyword_atc_box { margin-right:20px}
     .keyword_atc_area { width:auto; margin-right:-20px; padding-top:61px}
-    .keyword_atc_area .tag_list_box { }
+    .keyword_atc_area .tag_list_box { width:auto; }
     .keyword_atc_area .tag_list_type01 {flex-wrap: nowrap; /*justify-content: space-between;*/ overflow-x:auto;  margin-bottom:32px; -ms-overflow-style: none;} 
     .keyword_atc_area .tag_list_type01::-webkit-scrollbar {display:none}
     .keyword_atc_area .tag_list_type01 li {display: flex; width:auto}

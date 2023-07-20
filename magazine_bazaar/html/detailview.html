@@ -634,10 +634,9 @@
               var atcView = {
                     wrap: document.querySelector('#container'),
                     init: function () {
-                        atcView.KeywordMoreBt.init();
-                       atcView.KeywordMore.init();
+                    //   atcView.KeywordMoreBt.init();
+                     //  atcView.KeywordMore.init();
                        atcView.Slider01.init();
-                       if(isMobile.length <= 1 ) atcView.Slider02.init();
                        
                     },
 
@@ -698,23 +697,7 @@
                        }
                    },
 
-                   Slider02: {
-                       init: function () {
-                           var Slider02 = $('[data-slide="slider-type02"]');
-                           if (Slider02.length < 1 ) return false;
-                           Slider02.each(function () {
-                               var $this = $(this);
-                               if ($this.find('.swiper-slide').length > 1) {
-                                   var smThumbSlider = new Swiper($this, {
-                                    slidesPerView: "auto",
-                                    observer: true,
-                                    observeParents: true,
-                                    watchOverflow: true,
-                                   });
-                               }
-                           });
-                       }
-                   },   
+                  
                }
 
                // 전체 실행

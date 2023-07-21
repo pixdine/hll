@@ -4,7 +4,7 @@
 
 /* 기사상세 헤더 */
 .atc_wrap .atc_header {text-align: center}
-.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-top: 24px;}
+.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px;}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px; margin-top: 14px;line-height: 23px;padding-bottom: 48px }
 .atc_wrap .atc_header .txt_meta {text-align: center;display: flex;justify-content: center; align-items: center }
 .atc_wrap .atc_header .txt_meta .profile_pic {display: inline-block;width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden}
@@ -24,9 +24,9 @@
 .container .content .atc_wrap.wide .atc_header {position:relative; margin:0 -40px}
 .container .content .atc_wrap.wide .atc_header img {max-width:none; width:100%}
 .atc_wrap.wide .atc_header_img { display:block}
-.atc_wrap.wide .atc_header_info { position:absolute; left:50%; bottom:120px; transform: translateX(-50%);  z-index:1; width:1200px; text-align:left}
-.atc_wrap.wide .txt_category, .atc_wrap.wide .atc_header_info .tit_article, .atc_wrap.wide .atc_header_info .txt_excerpt { text-align:left; color:#fff}
-.atc_wrap.wide .atc_header_info .txt_meta {position:absolute; right:0; bottom:0;}
+.atc_wrap.wide .atc_header_info { position:absolute; transform: translateX(-50%); left:50%; bottom:120px;  width:1200px;}
+.atc_wrap.wide .txt_category, .atc_wrap.wide .atc_header_info .tit_article, .atc_wrap.wide .atc_header_info .txt_excerpt { color:#fff}
+.atc_wrap.wide .txt_category { margin-bottom:24px}
 .atc_wrap.wide .atc_header .atc_header_info .txt_meta span a, .atc_wrap.wide .atc_header .atc_header_info .txt_meta em  {color:#fff}
 .atc_wrap.wide .atc_header_info .txt_meta .time {color:#fff}
 
@@ -36,11 +36,11 @@
 .ab_photo_1200 {position: relative; width:calc(100% + 52%); max-width: 1200px; margin: 0 auto 24px -26%;}
 .ab_photo_1200 img {width: 100%}
 
-.atc_body { font-weight:16px; line-height:32px; letter-spacing: 0.08em; font-weight:400}
+.atc_body { font-size:16px; line-height:32px; letter-spacing: 0.08em; font-weight:400}
 body.is_mobile .atc_body {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin: 0 auto 24px;} /* 기사상세 > 본문 이미지 792 */
 .atc_body .ab_photo img { width: 100%}
-.atc_body .caption {font-size: 14px;line-height: 24px;letter-spacing: 1.28px;color: #666;font-weight: 400;text-align: left;margin-top: 12px}
+.atc_body .caption {font-size: 14px;line-height: 24px;letter-spacing:0.08em;color: #666;font-weight: 400;text-align: left;margin-top: 12px}
 
 /* 기사상세 > body > 사진 두장씩 */
 .photo_dual {width: 100%; margin: 0 auto 24px;display: flex;align-content: stretch;justify-content: space-between;}
@@ -139,17 +139,15 @@ body.is_mobile .atc_body {line-height:28px; letter-spacing: -0.03em;}
     .container .content .atc_wrap {margin-bottom:56px;}
     .container .content .atc_wrap.wide .cont_inner {max-width:none; width:100%; padding:0 20px}
     .atc_wrap .atc_header {text-align: center;}
-
-    .atc_wrap .atc_header .tit_article {font-size:24px;line-height:35px; margin-top: 24px;}
+    .atc_wrap .atc_header .txt_category {margin-bottom:4%}
+    .atc_wrap .atc_header .tit_article {font-size:24px;line-height:35px; }
     .atc_wrap .atc_header .txt_excerpt {font-size: 14px; margin-top: 10px;line-height: 20px; padding-bottom:35px }
     .atc_wrap .atc_body {max-width:none}
 
-    .atc_wrap.wide .atc_header {margin:0 -20px; text-align: center;}
-    .atc_wrap.wide .atc_header_info {width:94%; bottom:8%; text-align:center;  }
-    .atc_wrap.wide .txt_category, .atc_wrap.wide .atc_header_info .tit_article, .atc_wrap.wide .atc_header_info .txt_excerpt {text-align:center; }
-    .atc_wrap.wide .atc_header_info .txt_meta { position: relative; text-align: center;}
+    .atc_wrap.wide .atc_header {margin:0 -20px;}
+    .atc_wrap.wide .atc_header_info {width:88%; bottom:8%; }
     .atc_wrap.wide .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap.wide .atc_header .txt_meta .time { font-size:12px; line-height:14px}
-    .atc_wrap.wide .atc_header_info .txt_excerpt {padding-bottom:30px}
+    .atc_wrap.wide .atc_header_info .txt_excerpt {padding-bottom:5%}
 
     .ab_photo_1200 {position: relative; left:0;width:100%; margin: 0 auto 24px;}
 

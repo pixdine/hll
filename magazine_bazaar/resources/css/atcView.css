@@ -40,7 +40,7 @@
 body.is_mobile .atc_body {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin: 0 auto 24px;} /* 기사상세 > 본문 이미지 792 */
 .atc_body .ab_photo img { width: 100%}
-.atc_body .caption {font-size: 14px;line-height: 24px;letter-spacing:0.08em;color: #666;font-weight: 400;text-align: left;margin-top: 12px}
+.atc_body .caption {font-size: 14px;line-height: 24px;letter-spacing:0.08em;font-weight: 400;text-align: left;margin-top: 12px}
 
 /* 기사상세 > body > 사진 두장씩 */
 .photo_dual {width: 100%; margin: 0 auto 24px;display: flex;align-content: stretch;justify-content: space-between;}

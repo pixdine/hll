@@ -278,77 +278,75 @@ function issueAtcList(){
 
 //full popup
 const popup = {
-	open: function(_target, _type){
-		switch (_type) {
-			case 'popup':
-				$('[data-popup="' + _target + '"]').addClass('open');
-				$('body').addClass('lockbody');
+    open: function(_target, _type){
+        switch (_type) {
+            case 'popup':
+                $('[data-popup="' + _target + '"]').addClass('open');
+                $('body').addClass('lockbody');
 
-				$('[data-popup]').click(function(){
-					if($(this).hasClass('open')){
-						$(this).removeClass('open');
-						$('body').removeClass('lockbody');
-					}
-				});
+                $('[data-popup]').click(function(){
+                    if($(this).hasClass('open')){
+                        $(this).removeClass('open');
+                        $('body').removeClass('lockbody');
+                    }
+                });
 
-				$('.popup_inner').click(function(e){
-					e.stopPropagation();
-				});
-				
-				break;
-			case 'alert':
-				$('[data-alert="' + _target + '"]').addClass('open');
-				$('body').addClass('lockbody');
+                $('.popup_inner').click(function(e){
+                    e.stopPropagation();
+                });
+                
+                break;
+            case 'alert':
+                $('[data-alert="' + _target + '"]').addClass('open');
+                $('body').addClass('lockbody');
 
-				$('[data-alert]').click(function(){
-					if($(this).hasClass('open')){
-						$(this).removeClass('open');
-						$('body').removeClass('lockbody');
-					}
-				});
+                $('[data-alert]').click(function(){
+                    if($(this).hasClass('open')){
+                        $(this).removeClass('open');
+                        $('body').removeClass('lockbody');
+                    }
+                });
 
-				$('.popup_alert_inner').click(function(e){
-					e.stopPropagation();
-				});
+                $('.popup_alert_inner').click(function(e){
+                    e.stopPropagation();
+                });
 
-				break;
-			case 'layer':
-				$('[data-layer="' + _target + '"]').addClass('open');
+                break;
+            case 'layer':
+                $('[data-layer="' + _target + '"]').addClass('open');
 
-				$('[data-layer]').click(function(){
-					if($(this).hasClass('open')){
-						$(this).removeClass('open');
-					}
-				});
+                $('[data-layer]').click(function(e){
+                    e.stopPropagation();
+                });
 
-				break;
-			default:
-				console.log('pop open default !');
-				break;
-		}
-	}, 
-	close: function(_target, _type){
-		switch (_type) {
-			case 'popup':
-				$('[data-popup="' + _target + '"]').removeClass('open');
-				$('body').removeClass('lockbody');
+                break;
+            default:
+                console.log('pop open default !');
+                break;
+        }
+    }, 
+    close: function(_target, _type){
+        switch (_type) {
+            case 'popup':
+                $('[data-popup="' + _target + '"]').removeClass('open');
+                $('body').removeClass('lockbody');
 
-				break;
-			case 'alert':
-				$('[data-alert="' + _target + '"]').removeClass('open');
-				$('body').removeClass('lockbody');
+                break;
+            case 'alert':
+                $('[data-alert="' + _target + '"]').removeClass('open');
+                $('body').removeClass('lockbody');
 
-				break;
-			case 'layer':
-				$('[data-layter="' + _target + '"]').removeClass('open');
+                break;
+            case 'layer':
+                $('[data-layer="' + _target + '"]').removeClass('open');
 
-				break;
-			default:
-				console.log('pop close default !');
-				break;
-		}
+                break;
+            default:
+                console.log('pop close default !');
+                break;
+        }
 
-	}
+    }
 }
 
 //세트 모듈 (추천 인기 기사 모듈

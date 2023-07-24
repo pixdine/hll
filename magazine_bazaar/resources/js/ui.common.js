@@ -127,8 +127,7 @@ function kv_swiper(){
 	}
 	$('.kv_swiper').each(function(i) {
 		$(this).attr('data-index',i)
-	  
-   
+
 		kv_Swipers[i] = new Swiper('.kv_swiper[data-index="'+i+'"]', {
 			effect : 'fade',
 			autoplay: {

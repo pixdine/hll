@@ -256,7 +256,7 @@
 
 	.scroll_atc_list ul{display:block;width:100%;overflow-x:auto;margin:0 -20px;padding:0 20px;font-size:0;white-space:nowrap;}
 	.scroll_atc_list ul::-webkit-scrollbar{display:none;}
-	.scroll_atc_list li{display:inline-block;width:292px;margin-right:12px;vertical-align:top;}
+	.scroll_atc_list li{display:inline-block;width:87.115%;margin-right:12px;vertical-align:top;}
 	.scroll_atc_list li:last-child{margin-right:0;}
 	.scroll_atc_list li .imgbox{height:0;padding-top:62.672%;}
 	.scroll_atc_list .control{display:none;}

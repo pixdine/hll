@@ -152,7 +152,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     
     .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time { font-size:12px;}
     .container .content .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
-    .atc_wrap.wide .atc_header_info {width:88%; bottom:8%; }
+    .atc_wrap.wide .atc_header_info {width:88%; bottom:8%; background:pink}
     
     .atc_wrap.wide .atc_header_info .txt_excerpt {padding-bottom:5%}
 

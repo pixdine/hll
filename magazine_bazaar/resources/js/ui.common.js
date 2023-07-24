@@ -9,6 +9,7 @@ $(document).ready(function(){
 	cate_swiper();
 	scrollAtcList();
 	issueAtcList();
+	setAtcList();
 
 	/* follow pop */
 	$('[data-popup-open]').on('click', function(e) {

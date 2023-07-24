@@ -12,7 +12,7 @@
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
 .atc_wrap .atc_header .txt_meta em,.atc_header .txt_meta span { font-family: 'Gotham Book'; font-size: 14px; color: #666; line-height:1.5;font-weight: 400;}
 .atc_wrap .atc_header .txt_meta em { margin-right:4px; background:lime; vertical-align:middle; }
-.atc_wrap .atc_header .txt_meta span a { color: #666 ; line-height:1.5em; vertical-align:middle;  background:yellow}
+.atc_wrap .atc_header .txt_meta span a { color: #666 ; line-height:1.5em; vertical-align:middle;  background:red}
 .atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px;; vertical-align:middle; background:blue; vertical-align:middle; }
 .atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:50%; transform:translateY(-50%); width:1px; height: 15px;background: #ccc; opacity: .6;}
 

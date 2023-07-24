@@ -15,21 +15,19 @@
 <body>
 	<div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
 		<div id="wrap" class="wrap">
-			<div class="banner" style="height:100px;background:#d4e0fd;text-align:center;line-height:100px;">구글배너</div>
-
 			<!-- header -->
 			<header id="header" class="header main"><!-- D: 메인일 때 main 클래스 추가 -->
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
-							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, MO에서 노출) -->
 						</div>
 					</div>
 					<div class="header_bottom">
 						<div class="cont_inner">
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인과 PC 서브에서 노출, MO에서 미노출) -->
 							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
 							<div class="header_navi">
 								<ul>
@@ -43,10 +41,10 @@
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a>
+									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인과 PC 서브에서 노출, MO에서 미노출) -->
 							</div>
 						</div>
 					</div>
@@ -67,15 +65,8 @@
 										<div class="itembox">
 											<a href="#">
 												<div class="imgbox">
-													<!-- 
-														D: PC, 모바일일 때 다른 비율의 이미지가 사용되어야 하는데 개발에서 어떻게 작업하실지 몰라서 퍼블에서 우선 테스트용으로 아래와 같이 넣었습니다.
-														만약 모바일 버전(768px)에서 이미지 주소를 다시 불러오는걸로 처리하신다면 아래 picture태그 없이 그냥 <img src=""> 로 사용하셔도 됩니다.
-													-->
-													<picture>
-														<!-- D: srcset="모바일 이미지 경로", src="PC 이미지 경로" -->
-														<source srcset="../resources/images/temp/temp_visual01_mo.jpg" media="(max-width:768px)"><!-- D: MO 세로로 긴 직사각형 이미지 -->
-														<img src="../resources/images/temp/temp_visual01.jpg" alt=""><!-- D: PC 가로로 긴 직사각형 이미지 -->
-													</picture>
+													<img src="../resources/images/temp/temp_visual01.jpg" class="pc" alt=""><!-- D: PC에서 노출 - 가로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_visual01_mo.jpg" class="mo" alt=""><!-- MO에서 노출 - 세로로 긴 직사각형 이미지 -->
 												</div>
 												<div class="txtbox">
 													<p class="tit">1924년 탄생한 다미아니는 클래식하면서도 독창적인 디자인을 추구하는 이탈리아 하이 주얼리 브랜드다</p>
@@ -88,10 +79,8 @@
 										<div class="itembox">
 											<a href="#">
 												<div class="imgbox">
-													<picture>
-														<source srcset="../resources/images/temp/temp_visual02_mo.jpg" media="(max-width:768px)">
-														<img src="../resources/images/temp/temp_visual02.jpg" alt="">
-													</picture>
+													<img src="../resources/images/temp/temp_visual02.jpg" class="pc" alt="">
+													<img src="../resources/images/temp/temp_visual02_mo.jpg" class="mo" alt="">
 												</div>
 												<div class="txtbox">
 													<p class="tit">구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션</p>
@@ -104,10 +93,8 @@
 										<div class="itembox">
 											<a href="#">
 												<div class="imgbox">
-													<picture>
-														<source srcset="../resources/images/temp/temp_visual03_mo.jpg" media="(max-width:768px)">
-														<img src="../resources/images/temp/temp_visual03.jpg" alt="">
-													</picture>
+													<img src="../resources/images/temp/temp_visual03.jpg" class="pc" alt="">
+													<img src="../resources/images/temp/temp_visual03_mo.jpg" class="mo" alt="">
 												</div>
 												<div class="txtbox">
 													<p class="tit">로제의 내일을 빛나게 만드는 것들</p>
@@ -131,42 +118,6 @@
 						</div>
 					</div>
 					<!-- //메인 슬라이드형 배너 모듈 -->
-
-					<!-- 메인 풀이미지형 배너 모듈 -->
-					<div class="kv_full">
-						<!-- D: 단일 이미지 등록 -->
-						<div class="itembox">
-							<a href="javascriptt:void(0);">
-								<div class="imgbox">
-									<!--
-										D: PC, 모바일일 때 다른 비율의 이미지가 사용되어야 하는데 개발에서 어떻게 작업하실지 몰라서 퍼블에서 우선 테스트용으로 아래와 같이 넣었습니다.
-										만약 모바일 버전(768px)에서 이미지 주소를 다시 불러오는걸로 처리하신다면 아래 picture태그 없이 그냥 <img src=""> 로 사용하셔도 됩니다.
-									-->
-									<picture>
-										<!-- D: srcset="모바일 이미지 경로", src="PC 이미지 경로" -->
-										<source srcset="../resources/images/temp/temp_visual04_mo.jpg" media="(max-width:768px)"><!-- D: MO 세로로 긴 직사각형 이미지 -->
-										<img src="../resources/images/temp/temp_visual04.jpg" alt=""><!-- D: PC 세로로 긴 직사각형 이미지 -->
-									</picture>
-								</div>
-								<div class="txtbox">
-									<div class="area">
-										<p class="tit">검게 태닝한 도나텔라 베르사체를 인터뷰한다는 건 그녀의 강력한 영향력에 압도당하는 일이나 다름이 없다</p>
-										<p class="txt">탈색한 금발머리, 환한 고양이 미소, 하이힐보다 높은 하이힐, 완벽하게 손질된 손가락에 끼워진 알사탕 크기의 다이아몬드는 그녀를 상징하는 트레이드마크다. 그것은 도나텔라와 베르사체에 대해 누구나 상상할 수 있는 이미지이기도 하다.</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<!-- //메인 풀이미지형 배너 모듈 -->
-
-					<!-- 메인 영상형 배너 모듈 -->
-					<div class="kv_video">
-						<div class="itembox">
-							<iframe video src="https://player.vimeo.com/video/764012741?autoplay=1&loop=1&title=0&background=1"></iframe>
-							<a href="#" class="link"><span class="blind">내용보기</span></a>
-						</div>
-					</div>
-					<!-- //메인 영상형 배너 모듈 -->
 
 					<!-- 패션 (카테고리별 기사 모듈 타입2) -->
 					<!-- D: pc와 mo 분기처리 필요 -->
@@ -518,14 +469,8 @@
 											<a href="#">
 												<div class="num">01</div>
 												<div class="imgbox">
-													<!-- 
-														D: PC, 모바일일 때 다른 비율의 이미지가 사용되어야 하는데 개발에서 어떻게 작업하실지 몰라서 퍼블에서 우선 테스트용으로 아래와 같이 넣었습니다.
-														만약 모바일 버전(768px)에서 이미지 주소를 다시 불러오는걸로 처리하신다면 아래 picture태그 없이 그냥 <img src=""> 로 사용하셔도 됩니다.
-													-->
-													<picture>
-														<source srcset="../resources/images/temp/temp_popular01_b.jpg" media="(max-width:768px)"><!-- D: MO 정사각형 이미지 -->
-														<img src="../resources/images/temp/temp_popular01_a.jpg" alt=""><!-- D: PC 세로로 긴 직사각형 이미지 -->
-													</picture>
+													<img src="../resources/images/temp/temp_popular01_a.jpg" class="pc" alt=""><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_popular01_b.jpg" class="mo" alt=""><!-- MO에서 노출 - 정사각형 이미지 -->
 												</div>
 												<div class="txtbox">
 													<span class="cate">CELEB</span>
@@ -539,10 +484,8 @@
 											<a href="#">
 												<div class="num">02</div>
 												<div class="imgbox">
-													<picture>
-														<source srcset="../resources/images/temp/temp_popular02_b.jpg" media="(max-width:768px)">
-														<img src="../resources/images/temp/temp_popular02_a.jpg" alt="">
-													</picture>
+													<img src="../resources/images/temp/temp_popular02_a.jpg" class="pc" alt="">
+													<img src="../resources/images/temp/temp_popular02_b.jpg" class="mo" alt="">
 												</div>
 												<div class="txtbox">
 													<span class="cate">FASHION</span>
@@ -556,10 +499,8 @@
 											<a href="#">
 												<div class="num">03</div>
 												<div class="imgbox">
-													<picture>
-														<source srcset="../resources/images/temp/temp_popular03_b.jpg" media="(max-width:768px)">
-														<img src="../resources/images/temp/temp_popular03_a.jpg" alt="">
-													</picture>
+													<img src="../resources/images/temp/temp_popular03_a.jpg" class="pc" alt="">
+													<img src="../resources/images/temp/temp_popular03_b.jpg" class="mo" alt="">
 												</div>
 												<div class="txtbox">
 													<span class="cate">FASHION</span>
@@ -804,7 +745,7 @@
 						<div class="cont_inner">
 							<!-- 타이틀 -->
 							<div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
-								<h2 class="tit">바자의 픽 실패 없이 다이어트하기. 하루에 당 20g 바자의 픽 실패 없이 다이어트하기. 하루에 당 20g 바자의 픽 실패 없이 다이어트하기. 하루에 당 20g</h2>
+								<h2 class="tit">바자의 픽 실패 없이 다이어트하기. 텍스트 길어질 경우 말줄임 처리 텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리</h2>
 								<p class="hashtag">#다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트</p>
 								<a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
 							</div>

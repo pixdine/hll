@@ -8,6 +8,8 @@
 .kv_swiper .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:712px;}
 .kv_swiper .imgbox:after{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:50%;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%);}
 .kv_swiper .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.kv_swiper .imgbox img.pc{display:block;}
+.kv_swiper .imgbox img.mo{display:none;}
 .kv_swiper .txtbox{position:absolute;bottom:90px;left:50%;transform:translateX(-50%);width:100%;padding:0 17%;opacity:0;transition:all ease 2s 0s;}
 .kv_swiper .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:#fff;text-align:center;}
 .kv_swiper .txtbox .txt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;margin-top:8px;font-size:16px;font-weight:400;line-height:23px;color:#fff;text-align:center;}
@@ -36,6 +38,8 @@
 .kv_full .imgbox{overflow:hidden;position:relative;width:100%;}
 .kv_full .imgbox:after{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:50%;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.4) 100%);}
 .kv_full .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.kv_full .imgbox img.pc{display:block;}
+.kv_full .imgbox img.mo{display:none;}
 .kv_full .txtbox{position:absolute;left:0;right:0;top:0;bottom:0;max-width:872px;margin:0 auto;padding:40% 40px 56px;text-align:center;}
 .kv_full .txtbox .area{position:sticky;top:50vh;transform:translateY(-50%);}
 .kv_full .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:#fff;}
@@ -122,6 +126,8 @@
 .top3_atc_list li .num{margin-bottom:10px;font-family:Didot;font-size:56px;line-height:72px;color:#111;}
 .top3_atc_list li:first-of-type{margin-left:0;}
 .top3_atc_list li .imgbox{padding-top:133.334%;}
+.top3_atc_list li .imgbox img.pc{display:block;}
+.top3_atc_list li .imgbox img.mo{display:none;}
 
 /* 4단 모듈 (최신 소식 놓치지 마세요) */
 .issue_atc_wrap{overflow:hidden;margin-bottom:180px;}
@@ -197,6 +203,8 @@
 	.kv_slide_wrap{margin-bottom:20px;}
 	.kv_slide_wrap .cont_inner{padding:0;}
 	.kv_swiper .imgbox{padding-top:160%;}
+	.kv_swiper .imgbox img.pc{display:none;}
+	.kv_swiper .imgbox img.mo{display:block;}
 	.kv_swiper .txtbox{padding:0 24px;}
 	.kv_swiper .txtbox .tit{font-size:24px;line-height:36px;}
 	.kv_swiper .txtbox .txt{font-size:14px;line-height:20px;}
@@ -211,12 +219,13 @@
 	.kv_full .txtbox{padding:70% 24px 20px;}
 	.kv_full .txtbox .tit{font-size:24px;line-height:36px;}
 	.kv_full .txtbox .txt{font-size:14px;line-height:20px;}
+	.kv_full .imgbox{height:100vh;}
+	.kv_full .imgbox img.pc{display:none;}
+	.kv_full .imgbox img.mo{display:block;}
 
 	.kv_video{overflow:hidden;height:600px;margin-bottom:20px;}
 	.kv_video .itembox{height:100%;padding:0;}
 	.kv_video .itembox iframe{width:1080px;/* height:620px; */height:605px;left:50%;transform:translateX(-50%);overflow:hidden;}
-
-	.kv_full .imgbox{height:100vh;}
 
 	.atcbox .cate{font-size:10px;}
 	.atcbox .txtbox{margin-top:14px;}
@@ -257,6 +266,8 @@
 	.top3_atc_list li{overflow:hidden;width:87.113%;margin-left:12px;}
 	.top3_atc_list li .num{margin-bottom:8px;font-size:40px;line-height:52px;}
 	.top3_atc_list li .imgbox{padding-top:100%;}
+	.top3_atc_list li .imgbox img.pc{display:none;}
+	.top3_atc_list li .imgbox img.mo{display:block;}
 	.top3_atc_list li .txtbox .tit{height:46px;font-size:16px;line-height:23px;}
 
 	.issue_atc_wrap{margin-bottom:80px;}

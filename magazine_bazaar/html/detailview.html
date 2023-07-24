@@ -1,96 +1,112 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>하퍼스 바자 코리아 | Harper's BAZAAR Korea</title>
-    <meta name="format-detection" content="telephone=no">
-    <!-- css, Jquery -->
-    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="../resources/css/module.css" />
-    <link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /> <!-- 기사상세 파티클 css > 기사상세에서만 로드합니다-->
-    <script src="../resources/js/jquery-3.6.0.min.js"></script>
-    <!-- //css, Jquery -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>하퍼스 바자 코리아 | Harper's BAZAAR Korea</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /> <!-- D: 기사상세 파티클 css > 기사상세에서만 로드합니다-->
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
 </head>
-
 <body>
-    <div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-        <div id="wrap" class="wrap">
-            <!-- header -->
-            <header id="header" class="header view"><!-- D: 기사상세, 이벤트 상세일 경우 view 클래스 추가 -->
-                <div class="header_wrap">
-                    <div class="header_top">
-                        <div class="cont_inner">
-                            <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a>
-                            </h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
-                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴
-                                    열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-                            <button type="button" class="btn_search"><span
-                                    class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
-                        </div>
-                    </div>
-                    <div class="header_bottom">
-                        <div class="cont_inner">
-                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴
-                                    열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
-                            <strong class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg"
-                                        alt="BAZAAR"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
-                            <div class="header_navi">
-                                <ul>
-                                    <li><a href="#">바자 화보</a></li>
-                                    <li class="line"><a href="#">예술산책</a></li><!-- D: 메뉴 사이 구분할 경우 line 클래스 추가 -->
-                                    <li><a href="#">FASHION</a></li>
-                                    <li><a href="#">BEAUTY</a></li>
-                                    <li><a href="#">ART</a></li>
-                                    <li><a href="#">SUSTAINABILITY</a></li>
-                                </ul>
-                            </div>
-                            <div class="header_util">
-                                <div class="aside">
-                                    <a href="#">LOGIN</a>
-                                    <a href="#">SIGNUP</a>
-                                </div>
-                                <button type="button" class="btn_search"><span
-                                        class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- D: 플로팅바 영역 -->
-                    <div class="floating_bar">
-                        <div class="cont_inner">
-                            <div class="detail_info">
-                                <!-- 브레드크럼 -->
-                                <div class="breadcrumb">
-                                    <a href="#" class="home">HOME</a>
-                                    <a href="#" class="cate_dep">FASHION</a>
-                                    <a href="#" class="cate_dep">패션 뉴스</a>
-                                </div>
-                                <!-- //브레드크럼 -->
-                                <!-- 기사 타이틀 -->
-                                <div class="txtbox">
-                                    <p class="tit">워터밤 권은비, 예리도 입었다! 아이코닉 한 비키니부터 스윔 슈트까지! #명품네컷</p>
-                                </div>
-                                <!-- //기사 타이틀 -->
-                                <!-- 스크랩, 공유하기 -->
-                                <div class="sharebox">
-                                    <button type="button" class="btn_ico scrap"><span
-                                            class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-                                    <button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
-                                </div>
-                                <!-- //스크랩, 공유하기 -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //D: 플로팅바 영역 -->
-                </div>
-            </header>
-            <!-- //header -->
-            <!-- container -->
-            <div id="container" class="container">
-                <div id="content" class="content">
+	<div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+		<div id="wrap" class="wrap">
+			<!-- header -->
+			<header id="header" class="header view"><!-- D: 기사상세, 이벤트 상세일 경우 view 클래스 추가 -->
+				<div class="header_wrap">
+					<div class="header_top">
+						<div class="cont_inner">
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
+						</div>
+					</div>
+					<div class="header_bottom">
+						<div class="cont_inner">
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+							<div class="header_navi">
+								<ul>
+									<li><a href="#">바자 화보</a></li>
+									<li class="line"><a href="#">예술산책</a></li><!-- D: 메뉴 사이 구분할 경우 line 클래스 추가 -->
+									<li><a href="#">FASHION</a></li>
+									<li><a href="#">BEAUTY</a></li>
+									<li><a href="#">ART</a></li>
+									<li><a href="#">SUSTAINABILITY</a></li>
+								</ul>
+							</div>
+							<div class="header_util">
+								<div class="aside">
+									<a href="#">LOGIN</a>
+									<a href="#">SIGNUP</a>
+								</div>
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							</div>
+						</div>
+					</div>
+					<!-- D: 플로팅바 영역 -->
+					<div class="floating_bar">
+						<div class="cont_inner">
+							<div class="detail_info">
+								<!-- 브레드크럼 -->
+								<div class="breadcrumb">
+									<a href="#" class="home">HOME</a>
+									<a href="#" class="cate_dep">FASHION</a>
+									<a href="#" class="cate_dep">패션 뉴스</a>
+								</div>
+								<!-- //브레드크럼 -->
+								<!-- 기사 타이틀 -->
+								<div class="txtbox">
+									<p class="tit"> 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션</p>
+								</div>
+								<!-- //기사 타이틀 -->
+								<!-- 스크랩, 공유하기 -->
+								<div class="sharebox">
+									<button type="button" class="btn_ico scrap" ><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+									<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+								</div>
+								<!-- //스크랩, 공유하기 -->
+							</div>
+						</div>
+					</div>
+					<!-- //D: 플로팅바 영역 -->
+				</div>
+
+				<!-- D: [팝업] 공유하기 -->
+				<div class="popup_layer pop_share" data-layer="popup_share">
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_tit">
+								<h3 class="tit">공유하기</h3>
+							</div>
+							<div class="popup_close">
+								<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+						<div class="popup_cont">
+							<div class="sns_list">
+								<ul>
+									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">트위터</span></button></li>
+									<li><button type="button" class="btn_sns copy"><span class="tit">링크복사</span></button></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- //D: [팝업] 공유하기 -->
+			</header>
+			<!-- //header -->
+			<!-- container -->
+			<div id="container" class="container">
+				<div id="content" class="content">
                     <div class="atc_wrap">
                         <div class="cont_inner">
                             <!-- 상세 > header -->
@@ -110,7 +126,7 @@
 
                             <!-- 상세 > body -->
                             <div class="atc_body">
-                                <div class="atc_body_cont"> <!-- 파티클 본문 -->                           
+                                <div class="atc_body_cont"> <!-- 파티클 본문 -->
                                     <div class="ab_photo_1200">
                                         <img src="../resources/images/temp/temp_visual02.jpg" alt="" />
                                         <p class="caption">사진 / Gucci</p>
@@ -267,8 +283,8 @@
                                 <div class="atc_dtline_box">
                                     <h3 class="title">Credit</h3>
                                     <ul class="list_credit">
-                                        <li><em>에디터</em><span>홍길동</span></li>  
-                                        <li><em>포토그래퍼</em><span>홍길동</span></li>                 
+                                        <li><em>에디터</em><span>홍길동</span></li>
+                                        <li><em>포토그래퍼</em><span>홍길동</span></li>
                                     </ul>
                                 </div>
                                 <!--// atc_dtline -->
@@ -343,294 +359,285 @@
                             <!--// 상세 > body -->
                         </div>
                     </div>
-                    <!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
-                    <div class="scroll_atc_wrap">
-                        <div class="cont_inner">
-                            <!-- 타이틀 -->
-                            <div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
-                                <h2 class="tit">바자의 픽</h2>
-                                <p class="hashtag">#다이어트, #식단, #운동</p>
-                                <a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
-                            </div>
-                            <!-- //타이틀 -->
-                    
-                            <!-- 리스트 -->
-                            <!-- D: 최대 10개까지 노출 -->
-                            <div class="scroll_atc_list">
-                                <ul class="swiper-wrapper">
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation07.jpg"
-                                                        alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation05.jpg" alt="">
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation06.jpg" alt="">
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation01.jpg" alt="">
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation02.jpg" alt="">
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">#바자아트위크 흘러가는 시간을 소장할 수 있을까?</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation03.jpg" alt="">
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">#바자아트위크 한국 근현대미술사를 이끈 작가들의 클래스는 영원하다 - 격동의 시대에서 꽃피운 한국 미술의 정수</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="atcbox">
-                                            <a href="#">
-                                                <div class="imgbox">
-                                                    <img src="../resources/images/temp/@curation04.jpg" alt="">
-                                                </div>
-                                                <div class="txtbox">
-                                                    <p class="tit">바자아트위크 행복가득한 연못으로 오세요. 도나 후앙카, 블리스 풀</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="control">
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <!-- //리스트 -->
-                        </div>
-                    </div>
-                    <!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
-                    
-                    <!-- 추천 인기 기사 (세트 모듈) -->
-                    <div class="set_atc_wrap">
-                        <div class="cont_inner">
-                            <!-- 타이틀 -->
-                            <div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
-                                <h2 class="tit">이 기사도 흥미로우실 거예요!</h2>
-                                <a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
-                            </div>
-                            <!-- //타이틀 -->
-                    
-                            <!-- 리스트 -->
-                            <div class="set_atc_list">
-                                <ul class="swiper-wrapper">
-                                    <li class="swiper-slide">
-                                        <div class="set_atc_area">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/@set01.jpg"
-                                                            alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <span class="cate">FASHION</span>
-                                                        <p class="tit">역대급! 루이 비통 프리폴 컬렉션에 참석한 스타들 총정리</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/@set02.jpg" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <span class="cate">FASHION</span>
-                                                        <p class="tit">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/@set03.jpg" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <span class="cate">FASHION</span>
-                                                        <p class="tit">맑은 눈의 안유진, 빠져들 수 밖에 없는 화보 공개</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <div class="set_atc_area">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/@set04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <span class="cate">FASHION</span>
-                                                        <p class="tit">여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안
-                                                            찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭!</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/@set05.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <span class="cate">FASHION</span>
-                                                        <p class="tit">지지 하디드가 선택한 신상 가방은?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/@set06.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <span class="cate">FASHION</span>
-                                                        <p class="tit">로로피아나의 뉴 드레스 코드</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="control">
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                            <!-- //리스트 -->
-                        </div>
-                    </div>
-                    <!-- //추천 인기 기사 (세트 모듈) -->
-                </div>
-            </div>
-            <!-- //container -->
 
-            <!-- footer -->
-            <footer id="footer" class="footer">
-                <div class="footer_top">
-                    <div class="cont_inner">
-                        <div class="footer_link">
-                            <ul>
-                                <li><a href="#" target="_blank">매체소개</a></li>
-                                <li><a href="#" target="_blank">고객센터</a></li>
-                                <li><a href="#" target="_blank">포인트정책</a></li>
-                                <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
-                                <li><a href="#" target="_blank">이용약관</a></li>
-                                <li><a href="#" target="_blank">이메일무단수집금지</a></li>
-                                <li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
-                                <li><a href="#" target="_blank">윤리경영</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer_sns">
-                            <ul>
-                                <li><a href="https://www.facebook.com/bazaarkorea/" target="_blank"
-                                        title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg"
-                                            alt="페이스북"></a></li>
-                                <li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank"
-                                        title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg"
-                                            alt="인스타그램"></a></li>
-                                <li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank"
-                                        title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a>
-                                </li>
-                                <li><a href="https://story.kakao.com/ch/sure" target="_blank" title="카카오스토리 바로가기"><img
-                                            src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
-                                <li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터 바로가기"><img
-                                            src="../resources/images/ico_twitter.svg" alt="트위터"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <div class="cont_inner">
-                        <div class="footer_logo">
-                            <img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
-                        </div>
-                        <div class="footer_info">
-                            <address class="addr_wrap">
-                                <em>허스트중앙(유)</em>
-                                <div class="addr_txt">
-                                    <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
-                                    <span class="ceo">대표자 : 강주연</span>
-                                    <br class="pc_br">
-                                    <span class="num">사업자등록번호 : 104-81-55280</span>
-                                    <br class="mo_br">
-                                    <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-                                    <span class="email">이메일 : <a
-                                            href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
-                                </div>
-                            </address>
-                            <p class="copyright">© 2020 Heast Joongang. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="family_wrap">
-                    <button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
-                    <div class="familysite">
-                        <div class="cont_inner">
-                            디자인 완료 후 작업예정
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- //footer -->
-        </div>
-    </div>
+					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
+					<div class="scroll_atc_wrap">
+						<div class="cont_inner">
+							<!-- 타이틀 -->
+							<div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
+								<h2 class="tit">바자의 픽</h2>
+								<p class="hashtag">#다이어트, #식단, #운동</p>
+								<a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
+							</div>
+							<!-- //타이틀 -->
 
-    <!-- js -->
-    <script src="../resources/js/swiper.min.js"></script>
-    <script src="../resources/js/ui.common.js"></script>
+							<!-- 리스트 -->
+							<!-- D: 최대 10개까지 노출 -->
+							<div class="scroll_atc_list">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation07.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation05.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation06.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation01.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation02.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">#바자아트위크 흘러가는 시간을 소장할 수 있을까?</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation03.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">#바자아트위크 한국 근현대미술사를 이끈 작가들의 클래스는 영원하다 - 격동의 시대에서 꽃피운 한국 미술의 정수</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation04.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">바자아트위크 행복가득한 연못으로 오세요. 도나 후앙카, 블리스 풀</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="control">
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+							<!-- //리스트 -->
+						</div>
+					</div>
+					<!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
 
-    <script>
+					<!-- 추천 인기 기사 (세트 모듈) -->
+					<div class="set_atc_wrap">
+						<div class="cont_inner">
+							<!-- 타이틀 -->
+							<div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
+								<h2 class="tit">이 기사도 흥미로우실 거예요!</h2>
+								<a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
+							</div>
+							<!-- //타이틀 -->
+
+							<!-- 리스트 -->
+							<div class="set_atc_list">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="set_atc_area">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_set01.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<span class="cate">FASHION</span>
+														<p class="tit">역대급! 루이 비통 프리폴 컬렉션에 참석한 스타들 총정리</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_set02.jpg" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<span class="cate">FASHION</span>
+														<p class="tit">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_set03.jpg" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<span class="cate">FASHION</span>
+														<p class="tit">맑은 눈의 안유진, 빠져들 수 밖에 없는 화보 공개</p>
+													</div>
+												</a>
+											</div>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="set_atc_area">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_set04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<span class="cate">FASHION</span>
+														<p class="tit">여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭! 여름 네일 시안 찾고 있다면 클릭!</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_set05.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<span class="cate">FASHION</span>
+														<p class="tit">지지 하디드가 선택한 신상 가방은?</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_set06.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<span class="cate">FASHION</span>
+														<p class="tit">로로피아나의 뉴 드레스 코드</p>
+													</div>
+												</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="control">
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<!-- //리스트 -->
+						</div>
+					</div>
+					<!-- //추천 인기 기사 (세트 모듈) -->
+				</div>
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<footer id="footer" class="footer">
+				<div class="footer_top">
+					<div class="cont_inner">
+						<div class="footer_link">
+							<ul>
+								<li><a href="#" target="_blank">매체소개</a></li>
+								<li><a href="#" target="_blank">고객센터</a></li>
+								<li><a href="#" target="_blank">포인트정책</a></li>
+								<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+								<li><a href="#" target="_blank">이용약관</a></li>
+								<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+								<li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+								<li><a href="#" target="_blank">윤리경영</a></li>
+							</ul>
+						</div>
+						<div class="footer_sns">
+							<ul>
+								<li><a href="https://www.facebook.com/bazaarkorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/sure" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
+								<li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="cont_inner">
+						<div class="footer_logo">
+							<img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
+						</div>
+						<div class="footer_info">
+							<address class="addr_wrap">
+								<em>허스트중앙(유)</em>
+								<div class="addr_txt">
+									<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+									<span class="ceo">대표자 : 강주연</span>
+									<br class="pc_br">
+									<span class="num">사업자등록번호 : 104-81-55280</span>
+									<br class="mo_br">
+									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+									<span class="email">이메일 : <a href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
+								</div>
+							</address>
+							<p class="copyright">© 2020 Heast Joongang. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+				<div class="family_wrap">
+					<button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+					<div class="familysite">
+						<div class="cont_inner">
+							디자인 나오면 작업예정
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
+	<script>
+		progress_bar(); //D: 상세페이지 프로그래스바
+
           $(function () {
               var isMobile = $('.is_mobile');
               var atcView = {
@@ -733,9 +740,8 @@
                // 전체 실행
                atcView.init();
            });
-            
-   </script>
-    <!-- //js -->
+	</script>
+	<!-- //js -->
 
 </body>
 

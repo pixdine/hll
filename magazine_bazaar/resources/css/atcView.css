@@ -183,7 +183,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     /*.keyword_atc_area .tit_wrap h2 { font-size:22px; line-height:31px; margin-bottom:20px}*/
 
     
-    .keyword_atc_list.swiper-wrapper {/*width:100%; height:100%*/ justify-content: flex-start}
+    .keyword_atc_list.swiper-wrapper {/*width:100%; height:100%*/ justify-content: flex-start; overflow:hidden}
     .keyword_atc_list.swiper-wrapper .swiper-slide {flex-shrink: 0;}
     .keyword_atc_list .atcbox .txtbox .tit {font-size:14px; line-height:20px}
 

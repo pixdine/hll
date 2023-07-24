@@ -682,16 +682,18 @@
             var keyWordList = $('.keyword_atc_box');
             var ww = window.innerWidth;
             var mySwiper = undefined;
-			keyWordList.css('opacity', 1);
+			
             if (keyWordList.length <= 0) return;
 
             function initSwiper() {
+				keyWordList.css('opacity', 1);
                 //768px 보다 클 때 swiper 실행
                 if (ww <= 768 && mySwiper == undefined) {
                     keyWordList.each(function () { //각각을 스와이프 적용
                         mySwiper = new Swiper(this, {
                             slidesPerView: 1.3,
                             spaceBetween: 24,
+							slidesOffsetAfter:24,
                         });
                     });
                 } else if (ww > 768 && mySwiper != undefined) {

@@ -46,10 +46,11 @@
 .kv_full .txtbox .txt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;margin-top:8px;font-size:16px;font-weight:400;line-height:24px;color:#fff;}
 
 /* 메인 영상형 배너 모듈 */
-.kv_video{position:relative;max-width:1920px;width:100%;margin:0 auto 100px;background-color:#000;}
-.kv_video .itembox{position:relative;padding-top:49.4792%;}
-/* .kv_video .itembox:before{content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;} */
+.kv_video{position:relative;max-width:1920px;width:100%;margin:0 auto 100px;overflow:hidden;}
+.kv_video .itembox{position:relative;padding-top:56.25%;}
 .kv_video .itembox iframe{position:absolute;top:0;left:50%;width:100%;height:100%;transform:translateX(-50%);}
+.kv_video .itembox iframe.pc{display:block;}
+.kv_video .itembox iframe.mo{display:none;}
 .kv_video .itembox .link{display:block;position:absolute;left:0;top:0;bottom:0;right:0;}
 
 /* article */
@@ -225,7 +226,9 @@
 
 	.kv_video{overflow:hidden;height:600px;margin-bottom:20px;}
 	.kv_video .itembox{height:100%;padding:0;}
-	.kv_video .itembox iframe{width:1080px;/* height:620px; */height:605px;left:50%;transform:translateX(-50%);overflow:hidden;}
+	.kv_video .itembox iframe{width:1080px;height:605px;left:50%;transform:translateX(-50%);overflow:hidden;}
+	.kv_video .itembox iframe.pc{display:none;}
+	.kv_video .itembox iframe.mo{display:block;}
 
 	.atcbox .cate{font-size:10px;}
 	.atcbox .txtbox{margin-top:14px;}

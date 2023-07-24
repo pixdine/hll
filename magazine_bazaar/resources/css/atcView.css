@@ -7,7 +7,7 @@
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 14px}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom: 48px }
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center;flex-direction: row }
-.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family: 'Gotham Book'; font-size:14px; color: #666; /*line-height:1.5;*/ font-weight: 400; padding-top:5px; display:flex; justify-content: center; align-items: center;}
+.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family: 'Gotham Book'; font-size:14px; color: #666; /*line-height:1.5;*/ font-weight: 400; padding-top:2px; display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden; padding-top:0}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
 

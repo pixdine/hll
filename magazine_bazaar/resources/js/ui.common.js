@@ -247,9 +247,10 @@ function issueAtcList(){
 		//768px 부터 swiper 실행
 		if(ww < 769 && mySwiper == undefined){
 			issueAtcList.each(function(){//각각을 스와이프 적용
+				gaps = '-3%';
 				mySwiper = new Swiper(this, {
-					spaceBetween: 0,
-					slidesPerView: 1.25,
+					spaceBetween: gaps,
+					slidesPerView: 1.15,
 					centeredSlides: true,
 					roundLengths: true,
 					loop: true,

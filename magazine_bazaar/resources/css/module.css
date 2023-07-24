@@ -259,7 +259,7 @@
 	.scroll_atc_list li{display:inline-block;width:292px;margin-right:12px;vertical-align:top;}
 	.scroll_atc_list li:last-child{margin-right:0;}
 	.scroll_atc_list li .imgbox{height:0;padding-top:62.672%;}
-	.scroll_atc_list .swiper-scrollbar{display:none;}
+	.scroll_atc_list .control{display:none;}
 
 	.top3_atc_wrap{margin-bottom:80px;}
 	.top3_atc_wrap .tit_wrap{margin-bottom:12px;}
@@ -278,7 +278,7 @@
 	.issue_atc_list{position:relative;margin:0;}
 	.issue_atc_list .atcbox .imgbox{padding-top:133.565%;}
 	.issue_atc_list ul{align-items:center;}
-	.issue_atc_list .swiper-slide{position:relative;width:87.115%;padding:0;transform:scale(0.84);transition:all .3s ease-in-out;overflow:hidden;}
+	.issue_atc_list .swiper-slide{position:relative;width:87.115%;padding:0;transform:scale(0.78);transition:all .3s ease-in-out;overflow:hidden;}
 	.issue_atc_list .swiper-slide.swiper-slide-active,
 	.issue_atc_list .swiper-slide.swiper-slide-duplicate-active{width:87.115%;transform:scale(1);}
 	.issue_atc_list .swiper-slide img{display:block;}

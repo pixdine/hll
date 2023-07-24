@@ -7,12 +7,13 @@
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 14px}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom: 48px }
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center;flex-direction: row }
-.atc_wrap .atc_header .txt_meta .profile_pic {display: inline-block; width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden}
+.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {display:flex; justify-content: center; align-items: center;}
+.atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
-.atc_wrap .atc_header .txt_meta em,.atc_header .txt_meta span { font-family: 'Gotham Book'; font-size: 14px; color: #666; line-height:1.5;font-weight: 400;display:inline-block; }
-.atc_wrap .atc_header .txt_meta em { margin-right:4px}
-.atc_wrap .atc_header .txt_meta span a { color: #666 ; line-height:1.5}
-.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px;}
+.atc_wrap .atc_header .txt_meta em,.atc_header .txt_meta span { font-family: 'Gotham Book'; font-size: 14px; color: #666; line-height:1.5;font-weight: 400;}
+.atc_wrap .atc_header .txt_meta em { margin-right:4px; background:lime; vertical-align:middle; }
+.atc_wrap .atc_header .txt_meta span a { color: #666 ; line-height:1.5; vertical-align:middle;  background:yellow}
+.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px;; vertical-align:middle; background:blue; vertical-align:middle; }
 .atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:50%; transform:translateY(-50%); width:1px; height: 15px;background: #ccc; opacity: .6;}
 
 .atc_header_img { margin:0 auto; text-align:center; display:none}

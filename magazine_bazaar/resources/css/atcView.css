@@ -115,6 +115,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .keyword_atc_list .atcbox .txtbox .tit {font-size:18px; line-height:26px; font-weight:500}
 .keyword_atc_list.swiper-wrapper .swiper-slide {flex-shrink: 1; width:31.31%;}
 .keyword_atc_area .btn_more02 {display:none}
+.keyword_atc_list.swiper-wrapper { width:auto; }
 
 /* 기사상세 > 키워드 > 키워드리스트 */
 .tag_list_type01 {margin-bottom:48px; text-align:left; display:flex; flex-direction:row; flex-wrap: wrap  } 
@@ -182,7 +183,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     /*.keyword_atc_area .tit_wrap h2 { font-size:22px; line-height:31px; margin-bottom:20px}*/
 
     
-    .keyword_atc_list.swiper-wrapper {/*width:100%; height:100%;*/justify-content: flex-start}
+    .keyword_atc_list.swiper-wrapper {/*width:100%; height:100%*/ justify-content: flex-start}
     .keyword_atc_list.swiper-wrapper .swiper-slide {flex-shrink: 0;}
     .keyword_atc_list .atcbox .txtbox .tit {font-size:14px; line-height:20px}
 

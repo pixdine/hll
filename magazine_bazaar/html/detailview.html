@@ -117,8 +117,7 @@
                                     <p class="txt_excerpt">하우스의 헤리티지와 한국 전통 의상 스타일의 조화를 이룬 '구찌 2024 크루즈 컬렉션'</p>
                                     <div class="txt_meta">
                                         <span class="profile_pic"><img alt="프로필"
-                                                src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg"></span><em>BY</em><span><a
-                                                href="#">BAZAAR</a></span>
+                                                src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg"></span><em>by</em> <span><a href="#">BAZAAR</a></span>
                                         <span class="time">20230.05.08</span>
                                     </div>
                                 </div>
@@ -327,9 +326,6 @@
                                         </ul>
                                         <button type="button" class="btn_more02"><span class="blind">더보기</span></button>
                                     </div>
-									<style>
-										.keyword_atc_box {display:}
-									</style>
                                     <div class="keyword_atc_box" data-slide="slider-type02">
                                         <ul class="keyword_atc_list swiper-wrapper">
                                             <li class="swiper-slide">
@@ -686,6 +682,7 @@
             var keyWordList = $('.keyword_atc_box');
             var ww = window.innerWidth;
             var mySwiper = undefined;
+			keyWordList.css('opacity', 1);
             if (keyWordList.length <= 0) return;
 
             function initSwiper() {

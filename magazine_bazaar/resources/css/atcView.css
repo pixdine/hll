@@ -6,12 +6,13 @@
 .atc_wrap .atc_header {text-align: center}
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 14px}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom: 48px }
-.atc_wrap .atc_header .txt_meta {text-align: center;display: flex;justify-content: center; align-items: center }
-.atc_wrap .atc_header .txt_meta .profile_pic {display: inline-block;width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden}
+.atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center;flex-direction: row }
+.atc_wrap .atc_header .txt_meta .profile_pic {display: inline-block; width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
-.atc_wrap .atc_header .txt_meta em,.atc_header .txt_meta span { font-family: 'Gotham Book';font-size: 14px; color: #666; line-height:1.5;font-weight: 400; background:Red}
+.atc_wrap .atc_header .txt_meta em,.atc_header .txt_meta span { font-family: 'Gotham Book'; font-size: 14px; color: #666; line-height:1.5;font-weight: 400;display:inline-block; }
+.atc_wrap .atc_header .txt_meta em { margin-right:4px}
 .atc_wrap .atc_header .txt_meta span a { color: #666 ; line-height:1.5}
-.atc_wrap .atc_header .txt_meta .time { position: relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px; background:lime}
+.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px;}
 .atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:50%; transform:translateY(-50%); width:1px; height: 15px;background: #ccc; opacity: .6;}
 
 .atc_header_img { margin:0 auto; text-align:center; display:none}
@@ -147,10 +148,11 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_wrap .atc_header .tit_article {font-size:24px;line-height:35px; }
     .atc_wrap .atc_header .txt_excerpt {font-size: 14px;line-height: 20px; padding-bottom:35px }
     .atc_wrap .atc_body {max-width:none}
-
+    
+    .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time { font-size:12px;}
     .atc_wrap.wide .atc_header {margin:0 -20px;}
     .atc_wrap.wide .atc_header_info {width:88%; bottom:8%; }
-    .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time { font-size:12px; line-height:1.5}
+    
     .atc_wrap.wide .atc_header_info .txt_excerpt {padding-bottom:5%}
 
     .ab_photo_1200 {position: relative; left:0;width:100%; margin: 0 auto 24px;}
@@ -174,12 +176,12 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .keyword_atc_box { /*margin-right:20px;*/ overflow:hidden; opacity: 0;}
     .keyword_atc_area { width:auto; margin-right:-20px; padding-top:61px; overflow:hidden}
     .keyword_atc_area .tag_list_box { width:auto; }
-    .keyword_atc_area .tag_list_type01 {flex-wrap: nowrap; /*justify-content: space-between;*/ overflow-x:auto;  margin-bottom:32px; -ms-overflow-style: none;} 
+    .keyword_atc_area .tag_list_type01 {flex-wrap: nowrap; /*justify-content: space-between;*/ overflow-x:auto;  margin-bottom:32px; -ms-overflow-style: none; padding-right:55px} 
     .keyword_atc_area .tag_list_type01::-webkit-scrollbar {display:none}
     .keyword_atc_area .tag_list_type01 li {display: flex; width:auto}
     .keyword_atc_area .tag_list_type01 li a { white-space: nowrap;}
     .keyword_atc_area .btn_more02 {display:block}
-    .keyword_atc_area .tag_list_type01.active {flex-wrap:wrap; justify-content:flex-start; margin-right:32px} 
+    .keyword_atc_area .tag_list_type01.active {flex-wrap:wrap; justify-content:flex-start; margin-right:32px; padding-right:0} 
     .keyword_atc_area .tag_list_type01.active::after {bottom:22px}
     /*.keyword_atc_area .tit_wrap h2 { font-size:22px; line-height:31px; margin-bottom:20px}*/
 

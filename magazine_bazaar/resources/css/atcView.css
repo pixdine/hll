@@ -150,7 +150,9 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_wrap .atc_header .txt_excerpt {font-size: 14px;line-height: 20px; padding-bottom:35px }
     .atc_wrap .atc_body {max-width:none}
     
+    .atc_wrap .atc_header .txt_meta { height:20px}
     .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:12px;}
+    .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px}
     .container .content .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
     .atc_wrap.wide .atc_header_info {width:88%; bottom:8%;}
     

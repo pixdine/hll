@@ -6,15 +6,15 @@
 .atc_wrap .atc_header {text-align: center}
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 14px}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom: 48px }
-.atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; height:24px; }
+.atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; height:24px}
 .atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:'Gotham book'; font-size:14px; color: #666; /*line-height:1.5;*/ font-weight: 400; padding-top:2px; display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden; padding-top:0}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
 
 .atc_wrap .atc_header .txt_meta em { margin-right:4px;vertical-align:top; }
 .atc_wrap .atc_header .txt_meta span a { color: #666 ; /*line-height:1.5em; */vertical-align:top; }
-.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px;; vertical-align:middle; vertical-align:middle; }
-.atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:6px; width:1px; height:14px; background: #ccc; opacity: .6;}
+.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; line-height: 1.5;margin-left: 12px;; vertical-align:middle; vertical-align:middle; border-left:1px solid rgba(204,204,204,.6) }
+.atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:2px; /*width:1px; height:14px;*/background: #ccc; opacity: .6;}
 
 .atc_header_img { margin:0 auto; text-align:center; display:none}
 /* 기사상세 > 헤더 > 프로필 기본사진 */
@@ -152,7 +152,8 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     
     .atc_wrap .atc_header .txt_meta { height:20px}
     .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:12px;}
-    .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px}
+    .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px; border-radius:20px 20px}
+    .atc_wrap .atc_header .txt_meta .time:after { height:12px;}
     .container .content .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
     .atc_wrap.wide .atc_header_info {width:88%; bottom:8%;}
     

@@ -27,7 +27,7 @@
 .atc_wrap.wide .atc_header {position:relative; margin:0 -40px}
 .atc_wrap.wide .atc_header img {max-width:none; width:100%}
 .atc_wrap.wide .atc_header_img { display:block}
-.atc_wrap.wide .atc_header_info { position:absolute; transform: translateX(-50%); left:50%; bottom:13%;  width:700px;}
+.atc_wrap.wide .atc_header_info { position:absolute; transform: translateX(-50%); left:50%; bottom:13%;  width:calc(100% - 80px); max-width:792px}
 .atc_wrap.wide .txt_category, .atc_wrap.wide .atc_header_info .tit_article, .atc_wrap.wide .atc_header_info .txt_excerpt { color:#fff}
 .atc_wrap.wide .txt_category { margin-bottom:14px}
 .atc_wrap.wide .atc_header .atc_header_info .txt_meta span a, .atc_wrap.wide .atc_header .atc_header_info .txt_meta em  {color:#fff}
@@ -127,7 +127,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 /************************* Media Query *************************/
 @media (max-width:1218px){
     html { overflow-x:hidden }
-    .atc_wrap.wide .atc_header_info { /*width:94%*/}
+    
 }
 
 @media (max-width:768px){
@@ -144,7 +144,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px; border-radius:20px 20px}
    /* .atc_wrap .atc_header .txt_meta .time:after { height:12px;}*/
     .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
-    .atc_wrap.wide .atc_header_info {width:88%; bottom:8%;}
+    .atc_wrap.wide .atc_header_info {width:calc(100% - 40px); bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}
 
     .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;}

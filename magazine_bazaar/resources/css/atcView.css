@@ -68,13 +68,13 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 
 /* 기사상세 > body > 사진모아보기 (slide) */
 .tag_photobundle { margin:24px auto}
-.tag_photobundle .viewSwiper {position:relative; text-align:center; overflow:hidden} 
+.tag_photobundle .viewSwiper {position:relative; text-align:center; overflow:hidden;  padding-bottom:56px; line-height:0} 
 .tag_photobundle .caption { margin-top:12px }
-.tag_photobundle .swiper-slide  { height:528px; overflow:visible }
-.tag_photobundle .swiper-slide img { object-fit:cover; height:90.39%;}
-.tag_photobundle .swiper-slide::after {content:''; position:absolute; left:0; top:0; z-index:-1; ;width:100%; height:90.39%; background: #F7F7F7;}
-.tag_photobundle .caption { position:absolute; bottom:20px}
-.tag_photobundle .swiper-scrollbar {border-radius: 0; background-color: #DBDBDB;}
+.tag_photobundle .swiper-slide  { height:528px; overflow:visible; background: #F7F7F7; }
+.tag_photobundle .swiper-slide img { object-fit:cover; height:100%;}
+/*.tag_photobundle .swiper-slide::after {content:''; position:absolute; left:0; top:0; z-index:-1; ;width:100%; height:90.39%; }*/
+.tag_photobundle .caption { position:absolute; }
+.tag_photobundle .swiper-scrollbar {border-radius: 0; background-color: #DBDBDB; bottom:-56px;}
 .tag_photobundle .swiper-scrollbar-drag {border-radius: 0; background-color: #111}
 .tag_photobundle .swiper-container-horizontal>.swiper-scrollbar {height:2px; left:0; width:100%}
 .tag_photobundle .btn_ico.zoom { position:absolute; top:24px; right:24px; }
@@ -147,22 +147,31 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_wrap.wide .atc_header_info {width:88%; bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}
 
+    .atc_body .caption {padding-left:20px; margin-top: 8px; bottom:auto; letter-spacing: 0.02em;}
+
     .ab_photo_1200 {position: relative; left:0;width:100%; margin: 0 auto 24px;}
 
+    .tag_photobundle { margin:20px auto}
+    .tag_photobundle .viewSwiper { padding-bottom:55px}
     .tag_photobundle .swiper-slide  { height:auto; width:100%; }
-    .tag_photobundle .swiper-slide img {width:100%}
+    .tag_photobundle .swiper-slide img {width:100%; height:100%; display:block}
 	.tag_photobundle .btn_ico.zoom{top:20px;right:20px;}
+    .tag_photobundle .swiper-container-horizontal>.swiper-scrollbar { bottom:-52px}
 
+    .tag_vod_box01 { margin:20px auto; }
+    .tag_vod_box01 .tag_vod {height:249px}
     .tag_sns {display:block;width:298px}
+
+    .photo_dual { margin:20px auto} 
 
     .photo_third {width: 100%; margin: 0 auto 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
     .photo_third div { display:flex; flex-direction:column; align-items:normal; width:48% }
-    .photo_third div:first-child {width: 100%;height: 100%; margin:0 0 3% 0}
+    .photo_third div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third div:nth-child(3) {margin-left:3%; margin-top:0 }
 
     .photo_third02 {width: 100%; margin: 0 auto 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
     .photo_third02 div { display:flex; flex-direction:column; align-items:normal; width:48% }
-    .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 3% 0}
+    .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third02 div:nth-child(3) {margin-left:3%; margin-top:0 }
 
     .atc_dtline_box { padding-top:60px;}

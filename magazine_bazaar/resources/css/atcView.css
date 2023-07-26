@@ -147,19 +147,20 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_wrap.wide .atc_header_info {width:88%; bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}
 
-    .atc_body .caption {padding-left:20px; margin-top: 8px; bottom:auto; letter-spacing: 0.02em;}
+    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;}
+    .atc_body .tag_vod_box01 .caption, .atc_body .tag_photobundle .caption {padding-left:20px;}
 
     .ab_photo_1200 {position: relative; left:0;width:100%; margin: 0 auto 24px;}
 
-    .tag_photobundle { margin:20px auto}
+    .tag_photobundle { margin:20px -20px}
     .tag_photobundle .viewSwiper { padding-bottom:55px}
     .tag_photobundle .swiper-slide  { height:auto; width:100%; }
     .tag_photobundle .swiper-slide img {width:100%; height:100%; display:block}
 	.tag_photobundle .btn_ico.zoom{top:20px;right:20px;}
-    .tag_photobundle .swiper-container-horizontal>.swiper-scrollbar { bottom:-52px}
+    .tag_photobundle .swiper-container-horizontal>.swiper-scrollbar { bottom:-55px; left:20px; width:calc(100% - 40px)}
 
-    .tag_vod_box01 { margin:20px auto; }
-    .tag_vod_box01 .tag_vod {height:249px}
+    .tag_vod_box01 { margin:20px -20px; }
+    .tag_vod_box01 .tag_vod {height:271px}
     .tag_sns {display:block;width:298px}
 
     .photo_dual { margin:20px auto} 

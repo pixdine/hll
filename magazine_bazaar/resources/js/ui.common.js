@@ -123,45 +123,55 @@ function fullImage(el){
 //메인 슬라이드 배너
 function kv_swiper(){
 	var kv_Swipers = [];
+	if($('.kv_swiper').find('.swiper-slide').length == 1){
+		$('.kv_swiper').addClass('only');
+	}
+
+	var _loop;
 
 	$('.kv_swiper').each(function(i) {
-		$(this).attr('data-index',i)
-
-		if($('.kv_swiper').length <= 0) return;
-
 		if($(this).find('.swiper-slide').length == 1){
-			$(this).addClass('only');
+			_loop = false;
 		} else {
-			kv_Swipers[i] = new Swiper('.kv_swiper[data-index="'+i+'"]', {
-				effect : 'fade',
-				autoplay: {
-					delay: 3500,
-					disableOnInteraction: false,
-				},
-				loop: true,
-				speed: 1500,
-				pagination: {
-					el: '.kv_swiper[data-index="'+i+'"] .swiper-pagination',
-					clickable: true,
-				},
-				navigation: {
-					prevEl: '.kv_swiper[data-index="'+i+'"] .btn_prev',
-					nextEl: '.kv_swiper[data-index="'+i+'"] .btn_next'
-				},
-				watchSlidesProgress: true,
-				a11y: {
-					prevSlideMessage: '이전 슬라이드',
-					nextSlideMessage: '다음 슬라이드',
-				},
-				observer: true,
-				observeParents: true,
-				watchOverflow: true,
-				on: {
-					activeIndexChange: function () {},
-					slideChange : function() {},
-				},
-			});
+			_loop = true;
 		}
+
+		$(this).attr('data-index',i)
+		var slideitem = $('.kv_swiper .swiper-slide');
+
+		kv_Swipers[i] = new Swiper('.kv_swiper[data-index="'+i+'"]', {
+			effect : 'fade',
+			fadeEffect: { 
+				crossFade: true 
+			},
+			speed: 500,
+			loop: _loop,
+			autoplay: {
+				delay: 7000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.kv_swiper[data-index="'+i+'"] .swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				prevEl: '.kv_swiper[data-index="'+i+'"] .btn_prev',
+				nextEl: '.kv_swiper[data-index="'+i+'"] .btn_next'
+			},
+			watchSlidesProgress: true,
+			a11y: {
+				prevSlideMessage: '이전 슬라이드',
+				nextSlideMessage: '다음 슬라이드',
+			},
+			observer: true,
+			observeParents: true,
+			watchOverflow: true,
+			on: {
+				slideChange : function() {
+					$('.is_pc .kv_swiper .swiper-slide').find('.imgbox img').css('transform', 'scale(1.0)').removeAttr('style');
+				},
+			},
+		});
 	});
 }
 

@@ -134,7 +134,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 
 /* header 공통스타일 */
 .header:not(.main){border-bottom:1px solid #dbdbdb;}
-.header{position:sticky;top:0;background-color:#fff;z-index:50;transition:top 0.3s;}
+.header{position:sticky;top:0;background-color:#fff;z-index:100;transition:top 0.3s;}
 .header .logo a{display:block;font-size:0;}
 .header .logo img{width:100%;}
 .header.off-canvas{top:-100%;}
@@ -288,7 +288,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 [data-alert].open{display:block;}
 [data-layer].open{display:block;}
 
-.popup_inner{display:flex;flex-direction:column;position:absolute;left:0;width:100%;height:100%;background-color:#fff;z-index:100;}
+.popup_inner{display:flex;flex-direction:column;position:absolute;left:0;width:100%;height:100%;background-color:#fff;z-index:200;}
 .popup_inner .popup_head{position:relative;min-height:60px;padding:28px 60px 16px;}
 .popup_inner .popup_head .tit{font-size:18px;font-weight:500;line-height:26px;text-align:center;}
 .popup_cont{overflow:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 28px 28px;font-size:18px;line-height:26px;}
@@ -298,7 +298,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 
 /* full popup */
 .popup_full{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:100;}
-.popup_full .popup_inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:450px;min-height:200px;height:auto;max-height:80vh;background-color:#fff;overflow:hidden;z-index:110;}
+.popup_full .popup_inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:450px;min-height:200px;height:auto;max-height:80vh;background-color:#fff;overflow:hidden;z-index:210;}
 
 .popup_sns .popup_inner{width:588px;}
 .popup_sns .popup_cont{flex:1;padding-top:0;text-align:center;}
@@ -306,8 +306,8 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 .popup_sns .txt{margin-bottom:40px;font-size:18px;line-height:26px;text-align:center;}
 
 /* layer popup */
-.popup_layer{display:none;position:absolute;right:0;top:0;width:100%;background-color:#fff;border:1px solid #dbdbdb;z-index:100;}
-.popup_layer .popup_inner{position:relative;left:0;top:0;transform:none;background-color:#fff;overflow:hidden;z-index:110;}
+.popup_layer{display:none;position:absolute;right:0;top:0;width:100%;background-color:#fff;border:1px solid #dbdbdb;z-index:200;}
+.popup_layer .popup_inner{position:relative;left:0;top:0;transform:none;background-color:#fff;overflow:hidden;z-index:210;}
 
 .pop_share{max-width:320px;width:calc(100% - 40px);top:76px;right:50%;margin-right:-600px;}
 .pop_share .popup_cont{padding:16px 28px 28px;}
@@ -315,13 +315,13 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 
 /* alert */
 [data-alert] {background-color:rgba(0,0,0,0);transition-duration:.2s;z-index:-9999;}
-[data-alert].show {display:block;z-index:120;}
+[data-alert].show {display:block;z-index:220;}
 [data-alert].show.isAnimate {background-color:rgba(0,0,0,0.7);transition-property:background-color;transition-duration:.2s}
 [data-alert] [data-alert-inner] {transform:translate(-50%,-50%) scale(0.85);opacity:0;transition:.2s ease-in-out}
 [data-alert].show.isAnimate [data-alert-inner] {transform:translate(-50%,-50%) scale(1);opacity:1}
-.popup_alert {display:none;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:120;z-index:120}
+.popup_alert {display:none;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:220;}
 .popup_alert_inner {position:absolute;top:50%;left:50%;width:335px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);
-background:#fff;overflow:hidden;z-index:100}
+background:#fff;overflow:hidden;z-index:230;}
 .popup_alert_cont {position:relative;max-height:65vh;padding:60px 28px 0;-webkit-overflow-scrolling:touch;overflow:hidden;overflow-y:auto;font-size:18px;text-align:center;line-height:26px;}
 .popup_alert_button{display:flex;justify-content:center;column-gap:12px;padding:32px 28px 28px;background-color:#fff}
 .popup_alert_button .btn {flex:1;}

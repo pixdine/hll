@@ -7,7 +7,7 @@
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 24px}
 .atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom:42px }
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; height:24px}
-.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham-Light; font-size:14px; color: #666; font-weight: 200; display:flex; justify-content: center; align-items: center;}
+.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden; padding-top:0}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:inherit; height:inherit; object-fit:cover; object-position: center;}
 
@@ -89,8 +89,8 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 
 /* 기사상세 > body > vod */
 .tag_vod_box01 {margin:24px auto; }
-.tag_vod { width:100%;height:446px}
-.tag_vod iframe { width:100%; height:100%}
+.tag_vod { position:relative;width:100%;padding-bottom:56.25%;}
+.tag_vod iframe { position:absolute;left:0;top:0;width:100%; height:100%}
 
 /* 기사상세 > body > 인스타그램 */
 .tag_sns { display:block; width:384px; border:1px solid #DBDBDB; margin:24px auto; padding:0px 0 12px 0; text-align:center}
@@ -127,7 +127,6 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 /************************* Media Query *************************/
 @media (max-width:1218px){
     html { overflow-x:hidden }
-    
 }
 
 @media (max-width:768px){
@@ -160,8 +159,6 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .tag_photobundle .swiper-container-horizontal>.swiper-scrollbar { bottom:-55px; left:20px; width:calc(100% - 40px)}
 
     .tag_vod_box01 { margin:20px -20px; }
-    .tag_vod_box01 .tag_vod {height:211px}
-    .tag_vod_box01 .tag_vod iframe {height:100%}
     .tag_sns {display:block;width:298px}
 
     .photo_dual { margin:20px auto} 

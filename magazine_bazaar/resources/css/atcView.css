@@ -146,10 +146,10 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_wrap.wide .atc_header_info {width:calc(100% - 40px); bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}
 
-    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;}
-    .atc_body .tag_vod_box01 .caption, .atc_body .tag_photobundle .caption {padding-left:20px;}
+    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;}
 
-    .ab_photo_1200 {position: relative; left:0;width:100%; margin: 0 auto 24px;}
+    .atc_body .ab_photo {margin:24px -20px; width:auto} /* 기사상세 > 본문 이미지 792 */
+    .ab_photo_1200 {position: relative; left:0;width:auto; margin: 0 -20px 24px;}
 
     .tag_photobundle { margin:20px -20px}
     .tag_photobundle .viewSwiper { padding-bottom:55px}
@@ -161,14 +161,14 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .tag_vod_box01 { margin:20px -20px; }
     .tag_sns {display:block;width:298px}
 
-    .photo_dual { margin:20px auto} 
+    .photo_dual { margin:20px -20px; width:auto} 
 
-    .photo_third {width: 100%; margin: 0 auto 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
+    .photo_third {width:auto; margin: 0 -20px 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
     .photo_third div { display:flex; flex-direction:column; align-items:normal; width:48% }
     .photo_third div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third div:nth-child(3) {margin-left:3%; margin-top:0 }
 
-    .photo_third02 {width: 100%; margin: 0 auto 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
+    .photo_third02 {width:auto; margin: 0 -20px 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
     .photo_third02 div { display:flex; flex-direction:column; align-items:normal; width:48% }
     .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third02 div:nth-child(3) {margin-left:3%; margin-top:0 }

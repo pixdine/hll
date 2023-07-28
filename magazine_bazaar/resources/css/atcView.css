@@ -164,12 +164,12 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .photo_dual { margin:20px -20px; width:auto} 
 
     .photo_third {width:auto; margin: 0 -20px 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
-    .photo_third div { display:flex; flex-direction:column; align-items:normal; width:48% }
+    .photo_third div { display:flex; flex-direction:column; align-items:normal; width:calc(50% - 1.5%); }
     .photo_third div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third div:nth-child(3) {margin-left:3%; margin-top:0 }
 
     .photo_third02 {width:auto; margin: 0 -20px 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
-    .photo_third02 div { display:flex; flex-direction:column; align-items:normal; width:48% }
+    .photo_third02 div { display:flex; flex-direction:column; align-items:normal; width:calc(50% - 1.5%);}
     .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third02 div:nth-child(3) {margin-left:3%; margin-top:0 }
 

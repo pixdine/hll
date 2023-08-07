@@ -204,7 +204,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 /* 전체메뉴 */
 .allmenu_wrap{display:none;position:fixed;left:0;top:0;right:0;bottom:0;z-index:100;}
 .allmenu_wrap .allmenu_dimmed{display:block;content:'';position:absolute;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,0.5)}
-.allmenu_area{overflow:auto;width:52.0833%;height:100%;background-color:#fff;position: relative}
+.allmenu_area{overflow:auto;width:480px;height:100%;background-color:#fff;position: relative}
 .allmenu_inner{width:280px;margin:0 auto;padding-bottom:100px;}
 .allmenu_wrap .top_area{margin-bottom:28px;padding:17px 0;}
 .allmenu_wrap .btn_menu_close{width:38px;height:38px;margin-left:-8px;background:url('../images/ico_close_28.svg') no-repeat center center / 28px auto;}

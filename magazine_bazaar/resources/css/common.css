@@ -135,7 +135,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 
 /* layout */
 .wrap{position:relative;width:100%;height:100%;margin-left:auto;margin-right:auto;font-size:16px;}
-.lockbody{overflow:hidden;}
+.lockbody{overflow: hidden;}
 
 /* header 공통스타일 */
 .header{position:sticky;top:0;background-color:#fff;z-index:100;transition:top 0.3s;}
@@ -147,7 +147,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 .header .btn_search:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_search.svg') center center no-repeat;background-size:28px auto;}
 
 .header .header_bottom .logo { opacity: 0; transition: opacity .3s }
-.is_pc .header_top.is-pinned + .header_bottom .logo { display: inline; opacity: 1 }
+.is_pc .header_top.is-pinned + .header_bottom .logo { display: block; opacity: 1 }
 
 .header_top{height:106px;padding:40px 0 16px;text-align:center;}
 .header_top .cont_inner{display:flex;align-items:center;}
@@ -202,9 +202,9 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 .progress_bar{position:absolute;bottom:-2px;left:0;height:2px;background-color:#111;z-index:2;transition:width .4s ease-out;overflow:hidden;}
 
 /* 전체메뉴 */
-.allmenu_wrap{display:none;position:fixed;left:0;top:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:100;}
-.allmenu_wrap.open{display:block;}
-.allmenu_area{overflow:auto;width:52.0833%;height:100%;background-color:#fff;}
+.allmenu_wrap{display:none;position:fixed;left:0;top:0;right:0;bottom:0;z-index:100;}
+.allmenu_wrap .allmenu_dimmed{display:block;content:'';position:absolute;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,0.5)}
+.allmenu_area{overflow:auto;width:52.0833%;height:100%;background-color:#fff;position: relative}
 .allmenu_inner{width:280px;margin:0 auto;padding-bottom:100px;}
 .allmenu_wrap .top_area{margin-bottom:28px;padding:17px 0;}
 .allmenu_wrap .btn_menu_close{width:38px;height:38px;margin-left:-8px;background:url('../images/ico_close_28.svg') no-repeat center center / 28px auto;}
@@ -407,7 +407,7 @@ background:#fff;overflow:hidden;z-index:230;}
 	.header_top .btn_menu,
 	.header_top .btn_search{display:block;}
 
-	.header_bottom{display:block;height:62px;padding:14px 0 0 0;}
+	.header_bottom{display:block;height:49px;padding:0;}
 	.header_bottom .cont_inner{display:block;padding:0;}
 	.header_bottom .logo{display:none;}
 	.header_bottom .btn_menu,

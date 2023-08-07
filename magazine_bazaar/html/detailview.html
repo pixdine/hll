@@ -15,25 +15,27 @@
 </head>
 <body>
 	<div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역-->
+		<!-- google 광고영역 -->
 		<div class="ad_google">
-
+			google 광고 배너 영역<br>높이값 가변적
 		</div>
-		<!--// google 광고영역-->
+		<!--// google 광고영역 -->
+
 		<div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header view"><!-- D: 기사상세, 이벤트 상세일 경우 view 클래스 추가 -->
+				<!-- header_wrap -->
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
-							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
-							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, MO에서 노출) -->
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
 						</div>
 					</div>
 					<div class="header_bottom">
 						<div class="cont_inner">
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인과 PC 서브에서 노출, MO에서 미노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
 							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
 							<div class="header_navi">
 								<ul>
@@ -50,10 +52,11 @@
 									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인과 PC 서브에서 노출, MO에서 미노출) -->
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
 							</div>
 						</div>
 					</div>
+
 					<!-- D: 플로팅바 영역 -->
 					<div class="floating_bar">
 						<div class="cont_inner">
@@ -81,6 +84,125 @@
 					</div>
 					<!-- //D: 플로팅바 영역 -->
 				</div>
+				<!-- //header_wrap -->
+
+				<!-- 전체메뉴 -->
+				<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+                    <div class="allmenu_dimmed"></div>
+					<div class="allmenu_area">
+						<div class="allmenu_inner">
+							<!-- 상단 닫기 영역 -->
+							<div class="top_area">
+								<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+							</div>
+							<!-- //상단 닫기 영역 -->
+
+							<!-- 로그인/회원가입 -->
+							<div class="allmenu_util">
+								<a href="#">LOGIN</a><!-- D: LOGOUT -->
+								<a href="#">SIGNUP</a>
+							</div>
+							<!-- //로그인/회원가입 -->
+
+							<!-- 단일메뉴 및 버티컬 -->
+							<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="allmenu_single">
+								<li><a href="#">예술산책</a></li>
+								<li><a href="#">바자화보</a></li>
+								<li class="line"><a href="#">SUSTAINABILITY</a></li>
+							</div>
+							<!-- //단일메뉴 및 버티컬 -->
+
+							<!-- 메뉴 -->
+							<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+							<div class="allmenu_list">
+								<ul class="depth1">
+									<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+										<a href="#">FASHION</a>
+										<ul class="depth2">
+											<li><a href="#">패션 뉴스</a></li>
+											<li><a href="#">패션 트렌드</a></li>
+											<li><a href="#">셀러브리티 스타일</a></li>
+											<li><a href="#">워치&amp;주얼리</a></li>
+											<li><a href="#">스포츠&amp;아웃도어</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">BEAUTY</a>
+										<ul class="depth2">
+											<li><a href="#">뷰티 뉴스</a></li>
+											<li><a href="#">뷰티 트렌드</a></li>
+											<li><a href="#">다이어트&amp;헬스</a></li>
+											<li><a href="#">향</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ART</a>
+										<ul class="depth2">
+											<li><a href="#">아트 뉴스</a></li>
+											<li><a href="#">인터뷰</a></li>
+											<li><a href="#">전시</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">CELEB</a>
+										<ul class="depth2">
+											<li><a href="#">셀러브리티 뉴스</a></li>
+											<li><a href="#">인터뷰</a></li>
+											<li><a href="#">셀러브리티 스타일</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">LIFESTYLE</a>
+										<ul class="depth2">
+											<li><a href="#">사회 뉴스</a></li>
+											<li><a href="#">엔터테이먼트</a></li>
+											<li><a href="#">책</a></li>
+											<li><a href="#">음식</a></li>
+											<li><a href="#">리빙</a></li>
+											<li><a href="#">여행</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">HOROSCOPE</a>
+									</li>
+									<li>
+										<a href="#">EVENT</a>
+										<ul class="depth2">
+											<li><a href="#">ONGOING EVENT</a></li>
+											<li><a href="#">NOTICE</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<!-- //메뉴 -->
+
+							<!-- 외부링크 -->
+							<div class="etc_link">
+								<ul>
+									<li><a href="#" target="_blank" title="새창열림">광고&middot;제휴문의</a></li>
+									<li><a href="#" target="_blank" title="새창열림">미디어킷</a></li>
+									<li><a href="#" target="_blank" title="새창열림">RSS FEED</a></li>
+									<li><a href="#" target="_blank" title="새창열림">포인트제도 안내</a></li>
+									<li><a href="#" target="_blank" title="새창열림">고객센터</a></li>
+								</ul>
+							</div>
+							<!-- //외부링크 -->
+
+							<!-- sns -->
+							<div class="sns_list">
+								<ul>
+									<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+									<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+									<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+									<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터</span></a></li>
+								</ul>
+							</div>
+							<!-- //sns -->
+						</div>
+					</div>
+				</div>
+				<!-- //전체메뉴 -->
 
 				<!-- D: [팝업] 공유하기 -->
 				<div class="popup_layer pop_share" data-layer="popup_share">
@@ -109,204 +231,205 @@
 				<!-- //D: [팝업] 공유하기 -->
 			</header>
 			<!-- //header -->
+
 			<!-- container -->
 			<div id="container" class="container">
 				<div id="content" class="content">
-                    <div class="atc_wrap">
-                        <div class="cont_inner">
-                            <!-- 상세 > header -->
-                            <div class="atc_header">
-                                <div class="atc_header_info">
-                                    <div class="txt_category">FASHION</div>
+					<div class="atc_wrap">
+						<div class="cont_inner">
+							<!-- 상세 > header -->
+							<div class="atc_header">
+								<div class="atc_header_info">
+									<div class="txt_category">FASHION</div>
 									<h2 class="tit_article">18K 화이트골드에 라운드 브릴리언트 컷 아이아몬드를 세팅한 그래픽적 디자인의 '트루 파베 와이드 링'</h2>
-                                    <p class="txt_excerpt">하우스의 헤리티지와 한국 전통 의상 스타일의 조화를 이룬 '구찌 2024 크루즈 컬렉션'</p>
-                                    <div class="txt_meta">
-                                        <span class="profile_pic">
+									<p class="txt_excerpt">하우스의 헤리티지와 한국 전통 의상 스타일의 조화를 이룬 '구찌 2024 크루즈 컬렉션'</p>
+									<div class="txt_meta">
+										<span class="profile_pic">
 											<img alt="프로필"
-                                                src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
+												src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
 											</span>
 											<em>by</em> <span><a href="#">BAZAAR</a></span>
-                                       	 <span class="time">20230.05.08</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--// 상세 > header -->
+										 <span class="time">20230.05.08</span>
+									</div>
+								</div>
+							</div>
+							<!--// 상세 > header -->
 
-                            <!-- 상세 > body -->
-                            <div class="atc_body">
-                                <div class="atc_body_cont"> <!-- 파티클 본문 -->
-                                    <div class="ab_photo_1200">
-                                        <img src="../resources/images/temp/temp_visual02.jpg" alt="" />
-                                        <p class="caption">사진 / Gucci</p>
-                                    </div>
-                                    <p>
-                                        1950년대 패션 아이콘을 꼽자면 배우이자 모나코 대공비가 된 그레이스 켈리를 빼놓을 수 없다. 당시 그녀에게 아카데미 여우주연상을 안겨준
-                                        〈회상 속의
-                                        연인〉을 비롯, 연극과 영화 등 다양한 작품에서 화려한 존재감을
-                                        보여준 인물이다. 모나코 대공비가 된 후에도 우아한 애티튜드와 스타일로 세간의 주목을 받았으며 까르띠에 그랑 드 카페 컬렉션은 그녀를 상징하는
-                                        대표적
-                                        아이템으로 자리매김했다. 커피 원두에서 영감을 받은 그랑 드 카페
-                                        컬렉션은 1938년 까르띠에의 크리에이티브 디렉터 쟌느 투상이 처음 선보였다. 이후 그레이스 켈리가 착용하면서 전 세계적으로 각광받게 된 것.
-                                        그녀는
-                                        그랑 드 카페의 시크하면서도 화려한 크리에이션을 가장 잘 표현해낸
-                                        인물로 지금까지도 회자되고 있다. 그리고 올해 까르띠에는 새롭게 출시하는 그랑 드 카페 컬렉션을 기념해 그레이스 켈리에게 경의를 표하는
-                                        트레일러를
-                                        공개했다. 이번 캠페인 영상은 까르띠에의 새로운 앰배서더인 엘 패닝과
-                                        감독 알렉스 프레이저가 함께했다. 한 여성의 아름다운 과거와 현재가 교차되면서 마지막에 서로 운명처럼 만나는 스토리로 펼쳐지는데, 마치 그레이스
-                                        켈리가
-                                        다시 돌아온 것처럼 연상되어 오랜 여운을 남긴다.
-                                    </p>
+							<!-- 상세 > body -->
+							<div class="atc_body">
+								<div class="atc_body_cont"> <!-- 파티클 본문 -->
+									<div class="ab_photo_1200">
+										<img src="../resources/images/temp/temp_visual02.jpg" alt="" />
+										<p class="caption">사진 / Gucci</p>
+									</div>
+									<p>
+										1950년대 패션 아이콘을 꼽자면 배우이자 모나코 대공비가 된 그레이스 켈리를 빼놓을 수 없다. 당시 그녀에게 아카데미 여우주연상을 안겨준
+										〈회상 속의
+										연인〉을 비롯, 연극과 영화 등 다양한 작품에서 화려한 존재감을
+										보여준 인물이다. 모나코 대공비가 된 후에도 우아한 애티튜드와 스타일로 세간의 주목을 받았으며 까르띠에 그랑 드 카페 컬렉션은 그녀를 상징하는
+										대표적
+										아이템으로 자리매김했다. 커피 원두에서 영감을 받은 그랑 드 카페
+										컬렉션은 1938년 까르띠에의 크리에이티브 디렉터 쟌느 투상이 처음 선보였다. 이후 그레이스 켈리가 착용하면서 전 세계적으로 각광받게 된 것.
+										그녀는
+										그랑 드 카페의 시크하면서도 화려한 크리에이션을 가장 잘 표현해낸
+										인물로 지금까지도 회자되고 있다. 그리고 올해 까르띠에는 새롭게 출시하는 그랑 드 카페 컬렉션을 기념해 그레이스 켈리에게 경의를 표하는
+										트레일러를
+										공개했다. 이번 캠페인 영상은 까르띠에의 새로운 앰배서더인 엘 패닝과
+										감독 알렉스 프레이저가 함께했다. 한 여성의 아름다운 과거와 현재가 교차되면서 마지막에 서로 운명처럼 만나는 스토리로 펼쳐지는데, 마치 그레이스
+										켈리가
+										다시 돌아온 것처럼 연상되어 오랜 여운을 남긴다.
+									</p>
 
-                                    <div class="ab_photo">
-                                        <div class="image">
-                                            <img alt="이미지 캡션 영역"
-                                                src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
-                                            <span class="mask"></span>
-                                        </div>
-                                        <p class="caption">이미지 캡션 영역</p>
-                                    </div>
+									<div class="ab_photo">
+										<div class="image">
+											<img alt="이미지 캡션 영역"
+												src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
+											<span class="mask"></span>
+										</div>
+										<p class="caption">이미지 캡션 영역</p>
+									</div>
 
-                                    <div class="ab_photo">
-                                        <div class="image">
-                                            <img src="../resources/images/temp/temp_view01.png" alt="" />
-                                        </div>
-                                        <p class="caption">사진 / Gucci</p>
-                                    </div>
+									<div class="ab_photo">
+										<div class="image">
+											<img src="../resources/images/temp/temp_view01.png" alt="" />
+										</div>
+										<p class="caption">사진 / Gucci</p>
+									</div>
 
 
-                                    <div class="photo_dual">
-                                        <div class="photo_box01">
-                                            <img src="../resources/images/temp/temp_view02.png" alt="" />
-                                            <p class="caption">사진 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box02">
-                                            <img src="../resources/images/temp/temp_view03.png" alt="" />
-                                            <p class="caption">사진2 / Gucci</p>
-                                        </div>
-                                    </div>
+									<div class="photo_dual">
+										<div class="photo_box01">
+											<img src="../resources/images/temp/temp_view02.png" alt="" />
+											<p class="caption">사진 / Gucci</p>
+										</div>
+										<div class="photo_box02">
+											<img src="../resources/images/temp/temp_view03.png" alt="" />
+											<p class="caption">사진2 / Gucci</p>
+										</div>
+									</div>
 
-                                    <div class="photo_dual">
-                                        <div class="photo_box01">
-                                            <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202109/29/064a8ca4-d1a2-44a9-b7e8-870846496f3e.jpg"
-                                                alt="" />
-                                            <p class="caption">사진1 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box02">
-                                            <img src="../resources/images/temp/temp_view03.png" alt="" />
-                                            <p class="caption">사진2 / Gucci</p>
-                                        </div>
-                                    </div>
+									<div class="photo_dual">
+										<div class="photo_box01">
+											<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202109/29/064a8ca4-d1a2-44a9-b7e8-870846496f3e.jpg"
+												alt="" />
+											<p class="caption">사진1 / Gucci</p>
+										</div>
+										<div class="photo_box02">
+											<img src="../resources/images/temp/temp_view03.png" alt="" />
+											<p class="caption">사진2 / Gucci</p>
+										</div>
+									</div>
 
-                                    <div class="photo_dual">
-                                        <div class="photo_box01">
-                                            <img src="../resources/images/temp/temp_view04.png" alt="" />
-                                            <p class="caption">사진1 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box02">
-                                            <img src="../resources/images/temp/temp_view05.png" alt="" />
-                                            <p class="caption">사진2 / Gucci</p>
-                                        </div>
-                                    </div>
+									<div class="photo_dual">
+										<div class="photo_box01">
+											<img src="../resources/images/temp/temp_view04.png" alt="" />
+											<p class="caption">사진1 / Gucci</p>
+										</div>
+										<div class="photo_box02">
+											<img src="../resources/images/temp/temp_view05.png" alt="" />
+											<p class="caption">사진2 / Gucci</p>
+										</div>
+									</div>
 
-                                    <div class="photo_third">
-                                        <div class="photo_box01">
-                                            <img src="../resources/images/temp/temp_view06.png" alt="" />
-                                            <p class="caption">사진1 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box02">
-                                            <img src="../resources/images/temp/temp_view07.png" alt="" />
-                                            <p class="caption">사진2 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box03">
-                                            <img src="../resources/images/temp/temp_view08.png" alt="" />
-                                            <p class="caption">사진3 / Gucci</p>
-                                        </div>
-                                    </div>
-                                    <div class="photo_third02">
-                                        <div class="photo_box01">
-                                            <img src="../resources/images/temp/temp_view06.png" alt="" />
-                                            <p class="caption">사진1 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box02">
-                                            <img src="../resources/images/temp/temp_view07.png" alt="" />
-                                            <p class="caption">사진2 / Gucci</p>
-                                        </div>
-                                        <div class="photo_box03">
-                                            <img src="../resources/images/temp/temp_view08.png" alt="" />
-                                            <p class="caption">사진3 / Gucci</p>
-                                        </div>
-                                    </div>
+									<div class="photo_third">
+										<div class="photo_box01">
+											<img src="../resources/images/temp/temp_view06.png" alt="" />
+											<p class="caption">사진1 / Gucci</p>
+										</div>
+										<div class="photo_box02">
+											<img src="../resources/images/temp/temp_view07.png" alt="" />
+											<p class="caption">사진2 / Gucci</p>
+										</div>
+										<div class="photo_box03">
+											<img src="../resources/images/temp/temp_view08.png" alt="" />
+											<p class="caption">사진3 / Gucci</p>
+										</div>
+									</div>
+									<div class="photo_third02">
+										<div class="photo_box01">
+											<img src="../resources/images/temp/temp_view06.png" alt="" />
+											<p class="caption">사진1 / Gucci</p>
+										</div>
+										<div class="photo_box02">
+											<img src="../resources/images/temp/temp_view07.png" alt="" />
+											<p class="caption">사진2 / Gucci</p>
+										</div>
+										<div class="photo_box03">
+											<img src="../resources/images/temp/temp_view08.png" alt="" />
+											<p class="caption">사진3 / Gucci</p>
+										</div>
+									</div>
 
-                                    <!-- 사진묶음 슬라이드 컨텐츠 -->
-                                    <div class="tag_photobundle" data-slide="slider-type01">
-                                        <div class="swiper viewSwiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <img src="../resources/images/temp/temp_view10.png" />
-                                                    <p class="caption">사진1 / Gucci</p>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="../resources/images/temp/temp_view09.png" />
-                                                    <p class="caption">사진2 / Gucci</p>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="../resources/images/temp/temp_view08.png" />
-                                                    <p class="caption">사진3 / Gucci</p>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="../resources/images/temp/temp_view07.png" />
-                                                    <p class="caption">사진4 / Gucci</p>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="../resources/images/temp/temp_view06.png" />
-                                                    <p class="caption">사진5 / Gucci</p>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg"
-                                                        alt="">
-                                                    <p class="caption">사진6 / Gucci</p>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn_ico zoom"><span
-                                                    class="blind">크게보기</span></button>
-                                            <div class="swiper-button-next"></div>
-                                            <div class="swiper-button-prev"></div>
-                                            <div class="swiper-scrollbar"></div>
-                                        </div>
-                                    </div>
-                                    <!--// 사진묶음 슬라이드 컨텐츠 -->
+									<!-- 사진묶음 슬라이드 컨텐츠 -->
+									<div class="tag_photobundle" data-slide="slider-type01">
+										<div class="swiper viewSwiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view10.png" />
+													<p class="caption">사진1 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view09.png" />
+													<p class="caption">사진2 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view08.png" />
+													<p class="caption">사진3 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view07.png" />
+													<p class="caption">사진4 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view06.png" />
+													<p class="caption">사진5 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg"
+														alt="">
+													<p class="caption">사진6 / Gucci</p>
+												</div>
+											</div>
+											<button type="button" class="btn_ico zoom"><span
+													class="blind">크게보기</span></button>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<!--// 사진묶음 슬라이드 컨텐츠 -->
 
-                                    <!-- 동영상 컨텐츠 -->
-                                    <div class="tag_vod_box01">
-                                        <div class="tag_vod">
-                                            <iframe src="https://www.youtube.com/embed/x6LhXd2PcmM" height="100%" frameborder="0" allowfullscreen=""></iframe>
-                                        </div>
-                                        <p class="caption">영상1 / Gucci</p>
-                                    </div>
-                                    <!--// 동영상 컨텐츠 -->
-                                    <!--인스타그램-->
-                                    <div class="tag_sns">
-                                        <iframe src="https://www.instagram.com/p/CtiX21hv75q/embed/captioned/"
-                                            width="100%" height="1201" frameborder="0" scrolling="no"
-                                            allowtransparency="true"></iframe>
-                                        <div class="link_source">
-                                            콘텐츠가 보이지 않으세요?
-                                            <a href="https://www.instagram.com/p/CtiX21hv75q" target="_blank"><em
-                                                    class="txt_name">Instagram에서 보기</em></a>
-                                        </div>
-                                    </div>
-                                    <!--// 인스타그램-->
-                                </div>
+									<!-- 동영상 컨텐츠 -->
+									<div class="tag_vod_box01">
+										<div class="tag_vod">
+											<iframe src="https://www.youtube.com/embed/x6LhXd2PcmM" height="100%" frameborder="0" allowfullscreen=""></iframe>
+										</div>
+										<p class="caption">영상1 / Gucci</p>
+									</div>
+									<!--// 동영상 컨텐츠 -->
+									<!--인스타그램-->
+									<div class="tag_sns">
+										<iframe src="https://www.instagram.com/p/CtiX21hv75q/embed/captioned/"
+											width="100%" height="1201" frameborder="0" scrolling="no"
+											allowtransparency="true"></iframe>
+										<div class="link_source">
+											콘텐츠가 보이지 않으세요?
+											<a href="https://www.instagram.com/p/CtiX21hv75q" target="_blank"><em
+													class="txt_name">Instagram에서 보기</em></a>
+										</div>
+									</div>
+									<!--// 인스타그램-->
+								</div>
 
-                                <!-- atc_dtline -->
-                                <div class="atc_dtline_box">
-                                    <h3 class="title">Credit</h3>
-                                    <ul class="list_credit">
-                                        <li><em>에디터</em><span>홍길동</span></li>
-                                        <li><em>포토그래퍼</em><span>홍길동</span></li>
-                                    </ul>
-                                </div>
-                                <!--// atc_dtline -->
+								<!-- atc_dtline -->
+								<div class="atc_dtline_box">
+									<h3 class="title">Credit</h3>
+									<ul class="list_credit">
+										<li><em>에디터</em><span>홍길동</span></li>
+										<li><em>포토그래퍼</em><span>홍길동</span></li>
+									</ul>
+								</div>
+								<!--// atc_dtline -->
 
 								<!-- 이 기사엔 이런 키워드 -->
 								<div class="tag_atc_wrap">
@@ -400,10 +523,10 @@
 									</div>
 								</div>
 								<!-- //이 기사엔 이런 키워드 -->
-                            </div>
-                            <!--// 상세 > body -->
-                        </div>
-                    </div>
+							</div>
+							<!--// 상세 > body -->
+						</div>
+					</div>
 
 					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
 					<div class="scroll_atc_wrap">
@@ -673,12 +796,12 @@
 				</div>
 			</footer>
 			<!-- //footer -->
-        </div>
-    </div>
+		</div>
+	</div>
 
-    <!-- js -->
-    <script src="../resources/js/swiper.min.js"></script>
-    <script src="../resources/js/ui.common.js"></script>
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
 
 	<script>
 		/* 이미지 슬라이드 01  */

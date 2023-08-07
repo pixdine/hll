@@ -11,6 +11,7 @@ $(document).ready(function(){
 	issueAtcList();
 	setAtcList();
 	allmenuOpen();
+    initOnDevice()
 
 	/* follow pop */
 	$('[data-popup-open]').on('click', function(e) {
@@ -64,6 +65,7 @@ $(window).on('resize', function(){
 		//Mobile
 		$('body').removeClass('is_pc').addClass('is_mobile');
 	}
+    initOnDevice()
 }).resize();
 
 //header sticky
@@ -72,88 +74,131 @@ win_H = document.documentElement.clientHeight;
 
 headerSticky();
 
-function headerSticky (){
-	var lastScroll = 0;
-	var headerTop = $(".header").offset().top;
-	var delta = 2;
-	var header = $('.header');
-	var container = $(".container");
+var isCompute = false
 
-	(new IntersectionObserver(
-		([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 0.1),
-		{ threshold: [0.1, 1] }
-	)).observe($('.header_top')[0])
+function headerSticky () {
+    var lastScroll = 0;
+    var headerTop = $(".header").offset().top;
+    var delta = 2;
+    var header = $('.header');
+    var container = $(".container");
+
+    (new IntersectionObserver(
+        ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 0.1),
+        {threshold: [0.1, 1]}
+    )).observe($('.header_top')[0])
 
 
-	$(window).on('scroll', function(){
-		var scrollTop = $(this).scrollTop()
-		if (Math.abs(lastScroll - scrollTop) <= delta) return;
+    $(window).on('scroll', function (e) {
+        if (isCompute) {
+            isCompute = false
+            return
+        }
+        var scrollTop = $(this).scrollTop()
+        if (Math.abs(lastScroll - scrollTop) <= delta) return;
 
-		if(scrollTop < 1){
-			headerTop = $(".header").offset().top;
-		}
+        if (scrollTop < 1) {
+            headerTop = $(".header").offset().top;
+        }
 
-		if(scrollTop > lastScroll && lastScroll > -1) {
-			//down
+        if (scrollTop > lastScroll && lastScroll > -1) {
+            //down
+            document.documentElement.classList.add('non-oby')
+            if (header.hasClass('view')) { //기사상세 헤더
+                console.log(3)
+                if (headerTop < scrollTop) {
+                    header.addClass('active');
+                }
+            } else {
+                header.addClass('down');
+                header.css('top', -($('.header_top').outerHeight()));
+            }
+        } else {
+            // up
+            document.documentElement.classList.remove('non-oby')
+            if (header.hasClass('view')) { //기사상세 헤더
+                header.removeClass('active');
+                /* 상세페이지 공유하기 레이어 관련 */
+                if ($('.pop_share').hasClass('open')) {
+                    $('.pop_share').removeClass('open');
+                }
+                /* //상세페이지 공유하기 레이어 관련 */
+            } else {
+                header.removeClass('down')
+                header.removeAttr('style')
+                container.removeAttr('style')
+            }
+        }
 
-			document.documentElement.classList.add('non-oby')
-			if(header.hasClass('view')){ //기사상세 헤더
-				if(headerTop < scrollTop){
-					header.addClass('active');
-				}
-			} else {
-				header.addClass('down');
-				header.css('top',-($('.header_top').outerHeight()));
-			}
-		} else {
-			// up
+        //PC에서 로고 미노출
+        /*		if( $('.is_pc .header').hasClass('down') && scrollTop > headerBottom && delta > 1){
+                    if(header.hasClass('view')){ //기사상세 헤더
 
-			document.documentElement.classList.remove('non-oby')
-			if(header.hasClass('view')){ //기사상세 헤더
-				header.removeClass('active');
+                    } else {
+                        $('.header_bottom .logo').show();
+                    }
+                } else {
+                    if(header.hasClass('view')){ //기사상세 헤더
 
-				/* 상세페이지 공유하기 레이어 관련 */
-				if($('.pop_share').hasClass('open')){
-					$('.pop_share').removeClass('open');
-				}
-				/* //상세페이지 공유하기 레이어 관련 */
-			} else {
-				header.removeClass('down')
-				header.removeAttr('style')
-				container.removeAttr('style')
-			}
-		}
+                    } else {
+                        $('.header_bottom .logo').hide();
+                    }
+                }*/
 
-		//PC에서 로고 미노출
-/*		if( $('.is_pc .header').hasClass('down') && scrollTop > headerBottom && delta > 1){
-			if(header.hasClass('view')){ //기사상세 헤더
-
-			} else {
-				$('.header_bottom .logo').show();
-			}
-		} else {
-			if(header.hasClass('view')){ //기사상세 헤더
-
-			} else {
-				$('.header_bottom .logo').hide();
-			}
-		}*/
-
-		lastScroll = scrollTop;
-	});
+        lastScroll = scrollTop;
+    });
 }
 
 //전체메뉴
-function allmenuOpen(){
-	$('.header .btn_menu').click(function(){
-		$('.allmenu_wrap').addClass('open');
-		$('body').addClass('lockbody');
-	});
+function allmenuOpen() {
 
-	$('.header .btn_menu_close').click(function(){
-		$('.allmenu_wrap').removeClass('open');
-		$('body').removeClass('lockbody');
-	});
+    const $body = document.querySelector("body");
+    let scrollPosition = 0, clientWidth = 0
+
+    function open() {
+        isCompute = true
+        clientWidth = document.documentElement.clientWidth
+        $('.allmenu_wrap').stop().fadeIn(100);
+        // $('body').addClass('lockbody');
+        scrollPosition = window.pageYOffset;
+        $body.style.overflow = "hidden";
+        $body.style.position = "fixed";
+        $body.style.top = `-${scrollPosition}px`;
+        $body.style.width = "100%";
+        $body.style.paddingRight = `${document.documentElement.clientWidth - clientWidth}px`
+    }
+
+    function close() {
+        isCompute = true
+        $('.allmenu_wrap').stop().fadeOut(100);
+        // $('body').removeClass('lockbody');
+        $body.style.removeProperty("overflow");
+        $body.style.removeProperty("position");
+        $body.style.removeProperty("top");
+        $body.style.removeProperty("width");
+        $body.style.removeProperty("padding-right");
+        window.scrollTo(0, scrollPosition);
+    }
+
+    $('.header .btn_menu').click(open);
+
+    $('.header .btn_menu_close').click(close);
+
+    $(".allmenu_list .depth1 > li").each(function () {
+        $(this).toggleClass("has_menu", $(this).find('.depth2').length > 0)
+    })
+
+    $(".has_menu > a").click(function (e) {
+        console.log(this);
+		e.preventDefault();
+        $(this).parent().toggleClass('open')
+    })
+
+    $(".allmenu_wrap .allmenu_dimmed").click(close)
+}
+
+function initOnDevice() {
+    $(".has_menu").toggleClass('open', !document.body.classList.contains('is_mobile'))
 }
 
 //메인 풀이미지형
@@ -349,12 +394,13 @@ function issueAtcList(){
 
 //full popup
 const popup = {
+    clientWidth: 0,
     open: function(_target, _type){
+        this.clientWidth = document.documentElement.clientWidth
         switch (_type) {
             case 'popup':
-                $('[data-popup="' + _target + '"]').addClass('open');
+                $('[data-popup="' + _target + '"]').fadeIn(100);
                 $('body').addClass('lockbody');
-
                 $('[data-popup]').click(function(){
                     if($(this).hasClass('open')){
                         $(this).removeClass('open');
@@ -368,9 +414,8 @@ const popup = {
 
                 break;
             case 'alert':
-                $('[data-alert="' + _target + '"]').addClass('open');
+                $('[data-alert="' + _target + '"]').fadeIn(100);
                 $('body').addClass('lockbody');
-
                 $('[data-alert]').click(function(){
                     if($(this).hasClass('open')){
                         $(this).removeClass('open');
@@ -384,7 +429,7 @@ const popup = {
 
                 break;
             case 'layer':
-                $('[data-layer="' + _target + '"]').addClass('open');
+                $('[data-layer="' + _target + '"]').fadeIn(100);
 
                 $('[data-layer]').click(function(e){
                     e.stopPropagation();
@@ -395,28 +440,27 @@ const popup = {
                 console.log('pop open default !');
                 break;
         }
+        document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
     },
     close: function(_target, _type){
         switch (_type) {
             case 'popup':
-                $('[data-popup="' + _target + '"]').removeClass('open');
-                $('body').removeClass('lockbody');
-
+                $('[data-popup="' + _target + '"]').fadeOut(100, adjustPad);
                 break;
             case 'alert':
-                $('[data-alert="' + _target + '"]').removeClass('open');
-                $('body').removeClass('lockbody');
-
+                $('[data-alert="' + _target + '"]').fadeOut(100, adjustPad);
                 break;
             case 'layer':
-                $('[data-layer="' + _target + '"]').removeClass('open');
-
+                $('[data-layer="' + _target + '"]').fadeOut(100, adjustPad);
                 break;
             default:
                 console.log('pop close default !');
                 break;
         }
-
+        function adjustPad() {
+            $('body').removeClass('lockbody');
+            document.body.style.removeProperty("padding-right");
+        }
     }
 }
 

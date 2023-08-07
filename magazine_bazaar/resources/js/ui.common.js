@@ -10,6 +10,7 @@ $(document).ready(function(){
 	scrollAtcList();
 	issueAtcList();
 	setAtcList();
+	headerSticky();
 	allmenuOpen();
     initOnDevice()
 
@@ -68,14 +69,9 @@ $(window).on('resize', function(){
     initOnDevice()
 }).resize();
 
+
 //header sticky
-var total_H = document.documentElement.scrollHeight,
-win_H = document.documentElement.clientHeight;
-
-headerSticky();
-
 var isCompute = false
-
 function headerSticky () {
     var lastScroll = 0;
     var headerTop = $(".header").offset().top;
@@ -129,21 +125,6 @@ function headerSticky () {
                 container.removeAttr('style')
             }
         }
-
-        //PC에서 로고 미노출
-        /*		if( $('.is_pc .header').hasClass('down') && scrollTop > headerBottom && delta > 1){
-                    if(header.hasClass('view')){ //기사상세 헤더
-
-                    } else {
-                        $('.header_bottom .logo').show();
-                    }
-                } else {
-                    if(header.hasClass('view')){ //기사상세 헤더
-
-                    } else {
-                        $('.header_bottom .logo').hide();
-                    }
-                }*/
 
         lastScroll = scrollTop;
     });

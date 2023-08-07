@@ -9,7 +9,7 @@
 	<!-- css, Jquery -->
 	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
 	<link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
-		<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /> <!-- D: 기사상세 파티클 css > 기사상세에서만 로드합니다-->
+	<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /> <!-- D: 기사상세 파티클 css > 기사상세에서만 로드합니다-->
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
@@ -30,7 +30,7 @@
 						<div class="cont_inner">
 							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
 							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
 					</div>
 					<div class="header_bottom">
@@ -52,7 +52,7 @@
 									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
 						</div>
 					</div>
@@ -203,6 +203,42 @@
 					</div>
 				</div>
 				<!-- //전체메뉴 -->
+
+				<!-- 검색 레이어 -->
+				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+					<div class="cont_inner">
+						<div class="search_box">
+							<div class="inputbox search">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+							</div>
+
+							<!-- 추천 키워드 -->
+							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="search_keyword">
+								<h3 class="search_tit">추천 키워드</h3>
+								<!-- 키워드 리스트 -->
+								<!-- D: 최대 10개까지 노출 -->
+								<ul class="word_list">
+									<li><a href="#">#어윈올라프</a></li>
+									<li><a href="#">#불가리</a></li>
+									<li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+									<li><a href="#">#갤러리</a></li>
+									<li><a href="#">#5월전시</a></li>
+									<li><a href="#">#패션아이템</a></li>
+									<li><a href="#">#백남준</a></li>
+									<li><a href="#">#반팔재킷</a></li>
+									<li><a href="#">#구찌 패션쇼</a></li>
+									<li><a href="#">#STAR일링</a></li>
+								</ul>
+								<!-- //키워드 리스트 -->
+							</div>
+							<!-- //추천 키워드 -->
+						</div>
+					</div>
+				</div>
+				<!-- //검색 레이어 -->
 
 				<!-- D: [팝업] 공유하기 -->
 				<div class="popup_layer pop_share" data-layer="popup_share">

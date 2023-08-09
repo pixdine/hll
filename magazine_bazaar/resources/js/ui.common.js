@@ -149,7 +149,10 @@ function headerSticky () {
         // }
 
         lastScroll = scrollTop;
-    });
+	});
+	$(window).on("resize", function () {
+		headerTopHeight = $(".header_top").outerHeight();
+	});
 }
 
 //전체메뉴

@@ -102,6 +102,7 @@ function headerSticky () {
 
     var headerTop = $('.header_top').offset().top;
     var headerHeight = $('.header').outerHeight();
+    var headerTopHeight = $('.header_top').outerHeight();
     var headerBottomHeight = $('.header_bottom').outerHeight();
 
     $(window).on('scroll', function (e) {
@@ -122,7 +123,7 @@ function headerSticky () {
                 }
             } else {
                 // header.addClass('down');
-                header.css('transform', `translate(0, ${-(headerBottomHeight)}px)`)
+                header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
                 // header.css('top', -($('.header_top').outerHeight()));
             }
         } else {

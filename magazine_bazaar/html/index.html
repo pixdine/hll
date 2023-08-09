@@ -29,7 +29,7 @@
 						<div class="cont_inner">
 							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
 							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+							<button type="button" class="btn_search" data-popup-open="popup_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
 					</div>
 					<div class="header_bottom">
@@ -51,7 +51,7 @@
 									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_search" data-popup-toggle="popup_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
 						</div>
 					</div>
@@ -177,7 +177,7 @@
 				<!-- //전체메뉴 -->
 
 				<!-- 검색 레이어 -->
-				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="popup_full search_layer" data-popup="popup_search"><!-- D: 오픈 시 open 클래스 추가 -->
 					<div class="cont_inner">
 						<div class="search_box">
 							<div class="inputbox search">

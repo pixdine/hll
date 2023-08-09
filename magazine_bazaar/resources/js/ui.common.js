@@ -12,7 +12,20 @@ $(document).ready(function(){
 	setAtcList();
 	headerSticky();
 	allmenuOpen();
-    initOnDevice()
+    initOnDevice();
+    inputBind();
+
+    $('[data-popup-toggle]').on('click', function(e) {
+        var targetId = $(this).attr('data-popup-toggle')
+        var targetElement = $('[data-popup="'+targetId+'"]')
+        var isVisible = targetElement.is(':visible')
+        $(this).toggleClass('on', !isVisible)
+        if(isVisible) {
+            popup.close(targetId, 'popup')
+        }        else{
+            popup.open(targetId, 'popup')
+        }
+    });
 
 	/* follow pop */
 	$('[data-popup-open]').on('click', function(e) {
@@ -78,40 +91,42 @@ function headerSticky () {
     var delta = 2;
     var header = $('.header');
     var container = $(".container");
+    var bottomLogo = $(".header_bottom .logo a");
 
     (new IntersectionObserver(
-        ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 0.1),
+        ([e]) => {
+            bottomLogo.stop().fadeTo(300,e.intersectionRatio < 0.1 && !document.body.classList.contains('is_mobile'))
+        },
         {threshold: [0.1, 1]}
     )).observe($('.header_top')[0])
 
+    var headerTop = $('.header_top').offset().top;
+    var headerHeight = $('.header').outerHeight();
+    var headerBottomHeight = $('.header_bottom').outerHeight();
 
     $(window).on('scroll', function (e) {
+
         if (isCompute) {
             isCompute = false
             return
         }
-        var scrollTop = $(this).scrollTop()
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
         if (Math.abs(lastScroll - scrollTop) <= delta) return;
 
-        if (scrollTop < 1) {
-            headerTop = $(".header").offset().top;
-        }
-
-        if (scrollTop > lastScroll && lastScroll > -1) {
+        if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
             //down
-            document.documentElement.classList.add('non-oby')
             if (header.hasClass('view')) { //기사상세 헤더
-                console.log(3)
                 if (headerTop < scrollTop) {
                     header.addClass('active');
                 }
             } else {
-                header.addClass('down');
-                header.css('top', -($('.header_top').outerHeight()));
+                // header.addClass('down');
+                header.css('transform', `translate(0, ${-(headerBottomHeight)}px)`)
+                // header.css('top', -($('.header_top').outerHeight()));
             }
         } else {
             // up
-            document.documentElement.classList.remove('non-oby')
             if (header.hasClass('view')) { //기사상세 헤더
                 header.removeClass('active');
                 /* 상세페이지 공유하기 레이어 관련 */
@@ -120,11 +135,17 @@ function headerSticky () {
                 }
                 /* //상세페이지 공유하기 레이어 관련 */
             } else {
-                header.removeClass('down')
-                header.removeAttr('style')
+                // header.removeClass('down')
+                header.css('transform', ``)
                 container.removeAttr('style')
             }
         }
+        //
+        // if (scrollTop > headerHeight) {
+        //     document.documentElement.classList.add('non-oby')
+        // } else {
+        //     document.documentElement.classList.remove('non-oby')
+        // }
 
         lastScroll = scrollTop;
     });
@@ -140,7 +161,7 @@ function allmenuOpen() {
         isCompute = true
         clientWidth = document.documentElement.clientWidth
         $('.allmenu_wrap').stop().fadeIn(100);
-        // $('body').addClass('lockbody');
+        $('body').addClass('lockbody');
         scrollPosition = window.pageYOffset;
         $body.style.overflow = "hidden";
         $body.style.position = "fixed";
@@ -152,7 +173,7 @@ function allmenuOpen() {
     function close() {
         isCompute = true
         $('.allmenu_wrap').stop().fadeOut(100);
-        // $('body').removeClass('lockbody');
+        $('body').removeClass('lockbody');
         $body.style.removeProperty("overflow");
         $body.style.removeProperty("position");
         $body.style.removeProperty("top");
@@ -180,6 +201,15 @@ function allmenuOpen() {
 
 function initOnDevice() {
     $(".has_menu").toggleClass('open', !document.body.classList.contains('is_mobile'))
+}
+
+function inputBind() {
+    $("input.inp").on('keyup', function() {
+        $(this).toggleClass('typed', !!this.value)
+    })
+    $("input.inp + .del").on('click', function() {
+        $(this).prev('input').val('').removeClass('typed')
+    })
 }
 
 //메인 풀이미지형
@@ -380,14 +410,16 @@ const popup = {
         this.clientWidth = document.documentElement.clientWidth
         switch (_type) {
             case 'popup':
-                $('[data-popup="' + _target + '"]').fadeIn(100);
-                $('body').addClass('lockbody');
-                $('[data-popup]').click(function(){
-                    if($(this).hasClass('open')){
-                        $(this).removeClass('open');
-                        $('body').removeClass('lockbody');
-                    }
+                $('[data-popup="' + _target + '"]').fadeIn(100, function(){
+                    $(this).addClass('open')
                 });
+                $('body').addClass('lockbody');
+                // $('[data-popup]').click(function(){
+                //     if($(this).hasClass('open')){
+                //         $(this).removeClass('open');
+                //         $('body').removeClass('lockbody');
+                //     }
+                // });
 
                 $('.popup_inner').click(function(e){
                     e.stopPropagation();

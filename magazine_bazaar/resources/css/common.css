@@ -194,7 +194,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}/* [pc] ÌÅ
 .header .btn_search:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_search.svg') center center no-repeat;background-size:28px auto;}
 .header .btn_search.on:after{background-image:url('../images/ico_close_28.svg');background-size:24px auto;}
 
-.header .header_bottom .logo a { display: block; }
+.header .header_bottom .logo a { display: none; }
 .is_mobile .header .header_bottom .logo a { display: none; }
 
 .header_top{height:106px;padding:40px 0 16px;text-align:center;}

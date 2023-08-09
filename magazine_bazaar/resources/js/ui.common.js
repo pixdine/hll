@@ -185,7 +185,7 @@ function allmenuOpen() {
 
     $('.header .btn_menu').click(open);
 
-    $('.header .btn_menu_close').click(close);
+    $('.btn_menu_close').click(close);
 
     $(".allmenu_list .depth1 > li").each(function () {
         $(this).toggleClass("has_menu", $(this).find('.depth2').length > 0)

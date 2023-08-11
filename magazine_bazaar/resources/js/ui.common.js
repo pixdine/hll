@@ -190,21 +190,28 @@ function allmenuOpen() {
 
     $('.btn_menu_close').click(close);
 
-    $(".allmenu_list .depth1 > li").each(function () {
+	$(".allmenu_list .depth1 > li").each(function () {
         $(this).toggleClass("has_menu", $(this).find('.depth2').length > 0)
     })
 
-    $(".has_menu > a").click(function (e) {
-        console.log(this);
+    $(".has_menu > a > span").click(function (e) {
+		
+		var $depth1 = $(this).parent().parent();
+		var $btnTxt = $(this).find('em');
+
+		console.log($(this));
 		e.preventDefault();
-        $(this).parent().toggleClass('open')
+		$depth1.toggleClass("open");
+
+		if($depth1.hasClass("open")) $btnTxt.text('닫기');
+		else $btnTxt.text("열기");
     })
 
     $(".allmenu_wrap .allmenu_dimmed").click(close)
 }
 
 function initOnDevice() {
-    $(".has_menu").toggleClass('open', !document.body.classList.contains('is_mobile'))
+	$(".has_menu").toggleClass('open', !document.body.classList.contains('is_mobile'))
 }
 
 function inputBind() {

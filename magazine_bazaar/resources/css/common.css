@@ -283,6 +283,11 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}/* [pc] �
 .allmenu_wrap .etc_link li a{font-size:18px;line-height:26px;}
 .allmenu_wrap .sns_list{margin-top:60px;}
 .allmenu_wrap .sns_list ul{column-gap:29px;}
+/* 링크영역 수정 */
+.allmenu_list .depth1 > li > a span {position:absolute; right:-40px; background:transparent; display:none; width:40px; height:40px; }
+.allmenu_list .depth1 > li.has_menu > a span { display:inline-block}
+.allmenu_list .depth1 > li > a { margin-right:40px}
+
 
 /* 검색 레이어 */
 .inputbox.search .inp{height:60px;padding-right:100px;}
@@ -518,6 +523,7 @@ background:#fff;overflow:hidden;z-index:230;}
 	.allmenu_list .depth2 > li > a{font-size:16px;line-height:24px;}
 	.allmenu_wrap .etc_link li a{font-size:16px;line-height:23px;}
 	.allmenu_wrap .sns_list{margin-top:40px;}
+
 
 	.inputbox .inp{padding:0 16px;}
 	.btn_ico.search{background-size:18px auto;}

@@ -278,21 +278,9 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 .allmenu_wrap .allmenu_list li {font-size:16px; line-height:1; color:#666; line-height:23px; margin-bottom:16px }
 .allmenu_wrap.isMenuShow { transition: display .35s ease; height:286px; border-bottom:1px solid rgba(0,0,0,.2); display:block !important}
 
-/* 전체메뉴 로그인 */
-.info_box {display:none; padding:40px 0; border-bottom:1px solid #DBDBDB}
-.info_box .info_txt {font-size:22px; line-height:32px; font-weight:400}
-.info_box .info_txt strong {font-weight:700}
-.info_box .btn_b { margin-top:40px; }
-.info_box .info_txt_btm {display:flex; align-items:center; justify-content: space-between; margin-top:16px}
-.info_box .info_txt_btm p {font-size:14px;color:#666 }
-.info_box .info_txt_btm .btn_txt {white-space: nowrap;}
+body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 
-.login_info_box {display:none; margin:0 -20px}
-.login_info_box .info_txt { background-color:var(--point); padding:40px 0 0 20px; min-height: 186px; box-sizing: border-box;}
-.login_info_box .info_txt p {font-size:28px; line-height:40px; font-weight:400; color:#fff}
-.login_info_box .info_txt p strong {font-weight: 700;}
-.login_info_box .info_txt02 { margin:-40px 20px 0; background:#fff; font-size:14px; line-height:20px; padding:40px 20px; text-align:center}
-.login_info_box .btn_txt { display:flex;justify-content: flex-end; margin-right:12px}
+
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -438,6 +426,24 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 	/* 이미지 */
     body.is_mobile .atcbox .txtbox { text-align:left}
     body.is_mobile .atcbox .txtbox .tit { font-size:14px; font-weight:500; line-height:1.5; height:44px}
+
+
+	/* 전체메뉴 로그인 */
+	.info_box {display:block; padding:40px 0; border-bottom:1px solid #DBDBDB}
+	.info_box .info_txt {font-size:22px; line-height:32px; font-weight:400}
+	.info_box .info_txt strong {font-weight:700}
+	.info_box .btn_b { margin-top:40px; }
+	.info_box .info_txt_btm {display:flex; align-items:center; justify-content: space-between; margin-top:16px}
+	.info_box .info_txt_btm p {font-size:14px;color:#666 }
+	.info_box .info_txt_btm .btn_txt {white-space: nowrap;}
+
+	.login_info_box {display:none; margin:0 -20px}
+	.login_info_box .info_txt { background-color:var(--point); padding:40px 0 0 20px; min-height: 186px; box-sizing: border-box;}
+	.login_info_box .info_txt p {font-size:28px; line-height:40px; font-weight:400; color:#fff}
+	.login_info_box .info_txt p strong {font-weight: 700;}
+	.login_info_box .info_txt02 { margin:-40px 20px 0; background:#fff; font-size:14px; line-height:20px; padding:40px 20px; text-align:center}
+	.login_info_box .btn_txt { display:flex;justify-content: flex-end; margin-right:12px}
+
 }
 
 

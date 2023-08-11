@@ -114,7 +114,7 @@
     .moa_wrap {margin:80px auto}
     .moa_wrap .moa_list ul{display:block;overflow:hidden;overflow-x:auto;white-space:nowrap;padding:0 20px;font-size:0;}
     .moa_wrap .moa_list ul::-webkit-scrollbar{display:none;}
-    .moa_wrap .moa_list li{width:54.3%;margin-right:12px; display:inline-block}
+    .moa_wrap .moa_list li{width:54.3%;margin-right:12px; display:inline-block; vertical-align:top}
     .moa_wrap .moa_list li:last-child{margin-right:0;}	
     .moa_wrap .tit_wrap .btn_txt { display:none}
     .moa_wrap .btn_txt { display:inline-block; left:50%; transform: translateX(-50%); margin-top:32px }

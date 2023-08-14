@@ -51,10 +51,10 @@ function allmenuOpenMo() {
     isCompute = true;
     clientWidth = document.documentElement.clientWidth;
     $(".allmenu_wrap").stop().fadeIn(100);
-    $('body').addClass('lockbody');
+   // $('body').addClass('lockbody');
    scrollPosition = window.pageYOffset;
-    $body.style.overflow = "hidden";
-    $body.style.position = "fixed";
+  $body.style.overflow = "hidden";
+  $body.style.position = "fixed";
     $body.style.top = `-${scrollPosition}px`;
   $(".header_top .btn_menu").addClass("on");
   }
@@ -63,7 +63,7 @@ function allmenuOpenMo() {
     isCompute = true;
     console.log('close');
     $(".allmenu_wrap").stop().fadeOut(100);
-    $("body").removeClass("lockbody");
+    //$("body").removeClass("lockbody");
     $body.style.removeProperty("overflow");
     $body.style.removeProperty("position");
     $body.style.removeProperty("top");
@@ -91,7 +91,7 @@ function allmenuOpenMo() {
 
 function allmenuOpen() {
   var $menuAll = $(".allmenu_wrap");
-  $gnbArea = $(".header_gnb");
+  $gnbArea = $(".gnb_menu > li > a");
 
   var menuAllShow = {
     gnbHover: function () {

@@ -97,10 +97,12 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 
 /* button : txt color */
 .ctype1{color:#999;}
+.ctype2{color:#666;}
 
 
 /* txt button + icon */
 .btn_txt{display:inline-flex;position:relative;padding:10px;font-size:16px;font-weight:500;line-height:23px;align-items:center;}
+.btn_txt02{display:inline-flex;position:relative;padding:10px;font-size:14px;font-weight:500; font-family:'Gotham'; line-height:24px;align-items:center;}
 .has_plus:after{content:'';display:inline-block;width:14px;height:14px;margin:1px 0 0 8px;background:url('../images/ico_plus.svg') no-repeat center center / 100% auto;}
 .has_arr1:after{content:'';display:inline-block;width:16px;height:16px;transform:rotate(90deg);margin:1px 0 0 8px;background:url('../images/ico_arrow04.svg') no-repeat center center / 100% auto;}
 .has_arr2:after{content:'';display:inline-block;width:12px;height:12px;margin:1px 0 0 8px; background:url('../images/ico_arrow.svg') no-repeat center center / 100% auto;}
@@ -150,11 +152,11 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 .header .btn_menu.on:after{background:#fff url('../images/ico_close_28.svg') no-repeat center center / 24px auto;}
 							
 .header .header_top{display:block;}
-.header .cont_inner { padding-bottom:0}
+.header .cont_inner { padding-bottom:0; text-align:center}
 .header_top .logo {position:absolute; top:19px; left:3.125%; width:97px; height:33px;}
 .header_top .btn_menu {display:none}
 .header_top .btn_login {position:absolute; top:31px; right:3.125%; font-size:14px; font-family:'Gotham'; font-weight: 500; color:#666}
-.header_wrap .header_gnb { height:72px; text-align:center; display:block}
+.header .header_util_area { position:absolute; z-index:1; top:21px; right:3.125%;}
 .header_wrap .header_gnb ul {position:relative; }
 .header_wrap .header_gnb li {display:inline-block; font-size:16px; font-weight:700; margin-left:4%; line-height:72px; letter-spacing:-0.01em; }
 .header_wrap .header_gnb li a {position:relative; display:block; height:100%; }
@@ -298,12 +300,19 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	
 }
 @media (max-width:899px){
+	.header {transition: height 0.5s ease; }
+	.header { height:48px}
+	.header_top .logo {width:72px; height:24px; transition: top 0.5s ease;  top:12px}
+	.header_top .btn_menu { transition: display 0.5s ease; display:inline-block}
+	.header .btn_menu_close {display:none;position:absolute;z-index:1;right:12px;top:12px;}
 	.header_wrap .header_gnb ul {transition: opacity 2s;}
 	.header_wrap .header_gnb ul { opacity:0; display:none}
 	.header_wrap .header_gnb li {font-size:12px;margin-left:2%}
 	.header_wrap .header_gnb li .sub_menu li {transition: font-size 1s;}
 	.header_wrap .header_gnb li .sub_menu li {font-size:12px; margin-left:1%}
-	.header_top .btn_login { transition: display 0.3s ease; display:none}
+	/*.header_top .btn_login { transition: display 0.3s ease; display:none}*/
+	.header .header_util_area  { transition: display 0.3s ease; top:auto}
+    .header .header_util_area .btn_txt02 {display:none}
 	.pointShop.pc {display:block;}
 }
 
@@ -315,11 +324,7 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	.btn_ico.zoom{width:36px;height:36px;}
 
 	/* header */
-	.header {transition: height 0.5s ease; }
-	.header { height:48px}
-	.header_top .logo {width:72px; height:24px; transition: top 0.5s ease;  top:12px}
-	.header_top .btn_menu { transition: display 0.5s ease; display:inline-block}
-	.header .btn_menu_close {display:none;position:absolute;z-index:1;right:12px;top:12px;}
+
 	.cont_inner { padding:0 20px}
 	.btn_s {height:25px}
 	

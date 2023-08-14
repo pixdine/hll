@@ -1,3 +1,5 @@
+.header .header_util_area .signup {display:none}
+
 /* 마이페이지 > 상단 컨텐츠 */
 .top_cont_area { margin:0 auto; background-image:url('../images/bg_mypage.png'); background-repeat:no-repeat; background-position:center top; background-size:cover;}
 .top_cont_area .cont_inner {max-width:1280px; margin:0 auto; }
@@ -74,9 +76,7 @@
 .myscrap_wrap .myscrap_list ul li + li { margin-top:50px}
 
 
-@media (max-width:768px){
-
-
+@media (max-width:768px) {
     .top_profile_area { padding-left:0; margin: 0 20px; text-align:center; background-size: auto; padding-top:49px}
     .top_profile_area .profile_pic { position:static; width:80px; height:80px; margin:0 auto }
     .top_profile_area .txt01 { font-size:24px; line-height:1.5; text-align:center; margin-top:16px}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>HLL | Hearst Joongang - Membership</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/member.css"/>
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body style="position:fixed">
+
+    <div id="wrap" class="wrap">
+
+        <!--전체메뉴-->
+        <div class="allmenu_wrap">
+            <div class="cont_inner">
+                <!-- login 전 > 모바일에서만 노출됨 -->
+                <div class="info_box">
+                    <p class="info_txt">
+                        로그인 후 허스트중앙 멤버십의 
+                        <strong>특별한 혜택을 확인하세요.</strong>
+                    </p>
+                    <button type="button" onclick="login();" class="btn_b bctype4">LOGIN</button>
+                    <div class="info_txt_btm">
+                        <p>아직 허스트 중앙 회원이 아니신가요?</p>
+                        <a href="#" class="btn_txt has_arr2">회원가입</a>
+                    </div>
+                </div>
+                <!--// login 전-->
+                <!-- login 후 > 모바일에서만 노출됨 -->
+                <div class="login_info_box" style="display:none">
+                    <div class="info_txt">
+                        <p><strong>김중앙님,</strong><br />안녕하세요!</p>
+                    </div>
+
+                    <div class="info_txt02 box_type01">
+                        허스트중앙 통합멤버십을 통해 보다 많은
+                        혜택을 누려보세요!
+                    </div>
+                    <a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a>
+                </div>
+
+                <ul class="allmenu_list depth1">
+                    <li class="">
+                        <a href="#" class="tit">서비스 소개<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">멤버십<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">포인트 안내</a></li>
+                            <li><a href="#">포인트 관리</a></li>
+                            <li><a href="#">포인트 샵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">고객센터<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">마이페이지<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">마이홈</a></li>
+                            <li><a href="#">회원정보 수정</a></li>
+                            <li><a href="#">포인트 관리</a></li>
+                            <li><a href="#">포인트 샵</a></li>
+                            <li><a href="#">1:1문의 내역</a></li>
+                            <li><a href="#">나의 스크랩</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--// login 전-->
+        </div>
+        <!--// 전체메뉴-->
+        <!-- header -->
+        <header id="header" class="header"><!-- D: 메인일 때 main 클래스 추가 -->
+            <div class="header_wrap">
+                <div class="header_top">
+                    <div class="cont_inner">
+                        <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_memebrship.png" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+                        <div class="header_util_area">
+                            <button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                            <button type="button" class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header_gnb">
+                    <div class="cont_inner">
+                        <ul class="gnb_menu">
+                            <li><!-- D: 선택시 on class 추가 -->
+                                <a href="#">서비스 소개</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li><a href="#">ELLE</a></li>
+                                        <li><a href="#">Cosmopolitan</a></li>
+                                        <li><a href="#">Harper's BAZZAR</a></li>
+                                        <li><a href="#">Esquire</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">멤버십</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li><a href="#">포인트 안내</a></li>
+                                        <li><a href="#">포인트 관리</a></li>
+                                        <li><a href="#">포인트 샵</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">고객센터</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">1:1 문의</a></li>
+                                    </ul>
+                                </div class="sub_menu">
+                            </li>
+                            <li class="">
+                                <a href="#">마이페이지</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li class="on"><a href="#">마이홈</a></li>
+                                        <li><a href="#">회원정보 수정</a></li>
+                                        <li><a href="#">포인트 관리</a></li>
+                                        <li><a href="#">포인트 샵</a></li>
+                                        <li><a href="#">1:1문의내역</a></li>
+                                        <li><a href="#">나의 스크랩</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <style>
+            .container {min-height:500px}
+
+            .popup_btn_area { position:absolute; bottom:40px; height:60px; width:100%}
+            .popup_btn_area .btn_area {margin:0 40px}
+            .popup_btn_area .btn_area.two .btn_b {width:246px}
+            .popup_inner .popup_head { padding:28px 40px 16px; border-bottom:1px solid #DBDBDB}
+            .popup_full { }
+            .popup_full .popup_inner{ width:588px; max-height:801px; padding-bottom:132px  }
+            .popup_full .popup_cont { padding:40px 28px 0px}
+            .popup_full .popup_cont .stxt {padding-bottom:26px}
+            .popup_inner .popup_head .tit { font-size:28px; line-height:40px; font-weight:700; text-align:left }
+            .popup_inner .agree_scroll {max-height:480px; overflow-y:auto; overflow-x:hidden}
+        </style>
+        <!-- container -->
+        <div id="container" class="container">
+            <div id="content" class="content ">
+                <div class="cont_inner">
+                    
+                    <!-- 약관-->
+                    <div class="popup_full open" data-popup="popup_follow" style="display:none;">
+                        <div class="popup_inner">
+                            <div class="popup_head">
+                                <div class="popup_tit">
+                                    <h3 class="tit">공유하기</h3>
+                                </div>
+                                <div class="popup_close">
+                                    <button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+                                </div>
+                            </div>
+                            <div class="popup_cont">
+                                <p class="stxt">허스트중앙(유) 온라인 서비스 이용 약관 (필수)</p>
+                                <div class="agree_scroll">
+                                    test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test testtest test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test testtest test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test
+                                </div>
+                            </div>
+                            <div class="popup_btn_area">
+                                <div class="btn_area two">
+                                    <button type="button" class="btn_b bctype2">취소</button>
+                                    <button type="button" class="btn_b bctype4">취소</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 약관-->
+                    <style>
+                        /* popup :  */
+                        .popup_type01 { display:block;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:100; }
+                        .popup_wrap {background:#fff; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex; flex-direction: column;}
+                        .popup_wrap.w588 { width:588px; }
+                        .popup_wrap .pop_header { position:relative; height:97px; border-bottom:1px solid #DBDBDB; width:100%}
+                        .popup_wrap .pop_header .popup_tit {font-size:28px; line-height:40px; color:#333; text-align:left; padding:28px 0 0 40px } 
+                        .popup_wrap .pop_header .popup_close {position:absolute; top:32px; right:40px } 
+                        .popup_wrap .pop_bottom { position:relative; height:140px}
+                        .popup_wrap .pop_body { padding:40px 0 0 40px; box-sizing:border-box; height:calc(100% - 237px)}
+                        .popup_wrap .pop_body .popup_scr { padding-right:40px; overflow-y:auto; overflow-x:hidden; margin-top:26px}
+                        .popup_wrap .pop_body .stxt {font-size:18px; line-height:26px; font-weight:500}
+
+                        @media (max-width:899px){
+                            .popup_wrap {background:#fff; position:absolute; top:0; left:0; transform:none; height:100%; display:flex; flex-direction: column;}
+                            .popup_wrap.w588 { width:100%; padding-bottom:140px}
+                            .popup_wrap .pop_header { height:46px; border:0; width:100%}
+                            .popup_wrap .pop_header .popup_tit {font-size:22px; line-height:31px; color:#333; text-align:left; padding:9px 0 0 40px } 
+                            .popup_wrap .pop_header .popup_close {position:absolute; top:15px; right:20px } 
+                            .popup_wrap .pop_bottom { height:140px; width:100%; background:#fff}
+                            .popup_wrap .pop_body { padding:40px 0px 0 40px; height:calc(100% - 186px); box-sizing:border-box;}
+                            .popup_wrap .pop_body .popup_scr { padding:0 40px 20px 0px; height:100%; box-sizing:border-box; overflow-y:auto; overflow-x:hidden; margin-top:26px; background:red}x
+                            .popup_wrap .pop_body .stxt {font-size:18px; line-height:26px; font-weight:500}
+                        }
+                    </style>
+                    <div class="popup_type01">
+                        <div class="popup_wrap w588">
+                            <div class="pop_header">
+                                <div class="popup_tit">
+                                    <h3 class="tit">공유하기</h3>
+                                </div>
+                                <div class="popup_close">
+                                    <button type="button" class="btn_close" ><span class="blind">닫기</span></button>
+                                </div>
+                            </div>
+                            <div class="pop_body">
+                                <p class="stxt">허스트중앙(유) 온라인 서비스 이용 약관 (필수)</p>
+                                <div class="popup_scr">
+                                    test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test tes test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test tes test test test test  여기가 끝
+                                </div>
+                            </div>
+                            <div class="pop_bottom">
+                                <div class="popup_btn_area">
+                                    <div class="btn_area two">
+                                        <button type="button" class="btn_b bctype2">취소</button>
+                                        <button type="button" class="btn_b bctype4">동의</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <div class="footer_top">
+                <div class="cont_inner">
+                    <div class="footer_link">
+                        <ul>
+                            <li><a href="#" target="_blank">이용약관</a></li>
+                            <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                            <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                            <li><a href="#" target="_blank">윤리경영</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="cont_inner">
+                    <div class="footer_info">
+                        <address class="addr_wrap">
+                            
+                            <div class="addr_txt">
+                                <em>허스트중앙(유)</em>
+                                <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                <span class="ceo">대표자 : 강주연</span>
+                                <br class="pc_br">
+                                <span class="num">사업자등록번호 : 104-81-55280</span>
+                                <br class="mo_br">
+                                <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+                            </div>
+                        </address>
+                        <p class="copyright">© 2020 Hearst Joongang. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
+	
+
+</body>
+</html>

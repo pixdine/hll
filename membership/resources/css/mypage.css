@@ -1,5 +1,7 @@
 .header .header_util_area .signup {display:none}
 
+.container.mypage { padding-bottom:180px}
+
 .body_cont_area { background:#fff; margin-top:-100px; padding-top:100px}
 .body_cont_area .cont_inner {  margin:0 auto}
 
@@ -79,8 +81,61 @@
 .myscrap_wrap .myscrap_list ul li.swiper-slide .atcbox {width:23.5%}
 .myscrap_wrap .myscrap_list ul li + li { margin-top:50px}
 
+/* 회원정보 수정 */
+
+.stit { display:block; font-size:18px; line-height:68px; font-weight:500;border-top:2px solid #111; border-bottom: 1px solid #DBDBDB;}
+.col_txt {font-size:14px; line-height:1.4; color:#333; font-weight:400}
+
+.input_type02 { display:flex; flex-direction: column;}
+.input_type02 li { margin-top:32px}
+.input_type02 li:first-child { margin-top:0 }
+.input_type02 li dl { display:flex; }
+.input_type02 li dl dt { width:15%; color:#333; vertical-align:middle; padding-top:14px; min-width:180px}
+.input_type02 li dl dd { flex-grow:1; line-height:0; font-size:0;  position:relative; }
+.input_type02 li dl dd .btn_area { margin-top:0 }
+.input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:16px}
+.input_type02 li .inp { width:51%; height:52px; display:inline-block }
+.input_type02 li dd.nobtn .inp { width:100%; }
+.input_type02 .col_txt { position:absolute; right:0; top:50%; transform:translateY(-50%); }
+
+
+.inputbox .inp { }
+.inputbox.nobtn {}
+.inputbox .inp ~ .btn { margin-left:16px}
+
+.addr_search { }
+.addr_search .inp { }
+.addr_search .inp ~ .inp{ margin-top:16px;}
+
+.input_chk_type{}
+.input_chk_type .chk_all {position:absolute}
+.chk_list { margin-left:90px; display:flex; flex-wrap:wrap; max-width:672px }
+.chk_list li { position:relative;width:168px; white-space:nowrap; margin-bottom:23px} 
+.chk_list li .chk_in { vertical-align:middle; color:#111}
+.chk_list li .btn_ico { vertical-align:middle; position: relative; top:2px;}
+
+.tooltip_layer {position:absolute; bottom:-42px; z-index:201; background-color:var(--point); color:#fff;  padding:8px 16px;}
+.tooltip_layer p {font-size:12px; line-height:17px; text-align:left; white-space:nowrap}
+.tooltip_layer::before {content:''; position:absolute; top:-8px; left:10px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
+
+.profile_edit { display:flex; align-items: flex-end; }
+.profile_edit .profile_pic80 {overflow:hidden; background:#D9D9D9 url('../../resources/images/ico_profile.png') no-repeat 50% 100%; width:80px; height:80px; border-radius:80px 80px; border:1px solid #E0E0E0; box-sizing:border-box; margin-right:8px}
+.profile_edit .profile_pic80 img {width:100%; height:100%; border-radius:8px; box-sizing:border-box; overflow:hidden; object-fit:cover;}
+.profile_edit .btn_ico { margin-bottom:6px;}
+.profile_edit .btn_ico ~ .btn_ico {margin-left:4px}
+
+.tbl_btm_area { border-top:1px solid #DBDBDB; margin-top:34px; text-align:center; display:flex; flex-direction: column;align-items: flex-end }
+.tbl_btm_area .btn_txt03 {}
+.tbl_btm_area .btn_area {margin-top:80px; width:100%}
+.tbl_btm_area .btn_area .btn_b { max-width:384px; margin:0 auto}
+
+
+.pw_in { margin-top:32px }
+.pw_in .inputbox ~ .inputbox{ margin-top:16px }
+
 
 @media (max-width:768px) {
+    .container.mypage { padding-bottom:80px}
     .top_profile_area { padding-left:0; margin: 0 20px; text-align:center; background-size: auto; padding-top:49px}
     .top_profile_area .profile_pic { position:static; width:80px; height:80px; margin:0 auto }
     .top_profile_area .txt01 { font-size:24px; line-height:1.5; text-align:center; margin-top:16px}
@@ -173,4 +228,28 @@
     .control .swiper-pagination{font-size:0;}
     .control .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:24px;height:2px;margin:0 4px;cursor:pointer;background-color:#dbdbdb;}
     .control .swiper-pagination .swiper-pagination-bullet-active{background-color:#111;}
+
+    /* 회원정보 수정 */
+    .container .content { padding-top:60px} 
+    .container.main .content { padding-top:0 }
+    .stit {line-height:60px}
+    .btn { padding:16px 20px}
+    .input_type02 li{ margin-top:24px}
+    .input_type02 li dl {flex-direction: column;}
+    .input_type02 li dl dt {width:100%; margin-bottom:8px; padding-top:0}
+    .input_type02 li dd .inputbox {padding-right:36.72%}
+    .input_type02 li dd .inputbox.nobtn { padding-right:0 }
+    .input_type02 li dd .inputbox .btn { position:absolute; right:0; width:31.94%; min-width:68px}
+    .input_type02 li .col_txt { position:static; margin-top:16px; transform: none; }
+    .input_type02 li dd .inp { width:100%; }
+    .input_type02 li dl dd .btn_area {display:flex;justify-content: space-between;}
+    .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:0px}
+    .input_type02 li dl dd .btn_area .btn {width:47.46%}
+
+    .input_chk_type{}
+    .input_chk_type .chk_all {position:static}
+    .chk_list { margin-left:0px; display:flex; flex-wrap:wrap; margin-top:16px}
+    .chk_list li { position:relative;width:50%; white-space:nowrap; margin-bottom:16px} 
+    .chk_list li .chk_in { vertical-align:middle; color:#111}
+    .chk_list li .btn_ico { vertical-align:middle; position: relative; top:2px;}
 }

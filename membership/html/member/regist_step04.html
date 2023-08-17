@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>HLL | Hearst Joongang - Membership</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/member.css"/>
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+	
+	<div id="wrap" class="wrap">
+
+		<!--전체메뉴-->
+		<div class="allmenu_wrap">
+			<div class="cont_inner">
+				<!-- login 전 > 모바일에서만 노출됨 -->
+				<div class="info_box">
+					<p class="info_txt">
+						로그인 후 허스트중앙 멤버십의 
+						<strong>특별한 혜택을 확인하세요.</strong>
+					</p>
+					<button type="button" onclick="login();" class="btn_b bctype4">LOGIN</button>
+					<div class="info_txt_btm">
+						<p>아직 허스트 중앙 회원이 아니신가요?</p>
+						<a href="#" class="btn_txt has_arr2">회원가입</a>
+					</div>
+				</div>
+				<!--// login 전-->
+				<!-- login 후 > 모바일에서만 노출됨 -->
+				<div class="login_info_box" style="display:none">
+					<div class="info_txt">
+						<p><strong>김중앙님,</strong><br />안녕하세요!</p>
+					</div>
+
+					<div class="info_txt02 box_type01">
+						허스트중앙 통합멤버십을 통해 보다 많은
+						혜택을 누려보세요!
+					</div>
+					<a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a>
+				</div>
+
+				<ul class="allmenu_list depth1">
+					<li class="">
+						<a href="#" class="tit">서비스 소개<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">About Us</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="tit">멤버십<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">포인트 안내</a></li>
+							<li><a href="#">포인트 관리</a></li>
+							<li><a href="#">포인트 샵</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="tit">고객센터<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">1:1문의</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="tit">마이페이지<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">마이홈</a></li>
+							<li><a href="#">회원정보 수정</a></li>
+							<li><a href="#">포인트 관리</a></li>
+							<li><a href="#">포인트 샵</a></li>
+							<li><a href="#">1:1문의 내역</a></li>
+							<li><a href="#">나의 스크랩</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+			<!--// login 전-->
+		</div>
+		<!--// 전체메뉴-->
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="header_wrap">
+				<div class="header_top">
+					<div class="cont_inner">
+						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_memebrship.png" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+						<div class="header_util_area">
+							<button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button" class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+						</div>
+					</div>
+				</div>
+				
+				<div class="header_gnb">
+					<div class="cont_inner">
+						<ul class="gnb_menu">
+							<li><!-- D: 선택시 on class 추가 -->
+								<a href="#">서비스 소개</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">ELLE</a></li>
+										<li><a href="#">Cosmopolitan</a></li>
+										<li><a href="#">Harper's BAZZAR</a></li>
+										<li><a href="#">Esquire</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">멤버십</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">포인트 안내</a></li>
+										<li><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 샵</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">고객센터</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">1:1 문의</a></li>
+									</ul>
+								</div class="sub_menu">
+							</li>
+							<li class="">
+								<a href="#">마이페이지</a>
+								<div class="sub_menu">
+									<ul>
+										<li class="on"><a href="#">마이홈</a></li>
+										<li><a href="#">회원정보 수정</a></li>
+										<li><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 샵</a></li>
+										<li><a href="#">1:1문의내역</a></li>
+										<li><a href="#">나의 스크랩</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<div id="container" class="container member">
+			<div id="content" class="content ">
+				<div class="cont_inner">
+					<div class="tit_wrap02">
+						<h2 class="tit">
+							허스트중앙<br />
+							통합멤버십 회원가입 완료
+						</h2>
+						<p class="info_txt">회통합멤버십 회원가입을 하시면 엘르, 코스모폴리탄,바자, 에스콰이어의 다양한 콘텐츠를 하나의 아이디로 즐기실 수 있어요.</p>
+					</div>
+
+					<div class="body_cont01">
+						<div class="gray_box">
+							<div class="box_inner">
+								<p class="txt">
+									김중앙님,<br />
+									회원가입을 진심으로 축하드려요!
+								</p>
+								<p class="txt">
+									허스트중앙 아이디는<br />
+									<strong>jaki****@joongang.com</strong> 입니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="body_cont01 bc_space01">
+						<p class="info_txt">
+							허스트중앙 통합멤버십을 통해 다양한 기사를 즐기고,
+							이벤트를 통한 혜택도 누려보세요.
+						</p>
+						<p class="info_txt">
+							마이페이지 > 회원정보 수정에서 SNS 계정 연동을
+							통해 간편하게 로그인하실 수 있습니다.
+						</p>
+					</div>
+					<div class="btn_area two">
+						<button class="btn_b bctype2">메인 바로가기</button>
+						<button class="btn_b bctype4">SNS 연동하기</button>
+					</div>		
+				</div>
+			
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footer_top">
+				<div class="cont_inner">
+					<div class="footer_link">
+						<ul>
+							<li><a href="#" target="_blank">이용약관</a></li>
+							<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+							<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+							<li><a href="#" target="_blank">윤리경영</a></li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="cont_inner">
+					<div class="footer_info">
+						<address class="addr_wrap">
+							
+							<div class="addr_txt">
+								<em>허스트중앙(유)</em>
+								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+								<span class="ceo">대표자 : 강주연</span>
+								<br class="pc_br">
+								<span class="num">사업자등록번호 : 104-81-55280</span>
+								<br class="mo_br">
+								<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+							</div>
+						</address>
+						<p class="copyright">© 2020 Hearst Joongang. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+
+	<!-- js -->
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+
+	
+
+</body>
+</html>

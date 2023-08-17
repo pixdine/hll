@@ -13,7 +13,41 @@ $(document).ready(function () {
   //키워드 태그
   $(".tag_wrap .btnbox .btn_ico").on("click", tagOpen);
   showTagBtn();
+
+  
+	/* follow pop */
+	$('[data-popup-open]').on('click', function(e) {
+		console.log(e)
+		popup.open($(this).attr('data-popup-open'), 'popup')
+	});
+
+	$('[data-alert-open]').on('click', function(e) {
+		console.log(e)
+		popup.open($(this).attr('data-alert-open'), 'alert')
+	});
+
+	$('[data-layer-open]').on('click', function(e) {
+		popup.open($(this).attr('data-layer-open'), 'layer')
+	});
+
+	$('[data-popup-close]').on('click', function(e) {
+		console.log(e)
+		popup.close($(this).attr('data-popup-close'), 'popup')
+	});
+	$('[data-alert-close]').on('click', function(e) {
+		console.log(e)
+		popup.close($(this).attr('data-alert-close'), 'alert')
+	});
+	$('[data-layer-close]').on('click', function(e) {
+		console.log(e)
+		popup.close($(this).attr('data-layer-close'), 'layer')
+	});
+
+	$('.btn_familysite').click(function(){
+		familySite($(this));
+	});
 });
+
 
 //iOS vh 대응
 function setCSS() {
@@ -290,6 +324,81 @@ function scrapList(){
     initSwiper();
   });	
 
+}
+
+
+//full popup
+const popup = {
+  clientWidth: 0,
+  open: function(_target, _type){
+      this.clientWidth = document.documentElement.clientWidth
+      switch (_type) {
+          case 'popup':
+              $('[data-popup="' + _target + '"]').fadeIn(100, function(){
+                  $(this).addClass('open')
+              });
+              $('body').addClass('lockbody');
+              // $('[data-popup]').click(function(){
+              //     if($(this).hasClass('open')){
+              //         $(this).removeClass('open');
+              //         $('body').removeClass('lockbody');
+              //     }
+              // });
+
+              $('.popup_inner').click(function(e){
+                  e.stopPropagation();
+              });
+
+              break;
+          case 'alert':
+              $('[data-alert="' + _target + '"]').fadeIn(100);
+              $('body').addClass('lockbody');
+              $('[data-alert]').click(function(){
+                  if($(this).hasClass('open')){
+                      $(this).removeClass('open');
+                      $('body').removeClass('lockbody');
+                  }
+              });
+
+              $('.popup_alert_inner').click(function(e){
+                  e.stopPropagation();
+              });
+
+              break;
+          case 'layer':
+              $('[data-layer="' + _target + '"]').fadeIn(100);
+
+              $('[data-layer]').click(function(e){
+                  e.stopPropagation();
+              });
+
+              break;
+          default:
+              console.log('pop open default !');
+              break;
+      }
+      document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
+  },
+  close: function(_target, _type){
+      switch (_type) {
+          case 'popup':
+              $('[data-popup="' + _target + '"]').fadeOut(100, adjustPad);
+              break;
+          case 'alert':
+              $('[data-alert="' + _target + '"]').fadeOut(100, adjustPad);
+              break;
+          case 'layer':
+              $('[data-layer="' + _target + '"]').fadeOut(100, adjustPad);
+              break;
+          default:
+              console.log('pop close default !');
+              break;
+      }
+      function adjustPad() {
+          $('body').removeClass('lockbody');
+          document.body.style.removeProperty("padding-right");
+      }
+  }
 }
 
 

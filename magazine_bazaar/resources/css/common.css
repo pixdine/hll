@@ -428,8 +428,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}/* [pc] ÌÅ
 .popup_full .popup_head .tit{font-size:28px;line-height:41px;font-weight:700;text-align:left;}
 .popup_full .popup_inner{width:100%;}
 .popup_full .popup_close{right:29px;top:29px;}
-.popup_full .popup_cont{padding:32px 32px 0 40px;}
-.popup_full .popup_cont.non{padding:32px 32px 32px 40px;}
+.popup_full .popup_cont{padding:32px 20px 0 28px;}
+.popup_full .popup_cont.non{padding:32px 20px 32px 28px;}
 .popup_full .popup_bottom{padding:40px;}
 
 /* layer */

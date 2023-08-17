@@ -263,8 +263,8 @@
 								<ul>
 									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
 									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
-									<li><button type="button" class="btn_sns twitter"><span class="tit">트위터</span></button></li>
-									<li><button type="button" class="btn_sns copy"><span class="tit">링크복사</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
 								</ul>
 							</div>
 						</div>
@@ -842,6 +842,24 @@
 		</div>
 	</div>
 
+	<!-- 알럿2 -->
+	<div class="popup_alert" data-alert="alert_1">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">클립보드에 복사되었습니다.</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //알럿2 -->
+
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
@@ -907,6 +925,54 @@
 
 		$(window).resize(function(){
 			showTagBtn();
+		});
+
+
+		//우선 팝업을 보여주기 위해 임의로 해놓은거라 common.js에 새롭게 추가해주시고 이 부분은 삭제해주세요.
+		$(function(){
+			$('[data-popup-open]').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('data-popup-open');
+				$('[data-pop="' + target + '"]').addClass('open');
+				$('body').addClass('lockbody');
+				$('body').append("<div class='dimmed'></div>");
+			});
+
+			$('[data-popup-close]').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('data-popup-close');
+				$('[data-pop="' + target + '"]').removeClass('open');
+				$('body').removeClass('lockbody');
+				$('.dimmed').remove();
+			});
+
+			$('[data-alert-open]').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('data-alert-open');
+				$('[data-alert="' + target + '"]').addClass('open');
+				$('body').addClass('lockbody');
+				$('body').append("<div class='dimmed'></div>");
+			});
+
+			$('[data-alert-close]').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('data-alert-close');
+				$('[data-alert="' + target + '"]').removeClass('open');
+				$('body').removeClass('lockbody');
+				$('.dimmed').remove();
+			});
+
+			$('[data-layer-open]').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('data-layer-open');
+				$('[data-layer="' + target + '"]').addClass('open');
+			});
+
+			$('[data-layer-close]').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('data-layer-close');
+				$('[data-layer="' + target + '"]').removeClass('open');
+			});
 		});
 	</script>
 	<!-- //js -->

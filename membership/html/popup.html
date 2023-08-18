@@ -12,7 +12,7 @@
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
-<body style="position:fixed">
+<body>
 
     <div id="wrap" class="wrap">
 
@@ -152,103 +152,21 @@
             </div>
         </header>
         <!-- //header -->
-        <style>
-            .container {min-height:500px}
-
-            .popup_btn_area { position:absolute; bottom:40px; height:60px; width:100%}
-            .popup_btn_area .btn_area {margin:0 40px}
-            .popup_btn_area .btn_area.two .btn_b {width:246px}
-            .popup_inner .popup_head { padding:28px 40px 16px; border-bottom:1px solid #DBDBDB}
-            .popup_full { }
-            .popup_full .popup_inner{ width:588px; max-height:801px; padding-bottom:132px  }
-            .popup_full .popup_cont { padding:40px 28px 0px}
-            .popup_full .popup_cont .stxt {padding-bottom:26px}
-            .popup_inner .popup_head .tit { font-size:28px; line-height:40px; font-weight:700; text-align:left }
-            .popup_inner .agree_scroll {max-height:480px; overflow-y:auto; overflow-x:hidden}
-        </style>
         <!-- container -->
         <div id="container" class="container">
             <div id="content" class="content ">
-                <div class="cont_inner">
-                    
-                    <!-- 약관-->
-                    <div class="popup_full open" data-popup="popup_follow" style="display:none;">
-                        <div class="popup_inner">
-                            <div class="popup_head">
-                                <div class="popup_tit">
-                                    <h3 class="tit">공유하기</h3>
-                                </div>
-                                <div class="popup_close">
-                                    <button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
-                                </div>
-                            </div>
-                            <div class="popup_cont">
-                                <p class="stxt">허스트중앙(유) 온라인 서비스 이용 약관 (필수)</p>
-                                <div class="agree_scroll">
-                                    test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test testtest test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test testtest test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test
-                                </div>
-                            </div>
-                            <div class="popup_btn_area">
-                                <div class="btn_area two">
-                                    <button type="button" class="btn_b bctype2">취소</button>
-                                    <button type="button" class="btn_b bctype4">취소</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// 약관-->
-                    <style>
-                        /* popup :  */
-                        .popup_type01 { display:block;position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:100; }
-                        .popup_wrap {background:#fff; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex; flex-direction: column;}
-                        .popup_wrap.w588 { width:588px; }
-                        .popup_wrap .pop_header { position:relative; height:97px; border-bottom:1px solid #DBDBDB; width:100%}
-                        .popup_wrap .pop_header .popup_tit {font-size:28px; line-height:40px; color:#333; text-align:left; padding:28px 0 0 40px } 
-                        .popup_wrap .pop_header .popup_close {position:absolute; top:32px; right:40px } 
-                        .popup_wrap .pop_bottom { position:relative; height:140px}
-                        .popup_wrap .pop_body { padding:40px 0 0 40px; box-sizing:border-box; height:calc(100% - 237px)}
-                        .popup_wrap .pop_body .popup_scr { padding-right:40px; overflow-y:auto; overflow-x:hidden; margin-top:26px}
-                        .popup_wrap .pop_body .stxt {font-size:18px; line-height:26px; font-weight:500}
+                <div class="cont_inner" style="min-height:500px">
+                   <!-- 팝업버튼 -->
+					<div class="cont_inner" style="padding-bottom:100px;">
+						<button type="button" data-popup-open="popup_1"><span>이용약관</span></button><br>
+                        <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
+						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
+						<button type="button" data-popup-open="popup_3"><span>팝업2</span></button><br>
+						<button type="button" data-popup-open="popup_4"><span>팝업3</span></button><br>
 
-                        @media (max-width:899px){
-                            .popup_wrap {background:#fff; position:absolute; top:0; left:0; transform:none; height:100%; display:flex; flex-direction: column;}
-                            .popup_wrap.w588 { width:100%; padding-bottom:140px}
-                            .popup_wrap .pop_header { height:46px; border:0; width:100%}
-                            .popup_wrap .pop_header .popup_tit {font-size:22px; line-height:31px; color:#333; text-align:left; padding:9px 0 0 40px } 
-                            .popup_wrap .pop_header .popup_close {position:absolute; top:15px; right:20px } 
-                            .popup_wrap .pop_bottom { height:140px; width:100%; background:#fff}
-                            .popup_wrap .pop_body { padding:40px 0px 0 40px; height:calc(100% - 186px); box-sizing:border-box;}
-                            .popup_wrap .pop_body .popup_scr { padding:0 40px 20px 0px; height:100%; box-sizing:border-box; overflow-y:auto; overflow-x:hidden; margin-top:26px; background:red}x
-                            .popup_wrap .pop_body .stxt {font-size:18px; line-height:26px; font-weight:500}
-                        }
-                    </style>
-                    <div class="popup_type01">
-                        <div class="popup_wrap w588">
-                            <div class="pop_header">
-                                <div class="popup_tit">
-                                    <h3 class="tit">공유하기</h3>
-                                </div>
-                                <div class="popup_close">
-                                    <button type="button" class="btn_close" ><span class="blind">닫기</span></button>
-                                </div>
-                            </div>
-                            <div class="pop_body">
-                                <p class="stxt">허스트중앙(유) 온라인 서비스 이용 약관 (필수)</p>
-                                <div class="popup_scr">
-                                    test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test tes test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test tes test test test test  여기가 끝
-                                </div>
-                            </div>
-                            <div class="pop_bottom">
-                                <div class="popup_btn_area">
-                                    <div class="btn_area two">
-                                        <button type="button" class="btn_b bctype2">취소</button>
-                                        <button type="button" class="btn_b bctype4">동의</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+						<button type="button" data-alert-open="alert_1"><span>얼럿1_버튼1</span></button><br>
+						<button type="button" data-alert-open="alert_2"><span>얼럿2_버튼2</span></button><br>
+					</div>
                 </div>
             </div>
         </div>
@@ -292,11 +210,205 @@
         <!-- //footer -->
     </div>
 
+    <!--팝업위치-->
+    <!--D : 이용약관-->
+    <div class="popup_full" data-pop="popup_1">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">이용약관</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_1"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <p class="stxt">허스트중앙(유) 온라인 서비스 이용 약관 (필수)</p>
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_b bctype2"><span>취소</span></button>
+                    <button type="button" class="btn_b bctype4"><span>동의</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 허스트중앙 회원탈퇴-->
+    <div class="popup_full" data-pop="popup_2">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">허스트중앙 회원탈퇴</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_2"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+               <div class="gray_box">
+                    <div class="box_inner">
+                        <p class="txt">
+                            김중앙님,<br>
+                            허스트중앙 멤버십 포인트가 <strong>500P</strong>남았습니다.
+                        </p>
+                        <p class="stxt">
+                            회원 탈퇴 후 기존 회원정보 및 포인트는 모두 삭제되어
+                            복구가 불가능하니 이 점 참고하시기 바랍니다
+                        </p>
+                    </div>
+               </div>
+
+               
+                <dl class="input_type01">
+                    <dt>아이디</dt>
+                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
+                        <input type="text" class="inp" value="jakim@gmail.com" placeholder="" readonly/>
+                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                    </dd>
+                    <dt>비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <input type="password" class="inp" placeholder="비밀번호 입력"/>
+                        <p class="row_err_txt">비밀번호를 입력해 주세요.</p>
+                    </dd>
+                    <dt>탈퇴 사유<em class="ess">*</em></dt>
+                    <dd>
+                       <ul class="radio_list">
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio1"><label for="radio1"><span>서비스 장애와 오류</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio2"><label for="radio2"><span>유용한 정보 부족</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio3"><label for="radio3"><span>접속 속도 저하</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio4"><label for="radio4"><span>고객서비스 불만</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio5"><label for="radio5"><span>복잡한 구성으로 이용 불편</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio6"><label for="radio6"><span>기타</span></label></span></li>
+                       </ul>
+                       <!--D : 기타사유 입력 -->
+                       <textarea class="tarea" placeholder="기타 사유 입력 (500자 이내)"></textarea>
+                    </dd>
+                </dl>
+                <div class="info_gray_box">
+                    <ul>
+                        <li>회원탈퇴를 하시면 허스트중앙의 온라인 회원 및 서비스에 대하여 통합 탈퇴됩니다.</li>
+                        <li>재가입은 회원탈퇴 후 30일 이후 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_b bctype2"><span>취소</span></button>
+                    <button type="button" class="btn_b bctype4"><span>동의</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 아이디 찾기-->
+    <div class="popup_full" data-pop="popup_3">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">아이디 찾기</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_3"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+              
+                <div class="pop_tit_wrap">
+                    <h2 class="tit">
+                        아이디를 잊으셨나요?
+                    </h2>
+                    <p class="info_txt">회원가입 시 입력하신 이름과 휴대폰 번호를 입력해주세요.</p>
+                </div>
+               
+                <dl class="input_type01">
+                    <dt>이름</dt>
+                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
+                        <input type="text" class="inp"  placeholder="" />
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                    </dd>
+                    <dt>휴대폰 번호</dt>
+                    <dd class="inputbox">
+                        <input type="password" class="inp" placeholder="휴대폰 번호 숫자만 입력"/>
+                        <p class="row_err_txt">숫자만 입력해 주세요</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_b bctype4"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
+    <script>
 
+        $(document).ready(function(){
+            
+            inputBind();
+        });
+
+        function inputBind() {
+            $("input.inp").on('keyup', function() {
+                $(this).toggleClass('typed', !!this.value)
+            })
+            $("input.inp + .del").on('click', function() {
+                $(this).prev('input').val('').removeClass('typed')
+            })
+        }
+
+
+        //우선 팝업을 보여주기 위해 임의로 해놓은거라 common.js에 새롭게 추가해주시고 이 부분은 삭제해주세요.
+        $(function () {
+        
+            $('[data-popup-open]').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('data-popup-open');
+                $('[data-pop="' + target + '"]').addClass('open');
+                $('body').addClass('lockbody');
+                $('body').append("<div class='dimmed'></div>");
+            });
+
+            $('[data-popup-close]').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('data-popup-close');
+                $('[data-pop="' + target + '"]').removeClass('open');
+                $('body').removeClass('lockbody');
+                $('.dimmed').remove();
+            });
+
+            $('[data-alert-open]').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('data-alert-open');
+                $('[data-alert="' + target + '"]').addClass('open');
+                $('body').addClass('lockbody');
+                $('body').append("<div class='dimmed'></div>");
+            });
+
+            $('[data-alert-close]').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('data-alert-close');
+                $('[data-alert="' + target + '"]').removeClass('open');
+                $('body').removeClass('lockbody');
+                $('.dimmed').remove();
+            });
+
+            $('[data-layer-open]').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('data-layer-open');
+                $('[data-layer="' + target + '"]').addClass('open');
+            });
+
+            $('[data-layer-close]').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('data-layer-close');
+                $('[data-layer="' + target + '"]').removeClass('open');
+            });
+        });
+    </script>
 	
 
 </body>

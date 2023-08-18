@@ -185,8 +185,8 @@
                                     <dt>
                                         이름<em class="ess">*</em>
                                     </dt>
-                                    <dd>
-										<div  class="inputbox modify"><!--D : Error 시 error class 추가 -->
+                                    <dd class="modify nobtn">
+										<div  class="inputbox "><!--D : Error 시 error class 추가 -->
 											<input type="text" class="inp" value="김중앙" readonly/>
 											<p class="row_err_txt"></p>
 										</div>
@@ -194,20 +194,35 @@
                                     </dd>
                                 </dl>
                             </li>
+							<li>
+								<dl>
+									<dt>
+										휴대폰 번호<em class="ess">*</em>
+									</dt>
+									<dd class="modify">
+										<div class="inputbox">
+											<input type="text" class="inp" placeholder="kimjoongang" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+											<p class="row_err_txt">사용할수 없는 닉네임 입니다.</p>
+										</div>
+										<button type="button" class="btn bctype4">변경</button>
+							
+									</dd>
+								</dl>
+							</li>
+
                             <li>
                                 <dl>
                                     <dt>
                                         닉네임<em class="ess">*</em>
                                     </dt>
-                                    <dd>
-										<div class="inputbox modify">
-											<span class="inputbox">
-												<input type="text" class="inp" placeholder="kimjoongang" />
-												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-												<p class="row_err_txt">사용할수 없는 닉네임 입니다.</p>
-											</span>
-											<button type="button" class="btn bctype4">중복 확인</button>
+                                    <dd class="modify">
+										<div class="inputbox">
+											<input type="text" class="inp" placeholder="kimjoongang" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+											<p class="row_err_txt">사용할수 없는 닉네임 입니다.</p>
 										</div>
+										<button type="button" class="btn bctype4">중복 확인</button>
 										
                                     </dd>
                                 </dl>
@@ -217,16 +232,22 @@
                                     <dt>
                                         주소
                                     </dt>
-                                    <dd>
-										<div class="inputbox modify"><!--D : Error 시 error class 추가 -->
-											<fieldset class="addr_search">
-												<legend>주소검색</legend>
-												<input type="text" class="inp" placeholder="우편번호" readonly />
+									<dd class="modify">
+										<fieldset class="addr_search">
+											<legend>주소검색</legend>
+											<div class="post_num">
+												<div class="inputbox">
+													<input type="text" class="inp" placeholder="우편번호" readonly />
+												</div>
 												<button type="button" class="btn bctype4"><span>주소 검색</span></button>
+											</div>
+											<div class="inputbox">
 												<input type="text" class="inp" placeholder="도로명 주소" readonly />
+											</div>
+											<div class="inputbox">
 												<input type="text" class="inp" placeholder="상세 주소" readonly />
-											</fieldset>
-										</div>
+											</div>
+										</fieldset>
                                     </dd>
                                 </dl>
                             </li>
@@ -262,17 +283,17 @@
 									
 										<fieldset class="pw_in">
 											<legend>비밀번호 변경</legend>
-											<div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+											<div class="inputbox nobtn"><!--D : Error 시 error class 추가 -->
 												<input type="text" class="inp" placeholder="현재 사용중인 비밀번호 입력" />
 												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 												<p class="row_err_txt"></p>
 											</div>
-											<div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+											<div class="inputbox nobtn"><!--D : Error 시 error class 추가 -->
 												<input type="password" class="inp" placeholder="8~20자 이내 영문 대소문자, 특수문자, 숫자 조합" />
 												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 												<p class="row_err_txt"></p>
 											</div>
-											<div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+											<div class="inputbox nobtn"><!--D : Error 시 error class 추가 -->
 												<input type="password" class="inp" placeholder="8~20자 이내 영문 대소문자, 특수문자, 숫자 조합" />
 												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 												<p class="row_err_txt"></p>
@@ -303,6 +324,9 @@
                         <div class="tit_wrap02">
                             <h3 class="stit">뉴스레터 신청</h3>
                         </div>
+						<style>
+							.tooltip_layer { bottom:auto; display:none}
+						</style>
                         <div class="input_chk_type">
 							<div class="chk_all"><span class="chk_in"><input type="checkbox" id="checkAll"><label for="checkAll"><span>전체</span></label></span></div>
 							<ul class="chk_list">
@@ -313,13 +337,48 @@
 										<p>에디터의 시각으로 선정한 에센셜한 맛집과 핫플 공유</p>
 									</div>
 								</li>
-								<li><span class="chk_in"><input type="checkbox" id="check2"><label for="check2"><span>코스모폴리탄</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
-								<li><span class="chk_in"><input type="checkbox" id="check3"><label for="check3"><span>바자</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
-								<li><span class="chk_in"><input type="checkbox" id="check4"><label for="check4"><span>에스콰이어</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
-								<li><span class="chk_in"><input type="checkbox" id="check5"><label for="check5"><span>엘르보이스</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
-								<li><span class="chk_in"><input type="checkbox" id="check6"><label for="check6"><span>클로즈업</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
-								<li><span class="chk_in"><input type="checkbox" id="check7"><label for="check7"><span>예술산책</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
-								<li><span class="chk_in"><input type="checkbox" id="check8"><label for="check8"><span>eee</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button></li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check2"><label for="check2"><span>코스모폴리탄</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>코스모폴리탄코스모폴리탄코스모폴리탄코스모폴리탄코스모폴리탄코스모폴리탄</p>
+									</div>
+								</li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check3"><label for="check3"><span>바자</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>바자바자바자바자바자바자바자바자바자바자바자바자바자바자</p>
+									</div>
+								</li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check4"><label for="check4"><span>에스콰이어</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>에스콰이어에스콰이어에스콰이어에스콰이어에스콰이어에스콰이어에스콰이어</p>
+									</div>
+								</li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check5"><label for="check5"><span>엘르보이스</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>엘르보이스엘르보이스엘르보이스엘르보이스엘르보이스엘르보이스엘르보이스</p>
+									</div>
+								</li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check6"><label for="check6"><span>클로즈업</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>클로즈업클로즈업클로즈업클로즈업클로즈업</p>
+									</div>
+								</li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check7"><label for="check7"><span>예술산책</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>예술산책예술산책예술산책예술산책예술산책예술산책</p>
+									</div>
+								</li>
+								<li>
+									<span class="chk_in"><input type="checkbox" id="check8"><label for="check8"><span>eee</span></label></span><button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+									<div class="tooltip_layer">
+										<p>eeeeeeeeeeeeeeeeeeeee</p>
+									</div>
+								</li>
 							</ul>
                         </div>
 						<p class="col_txt">*  뉴스레터를 신청하시면, 매체별 최신 뉴스 및 취향 맞춤 서비스별 다양한 소식을 메일로 전해드려요!</p>
@@ -403,6 +462,8 @@
 					$("#checkAll").prop("checked", true);
 				}
 			}
+
+			
 		});
 	</script>
 	

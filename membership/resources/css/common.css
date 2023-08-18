@@ -241,7 +241,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 /* input content*/
 .input_type01 dt {font-weight:500; color:#333; margin-top:24px }
 .input_type01 dt:first-child { margin-top:0}
-.input_type01 dd.inputbox { margin-top:8px}
+.input_type01 dd { margin-top:8px}
 .row_err_txt { display:none; font-size:12px; font-weight:400; line-height:18px; color:#FF0000; margin-top:8px} /* D: input > error */
  .ess {color:#FF0000; font-size:14px; display:inline-block; margin-left:4px;} /* 필수 */
 

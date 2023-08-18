@@ -98,6 +98,18 @@
 .input_type02 li dd.nobtn .inp { width:100%; }
 .input_type02 .col_txt { position:absolute; right:0; top:50%; transform:translateY(-50%); }
 
+.input_type02 li dl dd.modify {display:flex}
+.input_type02 li dl dd.modify.nobtn {display:block}
+.input_type02 li dl dd.modify .inputbox {width:51%; display:flex}
+.input_type02 li dl dd.modify.nobtn .inputbox {width:100%;}
+.input_type02 li dl dd.modify .inputbox .inp {width:100%}
+.input_type02 li dl dd.modify .addr_search { display:flex; flex:1; flex-direction: column;}
+
+.input_type02 li dl dd .pw_in { width:51%}
+.input_type02 li dl dd .pw_in .inputbox .inp {width:100%}
+.addr_search {}
+.addr_search .post_num { display:flex}
+.addr_search .post_num ~ .inputbox { margin-top:16px}
 
 .inputbox .inp { }
 .inputbox.nobtn {}
@@ -235,7 +247,7 @@
     .input_type02 li{ margin-top:24px}
     .input_type02 li dl {flex-direction: column;}
     .input_type02 li dl dt {width:100%; margin-bottom:8px; padding-top:0}
-    .input_type02 li dd .inputbox {padding-right:36.72%}
+    .input_type02 li dd .inputbox {/*padding-right:36.72%*/}
     .input_type02 li dd .inputbox.nobtn { padding-right:0 }
     .input_type02 li dd .inputbox .btn { position:absolute; right:0; width:31.94%; min-width:68px}
     .input_type02 li .col_txt { position:static; margin-top:16px; transform: none; }
@@ -245,6 +257,17 @@
     .input_type02 li dl dd .btn_area .btn {}
     .input_type02 li dd .inputbox.modify span.inputbox {padding-right:0; width:100%}
 
+    .input_type02 li dl dd.modify .inputbox  {width:63.28%;}
+    .input_type02 li dl dd.modify .btn{ min-width:107px}
+    .input_type02 li dl dd.modify .addr_search .inputbox { width:100% }
+    .input_type02 li dl dd.modify .addr_search .post_num .inputbox { width:63.28%;}
+    .input_type02 li dl dd .pw_in  { width:100%}
+    
+    .addr_search {}
+    .addr_search .post_num { display:flex}
+    .addr_search .post_num ~ .inputbox { margin-top:16px}
+
+    
     .input_chk_type{}
     .input_chk_type .chk_all {position:static}
     .chk_list { margin-left:0px; display:flex; flex-wrap:wrap; margin-top:16px}

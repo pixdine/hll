@@ -242,7 +242,7 @@
     .input_type02 li dd .inp { width:100%; }
     .input_type02 li dl dd .btn_area {display:flex;justify-content: space-between;}
     .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:0px}
-    .input_type02 li dl dd .btn_area .btn {width:47.46%}
+    .input_type02 li dl dd .btn_area .btn {}
     .input_type02 li dd .inputbox.modify span.inputbox {padding-right:0; width:100%}
 
     .input_chk_type{}
@@ -251,4 +251,6 @@
     .chk_list li { position:relative;width:50%; white-space:nowrap; margin-bottom:16px} 
     .chk_list li .chk_in { vertical-align:middle; color:#111}
     .chk_list li .btn_ico { vertical-align:middle;}
+
+    .btn_area.sns { width:auto}
 }

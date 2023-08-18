@@ -277,16 +277,21 @@ input[type="radio"]:checked + label:before {background-image: url("data:image/sv
 
 /* input내 컨텐츠 */
 .inp_btm { display:flex; margin-top:34px; flex-wrap:nowrap; justify-content: space-between; }
-.inp_btm .chk_in { margin-top:4px}
+.inp_btm .chk_in { margin-top:8px}
 .inp_btm .in_btm_r { color:#333; }
 .inp_btm .in_btm_r .btn_txt {margin-top:3px}
 .inp_btm .in_btm_r .btn_txt + em {display:inline-block; margin-top:3px}
 
 /* btn area */
-.btn_area { margin-top:40px;}
-.btn_area.two { display:flex; justify-content: space-between; }
-.btn_area.two .btn, .btn_area.two .btn_b { width:184px}
+.btn_area { margin:40px -8px 0 ;display:flex; justify-content: space-between;}
+.btn_area button { width:100%; margin:0 8px}
+/* .btn_area.two {  }
+.btn_area.two .btn, .btn_area.two .btn_b { width:184px}*/ 
 .btn_login { margin-top:16px} 
+.btn_login button { width:100%} 
+.btn_area.sns { width:52.5%}
+.tbl_btm_area .btn_area { margin:80px 0 0}
+.tbl_btm_area .btn_area button {width:384px; margin:0 auto}
 
 /* btn 간격 */
 .mt_space01 { margin-top:24px !important }

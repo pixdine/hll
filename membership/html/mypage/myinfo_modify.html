@@ -186,9 +186,9 @@
                                         이름<em class="ess">*</em>
                                     </dt>
                                     <dd>
-										<div  class="inputbox modify nobtn"><!--D : Error 시 error class 추가 -->
+										<div  class="inputbox modify"><!--D : Error 시 error class 추가 -->
 											<input type="text" class="inp" value="김중앙" readonly/>
-											<p class="row_err_txt">.</p>
+											<p class="row_err_txt"></p>
 										</div>
 										<p class="col_txt">* 이름 변경은 고객센터로 연락해주세요.</p>
                                     </dd>
@@ -200,11 +200,15 @@
                                         닉네임<em class="ess">*</em>
                                     </dt>
                                     <dd>
-										<div class="inputbox modify error">
-											<input type="text" class="inp" placeholder="kimjoongang" />
+										<div class="inputbox modify">
+											<span class="inputbox">
+												<input type="text" class="inp" placeholder="kimjoongang" />
+												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+												<p class="row_err_txt">사용할수 없는 닉네임 입니다.</p>
+											</span>
 											<button type="button" class="btn bctype4">중복 확인</button>
-											<p class="row_err_txt">사용할수 없는 닉네임 입니다.</p>
 										</div>
+										
                                     </dd>
                                 </dl>
                             </li>
@@ -260,14 +264,17 @@
 											<legend>비밀번호 변경</legend>
 											<div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
 												<input type="text" class="inp" placeholder="현재 사용중인 비밀번호 입력" />
+												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 												<p class="row_err_txt"></p>
 											</div>
 											<div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
 												<input type="password" class="inp" placeholder="8~20자 이내 영문 대소문자, 특수문자, 숫자 조합" />
+												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 												<p class="row_err_txt"></p>
 											</div>
 											<div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
 												<input type="password" class="inp" placeholder="8~20자 이내 영문 대소문자, 특수문자, 숫자 조합" />
+												<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 												<p class="row_err_txt"></p>
 											</div>
 										</fieldset>

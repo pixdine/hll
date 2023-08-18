@@ -102,6 +102,9 @@
 .inputbox .inp { }
 .inputbox.nobtn {}
 .inputbox .inp ~ .btn { margin-left:16px}
+.inputbox ~ .btn { margin-left:16px}
+.inputbox.modify span.inputbox { display:inline-block; width:51%}
+.inputbox.modify span.inputbox .inp { width:100%}
 
 .addr_search { }
 .addr_search .inp { }
@@ -245,6 +248,7 @@
     .input_type02 li dl dd .btn_area {display:flex;justify-content: space-between;}
     .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:0px}
     .input_type02 li dl dd .btn_area .btn {width:47.46%}
+    .input_type02 li dd .inputbox.modify span.inputbox {padding-right:0; width:100%}
 
     .input_chk_type{}
     .input_chk_type .chk_all {position:static}

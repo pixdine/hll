@@ -1,13 +1,10 @@
 $(document).ready(function () {
   setCSS();
 
- // allmenuOpen();
- // allmenuOpenMo();
-  //initOnDevice();
 
   cate_swiper();
   scrollContList();
-  //allmenuOpen();
+  inputBind();
   scrapList();
 
   //키워드 태그
@@ -47,6 +44,17 @@ $(document).ready(function () {
 		familySite($(this));
 	});
 });
+
+
+function inputBind() {
+  $("input.inp").on("keyup", function () {
+    $(this).toggleClass("typed", !!this.value);
+  });
+  $("input.inp + .del").on("click", function () {
+    $(this).prev("input").val("").removeClass("typed");
+  });
+}
+
 
 
 //iOS vh 대응

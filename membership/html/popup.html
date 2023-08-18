@@ -269,6 +269,7 @@
                     <dt>비밀번호<em class="ess">*</em></dt>
                     <dd class="inputbox">
                         <input type="password" class="inp" placeholder="비밀번호 입력"/>
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
                         <p class="row_err_txt">비밀번호를 입력해 주세요.</p>
                     </dd>
                     <dt>탈퇴 사유<em class="ess">*</em></dt>
@@ -329,6 +330,7 @@
                     <dt>휴대폰 번호</dt>
                     <dd class="inputbox">
                         <input type="password" class="inp" placeholder="휴대폰 번호 숫자만 입력"/>
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
                         <p class="row_err_txt">숫자만 입력해 주세요</p>
                     </dd>
                 </dl>
@@ -345,21 +347,6 @@
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
     <script>
-
-        $(document).ready(function(){
-            
-            inputBind();
-        });
-
-        function inputBind() {
-            $("input.inp").on('keyup', function() {
-                $(this).toggleClass('typed', !!this.value)
-            })
-            $("input.inp + .del").on('click', function() {
-                $(this).prev('input').val('').removeClass('typed')
-            })
-        }
-
 
         //우선 팝업을 보여주기 위해 임의로 해놓은거라 common.js에 새롭게 추가해주시고 이 부분은 삭제해주세요.
         $(function () {

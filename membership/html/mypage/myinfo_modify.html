@@ -304,7 +304,7 @@
                             <h3 class="stit">뉴스레터 신청</h3>
                         </div>
                         <div class="input_chk_type">
-							<div class="chk_all"><span class="chk_in"><input type="checkbox" id="check_all"><label for="check_all"><span>전체</span></label></span></div>
+							<div class="chk_all"><span class="chk_in"><input type="checkbox" id="checkAll"><label for="checkAll"><span>전체</span></label></span></div>
 							<ul class="chk_list">
 								<li>
 									<span class="chk_in"><input type="checkbox" id="check1"><label for="check1"><span>엘르</span></label></span>
@@ -378,6 +378,33 @@
 	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 
+	<script>
+		$(document).ready(function () {
+			// "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수
+			$("#checkAll").on("click", function () {
+				toggleAllSubCheckboxes(this.checked);
+			});
+
+			// 하위 체크 박스 중 하나라도 클릭되었을 때 호출되는 함수
+			$(".chk_in input").on("click", function () {
+				updateSelectAllCheckbox();
+			});
+
+			// 모든 하위 체크 박스 상태 변경 함수
+			function toggleAllSubCheckboxes(checked) {
+				$(".chk_in input").prop("checked", checked);
+			}
+
+			// "전체 선택" 체크 박스 상태 업데이트 함수
+			function updateSelectAllCheckbox() {
+				if ($(".chk_in input:checked").length !== $(".chk_in").length) {
+					$("#checkAll").prop("checked", false);
+				} else {
+					$("#checkAll").prop("checked", true);
+				}
+			}
+		});
+	</script>
 	
 
 </body>

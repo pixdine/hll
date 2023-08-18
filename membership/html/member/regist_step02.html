@@ -164,27 +164,27 @@
 						</h2>
 						<p class="info_txt">회원가입 전 이용약관을 꼭 확인해주세요.</p>
 					</div>
-
+					
 					<div class="body_cont01">
 						<ul class="agree_chk_list">
 							<li class="agree_all">
-								<span class="chk_in"><input type="checkbox" id="check1"><label for="check1"><span>모두 동의합니다.</span></label></span>
+								<span class="chk_in"><input type="checkbox" id="checkAll"><label for="checkAll"><span>모두 동의합니다.</span></label></span>
 								<button type="text" class="btn_ico more"></button><span class="blind">약관보기</span></button>
 							</li>
 							<li>
-								<span class="chk_in"><input type="checkbox" id="check2"><label for="check2"><span>허스트중앙(유) 온라인 서비스 이용 약관<em>(필수)</em></span></label></span>
+								<span class="chk_in"><input type="checkbox" id="check1"><label for="check1"><span>허스트중앙(유) 온라인 서비스 이용 약관<em>(필수)</em></span></label></span>
 								<button type="text" class="btn_ico more"></button><span class="blind">약관보기</span></button>
 							</li>
 							<li>
-								<span class="chk_in"><input type="checkbox" id="check3"><label for="check3"><span>개인정보 수집 및 이용에 대한 안내<em>(필수)</em></span></label></span>
+								<span class="chk_in"><input type="checkbox" id="check2"><label for="check2"><span>개인정보 수집 및 이용에 대한 안내<em>(필수)</em></span></label></span>
 								<button type="text" class="btn_ico more"></button><span class="blind">약관보기</span></button>
 							</li>
 							<li>
-								<span class="chk_in"><input type="checkbox" id="check4"><label for="check4"><span>개인정보 처리위탁 안내<em>(필수)</em></span></label></span>
+								<span class="chk_in"><input type="checkbox" id="check3"><label for="check3"><span>개인정보 처리위탁 안내<em>(필수)</em></span></label></span>
 								<button type="text" class="btn_ico more"></button><span class="blind">약관보기</span></button>
 							</li>
 							<li>
-								<span class="chk_in"><input type="checkbox" id="check5"><label for="check5"><span>마케팅 목적의 활용 동의<em>(필수)</em></span></label></span>
+								<span class="chk_in"><input type="checkbox" id="check4"><label for="check4"><span>마케팅 목적의 활용 동의<em>(필수)</em></span></label></span>
 								<button type="text" class="btn_ico more"></button><span class="blind">약관보기</span></button>
 							</li>
 						</ul>
@@ -242,7 +242,34 @@
 	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 
-	
+
+	<script>
+		$(document).ready(function () {
+			// "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수
+			$("#checkAll").on("click", function () {
+				toggleAllSubCheckboxes(this.checked);
+			});
+
+			// 하위 체크 박스 중 하나라도 클릭되었을 때 호출되는 함수
+			$(".chk_in input").on("click", function () {
+				updateSelectAllCheckbox();
+			});
+
+			// 모든 하위 체크 박스 상태 변경 함수
+			function toggleAllSubCheckboxes(checked) {
+				$(".chk_in input").prop("checked", checked);
+			}
+
+			// "전체 선택" 체크 박스 상태 업데이트 함수
+			function updateSelectAllCheckbox() {
+				if ($(".chk_in input:checked").length !== $(".chk_in").length) {
+					$("#checkAll").prop("checked", false);
+				} else {
+					$("#checkAll").prop("checked", true);
+				}
+			}
+		});
+	</script>
 
 </body>
 </html>

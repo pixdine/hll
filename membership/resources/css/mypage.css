@@ -113,9 +113,9 @@
 .input_chk_type{}
 .input_chk_type .chk_all {position:absolute}
 .chk_list { margin-left:90px; display:flex; flex-wrap:wrap; max-width:672px }
-.chk_list li { position:relative;width:168px; white-space:nowrap; margin-bottom:23px} 
+.chk_list li { position:relative;width:168px; white-space:nowrap; margin-bottom:21px; line-height:1} 
 .chk_list li .chk_in { vertical-align:middle; color:#111}
-.chk_list li .btn_ico { vertical-align:middle; position: relative; top:2px;}
+.chk_list li .btn_ico { vertical-align:middle; position: relative; top:-4px;}
 
 .tooltip_layer {position:absolute; bottom:-42px; z-index:201; background-color:var(--point); color:#fff;  padding:8px 16px;}
 .tooltip_layer p {font-size:12px; line-height:17px; text-align:left; white-space:nowrap}
@@ -250,5 +250,5 @@
     .chk_list { margin-left:0px; display:flex; flex-wrap:wrap; margin-top:16px}
     .chk_list li { position:relative;width:50%; white-space:nowrap; margin-bottom:16px} 
     .chk_list li .chk_in { vertical-align:middle; color:#111}
-    .chk_list li .btn_ico { vertical-align:middle; position: relative; top:2px;}
+    .chk_list li .btn_ico { vertical-align:middle;}
 }

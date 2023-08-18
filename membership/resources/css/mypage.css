@@ -132,11 +132,6 @@
 .tbl_btm_area .btn_area {margin-top:80px; width:100%}
 .tbl_btm_area .btn_area .btn_b { max-width:384px; margin:0 auto}
 
-
-.pw_in { margin-top:32px }
-.pw_in .inputbox ~ .inputbox{ margin-top:16px }
-
-
 @media (max-width:768px) {
     .container.mypage { padding-bottom:80px}
     .top_profile_area { padding-left:0; margin: 0 20px; text-align:center; background-size: auto; padding-top:49px}

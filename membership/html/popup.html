@@ -161,11 +161,10 @@
 						<button type="button" data-popup-open="popup_1"><span>이용약관</span></button><br>
                         <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
 						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
-						<button type="button" data-popup-open="popup_3"><span>팝업2</span></button><br>
-						<button type="button" data-popup-open="popup_4"><span>팝업3</span></button><br>
+						<button type="button" data-popup-open="popup_4"><span>비밀번호 재설정</span></button><br>
 
-						<button type="button" data-alert-open="alert_1"><span>얼럿1_버튼1</span></button><br>
-						<button type="button" data-alert-open="alert_2"><span>얼럿2_버튼2</span></button><br>
+						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
+						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
 					</div>
                 </div>
             </div>
@@ -229,8 +228,8 @@
             </div>
             <div class="popup_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn_b bctype2"><span>취소</span></button>
-                    <button type="button" class="btn_b bctype4"><span>동의</span></button>
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype4"><span>동의</span></button>
                 </div>
             </div>
         </div>
@@ -295,8 +294,8 @@
             </div>
             <div class="popup_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn_b bctype2"><span>취소</span></button>
-                    <button type="button" class="btn_b bctype4"><span>동의</span></button>
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype4"><span>동의</span></button>
                 </div>
             </div>
         </div>
@@ -311,15 +310,13 @@
                     <button type="button" class="btn_close" data-popup-close="popup_3"><span class="blind">닫기</span></button>
                 </div>
             </div>
-            <div class="popup_cont">
-              
+            <div class="popup_cont non">
                 <div class="pop_tit_wrap">
                     <h2 class="tit">
                         아이디를 잊으셨나요?
                     </h2>
                     <p class="info_txt">회원가입 시 입력하신 이름과 휴대폰 번호를 입력해주세요.</p>
                 </div>
-               
                 <dl class="input_type01">
                     <dt>이름</dt>
                     <dd class="inputbox"><!--D : Error 시 error class 추가 -->
@@ -334,11 +331,116 @@
                         <p class="row_err_txt">숫자만 입력해 주세요</p>
                     </dd>
                 </dl>
+
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype4" disabled><span>확인</span></button>
+                </div>
+
+                <div class="body_cont02">
+
+                    <div class="gray_box">
+                        <div class="box_inner">
+                            <p class="txt">
+                                허스트중앙 아이디는<br />
+                                <strong>jaki****@joongang.com</strong> 입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                        <button type="button" class="btn bctype4"><span>LOGIN</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 비밀번호 재설정-->
+    <div class="popup_full" data-pop="popup_4">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">비밀번호 재설정</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_4"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="pop_tit_wrap">
+                    <h2 class="tit">
+                        PASS 인증이 완료되었습니다.
+                    </h2>
+                    <p class="info_txt">비밀번호를 재설정하신 후 서비스를 이용해 주세요.</p>
+                </div>
+                <dl class="input_type01">
+                    <dt>멤버십 아이디</dt>
+                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
+                        <input type="text" class="inp" value="jaki****@joongang.kr" placeholder="" readonly />
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                    </dd>
+                    <dt>비밀번호 재설정<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <fieldset class="pw_in">
+                            <legend>비밀번호 변경</legend>
+                            <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+                                <input type="text" class="inp" placeholder="현재 사용중인 비밀번호 입력" />
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                                <p class="row_err_txt"></p>
+                            </div>
+                            <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+                                <input type="password" class="inp" placeholder="8~20자 이내 영문 대소문자, 특수문자, 숫자 조합" />
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                                <p class="row_err_txt"></p>
+                            </div>
+                        </fieldset>
+                    </dd>
+                </dl>
             </div>
             <div class="popup_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn_b bctype4"><span>확인</span></button>
+                    <button type="button" class="btn bctype4" disabled><span>동의</span></button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 개인정보 수정 alter -->
+    <div class="popup_alert" data-alert="alert_1" >
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    회원정보 항목 중 수정한 항목이 존재합니다.<br />
+                    저장하지 않은 회원 정보는<br />저장되지 않습니다.<br />회원정보 수정을 취소하시겠습니까?
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype4"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 개인정보 수정 완료 alter -->
+    <div class="popup_alert" data-alert="alert_2">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    회원정보 변경이 완료되었습니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype4"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
             </div>
         </div>
     </div>

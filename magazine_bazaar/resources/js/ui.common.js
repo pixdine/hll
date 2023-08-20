@@ -29,29 +29,22 @@ $(document).ready(function(){
 
 	/* follow pop */
 	$('[data-popup-open]').on('click', function(e) {
-		console.log(e)
 		popup.open($(this).attr('data-popup-open'), 'popup')
 	});
-
 	$('[data-alert-open]').on('click', function(e) {
-		console.log(e)
 		popup.open($(this).attr('data-alert-open'), 'alert')
 	});
-
 	$('[data-layer-open]').on('click', function(e) {
 		popup.open($(this).attr('data-layer-open'), 'layer')
 	});
 
 	$('[data-popup-close]').on('click', function(e) {
-		console.log(e)
 		popup.close($(this).attr('data-popup-close'), 'popup')
 	});
 	$('[data-alert-close]').on('click', function(e) {
-		console.log(e)
 		popup.close($(this).attr('data-alert-close'), 'alert')
 	});
 	$('[data-layer-close]').on('click', function(e) {
-		console.log(e)
 		popup.close($(this).attr('data-layer-close'), 'layer')
 	});
 
@@ -195,7 +188,7 @@ function allmenuOpen() {
     })
 
     $(".has_menu > a > span").click(function (e) {
-		
+
 		var $depth1 = $(this).parent().parent();
 		var $btnTxt = $(this).find('em');
 
@@ -416,12 +409,15 @@ function issueAtcList(){
 
 //full popup
 const popup = {
+    stack: [],
     clientWidth: 0,
-    open: function(_target, _type){
+    dimmed: document.createElement('div'),
+    open: function (_target, _type) {
         this.clientWidth = document.documentElement.clientWidth
+        var targetEl = $(`[data-${_type}="${_target}"]`);
         switch (_type) {
             case 'popup':
-                $('[data-popup="' + _target + '"]').fadeIn(100, function(){
+                targetEl.fadeIn(100, function () {
                     $(this).addClass('open')
                 });
                 $('body').addClass('lockbody');
@@ -432,30 +428,30 @@ const popup = {
                 //     }
                 // });
 
-                $('.popup_inner').click(function(e){
+                $('.popup_inner', targetEl).click(function (e) {
                     e.stopPropagation();
                 });
 
                 break;
             case 'alert':
-                $('[data-alert="' + _target + '"]').fadeIn(100);
+                targetEl.fadeIn(100);
                 $('body').addClass('lockbody');
-                $('[data-alert]').click(function(){
-                    if($(this).hasClass('open')){
+                $('[data-alert]', targetEl).click(function () {
+                    if ($(this).hasClass('open')) {
                         $(this).removeClass('open');
                         $('body').removeClass('lockbody');
                     }
                 });
 
-                $('.popup_alert_inner').click(function(e){
+                $('.popup_alert_inner', targetEl).click(function (e) {
                     e.stopPropagation();
                 });
 
                 break;
             case 'layer':
-                $('[data-layer="' + _target + '"]').fadeIn(100);
+                targetEl.fadeIn(100);
 
-                $('[data-layer]').click(function(e){
+                $('[data-layer]', targetEl).click(function (e) {
                     e.stopPropagation();
                 });
 
@@ -464,26 +460,32 @@ const popup = {
                 console.log('pop open default !');
                 break;
         }
-        document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
-    },
-    close: function(_target, _type){
-        switch (_type) {
-            case 'popup':
-                $('[data-popup="' + _target + '"]').fadeOut(100, adjustPad);
-                break;
-            case 'alert':
-                $('[data-alert="' + _target + '"]').fadeOut(100, adjustPad);
-                break;
-            case 'layer':
-                $('[data-layer="' + _target + '"]').fadeOut(100, adjustPad);
-                break;
-            default:
-                console.log('pop close default !');
-                break;
+
+        if (!this.stack.length) {
+            document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
+            this.dimmed.classList.add('dimmed')
+            this.dimmed.style.display = "none"
+            document.documentElement.append(this.dimmed)
+            $(this.dimmed).fadeIn(100)
         }
+        this.stack.push(targetEl);
+        this.dimmed.style.zIndex = window.getComputedStyle(targetEl[0]).getPropertyValue("z-index") - 1
+    },
+    close: function (_target, _type) {
+        var _this = this;
+        var targetEl = $(`[data-${_type}="${_target}"]`);
+
+        targetEl.fadeOut(100, adjustPad);
+
         function adjustPad() {
-            $('body').removeClass('lockbody');
-            document.body.style.removeProperty("padding-right");
+            _this.stack.splice(_this.stack.indexOf(targetEl), 1);
+            if (!_this.stack.length) {
+                $('body').removeClass('lockbody');
+                document.body.style.removeProperty("padding-right");
+                $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
+            } else {
+                _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1
+            }
         }
     }
 }

@@ -185,11 +185,12 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .inputbox .inp{display:block;width:100%;height:52px;padding:0 52px 0 16px;background-color:#fff;border:1px solid #ccc;border-radius:0;color:#333;font-size:16px;font-weight:500;}
 .inputbox .inp[readonly]{background-color:#f6f6f6;cursor:default;-webkit-tap-highlight-color:transparent;}
 .inputbox .inp[readonly]:focus{border-color:#ccc;}
-.inputbox .btn_ico.del{position:absolute;right:10px;top:50%;transform:translateY(-50%);}
-.inputbox .inp + .del { display: none; }
-.inputbox .inp:focus + .del,
-.inputbox .inp:hover + .del,
-.inputbox .inp + .del:hover { display: block; }
+.inputbox .btn_ico.del{position:absolute;right:10px;top:50%;;}
+.inputbox .inp + .del { transform:translateY(-50%) scale(0); }
+.inputbox .inp.typed:focus + .del,
+.inputbox .inp.typed:hover + .del,
+.inputbox .inp.typed + .del:hover,
+.inputbox .inp.typed + .del:focus { transform:translateY(-50%) scale(1); }
 
 /* 구글광고배너 */
 .ad_google{padding:20px 0;text-align:center;font-size:16px;}

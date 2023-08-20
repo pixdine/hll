@@ -211,6 +211,13 @@ function initOnDevice() {
 }
 
 function inputBind() {
+    $("input.inp").on("input", function(e) {
+        if (e.target.value && !this.classList.contains("typed")) {
+            this.classList.add("typed")
+        } else if (!e.target.value && this.classList.contains("typed")) {
+            this.classList.remove("typed")
+        }
+    })
     $("input.inp + .del").on('click', function() {
         $(this).prev('input').val('').removeClass('typed').focus()
     })

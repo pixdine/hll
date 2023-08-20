@@ -75,6 +75,10 @@ $(document).ready(function () {
     $(document).tooltip();
 });
 
+function showLayer(target) {
+    $(`#${target}`).show()
+}
+
 
 function inputBind() {
   $("input.inp").on("keyup", function () {

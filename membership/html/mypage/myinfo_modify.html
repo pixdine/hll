@@ -279,9 +279,9 @@
                                         비밀번호
                                     </dt>
                                     <dd>
-                                        <button type="button" class="btn bctype4"><span>변경</span></button><!-- D: 변경 클릭 시 비밀번호 변경 display : block-->
+                                        <button type="button" class="btn bctype4" onclick="showLayer('password-layer')"><span>변경</span></button><!-- D: 변경 클릭 시 비밀번호 변경 display : block-->
 
-										<fieldset class="pw_in">
+										<fieldset class="pw_in" id="password-layer" style="display:none;">
 											<legend>비밀번호 변경</legend>
 											<div class="inputbox nobtn"><!--D : Error 시 error class 추가 -->
 												<input type="text" class="inp" placeholder="현재 사용중인 비밀번호 입력" />

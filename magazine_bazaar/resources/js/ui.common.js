@@ -211,11 +211,8 @@ function initOnDevice() {
 }
 
 function inputBind() {
-    $("input.inp").on('keyup', function() {
-        $(this).toggleClass('typed', !!this.value)
-    })
     $("input.inp + .del").on('click', function() {
-        $(this).prev('input').val('').removeClass('typed')
+        $(this).prev('input').val('').removeClass('typed').focus()
     })
 }
 

@@ -17,13 +17,17 @@ $(document).ready(function(){
 
     $('[data-popup-toggle]').on('click', function(e) {
         var targetId = $(this).attr('data-popup-toggle')
-        var targetElement = $('[data-popup="'+targetId+'"]')
+        var targetElement = $('[data-popup="' + targetId + '"]')
         var isVisible = targetElement.is(':visible')
+        var gap = window.innerWidth - document.documentElement.clientWidth
         $(this).toggleClass('on', !isVisible)
-        if(isVisible) {
+        if (isVisible) {
+            (targetElement.parent())[0].style.removeProperty("padding-right");
+            (targetElement.parent())[0].style.removeProperty("margin-right");
             popup.close(targetId, 'popup')
-        }        else{
-            popup.open(targetId, 'popup')
+        } else {
+            targetElement.parent().css({paddingRight: gap, marginRight:-gap})
+            popup.open(targetId, 'popup', false)
         }
     });
 
@@ -122,11 +126,10 @@ function headerSticky () {
         } else {
             // up
             if (header.hasClass('view')) { //기사상세 헤더
+                $('.popup_layer', header).fadeOut(100)
                 header.removeClass('active');
                 /* 상세페이지 공유하기 레이어 관련 */
-                if ($('.pop_share').hasClass('open')) {
-                    $('.pop_share').removeClass('open');
-                }
+
                 /* //상세페이지 공유하기 레이어 관련 */
             } else {
                 // header.removeClass('down')
@@ -412,7 +415,7 @@ const popup = {
     stack: [],
     clientWidth: 0,
     dimmed: document.createElement('div'),
-    open: function (_target, _type) {
+    open: function (_target, _type, _hasDimmed = true) {
         this.clientWidth = document.documentElement.clientWidth
         var targetEl = $(`[data-${_type}="${_target}"]`);
         switch (_type) {
@@ -461,15 +464,19 @@ const popup = {
                 break;
         }
 
-        if (!this.stack.length) {
-            document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
-            this.dimmed.classList.add('dimmed')
-            this.dimmed.style.display = "none"
-            document.documentElement.append(this.dimmed)
-            $(this.dimmed).fadeIn(100)
+        if (_type !== 'layer') {
+            if (!this.stack.length) {
+                document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
+                if (_hasDimmed) {
+                    this.dimmed.classList.add('dimmed')
+                    this.dimmed.style.display = "none"
+                    document.documentElement.append(this.dimmed)
+                    $(this.dimmed).fadeIn(100)
+                }
+            }
+            this.stack.push(targetEl);
+            this.dimmed.style.zIndex = window.getComputedStyle(targetEl[0]).getPropertyValue("z-index") - 1
         }
-        this.stack.push(targetEl);
-        this.dimmed.style.zIndex = window.getComputedStyle(targetEl[0]).getPropertyValue("z-index") - 1
     },
     close: function (_target, _type) {
         var _this = this;
@@ -478,13 +485,15 @@ const popup = {
         targetEl.fadeOut(100, adjustPad);
 
         function adjustPad() {
-            _this.stack.splice(_this.stack.indexOf(targetEl), 1);
-            if (!_this.stack.length) {
-                $('body').removeClass('lockbody');
-                document.body.style.removeProperty("padding-right");
-                $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
-            } else {
-                _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1
+            if (_type !== 'layer') {
+                _this.stack.splice(_this.stack.indexOf(targetEl), 1);
+                if (!_this.stack.length) {
+                    $('body').removeClass('lockbody');
+                    document.body.style.removeProperty("padding-right");
+                    $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
+                } else {
+                    _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1
+                }
             }
         }
     }

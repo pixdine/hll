@@ -32,14 +32,14 @@
 							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
 						</div>
 						<!-- //상단 닫기 영역 -->
-			
+
 						<!-- 로그인/회원가입 -->
 						<div class="allmenu_util">
 							<a href="#">LOGIN</a><!-- D: LOGOUT -->
 							<a href="#">SIGNUP</a>
 						</div>
 						<!-- //로그인/회원가입 -->
-			
+
 						<!-- 단일메뉴 및 버티컬 -->
 						<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
 						<div class="allmenu_single">
@@ -48,7 +48,7 @@
 							<li class="line"><a href="#">SUSTAINABILITY</a></li>
 						</div>
 						<!-- //단일메뉴 및 버티컬 -->
-			
+
 						<!-- 메뉴 -->
 						<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
 						<div class="allmenu_list">
@@ -112,7 +112,7 @@
 							</ul>
 						</div>
 						<!-- //메뉴 -->
-			
+
 						<!-- 외부링크 -->
 						<div class="etc_link">
 							<ul>
@@ -124,7 +124,7 @@
 							</ul>
 						</div>
 						<!-- //외부링크 -->
-			
+
 						<!-- sns -->
 						<div class="sns_list">
 							<ul>
@@ -220,7 +220,7 @@
 								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
 								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
 							</div>
-				
+
 							<!-- 추천 키워드 -->
 							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
 							<div class="search_keyword">
@@ -927,53 +927,6 @@
 			showTagBtn();
 		});
 
-
-		//우선 팝업을 보여주기 위해 임의로 해놓은거라 common.js에 새롭게 추가해주시고 이 부분은 삭제해주세요.
-		$(function(){
-			$('[data-popup-open]').on('click', function(e) {
-				e.preventDefault();
-				var target = $(this).attr('data-popup-open');
-				$('[data-pop="' + target + '"]').addClass('open');
-				$('body').addClass('lockbody');
-				$('body').append("<div class='dimmed'></div>");
-			});
-
-			$('[data-popup-close]').on('click', function(e) {
-				e.preventDefault();
-				var target = $(this).attr('data-popup-close');
-				$('[data-pop="' + target + '"]').removeClass('open');
-				$('body').removeClass('lockbody');
-				$('.dimmed').remove();
-			});
-
-			$('[data-alert-open]').on('click', function(e) {
-				e.preventDefault();
-				var target = $(this).attr('data-alert-open');
-				$('[data-alert="' + target + '"]').addClass('open');
-				$('body').addClass('lockbody');
-				$('body').append("<div class='dimmed'></div>");
-			});
-
-			$('[data-alert-close]').on('click', function(e) {
-				e.preventDefault();
-				var target = $(this).attr('data-alert-close');
-				$('[data-alert="' + target + '"]').removeClass('open');
-				$('body').removeClass('lockbody');
-				$('.dimmed').remove();
-			});
-
-			$('[data-layer-open]').on('click', function(e) {
-				e.preventDefault();
-				var target = $(this).attr('data-layer-open');
-				$('[data-layer="' + target + '"]').addClass('open');
-			});
-
-			$('[data-layer-close]').on('click', function(e) {
-				e.preventDefault();
-				var target = $(this).attr('data-layer-close');
-				$('[data-layer="' + target + '"]').removeClass('open');
-			});
-		});
 	</script>
 	<!-- //js -->
 

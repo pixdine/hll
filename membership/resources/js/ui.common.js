@@ -11,7 +11,7 @@ $(document).ready(function () {
   $(".tag_wrap .btnbox .btn_ico").on("click", tagOpen);
   showTagBtn();
 
-  
+
 	/* follow pop */
 	$('[data-popup-open]').on('click', function(e) {
 		console.log(e)
@@ -43,6 +43,36 @@ $(document).ready(function () {
 	$('.btn_familysite').click(function(){
 		familySite($(this));
 	});
+
+    //공통 툴팁
+    $.fn.tooltip = function () {
+        this
+            .on('mouseenter click', 'button.tooltip', function (e) {
+                e.stopPropagation()
+                $(this).removeClass('is-visible')
+            })
+            .on('focus', ':has(>.tooltip_layer)', function (e) {
+                if (!$(this).prop('disabled')) {
+                    showTooltip(this)
+                }
+            })
+            .on('blur keydown', ':has(>.tooltip_layer)', function (e) {
+                if (e.type === 'keydown') {
+                    if (e.witch === 27) {
+                        hideTooltip(this)
+                    }
+                } else {
+                    hideTooltip(this)
+                }
+            })
+        function showTooltip(el) {
+            $(">.tooltip_layer", el).addClass('is-visible')
+        }
+        function hideTooltip(el) {
+            $(">.tooltip_layer", el).removeClass('is-visible')
+        }
+    }
+    $(document).tooltip();
 });
 
 
@@ -83,7 +113,7 @@ $(window)
   }).resize();
 
 
-//전체메뉴 > 모바일 
+//전체메뉴 > 모바일
 function allmenuOpenMo() {
   const $body = document.querySelector("body");
   let scrollPosition = 0,
@@ -171,7 +201,7 @@ function allmenuOpen() {
 
 function initOnDevice() {
   if ($('body').hasClass('is_mobile'))  allmenuOpenMo();
-  else allmenuOpen(); 
+  else allmenuOpen();
 }
 
 // 카테고리별 썸네일 슬라이드
@@ -251,7 +281,7 @@ function scrollContList(){
   var ww = window.innerWidth;
   var mySwiper = undefined;
   if (scrollContList.length <= 0) return;
-  
+
   function initSwiper(){
     if (ww > 768 && mySwiper == undefined) {
       scrollContList.each(function () {
@@ -267,12 +297,12 @@ function scrollContList(){
             slidesPerView:5,
             spaceBetween:24,
             },
-            
+
             1023: {
             slidesPerView:4,
             spaceBetween:24,
             },
-            
+
             769: {
             slidesPerView:3,
             },
@@ -285,21 +315,21 @@ function scrollContList(){
         this.swiper.destroy(); //각각을 파괴함.
       });
       mySwiper = undefined;
-      cate_swiper(); 
+      cate_swiper();
     }
   }
   initSwiper();
   $(window).on("resize", function () {
     ww = window.innerWidth;
     initSwiper();
-  });	
+  });
 }
 
 //스크랩 > 모바일에서만 작동
 function scrapList(){
 
   console.log("scrap");
-  
+
   var scrapList = $(".myscrap_list");
   var ww = window.innerWidth;
   var mySwiper = undefined;
@@ -330,7 +360,7 @@ function scrapList(){
   $(window).on("resize", function () {
     ww = window.innerWidth;
     initSwiper();
-  });	
+  });
 
 }
 

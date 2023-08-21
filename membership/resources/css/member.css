@@ -37,7 +37,6 @@
     .container.member .cont_inner {width:auto; margin:0 auto}
     input[type="checkbox"] + label > span { font-size:14px}
     .agree_chk_list li { margin-top:24px }
-    .tit_wrap02 .info_txt {font-size:16px}
 
 	.login_sns .tit_wrap:after{top:12px;}
 	.login_sns .tit{font-size:16px;line-height:23px;}

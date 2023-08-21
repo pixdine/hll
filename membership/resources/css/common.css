@@ -290,8 +290,7 @@ input[type="radio"]:checked + label:before {background-image: url("data:image/sv
 /* btn area */
 .btn_area { margin:40px -8px 0 ;display:flex; justify-content: space-between;}
 .btn_area button { width:100%; margin:0 8px}
-/* .btn_area.two {  }
-.btn_area.two .btn, .btn_area.two .btn_b { width:184px}*/ 
+
 .btn_login { margin-top:16px} 
 .btn_login button { width:100%} 
 .btn_area.sns { width:52.5%}

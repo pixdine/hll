@@ -100,7 +100,7 @@
 
 .input_type02 li dl dd.modify {display:flex}
 .input_type02 li dl dd.modify.nobtn {display:block}
-.input_type02 li dl dd.modify .inputbox {width:51%; display:flex}
+.input_type02 li dl dd.modify .inputbox {width:51%; display:flex; flex-direction:column}
 .input_type02 li dl dd.modify.nobtn .inputbox {width:100%;}
 .input_type02 li dl dd.modify .inputbox .inp {width:100%}
 .input_type02 li dl dd.modify .addr_search { display:flex; flex:1; flex-direction: column;}

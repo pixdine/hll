@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>HLL 매체 컴포넌트</title>
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="../magazine_bazaar/resources/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../magazine_bazaar/resources/css/module.css">
+	<link rel="stylesheet" type="text/css" href="./css/guide.css"/><!-- 가이드 CSS -->
+	<script src="../magazine_bazaar/resources/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- container -->
+		<div id="container" class="container">
+			<div id="content" class="content">
+				<!-- 버튼 -->
+				<div class="guide_sec">
+					<div class="guide_box">
+						<h2 class="h2">Button</h2>
+						<h3 class="h3">공통</h3>
+						<ul class="guide_desc">
+							<li>주버튼 컬러 : .bctype1 (ex .btn + .bctype1)</li>
+							<li>서브버튼 : .bctype2 (ex .btn + .bctype2)</li>
+							<li>포인트 컬러가 매체에서는 <strong style="color:#111">검정색</strong>, 통합멤버십에서는 <strong style="color:#410C86">보라색</strong></li>
+						</ul>
+
+						<h3 class="h3">H52 (.btn + 컬러타입명)</h3>
+						<p class="guide_desc">높이 52px, 폰트크기 16px, 좌우여백 20px, (PC)최소넓이 136px</p>
+						<button type="button" class="btn bctype1"><span>확인</span></button>
+						<button type="button" class="btn bctype2"><span>취소</span></button>
+
+						<h3 class="h3">H44 (.btn_m + 컬러타입명)</h3>
+						<p class="guide_desc">높이 44px, 폰트크기 14px, 좌우여백 20px</p>
+						<button type="button" class="btn_m bctype1"><span>확인</span></button>
+						<button type="button" class="btn_m bctype2"><span>취소</span></button>
+
+						<h3 class="h3">H36 (.btn_s + 컬러타입명)</h3>
+						<p class="guide_desc">높이 36px, 폰트크기 14px, 좌우여백 20px</p>
+						<button type="button" class="btn_s bctype1"><span>확인</span></button>
+						<button type="button" class="btn_s bctype2"><span>취소</span></button>
+
+						<h3 class="h3">ico button (.btn_s)</h3>
+						<p class="guide_desc">높이 36px, 폰트크기 14px, 좌우여백 20px</p>
+						<button type="button" class="btn_s bctype1"><span>확인</span></button>
+						<button type="button" class="btn_s bctype2"><span>취소</span></button>
+
+						<h3 class="h3">Disabled (Button태그, a태그)</h3>
+						<p class="guide_desc">button태그에서 disabled인 경우, disabled 속성 추가</p>
+						<button type="button" class="btn bctype1" disabled><span>확인</span></button>
+						<button type="button" class="btn bctype2" disabled><span>취소</span></button>
+
+						<p class="guide_desc">a태그에서 disabled인 경우, disabled 클래스 추가</p>
+						<a href="#" class="btn bctype1 disabled"><span>확인</span></a>
+						<a href="#" class="btn bctype2 disabled"><span>취소</span></a>
+					</div>
+
+					<div class="guide_box">
+						<h3 class="h3">버튼 + 아이콘 (.has_아이콘명)</h3>
+						<button type="button" class="btn bctype5 has_plus"><span>팔로우하기</span></button>
+						<button type="button" class="btn_m bctype5 has_plus"><span>모든 에디터 보기</span></button>
+					</div>
+
+					<div class="guide_box">
+						<h3 class="h3">텍스트 + 아이콘 버튼 (.btn_txt + has_아이콘명)</h3>
+
+						<a href="#" class="btn_txt has_plus"><span>이 키워드의 기사 더보기</span></a>
+						<button type="button" class="btn_txt ctype1 has_arr1"><span>더보기 (5/32)</span></button>
+						<button type="button" class="btn_txt has_toggle1"><span>더보기</span></button>
+						<button type="button" class="btn_txt has_toggle1 on"><span>접기</span></button>
+					</div>
+
+					<div class="guide_box">
+						<h3 class="h3">SNS버튼 (.btn_sns + 채널명)</h3>
+
+						<button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button>
+						<button type="button" class="btn_sns youtube"><span class="tit">유튜브</span></button>
+						<button type="button" class="btn_sns instagram"><span class="tit">인스타그램</span></button>
+						<button type="button" class="btn_sns twitter"><span class="tit">X</span></button>
+						<button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button>
+						<button type="button" class="btn_sns copy"><span class="tit">복사</span></button>
+					</div>
+
+					<div class="guide_box">
+						<h3 class="h3">아이콘버튼 (.btn_ico + 아이콘명)</h3>
+
+						<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button>
+						<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button>
+						<button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
+					</div>
+
+					<div class="guide_box">
+						<h3 class="h3">그 외(예외)</h3>
+
+						<button type="button" class="btn bctype3 has_plus"><span>팔로우하기</span></button>
+						<p class="guide_desc">타이틀 옆 더보기 버튼은 PC에서는 더보기 + , MO에서는 + 만 노출</p>
+						<div class="tit_wrap more">
+							<h2 class="tit">타이틀</h2>
+							<a href="#" class="btn_more"><span>더보기</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- //버튼 -->
+
+				<!-- 더보기 -->
+				<div class="guide_sec">
+					<div class="guide_box">
+						<h2 class="h2">더보기</h2>
+						<div class="btn_wrap more">
+							<button type="button" class="btn bctype5 has_plus"><span>더보기</span></button>
+						</div>
+
+						<div class="btn_wrap more">
+							<button type="button" class="btn bctype3 has_plus"><span>이 키워드의 기사 더보기</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- //더보기 -->
+
+				<!-- 페이지네이션 -->
+				<div class="guide_sec">
+					<div class="guide_box">
+						<h2 class="h2">Pagination</h2>
+						<ul class="guide_desc">
+							<li>PC 상단여백 120px, MO 상단여백 40px</li>
+							<li><strong class="impt">[개발처리필요]</strong> PC 10개에서는 10개 노출, MO에서는 6개 노출</li>
+						</ul>
+						<!-- pagination -->
+						<!-- D: [개발처리] PC에서는 10개 노출, MO에서는 6개 노출 -->
+						<div class="pagination">
+							<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+							<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+						</div>
+						<!-- //pagination -->
+					</div>
+				</div>
+				<!-- //페이지네이션 -->
+
+				<!-- 인풋 -->
+				<div class="guide_sec">
+					<div class="guide_box">
+						<h2 class="h2">Input</h2>
+						<h3 class="h3">Default</h3>
+						<ul class="guide_desc">
+							<li>Focused : 인풋 색상(#f6f6f6), 인풋 보더 컬러(#333)변경</li>
+							<li>Typing : 텍스트를 입력하면 삭제버튼 노출</li>
+						</ul>
+						<div class="inputbox">
+							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off">
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+						</div>
+
+						<h3 class="h3">Disabled</h3>
+						<div class="inputbox">
+							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값" disabled>
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+						</div>
+
+						<h3 class="h3">Readonly</h3>
+						<div class="inputbox">
+							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값" readonly>
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+						</div>
+
+						<h3 class="h3">Done</h3>
+						<div class="inputbox">
+							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+						</div>
+
+						<h3 class="h3">Error (.inputbox + .error)</h3>
+						<div class="inputbox error">
+							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+							<p class="row_err_txt">에러메시지가 노출됩니다.</p>
+						</div>
+
+						<h3 class="h3">Search (.inputbox + .search)</h3>
+						<ul class="guide_desc">
+							<li>60px 검색 인풋은 매체에서만 사용 (PC는 H60, MO는 H52)</li>
+						</ul>
+						<div class="inputbox search">
+							<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+							<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+						</div>
+
+						<br>
+
+						<div class="inputbox search">
+							<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="입력값">
+							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+							<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- //인풋 -->
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //wrap -->
+
+	<!-- js -->
+	<script src="../magazine_bazaar/resources/js/swiper.min.js"></script>
+	<script src="../magazine_bazaar/resources/js/ui.common.js"></script>
+	<!-- //js -->
+</body>
+</html>

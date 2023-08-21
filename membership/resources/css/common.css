@@ -310,6 +310,8 @@ input[type="radio"]:checked + label:before {background-image: url("data:image/sv
 .tit_wrap02 .info_txt { font-size:18px; line-height:26px; color:#333 }
 .tit_wrap02 h2 + .info_txt { margin-top:16px}
 .tit_wrap02 h2.blind + .info_txt { margin-top:0 }
+.tit_wrap02 {position:relative}
+.tit_wrap02 .btn { position:absolute; right:0; bottom:0px}
 
 
 /* 썸네일 이미지 */

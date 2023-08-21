@@ -139,6 +139,7 @@
 .profile_edit .profile_pic80 img {width:100%; height:100%; border-radius:8px; box-sizing:border-box; overflow:hidden; object-fit:cover;}
 .profile_edit .btn_ico { margin-bottom:6px;}
 .profile_edit .btn_ico ~ .btn_ico {margin-left:4px}
+.profile_edit .btn_ico.del{width:24px;height:24px;background-size:22px auto;}
 
 .tbl_btm_area { border-top:1px solid #DBDBDB; margin-top:34px; text-align:center; display:flex; flex-direction: column;align-items: flex-end }
 .tbl_btm_area .btn_txt03 {}
@@ -286,10 +287,10 @@
     .input_type02 li dl dd .btn_area .btn {}
     .input_type02 li dd .inputbox.modify span.inputbox {padding-right:0; width:100%}
 
-    .input_type02 li dl dd.modify .inputbox  {width:63.28%;}
+    .input_type02 li dl dd.modify .inputbox  {width:100%;}
     .input_type02 li dl dd.modify .btn{ min-width:107px}
     .input_type02 li dl dd.modify .addr_search .inputbox { width:100% }
-    .input_type02 li dl dd.modify .addr_search .post_num .inputbox { width:63.28%;}
+    .input_type02 li dl dd.modify .addr_search .post_num .inputbox { width:100%;}
     .input_type02 li dl dd .pw_in  { width:100%}
 
     .addr_search {}

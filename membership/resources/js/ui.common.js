@@ -12,31 +12,24 @@ $(document).ready(function () {
   showTagBtn();
 
 
-	/* follow pop */
+	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
-		console.log(e)
 		popup.open($(this).attr('data-popup-open'), 'popup')
 	});
-
 	$('[data-alert-open]').on('click', function(e) {
-		console.log(e)
 		popup.open($(this).attr('data-alert-open'), 'alert')
 	});
-
 	$('[data-layer-open]').on('click', function(e) {
 		popup.open($(this).attr('data-layer-open'), 'layer')
 	});
 
 	$('[data-popup-close]').on('click', function(e) {
-		console.log(e)
 		popup.close($(this).attr('data-popup-close'), 'popup')
 	});
 	$('[data-alert-close]').on('click', function(e) {
-		console.log(e)
 		popup.close($(this).attr('data-alert-close'), 'alert')
 	});
 	$('[data-layer-close]').on('click', function(e) {
-		console.log(e)
 		popup.close($(this).attr('data-layer-close'), 'layer')
 	});
 
@@ -81,12 +74,16 @@ function showLayer(target) {
 
 
 function inputBind() {
-  $("input.inp").on("keyup", function () {
-    $(this).toggleClass("typed", !!this.value);
-  });
-  $("input.inp + .del").on("click", function () {
-    $(this).prev("input").val("").removeClass("typed");
-  });
+    $("input.inp").on("input", function(e) {
+        if (e.target.value && !this.classList.contains("typed")) {
+            this.classList.add("typed")
+        } else if (!e.target.value && this.classList.contains("typed")) {
+            this.classList.remove("typed")
+        }
+    })
+    $("input.inp + .del").on('click', function() {
+        $(this).prev('input').val('').removeClass('typed').focus()
+    })
 }
 
 
@@ -371,76 +368,85 @@ function scrapList(){
 
 //full popup
 const popup = {
-  clientWidth: 0,
-  open: function(_target, _type){
-      this.clientWidth = document.documentElement.clientWidth
-      switch (_type) {
-          case 'popup':
-              $('[data-popup="' + _target + '"]').fadeIn(100, function(){
-                  $(this).addClass('open')
-              });
-              $('body').addClass('lockbody');
-              // $('[data-popup]').click(function(){
-              //     if($(this).hasClass('open')){
-              //         $(this).removeClass('open');
-              //         $('body').removeClass('lockbody');
-              //     }
-              // });
+    stack: [],
+    clientWidth: 0,
+    dimmed: document.createElement('div'),
+    open: function (_target, _type, _hasDimmed = true) {
+        this.clientWidth = document.documentElement.clientWidth
+        var targetEl = $(`[data-${_type}="${_target}"]`);
+        switch (_type) {
+            case 'popup':
+                targetEl.fadeIn(100, function () {
+                    $(this).addClass('open')
+                });
+                $('body').addClass('lockbody');
 
-              $('.popup_inner').click(function(e){
-                  e.stopPropagation();
-              });
+                $('.popup_inner', targetEl).click(function (e) {
+                    e.stopPropagation();
+                });
 
-              break;
-          case 'alert':
-              $('[data-alert="' + _target + '"]').fadeIn(100);
-              $('body').addClass('lockbody');
-              $('[data-alert]').click(function(){
-                  if($(this).hasClass('open')){
-                      $(this).removeClass('open');
-                      $('body').removeClass('lockbody');
-                  }
-              });
+                break;
+            case 'alert':
+                targetEl.fadeIn(100);
+                $('body').addClass('lockbody');
+                $('[data-alert]', targetEl).click(function () {
+                    if ($(this).hasClass('open')) {
+                        $(this).removeClass('open');
+                        $('body').removeClass('lockbody');
+                    }
+                });
 
-              $('.popup_alert_inner').click(function(e){
-                  e.stopPropagation();
-              });
+                $('.popup_alert_inner', targetEl).click(function (e) {
+                    e.stopPropagation();
+                });
 
-              break;
-          case 'layer':
-              $('[data-layer="' + _target + '"]').fadeIn(100);
+                break;
+            case 'layer':
+                targetEl.fadeIn(100);
 
-              $('[data-layer]').click(function(e){
-                  e.stopPropagation();
-              });
+                $('[data-layer]', targetEl).click(function (e) {
+                    e.stopPropagation();
+                });
 
-              break;
-          default:
-              console.log('pop open default !');
-              break;
-      }
-      document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
-  },
-  close: function(_target, _type){
-      switch (_type) {
-          case 'popup':
-              $('[data-popup="' + _target + '"]').fadeOut(100, adjustPad);
-              break;
-          case 'alert':
-              $('[data-alert="' + _target + '"]').fadeOut(100, adjustPad);
-              break;
-          case 'layer':
-              $('[data-layer="' + _target + '"]').fadeOut(100, adjustPad);
-              break;
-          default:
-              console.log('pop close default !');
-              break;
-      }
-      function adjustPad() {
-          $('body').removeClass('lockbody');
-          document.body.style.removeProperty("padding-right");
-      }
-  }
+                break;
+            default:
+                console.log('pop open default !');
+                break;
+        }
+
+        if (_type !== 'layer') {
+            if (!this.stack.length) {
+                document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
+                if (_hasDimmed) {
+                    this.dimmed.classList.add('dimmed')
+                    this.dimmed.style.display = "none"
+                    document.documentElement.append(this.dimmed)
+                    $(this.dimmed).fadeIn(100)
+                }
+            }
+            this.stack.push(targetEl);
+            this.dimmed.style.zIndex = window.getComputedStyle(targetEl[0]).getPropertyValue("z-index") - 1
+        }
+    },
+    close: function (_target, _type) {
+        var _this = this;
+        var targetEl = $(`[data-${_type}="${_target}"]`);
+
+        targetEl.fadeOut(100, adjustPad);
+
+        function adjustPad() {
+            if (_type !== 'layer') {
+                _this.stack.splice(_this.stack.indexOf(targetEl), 1);
+                if (!_this.stack.length) {
+                    $('body').removeClass('lockbody');
+                    document.body.style.removeProperty("padding-right");
+                    $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
+                } else {
+                    _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1
+                }
+            }
+        }
+    }
 }
 
 

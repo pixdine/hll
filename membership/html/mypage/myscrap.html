@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>HLL | Hearst Joongang - Membership</title>
 	<meta name="format-detection" content="telephone=no">
 	<!-- css, Jquery -->
-	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css" />
 	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
+
 <body>
-	
+
 	<div id="wrap" class="wrap">
 
 		<!--전체메뉴-->
@@ -22,10 +25,10 @@
 				<!-- login 전 > 모바일에서만 노출됨 -->
 				<div class="info_box">
 					<p class="info_txt">
-						로그인 후 허스트중앙 멤버십의 
+						로그인 후 허스트중앙 멤버십의
 						<strong>특별한 혜택을 확인하세요.</strong>
 					</p>
-					<button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
+					<button type="button" onclick="login();" class="btn_b bctype4">LOGIN</button>
 					<div class="info_txt_btm">
 						<p>아직 허스트 중앙 회원이 아니신가요?</p>
 						<a href="#" class="btn_txt has_arr2">회원가입</a>
@@ -90,15 +93,19 @@
 			<div class="header_wrap">
 				<div class="header_top">
 					<div class="cont_inner">
-						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_memebrship.png" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_memebrship.png"
+									alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
 						<div class="header_util_area">
-							<button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
-							<button type="button" class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button"
+								class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button"
+								class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴
+									열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="header_gnb">
 					<div class="cont_inner">
 						<ul class="gnb_menu">
@@ -157,158 +164,286 @@
 		<div id="container" class="container mypage">
 			<div id="content" class="content ">
 				<div class="cont_inner">
-                    <div class="tit_wrap02">
-                        <h2 class="tit">나의 스크랩</h2>
-                    </div>
-                    <style>
-                        .scrap_cate {}
+					<div class="heading_wrap">
+						<div class="heading_area">
+							<h2 class="tit">나의 스크랩</h2>
+						</div>
+					</div>
+					 <style>
+                        .scrap_cate {margin-bottom:40px}
                         .scrap_cate ul { display:flex; flex-wrap: wrap; }
                         .scrap_cate li {position:relative; margin:0 16px 8px 0}
                         .scrap_cate li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
                         .scrap_cate li a { padding:0 16px 0 0; font-size:18px; line-height:1.4; color:#999; font-weight:500}
                         .scrap_cate li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
                         .scrap_cate li.all a { color:#111;}
+						.scrap_cate li:last-child::after {display:none}
 
-                        .myscrap_wrap {}
-                        .myscrap_wrap .myscrap_list02 {}
+                        
+                        .myscrap_area.no_scrap { background:#F7F7F7; padding:170px 0}
+                        .img_list { display:flex; flex-direction: row; flex-wrap: wrap;}
+						.img_list .atcbox {width:23.5%; margin:0 0  4.17% 2%}
+						.img_list .atcbox:nth-child(4n+1), .myscrap_list02 .atcbox:first-child  {margin-left:0}
+                        .myscrap_area.no_scrap .img_list {display:none}
+                        .myscrap_area .rs_txt { display:none; font-size:24px; line-height:1.1; font-weight:500; color:#666; text-align:center}
+                        .myscrap_area.no_scrap .rs_txt { display:block}
+
+						
+						@media (max-width:768px) {
+							.scrap_cate { overflow-y:hidden;overflow-X:auto; margin-bottom:32px}
+							.scrap_cate::-webkit-scrollbar{display:none;}
+							.scrap_cate li a { font-size:14px;}
+                      		.scrap_cate li a span { font-family:'Gotham'; display:inline-block; margin-left:8px;font-size:14px;}
+
+							.scrap_cate ul {flex-wrap:nowrap}
+							.scrap_cate li a {white-space:nowrap}
+
+							.img_list {vertical-align:top; display:flex;justify-content: space-between }
+							.img_list .atcbox {width:48.21%; margin:0 0 7.16% 0}
+							.img_list .atcbox:nth-child(2n+1), .img_list .atcbox:first-child  {margin-left:0}
+							
+						}
                     </style>
-                    <!-- 스크랩 카테고리 -->
-                    <div class="scrap_cate">
-                        <ul>
-                            <li class="all"><a href="#">ALL<span>1,000</span></a></li>
-                            <li><a href="#">ELLE<span>500</span></a></li>
-                            <li><a href="#">COSMOPOLITAN<span>400</span></a></li>
-                            <li><a href="#">COSMOPOLITAN<span>8</span></a></li>
-                            <li><a href="#">HAPER'S BAZZAR<span>8</span></a></li>
-                            <li><a href="#">ESQUIRE<span>6</span></a></li>
-                            <li><a href="#">#ELLEVOICE<span>8</span></a></li>
-                            <li><a href="#">#예술산책<span>8</span></a></li>
-                            <li><a href="#">#EEE<span>8</span></a></li>
-                            <li><a href="#">ELLE<span>8</span></a></li>
-                            <li><a href="#">COSMOPOLITAN<span>400</span></a></li>
-                            <li><a href="#">COSMOPOLITAN<span>8</span></a></li>
-                            <li><a href="#">HAPER'S BAZZAR<span>8</span></a></li>
-                            <li><a href="#">ESQUIRE<span>6</span></a></li>
-                            <li><a href="#">#ELLEVOICE<span>8</span></a></li>
-                        </ul>
-                    </div>
+					<!-- 스크랩 카테고리 -->
+					<div class="scrap_cate">
+						<ul>
+							<li class="all"><a href="#">ALL<span>1,000</span></a></li>
+							<li><a href="#">ELLE<span>500</span></a></li>
+							<li><a href="#">COSMOPOLITAN<span>400</span></a></li>
+							<li><a href="#">COSMOPOLITAN<span>8</span></a></li>
+							<li><a href="#">HAPER'S BAZZAR<span>8</span></a></li>
+							<li><a href="#">ESQUIRE<span>6</span></a></li>
+							<li><a href="#">#ELLEVOICE<span>8</span></a></li>
+							<li><a href="#">#예술산책<span>8</span></a></li>
+							<li><a href="#">#EEE<span>8</span></a></li>
+							<li><a href="#">ELLE<span>8</span></a></li>
+							<li><a href="#">COSMOPOLITAN<span>400</span></a></li>
+							<li><a href="#">COSMOPOLITAN<span>8</span></a></li>
+							<li><a href="#">HAPER'S BAZZAR<span>8</span></a></li>
+							<li><a href="#">ESQUIRE<span>6</span></a></li>
+							<li><a href="#">#ELLEVOICE<span>8</span></a></li>
+						</ul>
+					</div>
 
-                    <!-- 스크랩 리스트 -->
-                    <div class="myscrap_wrap">   
-                        <div class="myscrap_list">
-                            <ul class="">
-                                <li class="swiper-slide">
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">CELEB</span>
-                                                <p class="tit">수지의 우아한 비행(飛行)은 진행 중</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">ELLEVOICE</span>
-                                                <p class="tit">안도 타다오의 작전</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">CELEB</span>
-                                                <p class="tit">스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살,
-                                                    리즈</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">eee</span>
-                                                <p class="tit">일본 감성 카페, 롱베케이션</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                </li>
-                                <li class="swiper-slide">
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">CELEB</span>
-                                                <p class="tit">수지의 우아한 비행(飛行)은 진행 중</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">ELLEVOICE</span>
-                                                <p class="tit">안도 타다오의 작전</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">CELEB</span>
-                                                <p class="tit">스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살,
-                                                    리즈</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                    <div class="atcbox">
-                                        <a href="#">
-                                            <div class="imgbox">
-                                                <img src="../../resources/images/temp/tmp_scrap04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
-                                            </div>
-                                            <div class="txtbox">
-                                                <span class="cate">eee</span>
-                                                <p class="tit">일본 감성 카페, 롱베케이션</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                    
-                                </li>
-                            </ul>
-                    
-                            <div class="control">
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
+					<!-- 스크랩 리스트 -->
+					<div class="myscrap_area">
+						<div class="img_list">
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap01.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">수지의 우아한 비행(飛行)은 진행 중</p>
+									</div>
+								</a>
+							</div>
 
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap02.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">ELLEVOICE</span>
+										<p class="tit">안도 타다오의 작전</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap03.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살,
+											리즈스무 살, 리즈스무 살,
+											리즈</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap04.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">eee</span>
+										<p class="tit">일본 감성 카페, 롱베케이션</p>
+									</div>
+								</a>
+							</div>
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap01.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">수지의 우아한 비행(飛行)은 진행 중</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap02.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">ELLEVOICE</span>
+										<p class="tit">안도 타다오의 작전</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap03.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살,
+											리즈스무 살, 리즈스무 살,
+											리즈</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap04.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">eee</span>
+										<p class="tit">일본 감성 카페, 롱베케이션</p>
+									</div>
+								</a>
+							</div>
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap01.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">수지의 우아한 비행(飛行)은 진행 중</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap02.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">ELLEVOICE</span>
+										<p class="tit">안도 타다오의 작전</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap03.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살,
+											리즈스무 살, 리즈스무 살,
+											리즈</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap04.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">eee</span>
+										<p class="tit">일본 감성 카페, 롱베케이션</p>
+									</div>
+								</a>
+							</div>
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap01.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">수지의 우아한 비행(飛行)은 진행 중</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap02.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">ELLEVOICE</span>
+										<p class="tit">안도 타다오의 작전</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap03.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">CELEB</span>
+										<p class="tit">스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살, 리즈스무 살,
+											리즈스무 살, 리즈스무 살,
+											리즈</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="atcbox">
+								<a href="#">
+									<div class="imgbox">
+										<img src="../../resources/images/temp/tmp_scrap04.png"
+											alt=""><!-- D: PC/MO 정사각형 이미지 -->
+									</div>
+									<div class="txtbox">
+										<span class="cate">eee</span>
+										<p class="tit">일본 감성 카페, 롱베케이션</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
-			
+
 			</div>
 		</div>
 		<!-- //container -->
@@ -325,14 +460,14 @@
 							<li><a href="#" target="_blank">윤리경영</a></li>
 						</ul>
 					</div>
-					
+
 				</div>
 			</div>
 			<div class="footer_bottom">
 				<div class="cont_inner">
 					<div class="footer_info">
 						<address class="addr_wrap">
-							
+
 							<div class="addr_txt">
 								<em>허스트중앙(유)</em>
 								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
@@ -350,41 +485,11 @@
 		</footer>
 		<!-- //footer -->
 	</div>
-	
+
 	<!-- js -->
 	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 
-	<script>
-		$(document).ready(function () {
-			// "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수
-			$("#checkAll").on("click", function () {
-				toggleAllSubCheckboxes(this.checked);
-			});
-
-			// 하위 체크 박스 중 하나라도 클릭되었을 때 호출되는 함수
-			$(".chk_in input").on("click", function () {
-				updateSelectAllCheckbox();
-			});
-
-			// 모든 하위 체크 박스 상태 변경 함수
-			function toggleAllSubCheckboxes(checked) {
-				$(".chk_in input").prop("checked", checked);
-			}
-
-			// "전체 선택" 체크 박스 상태 업데이트 함수
-			function updateSelectAllCheckbox() {
-				if ($(".chk_in input:checked").length !== $(".chk_in").length) {
-					$("#checkAll").prop("checked", false);
-				} else {
-					$("#checkAll").prop("checked", true);
-				}
-			}
-
-			
-		});
-	</script>
-	
-
 </body>
+
 </html>

@@ -25,15 +25,17 @@
 .gray_box .box_inner .txt strong {font-weight:500; color:var(--point)}
 .body_cont01 .info_txt ~ .info_txt { margin-top:24px }
 
-.login_sns .tit_wrap{margin-bottom:32px;text-align:center;}
-.login_sns .tit_wrap:after{content: '';position:absolute;top:14px;left:0;z-index:-1;width:100%;height:1px;background-color:#dbdbdb;}
-.login_sns .tit{display:inline-block;padding:0 16px;font-size:18px;font-weight:26px;color:#999;line-height:26px;background-color:#fff;}
+.login_sns .tit_wrap {margin-bottom:32px;}
+.login_sns .tit_wrap .tit_area {text-align:center;}
+.login_sns .tit_wrap .tit_area:after{content: '';position:absolute;top:14px;left:0;z-index:-1;width:100%;height:1px;background-color:#dbdbdb;}
+.login_sns .tit {display:inline-block;padding:0 16px;font-size:18px;color:#999;line-height:26px;background-color:#fff; margin:0 auto}
 .login_sns .info_txt{margin-top:16px;font-size:18px;font-weight:500;color:#999;line-height:26px;}
+
 
 
 @media (max-width:768px){
     .container { padding-bottom:80px;}
-    .container .member {width:auto; margin-top:40px}
+    .container.member {width:auto; margin-top:40px}
     .container.member .cont_inner {width:auto; margin:0 auto}
     input[type="checkbox"] + label > span { font-size:14px}
     .agree_chk_list li { margin-top:24px }

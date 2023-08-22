@@ -249,11 +249,11 @@ function tagOpen(){
   if($(this).hasClass('on')){
     //닫힘
     $(this).removeClass('on');
-    $('.tag_wrap').removeClass('on');
+    $(this).closest(".tag_wrap").removeClass('on');
   }else{
     //열림
     $(this).addClass('on');
-    $('.tag_wrap').addClass('on');
+    $(this).closest(".tag_wrap").addClass('on');
   }
 }
 

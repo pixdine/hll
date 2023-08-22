@@ -31,14 +31,14 @@
 							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
 						</div>
 						<!-- //상단 닫기 영역 -->
-			
+
 						<!-- 로그인/회원가입 -->
 						<div class="allmenu_util">
 							<a href="#">LOGIN</a><!-- D: LOGOUT -->
 							<a href="#">SIGNUP</a>
 						</div>
 						<!-- //로그인/회원가입 -->
-			
+
 						<!-- 단일메뉴 및 버티컬 -->
 						<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
 						<div class="allmenu_single">
@@ -47,7 +47,7 @@
 							<li class="line"><a href="#">SUSTAINABILITY</a></li>
 						</div>
 						<!-- //단일메뉴 및 버티컬 -->
-			
+
 						<!-- 메뉴 -->
 						<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
 						<div class="allmenu_list">
@@ -111,7 +111,7 @@
 							</ul>
 						</div>
 						<!-- //메뉴 -->
-			
+
 						<!-- 외부링크 -->
 						<div class="etc_link">
 							<ul>
@@ -123,7 +123,7 @@
 							</ul>
 						</div>
 						<!-- //외부링크 -->
-			
+
 						<!-- sns -->
 						<div class="sns_list">
 							<ul>
@@ -143,15 +143,14 @@
 			</div>
 			<!-- //전체메뉴 -->
 			<!-- header -->
-			<header id="header" class="header">
+			<header id="header" class="header main"><!-- D: 메인일 떄 main 클래스 추가 -->
 				<!-- header_wrap -->
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
 							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
 							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-							<button type="button" class="btn_search" data-popup-toggle="popup_search"><span
-									class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+							<button type="button" class="btn_search" data-popup-toggle="popup_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
 					</div>
 					<div class="header_bottom">
@@ -173,8 +172,7 @@
 									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search" data-popup-toggle="popup_search"><span
-										class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_search" data-popup-toggle="popup_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
 						</div>
 					</div>
@@ -186,12 +184,11 @@
 					<div class="cont_inner">
 						<div class="search_box">
 							<div class="inputbox search">
-								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력"
-									autocomplete="off">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
 								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
 								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
 							</div>
-				
+
 							<!-- 추천 키워드 -->
 							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
 							<div class="search_keyword">
@@ -460,13 +457,15 @@
 					<!-- 바자 아트 (기획 기사, 큐레이션 모듈) -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
-							<!-- 타이틀 -->
-							<div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
-								<h2 class="tit">바자 아트</h2>
+							<!-- 타이틀영역 -->
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">바자 아트</h2>
+									<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+								</div>
 								<p class="hashtag">#바자아트위크, #전시추천, #바자아트</p>
-								<a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
 							</div>
-							<!-- //타이틀 -->
+							<!-- //타이틀영역 -->
 
 							<!-- 리스트 -->
 							<!-- D: 최대 10개까지 노출 -->
@@ -569,11 +568,13 @@
 					<!-- 금주의 인기 기사 (조회순 기사 모듈) -->
 					<div class="top3_atc_wrap">
 						<div class="cont_inner">
-							<!-- 타이틀 -->
+							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
-								<h2 class="tit">금주의 인기 기사</h2>
+								<div class="tit_area">
+									<h2 class="tit">금주의 인기 기사</h2>
+								</div>
 							</div>
-							<!-- //타이틀 -->
+							<!-- //타이틀영역 -->
 
 							<!-- 리스트 -->
 							<div class="top3_atc_list">
@@ -857,13 +858,15 @@
 					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
-							<!-- 타이틀 -->
-							<div class="tit_wrap more"><!-- D: 더보기가 있는 경우 more 클래스 추가 -->
-								<h2 class="tit">바자의 픽 실패 없이 다이어트하기. 텍스트 길어질 경우 말줄임 처리 텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리</h2>
+							<!-- 타이틀영역 -->
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">바자의 픽 실패 없이 다이어트하기. 텍스트 길어질 경우 말줄임 처리 텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리</h2>
+									<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+								</div>
 								<p class="hashtag">#다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트</p>
-								<a href="#" class="btn_more"><span>더보기</span></a><!-- D: 더보기 버튼 -->
 							</div>
-							<!-- //타이틀 -->
+							<!-- //타이틀영역 -->
 
 							<!-- 리스트 -->
 							<!-- D: 최대 10개까지 노출 -->
@@ -1108,11 +1111,13 @@
 					<!-- 최신 소식 놓치지 마세요 (최신순 기사 모듈) -->
 					<div class="issue_atc_wrap">
 						<div class="cont_inner">
-							<!-- 타이틀 -->
+							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
-								<h2 class="tit">최신 소식 놓치지 마세요!</h2>
+								<div class="tit_area">
+									<h2 class="tit">최신 소식 놓치지 마세요!</h2>
+								</div>
 							</div>
-							<!-- //타이틀 -->
+							<!-- //타이틀영역 -->
 
 							<!-- 리스트 -->
 							<div class="issue_atc_list">
@@ -1403,11 +1408,13 @@
 					<!-- 가장 좋아하는 기사 (믹스 모듈) -->
 					<div class="mix_atc_wrap">
 						<div class="cont_inner">
-							<!-- 타이틀 -->
+							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
-								<h2 class="tit">MOST LIKED ARTICLES</h2>
+								<div class="tit_area">
+									<h2 class="tit">MOST LIKED ARTICLES</h2>
+								</div>
 							</div>
-							<!-- //타이틀 -->
+							<!-- //타이틀영역 -->
 
 							<!-- 탭 카테고리 -->
 							<div class="tab_cate">
@@ -1597,9 +1604,9 @@
 								<div class="txt">
 									<span>실시간으로 업데이트 되는</span>
 									<strong><em>하퍼스 바자</em>의 최신소식</strong>
-								</div> 
+								</div>
 								<div class="btnbox">
-									<button class="btn bctype3 has_plus" data-popup-open="popup_follow"><span>팔로우하기</span></button><!-- D: 팔로우하기 팝업 오픈 -->
+									<button class="btn bctype3 has_plus"><span>팔로우하기</span></button><!-- D: 팔로우하기 팝업 오픈 -->
 								</div>
 							</div>
 						</div>
@@ -1671,33 +1678,11 @@
 		</div>
 	</div>
 
-	<!-- D: [팝업] 팔로우하기 -->
-	<div class="popup_full popup_sns" data-popup="popup_follow">
-		<div class="popup_inner">
-			<div class="popup_head">
-				<div class="popup_close">
-					<button type="button" class="btn_close" data-popup-close="popup_follow"><span class="blind">닫기</span></button>
-				</div>
-			</div>
-			<div class="popup_cont">
-				<p class="stxt">최신소식을 전하는 하퍼스바자의 <br>다양한 채널을 팔로우, 구독해보세요!</p>
-				<div class="sns_list follow">
-					<ul>
-						<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="tit">페이스북</span></a></li>
-						<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="tit">유튜브</span></a></li>
-						<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="tit">인스타그램</span></a></li>
-						<li><a href="https://story.kakao.com/ch/sure" class="btn_sns kakao" target="_blank" title="새창열림"><span class="tit">카카오스토리</span></a></li>
-						<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="tit">트위터</span></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //D: [팝업] 팔로우하기 -->
-
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
 	<!-- //js -->
+
+
 </body>
 </html>

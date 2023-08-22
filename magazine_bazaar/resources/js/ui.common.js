@@ -10,7 +10,7 @@ $(document).ready(function(){
 	scrollAtcList();
 	issueAtcList();
 	setAtcList();
-	headerSticky();
+	$("header").length && headerSticky();
 	allmenuOpen();
     initOnDevice();
     inputBind();

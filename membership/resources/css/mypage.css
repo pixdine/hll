@@ -25,7 +25,8 @@
 .mypage_point_info ul li dl dt::after { content:''; position:absolute; top:5px; width:16px; height:16px; background:transparent url('../images/ico_arrow.svg') no-repeat center center / 100% auto; margin-left:4px}
 .mypage_point_info ul li:last-child dl dt::after { display:none }
 .mypage_point_info ul li dl dt .tooltip { vertical-align:top; margin:5px 0 0 4px }
-.mypage_point_info ul li dl dd .bctype4 { position:absolute; right:0; top:0}
+.mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:-5px}
+.mypage_point_info ul li dl dd .bctype1 span { line-height:1.5}
 .mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-end;align-items: center;font-family:'Roboto'; font-size:28px; font-weight:600; text-align:right; padding-right:40px; }
 .mypage_point_info ul li dl dd strong { font-weight:600; font-size:40px;  line-height:1 }
 .mypage_point_info ul li dl dd .c_point {color:var(--point); position:relative; top:-2px}
@@ -191,8 +192,8 @@
     .mypage_point_info ul li dl dd {justify-content: flex-start; margin-top:26px}
     .mypage_point_info ul li dl dd strong {font-size: 20px;}
     .mypage_point_info ul li dl dd span {font-size: 15px;}
-    .mypage_point_info ul li dl dd .bctype4 { position:absolute; right:0; top:auto; bottom:0}
-    .mypage_point_info ul li dl dd .bctype4 span {font-size:12px }
+    .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:auto; bottom:-4px}
+    .mypage_point_info ul li dl dd .bctype1 span {font-size:12px }
     .mypage_point_info ul li dl dd .sep { font-size: 15px;}
     .mypage_point_info ul li dl dd .point {font-size:16px; font-family:'Gotham'; font-weight:500}
 
@@ -311,9 +312,9 @@
     .board_st01 dl dt , .board_st01 dl dd {display:flex; flex-direction: column; font-size:14px}
     .board_st01 .b_cate ,.board_st01 .b_tit, .board_st01 .b_date_time {width:100%; padding:0;}
     .board_st01 .b_date_time {flex-direction: row; padding-left:0px; margin-top:16px}
-    .board_st01 .b_date { font-size:14px}
+    .board_st01 .b_date { font-size:14px; padding-right:13px}
     .board_st01 .b_cate {font-size:12px}
-    .board_st01 .b_time { padding-left:13px;}
+    .board_st01 .b_time { padding-left:13px; font-size:14px;}
     .board_st01 .b_state {position:absolute; right:0; bottom:0px; white-space:nowrap; }
     .board_st01 .b_tit {margin-top:8px}
     .board_st01 .b_cate {color:var(--point);}
@@ -327,4 +328,6 @@
     .board_st01 .board_detail p.tit {font-size:14px}
     .tbl_btm_area .tx_btn .tx { color:#666} 
     .no_list p {font-size:14px}
+
+    .btn.h36 { height:36px; font-size:14px; padding:0 20px}
 }

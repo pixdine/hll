@@ -26,18 +26,14 @@
 						<ul class="guide_desc">
 							<li>주버튼 컬러 : .bctype1 (ex .btn + .bctype1)</li>
 							<li>서브버튼 : .bctype2 (ex .btn + .bctype2)</li>
-							<li>포인트 컬러가 매체에서는 <strong style="color:#111">검정색</strong>, 통합멤버십에서는 <strong style="color:#410C86">보라색</strong></li>
+							<li>[매체] 버튼 포인트 컬러 : <strong style="color:#111">검정색</strong></li>
+							<li>[통합멤버십] 버튼 포인트 컬러 : <strong style="color:#410C86">보라색</strong></li>
 						</ul>
 
 						<h3 class="h3">H52 (.btn + 컬러타입명)</h3>
 						<p class="guide_desc">높이 52px, 폰트크기 16px, 좌우여백 20px, (PC)최소넓이 136px</p>
 						<button type="button" class="btn bctype1"><span>확인</span></button>
 						<button type="button" class="btn bctype2"><span>취소</span></button>
-
-						<h3 class="h3">H44 (.btn_m + 컬러타입명)</h3>
-						<p class="guide_desc">높이 44px, 폰트크기 14px, 좌우여백 20px</p>
-						<button type="button" class="btn_m bctype1"><span>확인</span></button>
-						<button type="button" class="btn_m bctype2"><span>취소</span></button>
 
 						<h3 class="h3">H36 (.btn_s + 컬러타입명)</h3>
 						<p class="guide_desc">높이 36px, 폰트크기 14px, 좌우여백 20px</p>
@@ -61,8 +57,7 @@
 
 					<div class="guide_box">
 						<h3 class="h3">버튼 + 아이콘 (.has_아이콘명)</h3>
-						<button type="button" class="btn bctype5 has_plus"><span>팔로우하기</span></button>
-						<button type="button" class="btn_m bctype5 has_plus"><span>모든 에디터 보기</span></button>
+						<button type="button" class="btn bctype4 has_plus"><span>팔로우하기</span></button>
 					</div>
 
 					<div class="guide_box">
@@ -92,17 +87,6 @@
 						<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button>
 						<button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
 					</div>
-
-					<div class="guide_box">
-						<h3 class="h3">그 외(예외)</h3>
-
-						<button type="button" class="btn bctype3 has_plus"><span>팔로우하기</span></button>
-						<p class="guide_desc">타이틀 옆 더보기 버튼은 PC에서는 더보기 + , MO에서는 + 만 노출</p>
-						<div class="tit_wrap more">
-							<h2 class="tit">타이틀</h2>
-							<a href="#" class="btn_more"><span>더보기</span></a>
-						</div>
-					</div>
 				</div>
 				<!-- //버튼 -->
 
@@ -110,13 +94,53 @@
 				<div class="guide_sec">
 					<div class="guide_box">
 						<h2 class="h2">더보기</h2>
-						<div class="btn_wrap more">
-							<button type="button" class="btn bctype5 has_plus"><span>더보기</span></button>
-						</div>
+						<h3 class="h3">클릭 시 하위로 콘텐츠 추가</h3>
+						<ul class="guide_desc">
+							<li>PC 버튼높이 52px, 폰트크기 16px</li>
+							<li>MO 버튼높이 44px, 폰트크기 14px</li>
+							<li>화면 내 페이지 리스트 추가(무한 스크롤링)를 의미하는 버튼은 라인 형태의 버튼 사용</li>
+						</ul>
 
-						<div class="btn_wrap more">
-							<button type="button" class="btn bctype3 has_plus"><span>이 키워드의 기사 더보기</span></button>
+						<!-- 더보기 -->
+						<div class="btn_more_wrap">
+							<button type="button" class="btn more"><span>더보기</span></button>
 						</div>
+						<!-- //더보기 -->
+
+						<h3 class="h3">클릭 시 페이지 링크 이동</h3>
+						<ul class="guide_desc">
+							<li>PC 버튼높이 52px, 폰트크기 16px</li>
+							<li>MO 버튼높이 44px, 폰트크기 14px</li>
+							<li>클릭 시 페이지 링크 이동 기능을 하는 버튼은 라인이 없는 박스 형태로 사용</li>
+						</ul>
+
+						<!-- 더보기 -->
+						<div class="btn_more_wrap">
+							<a href="#" class="btn more noline" target="_blank" title="새창열림"><span>이 키워드의 기사 더보기</span></a>
+						</div>
+						<!-- //더보기 -->
+
+						<h3 class="h3">타이틀 영역 사이드에 노출</h3>
+						<ul class="guide_desc">
+							<li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
+						</ul>
+
+						<!-- 타이틀영역 -->
+						<div class="tit_wrap">
+							<div class="tit_area">
+								<h2 class="tit">타이틀타이틀</h2>
+								<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+							</div>
+						</div>
+						<!-- //타이틀영역 -->
+
+						<!-- 페이지 타이틀 -->
+						<div class="heading_wrap">
+							<div class="heading_area">
+								<h2 class="tit">FASHION NEWS</h2>
+							</div>
+						</div>
+						<!-- //페이지 타이틀 -->
 					</div>
 				</div>
 				<!-- //더보기 -->
@@ -127,10 +151,11 @@
 						<h2 class="h2">Pagination</h2>
 						<ul class="guide_desc">
 							<li>PC 상단여백 120px, MO 상단여백 40px</li>
-							<li><strong class="impt">[개발처리필요]</strong> PC 10개에서는 10개 노출, MO에서는 6개 노출</li>
+							<li><strong class="impt">[개발처리필요]</strong> PC 10개에서는 10개 노출, MO에서는 6개 노출<br>개발에서 원소스로 갈 수 없고 PC, MO 분리해야 한다면 퍼블쪽에 요청주세요</li>
 						</ul>
+
 						<!-- pagination -->
-						<!-- D: [개발처리] PC에서는 10개 노출, MO에서는 6개 노출 -->
+						<!-- D: [개발처리] PC에서는 10개 노출, MO에서는 6개 노출 (개발에서 원소스로 갈 수 없고 PC, MO 분리해야 한다면 퍼블쪽에 요청주세요) -->
 						<div class="pagination">
 							<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
 							<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
@@ -149,6 +174,32 @@
 					</div>
 				</div>
 				<!-- //페이지네이션 -->
+
+				<!-- 타이틀 -->
+				<div class="guide_sec">
+					<div class="guide_box">
+						<h2 class="h2">타이틀</h2>
+						<h3 class="h3">페이지 타이틀 영역</h3>
+						<!-- 페이지 타이틀 -->
+						<div class="heading_wrap">
+							<div class="heading_area">
+								<h2 class="tit">FASHION NEWS</h2>
+							</div>
+						</div>
+						<!-- //페이지 타이틀 -->
+
+						<h3 class="h3">모듈 위 타이틀 영역</h3>
+						<!-- 타이틀영역 -->
+						<div class="tit_wrap">
+							<div class="tit_area">
+								<h2 class="tit">타이틀타이틀</h2>
+								<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+							</div>
+						</div>
+						<!-- //타이틀영역 -->
+					</div>
+				</div>
+				<!-- //타이틀 -->
 
 				<!-- 인풋 -->
 				<div class="guide_sec">
@@ -191,7 +242,8 @@
 
 						<h3 class="h3">Search (.inputbox + .search)</h3>
 						<ul class="guide_desc">
-							<li>60px 검색 인풋은 매체에서만 사용 (PC는 H60, MO는 H52)</li>
+							<li>[매체] 검색 인풋 사이즈 : PC는 H60, MO는 H52</li>
+							<li>[통합멤버십] 검색 인풋은 사이즈 : PC, MO 모두 H52</li>
 						</ul>
 						<div class="inputbox search">
 							<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">

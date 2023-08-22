@@ -10,7 +10,7 @@ $(document).ready(function(){
 	scrollAtcList();
 	issueAtcList();
 	setAtcList();
-	headerSticky();
+	//headerSticky();
 	allmenuOpen();
     initOnDevice();
     inputBind();
@@ -31,7 +31,7 @@ $(document).ready(function(){
         }
     });
 
-	/* follow pop */
+	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
 		popup.open($(this).attr('data-popup-open'), 'popup')
 	});
@@ -428,12 +428,6 @@ const popup = {
                     $(this).addClass('open')
                 });
                 $('body').addClass('lockbody');
-                // $('[data-popup]').click(function(){
-                //     if($(this).hasClass('open')){
-                //         $(this).removeClass('open');
-                //         $('body').removeClass('lockbody');
-                //     }
-                // });
 
                 $('.popup_inner', targetEl).click(function (e) {
                     e.stopPropagation();

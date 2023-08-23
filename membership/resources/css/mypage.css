@@ -83,7 +83,7 @@
 .myscrap_wrap .myscrap_list ul li + li { margin-top:50px}
 
 /* 회원정보 수정 */
-
+.tit_wrap02 { margin-bottom:32px; }
 .stit { display:block; font-size:18px; line-height:68px; font-weight:500;border-top:2px solid #111; border-bottom: 1px solid #DBDBDB;}
 .col_txt {font-size:14px; line-height:1.4; color:#333; font-weight:400}
 

@@ -62,7 +62,7 @@
 .tag_wrap .btnbox{display:none;}
 .tag_list{display:flex;flex-wrap:wrap;column-gap:8px;row-gap:12px;overflow:hidden;margin-bottom:48px;}
 .tag_list li{display:inline-block;vertical-align:top;}
-.tag_list li a{display:block;min-height:36px;padding:6px 20px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;}
+.tag_list li a{display:block;min-height:44px;padding:10px 20px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;}
 .tag_list li.on a{background-color:var(--point);border-color:var(--point);font-weight:500;color:#fff;}
 .tag_atc_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
 .tag_atc_list li{display:inline-block;width:calc(33.333% - 16px);vertical-align:top;}
@@ -177,14 +177,15 @@
 .no_list p { position:absolute; top:50%; transform:translateY(-50%) ;width:100%; font-size:24px; text-align:center; color:#666;}
 
 /*나의 스크랩 */
-.scrap_cate {margin-bottom:40px}
-.scrap_cate ul { display:flex; flex-wrap: wrap; }
-.scrap_cate li {position:relative; margin:0 16px 8px 0}
-.scrap_cate li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
-.scrap_cate li a { padding:0 16px 0 0; font-size:18px; line-height:1.4; color:#999; font-weight:500}
-.scrap_cate li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
-.scrap_cate li.all a { color:#111;}
-.scrap_cate li:last-child::after {display:none}
+.sorting_st {margin-bottom:40px}
+.sorting_st ul { display:flex; flex-wrap: wrap; }
+.sorting_st li {position:relative; margin:0 16px 8px 0}
+.sorting_st li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
+.sorting_st li a { padding:0 16px 0 0; font-size:18px; line-height:1.4; color:#999; font-weight:500}
+.sorting_st li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
+.sorting_st li.all a { color:#111;}
+.sorting_st li:last-child::after {display:none}
+.sorting_st li.on a{ color:var(--point); }
 
 .myscrap_area { margin-bottom:-4.17%}
 .myscrap_area .tit_wrap { margin-bottom:40px}
@@ -249,7 +250,7 @@
     .tag_list{display:flex; flex-wrap:nowrap;overflow-x:auto;position:relative;margin-bottom:32px;padding:0 64px 0 20px;white-space:nowrap;font-size:0;}
     .tag_list::-webkit-scrollbar{display:none;}
     .tag_list li:last-child{padding-right:0;}
-    .tag_list li a{padding:6px 16px;white-space:nowrap;}
+    .tag_list li a{min-height:36px; padding:6px 16px;white-space:nowrap;}
     .tag_wrap .btnbox{display:block;position:absolute;right:0;top:0;width:64px;height:36px;}
     .tag_wrap .btnbox .btn_ico{display:block;position:absolute;right:0;top:0;width:64px;height:100%;background:linear-gradient(to left, #fff 65%, #fff 0%, transparent);}
     .tag_wrap .btnbox .btn_ico:after{content:'';display:block;position:absolute;left:24px;top:50%;transform:translateY(-50%);width:20px;height:20px;background:url('../images/btn_more.svg') no-repeat 0 0 / 100% auto;}
@@ -358,10 +359,10 @@
     .btn.h36 { height:36px; font-size:14px; padding:0 20px}
 
     /* 나의 스크랩 */
-    .scrap_cate { overflow-y:hidden;overflow-X:auto; margin-bottom:32px}
-    .scrap_cate::-webkit-scrollbar{display:none;}
-    .scrap_cate li a { font-size:14px;}
-    .scrap_cate li a span { font-family:'Gotham'; display:inline-block; margin-left:8px;font-size:14px;}
+    .sorting_st { overflow-y:hidden;overflow-X:auto; margin-bottom:32px}
+    .sorting_st::-webkit-scrollbar{display:none;}
+    .sorting_st li a { font-size:14px;}
+    .sorting_st li a span { font-family:'Gotham'; display:inline-block; margin-left:8px;font-size:14px;}
 
     .scrap_cate ul {flex-wrap:nowrap}
     .scrap_cate li a {white-space:nowrap}

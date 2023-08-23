@@ -309,7 +309,7 @@ input[type="radio"]:checked + label:before {background-image: url("data:image/sv
 /* shadow 박스 */
 .box_type01 {box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);}
 
-/* title */
+/* title 
 .tit_wrap{position:relative;}
 .tit_wrap .tit{font-size:24px;font-weight:500;line-height:36px;color:#111;}
 .tit_wrap.more .tit{padding-right:80px;}
@@ -322,11 +322,11 @@ input[type="radio"]:checked + label:before {background-image: url("data:image/sv
 .tit_wrap02 h2.blind + .info_txt { margin-top:0 }
 .tit_wrap02 {position:relative}
 .tit_wrap02 .btn { position:absolute; right:0; bottom:0px}
-
+*/
 /* title */
-.tit_wrap .tit{overflow:hidden;font-size:28px;font-weight:500;line-height:41px;color:#111;}
+.tit_wrap .tit{overflow:hidden;font-size:24px;font-weight:500;line-height:35px;color:#111;}
 .tit_wrap .side{margin-left:auto;flex-shrink:0;}
-.tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:9px 10px;font-size:16px;color:#111;line-height:23px;}
+.tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:6px 10px;font-size:16px;color:#111;line-height:23px;}
 .tit_wrap .btn_more:after{content:'';display:inline-block;width:16px;height:16px;margin:1px 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23666666'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
 .tit_area{display:flex;position:relative;}
 
@@ -564,7 +564,7 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	.btn_ico.zoom{width:36px;height:36px;}
 
 	.tit_wrap .tit{font-size:22px;line-height:32px;}
-	.tit_wrap .btn_more{display:block;width:32px;height:32px;margin-right:-5px;padding:0;}
+	.tit_wrap .btn_more{display:block;width:29px;height:29px;margin-right:-2px;padding:0;}
 	.tit_wrap .btn_more span{display:none;}
 	.tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23666666' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23666666' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
 
@@ -681,7 +681,7 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	
 
 	/* 회원가입 */
-	.tit_wrap02 h2.tit{ font-size:22px; line-height:31px }
+	.tit_wrap02 h2.tit{ font-size:20px; line-height:29px }
 	.tit_wrap02 .info_txt { font-size:16px; line-height:23px;}
 
 	input[type="radio"] + label > span {white-space:nowrap}

@@ -433,7 +433,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* popup */
 .dimmed{position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:199;}
-.popup_inner{display:flex;flex-direction:column;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);max-width:588px;height:auto;max-height:750px;background-color:#fff;overflow:hidden;z-index:210;}
+.popup_inner{display:flex;flex-direction:column;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);max-width:588px;height:auto;max-height:650px;background-color:#fff;overflow:hidden;z-index:210;}
 .popup_close{position:absolute;right:20px;top:20px;}
 .popup_close .btn_close{display:block;width:40px;height:40px;}
 .popup_close .btn_close:after{content:'';display:block;width:100%;height:100%;background:url('../images/ico_close.svg') no-repeat center center / 20px auto;}

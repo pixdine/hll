@@ -169,41 +169,7 @@
 							<h2 class="tit">나의 스크랩</h2>
 						</div>
 					</div>
-					 <style>
-                        .scrap_cate {margin-bottom:40px}
-                        .scrap_cate ul { display:flex; flex-wrap: wrap; }
-                        .scrap_cate li {position:relative; margin:0 16px 8px 0}
-                        .scrap_cate li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
-                        .scrap_cate li a { padding:0 16px 0 0; font-size:18px; line-height:1.4; color:#999; font-weight:500}
-                        .scrap_cate li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
-                        .scrap_cate li.all a { color:#111;}
-						.scrap_cate li:last-child::after {display:none}
 
-                        
-                        .myscrap_area.no_scrap { background:#F7F7F7; padding:170px 0}
-                        .img_list { display:flex; flex-direction: row; flex-wrap: wrap;}
-						.img_list .atcbox {width:23.5%; margin:0 0  4.17% 2%}
-						.img_list .atcbox:nth-child(4n+1), .myscrap_list02 .atcbox:first-child  {margin-left:0}
-                        .myscrap_area.no_scrap .img_list {display:none}
-                        .myscrap_area .rs_txt { display:none; font-size:24px; line-height:1.1; font-weight:500; color:#666; text-align:center}
-                        .myscrap_area.no_scrap .rs_txt { display:block}
-
-						
-						@media (max-width:768px) {
-							.scrap_cate { overflow-y:hidden;overflow-X:auto; margin-bottom:32px}
-							.scrap_cate::-webkit-scrollbar{display:none;}
-							.scrap_cate li a { font-size:14px;}
-                      		.scrap_cate li a span { font-family:'Gotham'; display:inline-block; margin-left:8px;font-size:14px;}
-
-							.scrap_cate ul {flex-wrap:nowrap}
-							.scrap_cate li a {white-space:nowrap}
-
-							.img_list {vertical-align:top; display:flex;justify-content: space-between }
-							.img_list .atcbox {width:48.21%; margin:0 0 7.16% 0}
-							.img_list .atcbox:nth-child(2n+1), .img_list .atcbox:first-child  {margin-left:0}
-							
-						}
-                    </style>
 					<!-- 스크랩 카테고리 -->
 					<div class="scrap_cate">
 						<ul>
@@ -441,6 +407,10 @@
 								</a>
 							</div>
 						</div>
+					</div>
+
+					<div class="btn_more_wrap">
+						<button type="button" class="btn more"><span>더보기</span></button>
 					</div>
 				</div>
 

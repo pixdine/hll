@@ -22,11 +22,11 @@ $(document).ready(function(){
         var gap = window.innerWidth - document.documentElement.clientWidth
         $(this).toggleClass('on', !isVisible)
         if (isVisible) {
-            (targetElement.parent())[0].style.removeProperty("padding-right");
-            (targetElement.parent())[0].style.removeProperty("margin-right");
+            // (targetElement.parent())[0].style.removeProperty("padding-right");
+            // (targetElement.parent())[0].style.removeProperty("margin-right");
             popup.close(targetId, 'popup')
         } else {
-            targetElement.parent().css({paddingRight: gap, marginRight:-gap})
+            // targetElement.parent().css({paddingRight: gap, marginRight:-gap})
             popup.open(targetId, 'popup', false)
         }
     });

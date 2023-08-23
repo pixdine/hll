@@ -59,10 +59,24 @@ $(document).ready(function () {
                 }
             })
         function showTooltip(el) {
-            $(">.tooltip_layer", el).addClass('is-visible')
+            const layerEl = $(">.tooltip_layer", el)
+            layerEl.addClass('is-visible')
+            if($(window).width()<layerEl.offset().left+layerEl.outerWidth()) {
+                layerEl.addClass('revert')
+                if(layerEl.offset().left - 20<0) {
+                    $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
+                }
+            }else{
+                console.log(layerEl.offset().right)
+                // if(layerEl.offset().left - 20<0) {
+                //     $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
+                // }
+            }
         }
         function hideTooltip(el) {
-            $(">.tooltip_layer", el).removeClass('is-visible')
+            const layerEl = $(">.tooltip_layer", el)
+            layerEl.removeClass(['is-visible', 'revert'])
+            $("p", layerEl).css("transform", "")
         }
     }
     $(document).tooltip();

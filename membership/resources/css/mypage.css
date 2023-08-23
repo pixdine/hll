@@ -130,10 +130,12 @@
 .chk_list li .chk_in { vertical-align:middle; color:#111}
 .chk_list li .btn_ico { vertical-align:middle; position: relative; top:-4px;}
 
-.tooltip_layer {position:absolute; bottom:-44px; left: -7px; background-color:var(--point); color:#fff; width:0 ;height:0; padding:0; opacity:0; z-index: -1; }
-.tooltip_layer.is-visible { padding:8px 16px; width: auto; height: auto; opacity:1; z-index:201; }
-.tooltip_layer p {font-size:12px; line-height:17px; text-align:left; white-space:nowrap}
-.tooltip_layer::before {content:''; position:absolute; top:-8px; left:10px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
+.tooltip_layer {position:absolute; top:27px; left: -7px; width:0 ;height:0; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
+.tooltip_layer.is-visible { width: auto; height: auto; opacity:1; z-index:201; }
+.tooltip_layer.revert { left: auto; right: -7px; }
+.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 8px 16px 10px; white-space: nowrap }
+.tooltip_layer::before {content:''; position:absolute; top:-8px; left:9px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
+.tooltip_layer.revert::before { left: auto; right: 9px; }
 
 .profile_edit { display:flex; align-items: flex-end; }
 .profile_edit .profile_pic80 {overflow:hidden; background:#D9D9D9 url('../../resources/images/ico_profile.png') no-repeat 50% 100%; width:80px; height:80px; border-radius:80px 80px; border:1px solid #E0E0E0; box-sizing:border-box; margin-right:8px}

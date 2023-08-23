@@ -107,7 +107,17 @@ button[disabled], a.disabled{cursor:default;pointer-events:none;}
 /* txt button + icon */
 .btn_txt{display:inline-flex;position:relative;padding:10px;font-size:16px;font-weight:500;line-height:23px;align-items:center;}
 .has_plus:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23666666'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
-.has_arr1:after{content:'';display:inline-block;width:16px;height:16px;transform:rotate(90deg);margin:1px 0 0 8px;background:url('../images/ico_arrow04.svg') no-repeat center center / 100% auto;}
+.has_arr1:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 8px;background:url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.08325 14.5L12.0833 8.5L6.08325 2.5' stroke='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 100% auto;}
+
+
+
+
+
+
+
+
+
+
 .has_toggle1{font-weight:400;}
 .has_toggle1:after{content:'';display:inline-block;width:16px;height:16px;margin:1px 0 0 4px;background:url('../images/ico_arrow05.svg') no-repeat center center / 100% auto;}
 .has_toggle1.on:after{transform:rotate(-180deg);}
@@ -191,7 +201,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* input */
 .inputbox{position:relative;}
-.inputbox .inp{display:block;width:100%;height:52px;padding:0 16px;background-color:#fff;border:1px solid #ccc;border-radius:0;color:#333;font-size:16px;font-weight:500;}
+.inputbox .inp{display:block;position:relative;width:100%;height:52px;padding:0 16px;background-color:#fff;border:1px solid #ccc;border-radius:0;color:#333;font-size:16px;font-weight:500;}
 .inputbox .inp[readonly]{background-color:#f6f6f6;cursor:default;-webkit-tap-highlight-color:transparent;}
 .inputbox .inp[readonly]:focus{border-color:#ccc;}
 .inputbox .inp[readonly]:focus::placeholder{color:#999;border-color:#ccc;}
@@ -507,6 +517,53 @@ background:#fff;overflow:hidden;z-index:230}
 .pagination .btn_prev.disabled{background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 21L7 12L16 3' stroke='%23CCCCCC' stroke-width='2'/%3E%3C/svg%3E%0A");}
 .pagination .btn_next.disabled{background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 21L17 12L8 3' stroke='%23CCCCCC' stroke-width='2'/%3E%3C/svg%3E%0A");}
 
+/* 달력 */
+#ui-datepicker-div {z-index:130!important;margin-top:8px;padding:12px 8px 9px;border:1px solid #dbdbdb;box-shadow:2px 3px 6px 0px rgba(0, 0, 0, 0.1);font-family:'Noto Sans KR', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif;}
+#ui-datepicker-div.ui-datepicker-multi-2 {width:624px!important}
+#ui-datepicker-div.ui-datepicker-multi-2:before {content:'';display:block;position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:100%;background:#eee}
+.ui-datepicker-trigger {position:absolute;left:0;top:0;width:100%;height:100%;background:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.5' y='2.90024' width='13' height='11.6' stroke='%23111111'/%3E%3Cpath d='M1.5 7.2999H14.0666' stroke='%23111111'/%3E%3Cpath d='M4.5 4.49991L4.5 1.0001' stroke='%23111111'/%3E%3Cpath d='M11.5 4.49991L11.5 1.0001' stroke='%23111111'/%3E%3C/svg%3E%0A") no-repeat right 16px top 50% / 16px auto;font-size:0;}
+.ui-datepicker-trigger img {position:relative}
+.ui-datepicker .ui-datepicker-header{margin-bottom:12px;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev,
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next {cursor:pointer;bottom:3px;width:40px;height:40px;border:0}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev{left:-4px;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next{right:-4px;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev:before,
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next:before {content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.0001 13.9998L11 7.99991L5.0001 2.00001' stroke='%23111111'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev:before {transform:translate(-50%,-50%) rotate(-180deg)}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next:before {transform:translate(-50%,-50%)}
+#ui-datepicker-div.ui-datepicker .ui-icon-circle-triangle-w {display:none}
+.ui-datepicker .ui-datepicker-calendar th {background:0;color:#666;}
+.ui-datepicker .ui-datepicker-calendar th:first-child{color:#B30010}
+.ui-datepicker .ui-datepicker-calendar th,
+.ui-datepicker .ui-datepicker-calendar td {width:32px;height:32px;font-size:12px;box-sizing:border-box}
+.ui-datepicker .ui-datepicker-calendar td{font-family:Gotham;padding:3px;}
+.ui-datepicker-group {padding:0 10px;box-sizing:border-box}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-multi .ui-datepicker-group table {margin:0 auto}
+#ui-datepicker-div .ui-state-highlight,
+#ui-datepicker-div .ui-widget-content .ui-state-highlight,
+#ui-datepicker-div .ui-widget-header .ui-state-highlight {color:#222!important}
+.ui-datepicker .ui-datepicker-today {position:relative}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-today .ui-state-active {background:##410C86 !important;color:#fff!important}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-today .ui-state-active:before {display:none}
+#ui-datepicker-div .ui-state-active,
+#ui-datepicker-div .ui-widget-content .ui-state-active,
+#ui-datepicker-div .ui-widget-header .ui-state-active {background:#410C86;color:#fff}
+.ui-datepicker .ui-datepicker-calendar .ui-state-disabled {background-image:none}
+.ui-datepicker .ui-datepicker-calendar .ui-state-disabled .ui-state-default{color:#999;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title {font-size:16px;font-weight:500;color:#000;line-height:23px;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title select {margin:0;padding:0 16px 0 10px;border:0;color:#222;font-size:16px;font-family:'NotoSansBold';appearance:none;-webkit-appearance:none;line-height:1.2;background:url('../images/ico_arrow09.png')no-repeat right 50%}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title .ui-datepicker-month {margin-left:4px}
+
+/* 기간설정 */
+.inputbox.date .inp{padding:0 40px 0 16px;}
+.date_select{display:flex;align-items:center;}
+.date_select .space{padding:0 13px;font-size:16px;font-weight:400;color:#999;}
+.date_select .inputbox{width:150px;}
+.inputbox .datepicker{display:block;position:relative;width:100%;height:44px;padding:0 16px;background-color:#fff;border:1px solid #ccc;border-radius:0;color:#111;font-size:14px;font-weight:400;}
+.inputbox .datepicker[readonly]{-webkit-tap-highlight-color:transparent;}
+.inputbox .datepicker:focus{background-color:#fff;border-color:#ccc;}
+
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -696,6 +753,9 @@ background:#fff;overflow:hidden;z-index:230}
 	.pagination a{width:28px;height:28px;font-size:14px;line-height:28px;}
 	.pagination .btn_prev{width:20px;height:20px;margin-right:8px;background-size:20px auto;}
 	.pagination .btn_next{width:20px;height:20px;margin-left:8px;background-size:20px auto;}
+
+	.date_select .inputbox{width:100%;}
+	#ui-datepicker-div {width:calc(100% - 40px);max-width:284px;}
 }
 
 @media (max-width:340px){
@@ -705,4 +765,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 @media (max-width:320px){
 	.allmenu_inner{padding:0 24px 60px;}
+	.ui-datepicker .ui-datepicker-calendar th,
+	.ui-datepicker .ui-datepicker-calendar td{width:auto;}
+	.ui-datepicker td span,
+	.ui-datepicker td a{width:auto;}
 }

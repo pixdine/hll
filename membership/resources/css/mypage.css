@@ -163,13 +163,15 @@
 .board_st01 .b_state { font-size:16px; font-weight:500; color:#666666; order:1; width:9.2%}
 .board_st01 .b_state.complate {color:var(--point)}
 
-.board_st01 .board_detail {border-top:1px solid #DBDBDB; margin-left:8.17%; margin-top:32px}
-.board_st01 .board_detail p.tit { font-size:16px; font-weight:500; padding:32px 0 }
+.board_st01 .board_detail { margin-left:8.17%;}
+.board_st01 .board_detail p.tit { border-top: 1px solid #DBDBDB; font-size:16px; font-weight:500; padding:32px 0; margin-top:32px }
 .board_st01 .board_detail div.view {  background-color:#F7F7F7; padding:32px 24px; font-size:16px; font-weight:500; color:#666 }
+
+[data-accordion-content] { max-height: 0; overflow: hidden; transition: max-height .1s }
 
 .tbl_btm_area.noline { border-top:0; margin-top:120px}
 .tbl_btm_area .tx_btn { display:flex; justify-content: space-between; width:100%}
-.tbl_btm_area .tx_btn .tx { color:#666} 
+.tbl_btm_area .tx_btn .tx { color:#666}
 
 .no_list { position:relative; font-size:24px; text-align:center; color:#666; min-height:300px; border-width:2px 0 1px; border-style:solid; border-color:#111 none #DBDBDB none}
 .no_list p { position:absolute; top:50%; transform:translateY(-50%) ;width:100%; font-size:24px; text-align:center; color:#666;}
@@ -268,7 +270,7 @@
     .control .swiper-pagination{font-size:0;}
     .control .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:24px;height:2px;margin:0 4px;cursor:pointer;background-color:#dbdbdb;}
     .control .swiper-pagination .swiper-pagination-bullet-active{background-color:#111;}
-    
+
 
     /* 회원정보 수정 */
     .container .content { padding-top:60px}
@@ -326,7 +328,7 @@
     .tbl_btm_area.noline  {align-items: flex-start}
     .board_st01 .board_detail div.view {font-size:14px; font-weight:400}
     .board_st01 .board_detail p.tit {font-size:14px}
-    .tbl_btm_area .tx_btn .tx { color:#666} 
+    .tbl_btm_area .tx_btn .tx { color:#666}
     .no_list p {font-size:14px}
 
     .btn.h36 { height:36px; font-size:14px; padding:0 20px}

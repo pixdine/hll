@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>HLL | Hearst Joongang - Membership</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"/>
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+
+	<div id="wrap" class="wrap">
+		<!--전체메뉴-->
+		<div class="allmenu_wrap">
+			<div class="cont_inner">
+				<style>
+					.active {display:block}
+				</style>
+				<script>
+					function login(){
+						console.log('login');
+						$(".login_info_box").css("display" ,"block");
+						$(".info_box").css("display", "none");
+
+					}
+
+					function logout() {
+						console.log('logout');
+						$(".info_box").css("display", "block");
+						$(".login_info_box").css("display", "none");
+						
+					}
+				</script>
+				<!-- login 전 > 모바일에서만 노출됨 -->
+				<div class="info_box">
+					<p class="info_txt">
+						로그인 후 허스트중앙 멤버십의 
+						<strong>특별한 혜택을 확인하세요.</strong>
+					</p>
+					<button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
+					<div class="info_txt_btm">
+						<p>아직 허스트 중앙 회원이 아니신가요?</p>
+						<a href="#" class="btn_txt has_arr2">회원가입</a>
+					</div>
+				</div>
+				<!--// login 전-->
+				<!-- login 후 > 모바일에서만 노출됨 -->
+				<div class="login_info_box" style="display:none">
+					<div class="info_txt">
+						<p><strong>김중앙님,</strong><br />안녕하세요!</p>
+					</div>
+
+					<div class="info_txt02 box_type01">
+						허스트중앙 통합멤버십을 통해 보다 많은
+						혜택을 누려보세요!
+					</div>
+					<a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a><!--D : logout -->
+				</div>
+
+				<ul class="allmenu_list depth1">
+					<li class="">
+						<a href="#" class="tit">서비스 소개<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">About Us</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="tit">멤버십<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">포인트 안내</a></li>
+							<li><a href="#">포인트 관리</a></li>
+							<li><a href="#">포인트 샵</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="tit">고객센터<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">1:1문의</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="tit">마이페이지<span><em class="blind">열기</em></span></a>
+						<ul class="depth2">
+							<li><a href="#">마이홈</a></li>
+							<li><a href="#">회원정보 수정</a></li>
+							<li><a href="#">포인트 관리</a></li>
+							<li><a href="#">포인트 샵</a></li>
+							<li><a href="#">1:1문의 내역</a></li>
+							<li><a href="#">나의 스크랩</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+			<!--// login 전-->
+		</div>
+		<!--// 전체메뉴-->
+		<!-- header -->
+		<header id="header" class="header"><!-- D: 메인일 때 main 클래스 추가 -->
+			<div class="header_wrap">
+				<div class="header_top">
+					<div class="cont_inner">
+						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_memebrship.png" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+						<div class="header_util_area"><!-- markup 변경 -->
+							<button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button" class="btn_txt02 ctype2"><span>LOGOUT</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<!--<button type="button" class="btn_txt02 ctype2"><span>LOGOUT</span></button> D: logout -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+						</div>
+					</div>
+				</div>
+				
+				<div class="header_gnb">
+					<div class="cont_inner">
+						<ul class="gnb_menu">
+							<li>
+								<a href="#">서비스 소개</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">ELLE</a></li>
+										<li><a href="#">Cosmopolitan</a></li>
+										<li><a href="#">Harper's BAZZAR</a></li>
+										<li><a href="#">Esquire</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">멤버십</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">포인트 안내</a></li>
+										<li class="on"><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 샵</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#">고객센터</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">1:1 문의</a></li>
+									</ul>
+								</div class="sub_menu">
+							</li>
+							<li class="on">
+								<a href="#">마이페이지</a>
+								<div class="sub_menu">
+									<ul>
+										<li><a href="#">마이홈</a></li>
+										<li><a href="#">회원정보 수정</a></li>
+										<li class="on"><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 샵</a></li>
+										<li><a href="#">1:1문의내역</a></li>
+										<li><a href="#">나의 스크랩</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+		<style>
+			.box_type02 { background:#fff; border:1px solid #DBDBDB}
+			.point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center;    justify-content: space-around;}
+			.point_change_cont .p_logo {}
+			.point_change_cont .p_txt {font-size:18px; font-weight:500; }
+			.point_change_cont .p_change { display:flex}
+			.point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px}
+
+			.point_change_wrap .point_change_cont { margin-top:24px}
+		</style>
+		<!-- container -->
+		<div id="container" class="container mypage"><!-- mypage 서브메인 > main 클래스 추가 -->
+			<div id="content" class="content ">
+				<div class="body_cont_area">
+					<div class="cont_inner">
+						<!--나의 포인트-->
+                        <div class="mypage_point_info box_type01">
+                            <h2 class="blind">내 포인트</h2>
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dt>오늘 획득 포인트</dt>
+                                        <dd>
+                                            <strong class="c_point">5</strong><em class="sep">/</em><span>22<span class="point">P</span></span>
+                                        </dd>
+                                    </dl>
+                                <li>
+                                    <dl>
+                                        <dt>총 포인트</dt>
+                                        <dd>
+                                            <strong>25,800</strong><span class="point">P</span>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>
+                                            전환 가능 포인트
+                                            <button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+                                        </dt>
+                                        <dd>
+                                            <strong>25,800</strong><span class="point">P</span>
+                                            <button type="button" class="bctype1"><span class="btn_s">전환</span></button>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+
+						<!--제휴 포인트 조회 -->
+						<div class="point_save_wrap bc_space02">
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">최근 1년 이내로 조회 가능합니다.</h2>
+								</div>
+							</div>
+
+							<div class="tab_menu type02">
+								<ul>
+									<li class="on"><a href="#">전체</a></li>
+									<li><a href="#">적립</a></li>
+									<li><a href="#">소진</a></li>
+								</ul>
+							</div>
+
+							<style>
+								.point_save_list { border-top:1px solid #111 }
+								.point_save_list li { padding:28px 24px; border-bottom:1px solid #DBDBDB}
+								.point_item {position:relative;}
+								.point_item dt {font-size:18px; font-weight:500; line-height:1.4;width:85%; white-space: nowrap; text-overflow: ellipsis; overflow:hidden}
+								.point_item dd.date { color:#666; font-size:16px; margin-top:16px;width:85%; }
+								.point_item dd.point { position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:16px; font-weight:700; width:15%;text-align:right}
+								.point_item dd.point.minus {color:#0078FF;}
+								.point_item dd.point.plus {color:#FF0000}
+
+								.btm_info_box { background:#F7F7F7; border:1px solid #DBDBDB; padding:32px; margin-top:180px }
+								.btm_info_box li { position:relative; font-size:14px; font-weight:400; line-height:1.4; margin-top:8px; padding-left:10px; text-indent:-1px; color:#666}
+								.btm_info_box li:first-child { margin-top:0}
+								.btm_info_box li::before { content:''; position:absolute; left:0; top:7px; width:3px; height:3px; border-radius: 3px 3px; background-color:#ccc}
+
+								@media (max-width:768px){
+									.point_item dt {font-size:14px; font-weight:500; width:100%}
+									.point_item dd.date { font-size:14px; width:70%}
+									.point_item dd.point {top:auto; transform:none; bottom:0; font-size:14px; width:30%}
+								}
+
+							</style>
+							<div class="point_save_list">
+								<ul>
+									<li>
+										<dl class="point_item">
+											<dt>OK 캐시백 전환</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point minus">-100P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>“부드러운 디저트 세트” 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라“부드러운 디저트 세트부드러운 디저트 세트” 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라“부드러운 디저트 세트부드러운 디저트 세트” 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라“부드러운 디저트 세트부드러운 디저트 세트” 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라“부드러운 디저트 세트”</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point minus">-13,500P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>하퍼스바자 기사보기</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point plus">+100P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>엘르 기사보기</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point">+1P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>네이버페이 포인트 5,000원</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point">-4,970P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>하퍼스바자 기사보기</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point plus">+100P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>엘르 기사보기</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point">+1P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>하퍼스바자 기사보기</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point plus">+100P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>엘르 기사보기</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point">+1P</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="point_item">
+											<dt>“부드러운 디저트 세트” 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라“부드러운 디저트 세트”</dt>
+											<dd class="date">2023.07.05</dd>
+											<dd class="point minus">-13,500P</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="pagination">
+								<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+								<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">7</a>
+								<a href="#">8</a>
+								<a href="#">9</a>
+								<a href="#">10</a>
+								<a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+							</div>
+						</div>
+
+						<div class="btm_info_box">
+							<ul>
+								<li>적립된 포인트는 마이페이지에서 확인 가능하며 양도 &middot; 상속될 수 없습니다.</li>
+								<li>허스트중앙 포인트는 현금 전환 서비스를 제공하지 않습니다.</li>
+								<li>적립된 기준일로 1년 내 사용하지 않은 포인트는 순차적으로 소멸됩니다.<br />(예 : 2019년 1월 1일 적립된 포인트는 2019년 12월 31일까지 미 사용 시 소멸 처리 됩니다.)</li>
+								<li>1년 이상 활동 이력이 없는 회원은 휴면계정처리가 되며, 이때 해당 계정에 적립되어 있는 포인트는 함께 소멸 됩니다.</li>
+								<li>적립된 포인트는 2일 이후부터 포인트 전환이 가능합니다.</li>
+								<li>OK캐쉬백 포인트 전환은 1회 최대 10만포인트 / 1일 최대 10만포인트까지 가능합니다.</li>
+								<li>부정행위 방지를 위해 포인트 전환 6시간 이후 추가 교환이 가능합니다.</li>
+								<li>OK캐쉬백으로 전환된 포인트는 OK캐쉬백 내에서 1달간의 대기포인트 과정을 거치 이후 사용가능 포인트로 전환됩니다.</li>
+								<li>포인트샵에서 구매 승인 후 환불 및 기간연장은 불가능합니다.</li>
+								<li>회원가입 축하 포인트는 최초 1회만 적립되며, 탈퇴 후 재가입시 적립이 불가능합니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footer_top">
+				<div class="cont_inner">
+					<div class="footer_link">
+						<ul>
+							<li><a href="#" target="_blank">이용약관</a></li>
+							<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+							<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+							<li><a href="#" target="_blank">윤리경영</a></li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="cont_inner">
+					<div class="footer_info">
+						<address class="addr_wrap">
+							
+							<div class="addr_txt">
+								<em>허스트중앙(유)</em>
+								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+								<span class="ceo">대표자 : 강주연</span>
+								<br class="pc_br">
+								<span class="num">사업자등록번호 : 104-81-55280</span>
+								<br class="mo_br">
+								<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+							</div>
+						</address>
+						<p class="copyright">© 2020 Hearst Joongang. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	
+
+	<!-- js -->
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+
+	
+
+</body>
+</html>

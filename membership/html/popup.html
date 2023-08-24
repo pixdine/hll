@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
 	<link rel="stylesheet" type="text/css" href="../resources/css/member.css"/>
+    <link rel="stylesheet" type="text/css" href="../resources/css/mypage.css" />
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<script src="../resources/js/jquery-ui.min.js"></script>
 	<!-- //css, Jquery -->
@@ -164,9 +165,12 @@
                         <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
 						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
 						<button type="button" data-popup-open="popup_4"><span>비밀번호 재설정</span></button><br>
-
+                        <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
+                        <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
+                        <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
+                        <button type="button" data-alert-open="alert_4"><span>얼럿4_쿠폰재발송 완료</span></button><br>
 					</div>
                 </div>
             </div>
@@ -440,6 +444,186 @@
             </div>
             <div class="popup_close">
                 <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 쿠폰 재발송 alter -->
+    <div class="popup_alert" data-alert="alert_3">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    재발송 하시겠습니까?
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_3"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!--D : 쿠폰 재발송 완료 alter -->
+    <div class="popup_alert" data-alert="alert_4">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    재발송 되었습니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_4"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 오늘 획득 포인트 -->
+    <div class="popup_full" data-popup="popup_5" style="display:">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">오늘 획득 포인트</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_5"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont non">
+                <div class="gray_box"> 
+                    <div class="box_inner">
+                        <p class="txt">
+                            김중앙님,<br>
+                            오늘 적립하신 포인트는 <strong>172P</strong> 입니다.
+                        </p>
+                        <p class="stxt">
+                            매체별 적립 가능한 포인트를 확인하시고 모든 포인트를 획득하세요!
+                            서비스명을 클릭하시면 해당 사이트로 이동합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="point_inq_list">
+                    <ul class="popup_scroll">
+                        <li>
+                            <dl>
+                                <dt>엘르</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>코스모폴리탄</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>하퍼스바자</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>에스콰이어</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>eee콘텐츠</dt>
+                                <dd><strong>5</strong>/<span>20<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>엘르</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>코스모폴리탄</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>하퍼스바자</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>에스콰이어</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>eee콘텐츠</dt>
+                                <dd><strong>5</strong>/<span>20<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 전체누적 포인트 -->
+    <div class="popup_full" data-popup="popup_6" style="display:">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">전체 누적 포인트</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_6"><span
+                            class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont non">
+                <div class="gray_box">
+                    <div class="box_inner">
+                        <p class="txt">
+                            김중앙님,<br>
+                            최근 1년간 적립하신 포인트는 <strong>54,867P</strong> 입니다.
+                        </p>
+                        <p class="stxt">*소진/소멸 포인트 미포함</p>
+                    </div>
+                </div>
+                <div class="point_inq_list">
+                    <ul class="popup_scroll">
+                        <li>
+                            <dl>
+                                <dt>엘르</dt>
+                                <dd><strong>960<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>코스모폴리탄</dt>
+                                <dd><strong>917<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>하퍼스바자</dt>
+                                <dd><strong>745<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>에스콰이어</dt>
+                                <dd><strong>1,045<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

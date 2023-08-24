@@ -92,12 +92,14 @@
 .input_type02 li:first-child { margin-top:0 }
 .input_type02 li dl { display:flex; }
 .input_type02 li dl dt { width:15%; color:#333; vertical-align:middle; padding-top:14px; min-width:180px}
-.input_type02 li dl dd { flex-grow:1; line-height:0; font-size:0;  position:relative; }
+.input_type02 li dl dd { flex-grow:1; /*line-height:0; font-size:0; */ position:relative; }
 .input_type02 li dl dd .btn_area { margin-top:0 }
 .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:16px}
 .input_type02 li .inp { width:51%; height:52px; display:inline-block }
 .input_type02 li dd.nobtn .inp { width:100%; }
 .input_type02 .col_txt { position:absolute; right:0; top:50%; transform:translateY(-50%); }
+.input_type02.data_read li dl dt { padding-top:0;} 
+.input_type02.data_read li dl .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500 }
 
 .input_type02 li dl dd.modify {display:flex}
 .input_type02 li dl dd.modify.nobtn {display:block}
@@ -178,16 +180,24 @@
 .no_list { position:relative; font-size:24px; text-align:center; color:#666; min-height:300px; border-width:2px 0 1px; border-style:solid; border-color:#111 none #DBDBDB none}
 .no_list p { position:absolute; top:50%; transform:translateY(-50%) ;width:100%; font-size:24px; text-align:center; color:#666;}
 
-/*나의 스크랩 */
-.sorting_st {margin-bottom:40px}
-.sorting_st ul { display:flex; flex-wrap: wrap; }
-.sorting_st li {position:relative; margin:0 16px 8px 0}
-.sorting_st li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
-.sorting_st li a { padding:0 16px 0 0; font-size:18px; line-height:1.4; color:#999; font-weight:500}
-.sorting_st li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
-.sorting_st li.all a { color:#111;}
-.sorting_st li:last-child::after {display:none}
-.sorting_st li.on a{ color:var(--point); }
+/* tab */
+.tab_menu {}
+.tab_menu ul { display:flex; flex-wrap: wrap; }
+.tab_menu li {position:relative; }
+.tab_menu li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
+.tab_menu li a {  padding:0 16px 0 0; color:#999; font-weight:500}
+.tab_menu li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
+.tab_menu li.all a { color:#111;}
+.tab_menu li:last-child::after {display:none}
+.tab_menu li.on a{ color:var(--point); }
+
+.tab_menu.type01 {margin-bottom:40px}
+.tab_menu.type01 li { margin:0 16px 8px 0}
+.tab_menu.type01 li a {font-size:18px; line-height:1.4;}
+
+.tab_menu.type02 {margin-bottom:40px}
+.tab_menu.type02 li { margin:0 16px 0px 0}
+.tab_menu.type02 li a { padding:0 16px 0 0; font-size:16px; line-height:1.4;}
 
 .myscrap_area { margin-bottom:-4.17%}
 .myscrap_area .tit_wrap { margin-bottom:40px}
@@ -201,6 +211,35 @@
 .today_news .tit_wrap { margin-bottom:40px}
 
 .myscrap_area ~ .btn_more_wrap { margin-top:120px}
+
+/* 포인트관리 */
+.point_prd_info {position:relative}
+.point_prd_info .prd_img { position:absolute; left:0; top:0; z-index:1; width:180px; height:180px; overflow:hidden;background:gray}
+.point_prd_info .prd_txt {}
+.point_prd_info .prd_txt dl {padding-left:204px}
+.point_prd_info .prd_txt dt {font-size:18px; font-weight:500; line-height:1.4; }
+.point_prd_info .prd_txt dd {font-size:16px; line-height:1.4; color:#666; font-weight:400}
+.point_prd_info .prd_txt dd.prd_tit {margin-top:16px; }
+.point_prd_info .prd_txt dd.prd_detail { margin-top:32px; }
+.point_prd_info .prd_txt dd.prd_detail ul {display:flex}
+.point_prd_info .prd_txt dd.prd_detail ul li {margin-right:24px}
+.point_prd_info .prd_txt dd.prd_detail li span {display:inline-block; margin-left:8px}
+.point_prd_info .prd_txt dd.prd_detail li.order_state span {color:var(--point); font-weight:500}
+.point_prd_info .prd_txt dd.prd_detail li.order_date span {color:#111}
+.point_prd_info .prd_txt dd.prd_detail li.order_num span {color:#111}
+.point_prd_info .prd_txt .btn_area { margin:16px 0 0 204px}
+.point_prd_info .prd_txt .btn_area button { margin:0; width:auto}
+
+
+@media (max-width:899px){
+    .point_prd_info .prd_img {width:150px; height:150px}
+    .point_prd_area .prd_txt dl { padding-left:170px;}
+    .point_prd_area .prd_txt dd.prd_detail { margin-top:24px; }
+    .point_prd_area .prd_txt dd.prd_detail ul {flex-direction: column;}
+    .point_prd_area .prd_txt dd.prd_detail ul li {margin-top:8px; display:flex}
+    .point_prd_area .prd_txt dd.prd_detail ul li:first-child {margin-top:0}
+    .order_prd_cont .btn_area button {margin:0}
+}
 
 
 @media (max-width:768px) {
@@ -361,10 +400,17 @@
     .btn.h36 { height:36px; font-size:14px; padding:0 20px}
 
     /* 나의 스크랩 */
-    .sorting_st { overflow-y:hidden;overflow-X:auto; margin-bottom:32px}
-    .sorting_st::-webkit-scrollbar{display:none;}
-    .sorting_st li a { font-size:14px;}
-    .sorting_st li a span { font-family:'Gotham'; display:inline-block; margin-left:8px;font-size:14px;}
+    .tab_menu { overflow-y:hidden;overflow-X:auto;}
+    .tab_menu::-webkit-scrollbar{display:none;}
+    .tab_menu li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
+    .tab_menu li a span { font-family:'Gotham'; display:inline-block;}
+    .tab_menu.type01 { margin-bottom:32px}
+    .tab_menu.type01 li a { font-size:14px;}
+    .tab_menu.type01 li a span{margin-left:8px;font-size:14px;}
+
+    .tab_menu.type02 {margin-bottom:24px}
+    .tab_menu.type02 li { margin:0 16px 0px 0; line-height:20px}
+    .tab_menu.type02 li a { padding:0 16px 0 0; font-size:14px; line-height:20px;}
 
     .scrap_cate ul {flex-wrap:nowrap}
     .scrap_cate li a {white-space:nowrap}
@@ -373,4 +419,18 @@
     .img_list .atcbox {width:48.21%; margin:0 0 7.16% 0}
     .img_list .atcbox:nth-child(2n+1), .img_list .atcbox:first-child  {margin-left:0}
     .myscrap_area ~ .btn_more_wrap { margin-top:40px}
+
+    /* 포인트관리 */
+    .point_prd_area .prd_txt dl { padding-left:100px;}
+    .point_prd_area .prd_txt dt {font-size:14px;  }
+    .point_prd_area .prd_txt dd {font-size:14px;}
+    .point_prd_area .prd_txt dd.prd_tit {margin-top:12px; }
+
+    .point_prd_area .prd_img {width:80px; height:80px; }
+    .point_prd_area .prd_img img {width:100%}
+    .point_prd_info .prd_txt .btn_area {display:block; margin:32px 0 0}
+    .point_prd_info .prd_txt .btn_area button {width:100%}
+
+    .point_prd_area .input_type02 li dl {flex-direction: row;}
+    .point_prd_area .input_type02 li dt {width:15%; margin-bottom:0}
 }

@@ -87,6 +87,7 @@ a:hover{text-decoration:none;}
 /* button */
 button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#ccc; background-color:#ccc; color:#fff;}
 .btn{display:inline-flex;position:relative;align-items:center;justify-content:center;width:auto;min-width:136px;height:52px;padding:0 20px;font-size:16px;font-weight:500;border:1px solid transparent;text-align:center;}/* h52 */
+.btn_m{display:inline-flex;position:relative;align-items:center;justify-content:center;width:auto;min-width:107px;height:44px;padding:0 20px;font-size:16px;font-weight:500;border:1px solid transparent;text-align:center;}/* h44 */
 .btn_s{display:inline-flex;position:relative;align-items:center;justify-content:center;width:auto;min-width:48px;height:36px;padding:0 20px;font-size:14px;font-weight:500;border:1px solid transparent;text-align:center;}
 .btn_b{display:inline-flex;position:relative;align-items:center;justify-content:center;width:auto;width:100%;height:60px;padding:0 12px;font-size:18px;font-weight:500;border:1px solid transparent;text-align:center; box-sizing: border-box;}
 
@@ -94,6 +95,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .bctype1{background-color:var(--point);border-color:var(--point);color:#fff;}
 .bctype2{background-color:#fff;border-color:var(--point);color:var(--point);}
 .bctype3{background-color:#fff;border-color:#fff;color:#111;}
+.bctype4{background-color:#fff;border-color:#DBDBDB;color:#111;}
 .bkakao{background-color:#FEE500;border-color:#FEE500; color:#333} 
 .bnaver{background-color:#03C75A;border-color:#03C75A; color:#fff} 
 /*.bnaver[disabled], .bnaver:disabled {}

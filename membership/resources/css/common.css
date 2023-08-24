@@ -342,6 +342,26 @@ input[type="radio"]:checked + label:before {background-image: url("data:image/sv
 .atcbox .txtbox{margin-top:16px;}
 .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
 
+/* tab */
+.tab_menu {}
+.tab_menu ul { display:flex; flex-wrap: wrap; }
+.tab_menu li {position:relative; }
+.tab_menu li a span { font-family:'Gotham'; display:inline-block; margin-left:8px}
+
+.tab_menu.type01 {margin-bottom:40px}
+.tab_menu.type01 li { margin:0 16px 8px 0}
+.tab_menu.type01 li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
+.tab_menu.type01 li:last-child::after {display:none}
+.tab_menu.type01 li a { padding:0 16px 0 0; color:#999; font-weight:500; font-size:18px; line-height:1.4;}
+.tab_menu.type01 li.on a{ color:var(--point); font-weight:700 }
+
+.tab_menu.type02 {margin-bottom:40px}
+.tab_menu.type02 li { margin:0 16px 0px 0}
+.tab_menu.type02 li::after {content:''; position:absolute; width:1px; height:12px; background-color:#ccc; right:0; top:50%; transform:translateY(-50%)}
+.tab_menu.type02 li:last-child::after {display:none}
+.tab_menu.type02 li a { padding:0 16px 0 0; font-size:16px; line-height:1.4; color:#999; }
+.tab_menu.type02 li.on a{ color:var(--point); font-weight:700 }
+
 
 /* footer */
 .footer{position:relative;padding-bottom:65px;background-color:#fff;}
@@ -694,6 +714,23 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	.btn_more_wrap .btn{height:44px;font-size:14px;}
 	.btn_more_wrap .more:after { margin-top:-2px}
 
+	
+    /* tab */
+    .tab_menu { overflow-y:hidden;overflow-X:auto;}
+    .tab_menu::-webkit-scrollbar{display:none;}
+    .tab_menu li a span { font-family:'Gotham'; display:inline-block;}
+   
+    .tab_menu.type01 li { margin-bottom:0}
+    .tab_menu.type01 { margin-bottom:32px}
+    .tab_menu.type01 li a { font-size:14px;}
+    .tab_menu.type01 li a span{margin-left:8px;font-size:14px;}
+
+    .tab_menu.type02 {margin-bottom:24px}
+    .tab_menu.type02 li { margin:0 16px 0px 0; line-height:20px}
+    .tab_menu.type02 li a { padding:0 16px 0 0; font-size:14px; line-height:20px;}
+
+    .tab_menu ul {flex-wrap:nowrap}
+    .tab_menu li a {white-space:nowrap}
 
 }
 

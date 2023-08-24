@@ -423,4 +423,8 @@
     .point_item dd.point {top:auto; transform:none; bottom:0; font-size:14px; width:30%}
 
 	.point_save_wrap .tit_wrap{margin-bottom:32px;}
+
+	.point_inq_list li {margin-top:16px}
+    .point_inq_list li dd {font-size:18px;}
+
 }

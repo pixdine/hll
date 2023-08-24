@@ -7,9 +7,11 @@
 	<title>HLL | Hearst Joongang - Membership</title>
 	<meta name="format-detection" content="telephone=no">
 	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"/>
 	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
 <body>
@@ -228,13 +230,51 @@
 								</div>
 							</div>
 
-							<div class="tab_menu type02">
-								<ul>
-									<li class="on"><a href="#">전체</a></li>
-									<li><a href="#">적립</a></li>
-									<li><a href="#">소진</a></li>
-								</ul>
+							<!-- 상단 소팅영역 -->
+							<div class="top_sort_wrap">
+								<!-- 기간설정 -->
+								<div class="date_wrap">
+									<!-- 기간필터 -->
+									<div class="date_filter">
+										<div class="tab_menu type03">
+											<ul>
+												<li class="on"><a href="javascript:;">1주일</a></li><!-- D: 선택 시 on 클래스 추가 -->
+												<li><a href="javascript:;">1개월</a></li>
+												<li><a href="javascript:;">3개월</a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- //기간필터 -->
+
+									<!-- 기간달력 -->
+									<!-- D: 디폴트 1년 이내 조회됨. 위에 있는 기간 필터 클릭 시 해당 필터에 해당하는 날짜로 변경 -->
+									<div class="date_select">
+										<div class="inputbox">
+											<input type="text" id="startDate" class="datepicker" id="name" name="name" title="기간검색 시작일" value="22.08.24" readonly>
+										</div>
+										<div class="space">~</div>
+										<div class="inputbox">
+											<input type="text" id="endDate" class="datepicker" id="name" name="name" title="기간검색 종료일" value="23.08.24"  readonly>
+										</div>
+									</div>
+									<!-- //기간달력 -->
+								</div>
+								<!-- //기간설정 -->
+
+								<!-- 리스트 소팅 -->
+								<div class="sort_filter">
+									<div class="tab_menu type02">
+										<ul>
+											<li class="on"><a href="#">전체</a></li>
+											<li><a href="#">적립</a></li>
+											<li><a href="#">소진</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- //리스트 소팅 -->
 							</div>
+							<!-- //상단 소팅영역 -->
+
 							<div class="point_save_list">
 								<ul>
 									<li>
@@ -388,8 +428,52 @@
 	<!-- js -->
 	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
+	<!-- //js -->
 
-	
+	<script>
+		$(document).ready(function(){
+			/* D: 달력은 퍼블에서는 우선 검수용으로 잡아두었습니다. 개발에서 처리 부탁드립니다. */
+			var today = new Date();
+			var oneYearAgo = new Date();
+			var oneYearLater = new Date();
+			oneYearAgo.setFullYear(today.getFullYear() - 1);
+			oneYearLater.setFullYear(today.getFullYear());
+			
+			$(".date_select #startDate").datepicker({
+				dateFormat : "y.mm.dd",
+				changeMonth:false,
+				changeYear:false,
+				hideIfNoPrevNext: true,
+				yearSuffix: "년",
+				showMonthAfterYear:true,
+				showOn:"button",//달력아이콘노출
+				buttonText:'날짜선택',
+				prevText:'이전 달',
+				nextText:'다음 달',
+				dayNamesMin:['일','월','화','수','목','금','토'],
+				monthNames:[ "01월", "02월", "03월", "04월", "05월", "06월", "07월", "08월", "09월", "10월", "11월", "12월" ],
+				minDate: oneYearAgo,
+				maxDate:oneYearLater,
+			});
+
+			$(".date_select #endDate").datepicker({
+				dateFormat : "y.mm.dd",
+				changeMonth:false,
+				changeYear:false,
+				hideIfNoPrevNext: true,
+				yearSuffix: "년",
+				showMonthAfterYear:true,
+				showOn:"button",//달력아이콘노출
+				buttonText:'날짜선택',
+				prevText:'이전 달',
+				nextText:'다음 달',
+				dayNamesMin:['일','월','화','수','목','금','토'],
+				monthNames:[ "01월", "02월", "03월", "04월", "05월", "06월", "07월", "08월", "09월", "10월", "11월", "12월" ],
+				minDate: oneYearAgo,
+				maxDate:oneYearLater,
+			});
+		});
+	</script>
 
 </body>
 </html>

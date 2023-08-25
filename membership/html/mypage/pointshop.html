@@ -173,13 +173,38 @@
 		<!-- //header -->
 		<style>
 			.box_type02 { background:#fff; border:1px solid #DBDBDB}
-			.point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center;    justify-content: space-around;}
-			.point_change_cont .p_logo {}
-			.point_change_cont .p_txt {font-size:18px; font-weight:500; }
-			.point_change_cont .p_change { display:flex}
+			.point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center; justify-content:flex-start}
+			.point_change_cont .p_logo { width:144px; margin-right:64px}
+			.point_change_cont .p_txt {font-size:18px; font-weight:500; flex-grow:2 }
+			.point_change_cont .p_change {display:inline-block; flex-direction: column; /*width:504px;*/ margin-top:14px; justify-content:flex-end; flex-grow:0}
+			.point_change_cont .p_change .inputbox .inp { width:306px; }
 			.point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px}
+			.point_change_cont .p_change .btn { margin-left:40px}
+			.point_change_cont .p_change .p_change_box { display:flex;justify-content:flex-end; }
 
 			.point_change_wrap .point_change_cont { margin-top:24px}
+			.point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:4px;}
+
+			.list_head_area {display:flex; justify-content: space-between; align-items: center;}
+			.list_head_area .list_tot { font-size:24px; line-height:1.8 }
+			.list_head_area .list_tot strong { font-size:28px; line-height:1.8; font-family:"Gotham"; font-weight:500; color:var(--point); display:inline-block; margin-left:13px}
+
+			.pointshop_list_wrap .tit_wrap ~ .list_head_area { margin-top:40px} 
+
+			.list_sorting_area { display:flex;justify-content: space-between;align-items: center; margin-top:33px}
+			.list_sorting_area .price_filter {display:flex; align-items: center; }
+			.list_sorting_area .price_filter .stit02 { font-size:20px; line-height:1.4; font-weight:500; display:inline-block;margin-right:40px}
+
+
+			.point_product_list { border-top:1px solid #111; padding-top:40px; margin-top:35px}
+			.point_product_list ul {display:flex; flex-wrap:wrap; justify-content: space-between; row-gap:50px; column-gap:24px;}
+			.point_product_list ul li{ width: 23.4%}
+			.point_product_list ul li .atcbox {}
+			.point_product_list ul li .atcbox .imgbox {border:1px solid #DBDBDB; box-sizing:border-box}
+			.point_product_list ul li .atcbox .txtbox .price_p {display:block;font-size:18px; font-family:'Gotham'; font-weight:500; line-height:1;  margin-top:20px}
+			.point_product_list ul li .atcbox .txtbox .tit {display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
+
+
 		</style>
 		<!-- container -->
 		<div id="container" class="container mypage"><!-- mypage 서브메인 > main 클래스 추가 -->
@@ -187,39 +212,43 @@
 				<div class="body_cont_area">
 					<div class="cont_inner">
 						<!--나의 포인트-->
-                        <div class="mypage_point_info box_type01">
-                            <h2 class="blind">내 포인트</h2>
-                            <ul>
-                                <li>
-                                    <dl>
-                                        <dt>오늘 획득 포인트</dt>
-                                        <dd>
-                                            <strong class="c_point">5</strong><em class="sep">/</em><span>22<span class="point">P</span></span>
-                                        </dd>
-                                    </dl>
-                                <li>
-                                    <dl>
-                                        <dt>총 포인트</dt>
-                                        <dd>
-                                            <strong>25,800</strong><span class="point">P</span>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>
-                                            전환 가능 포인트
-                                            <button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
-                                        </dt>
-                                        <dd>
-                                            <strong>25,800</strong><span class="point">P</span>
-                                            <button type="button" class="bctype1"><span class="btn_s">전환</span></button>
-                                        </dd>
-                                    </dl>
-                                </li>
-                                </li>
-                            </ul>
-                        </div>
+						<div class="mypage_point_info box_type01">
+							<h2 class="blind">내 포인트</h2>
+							<ul>
+								<li>
+									<dl>
+										<dt><a href="#">오늘 획득 포인트</a></dt>
+										<dd>
+											<strong class="c_point">5</strong><em class="sep">/</em><span>22<span class="point">P</span></span>
+										</dd>
+									</dl>
+								<li>
+									<dl>
+										<dt><a href="#">총 포인트</a></dt>
+										<dd>
+											<strong>25,800</strong><span class="point">P</span>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>
+											<a href="#">전환 가능 포인트</a>
+										</dt>
+										<dd>
+											<strong>25,800</strong><span class="point">P</span>
+											<button type="button" class="btn_ico tooltip">
+												<span class="blind">도움말</span>
+												<span class="tooltip_layer">
+													<p>2일전 포인트 기준</p>
+												</span>
+											</button>
+										</dd>
+									</dl>
+								</li>
+								</li>
+							</ul>
+						</div>
 
 						<!--제휴 포인트 전환하기 -->
 						<div class="point_change_wrap bc_space02">
@@ -234,11 +263,15 @@
 								</div>
 								<div class="p_txt">OK캐쉬백 포인트로 교환하기</div>
 								<div class="p_change">
-									<div class="inputbox">
-										<input type="text" class="inp" />
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환하기</span></button>
 									</div>
-									<span class="unit">p</span>
-									<button type="button" class="btn bctype1"><span>전환하기</span></button>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
 							<!-- CJ ONE  -->
@@ -248,11 +281,15 @@
 								</div>
 								<div class="p_txt">CJ ONE 포인트로 교환하기</div>
 								<div class="p_change">
-									<div class="inputbox">
-										<input type="text" class="inp" />
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환하기</span></button>
 									</div>
-									<span class="unit">p</span>
-									<button type="button" class="btn bctype1"><span>전환하기</span></button>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
 							<!-- h point  -->
@@ -262,11 +299,15 @@
 								</div>
 								<div class="p_txt">H.point 포인트로 교환하기</div>
 								<div class="p_change">
-									<div class="inputbox">
-										<input type="text" class="inp" />
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환하기</span></button>
 									</div>
-									<span class="unit">p</span>
-									<button type="button" class="btn bctype1"><span>전환하기</span></button>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
 							<!-- h point  -->
@@ -276,13 +317,323 @@
 								</div>
 								<div class="p_txt">PAYCO 포인트로 교환하기</div>
 								<div class="p_change">
-									<div class="inputbox">
-										<input type="text" class="inp" />
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환하기</span></button>
 									</div>
-									<span class="unit">p</span>
-									<button type="button" class="btn bctype1"><span>전환하기</span></button>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
+						</div>
+
+						<!-- 모바일상품권 교환하기 -->
+						<div class="pointshop_list_wrap bc_space02">
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">모바일상품권 교환하기</h2>
+								</div>
+							</div>
+
+							<!-- 검색목록 결과 수 -->
+							<div class="list_head_area">
+								<p class="list_tot">
+									전체목록<strong>5,327</strong>개
+								</p>
+								<div class="inputbox search">
+									<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off"
+										value="">
+									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+									<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+								</div>
+							</div>
+
+							<!-- sorting -->
+							<div class="list_sorting_area">
+								<div class="price_filter">
+									<p class="stit02">가격필터</p>
+									<div class="tab_menu type02">
+										<ul>
+											<li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
+											<li><a href="javascript:;">~3천원</a></li>
+											<li><a href="javascript:;">3천원~5천원</a></li>
+											<li><a href="javascript:;">5천원~1만원</a></li>
+											<li><a href="javascript:;">1만원~3만원</a></li>
+											<li><a href="javascript:;">3만원~5만원</a></li>
+											<li><a href="javascript:;">5만원~</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="price_filter02">
+									높은가격순
+								</div>
+							</div>
+
+							<!-- list -->
+							<div class="point_product_list">
+								<ul>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스
+														카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스
+														카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스
+														카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+
+							<div class="pagination">
+								<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+								<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">7</a>
+								<a href="#">8</a>
+								<a href="#">9</a>
+								<a href="#">10</a>
+								<a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+							</div>
+							
 						</div>
 					</div>
 				</div>

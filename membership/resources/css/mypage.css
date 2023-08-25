@@ -164,8 +164,6 @@
 .point_inq_list li dd span { display:inline-block;margin-left:4px }
 .point_inq_list li dd span em {font-size:14px}
 
-
-
 @media (max-width:899px){
     .point_prd_info .prd_img {width:150px; height:150px}
     .point_prd_area .prd_txt dl { padding-left:170px;}

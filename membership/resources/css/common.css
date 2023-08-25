@@ -192,6 +192,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 /* body content space */
 .bc_space01 { margin-top:40px}
 .bc_space02 { margin-top:180px}
+.bc_space03 { margin-top:80px}
 
 
 /************************* Form *************************/
@@ -591,7 +592,7 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 .board_st01 .board_list { position:relative; display:flex}
 .board_st01 dl { position:relative; display:table; table-layout:fixed; width:100%;}
 .board_st01 dl dt , .board_st01 dl dd {display:table-cell}
-.board_st01 .b_cate {font-size:16px; font-weight:500; color:#666666; line-height:1.4; width:19.67%;  box-sizing:border-box; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
+.board_st01 .b_cate {font-size:16px; font-weight:500; color:#666666; line-height:1.4; width:15%;  box-sizing:border-box; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
 .board_st01 .b_tit {font-size:18px; font-weight:500; line-height:1.4; padding:0 3.6%;}
 .board_st01 .b_tit a {display:block; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
 .board_st01 .b_date_time {width:20%; white-space:nowrap; box-sizing:border-box; text-align:right; color:#666; padding-right:20px}
@@ -610,7 +611,6 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 
 /* borad > view */
 .board_st01.view_cont {}
-.board_st01.view_cont .b_cate { width:15%}
 .board_st01.view_cont .b_tit { padding:0 2%}
 .board_st01.view_cont .board_detail { border-top:1px solid #DBDBDB; margin-top:28px; padding:40px 204px; margin-left:0}
 .board_st01.view_cont .board_detail .view { background:#fff; padding:0; line-height:1.8}
@@ -618,10 +618,68 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 .tbl_btm_area.noline { border-top:0; margin-top:120px}
 .tbl_btm_area .tx_btn { display:flex; justify-content: space-between; width:100%}
 .tbl_btm_area .tx_btn .tx { color:#666}
+.tbl_btm_area .tx_btn .tx dt { font-size:18px; font-weight:500; color:#111; margin-bottom:8px}
+
 
 .no_list { position:relative; font-size:24px; text-align:center; color:#666; min-height:300px; border-width:2px 0 1px; border-style:solid; border-color:#111 none #DBDBDB none}
 .no_list p { position:absolute; top:50%; transform:translateY(-50%) ;width:100%; font-size:24px; text-align:center; color:#666;}
 
+/* 회원정보 수정 */
+.tit_wrap02 { margin-bottom:32px; }
+.stit { display:block; font-size:18px; line-height:68px; font-weight:500;border-top:2px solid #111; border-bottom: 1px solid #DBDBDB;}
+.col_txt {font-size:14px; line-height:1.4; color:#333; font-weight:400}
+
+.input_type02 { display:flex; flex-direction: column;}
+.input_type02 li { margin-top:32px}
+.input_type02 li:first-child { margin-top:0 }
+.input_type02 li dl { display:flex; }
+.input_type02 li dl dt { width:15%; color:#333; vertical-align:middle; padding-top:14px; min-width:180px}
+.input_type02 li dl dd { flex-grow:1; /*line-height:0; font-size:0; */ position:relative; }
+.input_type02 li dl dd .btn_area { margin-top:0 }
+.input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:16px}
+.input_type02 li .inp { width:51%; height:52px; display:inline-block }
+.input_type02 li dd.nobtn .inp { width:100%; }
+.input_type02 .col_txt { position:absolute; right:0; top:50%; transform:translateY(-50%); }
+.input_type02.data_read li dl dt { padding-top:0;} 
+.input_type02.data_read li dl .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500 }
+
+.input_type02 li dl dd.modify {display:flex}
+.input_type02 li dl dd.modify.nobtn {display:block}
+.input_type02 li dl dd.modify .inputbox {width:51%; display:flex; flex-direction:column}
+.input_type02 li dl dd.modify.nobtn .inputbox {width:100%;}
+.input_type02 li dl dd.modify .inputbox .inp {width:100%}
+.input_type02 li dl dd.modify .addr_search { display:flex; flex:1; flex-direction: column;}
+
+.input_type02 li dl dd .pw_in { width:51%}
+.input_type02 li dl dd .pw_in .inputbox .inp {width:100%}
+.addr_search {}
+.addr_search .post_num { display:flex}
+.addr_search .post_num ~ .inputbox { margin-top:16px}
+
+.inputbox .inp { }
+.inputbox.nobtn {}
+.inputbox .inp ~ .btn { margin-left:16px}
+.inputbox ~ .btn { margin-left:16px}
+.inputbox.modify span.inputbox { display:inline-block; width:51%}
+.inputbox.modify span.inputbox .inp { width:100%}
+
+.addr_search { }
+.addr_search .inp { }
+.addr_search .inp ~ .inp{ margin-top:16px;}
+
+.input_chk_type{}
+.input_chk_type .chk_all {position:absolute}
+.chk_list { margin-left:90px; display:flex; flex-wrap:wrap; max-width:672px }
+.chk_list li { position:relative;width:168px; white-space:nowrap; margin-bottom:21px; line-height:1}
+.chk_list li .chk_in { vertical-align:middle; color:#111}
+.chk_list li .btn_ico { vertical-align:middle; position: relative; top:-4px;}
+
+.tooltip_layer {position:absolute; top:27px; left: -7px; width:0 ;height:0; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
+.tooltip_layer.is-visible { width: auto; height: auto; opacity:1; z-index:201; }
+.tooltip_layer.revert { left: auto; right: -7px; }
+.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 8px 16px 10px; white-space: nowrap }
+.tooltip_layer::before {content:''; position:absolute; top:-8px; left:9px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
+.tooltip_layer.revert::before { left: auto; right: 9px; }
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -854,6 +912,7 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
     .board_st01 .board_detail div.view {font-size:14px; font-weight:400}
     .board_st01 .board_detail p.tit {font-size:14px}
     .tbl_btm_area .tx_btn .tx { color:#666}
+	.tbl_btm_area .tx_btn .tx dt { font-size:16px; margin-bottom:4px}
     .no_list p {font-size:14px}
 
 	/* borad > view */
@@ -862,6 +921,8 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	.board_st01.view_cont .b_cate { width:auto;}
 	.board_st01.view_cont .b_tit {padding:0; font-size:14px; line-height:1.4}
 	.board_st01.view_cont .board_detail { padding:19px 2% }
+
+	.bc_space03 { margin-top:40px}
 
 }
 

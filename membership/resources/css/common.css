@@ -282,7 +282,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .radio_in input[type="radio"]:checked + label:before{background-image:url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23410C86'/%3E%3Ccircle cx='10' cy='10' r='3' fill='white'/%3E%3C/svg%3E%0A");}
 .radio_in label > span{display:inline-block;font-size:inherit;word-break:inherit;}
 
-.radio_list {display:flex; flex-wrap:wrap; justify-content: flex-start; gap:15px}
+.radio_list {display:flex; flex-wrap:wrap; justify-content: flex-start; row-gap:15px; column-gap:32px;}
 .radio_list li { /*width:161px;*/ line-height:1;}
 .radio_list li:nth-child(2),.radio_list li:nth-child(5) {width:202px}
 .input_type01 dt + dd .radio_list{ /*margin-top:-9px*/}
@@ -616,6 +616,18 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 .board_st01.view_cont .board_detail { border-top:1px solid #DBDBDB; margin-top:28px; padding:40px 204px; margin-left:0}
 .board_st01.view_cont .board_detail .view { background:#fff; padding:0; line-height:1.8}
 
+/**/
+.board_st01.faq_cont {}
+.board_st01.faq_cont li {padding-bottom:0px}
+.board_st01.faq_cont .board_detail {}
+.board_st01.faq_cont .board_detail { margin-top:28px; margin-left:0;  background:#F7F7F7;}
+.board_st01.faq_cont .board_detail .view { padding:40px 18% 40px 18.7%; border-top:1px solid #DBDBDB;line-height:1.8 }
+
+.btn_area.type02 {justify-content: center; margin-top:120px}
+.btn_area.type02 button {width:auto}
+
+	
+
 .tbl_btm_area.noline { border-top:0; margin-top:120px}
 .tbl_btm_area .tx_btn { display:flex; justify-content: space-between; width:100%}
 .tbl_btm_area .tx_btn .tx { color:#666}
@@ -654,6 +666,15 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 
 .input_type02 li dl dd .pw_in { width:51%}
 .input_type02 li dl dd .pw_in .inputbox .inp {width:100%}
+
+.input_type02.line li { border-bottom:1px solid #DBDBDB; padding:32px 100px 32px 0}
+.input_type02.line li:first-child {border-top:0; padding-top:0}
+.input_type02 li .radio_list { }
+.input_type02 li .radio_list li {padding:0; width:auto; border-bottom:0;}
+.input_type02 li .radio_list li:last-child {margin-right:0}
+.input_type02 li .full .inp {width:100%}
+.tit_wrap02 p.stit .ess { margin-right:10px}
+
 .addr_search {}
 .addr_search .post_num { display:flex}
 .addr_search .post_num ~ .inputbox { margin-top:16px}
@@ -679,7 +700,7 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 .tooltip_layer {position:absolute; top:27px; left: -7px; width:0 ;height:0; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
 .tooltip_layer.is-visible { width: auto; height: auto; opacity:1; z-index:201; }
 .tooltip_layer.revert { left: auto; right: -7px; }
-.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 8px 16px 10px; white-space: nowrap }
+.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 8px 16px 7px; white-space: nowrap }
 .tooltip_layer::before {content:''; position:absolute; top:-8px; left:9px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
 .tooltip_layer.revert::before { left: auto; right: 9px; }
 
@@ -937,6 +958,16 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 	.board_st01.view_cont .b_tit {padding:0; font-size:14px; line-height:1.4}
 	.board_st01.view_cont .board_detail { padding:19px 2% }
 
+	.board_st01.faq_cont li {padding-top:20px}
+	.board_st01.faq_cont .board_detail { margin-top:20px; }
+	.board_st01.faq_cont .board_detail .view {padding:20px 16px; }
+
+	.input_type02.line li { padding:24px 0; margin-top:0}
+	.input_type02 li .radio_list {justify-content: flex-start;}
+
+	.btn_area.type02 { margin-top:40px}
+	.btn_area.type02 button {width:100%}
+
 	.bc_space03 { margin-top:40px}
 
 	/* 입력 테이블 */
@@ -961,6 +992,8 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
     .input_type02 li dl dd.modify .addr_search .inputbox { width:100% }
     .input_type02 li dl dd.modify .addr_search .post_num .inputbox { width:100%;}
     .input_type02 li dl dd .pw_in  { width:100%}
+
+	
 
 
 

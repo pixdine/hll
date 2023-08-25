@@ -1,9 +1,6 @@
 .header .header_util_area .signup {display:none}
-
-.container.mypage { padding-bottom:180px}
-
 .body_cont_area { background:#fff; margin-top:-100px; padding-top:100px}
-.body_cont_area .cont_inner {  margin:0 auto}
+.body_cont_area .cont_inner {  margin:0 auto }
 
 
 /* 마이페이지 > 상단 컨텐츠 */
@@ -253,28 +250,8 @@
 
 
     /* 회원정보 수정 */
-    .container .content { padding-top:60px}
     .container.main .content { padding-top:0 }
-    .stit {line-height:60px}
-    .btn { padding:16px 20px}
-    .input_type02 li{ margin-top:24px}
-    .input_type02 li dl {flex-direction: column;}
-    .input_type02 li dl dt {width:100%; margin-bottom:8px; padding-top:0}
-    .input_type02 li dd .inputbox {/*padding-right:36.72%*/}
-    .input_type02 li dd .inputbox.nobtn { padding-right:0 }
-    .input_type02 li dd .inputbox .btn { position:absolute; right:0; width:31.94%; min-width:68px}
-    .input_type02 li .col_txt { position:static; margin-top:16px; transform: none; }
-    .input_type02 li dd .inp { width:100%; }
-    .input_type02 li dl dd .btn_area {display:flex;justify-content: space-between;}
-    .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:0px}
-    .input_type02 li dl dd .btn_area .btn {}
-    .input_type02 li dd .inputbox.modify span.inputbox {padding-right:0; width:100%}
 
-    .input_type02 li dl dd.modify .inputbox  {width:100%;}
-    .input_type02 li dl dd.modify .btn{ min-width:107px}
-    .input_type02 li dl dd.modify .addr_search .inputbox { width:100% }
-    .input_type02 li dl dd.modify .addr_search .post_num .inputbox { width:100%;}
-    .input_type02 li dl dd .pw_in  { width:100%}
 
     .addr_search {}
     .addr_search .post_num { display:flex}

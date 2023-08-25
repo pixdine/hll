@@ -7,9 +7,11 @@
 	<title>HLL | Hearst Joongang - Membership</title>
 	<meta name="format-detection" content="telephone=no">
 	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"/>
 	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
 <body>
@@ -123,23 +125,23 @@
 									</ul>
 								</div>
 							</li>
-							<li>
+							<li class="on">
 								<a href="#">고객센터</a>
 								<div class="sub_menu">
 									<ul>
 										<li><a href="#">공지사항</a></li>
 										<li><a href="#">FAQ</a></li>
-										<li><a href="#">1:1 문의</a></li>
+										<li class="on"><a href="#">1:1 문의</a></li>
 									</ul>
 								</div class="sub_menu">
 							</li>
-							<li class="on">
+							<li class="">
 								<a href="#">마이페이지</a>
 								<div class="sub_menu">
 									<ul>
 										<li><a href="#">마이홈</a></li>
 										<li><a href="#">회원정보 수정</a></li>
-										<li class="on"><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 관리</a></li>
 										<li><a href="#">포인트 샵</a></li>
 										<li><a href="#">1:1문의내역</a></li>
 										<li><a href="#">나의 스크랩</a></li>
@@ -154,86 +156,145 @@
 		<!-- //header -->
 
 		<!-- container -->
-		<div id="container" class="container mypage">
+		<div id="container" class="container customer">
 			<div id="content" class="content ">
 				<div class="cont_inner">
                     <div class="heading_wrap">
 						<div class="heading_area">
-						   <h2 class="tit">주문 상세</h2>
+                      		<h2 class="tit">1:1 문의</h2>
 						</div>
                     </div>
-					<!--D: 회원 정보 -->
-                    <div class="body_cont01">
-                        <div class="tit_wrap02">
-                            <h3 class="stit">주문상품 정보</h3>
-                        </div>
-                        <div class="point_prd_area">
-							<div class="point_prd_info">
-								<div class="prd_img">
-									<img src="../../resources/images/temp/tmp_shop.png" alt="" />
-								</div>
-								<div class="prd_txt">
-									<dl>
-										<dt>스타벅스</dt>
-										<dd class="prd_tit">부드러운 디저트 세트 - 아이스 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라</dd>
-										<dd class="prd_detail">
-											<ul>
-												<li class="order_state">쿠폰상태<span>발행</span></li>
-												<li class="order_date">주문일자<span>2023년 07월 05일</span></li>
-												<li class="order_num">주문번호<span>202307600025253457401   </span></li>
-											</ul>
-										</dd>
-									</dl>
-									<div class="btn_area">
-										<button type="button" class="btn_m bctype4"><span>쿠폰 재발송</span></button>
-									</div>
-								</div>
-							</div>
-								
+                    <style>
+                        .board_st01.faq_cont {}
+                        .board_st01.faq_cont li {padding-bottom:0px}
+                        .board_st01.faq_cont .board_detail {}
+                        .board_st01.faq_cont .board_detail { margin-top:28px; margin-left:0;  background:#F7F7F7;}
+                        .board_st01.faq_cont .board_detail .view { padding:40px 18% 40px 18.7%; border-top:1px solid #DBDBDB;line-height:1.8 }
 
-							<!--D: 모바일상품권 수신자 정보-->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit"> 모바일상품권 수신자 정보</h3>
-								</div>
-							
-								<ul class="input_type02 data_read ">
-									<li>
-										<dl>
-											<dt>받으시는 분</dt>
-											<dd>김중앙</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt>휴대폰 전화번호</dt>
-											<dd>010-7738-2529</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
-							<!--D: 결제 정보-->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit">결제 정보</h3>
-								</div>
-								<ul class="input_type02 data_read ">
-									<li>
-										<dl>
-											<dt>총 결제 포인트</dt>
-											<dd class="point_total">12,345P</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
+						.input_type02.line li { border-bottom:1px solid #DBDBDB; padding:32px 100px 32px 0}
+						.input_type02.line li:first-child {border-top:0; padding-top:0}
+						.input_type02 li .radio_list { }
+						.input_type02 li .radio_list li {padding:0; width:auto; border-bottom:0; min-width:100px}
+						.input_type02 li .radio_list li:last-child {margin-right:0}
+
+						.input_type02 li .full .inp {width:100%}
+						
+						.tit_wrap02 p.stit .ess { margin-right:10px}
+
+						.btn_area.type02 {justify-content: center; margin-top:120px}
+						.btn_area.type02 button {width:auto}
+
+                        @media (max-width:768px){
+                            .board_st01.faq_cont li {padding-top:20px}
+                            .board_st01.faq_cont .board_detail { margin-top:20px; }
+                            .board_st01.faq_cont .board_detail .view {padding:20px 16px; }
+
+							.input_type02.line li { padding:24px 0; margin-top:0}
+							.input_type02 li .radio_list {justify-content: flex-start;}
+
+							.btn_area.type02 { margin-top:40px}
+							.btn_area.type02 button {width:100%}
+                        }
+                    </style>
+					<!--D: faq 리스트 -->
+                    <div class="body_cont01 bc_space01">
+                        <div class="tit_wrap02">
+                            <p class="stit"><span class="ess">*</span>표기된 항목은 필수 입력 사항입니다.</p>
                         </div>
-                    </div>
-					
-					<div class="tbl_btm_area">
-						<div class="btn_area">
-							<button type="button" class="btn bctype1"><span>포인트 내역으로 돌아가기</span></button>
+
+                        <ul class="input_type02 line">
+                            <li>
+                                <dl>
+                                    <dt>
+                                        매체<em class="ess">*</em>
+                                    </dt>
+                                    <dd>
+										<ul class="radio_list">
+                                            <li><span class="radio_in"><input type="radio" name="magazine" id="radio1"><label for="radio1"><span>엘르</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="magazine" id="radio2"><label for="radio2"><span>코스모폴리탄</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="magazine" id="radio3"><label for="radio3"><span>바자</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="magazine" id="radio4"><label for="radio4"><span>에스콰이어</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="magazine" id="radio5"><label for="radio5"><span>기타</span></label></span></li>
+                                       </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        구분<em class="ess">*</em>
+                                    </dt>
+                                    <dd>
+										<ul class="radio_list normal">
+                                            <li><span class="radio_in"><input type="radio" name="category" id="category1"><label for="category1"><span>회원</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="category" id="category2"><label for="category2"><span>이벤트</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="category" id="category3"><label for="category3"><span>기사정보 문의</span></label></span></li>
+                                            <li><span class="radio_in"><input type="radio" name="category" id="category4"><label for="category4"><span>기타</span></label></span></li>
+                                       </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+							<li>
+								<dl>
+									<dt>
+										이름
+									</dt>
+									<dd>
+										<div class="inputbox"><!--D : Error 시 error class 추가 -->
+											<input type="text" class="inp" placeholder="" value="김중앙" readonly />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+											<p class="row_err_txt"></p>
+										</div>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										이메일
+									</dt>
+									<dd>
+										<div class="inputbox"><!--D : Error 시 error class 추가 -->
+											<input type="text" class="inp" placeholder="" value="joongang.kim@joongang.kr" readonly />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+											<p class="row_err_txt"></p>
+										</div>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										제목<em class="ess">*</em>
+									</dt>
+									<dd>
+										<div class="inputbox full"><!--D : Error 시 error class 추가 -->
+											<input type="text" class="inp" placeholder="제목 입력" value="" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+											<p class="row_err_txt"></p>
+										</div>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										문의내용<em class="ess">*</em>
+									</dt>
+									<dd>
+										<textarea class="tarea htype02" placeholder="문의 내용 입력"></textarea>
+									</dd>
+								</dl>
+							</li>
+                        </ul>
+
+
+						<div class="btn_area type02">
+							<button type="button" class="btn bctype2"><span>확인</span></button>
+							<button type="button" class="btn bctype1"><span>문의접수</span></button>
 						</div>
-					</div>
+
+                    </div>
 				</div>
 
 			</div>

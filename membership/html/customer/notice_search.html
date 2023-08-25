@@ -7,9 +7,11 @@
 	<title>HLL | Hearst Joongang - Membership</title>
 	<meta name="format-detection" content="telephone=no">
 	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/mypage.css"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/customer.css"/>
 	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
 <body>
@@ -123,23 +125,23 @@
 									</ul>
 								</div>
 							</li>
-							<li>
+							<li class="on">
 								<a href="#">고객센터</a>
 								<div class="sub_menu">
 									<ul>
-										<li><a href="#">공지사항</a></li>
+										<li class="on"><a href="#">공지사항</a></li>
 										<li><a href="#">FAQ</a></li>
 										<li><a href="#">1:1 문의</a></li>
 									</ul>
 								</div class="sub_menu">
 							</li>
-							<li class="on">
+							<li class="">
 								<a href="#">마이페이지</a>
 								<div class="sub_menu">
 									<ul>
 										<li><a href="#">마이홈</a></li>
 										<li><a href="#">회원정보 수정</a></li>
-										<li class="on"><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 관리</a></li>
 										<li><a href="#">포인트 샵</a></li>
 										<li><a href="#">1:1문의내역</a></li>
 										<li><a href="#">나의 스크랩</a></li>
@@ -154,86 +156,87 @@
 		<!-- //header -->
 
 		<!-- container -->
-		<div id="container" class="container mypage">
+		<div id="container" class="container customer">
 			<div id="content" class="content ">
 				<div class="cont_inner">
                     <div class="heading_wrap">
 						<div class="heading_area">
-						   <h2 class="tit">주문 상세</h2>
+                      		<h2 class="tit">공지사항</h2>
 						</div>
                     </div>
-					<!--D: 회원 정보 -->
-                    <div class="body_cont01">
-                        <div class="tit_wrap02">
-                            <h3 class="stit">주문상품 정보</h3>
-                        </div>
-                        <div class="point_prd_area">
-							<div class="point_prd_info">
-								<div class="prd_img">
-									<img src="../../resources/images/temp/tmp_shop.png" alt="" />
-								</div>
-								<div class="prd_txt">
-									<dl>
-										<dt>스타벅스</dt>
-										<dd class="prd_tit">부드러운 디저트 세트 - 아이스 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라</dd>
-										<dd class="prd_detail">
-											<ul>
-												<li class="order_state">쿠폰상태<span>발행</span></li>
-												<li class="order_date">주문일자<span>2023년 07월 05일</span></li>
-												<li class="order_num">주문번호<span>202307600025253457401   </span></li>
-											</ul>
-										</dd>
-									</dl>
-									<div class="btn_area">
-										<button type="button" class="btn_m bctype4"><span>쿠폰 재발송</span></button>
-									</div>
-								</div>
-							</div>
-								
 
-							<!--D: 모바일상품권 수신자 정보-->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit"> 모바일상품권 수신자 정보</h3>
-								</div>
-							
-								<ul class="input_type02 data_read ">
-									<li>
-										<dl>
-											<dt>받으시는 분</dt>
-											<dd>김중앙</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt>휴대폰 전화번호</dt>
-											<dd>010-7738-2529</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
-							<!--D: 결제 정보-->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit">결제 정보</h3>
-								</div>
-								<ul class="input_type02 data_read ">
-									<li>
-										<dl>
-											<dt>총 결제 포인트</dt>
-											<dd class="point_total">12,345P</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
+                    <div class="tab_menu type03">
+                        <ul>
+                            <li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                            <li><a href="javascript:;">통합멤버십</a></li>
+                            <li><a href="javascript:;">엘르</a></li>
+                            <li><a href="javascript:;">코스모폴리탄</a></li>
+                            <li><a href="javascript:;">바자</a></li>
+                            <li><a href="javascript:;">에스콰이어</a></li>
+                        </ul>
+                    </div>
+                    <div class="gray_box search">
+                        <div class="box_inner">
+                            <div class="inputbox search">
+                                <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off"
+                                    value="당첨">
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                                <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+                            </div>
                         </div>
                     </div>
-					
-					<div class="tbl_btm_area">
-						<div class="btn_area">
-							<button type="button" class="btn bctype1"><span>포인트 내역으로 돌아가기</span></button>
-						</div>
+					<!--D: 공지사항 리스트 -->
+                    <div class="body_cont01">
+                        <p class="search_res"><strong>'당첨'</strong> 에 대해서 총 <span>2</span>건이 검색되었습니다.</p>
+                        <ul class="board_st01" data-accordion="inquiry">
+                            <li>
+                                <div class="board_list">
+                                    <dl>
+                                        <dt class="b_cate point">
+                                            코스모폴리탄
+                                        </dt>
+                                        <dd class="b_tit"><a href="#">엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?</a></dd>
+                                        <dd class="b_date_time"><span class="b_date">2023.07.04</span><span class="b_time">13:39</span></dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="board_list">
+                                    <dl>
+                                        <dt class="b_cate point">
+                                            코스모폴리탄
+                                        </dt>
+                                        <dd class="b_tit"><a href="#">엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?엘르 회원정보 수정은 어느 메뉴에서 해야 되나요?</a></dd>
+                                        <dd class="b_date_time"><span class="b_date">2023.07.04</span><span class="b_time">13:39</span></dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        <!-- 문의내역이 없을때 -->
+                        <div class="no_list" style="display:none">
+                            <p>작성하신 문의내역이 없습니다.</p>
+                        </div>
+                    </div>
+
+
+					<!-- pagination -->
+					<!-- D: [개발처리] PC에서는 10개 노출, MO에서는 6개 노출 -->
+					<div class="pagination">
+						<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+						<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
 					</div>
+					<!-- //pagination -->
 				</div>
 
 			</div>

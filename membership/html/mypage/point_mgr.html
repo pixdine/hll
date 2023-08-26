@@ -35,13 +35,13 @@
 						console.log('logout');
 						$(".info_box").css("display", "block");
 						$(".login_info_box").css("display", "none");
-						
+
 					}
 				</script>
 				<!-- login 전 > 모바일에서만 노출됨 -->
 				<div class="info_box">
 					<p class="info_txt">
-						로그인 후 허스트중앙 멤버십의 
+						로그인 후 허스트중앙 멤버십의
 						<strong>특별한 혜택을 확인하세요.</strong>
 					</p>
 					<button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
@@ -118,7 +118,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="header_gnb">
 					<div class="cont_inner">
 						<ul class="gnb_menu">
@@ -151,7 +151,7 @@
 										<li><a href="#">FAQ</a></li>
 										<li><a href="#">1:1 문의</a></li>
 									</ul>
-								</div class="sub_menu">
+								</div>
 							</li>
 							<li class="on">
 								<a href="#">마이페이지</a>
@@ -349,7 +349,7 @@
 									</li>
 								</ul>
 							</div>
-							
+
 							<div class="pagination">
 								<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
 								<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
@@ -398,14 +398,14 @@
 							<li><a href="#" target="_blank">윤리경영</a></li>
 						</ul>
 					</div>
-					
+
 				</div>
 			</div>
 			<div class="footer_bottom">
 				<div class="cont_inner">
 					<div class="footer_info">
 						<address class="addr_wrap">
-							
+
 							<div class="addr_txt">
 								<em>허스트중앙(유)</em>
 								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
@@ -423,7 +423,7 @@
 		</footer>
 		<!-- //footer -->
 	</div>
-	
+
 
 	<!-- js -->
 	<script src="../../resources/js/swiper.min.js"></script>
@@ -438,7 +438,7 @@
 			var oneYearLater = new Date();
 			oneYearAgo.setFullYear(today.getFullYear() - 1);
 			oneYearLater.setFullYear(today.getFullYear());
-			
+
 			$(".date_select #startDate").datepicker({
 				dateFormat : "y.mm.dd",
 				changeMonth:false,

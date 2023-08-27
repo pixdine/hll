@@ -171,57 +171,17 @@
 			</div>
 		</header>
 		<!-- //header -->
-		<style>
-			.box_type02 { background:#fff; border:1px solid #DBDBDB}
-			.point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center; justify-content:flex-start}
-			.point_change_cont .p_logo { width:144px; margin-right:64px}
-			.point_change_cont .p_txt {font-size:18px; font-weight:500; flex-grow:2 }
-			.point_change_cont .p_change {display:inline-block; flex-direction: column; /*width:504px;*/ margin-top:14px; justify-content:flex-end; flex-grow:0}
-			.point_change_cont .p_change .inputbox .inp { width:306px; }
-			.point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px}
-			.point_change_cont .p_change .btn { margin-left:40px}
-			.point_change_cont .p_change .p_change_box { display:flex;justify-content:flex-end; }
 
-			.point_change_wrap .point_change_cont { margin-top:24px}
-			.point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:4px;}
-
-			.list_head_area {display:flex; justify-content: space-between; align-items: center;}
-			.list_head_area .list_tot { font-size:24px; line-height:1.8 }
-			.list_head_area .list_tot strong { font-size:28px; line-height:1.8; font-family:"Gotham"; font-weight:500; color:var(--point); display:inline-block; margin-left:13px}
-
-			.pointshop_list_wrap .tit_wrap ~ .list_head_area { margin-top:40px} 
-
-			.list_sorting_area { display:flex;justify-content: space-between;align-items: center; margin-top:33px}
-			.list_sorting_area .price_filter {display:flex; align-items: center; }
-			.list_sorting_area .price_filter .stit02 { font-size:20px; line-height:1.4; font-weight:500; display:inline-block;margin-right:40px}
-
-
-			.point_product_list { border-top:1px solid #111; padding-top:40px; margin-top:35px}
-			.point_product_list ul {display:flex; flex-wrap:wrap; justify-content: space-between; row-gap:50px; column-gap:24px;}
-			.point_product_list ul li{ width: 23.4%}
-			.point_product_list ul li .atcbox {}
-			.point_product_list ul li .atcbox .imgbox {border:1px solid #DBDBDB; box-sizing:border-box}
-			.point_product_list ul li .atcbox .txtbox .price_p {display:block;font-size:18px; font-family:'Gotham'; font-weight:500; line-height:1;  margin-top:20px}
-			.point_product_list ul li .atcbox .txtbox .tit {display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
-
-			body.is_mobile .point_product_list ul {display:flex; flex-wrap:wrap; justify-content: space-between; row-gap:50px; column-gap:12px;}
-			body.is_mobile .point_product_list ul li{ width:calc(50% - 6px);}
-
-			body.is_mobile .point_product_list ul li .atcbox { height:246px}
-			body.is_mobile .point_product_list ul li .atcbox .txtbox { text-align:left}
-			body.is_mobile .point_product_list ul li .atcbox .txtbox .tit { font-size:14px; font-weight:500; line-height:1.5; height:45px}
-			body.is_mobile .point_product_list ul li .imgbox { width:100%; height:65.85%; padding:0;}
-			body.is_mobile .point_product_list ul li .atcbox .imgbox img { display:inline-block}
-			body.is_mobile .point_product_list ul li .price_p {font-size:14px; font-family:'Gotham'; font-weight:500; line-height:1;margin-top:14px }
-
-
-
-		</style>
 		<!-- container -->
 		<div id="container" class="container mypage"><!-- mypage 서브메인 > main 클래스 추가 -->
 			<div id="content" class="content ">
 				<div class="body_cont_area">
 					<div class="cont_inner">
+						<div class="heading_wrap">
+							<div class="heading_area">
+								<h2 class="tit">포인트 샵</h2>
+							</div>
+						</div>
 						<!--나의 포인트-->
 						<div class="mypage_point_info box_type01">
 							<h2 class="blind">내 포인트</h2>
@@ -250,9 +210,9 @@
 											<strong>25,800</strong><span class="point">P</span>
 											<button type="button" class="btn_ico tooltip">
 												<span class="blind">도움말</span>
-												<span class="tooltip_layer">
+												<!-- <span class="tooltip_layer">
 													<p>2일전 포인트 기준</p>
-												</span>
+												</span> -->
 											</button>
 										</dd>
 									</dl>
@@ -269,10 +229,12 @@
 								</div>
 							</div>            
 							<div class="point_change_cont box_type02">
-								<div class="p_logo">
-									<object data="../../resources/images/logo_ok.svg" width="144" height="44"></object>
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_ok.svg" ></object>
+									</div>
+									<div class="p_txt"><span>OK캐쉬백</span>포인트로 교환하기</div>
 								</div>
-								<div class="p_txt">OK캐쉬백 포인트로 교환하기</div>
 								<div class="p_change">
 									<div class="p_change_box">
 										<div class="inputbox">
@@ -280,17 +242,19 @@
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
 										<span class="unit">p</span>
-										<button type="button" class="btn bctype1"><span>전환하기</span></button>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
 							<!-- CJ ONE  -->
 							<div class="point_change_cont box_type02">
-								<div class="p_logo">
-									<object data="../../resources/images/logo_cj.svg" width="144" height="44"></object>
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_cj.svg" ></object>
+									</div>
+									<div class="p_txt"><span>CJ ONE</span>포인트로 교환하기</div>
 								</div>
-								<div class="p_txt">CJ ONE 포인트로 교환하기</div>
 								<div class="p_change">
 									<div class="p_change_box">
 										<div class="inputbox">
@@ -298,17 +262,19 @@
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
 										<span class="unit">p</span>
-										<button type="button" class="btn bctype1"><span>전환하기</span></button>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
 							<!-- h point  -->
 							<div class="point_change_cont box_type02">
-								<div class="p_logo">
-									<object data="../../resources/images/logo_hpoint.svg" width="144" height="44"></object>
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_hpoint.svg"></object>
+									</div>
+									<div class="p_txt"><span>H.point</span>포인트로 교환하기</div>
 								</div>
-								<div class="p_txt">H.point 포인트로 교환하기</div>
 								<div class="p_change">
 									<div class="p_change_box">
 										<div class="inputbox">
@@ -316,17 +282,19 @@
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
 										<span class="unit">p</span>
-										<button type="button" class="btn bctype1"><span>전환하기</span></button>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
 							</div>
 							<!-- h point  -->
 							<div class="point_change_cont box_type02">
-								<div class="p_logo">
-									<object data="../../resources/images/logo_payco.svg" width="144" height="44"></object>
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_payco.svg" ></object>
+									</div>
+									<div class="p_txt"><span>PAYCO</span>포인트로 교환하기</div>
 								</div>
-								<div class="p_txt">PAYCO 포인트로 교환하기</div>
 								<div class="p_change">
 									<div class="p_change_box">
 										<div class="inputbox">
@@ -334,7 +302,7 @@
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
 										<span class="unit">p</span>
-										<button type="button" class="btn bctype1"><span>전환하기</span></button>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
 								</div>
@@ -364,7 +332,7 @@
 
 							<!-- sorting -->
 							<div class="list_sorting_area">
-								<div class="price_filter">
+								<div class="option_filter">
 									<p class="stit02">가격필터</p>
 									<div class="tab_menu type02">
 										<ul>
@@ -378,12 +346,57 @@
 										</ul>
 									</div>
 								</div>
-
-								<div class="price_filter02">
-									높은가격순
+				
+								<div class="option_filter02">
+									<div class="selectbox">
+										<div class="select_styled">높은가격순</div>
+										<ul class="select_options">
+											<li class="select_option selected">높은가격순</li>
+											<li class="select_option">낮은가격순</li>
+										</ul>
+									</div>
 								</div>
 							</div>
+							<script>
+								function setupCustomSelect() {
+									$(".select_styled").click(function(event) {
+										event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+										$(this).siblings(".select_options").slideToggle("fast");
+										if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
+										else $(this).addClass("opened");
+									});
 
+									$(".select_option").click(function(event) {
+										event.stopPropagation();
+										var selectedText = $(this).text();
+										$(this).closest(".selectbox").find(".select_styled").text(selectedText);
+										$(this).closest(".select_options").slideUp("fast");
+										$(".select_styled").removeClass("opened");
+									});
+
+									$(document).click(function() {
+										$(".select_options").slideUp("fast");
+									});
+								}
+
+								$(document).ready(function() {
+									setupCustomSelect();
+
+									// 선택한 옵션 값을 초기화할 함수
+									function updateSelectedOption() {
+										$(".selectbox").each(function() {
+										var selectedText = $(this).find("li.selected").text();
+										$(this).find(".selected_option").text(selectedText);
+										});
+									}
+
+									$(".select_option").click(function() {
+										$(this).siblings().removeClass("selected");
+										$(this).addClass("selected");
+										updateSelectedOption();
+									});
+								});
+							</script>
 							<!-- list -->
 							<div class="point_product_list">
 								<ul>
@@ -395,7 +408,7 @@
 												</div>
 												<div class="txtbox">
 													<span class="cate">GS25</span>
-													<p class="tit">하이트)블랙보리 520ML</p>
+													<p class="tit">하이트 블랙보리 520ML</p>
 													<span class="price_p">4,900P</span>
 												</div>
 											</a>

@@ -19,10 +19,28 @@
 		<!--전체메뉴-->
 		<div class="allmenu_wrap">
 			<div class="cont_inner">
+				<style>
+					.active {display:block}
+				</style>
+				<script>
+					function login(){
+						console.log('login');
+						$(".login_info_box").css("display" ,"block");
+						$(".info_box").css("display", "none");
+
+					}
+
+					function logout() {
+						console.log('logout');
+						$(".info_box").css("display", "block");
+						$(".login_info_box").css("display", "none");
+						
+					}
+				</script>
 				<!-- login 전 > 모바일에서만 노출됨 -->
 				<div class="info_box">
 					<p class="info_txt">
-						로그인 후 허스트중앙 멤버십의
+						로그인 후 허스트중앙 멤버십의 
 						<strong>특별한 혜택을 확인하세요.</strong>
 					</p>
 					<button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
@@ -42,7 +60,7 @@
 						허스트중앙 통합멤버십을 통해 보다 많은
 						혜택을 누려보세요!
 					</div>
-					<a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a>
+					<a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a><!--D : logout -->
 				</div>
 
 				<ul class="allmenu_list depth1">
@@ -91,18 +109,19 @@
 				<div class="header_top">
 					<div class="cont_inner">
 						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_memebrship.png" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
-						<div class="header_util_area">
+						<div class="header_util_area"><!-- markup 변경 -->
 							<button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
-							<button type="button" class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<button type="button" class="btn_txt02 ctype2"><span>LOGOUT</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+							<!--<button type="button" class="btn_txt02 ctype2"><span>LOGOUT</span></button> D: logout -->
 							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
 						</div>
 					</div>
 				</div>
-
+				
 				<div class="header_gnb">
 					<div class="cont_inner">
 						<ul class="gnb_menu">
-							<li><!-- D: 선택시 on class 추가 -->
+							<li>
 								<a href="#">서비스 소개</a>
 								<div class="sub_menu">
 									<ul>
@@ -118,7 +137,7 @@
 								<div class="sub_menu">
 									<ul>
 										<li><a href="#">포인트 안내</a></li>
-										<li><a href="#">포인트 관리</a></li>
+										<li class="on"><a href="#">포인트 관리</a></li>
 										<li><a href="#">포인트 샵</a></li>
 									</ul>
 								</div>
@@ -139,8 +158,8 @@
 									<ul>
 										<li><a href="#">마이홈</a></li>
 										<li><a href="#">회원정보 수정</a></li>
-										<li><a href="#">포인트 관리</a></li>
-										<li class="on"><a href="#">포인트 샵</a></li>
+										<li class="on"><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 샵</a></li>
 										<li><a href="#">1:1문의내역</a></li>
 										<li><a href="#">나의 스크랩</a></li>
 									</ul>
@@ -154,165 +173,494 @@
 		<!-- //header -->
 
 		<!-- container -->
-		<div id="container" class="container mypage">
+		<div id="container" class="container mypage"><!-- mypage 서브메인 > main 클래스 추가 -->
 			<div id="content" class="content ">
-				<div class="cont_inner">
-                    <div class="heading_wrap">
-						<div class="heading_area">
-						   <h2 class="tit">주문/결재</h2>
+				<div class="body_cont_area">
+					<div class="cont_inner">
+						<div class="heading_wrap">
+							<div class="heading_area">
+								<h2 class="tit">포인트 샵</h2>
+							</div>
 						</div>
-                    </div>
-					<!--D: 회원 정보 -->
-                    <div class="body_cont01">
-                        <div class="tit_wrap02">
-                            <h3 class="stit">주문상품 정보</h3>
-                        </div>
-                        <div class="point_prd_area">
-							<div class="point_prd_info type02">
-								<div class="prd_img">
-									<img src="../../resources/images/temp/tmp_shop.png" alt="" />
-								</div>
-								<div class="prd_txt">
+						<!--나의 포인트-->
+						<div class="mypage_point_info box_type01">
+							<h2 class="blind">내 포인트</h2>
+							<ul>
+								<li>
 									<dl>
-										<dt>스타벅스</dt>
-										<dd class="prd_tit">부드러운 디저트 세트 - 아이스 카페 아메리카노 T 2잔+부드러운 생크림 카스텔라</dd>
+										<dt><a href="#">오늘 획득 포인트</a></dt>
+										<dd>
+											<strong class="c_point">5</strong><em class="sep">/</em><span>22<span class="point">P</span></span>
+										</dd>
 									</dl>
-									<div class="prd_price">
-										13,500<span>P</span>
+								<li>
+									<dl>
+										<dt><a href="#">총 포인트</a></dt>
+										<dd>
+											<strong>25,800</strong><span class="point">P</span>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>
+											<a href="#">전환 가능 포인트</a>
+										</dt>
+										<dd>
+											<strong>25,800</strong><span class="point">P</span>
+											<button type="button" class="btn_ico tooltip">
+												<span class="blind">도움말</span>
+												<!-- --><span class="tooltip_layer">
+													<p>2일전 포인트 기준</p>
+												</span> 
+											</button>
+										</dd>
+									</dl>
+								</li>
+								</li>
+							</ul>
+						</div>
+
+						<!--제휴 포인트 전환하기 -->
+						<div class="point_change_wrap bc_space02">
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">제휴 포인트로 전환하기</h2>
+								</div>
+							</div>            
+							<div class="point_change_cont box_type02">
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_ok.svg" ></object>
+									</div>
+									<div class="p_txt"><span>OK캐쉬백</span>포인트로 교환하기</div>
+								</div>
+								<div class="p_change">
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
+									</div>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
+								</div>
+							</div>
+							<!-- CJ ONE  -->
+							<div class="point_change_cont box_type02">
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_cj.svg" ></object>
+									</div>
+									<div class="p_txt"><span>CJ ONE</span>포인트로 교환하기</div>
+								</div>
+								<div class="p_change">
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
+									</div>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
+								</div>
+							</div>
+							<!-- h point  -->
+							<div class="point_change_cont box_type02">
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_hpoint.svg"></object>
+									</div>
+									<div class="p_txt"><span>H.point</span>포인트로 교환하기</div>
+								</div>
+								<div class="p_change">
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
+									</div>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
+								</div>
+							</div>
+							<!-- h point  -->
+							<div class="point_change_cont box_type02">
+								<div class="point_left">
+									<div class="p_logo">
+										<object data="../../resources/images/logo_payco.svg" ></object>
+									</div>
+									<div class="p_txt"><span>PAYCO</span>포인트로 교환하기</div>
+								</div>
+								<div class="p_change">
+									<div class="p_change_box">
+										<div class="inputbox">
+											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
+											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+										</div>
+										<span class="unit">p</span>
+										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
+									</div>
+									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- 모바일상품권 교환하기 -->
+						<div class="pointshop_list_wrap bc_space02">
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">모바일상품권 교환하기</h2>
+								</div>
+							</div>
+
+							<!-- 검색목록 결과 수 -->
+							<div class="list_head_area">
+								<p class="list_tot">
+									전체목록<strong>5,327</strong>개
+								</p>
+								<div class="inputbox search">
+									<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off"
+										value="">
+									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+									<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+								</div>
+							</div>
+
+							<!-- sorting -->
+							<div class="list_sorting_area">
+								<div class="option_filter">
+									<p class="stit02">가격필터</p>
+									<div class="tab_menu type02">
+										<ul>
+											<li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
+											<li><a href="javascript:;">~3천원</a></li>
+											<li><a href="javascript:;">3천원~5천원</a></li>
+											<li><a href="javascript:;">5천원~1만원</a></li>
+											<li><a href="javascript:;">1만원~3만원</a></li>
+											<li><a href="javascript:;">3만원~5만원</a></li>
+											<li><a href="javascript:;">5만원~</a></li>
+										</ul>
+									</div>
+								</div>
+				
+								<div class="option_filter02">
+									<div class="selectbox">
+										<div class="select_styled">높은가격순</div>
+										<ul class="select_options">
+											<li class="select_option selected">높은가격순</li>
+											<li class="select_option">낮은가격순</li>
+										</ul>
 									</div>
 								</div>
 							</div>
-						</div>
-                        <div  class="inp_area">
-                            <!--D: 주문자 정보 -->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit"> 주문자 정보</h3>
-                                    <button type="button" class="btn_txt has_line"><span>정보변경하기</span></button>
-								</div>
-							
-								<ul class="input_type02">
+							<script>
+								function setupCustomSelect() {
+									$(".select_styled").click(function(event) {
+										event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+										$(this).siblings(".select_options").slideToggle("fast");
+										if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
+										else $(this).addClass("opened");
+									});
+
+									$(".select_option").click(function(event) {
+										event.stopPropagation();
+										var selectedText = $(this).text();
+										$(this).closest(".selectbox").find(".select_styled").text(selectedText);
+										$(this).closest(".select_options").slideUp("fast");
+										$(".select_styled").removeClass("opened");
+									});
+
+									$(document).click(function() {
+										$(".select_options").slideUp("fast");
+									});
+								}
+
+								$(document).ready(function() {
+									setupCustomSelect();
+
+									// 선택한 옵션 값을 초기화할 함수
+									function updateSelectedOption() {
+										$(".selectbox").each(function() {
+										var selectedText = $(this).find("li.selected").text();
+										$(this).find(".selected_option").text(selectedText);
+										});
+									}
+
+									$(".select_option").click(function() {
+										$(this).siblings().removeClass("selected");
+										$(this).addClass("selected");
+										updateSelectedOption();
+									});
+								});
+							</script>
+							<!-- list -->
+							<div class="point_product_list">
+								<ul>
 									<li>
-										<dl>
-											<dt>이름</dt>
-											<dd>
-                                                <div class="inputbox"><!--D : Error 시 error class 추가 -->
-                                                    <input type="text" class="inp" value="김중앙" readonly="">
-                                                    <p class="row_err_txt"></p>
-                                                </div>
-                                            </dd>
-										</dl>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트 블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
 									</li>
 									<li>
-										<dl>
-											<dt>휴대폰 번호</dt>
-											<dd>
-                                                <div class="inputbox"><!--D : Error 시 error class 추가 -->
-                                                    <input type="text" class="inp" value="010-1234-56789" readonly="">
-                                                    <p class="row_err_txt"></p>
-                                                </div>
-                                            </dd>
-										</dl>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스
+														카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스
+														카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">하이트)블랙보리 520ML</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop02.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop03.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스 카페 아메리카노 T아이스
+														카페 아메리카노 T</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
+									</li>
+									
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../../resources/images/temp/tmp_pointshop04.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<span class="cate">GS25</span>
+													<p class="tit">모바일상품권 1천원권</p>
+													<span class="price_p">4,900P</span>
+												</div>
+											</a>
+										</div>
 									</li>
 								</ul>
+
 							</div>
 
-							<!--D: 모바일상품권 수신자 정보 -->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit">모바일상품권 수신자 정보</h3>
-								</div>
-								<ul class="input_type02">
-                                    <li class="info_tx">결제가 완료되면 아래 입력하신 휴대폰 번호로 모바일 상품권이 발송됩니다</li>
-									<li>
-										<dl>
-											<dt>수신자 선택</dt>
-											<dd>
-                                                <ul class="radio_list">
-                                                    <li><span class="radio_in"><input type="radio" name="withdraw" id="radio1"><label for="radio1"><span>주문자 정보와 동일</span></label></span></li>
-                                                    <li><span class="radio_in"><input type="radio" name="withdraw" id="radio2"><label for="radio2"><span>새로입력</span></label></span></li>
-                                               </ul>
-                                            </dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt>받으시는 분<span class="ess">*</span></dt>
-											<dd>
-                                                <div class="inputbox error">
-                                                    <input type="tel" class="inp" id="name" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
-                                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                                    <p class="row_err_txt">받으시는 분 이름을 입력해 주세요.</p>
-                                                </div>
-                                            </dd>
-										</dl>
-									</li>
-                                    <li>
-										<dl>
-											<dt>휴대폰 번호<span class="ess">*</span></dt>
-											<dd>
-                                                <div class="inputbox type02 only50">
-                                                    <button type="button" class="btn_txt has_line"><span>확인</span></button>
-                                                    <input type="tel" class="inp" id="phone" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="01012345678">
-                                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                                    <p class="inp_tx">(주의) 통신사 부가서비스 ‘번호도용방지 서비스'에 가입되어 있으면 MMS 수신이 되지 않습니다.</p>
-                                                    <p class="row_err_txt">휴대폰 번호를 확인해 주세요.</p>
-                                                </div>
-                                            </dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt>전송 메시지<span class="ess">*</span></dt>
-											<dd>
-                                                <div class="inputbox only50">
-                                                    <input type="tel" class="inp" id="msg" placeholder="메시지 입력 (100자 이내)" title="Placeholder 문구가 나타납니다." autocomplete="off" value="01012345678">
-                                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                                    <p class="row_err_txt">전송 메시지를 입력해 주세요.</p>
-                                                </div>
-                                            </dd>
-										</dl>
-									</li>
-								</ul>
+							<div class="pagination">
+								<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+								<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#">7</a>
+								<a href="#">8</a>
+								<a href="#">9</a>
+								<a href="#">10</a>
+								<a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
 							</div>
-							<!--D: 결제 정보-->
-							<div class="body_cont01 bc_space01">
-								<div class="tit_wrap02">
-									<h3 class="stit">결제 정보</h3>
-								</div>
-								<ul class="input_type02 ">
-									<li>
-										<dl class="total">
-											<dt>총 결제 포인트</dt>
-											<dd class="point_total">12,345P</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
-                        </div>
-                    </div>
-                     <!-- D: 동의하기 -->
-                     <div class="point_agree_area">
-                        <dl class="agree_chk_list">
-                            <dt>
-								<span class="chk_in"><input type="checkbox" id="checkAll"><label for="checkAll"><span>아래 내용에 모두 동의합니다. <em>(필수)</em></span></label></span>
-								<p class="important">결제 진행을 위해 필수사항에 모두 동의해 주세요.</p>
-							</dt>
-                            <dd>
-                                <span class="chk_in"><input type="checkbox" id="check1"><label for="check1"><span>포인트샵 제품 구매 후 취소/환불 불가에 동의합니다. <em>(필수)</em></span></label></span>
-                            </dd>
-                            <dd>
-                                <span class="chk_in"><input type="checkbox" id="check2"><label for="check2"><span>주문하실 상품의 상품명, 상품가격, 내용 및 종류를 확인하였으며, 구매에 동의합니다. (전자거래법 제 8조 제 2항)<em>(필수)</em></span></label></span>
-                            </dd>
-                        </dl>
-                    </div>
-					<div class="tbl_btm_area">
-						<div class="btn_area">
-							<button type="button" class="btn bctype1"><span>결재하기</span></button>
+
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 		<!-- //container -->
@@ -329,14 +677,14 @@
 							<li><a href="#" target="_blank">윤리경영</a></li>
 						</ul>
 					</div>
-
+					
 				</div>
 			</div>
 			<div class="footer_bottom">
 				<div class="cont_inner">
 					<div class="footer_info">
 						<address class="addr_wrap">
-
+							
 							<div class="addr_txt">
 								<em>허스트중앙(유)</em>
 								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
@@ -354,41 +702,13 @@
 		</footer>
 		<!-- //footer -->
 	</div>
+	
 
 	<!-- js -->
 	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 
-	<script>
-		$(document).ready(function () {
-			// "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수
-			$("#checkAll").on("click", function () {
-				toggleAllSubCheckboxes(this.checked);
-			});
-
-			// 하위 체크 박스 중 하나라도 클릭되었을 때 호출되는 함수
-			$(".chk_in input").on("click", function () {
-				updateSelectAllCheckbox();
-			});
-
-			// 모든 하위 체크 박스 상태 변경 함수
-			function toggleAllSubCheckboxes(checked) {
-				$(".chk_in input").prop("checked", checked);
-			}
-
-			// "전체 선택" 체크 박스 상태 업데이트 함수
-			function updateSelectAllCheckbox() {
-				if ($(".chk_in input:checked").length !== $(".chk_in").length) {
-					$("#checkAll").prop("checked", false);
-				} else {
-					$("#checkAll").prop("checked", true);
-				}
-			}
-
-
-		});
-	</script>
-
+	
 
 </body>
 </html>

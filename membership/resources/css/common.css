@@ -983,7 +983,9 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
     .btn { padding:16px 20px}
     .input_type02 li{ margin-top:0}
     .input_type02 li dl {flex-direction: column;align-items: flex-start;}
+	.input_type02 li dl.total {flex-direction: row;}
     .input_type02 li dl dt {width:100%; margin-bottom:8px; padding-top:0; }
+	.input_type02 li dl.total dt {width:15%}
 	.input_type02 li dd { width:100%}
     .input_type02 li dd .inputbox {/*padding-right:36.72%*/}
     .input_type02 li dd .inputbox.nobtn { padding-right:0 }

@@ -18,28 +18,6 @@
 <body>
     <style>
         
-    /* 포인트관리 */
-    .point_prd_area .prd_txt dl { padding-left:100px;}
-    .point_prd_area .prd_txt dt {font-size:14px;  }
-    .point_prd_area .prd_txt dd {font-size:14px;}
-    .point_prd_area .prd_txt dd.prd_tit {margin-top:12px; }
-
-    .point_prd_area .prd_img {width:80px; height:80px; }
-    .point_prd_area .prd_img img {width:100%}
-    .point_prd_info .prd_txt .btn_area {display:block; margin:32px 0 0}
-    .point_prd_info .prd_txt .btn_area button {width:100%}
-
-    .point_prd_area .input_type02 li dl {flex-direction: row;}
-    .point_prd_area .input_type02 li dt {width:15%; margin-bottom:0}
-
-    .point_item dt {font-size:14px; font-weight:500; width:100%}
-    .point_item dd.date { font-size:14px; width:70%}
-    .point_item dd.point {top:auto; transform:none; bottom:0; font-size:14px; width:30%}
-
-	.point_save_wrap .tit_wrap{margin-bottom:32px;}
-
-	.point_inq_list li {margin-top:16px}
-    .point_inq_list li dd {font-size:18px;}
 
     </style>
 
@@ -197,6 +175,8 @@
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
                         <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
                         <button type="button" data-alert-open="alert_4"><span>얼럿4_쿠폰재발송 완료</span></button><br>
+                        <button type="button" data-alert-open="alert_5"><span>얼럿5_포인트부족</span></button><br>
+                        <button type="button" data-alert-open="alert_6"><span>얼럿6_주문/결재</span></button><br>
 					</div>
                 </div>
             </div>
@@ -653,6 +633,48 @@
             </div>
         </div>
     </div>
+
+    <!--D : 포인트 부족 alter -->
+    <div class="popup_alert" data-alert="alert_5">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    사용 가능한 포인트가 부족합니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_5"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+     <!--D : 주문 결재 alter -->
+     <div class="popup_alert" data-alert="alert_6">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    구매하시겠습니까?
+                    <span>받으시는 분 : <em class="point">01012345678</em></span>
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_6"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>

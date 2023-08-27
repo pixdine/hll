@@ -268,6 +268,25 @@
 .point_agree_area dd em {color:#666}
 .point_agree_area ~ .tbl_btm_area {border-top:0}
 
+.important { font-size:12px; line-height:1.6; color:#FF0000; margin-top:8px; padding-left:28px}
+
+
+@media (max-width:1023px){
+	 /*포인트샵 */
+     .point_change_cont { flex-direction: column; padding:24px 16px; height:auto}
+     .point_change_cont .point_left {width:100%; justify-content: space-between;}
+     .point_change_cont .p_change {width:100%;}
+     .point_change_cont .p_txt {font-size:14px; white-space:nowrap; text-align:right}
+     .point_change_cont .p_txt span {display:none}
+     .point_change_cont .p_change .in_tx {margin-top:8px}
+     .point_change_cont .p_logo { width:106px; margin-right:0px}
+     .point_change_cont .p_logo object { width:106px;}
+     .point_change_cont .p_change .p_change_box .inputbox {width:100%}
+     .point_change_cont .p_change .inputbox .inp {width:100%}
+     .point_change_cont .p_change .btn {min-width:auto; margin-left:20px}
+     .point_change_cont .btn span span {display:none}
+ 
+}
 
 @media (max-width:899px){
     .point_prd_info {min-height:150px}
@@ -280,19 +299,6 @@
     .order_prd_cont .btn_area button {margin:0}
 
     .point_save_wrap .top_sort_wrap .date_wrap ~ .sort_filter{display:block;width:100%;margin-top:32px;}
-
-    /*포인트샵 */
-    .point_change_cont { flex-direction: column; padding:24px 16px; height:auto}
-    .point_change_cont .point_left {width:100%; justify-content: space-between;}
-    .point_change_cont .p_txt {font-size:14px; white-space:nowrap; text-align:right}
-    .point_change_cont .p_txt span {display:none}
-    .point_change_cont .p_change .in_tx {margin-top:8px}
-    .point_change_cont .p_logo { width:106px; margin-right:0px}
-    .point_change_cont .p_logo object { width:106px;}
-    
-    .point_change_cont .p_change .inputbox .inp {width:191px}
-    .point_change_cont .p_change .btn {min-width:auto; margin-left:20px}
-    .point_change_cont .btn span span {display:none}
 
     .list_head_area {flex-direction: column; align-items: flex-start;}
     
@@ -485,6 +491,9 @@
 
 	.inputbox.only50 {width:100%}
     .btm_info_box { padding:20px; margin-top:40px }
+
+    .point_agree_area dd {margin:16px 0 0}
+    .important { padding-left:0}
 
 }
 

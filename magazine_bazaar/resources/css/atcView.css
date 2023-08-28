@@ -1,11 +1,11 @@
 
 .atc_wrap { padding-top: 60px; margin-bottom:180px}
-.txt_category {font-family: 'Gotham';color:var(--point);font-size: 16px; text-align: center; margin-bottom:24px}
+.txt_category {font-family: 'Gotham';color:var(--point);font-size: 16px;line-height:1;text-align: center;margin-bottom:24px}
 
 /* 기사상세 헤더 */
-.atc_wrap .atc_header {text-align: center; letter-spacing:-0.01em}
-.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 24px}
-.atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom:42px }
+.atc_wrap .atc_header {text-align: center; letter-spacing:-0.01em; margin-bottom:40px;}
+.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 16px}
+.atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom:40px}
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; height:24px}
 .atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden; padding-top:0}
@@ -34,7 +34,7 @@
 .atc_wrap.wide .atc_header_info .txt_meta .time {color:#fff}
 
 /* 기사상세 > body */
-.atc_wrap .atc_body { margin: 40px auto 0; max-width: 792px;}
+.atc_wrap .atc_body { margin: 0 auto; max-width: 792px;}
 /* 기사상세 > 본문 이미지 1200 */
 .ab_photo_1200 {position: relative; width:calc(100% + 52%); max-width: 1200px; margin: 24px auto 24px -26%;}
 .ab_photo_1200 img {width: 100%; display:block}

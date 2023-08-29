@@ -30,6 +30,26 @@
 	font-weight: 200;
 	src: url(../font/Gotham-Light.woff) format("woff");
 }
+@font-face {
+	font-family: ElleGaborStd;
+	font-style: normal;
+	font-weight: 500;
+	src: url(../font/ElleGaborStd-Medium.woff2) format("woff2"), url(../font/ElleGaborStd-Medium.woff) format("woff"), url(../font/ElleGaborStd-Medium.otf) format("opentype");
+}
+@font-face {
+	font-family: NewsGothicExtraCondensedBold;
+	font-style: normal;
+	font-weight: 700;
+	src: url(../font/NewsGothicExtraCondensedBold.woff2) format("woff2"), url(../font/NewsGothicExtraCondensedBold.woff) format("woff"), url(../font/NewsGothicExtraCondensedBold.otf) format("opentype");
+}
+@font-face {
+	font-family: TTNorms-Medium;
+	font-style: normal;
+	font-weight: 500;
+	src: url(../font/TTNorms-Medium.woff2) format("woff2"), url(../font/TTNorms-Medium.woff) format("woff"), url(../font/TTNorms-Medium.ttf) format("truetype");
+}
+
+
 
 /* reset */
 html, body{width:100%;height:100%;font-size:10px;}

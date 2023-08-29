@@ -498,7 +498,7 @@
 }
 
 @media (max-width:320px){
-    .point_change_cont .p_change .inputbox .inp { width:152px}
+    .point_change_cont .p_change .inputbox .inp {/* width:152px*/}
     .point_change_cont .p_change .btn { margin-left:5px}
     .point_change_cont .p_change .unit { margin-left:5px}
 }

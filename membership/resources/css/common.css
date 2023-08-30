@@ -203,6 +203,9 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 .header_wrap .header_gnb li .sub_menu li a {white-space:nowrap;}
 .header_wrap .header_gnb li .sub_menu li a::after { display:none}
 .header_wrap .header_gnb li .sub_menu li.on a {color:var(--point); font-weight:700}
+.header_wrap .header_gnb li:first-child .sub_menu {margin-left:-160px }
+.header_wrap .header_gnb li:nth-child(2) .sub_menu {margin-left:-46px }
+.header_wrap .header_gnb li 
 .header .btn_menu{display:none;position:absolute;z-index:1;right:12px;top:12px;width:24px;height:24px;}
 .header .btn_menu:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_menu.svg') center center no-repeat;background-size:24px auto;}
 

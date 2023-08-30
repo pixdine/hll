@@ -1,0 +1,68 @@
+
+.container.membrship { padding-top:0} 
+
+.membership_wrap {margin:120px auto 0}
+
+.top_visual { position:relative; max-width:1920px;max-height:800px; width:100%; margin:0 auto; height:800px; }
+.top_visual img { position:absolute; top:0; left:0; display:block; height:100%; object-fit:cover; }
+body.is_pc .top_visual img.pc {display:block}
+body.is_pc .top_visual img.mo {display:none}
+body.is_mobile .top_visual img.mo {display:block}
+body.is_mobile .top_visual img.pc {display:none}
+.top_visual .txt_box {position:absolute; top:50%; left:50%; transform: translate(-50% ,-50%); color:#fff; max-width:680px; text-align:center}
+.top_visual .txt_box .txt { font-size:48px; font-weight:400; line-height:1.6}
+.top_visual .txt_box .txt strong { font-weight:700}
+.top_visual .txt_box .txts { font-size:18px; font-weight:400; line-height:1.6; text-align:left; margin-top:32px}
+
+/* 포인트 안내 */
+.membership_wrap .heading_wrap ~ .body_cont02 {margin-top:120px}
+.point_info_area { padding-top:120px}
+.point_info_cont { margin-top:60px }
+
+.round_box { border:1px solid #DBDBDB; background:#fff; border-radius: 20px;}
+
+.point_change_info { display:flex; justify-content: space-between; padding:57px 40px 17px}
+.point_change_info .point_left {display:flex; align-items: center; column-gap: 64px;}
+.bt_more {width:44px; height:44px; border-radius:44px 44px; background-color:#F7F7F7; }
+.bt_more::after {content:'';display:inline-block;width:16px;height:16px;margin:5px 2px 0 0; background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2' y='6' width='16' height='2' fill='%23666666'/%3E%3Crect x='8' y='14' width='16' height='2' transform='rotate(-90 8 14)' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
+.round_box .gray_box { border-radius: 20px; margin:0 40px 40px; }
+
+.info_box_cont {padding:40px}
+.info_box_cont dt { font-size:18px; font-weight:700; margin-bottom:16px }
+.info_box_cont dd {position:relative; font-size:16px; font-weight:400; color:#666; padding-left:10px; margin-bottom:8px }
+.info_box_cont dd::before{ content:''; position:absolute; width:3px; height:3px; background:#CCCCCC; left:0px; top:11px; }
+.info_box_cont dd:last-child {margin-bottom:0}
+
+.point_info_cont .tit_wrap { margin-bottom:24px;}
+.point_info_cont .tit_wrap ~ .tit_wrap { margin-top:60px}
+
+.desc_txt { font-size:18px; font-weight:500; color:#666; line-height:1.4; margin-top:12px}
+
+.gray_box02 { background:#F0ECF5; border-radius:20px 20px }
+
+.point_mobile_change { display:flex; flex-direction: row;justify-content: flex-start; align-items: flex-start; column-gap:60px; padding:46px 40px}
+.point_mobile_change .coupon {}
+.point_mobile_change .txt { margin-top:13px }
+.point_mobile_change .txt dt { font-weight:500; font-size:18px; }
+.point_mobile_change .txt dd { font-weight:500; font-size:16px; color:#666; line-height:1.4; margin-top:12px }
+
+.about_point_list { margin-top:60px}  
+.about_point_list ul {display:flex; flex-wrap:wrap; justify-content: space-between; }
+.about_point_list li { width:49%; margin-bottom:2% }
+
+.point_card { background:#fff; border-radius: 20px 20px; border:1px solid #DBDBDB; box-shadow: 0px 4px 10px 0px rgba(17, 17, 17, 0.1);}
+.point_card .card_header {border-bottom:1px solid #DBDBDB; margin:0 40px; padding:40px 0 24px; height:99px; box-sizing:border-box}
+.point_card .card_body { padding:40px 0 75px; margin:0 40px; height:209px }
+.point_card .card_body dl dt { font-size:18px; font-weight:500; line-height:1.4}
+.point_card .card_body dl dd { display:flex; flex-direction:row;align-items: center; justify-content: space-between; margin-top:24px;  }
+.point_card .card_body dl dd .c_state { color:var(--point); font-size:18px; font-weight:500}
+.point_card .card_body dl dd .c_point { color:var(--point); font-size:48px; font-weight:500; line-height:1.1; font-family:'Gotham'}
+.point_card .card_body dl dd .c_point span { font-size:36px; display:inline-block; margin-left:4px}
+.point_card .card_body dl dd .c_txt { font-family:'Noto Sans KR';color:var(--point); font-size:40px; font-weight:700; line-height:1.1; }
+.point_card .card_btm { background:#F7F7F7; border-radius:0 0 20px 20px;  text-align:center; padding:11px 0; height:60px; box-sizing:border-box; } 
+.point_card .card_btm .txt { font-size:16px; line-height:2.5}
+
+.btm_info_box {}
+.btm_info_box .info_tit ~ .info_tit { margin-top:24px}
+.btm_info_box .btm_info_tit { background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='7.5' stroke='%23410C86'/%3E%3Cpath d='M7.21922 10.356H8.81522V12H7.21922V10.356ZM7.15922 4.02V3.6H8.86322V4.02L8.41922 9.348H7.61522L7.15922 4.02Z' fill='%23410C86'/%3E%3C/svg%3E%0A"); background-repeat:no-repeat; background-position:left 4px;font-size:16px; font-weight:500; line-height:1.4; color:var(--point); border-bottom:1px solid #DBDBDB; padding-bottom:16px; margin-bottom:24px; padding-left:24px} 
+

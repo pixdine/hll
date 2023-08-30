@@ -24,8 +24,8 @@
 .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:-5px}
 .mypage_point_info ul li dl dd .bctype1 span { line-height:1.5}
 .mypage_point_info ul li dl dd .tooltip { position:absolute; right:0; bottom:5px}
-.mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Roboto'; font-size:28px; font-weight:600; text-align:right; padding-right:40px; }
-.mypage_point_info ul li dl dd strong { font-weight:600; font-size:40px;  line-height:1 }
+.mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Gotham'; font-size:28px; font-weight:500; text-align:right; padding-right:40px; }
+.mypage_point_info ul li dl dd strong { font-weight:500; font-size:40px;  line-height:1 }
 .mypage_point_info ul li dl dd .c_point {color:var(--point); position:relative; top:-2px}
 .mypage_point_info ul li dl dd .point {font-size:28px}
 .mypage_point_info ul li dl dd .sep { display:inline-black; margin:0 10px}
@@ -181,7 +181,7 @@
 .list_head_area .list_tot { font-size:24px; line-height:1.8;color:#666; font-weight:500 }
 .list_head_area .list_tot strong { font-size:28px; line-height:1.8; font-family:"Gotham"; font-weight:500; color:var(--point); display:inline-block; margin-left:13px}
 
-.pointshop_list_wrap .tit_wrap ~ .list_head_area { margin-top:40px} 
+.pointshop_list_wrap .tit_wrap ~ .list_head_area { margin-top:40px; padding-top:24px; border-top:1px solid #111;} 
 
 .list_sorting_area { display:flex;justify-content: space-between;align-items: center; margin-top:33px}
 .list_sorting_area .option_filter {display:flex; align-items: center; }

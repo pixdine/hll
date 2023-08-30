@@ -374,11 +374,11 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* heading */
 .heading_wrap { position:relative; margin-bottom:32px }
-.heading_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:#111;}
+.heading_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;}
 .heading_wrap .tit em {font-weight:400}
 .heading_wrap .side{margin-left:auto;flex-shrink:0;}
 .heading_area{display:flex;position:relative;}
-.heading_wrap .info_txt { font-size:18px; line-height:26px; color:#333; margin-top:16px}
+.heading_wrap .info_txt { font-size:18px; line-height:26px;  margin-top:16px}
 .heading_area.blind + .info_txt { margin-top:0 }
 .heading_area.blind h2 {overflow:hidden;position:absolute;left:-9999em;width:0;height:0;margin:0;padding:0;text-indent:-9999em;}
 

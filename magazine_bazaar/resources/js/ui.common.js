@@ -92,7 +92,12 @@ function headerSticky () {
 
     (new IntersectionObserver(
         ([e]) => {
-            bottomLogo.stop().fadeTo(300,e.intersectionRatio < 0.1 && !document.body.classList.contains('is_mobile'))
+            if(e.intersectionRatio < 0.1 && !document.body.classList.contains('is_mobile')) {
+                bottomLogo.stop().fadeIn(300)
+            }else{
+                bottomLogo.stop().fadeOut(300)
+            }
+
         },
         {threshold: [0.1, 1]}
     )).observe($('.header_top')[0])

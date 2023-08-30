@@ -44,12 +44,12 @@ $(document).ready(function () {
                 e.stopPropagation()
                 $(this).removeClass('is-visible')
             })
-            .on('focus', ':has(>.tooltip_layer)', function (e) {
+            .on('focus click', ':has(>.tooltip_layer)', function (e) {
                 if (!$(this).prop('disabled')) {
                     showTooltip(this)
                 }
             })
-            .on('blur keydown', ':has(>.tooltip_layer)', function (e) {
+            .on('blur mouseout keydown', ':has(>.tooltip_layer)', function (e) {
                 if (e.type === 'keydown') {
                     if (e.witch === 27) {
                         hideTooltip(this)

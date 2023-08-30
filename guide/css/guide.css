@@ -78,5 +78,6 @@ p.guide_desc em{color:var(--point);}
 	.guide_sec:first-child{padding-top:20px;}
 	.guide_sec h2{font-size:20px;}
 	.guide_sec h3{font-size:16px;}
-	.guide_desc li{font-size:14px;}
+	.guide_desc li,
+	p.guide_desc{font-size:14px;}
 }

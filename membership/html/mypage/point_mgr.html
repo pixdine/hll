@@ -172,35 +172,30 @@
 			</div>
 		</header>
 		<!-- //header -->
-		<style>
-			.box_type02 { background:#fff; border:1px solid #DBDBDB}
-			.point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center;    justify-content: space-around;}
-			.point_change_cont .p_logo {}
-			.point_change_cont .p_txt {font-size:18px; font-weight:500; }
-			.point_change_cont .p_change { display:flex}
-			.point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px}
-
-			.point_change_wrap .point_change_cont { margin-top:24px}
-		</style>
 		<!-- container -->
 		<div id="container" class="container mypage"><!-- mypage 서브메인 > main 클래스 추가 -->
 			<div id="content" class="content ">
 				<div class="body_cont_area">
 					<div class="cont_inner">
+						<div class="heading_wrap">
+							<div class="heading_area">
+							   <h2 class="tit">포인트 관리</h2>
+							</div>
+						</div>
 						<!--나의 포인트-->
                         <div class="mypage_point_info box_type01">
                             <h2 class="blind">내 포인트</h2>
                             <ul>
                                 <li>
                                     <dl>
-                                        <dt>오늘 획득 포인트</dt>
+                                        <dt><a href="#">오늘 획득 포인트</a></dt>
                                         <dd>
                                             <strong class="c_point">5</strong><em class="sep">/</em><span>22<span class="point">P</span></span>
                                         </dd>
                                     </dl>
                                 <li>
                                     <dl>
-                                        <dt>총 포인트</dt>
+                                        <dt><a href="#">총 포인트</a></dt>
                                         <dd>
                                             <strong>25,800</strong><span class="point">P</span>
                                         </dd>
@@ -209,12 +204,16 @@
                                 <li>
                                     <dl>
                                         <dt>
-                                            전환 가능 포인트
-                                            <button type="button" class="btn_ico tooltip"><span class="blind">도움말</span></button>
+											<a href="#">전환 가능 포인트</a>
                                         </dt>
                                         <dd>
                                             <strong>25,800</strong><span class="point">P</span>
-                                            <button type="button" class="bctype1"><span class="btn_s">전환</span></button>
+											<button type="button" class="btn_ico tooltip">
+												<span class="blind">도움말</span>
+												<span class="tooltip_layer">
+													<p>2일전 포인트 기준</p>
+												</span>
+											</button>
                                         </dd>
                                     </dl>
                                 </li>
@@ -238,7 +237,7 @@
 									<div class="date_filter">
 										<div class="tab_menu type03">
 											<ul>
-												<li class="on"><a href="javascript:;">1주일</a></li><!-- D: 선택 시 on 클래스 추가. 디폴트는 1년 이내가 조회되기 때문에 선택되어 있지 않음. -->
+												<li class=""><a href="javascript:;">1주일</a></li><!-- D: 선택 시 on 클래스 추가. 디폴트는 1년 이내가 조회되기 때문에 선택되어 있지 않음. -->
 												<li><a href="javascript:;">1개월</a></li>
 												<li><a href="javascript:;">3개월</a></li>
 											</ul>

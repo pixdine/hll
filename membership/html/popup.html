@@ -16,6 +16,10 @@
 	<!-- //css, Jquery -->
 </head>
 <body>
+    <style>
+        
+
+    </style>
 
     <div id="wrap" class="wrap">
 
@@ -165,12 +169,16 @@
                         <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
 						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
 						<button type="button" data-popup-open="popup_4"><span>비밀번호 재설정</span></button><br>
+                        <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
                         <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
                         <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
                         <button type="button" data-alert-open="alert_4"><span>얼럿4_쿠폰재발송 완료</span></button><br>
+                        <button type="button" data-alert-open="alert_5"><span>얼럿5_포인트부족</span></button><br>
+                        <button type="button" data-alert-open="alert_6"><span>얼럿6_주문/결재</span></button><br>
+                        <button type="button" data-alert-open="alert_7"><span>얼럿7_가장 긴 케이스</span></button><br>
 					</div>
                 </div>
             </div>
@@ -411,6 +419,56 @@
         </div>
     </div>
 
+    <!--D : 비밀번호 변경-->
+    <div class="popup_full" data-popup="popup_7">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">비밀번호 변경</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_7"><span
+                            class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="pop_tit_wrap">
+                    <p class="info_txt">현재 비밀번호 및 변경하실 비밀번호를 입력하신 후 저장 버튼을 클릭해 주세요.</p>
+                </div>
+                <dl class="input_type01">
+                    <dt>현재 비밀번호<em class="ess">*</em></dt>
+                    <dd>
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="jaki****@joongang.kr" placeholder="" />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                    <dt>변경 비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="" placeholder="8~20자 영문 대소문자, 특수문자, 숫자 조합" />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                    <dt>변경 비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="" placeholder="변경할 비밀번호 한 번 더 입력"  />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>저장</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--D : 개인정보 수정 alter -->
     <div class="popup_alert" data-alert="alert_1" >
         <div class="popup_alert_inner">
@@ -485,6 +543,28 @@
             </div>
         </div>
     </div>
+
+    <!--D : 가장 긴 케이스 alter -->
+    <div class="popup_alert" data-alert="alert_7">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                회원정보 항목 중 수정한 항목이 존재합니다.<br />
+                저장하지 않은 회원 정보는<br />저장되지 않습니다.<br />회원정보 수정을 취소하시겠습니까?
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_7"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
 
     <!--D : 오늘 획득 포인트 -->
     <div class="popup_full" data-popup="popup_5" style="display:">
@@ -627,6 +707,48 @@
             </div>
         </div>
     </div>
+
+    <!--D : 포인트 부족 alter -->
+    <div class="popup_alert" data-alert="alert_5">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    사용 가능한 포인트가 부족합니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_5"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+     <!--D : 주문 결재 alter -->
+     <div class="popup_alert" data-alert="alert_6">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    구매하시겠습니까?
+                    <span>받으시는 분 : <em class="point">01012345678</em></span>
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_6"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>

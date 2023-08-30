@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-.container { padding-bottom:180px;}
 .container.member .cont_inner {width:464px; margin:0 auto}
 .info_txt_btm {display:flex; align-items:center; justify-content: space-between; margin-top:6px}
 .info_box .info_txt_btm p {font-size:14px;color:#666 }
@@ -34,8 +33,7 @@
 
 
 @media (max-width:768px){
-    .container { padding-bottom:80px;}
-    .container.member {width:auto; margin-top:40px}
+    
     .container.member .cont_inner {width:auto; margin:0 auto}
     input[type="checkbox"] + label > span { font-size:14px}
     .agree_chk_list li { margin-top:24px }

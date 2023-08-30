@@ -217,6 +217,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .bc_space01 { margin-top:40px}
 .bc_space02 { margin-top:180px}
 .bc_space03 { margin-top:80px !important}
+.bc_space03 { margin-top:80px !important}
 
 
 /************************* Form *************************/
@@ -343,6 +344,26 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* shadow 박스 */
 .box_type01 {box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);}
+
+/*  gray box */
+.gray_box {background:#F7F7F7;}
+.gray_box .box_inner {padding:32px 46px; text-align:center}
+.gray_box .box_inner .txt {font-size:20px; line-height:28px; color:#333}
+.gray_box .box_inner .txt ~ .txt { margin-top:30px}
+.gray_box .box_inner .txt strong {font-weight:500; color:var(--point)}
+.body_cont01 .info_txt ~ .info_txt { margin-top:24px }
+
+/* 하단 안내 박스 */
+.info_gray_box { background:#F7F7F7; padding:20px 30px; margin-top:24px}
+.info_gray_box li {position:relative; font-size:12px; color:#333; font-weight:400; padding-left:11px}
+.info_gray_box li::before{ content:''; position:absolute; width:3px; height:3px; background:#CCCCCC; left:0px; top:11px; }
+
+.btm_info_box { background:#F7F7F7; border:1px solid #DBDBDB; padding:32px; margin-top:180px }
+.btm_info_box .info_tit { font-size:16px; font-weight:500; margin-bottom:16px}
+.btm_info_box li { position:relative; font-size:14px; font-weight:400; line-height:1.4; margin-top:8px; padding-left:10px; text-indent:-1px; color:#666}
+.btm_info_box li:first-child { margin-top:0}
+.btm_info_box li::before { content:''; position:absolute; left:0; top:7px; width:3px; height:3px; border-radius: 3px 3px; background-color:#ccc}
+
 
 /* title */
 .tit_wrap .tit{overflow:hidden;font-size:24px;font-weight:500;line-height:35px;color:#111;}
@@ -589,21 +610,8 @@ background:#fff;overflow:hidden;z-index:230}
 .allmenu_wrap .allmenu_list li {font-size:16px; line-height:1; color:#666; line-height:23px; margin-bottom:16px }
 .allmenu_wrap .allmenu_list li a:hover { color:#111}
 .allmenu_wrap.isMenuShow { transition: display .5s ease; height:286px; border-bottom:1px solid rgba(0,0,0,.2); display:block !important}
-
 body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 
-/*  gray box */
-.gray_box {background:#F7F7F7;}
-.gray_box .box_inner {padding:32px 46px; text-align:center}
-.gray_box .box_inner .txt {font-size:20px; line-height:28px; color:#333}
-.gray_box .box_inner .txt ~ .txt { margin-top:30px}
-.gray_box .box_inner .txt strong {font-weight:500; color:var(--point)}
-.body_cont01 .info_txt ~ .info_txt { margin-top:24px }
-
-/* 하단 안내 박스 */
-.info_gray_box { background:#F7F7F7; padding:20px 30px; margin-top:24px}
-.info_gray_box li {position:relative; font-size:12px; color:#333; font-weight:400; padding-left:11px}
-.info_gray_box li::before{ content:''; position:absolute; width:3px; height:3px; background:#CCCCCC; left:0px; top:11px; }
 
 /* pagination */
 .pagination{display:flex;align-items:center;justify-content:center;column-gap:4px;margin-top:120px;}
@@ -653,8 +661,6 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
 
 .btn_area.type02 {justify-content: center; margin-top:120px}
 .btn_area.type02 button {width:auto}
-
-	
 
 .tbl_btm_area.noline { border-top:0; margin-top:120px}
 .tbl_btm_area .tx_btn { display:flex; justify-content: space-between; width:100%}
@@ -1025,6 +1031,8 @@ body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
     .input_type02 li dl dd .pw_in  { width:100%}
 
 	.tbl_btm_area .btn_area { margin:40px 0 0}
+
+	.btm_info_box { padding:20px; margin-top:40px }
 
 }
 

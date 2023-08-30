@@ -7,9 +7,11 @@
 	<title>HLL | Hearst Joongang - Membership</title>
 	<meta name="format-detection" content="telephone=no">
 	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/etc.css"/>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/about.css"/>
 	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
 <body>
@@ -121,7 +123,7 @@
 				<div class="header_gnb">
 					<div class="cont_inner">
 						<ul class="gnb_menu">
-							<li>
+							<li class="on">
 								<a href="#">서비스 소개</a>
 								<div class="sub_menu">
 									<ul>
@@ -137,7 +139,7 @@
 								<div class="sub_menu">
 									<ul>
 										<li><a href="#">포인트 안내</a></li>
-										<li class="on"><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 관리</a></li>
 										<li><a href="#">포인트 샵</a></li>
 									</ul>
 								</div>
@@ -152,13 +154,13 @@
 									</ul>
 								</div>
 							</li>
-							<li class="">
+							<li>
 								<a href="#">마이페이지</a>
 								<div class="sub_menu">
 									<ul>
-										<li><a href="#">마이홈</a></li>
+										<li class="on"><a href="#">마이홈</a></li>
 										<li><a href="#">회원정보 수정</a></li>
-										<li class=""><a href="#">포인트 관리</a></li>
+										<li><a href="#">포인트 관리</a></li>
 										<li><a href="#">포인트 샵</a></li>
 										<li><a href="#">1:1문의내역</a></li>
 										<li><a href="#">나의 스크랩</a></li>
@@ -173,31 +175,98 @@
 		<!-- //header -->
 
 		<!-- container -->
-		<div id="container" class="container etc"><!-- mypage 서브메인 > main 클래스 추가 -->
+		<div id="container" class="container about"><!-- mypage 서브메인 > main 클래스 추가 -->
 			<div id="content" class="content ">
-				<div class="body_cont_area">
-					<div class="cont_inner">
-						<div class="heading_wrap">
-							<div class="heading_area">
-								<h2 class="tit">이메일 무단수집금지</h2>
-                                <p class="info_txt">
-                                    본사이트는 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 정치적 장치를 이용하여 무단으로 수집되는
-                                    것을 거부하며, 이를 위반시 정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.
-                                </p>
-							</div>
-						</div>
-                        <div class="privacy_wrap">
-                            <p><strong>정보통신망이용촉진정보보호등에관한법률</strong>(제50조의2 전자우편주소의 무단 수집행의 등 금지)</p>
-                            <div class="term_type01">
-                                <ul class="term_st01 p_txt bc_space01">
-                                    <li>1. 누구든지 전자우편주소의 수집을 거부하는 의사가 명시된 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.</li>
-                                    <li>2. 누구든지 제 1항의 규정을 위반하여 수집된 전자 우편 주소를 판매 유통해서는 아니된다.</li>
-                                    <li>3. 누구든지 제 1항의 규정에 의하여 수집, 판매 및 유통이 금지된 전자우편 주소임을 알고 이를 정보전송에 이용하여서는 아니된다.</li>
-                                </ul>
+                <div class="top_visual">
+                    <img src="../../resources/images/img_visual_about.png" class="pc" alt="상단비주얼" />
+                    <img src="../../resources/images/img_visual_about02_mo.png" class="mo" alt="상단비주얼" />
+                    <div class="txt_box">
+                        <p class="txt">
+                            차곡차곡 쌓은 포인트!
+                            <strong>똑똑하게  활용하세요</strong>
+                        </p>
+                        <p class="txts">
+                            지금까지 모은 포인트를 제휴 포인트 또는
+                            모바일교환권으로 간편하게 교환할 수 있어요
+                        </p>
+                    </div>
+                </div>
+                <style>
+                    .about_wrap .heading_wrap ~ .body_cont02 {margin-top:120px}
+                    .point_info_area { padding-top:120px}
+                    .point_info_cont { }
+
+                    .round_box { border:1px solid #DBDBDB; background:#fff; border-radius: 20px;}
+
+                    .point_change_info { display:flex; justify-content: space-between; padding:60px 40px}
+                    .point_change_info .point_left {display:flex; align-items: center; column-gap: 64px;}
+                    .bt_more {width:44px; height:44px; border-radius:44px 44px; background-color:#F7F7F7; }
+                    .bt_more::after {content:'';display:inline-block;width:16px;height:16px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2' y='6' width='16' height='2' fill='%23666666'/%3E%3Crect x='8' y='14' width='16' height='2' transform='rotate(-90 8 14)' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
+                    .round_box .gray_box { border-radius: 20px; margin:0 40px 40px; }
+
+                    .info_box_cont {padding:40px}
+                    .info_box_cont dt { font-size:18px; font-weight:700; margin-bottom:16px }
+                    .info_box_cont dd {position:relative; font-size:16px; font-weight:400; color:#666; padding-left:10px; margin-bottom:8px }
+                    .info_box_cont dd::before{ content:''; position:absolute; width:3px; height:3px; background:#CCCCCC; left:0px; top:11px; }
+                    .info_box_cont dd:last-child {margin-bottom:0}
+
+                </style>
+                <div class="about_wrap">
+                    <div class="cont_inner">
+                        <div class="heading_wrap">
+                            <div class="heading_area">
+                                  <h2 class="tit">허스트중앙 멤버십 포인트<em>는</em></h2>
+                            </div>
+                            <p class="info_txt">
+                                허스트 중앙 매거진을 사랑해 주시는 여러분께 혜택을 드리고자 마련한 포인트제도입니다. <br />
+                                멤버십 포인트는 허스트중앙 멤버십 회원가입, 매체 홈페이지 내에서 콘텐츠 보기 등을 통해 적립할 수 있습니다.
+                            </p>
+                        </div>
+
+                        <div class="body_cont02 point_info_area">
+                            <div class="heading_wrap">
+                                <div class="heading_area">
+                                    <p class="tit">포인트,<br />이렇게 사용할 수 있어요</p>
+                                    <div class="side">
+                                        <button type="button" class="btn_txt has_plus"><span>포인트 샵 바로가기</span></button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="point_info_cont">
+                                <div class="tit_wrap">
+                                    <div class="tit_area">
+                                        <h3 class="tit">제휴 포인트로 전환하기</h3>
+                                    </div>
+                                </div>
+                                <div class="round_box">
+                                    <div class="point_change_info">
+                                        <div class="point_left">
+                                            <div class="p_logo">
+                                                <object data="../../resources/images/logo_ok.svg"></object>
+                                            </div>
+                                            <div class="p_txt"><span>OK캐쉬백</span>포인트로 교환하기</div>
+                                        </div>
+                                        <div class="bt_area">
+                                            <button type="button" class="bt_more" data-accordion-header="1"><span class="blind">더보기</span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="gray_box" data-accordion-content="1">
+                                        <dl class="info_box_cont">
+                                            <dt>허스트중앙 1포인트 = OK캐쉬백 1포인트</dt>
+                                            <dd>포인트 교환 시 기본 단위는 100포인트입니다.</dd>
+                                            <dd>이미 교환한 포인트는 환불이나 취소가 불가능합니다.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-				</div>
+
+                </div>
+
 			</div>
 		</div>
 		<!-- //container -->

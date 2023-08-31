@@ -161,7 +161,7 @@ function allmenuOpen() {
         isCompute = true
         clientWidth = document.documentElement.clientWidth
         $('.allmenu_wrap').stop().fadeIn(100);
-        $('body').addClass('lockbody');
+		enableScrollLock();
         scrollPosition = window.pageYOffset;
         $body.style.overflow = "hidden";
         $body.style.position = "fixed";
@@ -173,7 +173,7 @@ function allmenuOpen() {
     function close() {
         isCompute = true
         $('.allmenu_wrap').stop().fadeOut(100);
-        $('body').removeClass('lockbody');
+		disableScrollLock();
         $body.style.removeProperty("overflow");
         $body.style.removeProperty("position");
         $body.style.removeProperty("top");
@@ -427,7 +427,7 @@ const popup = {
                 targetEl.fadeIn(100, function () {
                     $(this).addClass('open')
                 });
-                $('body').addClass('lockbody');
+				enableScrollLock();
 
                 $('.popup_inner', targetEl).click(function (e) {
                     e.stopPropagation();
@@ -436,11 +436,11 @@ const popup = {
                 break;
             case 'alert':
                 targetEl.fadeIn(100);
-                $('body').addClass('lockbody');
+				enableScrollLock();
                 $('[data-alert]', targetEl).click(function () {
                     if ($(this).hasClass('open')) {
                         $(this).removeClass('open');
-                        $('body').removeClass('lockbody');
+						disableScrollLock();
                     }
                 });
 
@@ -468,7 +468,7 @@ const popup = {
                 if (_hasDimmed) {
                     this.dimmed.classList.add('dimmed')
                     this.dimmed.style.display = "none"
-                    document.documentElement.append(this.dimmed)
+                    document.body.appendChild(this.dimmed)  
                     $(this.dimmed).fadeIn(100)
                 }
             }
@@ -486,7 +486,7 @@ const popup = {
             if (_type !== 'layer') {
                 _this.stack.splice(_this.stack.indexOf(targetEl), 1);
                 if (!_this.stack.length) {
-                    $('body').removeClass('lockbody');
+					disableScrollLock();
                     document.body.style.removeProperty("padding-right");
                     $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
                 } else {
@@ -568,3 +568,40 @@ function familySite(_target){
 		el.find('.familysite').stop().slideDown(300);
 	}
 }
+
+  // 스크롤 잠금
+  function enableScrollLock() {
+
+    var body = document.body;
+
+    if (!body.getAttribute('scrollY')) {
+      const pageY = window.pageYOffset;
+
+      body.setAttribute('scrollY', pageY.toString());
+
+      body.style.overflow = 'initial';
+      body.style.position = 'fixed';
+      body.style.left = '0px';
+      body.style.right = '0px';
+      body.style.bottom = '0px';
+      body.style.top = `-${pageY}px`;
+    }
+  }
+
+  // 스크롤 잠금 해제
+  function disableScrollLock() {
+    var body = document.body;
+
+    if (body.getAttribute('scrollY')) {
+      body.style.removeProperty('overflow');
+      body.style.removeProperty('position');
+      body.style.removeProperty('top');
+      body.style.removeProperty('left');
+      body.style.removeProperty('right');
+      body.style.removeProperty('bottom');
+
+      window.scrollTo(0, Number(body.getAttribute('scrollY')));
+
+      body.removeAttribute('scrollY');
+    }
+  };

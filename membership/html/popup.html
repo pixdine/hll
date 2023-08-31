@@ -29,7 +29,7 @@
                 <!-- login 전 > 모바일에서만 노출됨 -->
                 <div class="info_box">
                     <p class="info_txt">
-                        로그인 후 허스트중앙 멤버십의 
+                        로그인 후 허스트중앙 멤버십의
                         <strong>특별한 혜택을 확인하세요.</strong>
                     </p>
                     <button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
@@ -97,7 +97,7 @@
             <div class="header_wrap">
                 <div class="header_top">
                     <div class="cont_inner">
-                        <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_memebrship.png" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+                        <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_memebrship.svg" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
                         <div class="header_util_area">
                             <button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
                             <button type="button" class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="header_gnb">
                     <div class="cont_inner">
                         <ul class="gnb_menu">
@@ -169,6 +169,7 @@
                         <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
 						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
 						<button type="button" data-popup-open="popup_4"><span>비밀번호 재설정</span></button><br>
+                        <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
                         <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
@@ -177,6 +178,7 @@
                         <button type="button" data-alert-open="alert_4"><span>얼럿4_쿠폰재발송 완료</span></button><br>
                         <button type="button" data-alert-open="alert_5"><span>얼럿5_포인트부족</span></button><br>
                         <button type="button" data-alert-open="alert_6"><span>얼럿6_주문/결재</span></button><br>
+                        <button type="button" data-alert-open="alert_7"><span>얼럿7_가장 긴 케이스</span></button><br>
 					</div>
                 </div>
             </div>
@@ -195,14 +197,14 @@
                             <li><a href="#" target="_blank">윤리경영</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="footer_bottom">
                 <div class="cont_inner">
                     <div class="footer_info">
                         <address class="addr_wrap">
-                            
+
                             <div class="addr_txt">
                                 <em>허스트중앙(유)</em>
                                 <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
@@ -270,7 +272,7 @@
                     </div>
                </div>
 
-               
+
                 <dl class="input_type01">
                     <dt>아이디</dt>
                     <dd class="inputbox"><!--D : Error 시 error class 추가 -->
@@ -417,6 +419,56 @@
         </div>
     </div>
 
+    <!--D : 비밀번호 변경-->
+    <div class="popup_full" data-popup="popup_7">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">비밀번호 변경</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_7"><span
+                            class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="pop_tit_wrap">
+                    <p class="info_txt">현재 비밀번호 및 변경하실 비밀번호를 입력하신 후 저장 버튼을 클릭해 주세요.</p>
+                </div>
+                <dl class="input_type01">
+                    <dt>현재 비밀번호<em class="ess">*</em></dt>
+                    <dd>
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="jaki****@joongang.kr" placeholder="" />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                    <dt>변경 비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="" placeholder="8~20자 영문 대소문자, 특수문자, 숫자 조합" />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                    <dt>변경 비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="" placeholder="변경할 비밀번호 한 번 더 입력"  />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>저장</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--D : 개인정보 수정 alter -->
     <div class="popup_alert" data-alert="alert_1" >
         <div class="popup_alert_inner">
@@ -492,6 +544,28 @@
         </div>
     </div>
 
+    <!--D : 가장 긴 케이스 alter -->
+    <div class="popup_alert" data-alert="alert_7">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                회원정보 항목 중 수정한 항목이 존재합니다.<br />
+                저장하지 않은 회원 정보는<br />저장되지 않습니다.<br />회원정보 수정을 취소하시겠습니까?
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_7"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
     <!--D : 오늘 획득 포인트 -->
     <div class="popup_full" data-popup="popup_5" style="display:">
         <div class="popup_inner">
@@ -502,7 +576,7 @@
                 </div>
             </div>
             <div class="popup_cont non">
-                <div class="gray_box"> 
+                <div class="gray_box">
                     <div class="box_inner">
                         <p class="txt">
                             김중앙님,<br>

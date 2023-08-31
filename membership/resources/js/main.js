@@ -94,7 +94,7 @@ mm.add("(min-width: 769px)", () => {
             start: 'top bottom',
             end: 'bottom top',
             scrub: true,
-            markers: true,
+            // markers: true,
             onUpdate: (st) => {
                 const distance = st.scroll()-st.start - (st.end - st.start)/2
                 gsap.to(text, {translateY: distance, duration:0, ease: "none"} )
@@ -116,7 +116,7 @@ mm.add("(max-width: 768px)", () => {
             start: 'top bottom',
             end: 'bottom top',
             scrub: true,
-            markers: true,
+            // markers: true,
             animation: gsap.to(images, {xPercent:-100})
         })
     })

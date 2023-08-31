@@ -12,15 +12,18 @@ $(document).ready(function () {
   showTagBtn();
 
 	/* datepicker */
-	$(".datepicker").datepicker({
-		beforeShow: function (input, inst) {
-			setTimeout(function () {
-				inst.dpDiv.css({
-					top: $(".datepicker").offset().top + 35
-				});
-			}, 0);
-		}
-	}); 
+	var datepicker = $(".datepicker");
+	if(datepicker.length > 0) {
+		datepicker.datepicker({
+			beforeShow: function (input, inst) {
+				setTimeout(function () {
+					inst.dpDiv.css({
+						top: datepicker.offset().top + 35
+					});
+				}, 0);
+			}
+		}); 
+	}
 
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {

@@ -157,12 +157,12 @@ function headerSticky () {
                 container.removeAttr('style')
             }
         }
-        //
-        // if (scrollTop > headerHeight) {
-        //     document.documentElement.classList.add('non-oby')
-        // } else {
-        //     document.documentElement.classList.remove('non-oby')
-        // }
+        // ios bouncing 오류 대응
+        if (scrollTop > headerHeight) {
+            document.documentElement.classList.add('non-oby')
+        } else {
+            document.documentElement.classList.remove('non-oby')
+        }
 
         lastScroll = scrollTop;
 	});

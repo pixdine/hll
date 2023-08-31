@@ -315,28 +315,29 @@
 										</div>
 
 										<!-- 댓글쓰기 -->
-										<div class="comment_write"><!-- D: 포커스 왔을 때 on 클래스 추가 -->
+										<div class="comment_write">
 											<textarea placeholder="댓글을 입력해주세요." rows="3" cols="30" maxlength="1000"></textarea><!-- D: 내가 쓴 댓글 수정 버튼 클릭 시 textarea안에 내용이 입력됨 -->
 											<div class="comment_bottom">
 												<div class="limit"><em class="count">0</em> / 1000</div>
-												<div class="cbox_upload">
+												<div class="comment_btn">
 													<button type="button" class="btn_s bctype1"><span>등록</span></button>
 												</div>
 											</div>
 										</div>
 										<!-- //댓글쓰기 -->
 
-										<!-- 업로드 이미지 -->
+										<!-- 사진첨부 영역 -->
 										<div class="photo_upload">
 											<button type="button" class="btn_addfile"><span>사진첨부</span></button><!-- D: 사진첨부 버튼 -->
-											<div class="upload_img"><!-- D: 이미지는 댓글 내 1개 등록 -->
-												<div class="thumb">
-													<img src="../resources/images/temp/temp_upload01.jpg" alt="">
-												</div>
+											<!-- 업로드된 사진이 있을 경우 노출 -->
+											<!-- D: 사진은 댓글 내 1개만 등록가능 -->
+											<div class="thumb">
+												<img src="../resources/images/temp/temp_upload01.jpg" alt="">
+												<button type="button" class="btn_del"><span class="blind">삭제</span></button>
 											</div>
+											<!-- //업로드된 사진이 있을 경우 노출 -->
 										</div>
-
-										<!-- 업로드 이미지 -->
+										<!-- 사진첨부 영역 -->
 									</div>
 									<!-- //댓글작성 영역 -->
 
@@ -344,131 +345,453 @@
 									<div class="comment_list_area">
 										<div class="tit_wrap">
 											<div class="tit_area">
-												<h3 class="tit">댓글 <strong>32</strong></h3>
+												<h3 class="tit">댓글 <strong class="num">32</strong></h3>
 											</div>
 										</div>
+
 										<!-- 리스트 -->
 										<div class="comment_list">
 											<ul>
 												<li>
 													<div class="comment_item">
+														<!-- 프로필 이미지 영역-->
 														<div class="comment_thumb">
 															<div class="profile_img">
 																<img src="../resources/images/temp/temp_profile01.jpg" alt="프로필 이미지"><!-- D: 프로필 이미지 등록 시 -->
 															</div>
 														</div>
+														<!-- //프로필 이미지 영역-->
+
 														<div class="comment_cont">
+															<!-- 상단 정보영역 -->
 															<div class="comment_info">
 																<div class="user_info">
 																	<span class="name">bazaar_05</span>
-																	<span class="date">방금 전</span>
+																	<span class="date">방금 전</span><!-- D: 내 댓글수정 시 "댓글 수정"으로 텍스트 변경 -->
 																</div>
-																<!-- 드롭다운 -->
+																<!-- 드롭다운메뉴 -->
+																<!-- D: 내 댓글수정 시 드롭다운 레이어가 닫히면서 드롭다운메뉴 영역 미노출 -->
 																<div class="more_drop">
-																	<button type="button" class="btn_more"><span class="blind">더보기</span></button>
+																	<button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
 																	<!-- 드롭다운 레이어 -->
-																	<div class="layer_box">
+																	<div class="layer_box" style="display:block">
 																		<ul class="layer_list">
-																			<li><button type="button" class=""><span>수정</span></button></li>
-																			<li><button type="button" class=""><span>삭제</span></button></li>
-																			<li><button type="button" class=""><span>취소</span></button></li>
+																			<li><button type="button" class="btnm modify"><span>수정</span></button></li>
+																			<li><button type="button" class="btnm del"><span>삭제</span></button></li>
+																			<li><button type="button" class="btnm cancel"><span>취소</span></button></li>
 																		</ul>
 																	</div>
 																	<!-- //드롭다운 레이어 -->
 																</div>
-																<!-- //드롭다운 -->
+																<!-- //드롭다운메뉴 -->
 															</div>
-															<div class="comment_txt">
-																<p class="txt">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요!</p>
+															<!-- //상단 정보영역 -->
+
+															<!-- 댓글내용 -->
+															<div class="comment_box">
+																<div class="comment_txt on"><!-- D: 내용 더보기 버튼 클릭 시 on 클래스 추가 -->
+																	<p class="txt">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요!</p>
+																</div>
+
+																<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+																<div class="btn_box">
+																	<button type="button" class="btn_txt has_toggle on"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+																		<span class="txt1">더보기</span>
+																		<span class="txt2">접기</span>
+																	</button>
+																</div>
+																<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+
+																<!-- D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
+																<div class="comment_img">
+																	<img src="../resources/images/temp/temp_upload01.jpg" alt="">
+																</div>
+																<!-- //D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
 															</div>
-															<div class="btn_box">
-																<button type="button" class="btn_txt has_toggle1">
-																	<span class="txt1">더보기</span>
-																	<span class="txt2">접기</span>
-																</button>
+															<!-- //댓글내용 -->
+
+															<!-- D: 댓글 수정하기 클릭 시에만 노출 -->
+															<div class="comment_modify">
+																<!-- 댓글수정 -->
+																<div class="comment_write">
+																	<textarea placeholder="댓글을 입력해주세요." rows="3" cols="30" maxlength="1000">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요!</textarea>
+																	<div class="comment_bottom">
+																		<div class="limit"><em class="count">266</em> / 1000</div>
+																		<div class="comment_btn">
+																			<button type="button" class="btn_s bctype2"><span>취소</span></button>
+																			<button type="button" class="btn_s bctype1"><span>등록</span></button>
+																		</div>
+																	</div>
+																</div>
+																<!-- //댓글수정 -->
+
+																<!-- 사진첨부 영역 -->
+																<div class="photo_upload">
+																	<button type="button" class="btn_addfile"><span>사진첨부</span></button><!-- D: 사진첨부 버튼 -->
+																	<!-- D: 업로드된 사진이 있을 경우 노출 -->
+																	<!-- D: 사진은 댓글 내 1개만 등록가능 -->
+																	<div class="thumb">
+																		<img src="../resources/images/temp/temp_upload01.jpg" alt="">
+																		<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+																	</div>
+																	<!-- //D: 업로드된 사진이 있을 경우 노출 -->
+																</div>
+																<!-- //사진첨부 영역 -->
 															</div>
-															<div class="comment_img">
-																<img src="../resources/images/temp/temp_upload01.jpg" alt="">
-															</div>
+															<!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
 														</div>
 													</div>
 												</li>
+
+												<!-- 검수 확인용 삭제 케이스 -->
 												<li>
 													<div class="comment_item">
+														<!-- 프로필 이미지 영역-->
+														<div class="comment_thumb">
+															<div class="profile_img">
+																<img src="../resources/images/temp/temp_profile01.jpg" alt="프로필 이미지"><!-- D: 프로필 이미지 등록 시 -->
+															</div>
+														</div>
+														<!-- //프로필 이미지 영역-->
+
+														<div class="comment_cont">
+															<!-- 상단 정보영역 -->
+															<div class="comment_info">
+																<div class="user_info">
+																	<span class="name">bazaar_05</span>
+																	<span class="date">댓글 수정</span><!-- D: 내 댓글수정 시 "댓글 수정"으로 텍스트 변경 -->
+																</div>
+																<!-- 드롭다운메뉴 -->
+																<!-- D: 내 댓글수정 시 드롭다운 레이어가 닫히면서 드롭다운메뉴 영역 미노출 -->
+																<div class="more_drop" style="display:none">
+																	<button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
+																	<!-- 드롭다운 레이어 -->
+																	<div class="layer_box">
+																		<ul class="layer_list">
+																			<li><button type="button" class="btnm modify"><span>수정</span></button></li>
+																			<li><button type="button" class="btnm del"><span>삭제</span></button></li>
+																			<li><button type="button" class="btnm cancel"><span>취소</span></button></li>
+																		</ul>
+																	</div>
+																	<!-- //드롭다운 레이어 -->
+																</div>
+																<!-- //드롭다운메뉴 -->
+															</div>
+															<!-- //상단 정보영역 -->
+
+															<!-- 댓글내용 -->
+															<div class="comment_box" style="display:none">
+																<div class="comment_txt">
+																	<p class="txt">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요!</p>
+																</div>
+
+																<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+																<div class="btn_box">
+																	<button type="button" class="btn_txt has_toggle"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+																		<span class="txt1">더보기</span>
+																		<span class="txt2">접기</span>
+																	</button>
+																</div>
+																<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+
+																<!-- D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
+																<div class="comment_img">
+																	<img src="../resources/images/temp/temp_upload01.jpg" alt="">
+																</div>
+																<!-- //D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
+															</div>
+															<!-- //댓글내용 -->
+
+															<!-- D: 댓글 수정하기 클릭 시에만 노출 -->
+															<div class="comment_modify" style="display:block">
+																<!-- 댓글수정 -->
+																<div class="comment_write">
+																	<textarea placeholder="댓글을 입력해주세요." rows="3" cols="30" maxlength="1000">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요!</textarea>
+																	<div class="comment_bottom">
+																		<div class="limit"><em class="count">266</em> / 1000</div>
+																		<div class="comment_btn">
+																			<button type="button" class="btn_s bctype2"><span>취소</span></button>
+																			<button type="button" class="btn_s bctype1"><span>등록</span></button>
+																		</div>
+																	</div>
+																</div>
+																<!-- //댓글수정 -->
+
+																<!-- 사진첨부 영역 -->
+																<div class="photo_upload">
+																	<button type="button" class="btn_addfile"><span>사진첨부</span></button><!-- D: 사진첨부 버튼 -->
+																	<!-- D: 업로드된 사진이 있을 경우 노출 -->
+																	<!-- D: 사진은 댓글 내 1개만 등록가능 -->
+																	<div class="thumb">
+																		<img src="../resources/images/temp/temp_upload01.jpg" alt="">
+																		<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+																	</div>
+																	<!-- //D: 업로드된 사진이 있을 경우 노출 -->
+																</div>
+																<!-- //사진첨부 영역 -->
+															</div>
+															<!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
+														</div>
+													</div>
+												</li>
+												<!-- //검수 확인용 삭제 케이스 -->
+
+												<li>
+													<div class="comment_item">
+														<!-- 프로필 이미지 영역-->
 														<div class="comment_thumb">
 															<div class="profile_img"></div><!-- D: 프로필 이미지 미등록 시 -->
 														</div>
+														<!-- //프로필 이미지 영역-->
+
 														<div class="comment_cont">
+															<!-- 상단 정보영역 -->
 															<div class="comment_info">
 																<div class="user_info">
-																	<span class="name">bazaareditor1234</span>
-																	<span class="date">4시간 전</span>
+																	<span class="name">김중앙</span>
+																	<span class="date">4시간 전</span><!-- D: 내 댓글수정 시 "댓글 수정"으로 텍스트 변경 -->
 																</div>
-																<!-- 드롭다운 -->
+																<!-- 드롭다운메뉴 -->
+																<!-- D: 내 댓글수정 시 드롭다운 레이어가 닫히면서 드롭다운메뉴 영역 미노출 -->
 																<div class="more_drop">
-																	<button type="button" class="btn_more"><span class="blind">더보기</span></button>
+																	<button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
 																	<!-- 드롭다운 레이어 -->
 																	<div class="layer_box">
 																		<ul class="layer_list">
-																			<li><button type="button" class=""><span>수정</span></button></li>
-																			<li><button type="button" class=""><span>삭제</span></button></li>
-																			<li><button type="button" class=""><span>취소</span></button></li>
+																			<li><button type="button" class="btnm modify"><span>수정</span></button></li>
+																			<li><button type="button" class="btnm del"><span>삭제</span></button></li>
+																			<li><button type="button" class="btnm cancel"><span>취소</span></button></li>
 																		</ul>
 																	</div>
 																	<!-- //드롭다운 레이어 -->
 																</div>
-																<!-- //드롭다운 -->
+																<!-- //드롭다운메뉴 -->
 															</div>
-															<div class="comment_txt">
-																<p class="txt">이번 주제와 가장 잘 맞는 작업을 고르자면 이터널 글라스의 유리 화병이라고 생각되네요. 록시땅의 시그니쳐 유리 공병을 활용하여 까다롭고 어려운 유리를 재활용한 공정을 거쳐서 탄생한 유리 화병이 가장 공예적이면서, 미적인 모습을 담은 작품이라 생각 됩니다. 이터널 글라스 화이팅!</p>
+															<!-- //상단 정보영역 -->
+
+															<!-- 댓글내용 -->
+															<div class="comment_box">
+																<div class="comment_txt">
+																	<p class="txt">이번 주제와 가장 잘 맞는 작업을 고르자면 이터널 글라스의 유리 화병이라고 생각되네요. 록시땅의 시그니쳐 유리 공병을 활용하여 까다롭고 어려운 유리를 재활용한 공정을 거쳐서 탄생한 유리 화병이 가장 공예적이면서, 미적인 모습을 담은 작품이라 생각 됩니다. 이터널 글라스 화이팅!</p>
+																</div>
+
+																<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+																<div class="btn_box">
+																	<button type="button" class="btn_txt has_toggle"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+																		<span class="txt1">더보기</span>
+																		<span class="txt2">접기</span>
+																	</button>
+																</div>
+																<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
 															</div>
+															<!-- //댓글내용 -->
+
+															<!-- D: 댓글 수정하기 클릭 시에만 노출 -->
+															<div class="comment_modify" >
+																<!-- 댓글수정 -->
+																<div class="comment_write">
+																	<textarea placeholder="댓글을 입력해주세요." rows="3" cols="30" maxlength="1000">이번 주제와 가장 잘 맞는 작업을 고르자면 이터널 글라스의 유리 화병이라고 생각되네요. 록시땅의 시그니쳐 유리 공병을 활용하여 까다롭고 어려운 유리를 재활용한 공정을 거쳐서 탄생한 유리 화병이 가장 공예적이면서, 미적인 모습을 담은 작품이라 생각 됩니다. 이터널 글라스 화이팅!</textarea>
+																	<div class="comment_bottom">
+																		<div class="limit"><em class="count">155</em> / 1000</div>
+																		<div class="comment_btn">
+																			<button type="button" class="btn_s bctype2"><span>취소</span></button>
+																			<button type="button" class="btn_s bctype1"><span>등록</span></button>
+																		</div>
+																	</div>
+																</div>
+																<!-- //댓글수정 -->
+
+																<!-- 사진첨부 영역 -->
+																<div class="photo_upload">
+																	<button type="button" class="btn_addfile"><span>사진첨부</span></button><!-- D: 사진첨부 버튼 -->
+																</div>
+																<!-- //사진첨부 영역 -->
+															</div>
+															<!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
 														</div>
 													</div>
 												</li>
+
 												<li>
 													<div class="comment_item">
+														<!-- 프로필 이미지 영역-->
 														<div class="comment_thumb">
 															<div class="profile_img">
 																<img src="../resources/images/temp/temp_profile02.jpg" alt="프로필 이미지"><!-- D: 프로필 이미지 등록 시 -->
 															</div>
 														</div>
+														<!-- //프로필 이미지 영역-->
+
 														<div class="comment_cont">
+															<!-- 상단 정보영역 -->
 															<div class="comment_info">
 																<div class="user_info">
-																	<span class="name">kimjoongang</span>
-																	<span class="date">2023.08.30</span>
+																	<span class="name">bazaar_elle_cosmopolitan_esquire</span>
+																	<span class="date">2023.08.30</span><!-- D: 내 댓글수정 시 "댓글 수정"으로 텍스트 변경 -->
 																</div>
-																<!-- 드롭다운 -->
+																<!-- 드롭다운메뉴 -->
+																<!-- D: 내 댓글수정 시 드롭다운 레이어가 닫히면서 드롭다운메뉴 영역 미노출 -->
 																<div class="more_drop">
-																	<button type="button" class="btn_more"><span class="blind">더보기</span></button>
+																	<button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
 																	<!-- 드롭다운 레이어 -->
 																	<div class="layer_box">
 																		<ul class="layer_list">
-																			<li><button type="button" class=""><span>수정</span></button></li>
-																			<li><button type="button" class=""><span>삭제</span></button></li>
-																			<li><button type="button" class=""><span>취소</span></button></li>
+																			<li><button type="button" class="btnm modify"><span>수정</span></button></li>
+																			<li><button type="button" class="btnm del"><span>삭제</span></button></li>
+																			<li><button type="button" class="btnm cancel"><span>취소</span></button></li>
 																		</ul>
 																	</div>
 																	<!-- //드롭다운 레이어 -->
 																</div>
-																<!-- //드롭다운 -->
+																<!-- //드롭다운메뉴 -->
 															</div>
-															<div class="comment_txt">
-																<p class="txt">멋지고 특별한 프로젝트네요! 진짜!</p>
+															<!-- //상단 정보영역 -->
+
+															<!-- 댓글내용 -->
+															<div class="comment_box">
+																<div class="comment_txt">
+																	<p class="txt">멋지고 특별한 프로젝트네요! 진짜!</p>
+																</div>
+
+																<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+																<div class="btn_box">
+																	<button type="button" class="btn_txt has_toggle"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+																		<span class="txt1">더보기</span>
+																		<span class="txt2">접기</span>
+																	</button>
+																</div>
+																<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+
+																<!-- D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
+																<div class="comment_img">
+																	<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202308/18/2bd5975c-51ac-4ca1-b1f6-5ca9580f7c52.jpg" alt="">
+																</div>
+																<!-- //D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
 															</div>
-															<div class="comment_img">
-																<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202308/18/2bd5975c-51ac-4ca1-b1f6-5ca9580f7c52.jpg" alt="">
+															<!-- //댓글내용 -->
+
+															<!-- D: 댓글 수정하기 클릭 시에만 노출 -->
+															<div class="comment_modify" >
+																<!-- 댓글수정 -->
+																<div class="comment_write">
+																	<textarea placeholder="댓글을 입력해주세요." rows="3" cols="30" maxlength="1000">멋지고 특별한 프로젝트네요! 진짜!</textarea>
+																	<div class="comment_bottom">
+																		<div class="limit"><em class="count">19</em> / 1000</div>
+																		<div class="comment_btn">
+																			<button type="button" class="btn_s bctype2"><span>취소</span></button>
+																			<button type="button" class="btn_s bctype1"><span>등록</span></button>
+																		</div>
+																	</div>
+																</div>
+																<!-- //댓글수정 -->
+
+																<!-- 사진첨부 영역 -->
+																<div class="photo_upload">
+																	<button type="button" class="btn_addfile"><span>사진첨부</span></button><!-- D: 사진첨부 버튼 -->
+																	<!-- D: 업로드된 사진이 있을 경우 노출 -->
+																	<!-- D: 사진은 댓글 내 1개만 등록가능 -->
+																	<div class="thumb">
+																		<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202308/18/2bd5975c-51ac-4ca1-b1f6-5ca9580f7c52.jpg" alt="">
+																		<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+																	</div>
+																	<!-- //D: 업로드된 사진이 있을 경우 노출 -->
+																</div>
+																<!-- //사진첨부 영역 -->
 															</div>
+															<!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
 														</div>
 													</div>
 												</li>
+
+												<li>
+													<div class="comment_item">
+														<!-- 프로필 이미지 영역-->
+														<div class="comment_thumb">
+															<div class="profile_img"></div><!-- D: 프로필 이미지 미등록 시 -->
+														</div>
+														<!-- //프로필 이미지 영역-->
+
+														<div class="comment_cont">
+															<!-- 상단 정보영역 -->
+															<div class="comment_info">
+																<div class="user_info">
+																	<span class="name">ellegirl</span>
+																	<span class="date">2023.08.26</span><!-- D: 내 댓글수정 시 "댓글 수정"으로 텍스트 변경 -->
+																</div>
+																<!-- 드롭다운메뉴 -->
+																<!-- D: 내 댓글수정 시 드롭다운 레이어가 닫히면서 드롭다운메뉴 영역 미노출 -->
+																<div class="more_drop">
+																	<button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
+																	<!-- 드롭다운 레이어 -->
+																	<div class="layer_box">
+																		<ul class="layer_list">
+																			<li><button type="button" class="btnm modify"><span>수정</span></button></li>
+																			<li><button type="button" class="btnm del"><span>삭제</span></button></li>
+																			<li><button type="button" class="btnm cancel"><span>취소</span></button></li>
+																		</ul>
+																	</div>
+																	<!-- //드롭다운 레이어 -->
+																</div>
+																<!-- //드롭다운메뉴 -->
+															</div>
+															<!-- //상단 정보영역 -->
+
+															<!-- 댓글내용 -->
+															<div class="comment_box">
+																<div class="comment_txt">
+																	<p class="txt">응모합니다.</p>
+																</div>
+
+																<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+																<div class="btn_box">
+																	<button type="button" class="btn_txt has_toggle"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+																		<span class="txt1">더보기</span>
+																		<span class="txt2">접기</span>
+																	</button>
+																</div>
+																<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+															</div>
+															<!-- //댓글내용 -->
+
+															<!-- D: 댓글 수정하기 클릭 시에만 노출 -->
+															<div class="comment_modify" >
+																<!-- 댓글수정 -->
+																<div class="comment_write">
+																	<textarea placeholder="댓글을 입력해주세요." rows="3" cols="30" maxlength="1000">응모합니다.</textarea>
+																	<div class="comment_bottom">
+																		<div class="limit"><em class="count">6</em> / 1000</div>
+																		<div class="comment_btn">
+																			<button type="button" class="btn_s bctype2"><span>취소</span></button>
+																			<button type="button" class="btn_s bctype1"><span>등록</span></button>
+																		</div>
+																	</div>
+																</div>
+																<!-- //댓글수정 -->
+
+																<!-- 사진첨부 영역 -->
+																<div class="photo_upload">
+																	<button type="button" class="btn_addfile"><span>사진첨부</span></button><!-- D: 사진첨부 버튼 -->
+																</div>
+																<!-- //사진첨부 영역 -->
+															</div>
+															<!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
+														</div>
+													</div>
+												</li>
+
+
 											</ul>
 										</div>
 										<!-- //리스트 -->
 
 										<!-- 더보기영역 -->
-										<div class="btn_more_wrap type1"><!-- D: 댓글 수 1~10개 : 더보기 버튼 미노출 (해당영역 전체 미노출) -->
-											<button type="button" class="btn more" disabled><span>더보기 (32/32)</span></button><!-- D: 댓글 수 10개 초과 ~ 최대미만 : 활성 상태 더보기 버튼 노출, 댓글 전체 출력 : 더보기 버튼 비활성화(disabled) -->
+										<!-- D: 댓글수에 따른 버튼 출력 여부
+											1. 댓글 수 1~10개 : 더보기 버튼 미노출 (해당영역 전체 미노출)
+											2. 댓굴 수 10개 초과 ~ 최대 미만 : 활성 상태 더보기 버튼 노출
+											3. 댓글 전체 출력 : 비활성화 상태 더보기 버튼 노출
+										-->
+										<div class="btn_more_wrap type1">
+											<button type="button" class="btn more"><span>더보기 (10/32)</span></button><!-- D: 비활성화일 때 disabled 추가 -->
 										</div>
 										<!-- //더보기영역 -->
 									</div>

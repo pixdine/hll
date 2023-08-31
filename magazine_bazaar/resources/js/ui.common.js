@@ -31,6 +31,21 @@ $(document).ready(function(){
         }
     });
 
+	/* datepicker */
+	var datepicker = $(".datepicker");
+	if(datepicker.length > 0) {
+		datepicker.datepicker({
+			beforeShow: function (input, inst) {
+				setTimeout(function () {
+					inst.dpDiv.css({
+						top: datepicker.offset().top + 35
+					});
+				}, 0);
+			}
+		}); 
+	}
+
+
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
 		popup.open($(this).attr('data-popup-open'), 'popup')
@@ -142,12 +157,12 @@ function headerSticky () {
                 container.removeAttr('style')
             }
         }
-        //
-        // if (scrollTop > headerHeight) {
-        //     document.documentElement.classList.add('non-oby')
-        // } else {
-        //     document.documentElement.classList.remove('non-oby')
-        // }
+        // ios bouncing 오류 대응
+        if (scrollTop > headerHeight) {
+            document.documentElement.classList.add('non-oby')
+        } else {
+            document.documentElement.classList.remove('non-oby')
+        }
 
         lastScroll = scrollTop;
 	});
@@ -158,33 +173,19 @@ function headerSticky () {
 
 //전체메뉴
 function allmenuOpen() {
-
     const $body = document.querySelector("body");
     let scrollPosition = 0, clientWidth = 0
 
     function open() {
         isCompute = true
-        clientWidth = document.documentElement.clientWidth
         $('.allmenu_wrap').stop().fadeIn(100);
-        $('body').addClass('lockbody');
-        scrollPosition = window.pageYOffset;
-        $body.style.overflow = "hidden";
-        $body.style.position = "fixed";
-        $body.style.top = `-${scrollPosition}px`;
-        $body.style.width = "100%";
-        $body.style.paddingRight = `${document.documentElement.clientWidth - clientWidth}px`
+		enableScrollLock();
     }
 
     function close() {
         isCompute = true
         $('.allmenu_wrap').stop().fadeOut(100);
-        $('body').removeClass('lockbody');
-        $body.style.removeProperty("overflow");
-        $body.style.removeProperty("position");
-        $body.style.removeProperty("top");
-        $body.style.removeProperty("width");
-        $body.style.removeProperty("padding-right");
-        window.scrollTo(0, scrollPosition);
+		if(popup.stack.length === 0) disableScrollLock();
     }
 
     $('.header .btn_menu').click(open);
@@ -432,7 +433,7 @@ const popup = {
                 targetEl.fadeIn(100, function () {
                     $(this).addClass('open')
                 });
-                $('body').addClass('lockbody');
+				enableScrollLock();
 
                 $('.popup_inner', targetEl).click(function (e) {
                     e.stopPropagation();
@@ -441,11 +442,11 @@ const popup = {
                 break;
             case 'alert':
                 targetEl.fadeIn(100);
-                $('body').addClass('lockbody');
+				enableScrollLock();
                 $('[data-alert]', targetEl).click(function () {
                     if ($(this).hasClass('open')) {
                         $(this).removeClass('open');
-                        $('body').removeClass('lockbody');
+						disableScrollLock();
                     }
                 });
 
@@ -467,13 +468,14 @@ const popup = {
                 break;
         }
 
+		console.log("_type %o",_type);
         if (_type !== 'layer') {
             if (!this.stack.length) {
-                document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
+                if(!targetEl.hasClass('search_layer')) document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
                 if (_hasDimmed) {
                     this.dimmed.classList.add('dimmed')
                     this.dimmed.style.display = "none"
-                    document.documentElement.append(this.dimmed)
+                    document.body.appendChild(this.dimmed)  
                     $(this.dimmed).fadeIn(100)
                 }
             }
@@ -482,6 +484,8 @@ const popup = {
         }
     },
     close: function (_target, _type) {
+
+
         var _this = this;
         var targetEl = $(`[data-${_type}="${_target}"]`);
 
@@ -489,9 +493,10 @@ const popup = {
 
         function adjustPad() {
             if (_type !== 'layer') {
+				console.log(" _this.stack %o", _this.stack);
                 _this.stack.splice(_this.stack.indexOf(targetEl), 1);
                 if (!_this.stack.length) {
-                    $('body').removeClass('lockbody');
+					disableScrollLock();
                     document.body.style.removeProperty("padding-right");
                     $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
                 } else {
@@ -573,3 +578,40 @@ function familySite(_target){
 		el.find('.familysite').stop().slideDown(300);
 	}
 }
+
+  // 스크롤 잠금
+  function enableScrollLock() {
+
+    var body = document.body;
+
+    if (!body.getAttribute('scrollY')) {
+      const pageY = window.pageYOffset;
+
+      body.setAttribute('scrollY', pageY.toString());
+
+      body.style.overflow = 'initial';
+      body.style.position = 'fixed';
+      body.style.left = '0px';
+      body.style.right = '0px';
+      body.style.bottom = '0px';
+      body.style.top = `-${pageY}px`;
+    }
+  }
+
+  // 스크롤 잠금 해제
+  function disableScrollLock() {
+    var body = document.body;
+
+    if (body.getAttribute('scrollY')) {
+      body.style.removeProperty('overflow');
+      body.style.removeProperty('position');
+      body.style.removeProperty('top');
+      body.style.removeProperty('left');
+      body.style.removeProperty('right');
+      body.style.removeProperty('bottom');
+
+      window.scrollTo(0, Number(body.getAttribute('scrollY')));
+
+      body.removeAttribute('scrollY');
+    }
+  };

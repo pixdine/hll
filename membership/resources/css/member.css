@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+.container.member { padding-top:0}
 .container.member .cont_inner {width:464px; margin:0 auto}
 .info_txt_btm {display:flex; align-items:center; justify-content: space-between; margin-top:6px}
 .info_box .info_txt_btm p {font-size:14px;color:#666 }

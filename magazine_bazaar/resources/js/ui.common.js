@@ -158,33 +158,19 @@ function headerSticky () {
 
 //전체메뉴
 function allmenuOpen() {
-
     const $body = document.querySelector("body");
     let scrollPosition = 0, clientWidth = 0
 
     function open() {
         isCompute = true
-        clientWidth = document.documentElement.clientWidth
         $('.allmenu_wrap').stop().fadeIn(100);
 		enableScrollLock();
-        scrollPosition = window.pageYOffset;
-        $body.style.overflow = "hidden";
-        $body.style.position = "fixed";
-        $body.style.top = `-${scrollPosition}px`;
-        $body.style.width = "100%";
-        $body.style.paddingRight = `${document.documentElement.clientWidth - clientWidth}px`
     }
 
     function close() {
         isCompute = true
         $('.allmenu_wrap').stop().fadeOut(100);
-		disableScrollLock();
-        $body.style.removeProperty("overflow");
-        $body.style.removeProperty("position");
-        $body.style.removeProperty("top");
-        $body.style.removeProperty("width");
-        $body.style.removeProperty("padding-right");
-        window.scrollTo(0, scrollPosition);
+		if(popup.stack.length === 0) disableScrollLock();
     }
 
     $('.header .btn_menu').click(open);
@@ -467,9 +453,10 @@ const popup = {
                 break;
         }
 
+		console.log("_type %o",_type);
         if (_type !== 'layer') {
             if (!this.stack.length) {
-                document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
+                if(!targetEl.hasClass('search_layer')) document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
                 if (_hasDimmed) {
                     this.dimmed.classList.add('dimmed')
                     this.dimmed.style.display = "none"
@@ -482,6 +469,8 @@ const popup = {
         }
     },
     close: function (_target, _type) {
+
+
         var _this = this;
         var targetEl = $(`[data-${_type}="${_target}"]`);
 
@@ -489,6 +478,7 @@ const popup = {
 
         function adjustPad() {
             if (_type !== 'layer') {
+				console.log(" _this.stack %o", _this.stack);
                 _this.stack.splice(_this.stack.indexOf(targetEl), 1);
                 if (!_this.stack.length) {
 					disableScrollLock();

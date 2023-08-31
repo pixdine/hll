@@ -31,6 +31,17 @@ $(document).ready(function(){
         }
     });
 
+	/* datepicker */
+	$(".datepicker").datepicker({
+		beforeShow: function (input, inst) {
+			setTimeout(function () {
+				inst.dpDiv.css({
+					top: $(".datepicker").offset().top + 35
+				});
+			}, 0);
+		}
+	}); 
+
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
 		popup.open($(this).attr('data-popup-open'), 'popup')

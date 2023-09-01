@@ -100,7 +100,7 @@ var isCompute = false
 function headerSticky () {
     var lastScroll = 0;
     var headerTop = $(".header").offset().top;
-    var delta = 2;
+    var delta = 100; // ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
     var header = $('.header');
     var container = $(".container");
     var bottomLogo = $(".header_bottom .logo a");
@@ -122,50 +122,65 @@ function headerSticky () {
     var headerTopHeight = $('.header_top').outerHeight();
     var headerBottomHeight = $('.header_bottom').outerHeight();
 
-    $(window).on('scroll', function (e) {
 
-        if (isCompute) {
-            isCompute = false
-            return
-        }
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (Math.abs(lastScroll - scrollTop) <= delta) return;
+	const scrollCallback = (scrollTop) => {
+		// ios 15 이하 및 공통 처리
+		var atTop = scrollTop <= 0
+		var atBottom = scrollTop >= document.body.scrollHeight - document.body.clientHeight
 
-        if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
-            //down
-            if (header.hasClass('view')) { //기사상세 헤더
-                if (headerTop < scrollTop) {
-                    header.addClass('active');
-                }
-            } else {
-                // header.addClass('down');
-                header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
-                // header.css('top', -($('.header_top').outerHeight()));
-            }
-        } else {
-            // up
-            if (header.hasClass('view')) { //기사상세 헤더
-                $('.popup_layer', header).fadeOut(100)
-                header.removeClass('active');
-                /* 상세페이지 공유하기 레이어 관련 */
+		if(atTop) lastScroll =  0;
+		if(atBottom) lastScroll = document.body.scrollHeight - document.body.clientHeight;
 
-                /* //상세페이지 공유하기 레이어 관련 */
-            } else {
-                // header.removeClass('down')
-                header.css('transform', ``)
-                container.removeAttr('style')
-            }
-        }
-        // ios bouncing 오류 대응
-        if (scrollTop > headerHeight) {
-            document.documentElement.classList.add('non-oby')
-        } else {
-            document.documentElement.classList.remove('non-oby')
-        }
+			if (Math.abs(lastScroll - scrollTop) > delta) 
+			{
+				if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
+					//down
+					if (header.hasClass('view')) { //기사상세 헤더
+						console.log("down > 11 ");
+						if (headerTop < scrollTop) {
+							header.addClass('active');
+						}
+					} else {
+						// header.addClass('down');
+						header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
+						// header.css('top', -($('.header_top').outerHeight()));
+					}
+				} else {
+					// up
+					if (header.hasClass('view')) { //기사상세 헤더
+						$('.popup_layer', header).fadeOut(100)
+						header.removeClass('active');
+						/* 상세페이지 공유하기 레이어 관련 */
+		
+						/* //상세페이지 공유하기 레이어 관련 */
+					} else {
+						// header.removeClass('down')
+						header.css('transform', ``)
+						container.removeAttr('style')
+					}
+				}
+				lastScroll = scrollTop;
+			}
 
-        lastScroll = scrollTop;
-	});
+			// ios 16 이상 bouncing 오류 대응
+			if (scrollTop > headerHeight) {
+			    document.documentElement.classList.add('non-oby')
+			} else {
+			    document.documentElement.classList.remove('non-oby')
+			}
+	};
+	
+	function scrollHandle() {
+	  var scrollTop = window.scrollY;// 현재 프레임의 scrollY 값을 읽는다.
+	  // 다음 리페인트가 진행되기 전에 changeBoxWidth(lastScrollY)가 호출되도록 예약한다.
+	  window.requestAnimationFrame(() => {
+		scrollCallback(scrollTop);
+	  });
+	};
+	
+	window.addEventListener('scroll', scrollHandle);
+
 	$(window).on("resize", function () {
 		headerTopHeight = $(".header_top").outerHeight();
 	});

@@ -348,39 +348,47 @@
 								</div>
 				
 								<div class="option_filter02">
-									<div class="selectbox">
-										<div class="select_styled">높은가격순</div>
-										<ul class="select_options">
+									<div class="selectbox" data-selectbox>
+										<div class="select_styled" data-value>높은가격순</div>
+										<ul class="select_options" data-option>
 											<li class="select_option selected">높은가격순</li>
 											<li class="select_option">낮은가격순</li>
+										</ul>
+									</div>
+
+									<div class="selectbox" data-selectbox>
+										<div class="select_styled" data-value>신상품</div>
+										<ul class="select_options" data-option>
+											<li class="select_option">신상품</li>
+											<li class="select_option selected">구매순</li>
 										</ul>
 									</div>
 								</div>
 							</div>
 							<script>
-								function setupCustomSelect() {
-									$(".select_styled").click(function(event) {
-										event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
-										$(this).siblings(".select_options").slideToggle("fast");
-										if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
-										else $(this).addClass("opened");
-									});
+								// function setupCustomSelect() {
+								// 	$(".select_styled").click(function(event) {
+								// 		event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+								// 		$(this).siblings(".select_options").slideToggle("fast");
+								// 		if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
+								// 		else $(this).addClass("opened");
+								// 	});
 
-									$(".select_option").click(function(event) {
-										event.stopPropagation();
-										var selectedText = $(this).text();
-										$(this).closest(".selectbox").find(".select_styled").text(selectedText);
-										$(this).closest(".select_options").slideUp("fast");
-										$(".select_styled").removeClass("opened");
-									});
+								// 	$(".select_option").click(function(event) {
+								// 		event.stopPropagation();
+								// 		var selectedText = $(this).text();
+								// 		$(this).closest(".selectbox").find(".select_styled").text(selectedText);
+								// 		$(this).closest(".select_options").slideUp("fast");
+								// 		$(".select_styled").removeClass("opened");
+								// 	});
 
-									$(document).click(function() {
-										$(".select_options").slideUp("fast");
-									});
-								}
+								// 	$(document).click(function() {
+								// 		$(".select_options").slideUp("fast");
+								// 	});
+								// }
 
 								$(document).ready(function() {
-									setupCustomSelect();
+									// setupCustomSelect();
 
 									// 선택한 옵션 값을 초기화할 함수
 									function updateSelectedOption() {

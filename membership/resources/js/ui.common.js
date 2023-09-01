@@ -106,6 +106,43 @@ $(document).ready(function () {
         })
     }
     $("[data-accordion]").accordion();
+
+
+    $.fn.selectbox = function () {
+      this.each(function(index, element) {
+
+          var defaultValue = $("[data-option] > li.selected:last",element).text();
+          $("[data-value]", element).text(defaultValue);
+
+          $("[data-value]", element).click(function(event) {
+            event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+
+              $(this).siblings("[data-option]").slideToggle("fast");
+              if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
+              else $(this).addClass("opened");
+
+          });
+
+          $("[data-option] > li", element).click(function(event) {
+            event.stopPropagation();
+            var selectedText = $(this).text();
+
+            console.log(selectedText)
+            $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
+            $(this).closest("[data-option]").slideUp("fast");
+            $("[data-value]").removeClass("opened");
+          });
+      })
+
+
+      $(document).click(function() {
+        $(".opened[data-value]").each(function(index,element) {
+          $(this).trigger('click');
+        });
+      });
+  }
+  $("[data-selectbox]").selectbox();
+
 });
 
 function showLayer(target) {

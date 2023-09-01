@@ -454,7 +454,7 @@
     .list_sorting_area  {position:relative;flex-direction: column;margin-top:20px} 
     .list_sorting_area .option_filter { flex-direction: column; align-items: flex-start;}
     .list_sorting_area .option_filter .stit02{text-align:left; margin-bottom:20px; font-size:14px}
-    .list_sorting_area .option_filter02 {position:absolute; right:0px; top:5px}
+    .list_sorting_area .option_filter02 {position:absolute; right:0px; top:5px; display:flex; }
     .list_head_area .inputbox {width:100%; margin-top:16px}
     
 

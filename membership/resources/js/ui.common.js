@@ -489,16 +489,16 @@ const popup = {
     }
 }
 
+
   // 스크롤 잠금
   function enableScrollLock() {
-
     var body = document.body;
 
     if (!body.getAttribute('scrollY')) {
       const pageY = window.pageYOffset;
-
       body.setAttribute('scrollY', pageY.toString());
       body.style.top = `-${pageY}px`;
+	    $("body").addClass("lockbody");
     }
   }
 
@@ -507,9 +507,8 @@ const popup = {
     var body = document.body;
 
     if (body.getAttribute('scrollY')) {
-
+	    $("body").removeClass("lockbody");
       window.scrollTo(0, Number(body.getAttribute('scrollY')));
-
       body.removeAttribute('scrollY');
     }
   };

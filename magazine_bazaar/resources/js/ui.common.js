@@ -591,6 +591,7 @@ function familySite(_target){
       const pageY = window.pageYOffset;
       body.setAttribute('scrollY', pageY.toString());
       body.style.top = `-${pageY}px`;
+	  $("body").addClass("lockbody");
     }
   }
 
@@ -599,6 +600,7 @@ function familySite(_target){
     var body = document.body;
 
     if (body.getAttribute('scrollY')) {
+	  $("body").removeClass("lockbody");
       window.scrollTo(0, Number(body.getAttribute('scrollY')));
       body.removeAttribute('scrollY');
     }

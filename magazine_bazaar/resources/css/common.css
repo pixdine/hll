@@ -88,17 +88,12 @@ a:hover{text-decoration:none;}
 }
 
 /* 반응형 body scoll lock */
-.is_mobile.lockbody {
-	overflow : 'initial';
-	position : 'fixed';
-	left : '0px';
-	right : '0px';
-	bottom : '0px';
-}
-
-.is_pc.lockbody {
-	overflow: hidden;
-	top:unset !important;
+.lockbody {
+	overflow : initial;
+	position : fixed;
+	left : 0;
+	right : 0;
+	bottom : 0;
 }
 
 .non-oby { overscroll-behavior-y: none }

@@ -556,12 +556,16 @@ function progress_bar() {
 	const progress_wrap = document.createElement('div');
 	progress_wrap.setAttribute('class','progress_bar');
 	document.querySelector('.header').append(progress_wrap);
-
+    var body = document.body;
 	var  bar = document.querySelector('.progress_bar')
 	window.addEventListener('scroll', function(){
-		var winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-		height = document.documentElement.scrollHeight - window.innerHeight;
-		bar.style.width = ((winScroll / height) * 100) + "%";
+		setTimeout(function() {
+			if(!body.classList.contains('lockbody')) {
+				var winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+				height = document.documentElement.scrollHeight - window.innerHeight;
+				bar.style.width = ((winScroll / height) * 100) + "%";
+			}
+		}, 300);
 	});
 }
 
@@ -581,19 +585,11 @@ function familySite(_target){
 
   // 스크롤 잠금
   function enableScrollLock() {
-
     var body = document.body;
 
     if (!body.getAttribute('scrollY')) {
       const pageY = window.pageYOffset;
-
       body.setAttribute('scrollY', pageY.toString());
-
-      body.style.overflow = 'initial';
-      body.style.position = 'fixed';
-      body.style.left = '0px';
-      body.style.right = '0px';
-      body.style.bottom = '0px';
       body.style.top = `-${pageY}px`;
     }
   }
@@ -603,15 +599,8 @@ function familySite(_target){
     var body = document.body;
 
     if (body.getAttribute('scrollY')) {
-      body.style.removeProperty('overflow');
-      body.style.removeProperty('position');
-      body.style.removeProperty('top');
-      body.style.removeProperty('left');
-      body.style.removeProperty('right');
-      body.style.removeProperty('bottom');
-
       window.scrollTo(0, Number(body.getAttribute('scrollY')));
-
       body.removeAttribute('scrollY');
     }
   };
+

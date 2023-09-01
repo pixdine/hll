@@ -122,15 +122,15 @@ function headerSticky () {
     var headerTopHeight = $('.header_top').outerHeight();
     var headerBottomHeight = $('.header_bottom').outerHeight();
 
-
-
-	const scrollCallback = (scrollTop) => {
+	function scrollCallback(scrollTop) {
 		// ios 15 이하 및 공통 처리
 		var atTop = scrollTop <= 0
 		var atBottom = scrollTop >= document.body.scrollHeight - document.body.clientHeight
 
-		if(atTop) lastScroll =  0;
-		if(atBottom) lastScroll = document.body.scrollHeight - document.body.clientHeight;
+		// body lock scroll 상태 계산 안함
+		if(!$('body').hasClass('lockbody')) {
+			if(atTop) lastScroll =  0;
+			if(atBottom) lastScroll = document.body.scrollHeight - document.body.clientHeight;
 
 			if (Math.abs(lastScroll - scrollTop) > delta) 
 			{
@@ -162,24 +162,26 @@ function headerSticky () {
 				}
 				lastScroll = scrollTop;
 			}
+		} 
 
-			// ios 16 이상 bouncing 오류 대응
-			if (scrollTop > headerHeight) {
-			    document.documentElement.classList.add('non-oby')
-			} else {
-			    document.documentElement.classList.remove('non-oby')
-			}
+		// ios 16 이상 bouncing 오류 대응
+		if (scrollTop > headerHeight) {
+		    document.documentElement.classList.add('non-oby')
+		} else {
+		    document.documentElement.classList.remove('non-oby')
+		}
 	};
 	
-	function scrollHandle() {
-	  var scrollTop = window.scrollY;// 현재 프레임의 scrollY 값을 읽는다.
-	  // 다음 리페인트가 진행되기 전에 changeBoxWidth(lastScrollY)가 호출되도록 예약한다.
-	  window.requestAnimationFrame(() => {
-		scrollCallback(scrollTop);
-	  });
-	};
-	
-	window.addEventListener('scroll', scrollHandle);
+
+	// 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
+	$(window).on("scroll", function () {
+		var scrollTop = window.scrollY;
+
+		window.requestAnimationFrame(function() {
+		  scrollCallback(scrollTop);
+		});
+	});
+
 
 	$(window).on("resize", function () {
 		headerTopHeight = $(".header_top").outerHeight();

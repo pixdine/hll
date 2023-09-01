@@ -625,6 +625,7 @@ background:#fff;overflow:hidden;z-index:230}
 .allmenu_wrap .allmenu_list li a:hover { color:#111}
 .allmenu_wrap.isMenuShow { transition: display .5s ease; height:286px; border-bottom:1px solid rgba(0,0,0,.2); display:block !important}
 body.is_pc .info_box, body.is_pc .login_info_box  { display:none !important}
+body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 
 /* pagination */

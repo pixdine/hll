@@ -438,6 +438,8 @@ const popup = {
         var targetEl = $(`[data-${_type}="${_target}"]`);
         switch (_type) {
             case 'popup':
+				var popupCount = $(`.open[data-${_type}`).length || 0;
+				if(popupCount > 0) targetEl.css('z-index', 200 + popupCount);
                 targetEl.fadeIn(100, function () {
                     $(this).addClass('open')
                 });
@@ -476,7 +478,7 @@ const popup = {
                 break;
         }
 
-		console.log("_type %o",_type);
+		// console.log("_type %o _hasDimmed %o",_type,_hasDimmed);
         if (_type !== 'layer') {
             if (!this.stack.length) {
                 if(!targetEl.hasClass('search_layer')) document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`

@@ -52,44 +52,59 @@ $(document).ready(function () {
 
     //공통 툴팁
     $.fn.tooltip = function () {
-        this
-            .on('mouseenter click', 'button.tooltip', function (e) {
-                e.stopPropagation()
-                $(this).removeClass('is-visible')
-            })
-            .on('focus click', ':has(>.tooltip_layer)', function (e) {
-                if (!$(this).prop('disabled')) {
-                    showTooltip(this)
-                }
-            })
-            .on('blur mouseout keydown', ':has(>.tooltip_layer)', function (e) {
-                if (e.type === 'keydown') {
-                    if (e.witch === 27) {
-                        hideTooltip(this)
-                    }
-                } else {
-                    hideTooltip(this)
-                }
-            })
+        var tooltipEl = $("button.tooltip",this);
+
+        tooltipEl.each(function(index,tooltip) {
+          $(tooltip).attr("id","tooltip-"+index);
+          $(tooltip).on('click', function (e) {
+            e.stopPropagation()
+
+            tooltipEl.not('#'+this.id).find(".tooltip_layer.is-visible").removeClass('is-visible');
+
+            if(e.target.closest(".tooltip_layer")) return;
+    
+            const layerEl = $(">.tooltip_layer", this)
+            if (!$(this).prop('disabled')) {
+              if(!layerEl.hasClass('is-visible')) {
+                showTooltip(this)
+              } else {
+                hideTooltip(this)
+              }
+            }
+          })
+        })
+
+        $(document).on('click',function(e) {
+          $("button.tooltip > .tooltip_layer.is-visible").parent().each(function() {
+            hideTooltip(this)
+          });
+        })
+
+        $(window).on('resize',function(e) {
+          var tooltip = $(".tooltip_layer.is-visible").closest("button.tooltip")[0]
+          showTooltip(tooltip)
+        })
+
         function showTooltip(el) {
             const layerEl = $(">.tooltip_layer", el)
-            layerEl.addClass('is-visible')
-            if($(window).width()<layerEl.offset().left+layerEl.outerWidth()) {
-                layerEl.addClass('revert')
-                if(layerEl.offset().left - 20<0) {
-                    $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
-                }
-            }else{
-                console.log(layerEl.offset().right)
-                // if(layerEl.offset().left - 20<0) {
-                //     $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
-                // }
+            
+            if(layerEl[0]) {
+              layerEl.addClass('is-visible')
+              if($(window).width()<layerEl.offset().left+layerEl.outerWidth()) {
+                  layerEl.addClass('revert')
+                  if(layerEl.offset().left - 20<0) {
+                      $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
+                  }
+              }
             }
         }
+
         function hideTooltip(el) {
             const layerEl = $(">.tooltip_layer", el)
-            layerEl.removeClass(['is-visible', 'revert'])
-            $("p", layerEl).css("transform", "")
+            if(layerEl[0]) {
+              layerEl.removeClass(['is-visible', 'revert'])
+              $("p", layerEl).css("transform", "")
+            }
         }
     }
     $(document).tooltip();

@@ -20,7 +20,13 @@ $(document).ready(function(){
         var targetElement = $('[data-popup="' + targetId + '"]')
         var isVisible = targetElement.is(':visible')
         var gap = window.innerWidth - document.documentElement.clientWidth
-        $(this).toggleClass('on', !isVisible)
+
+		if(targetId === 'popup_search') {
+			$("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
+		} else {
+			$(this).toggleClass('on', !isVisible)
+		}
+       
         if (isVisible) {
             // (targetElement.parent())[0].style.removeProperty("padding-right");
             // (targetElement.parent())[0].style.removeProperty("margin-right");

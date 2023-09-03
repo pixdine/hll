@@ -221,26 +221,25 @@ $(window)
 
 //전체메뉴 > 모바일
 function allmenuOpenMo() {
-  const $body = document.querySelector("body");
-  let clientWidth = 0;
+
+  // pc 이벤트 제거
+  $(".allmenu_wrap").off('.allmenuOpen');
+  $(".gnb_menu > li > a").off('.allmenuOpen');
 
   function open() {
-    isCompute = true;
-    clientWidth = document.documentElement.clientWidth;
     $(".allmenu_wrap").stop().fadeIn(100);
    enableScrollLock();
   $(".header_top .btn_menu").addClass("on");
   }
 
   function close() {
-    isCompute = true;
-    console.log('close');
     $(".allmenu_wrap").stop().fadeOut(100);
-    disableScrollLock();
+
+		if(popup.stack.length === 0) disableScrollLock();
     $(".header_top .btn_menu").removeClass("on");
   }
 
-  $(".header_top .btn_menu").on('click', function () {
+  $(".header_top .btn_menu").off().on('click.allmenuOpenMo', function () {
     if ($(this).hasClass('on')) close();
     else open();
   });
@@ -249,44 +248,54 @@ function allmenuOpenMo() {
     $(this).toggleClass("has_menu", $(this).find(".depth2").length > 0);
   });
 
-  $(".has_menu > a > span").click(function (e) {
+  $(".has_menu > a > span").off().on('click.allmenuOpenMo',function (e) {
     console.log(this);
     e.preventDefault();
     $(this).parent().parent().toggleClass("open");
   });
 
-  $(".allmenu_wrap .allmenu_dimmed").click(close);
+  $(".allmenu_wrap .allmenu_dimmed").off().on('click.allmenuOpenMo',close);
 }
 
 function allmenuOpen() {
+
+  // 모바일 상태 제거
+  $(".allmenu_wrap").removeAttr('style');
+  $(".header_top .btn_menu").removeClass("on");
+
+  // 모바일 이벤트 제거
+  $(".header_top .btn_menu").off('click.allmenuOpenMo');
+  $(".has_menu > a > span").off('click.allmenuOpenMo');
+  $(".allmenu_wrap .allmenu_dimmed").off('click.allmenuOpenMo');
+
   var $menuAll = $(".allmenu_wrap");
   $gnbArea = $(".gnb_menu > li > a");
 
   var menuAllShow = {
     gnbHover: function () {
-      $gnbArea
-        .on("mouseover", function () {
+      $gnbArea.off()
+        .on("mouseover.allmenuOpen", function () {
           var hasClassOn = $menuAll.is('[class*="isMenuShow"]');
           if (!hasClassOn) {
             $menuAll.removeClass("isMenuShow");
           }
           $menuAll.addClass("isMenuShow");
         })
-        .on("mouseleave", function () {
+        .on("mouseleave.allmenuOpen", function () {
           $menuAll.removeClass("isMenuShow");
         });
     },
 
     menuAllHover: function () {
-      $menuAll
-        .on("mouseover", function () {
+      $menuAll.off()
+        .on("mouseover.allmenuOpen", function () {
           var hasClassOn = $menuAll.is('[class*="isMenuShow"]');
           if (!hasClassOn) {
             $menuAll.removeClass("isMenuShow");
           }
           $menuAll.addClass("isMenuShow");
         })
-        .on("mouseleave", function () {
+        .on("mouseleave.allmenuOpen", function () {
           $menuAll.removeClass("isMenuShow");
         });
     },
@@ -297,8 +306,28 @@ function allmenuOpen() {
 }
 
 function initOnDevice() {
-  if ($('body').hasClass('is_mobile'))  allmenuOpenMo();
-  else allmenuOpen();
+
+
+  if (window.innerWidth < 899) {
+
+    console.log('모바일');
+    
+    allmenuOpenMo();
+  } else {
+    console.log('피씨');
+
+
+    allmenuOpen();
+  }
+
+
+
+
+  // if ($('body').hasClass('is_mobile'))  {
+
+  // } else {
+
+  // }
 }
 
 // 카테고리별 썸네일 슬라이드

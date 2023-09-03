@@ -87,7 +87,6 @@ $(window).on('resize', function(){
 
 
 //header sticky
-var isCompute = false
 function headerSticky () {
     var lastScroll = 0;
     var headerTop = $(".header").offset().top;
@@ -183,18 +182,14 @@ function headerSticky () {
 
 //전체메뉴
 function allmenuOpen() {
-    const $body = document.querySelector("body");
-    let scrollPosition = 0, clientWidth = 0
 
     function open() {
-        isCompute = true
-        $('.allmenu_wrap').stop().fadeIn(100);
+		$(".allmenu_wrap").stop().fadeIn(100);
 		enableScrollLock();
     }
 
     function close() {
-        isCompute = true
-        $('.allmenu_wrap').stop().fadeOut(100);
+		$(".allmenu_wrap").stop().fadeOut(100);
 		if(popup.stack.length === 0) disableScrollLock();
     }
 

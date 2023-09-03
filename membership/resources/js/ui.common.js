@@ -385,42 +385,42 @@ $(window).resize(function(){
 function scrollContList(){
   var scrollContList = $(".pointShop.pc");
   var ww = window.innerWidth;
-  var mySwiper = undefined;
+  // var mySwiper = undefined;
   if (scrollContList.length <= 0) return;
 
   function initSwiper(){
-    if (ww > 768 && mySwiper == undefined) {
+    if (ww > 768) {
       scrollContList.each(function () {
-        var mySwiper = new Swiper(".pointShop.pc", {
-          slidesPerView: 5,
-          spaceBetween:24,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            1280: {
-            slidesPerView:5,
+        if(!this.swiper) {
+          new Swiper(this, {
+            slidesPerView: 5,
             spaceBetween:24,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
             },
-
-            1023: {
-            slidesPerView:4,
-            spaceBetween:24,
+            breakpoints: {
+              1280: {
+              slidesPerView:5,
+              spaceBetween:24,
+              },
+  
+              1023: {
+              slidesPerView:4,
+              spaceBetween:24,
+              },
+  
+              769: {
+              slidesPerView:3,
+              },
             },
-
-            769: {
-            slidesPerView:3,
-            },
-          },
-        });
+          });
+        }
       });
-    } else if (ww <= 768 && mySwiper != undefined) {
+    } else if (ww <= 768) {
       scrollContList.each(function () {
-
         this.swiper.destroy(); //각각을 파괴함.
       });
-      mySwiper = undefined;
       cate_swiper();
     }
   }

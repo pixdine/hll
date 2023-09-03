@@ -306,22 +306,11 @@ function allmenuOpen() {
 }
 
 function initOnDevice() {
-
-
   if (window.innerWidth < 899) {
-
-    console.log('모바일');
-    
     allmenuOpenMo();
   } else {
-    console.log('피씨');
-
-
     allmenuOpen();
   }
-
-
-
 
   // if ($('body').hasClass('is_mobile'))  {
 

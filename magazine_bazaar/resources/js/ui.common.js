@@ -173,9 +173,11 @@ function headerSticky () {
 		});
 	});
 
-
+	// resize 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
 	$(window).on("resize", function () {
-		headerTopHeight = $(".header_top").outerHeight();
+		window.requestAnimationFrame(function() {
+			headerTopHeight = $(".header_top").outerHeight();
+		});
 	});
 }
 

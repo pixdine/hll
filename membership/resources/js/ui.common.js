@@ -419,53 +419,54 @@ function scrollContList(){
       });
     } else if (ww <= 768) {
       scrollContList.each(function () {
-        this.swiper.destroy(); //각각을 파괴함.
+        if(this.swiper) this.swiper.destroy(); //각각을 파괴함.
       });
       cate_swiper();
     }
   }
   initSwiper();
   $(window).on("resize", function () {
-    ww = window.innerWidth;
-    initSwiper();
+		window.requestAnimationFrame(function() {
+      ww = window.innerWidth;
+      initSwiper();
+		});
   });
 }
 
 //스크랩 > 모바일에서만 작동
 function scrapList(){
-
-  console.log("scrap");
-
   var scrapList = $(".myscrap_list");
   var ww = window.innerWidth;
-  var mySwiper = undefined;
   if (scrapList.length <= 0) return;
 
   function initSwiper() {
     //768px 보다 클 때 swiper 실행
-    if (ww < 768 && mySwiper == undefined) {
+    if (ww < 768) {
       scrapList.each(function () {
-        //각각을 스와이프 적용
-        mySwiper = new Swiper(this, {
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-          },
-        });
+        if(!this.swiper) {
+          //각각을 스와이프 적용
+          new Swiper(this, {
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+            },
+          });
+        }
       });
-    } else if (ww > 768 && mySwiper != undefined) {
+    } else if (ww > 768) {
       scrapList.each(function () {
-        this.swiper.destroy(); //각각을 파괴함.
+        if(this.swiper) this.swiper.destroy(); //각각을 파괴함.
       });
-      mySwiper = undefined;
     }
   }
 
   initSwiper();
 
   $(window).on("resize", function () {
-    ww = window.innerWidth;
-    initSwiper();
+		window.requestAnimationFrame(function() {
+      ww = window.innerWidth;
+      initSwiper();
+		});
   });
 
 }

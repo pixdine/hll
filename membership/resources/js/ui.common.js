@@ -262,6 +262,7 @@ function allmenuOpen() {
   // 모바일 상태 제거
   $(".allmenu_wrap").removeAttr('style');
   $(".header_top .btn_menu").removeClass("on");
+  $("body").removeClass('lockbody'); // 800px 화면 사이즈 때문에 넣음 ui 는 모바일인데 전체 메뉴는 pc 스타일 이어서 생기는 버그
 
   // 모바일 이벤트 제거
   $(".header_top .btn_menu").off('click.allmenuOpenMo');

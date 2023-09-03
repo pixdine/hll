@@ -597,24 +597,25 @@ function familySite(_target){
 
   // 스크롤 잠금
   function enableScrollLock() {
-    var body = document.body;
+    var $body = $(document.body);
+	
+    if (!$body.is('[scrollY]')) {
+      const pageY = window.scrollY;
 
-    if (!body.getAttribute('scrollY')) {
-      const pageY = window.pageYOffset;
-      body.setAttribute('scrollY', pageY.toString());
-      body.style.top = `-${pageY}px`;
-	  $("body").addClass("lockbody");
+      $body.attr('scrollY', String(pageY))
+           .css('top', `-${pageY}px`)
+	       .addClass("lockbody");
     }
   }
 
   // 스크롤 잠금 해제
   function disableScrollLock() {
-    var body = document.body;
+    var $body = $(document.body);
 
-    if (body.getAttribute('scrollY')) {
-	  $("body").removeClass("lockbody");
-      window.scrollTo(0, Number(body.getAttribute('scrollY')));
-      body.removeAttribute('scrollY');
+    if ($body.is('[scrollY]')) {
+		$body.removeClass("lockbody");
+		window.scrollTo(0, Number($body.attr('scrollY')));
+		$body.removeAttr('scrollY').removeAttr('style');
     }
   };
 

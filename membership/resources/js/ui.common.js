@@ -222,18 +222,13 @@ $(window)
 //전체메뉴 > 모바일
 function allmenuOpenMo() {
   const $body = document.querySelector("body");
-  let scrollPosition = 0,
-    clientWidth = 0;
+  let clientWidth = 0;
 
   function open() {
     isCompute = true;
     clientWidth = document.documentElement.clientWidth;
     $(".allmenu_wrap").stop().fadeIn(100);
    enableScrollLock();
-   scrollPosition = window.pageYOffset;
-  $body.style.overflow = "hidden";
-  $body.style.position = "fixed";
-    $body.style.top = `-${scrollPosition}px`;
   $(".header_top .btn_menu").addClass("on");
   }
 
@@ -242,10 +237,6 @@ function allmenuOpenMo() {
     console.log('close');
     $(".allmenu_wrap").stop().fadeOut(100);
     disableScrollLock();
-    $body.style.removeProperty("overflow");
-    $body.style.removeProperty("position");
-    $body.style.removeProperty("top");
-    window.scrollTo(0, scrollPosition);
     $(".header_top .btn_menu").removeClass("on");
   }
 
@@ -558,23 +549,24 @@ const popup = {
 
   // 스크롤 잠금
   function enableScrollLock() {
-    var body = document.body;
+    var $body = $(document.body);
+	
+    if (!$body.is('[scrollY]')) {
+      const pageY = window.scrollY;
 
-    if (!body.getAttribute('scrollY')) {
-      const pageY = window.pageYOffset;
-      body.setAttribute('scrollY', pageY.toString());
-      body.style.top = `-${pageY}px`;
-	    $("body").addClass("lockbody");
+      $body.attr('scrollY', String(pageY))
+           .css('top', `-${pageY}px`)
+	         .addClass("lockbody");
     }
   }
 
   // 스크롤 잠금 해제
   function disableScrollLock() {
-    var body = document.body;
+    var $body = $(document.body);
 
-    if (body.getAttribute('scrollY')) {
-	    $("body").removeClass("lockbody");
-      window.scrollTo(0, Number(body.getAttribute('scrollY')));
-      body.removeAttribute('scrollY');
+    if ($body.is('[scrollY]')) {
+	    $body.removeClass("lockbody");
+      window.scrollTo(0, Number($body.attr('scrollY')));
+      $body.removeAttr('scrollY').removeAttr('style');
     }
   };

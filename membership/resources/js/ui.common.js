@@ -322,11 +322,7 @@ function initOnDevice() {
 
 // 카테고리별 썸네일 슬라이드
 function cate_swiper() {
-  var cateSwipers = [];
-
   $('[data-slide="sm_thumb_slide"]').each(function (i,el) {
-    $(this).attr("data-index", i);
-
     if ($('[data-slide="sm_thumb_slide"]').length <= 0) return;
 
     if ($(this).find(".swiper-slide").length == 1) {

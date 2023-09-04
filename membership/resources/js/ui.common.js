@@ -527,7 +527,6 @@ const popup = {
 
         if (_type !== 'layer') {
             if (!this.stack.length) {
-                document.body.style.paddingRight = `${document.documentElement.clientWidth - this.clientWidth}px`
                 if (_hasDimmed) {
                     this.dimmed.classList.add('dimmed')
                     this.dimmed.style.display = "none"
@@ -550,7 +549,6 @@ const popup = {
                 _this.stack.splice(_this.stack.indexOf(targetEl), 1);
                 if (!_this.stack.length) {
                     disableScrollLock();
-                    document.body.style.removeProperty("padding-right");
                     $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
                 } else {
                     _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1

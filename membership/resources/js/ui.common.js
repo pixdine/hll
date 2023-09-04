@@ -334,6 +334,7 @@ function cate_swiper() {
             slidesPerView: "auto",
             spaceBetween:20,
             loop: true,
+            autoplay:false,
             autoplay: {
               delay: 3000,
               disableOnInteraction: false,

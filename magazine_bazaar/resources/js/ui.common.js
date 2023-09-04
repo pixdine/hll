@@ -304,33 +304,35 @@ function kv_swiper(){
 
 // 카테고리별 썸네일 슬라이드
 function cate_swiper(){
-	var cateSwipers = [];
-
 	$('[data-slide="sm_thumb_slide"]').each(function(i) {
-		$(this).attr('data-index',i)
 
 		if($('[data-slide="sm_thumb_slide"]').length <= 0) return;
 
 		if($(this).find('.swiper-slide').length == 1){
 			$(this).addClass('only');
 		} else {
-			cateSwipers[i] = new Swiper('[data-slide="sm_thumb_slide"][data-index="'+i+'"]', {
-				slidesPerView : 'auto',
-				spaceBetween: 20,
-				loop: true,
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
-				speed: 400,
-				pagination: {
-					el: '[data-slide="sm_thumb_slide"][data-index="'+i+'"] .swiper-pagination',
-					clickable: true,
-				},
-				observer: true,
-				observeParents: true,
-				watchOverflow: true,
-			});
+			if(!this.swiper) {
+				new Swiper(this,
+					{
+					slidesPerView: "auto",
+					spaceBetween:20,
+					loop: true,
+					autoplay:false,
+					autoplay: {
+					  delay: 3000,
+					  disableOnInteraction: false,
+					},
+					speed: 400,
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					observer: true,
+					observeParents: true,
+					watchOverflow: true,
+					}
+				);
+			}
 		}
 	});
 }

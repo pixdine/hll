@@ -526,7 +526,7 @@ background:#fff;overflow:hidden;z-index:230}
 #ui-datepicker-div .ui-widget-content .ui-state-highlight,
 #ui-datepicker-div .ui-widget-header .ui-state-highlight {color:#222!important}
 .ui-datepicker .ui-datepicker-today {position:relative}
-#ui-datepicker-div.ui-datepicker .ui-datepicker-today .ui-state-active {background:##410C86 !important;color:#fff!important}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-today .ui-state-active {background:#410C86 !important;color:#fff !important}
 #ui-datepicker-div.ui-datepicker .ui-datepicker-today .ui-state-active:before {display:none}
 #ui-datepicker-div .ui-state-active,
 #ui-datepicker-div .ui-widget-content .ui-state-active,

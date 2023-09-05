@@ -103,11 +103,16 @@ $(document).ready(function () {
             
             if(layerEl[0]) {
               layerEl.addClass('is-visible')
+
+              console.log("window %o left %o outerWidth %o", $(window).width(), layerEl.offset().left, layerEl.outerWidth()  )
               if($(window).width()<layerEl.offset().left+layerEl.outerWidth()) {
                   layerEl.addClass('revert')
                   if(layerEl.offset().left - 20<0) {
                       $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
                   }
+              } else {
+                console.log("여긴 모냐");
+                // layerEl.removeClass('revert')
               }
             }
         }

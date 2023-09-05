@@ -230,8 +230,8 @@
 							</div>            
 							<div class="point_change_cont box_type02">
 								<div class="point_left">
-									<div class="p_logo">
-										<object data="../../resources/images/logo_ok.svg" ></object>
+									<div class="p_logo ok">
+										<object data="../../resources/images/p_logo_ok.svg" ></object>
 									</div>
 									<div class="p_txt"><span>OK캐쉬백</span>포인트로 교환하기</div>
 								</div>
@@ -241,7 +241,7 @@
 											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
-										<span class="unit">p</span>
+										<span class="unit">P</span>
 										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
@@ -250,8 +250,8 @@
 							<!-- CJ ONE  -->
 							<div class="point_change_cont box_type02">
 								<div class="point_left">
-									<div class="p_logo">
-										<object data="../../resources/images/logo_cj.svg" ></object>
+									<div class="p_logo cj">
+										<object data="../../resources/images/p_logo_cjone.svg" ></object>
 									</div>
 									<div class="p_txt"><span>CJ ONE</span>포인트로 교환하기</div>
 								</div>
@@ -261,7 +261,7 @@
 											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
-										<span class="unit">p</span>
+										<span class="unit">P</span>
 										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
@@ -270,8 +270,8 @@
 							<!-- h point  -->
 							<div class="point_change_cont box_type02">
 								<div class="point_left">
-									<div class="p_logo">
-										<object data="../../resources/images/logo_hpoint.svg"></object>
+									<div class="p_logo hpoint">
+										<object data="../../resources/images/p_logo_hpoint.svg"></object>
 									</div>
 									<div class="p_txt"><span>H.point</span>포인트로 교환하기</div>
 								</div>
@@ -281,7 +281,7 @@
 											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
-										<span class="unit">p</span>
+										<span class="unit">P</span>
 										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
@@ -290,8 +290,8 @@
 							<!-- h point  -->
 							<div class="point_change_cont box_type02">
 								<div class="point_left">
-									<div class="p_logo">
-										<object data="../../resources/images/logo_payco.svg" ></object>
+									<div class="p_logo payco">
+										<object data="../../resources/images/p_logo_payco.svg" ></object>
 									</div>
 									<div class="p_txt"><span>PAYCO</span>포인트로 교환하기</div>
 								</div>
@@ -301,7 +301,7 @@
 											<input type="text" placeholder="100 포인트 단위로 입력" class="inp" />
 											<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
 										</div>
-										<span class="unit">p</span>
+										<span class="unit">P</span>
 										<button type="button" class="btn bctype1"><span>전환<span>하기</span></span></button>
 									</div>
 									<p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
@@ -323,7 +323,7 @@
 									전체목록<strong>5,327</strong>개
 								</p>
 								<div class="inputbox search">
-									<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off"
+									<input type="search" class="inp" id="name" name="name" placeholder="상품명 혹은 브랜드명으로 검색" title="검색어 입력" autocomplete="off"
 										value="">
 									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
 									<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
@@ -356,54 +356,54 @@
 										</ul>
 									</div>
 
-									<div class="selectbox" data-selectbox>
+									<!-- div class="selectbox" data-selectbox>
 										<div class="select_styled" data-value>신상품</div>
 										<ul class="select_options" data-option>
 											<li class="select_option">신상품</li>
 											<li class="select_option selected">구매순</li>
 										</ul>
-									</div>
+									</div -->
 								</div>
 							</div>
 							<script>
-								// function setupCustomSelect() {
-								// 	$(".select_styled").click(function(event) {
-								// 		event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
-								// 		$(this).siblings(".select_options").slideToggle("fast");
-								// 		if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
-								// 		else $(this).addClass("opened");
-								// 	});
+								function setupCustomSelect() {
+										$(".select_styled").click(function (event) {
+											event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+											$(this).siblings(".select_options").slideToggle("fast");
+											if ($(this).hasClass("opened") == true) $(this).removeClass("opened");
+											else $(this).addClass("opened");
+										});
 
-								// 	$(".select_option").click(function(event) {
-								// 		event.stopPropagation();
-								// 		var selectedText = $(this).text();
-								// 		$(this).closest(".selectbox").find(".select_styled").text(selectedText);
-								// 		$(this).closest(".select_options").slideUp("fast");
-								// 		$(".select_styled").removeClass("opened");
-								// 	});
+										$(".select_option").click(function (event) {
+											event.stopPropagation();
+											var selectedText = $(this).text();
+											$(this).closest(".selectbox").find(".select_styled").text(selectedText);
+											$(this).closest(".select_options").slideUp("fast");
+											$(".select_styled").removeClass("opened");
+										});
 
-								// 	$(document).click(function() {
-								// 		$(".select_options").slideUp("fast");
-								// 	});
-								// }
-
-								$(document).ready(function() {
-									// setupCustomSelect();
-
-									// 선택한 옵션 값을 초기화할 함수
-									function updateSelectedOption() {
-										$(".selectbox").each(function() {
-										var selectedText = $(this).find("li.selected").text();
-										$(this).find(".selected_option").text(selectedText);
+										$(document).click(function () {
+											$(".select_options").slideUp("fast");
 										});
 									}
 
-									$(".select_option").click(function() {
-										$(this).siblings().removeClass("selected");
-										$(this).addClass("selected");
-										updateSelectedOption();
+									$(document).ready(function () {
+										setupCustomSelect();
+
+										// 선택한 옵션 값을 초기화할 함수
+										function updateSelectedOption() {
+											$(".selectbox").each(function () {
+												var selectedText = $(this).find("li.selected").text();
+												$(this).find(".selected_option").text(selectedText);
+											});
+										}
+
+										$(".select_option").click(function () {
+											$(this).siblings().removeClass("selected");
+											$(this).addClass("selected");
+											updateSelectedOption();
+										});
 									});
-								});
 							</script>
 							<!-- list -->
 							<div class="point_product_list">

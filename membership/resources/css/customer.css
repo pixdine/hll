@@ -13,8 +13,7 @@
 .search_res span { font-family:"Gotham";color:var(--point)  }
 
 @media (max-width:768px){
-    .gray_box.search { margin:0 0 43px}
-    .tab_menu.type03 ~ .search {margin-top:8px}
+    .gray_box.search { margin:0 -20px 43px}
     .gray_box.search .box_inner {padding:32px 20px }
     .gray_box.search .box_inner .inputbox { width:100%; margin:0 auto}
     .search_res { font-size:16px; }

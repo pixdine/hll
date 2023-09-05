@@ -593,6 +593,12 @@ function lockScrollHandle (event) {
 	const e = event || window.event;
 
 	// body lock 에서 제외시킬 요소 정의
+	// 전체 메뉴
+	if(e.target.classList.closest(".allmenu_wrap")) {
+		return true;
+	}
+
+	// 팝업 공통
 	if(e.target.classList.contains("popup_cont")) {
 		return true;
 	}
@@ -609,15 +615,15 @@ function lockScrollHandle (event) {
 
 // 스크롤 잠금
 function disableScroll() {
-	const body = document.querySelector('body');
-	body.addEventListener('touchmove', lockScrollHandle, { passive: false });
-	body.style.overflow = 'hidden';
+	var body = $(document.body);
+	body[0].addEventListener('touchmove', lockScrollHandle, { passive: false });
+	body.addClass('lockbody');
 }
 
 // 스크롤 잠금 해제
 function enableScroll() {
-	const body = document.querySelector('body');
-	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });
-	body.style.removeProperty('overflow');
+	var body = $(document.body);
+	body[0].removeEventListener('touchmove', lockScrollHandle, { passive: false });
+	body.removeClass('lockbody');
 };
 

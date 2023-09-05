@@ -150,19 +150,19 @@ function headerSticky () {
 				lastScroll = scrollTop;
 			}
 		} 
-
+		
 		// ios 16 이상 bouncing 오류 대응
-		if (scrollTop > headerHeight) {
-		    document.documentElement.classList.add('non-oby')
-		} else {
-		    document.documentElement.classList.remove('non-oby')
-		}
+		// if (scrollTop > headerHeight) {
+		//     document.documentElement.classList.add('non-oby')
+		// } else {
+		//     document.documentElement.classList.remove('non-oby')
+		// }
 	};
 	
 
 	// 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
-	$(window).on("scroll", function () {
-		var scrollTop = window.scrollY;
+	$(document.body).on("scroll", function () {
+		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 
 		window.requestAnimationFrame(function() {
 		  scrollCallback(scrollTop);
@@ -557,6 +557,7 @@ function setAtcList(){
 
 //상세페이지 프로그래스바
 function progress_bar() {
+	console.log("progress bar");
 	const progress_wrap = document.createElement('div');
 	progress_wrap.setAttribute('class','progress_bar');
 	document.querySelector('.header').append(progress_wrap);
@@ -565,6 +566,8 @@ function progress_bar() {
 	window.addEventListener('scroll', function(){
 		setTimeout(function() {
 			if(!body.classList.contains('lockbody')) {
+
+				console.log("progress bar");
 				var winScroll = document.body.scrollTop || document.documentElement.scrollTop,
 				height = document.documentElement.scrollHeight - window.innerHeight;
 				bar.style.width = ((winScroll / height) * 100) + "%";
@@ -594,7 +597,7 @@ function lockScrollHandle (event) {
 
 	// body lock 에서 제외시킬 요소 정의
 	// 전체 메뉴
-	if(e.target.classList.closest(".allmenu_wrap")) {
+	if(e.target.closest(".allmenu_wrap")) {
 		return true;
 	}
 
@@ -615,15 +618,28 @@ function lockScrollHandle (event) {
 
 // 스크롤 잠금
 function disableScroll() {
-	var body = $(document.body);
-	body[0].addEventListener('touchmove', lockScrollHandle, { passive: false });
-	body.addClass('lockbody');
+	const body = document.querySelector('body');
+	const pageY = document.body.scrollTop || document.documentElement.scrollTop;
+
+	if(!body.hasAttribute('scrollY')) {
+		body.setAttribute('scrollY', String(pageY));
+		$(body).addClass('lockbody');
+	}
+
+	body.addEventListener('touchmove', lockScrollHandle, { passive: false });
+
 }
 
 // 스크롤 잠금 해제
 function enableScroll() {
-	var body = $(document.body);
-	body[0].removeEventListener('touchmove', lockScrollHandle, { passive: false });
-	body.removeClass('lockbody');
+	const body = document.querySelector('body');
+
+	if(body.hasAttribute('scrollY')) {
+		$(body).removeClass('lockbody');
+		body.scrollTop =  Number(body.getAttribute('scrollY'));
+    }
+
+	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });
+
 };
 

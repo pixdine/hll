@@ -566,7 +566,7 @@ function lockScrollHandle (event) {
 
 	// body lock 에서 제외시킬 요소 정의
 	// 전체 메뉴
-	if(e.target.classList.closest(".allmenu_wrap")) {
+	if(e.target.closest(".allmenu_wrap")) {
 		return true;
 	}
 
@@ -587,20 +587,27 @@ function lockScrollHandle (event) {
 
 // 스크롤 잠금
 function disableScroll() {
-	var body = $(document.body);
-	if(!body.hasClass('lockbody')) {
+	const body = document.querySelector('body');
+	const pageY = document.body.scrollTop || document.documentElement.scrollTop;
 
-    console.log("disableScroll");
-    body[0].addEventListener('touchmove', lockScrollHandle, { passive: false });
-    body.addClass('lockbody');
-  }
+	if(!body.hasAttribute('scrollY')) {
+		body.setAttribute('scrollY', String(pageY));
+		$(body).addClass('lockbody');
+	}
+
+	body.addEventListener('touchmove', lockScrollHandle, { passive: false });
+
 }
 
 // 스크롤 잠금 해제
 function enableScroll() {
-	var body = $(document.body);
-	if(body.hasClass('lockbody')) {
-    body[0].removeEventListener('touchmove', lockScrollHandle, { passive: false });
-    body.removeClass('lockbody');
-  }
+	const body = document.querySelector('body');
+
+	if(body.hasAttribute('scrollY')) {
+		$(body).removeClass('lockbody');
+		body.scrollTop =  Number(body.getAttribute('scrollY'));
+    }
+
+	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });
+
 };

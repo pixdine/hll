@@ -469,35 +469,11 @@
 			$('#endDate').attr('value', todayFormatted);
 
 			$("#startDate").datepicker({
-				dateFormat : "y.mm.dd",
-				changeMonth:false,
-				changeYear:false,
-				hideIfNoPrevNext: true,
-				yearSuffix: "년",
-				showMonthAfterYear:true,
-				showOn:"button",//달력아이콘노출
-				buttonText:'날짜선택',
-				prevText:'이전 달',
-				nextText:'다음 달',
-				dayNamesMin:['일','월','화','수','목','금','토'],
-				monthNames:[ "01월", "02월", "03월", "04월", "05월", "06월", "07월", "08월", "09월", "10월", "11월", "12월" ],
 				minDate: oneYearAgoFormatted,
 				maxDate:todayFormatted,
 			});
 
 			$("#endDate").datepicker({
-				dateFormat : "y.mm.dd",
-				changeMonth:false,
-				changeYear:false,
-				hideIfNoPrevNext: true,
-				yearSuffix: "년",
-				showMonthAfterYear:true,
-				showOn:"button",//달력아이콘노출
-				buttonText:'날짜선택',
-				prevText:'이전 달',
-				nextText:'다음 달',
-				dayNamesMin:['일','월','화','수','목','금','토'],
-				monthNames:[ "01월", "02월", "03월", "04월", "05월", "06월", "07월", "08월", "09월", "10월", "11월", "12월" ],
 				minDate: oneYearAgoFormatted,
 				maxDate:todayFormatted,
 			});

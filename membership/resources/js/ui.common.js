@@ -13,12 +13,16 @@ $(document).ready(function () {
 
 	/* datepicker */
   $.datepicker.setDefaults({
-    showOn: "both",
-    dateFormat: 'yymmdd',
+    showOn:"button",//달력아이콘노출
+    buttonText:'날짜선택',
+    dateFormat : 'y.mm.dd',
+    changeMonth:false,
+    changeYear:false,
+    hideIfNoPrevNext: true,
     prevText: '이전 달',
     nextText: '다음 달',
-    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNames:[ '01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월' ],
+    monthNamesShort: ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'],
     dayNames: ['일', '월', '화', '수', '목', '금', '토'],
     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],

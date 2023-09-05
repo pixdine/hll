@@ -26,7 +26,7 @@ $(document).ready(function(){
 		} else {
 			$(this).toggleClass('on', !isVisible)
 		}
-       
+		
         if (isVisible) {
             popup.close(targetId, 'popup')
         } else {
@@ -182,12 +182,12 @@ function allmenuOpen() {
 
     function open() {
 		$(".allmenu_wrap").stop().fadeIn(100);
-		enableScrollLock();
+		disableScroll();
     }
 
     function close() {
 		$(".allmenu_wrap").stop().fadeOut(100);
-		if(popup.stack.length === 0) disableScrollLock();
+		if(popup.stack.length === 0) enableScroll();
     }
 
     $('.header .btn_menu').click(open);
@@ -439,7 +439,7 @@ const popup = {
                 targetEl.fadeIn(100, function () {
                     $(this).addClass('open')
                 });
-				enableScrollLock();
+				disableScroll();
 
                 $('.popup_inner', targetEl).click(function (e) {
                     e.stopPropagation();
@@ -448,11 +448,11 @@ const popup = {
                 break;
             case 'alert':
                 targetEl.fadeIn(100);
-				enableScrollLock();
+				disableScroll();
                 $('[data-alert]', targetEl).click(function () {
                     if ($(this).hasClass('open')) {
                         $(this).removeClass('open');
-						disableScrollLock();
+						enableScroll();
                     }
                 });
 
@@ -501,7 +501,7 @@ const popup = {
 				console.log(" _this.stack %o", _this.stack);
                 _this.stack.splice(_this.stack.indexOf(targetEl), 1);
                 if (!_this.stack.length) {
-					disableScrollLock();
+					enableScroll();
                     $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
                 } else {
                     _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1
@@ -587,27 +587,37 @@ function familySite(_target){
 	}
 }
 
-  // 스크롤 잠금
-  function enableScrollLock() {
-    var $body = $(document.body);
-	
-    if (!$body.is('[scrollY]')) {
-      const pageY = window.scrollY;
 
-      $body.attr('scrollY', String(pageY))
-           .css('top', `-${pageY}px`)
-	       .addClass("lockbody");
-    }
-  }
+// body lock scroll ios 대응
+function lockScrollHandle (event) {
+	const e = event || window.event;
 
-  // 스크롤 잠금 해제
-  function disableScrollLock() {
-    var $body = $(document.body);
+	// body lock 에서 제외시킬 요소 정의
+	if(e.target.classList.contains("popup_cont")) {
+		return true;
+	}
 
-    if ($body.is('[scrollY]')) {
-		$body.removeClass("lockbody");
-		window.scrollTo(0, Number($body.attr('scrollY')));
-		$body.removeAttr('scrollY').removeAttr('style');
-    }
-  };
+	// 멀티 터치는 터치 되게 한다
+	if (e.touches.length > 1) return true;
+
+	// event 초기화 속성이 있음 초기화
+	if (e.preventDefault) e.preventDefault();
+
+	return false;
+}
+
+
+// 스크롤 잠금
+function disableScroll() {
+	const body = document.querySelector('body');
+	body.addEventListener('touchmove', lockScrollHandle, { passive: false });
+	body.style.overflow = 'hidden';
+}
+
+// 스크롤 잠금 해제
+function enableScroll() {
+	const body = document.querySelector('body');
+	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });
+	body.style.removeProperty('overflow');
+};
 

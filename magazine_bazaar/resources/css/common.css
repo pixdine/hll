@@ -87,15 +87,6 @@ a:hover{text-decoration:none;}
 	--point : #b30010;
 }
 
-/* 반응형 body scoll lock */
-.lockbody {
-	overflow : initial;
-	position : fixed;
-	left : 0;
-	right : 0;
-	bottom : 0;
-}
-
 .non-oby { overscroll-behavior-y: none }
 
 

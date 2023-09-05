@@ -172,15 +172,6 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 /* layout */
 .wrap{position:relative;width:100%;height:100%;margin-left:auto;margin-right:auto;font-size:16px;}
 
-/* 반응형 body scoll lock */
-.lockbody {
-	overflow : initial;
-	position : fixed;
-	left : 0;
-	right : 0;
-	bottom : 0;
-}
-
 /* header 공통스타일 */
 .header {position:relative; background-color:#fff;z-index:100; max-width:1280px; transition: height 0.5s ease; height:135px; margin:0 auto; box-sizing:border-box; /*padding-bottom:8px;*/}
 .header .logo a{display:block;font-size:0;}

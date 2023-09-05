@@ -18,7 +18,7 @@
 .mypage_point_info ul li:first-child {border-left:0}
 .mypage_point_info ul li dl { margin-left:40px; display:flex;flex-direction:column;justify-content:space-between; height:100% }
 .mypage_point_info ul li:first-child dl {margin-left:0}
-.mypage_point_info ul li dl dt {position:relative;font-size:18px; font-weight:500; color:#666; }
+.mypage_point_info ul li dl dt {position:relative;font-size:16px; font-weight:500; color:#666; }
 .mypage_point_info ul li dl dt::after { content:''; position:absolute; top:5px; width:16px; height:16px; background:transparent url('../images/ico_arrow.svg') no-repeat center center / 100% auto; margin-left:4px}
 .mypage_point_info ul li dl dt .tooltip { vertical-align:top; margin:5px 0 0 4px }
 .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:-5px}
@@ -27,8 +27,8 @@
 .mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Gotham'; font-size:28px; font-weight:500; text-align:right; padding-right:40px; }
 .mypage_point_info ul li dl dd strong { font-weight:500; font-size:40px;  line-height:1 }
 .mypage_point_info ul li dl dd .c_point {color:var(--point); position:relative; top:-2px}
-.mypage_point_info ul li dl dd .point {font-size:28px}
-.mypage_point_info ul li dl dd .sep { display:inline-black; margin:0 10px}
+.mypage_point_info ul li dl dd .point {font-size:28px; margin-left:4px}
+.mypage_point_info ul li dl dd .sep { display:inline-block; margin:0 8px}
 .mypage_point_info ul li dl dd span {line-height:1}
 
 /* 포인트 샵 */
@@ -65,11 +65,13 @@
 .tag_atc_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
 .tag_atc_list li{display:inline-block;width:calc(33.333% - 16px);vertical-align:top;}
 .moa_list {  }
-.moa_list ul{display:flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;}
-.moa_list li { width:23.5%; }
+.moa_list ul{display:flex;  flex-wrap: nowrap; justify-content: space-between;}
+.moa_list li { width:23.5%;}
 .moa_list .atcbox{position:relative;width:100%;height:100%;}
-.moa_list .atcbox .imgbox{padding-top:133.334%;}
+.moa_list .atcbox .imgbox{/*padding-top:133.334%;*/}
 
+body.is_pc .moa_list .atcbox .imgbox img.is_pc {display:block }
+body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 .myscrap_wrap {width:100%; margin:180px 0}
 .myscrap_wrap .tit_wrap {margin-bottom:40px}
@@ -172,12 +174,12 @@
 .point_change_cont .p_txt span {display:inline-block; margin-left:5px}
 .point_change_cont .p_change {display:inline-flex; flex-direction: column; /*width:504px;*/ margin-top:14px; justify-content:flex-end; flex-grow:0}
 .point_change_cont .p_change .inputbox .inp { width:306px; }
-.point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px}
+.point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px; font-family:'Gotham'; font-weight:500}
 .point_change_cont .p_change .btn { margin-left:40px}
 .point_change_cont .p_change .p_change_box { display:flex;justify-content:flex-end; }
 
 .point_change_wrap .point_change_cont { margin-top:24px}
-.point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:4px;}
+.point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:8px;}
 
 .list_head_area {display:flex; justify-content: space-between; align-items: center;}
 .list_head_area .list_tot { font-size:24px; line-height:1.8;color:#666; font-weight:500 }
@@ -215,19 +217,18 @@
 .point_prd_info02 .prd_img img {display:block}
 .point_prd_info02 .prd_txt { }
 .point_prd_info02 .prd_txt dl {padding:0;}
-.point_prd_info02 .prd_txt dt {font-size:16px; color:var(--point)}
+.point_prd_info02 .prd_txt dt {font-size:16px; color:var(--point); margin-bottom:20px}
 .point_prd_info02 .prd_txt dd.prd_tit {font-size:24px; color:#111;font-weight:500; }
 .point_prd_info02 .prd_txt dd.prd_price {font-size:36px; line-height:1; font-family:'Gotham'; font-weight:500; color:#111; margin-top:24px}
 .point_prd_info02 .prd_txt dd.prd_price span {font-size:24px; }
-.point_prd_info02 .prd_txt dd.prd_detail {margin-top:40px}
-.point_prd_info02 .prd_txt dd.prd_detail ul {flex-direction: column; row-gap: 16px;}
-.point_prd_info02 .prd_txt dd.prd_detail ul li {display:flex; }
-.point_prd_info02 .prd_txt dd.prd_detail {padding-top:40px; border-top:1px solid #DBDBDB}
+.point_prd_info02 .prd_txt dd.prd_detail {margin-top:40px;padding-top:40px; border-top:1px solid #DBDBDB}
+.point_prd_info02 .prd_txt dd.prd_detail ul {display:flex;flex-direction:row; flex-wrap:wrap; row-gap: 16px;}
+.point_prd_info02 .prd_txt dd.prd_detail ul li {display:flex;  }
 .point_prd_info02 .prd_txt dd.prd_detail ul li span {padding:0}
-.point_prd_info02 .prd_txt dd.prd_detail ul li span.ptit {color:#666; font-weight:400; min-width:83px}
+.point_prd_info02 .prd_txt dd.prd_detail ul li span.ptit {color:#666; font-weight:400; min-width:102px; margin-right:24px}
 .point_prd_info02 .prd_txt dd.prd_detail ul li span.ptxt {color:#111; font-weight:400; line-height:1.6}
-.point_prd_info02 .prd_txt .btn_area { margin:40px 10px 0}
-.point_prd_info02 .prd_txt .btn_area button {width:100%}
+.point_prd_info02 .prd_txt .btn_area { margin:40px 0px 0}
+.point_prd_info02 .prd_txt .btn_area button {width:100%; margin:0}
 
 .prd_info_detail {}
 .prd_info_detail li { margin-top:32px;}
@@ -239,7 +240,7 @@
 .prd_info_detail .prd_detail_list li:first-child { margin-top:0}
 .prd_info_detail .prd_detail_list li:before { content:''; position:absolute; left:0; top:10px; width:3px; height:3px; border-radius: 3px 3px; background-color:#ccc}
 
-.input_type02 .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500}
+/*.input_type02 .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500}*/
 
 .point_prd_info .prd_price {position:absolute; top:0; right:0; font-size:24px; font-weight:500; font-family:'Gotham'; }
 .point_prd_info .prd_price span { font-size:20px; display:inline-block; margin-left:4px}
@@ -280,8 +281,9 @@
      .point_change_cont .p_logo object { width:106px;}
      .point_change_cont .p_change .p_change_box .inputbox {width:100%}
      .point_change_cont .p_change .inputbox .inp {width:100%}
-     .point_change_cont .p_change .btn {min-width:auto; margin-left:20px}
+     .point_change_cont .p_change .btn {min-width:auto; margin-left:19px; width:70px}
      .point_change_cont .btn span span {display:none}
+     .point_change_cont .p_change .unit {margin:0 0 0 8px}
  
 }
 
@@ -337,12 +339,10 @@
 
 
     /* 모아보기 */
-    .cont_scroll_wrap {position:relative;margin:0 -20px;}
+    .cont_scroll_wrap {position:relative;}
     .moa_wrap {margin:80px auto}
-    .moa_wrap .moa_list ul{display:block;overflow:hidden;overflow-x:auto;white-space:nowrap;padding:0 20px;font-size:0;}
-    .moa_wrap .moa_list ul::-webkit-scrollbar{display:none;}
-    .moa_wrap .moa_list li{width:57.75%;margin-right:12px; display:inline-block; vertical-align:top}
-    .moa_wrap .moa_list li:last-child{margin-right:0;}
+    .moa_wrap .moa_list ul{display:flex; flex-wrap:wrap; column-gap:12px; row-gap:24px;}
+    .moa_wrap .moa_list li{width:calc(50% - 6px);vertical-align:top}
     .moa_wrap .tit_wrap .btn_txt { display:none}
     .moa_wrap .btn_txt { display:inline-block; left:50%; transform: translateX(-50%); margin-top:32px }
 
@@ -391,6 +391,9 @@
     body.is_mobile .myscrap_wrap .myscrap_list ul li + li { margin-top:0 }
 
     .myscrap_wrap .tit_wrap h2 strong { font-size:22px}
+    .myscrap_area .rs_txt { font-size:14px }
+    .myscrap_area.no_scrap { padding:80px 0}
+    .heading_wrap {margin-bottom:32px }
 
     .control{margin-top:32px;text-align:center; width:100%}
     .control .swiper-pagination{font-size:0;}
@@ -496,10 +499,28 @@
     .point_inq_list li dd span {margin-left:4px }
     .point_inq_list li dd strong em {font-size:14px; margin-left:4}
 
+    .mypage_point_info ul li dl dd .sep {margin:0 4px}
+    .point_shop_wrap .tit_wrap, .myscrap_wrap .tit_wrap {margin-bottom:32px}
+    .moa_wrap .tit_wrap {margin-bottom:40px}
+
+    body.is_mobile .moa_list .atcbox .imgbox img.is_pc {display:none}
+    body.is_mobile .moa_list .atcbox .imgbox img.is_mobile {display:block }
+
+    .point_save_wrap .tit_wrap .tit { font-size:16px}
+    .point_prd_info02 .prd_txt dd.prd_detail ul li span.ptit {min-width:80px;}
+
+    .body_cont01 .tit_wrap02:first-child { margin-bottom:20px}
+
+    .inp_area .body_cont01 ~ .body_cont01 {margin-top:32px}
+}
+
+@media (max-width:375px){
+    .point_change_cont .p_change .inputbox .inp {width:191px}
 }
 
 @media (max-width:320px){
     .point_change_cont .p_change .inputbox .inp {/* width:152px*/}
     .point_change_cont .p_change .btn { margin-left:5px}
     .point_change_cont .p_change .unit { margin-left:5px}
+    
 }

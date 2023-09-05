@@ -11,37 +11,6 @@ $(document).ready(function () {
   $(".tag_wrap .btnbox .btn_ico").on("click", tagOpen);
   showTagBtn();
 
-	/* datepicker */
-  $.datepicker.setDefaults({
-    showOn:"button",//달력아이콘노출
-    buttonText:'날짜선택',
-    dateFormat : 'y.mm.dd',
-    changeMonth:false,
-    changeYear:false,
-    hideIfNoPrevNext: true,
-    prevText: '이전 달',
-    nextText: '다음 달',
-    monthNames:[ '01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월' ],
-    monthNamesShort: ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'],
-    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-    showMonthAfterYear: true,
-    yearSuffix: '년',
-    beforeShow: function (input, inst) {
-      setTimeout(function () {
-        inst.dpDiv.css({
-          top: datepicker.offset().top + datepicker.height()
-        });
-      }, 0);
-    }
-  });
-
-  $(window).on('resize',function() {
-    $(".datepicker").datepicker("hide");
-  })
-
-
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
 		popup.open($(this).attr('data-popup-open'), 'popup')

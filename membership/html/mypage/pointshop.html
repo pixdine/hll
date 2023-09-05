@@ -365,46 +365,7 @@
 									</div>
 								</div>
 							</div>
-							<script>
-								function setupCustomSelect() {
-										$(".select_styled").click(function (event) {
-											event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
-											$(this).siblings(".select_options").slideToggle("fast");
-											if ($(this).hasClass("opened") == true) $(this).removeClass("opened");
-											else $(this).addClass("opened");
-										});
-
-										$(".select_option").click(function (event) {
-											event.stopPropagation();
-											var selectedText = $(this).text();
-											$(this).closest(".selectbox").find(".select_styled").text(selectedText);
-											$(this).closest(".select_options").slideUp("fast");
-											$(".select_styled").removeClass("opened");
-										});
-
-										$(document).click(function () {
-											$(".select_options").slideUp("fast");
-										});
-									}
-
-									$(document).ready(function () {
-										setupCustomSelect();
-
-										// 선택한 옵션 값을 초기화할 함수
-										function updateSelectedOption() {
-											$(".selectbox").each(function () {
-												var selectedText = $(this).find("li.selected").text();
-												$(this).find(".selected_option").text(selectedText);
-											});
-										}
-
-										$(".select_option").click(function () {
-											$(this).siblings().removeClass("selected");
-											$(this).addClass("selected");
-											updateSelectedOption();
-										});
-									});
-							</script>
+					
 							<!-- list -->
 							<div class="point_product_list">
 								<ul>

@@ -271,7 +271,7 @@ function kv_swiper(){
 			speed: 500,
 			loop: _loop,
 			autoplay: {
-				delay: 7000,
+				delay: 5000,
 				disableOnInteraction: false,
 			},
 			pagination: {

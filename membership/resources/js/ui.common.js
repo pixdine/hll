@@ -226,10 +226,10 @@ function allmenuOpenMo() {
     $(this).toggleClass("has_menu", $(this).find(".depth2").length > 0);
   });
 
-  $(".has_menu > a > span").off().on('click.allmenuOpenMo',function (e) {
+  $(".has_menu > a").off().on('click.allmenuOpenMo',function (e) {
     console.log(this);
     e.preventDefault();
-    $(this).parent().parent().toggleClass("open");
+    $(this).parent().toggleClass("open");
   });
 
   $(".allmenu_wrap .allmenu_dimmed").off().on('click.allmenuOpenMo',close);
@@ -245,7 +245,7 @@ function allmenuOpen() {
 
   // 모바일 이벤트 제거
   $(".header_top .btn_menu").off('click.allmenuOpenMo');
-  $(".has_menu > a > span").off('click.allmenuOpenMo');
+  $(".has_menu > a").off('click.allmenuOpenMo');
   $(".allmenu_wrap .allmenu_dimmed").off('click.allmenuOpenMo');
 
   var $menuAll = $(".allmenu_wrap");

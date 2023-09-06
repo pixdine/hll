@@ -206,7 +206,7 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 .header_wrap .header_gnb li.on .sub_menu {display:block }
 .header_wrap .header_gnb li .sub_menu ul {display:flex; height:63px; justify-content: center;align-items:center}
 .header_wrap .header_gnb li .sub_menu li { font-size:16px; font-weight:500; letter-spacing:-0.01em; color:#666; line-height:1.43em;  }
-.header_wrap .header_gnb li .sub_menu li a {white-space:nowrap;}
+.header_wrap .header_gnb li .sub_menu li a {white-space:nowrap; cursor:default}
 .header_wrap .header_gnb li .sub_menu li a::after { display:none}
 .header_wrap .header_gnb li .sub_menu li.on a {color:var(--point); font-weight:700} 
 .header_wrap .header_gnb li 
@@ -264,7 +264,7 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration{display:none;}
-input[type="password"] { font-family:'Gotham'}
+
 
 ::-webkit-input-placeholder{color:#999;font-size:16px;font-weight:500;}
 ::-moz-placeholder{color:#999;font-size:16px;font-weight:500;}
@@ -277,7 +277,7 @@ input[type="password"] { font-family:'Gotham'}
 .inputbox .inp[readonly]{background-color:#f7f7f7;cursor:default;-webkit-tap-highlight-color:transparent;}
 .inputbox .inp[readonly]:focus{border-color:#ccc;}
 .inputbox .inp[readonly]:focus::placeholder{color:#999;border-color:#ccc;}
-.inputbox .btn_ico.del{position:absolute;right:9px;top:50%;height:34px;}
+.inputbox .btn_ico.del{position:absolute;right:9px;top:26px /*50%*/;height:34px;}
 .inputbox .inp + .del { transform:translateY(-50%) scale(0); }
 .inputbox .inp.typed{padding-right:52px;}
 .inputbox .inp.typed:focus + .del,
@@ -286,7 +286,7 @@ input[type="password"] { font-family:'Gotham'}
 .inputbox .inp.typed + .del:focus { transform:translateY(-50%) scale(1); }
 .inputbox.error .inp { border-color:#FF0000 }
 .inputbox.error .row_err_txt { display:block}
-.inputbox.error .btn_ico.del {display:none}
+/*.inputbox.error .btn_ico.del {display:none}*/
 
 .inputbox.search .inp{padding-right:44px;}
 .inputbox.search .inp.typed{padding-right:72px;}
@@ -349,7 +349,9 @@ input[type="password"] { font-family:'Gotham'}
 
 .btn_login { margin-top:16px} 
 .btn_login button { width:100%} 
-.btn_area.sns { width:52.5%}
+.btn_area.sns { justify-content: flex-start; row-gap:8px}
+.btn_area.sns button { max-width:184px;}
+.input_type02  li dd .btn_area.sns .btn ~ .btn {margin-left:8px;}
 .tbl_btm_area .btn_area { margin:80px 0 0}
 .tbl_btm_area .btn_area button {width:384px; margin:0 auto}
 
@@ -699,21 +701,21 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .input_type02 li { padding-top:32px}
 .input_type02 li:first-child { padding-top:0 }
 .input_type02 li dl { display:flex; align-items: flex-start; }
-.input_type02 li dl dt { width:15%; color:#333; vertical-align:middle;/**/ padding-top:14px; min-width:180px}
+.input_type02 li dl dt { width:17%; color:#333; vertical-align:middle; flex-shrink:0;  padding-top:14px; min-width:180px;}
 .input_type02 li dl dt.non_inp { padding-top:0}
-.input_type02 li dl dd { flex-grow:1; /*line-height:0; font-size:0; */ position:relative; }
+.input_type02 li dl dd { flex-grow:1; /*line-height:0; font-size:0; */ position:relative; padding-right:23.37% }
 .input_type02 li dl dd .btn_area { margin-top:0 }
 .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:16px}
-.input_type02 li .inp { width:51%; height:52px; display:inline-block }
+.input_type02 li .inp { /*width:51%;*/ height:52px; display:inline-block }
 .input_type02 li dd.nobtn .inp { width:100%; }
-.input_type02 .col_txt { position:absolute; right:0; top:50%; transform:translateY(-50%); }
+.input_type02 .col_txt {margin-top:12px;}
 .input_type02.data_read li {margin-top:0;}
 .input_type02.data_read li dl dt { padding-top:0;} 
 .input_type02.data_read li dl .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500 }
 
 .input_type02 li dl dd.modify {display:flex}
 .input_type02 li dl dd.modify.nobtn {display:block}
-.input_type02 li dl dd.modify .inputbox {width:51%; display:flex; flex-direction:column}
+.input_type02 li dl dd.modify .inputbox {width:100%; display:flex; flex-direction:column}
 .input_type02 li dl dd.modify.nobtn .inputbox {width:100%;}
 .input_type02 li dl dd.modify .inputbox .inp {width:100%}
 .input_type02 li dl dd.modify .addr_search { display:flex; flex:1; flex-direction: column;}
@@ -762,6 +764,8 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 .tooltip_layer::before {content:''; position:absolute; top:-8px; left:9px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
 .tooltip_layer.revert::before { left: auto; right: 9px; }
+
+.point_total {font-size:24px; line-height:23px; font-weight:500; font-family:'Gotham'; color:var(--point)}
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -1048,7 +1052,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
     .input_type02 li dd .inputbox {/*padding-right:36.72%*/}
     .input_type02 li dd .inputbox.nobtn { padding-right:0 }
     .input_type02 li dd .inputbox .btn { position:absolute; right:0; width:31.94%; min-width:68px}
-    .input_type02 li .col_txt { position:static; margin-top:16px; transform: none; }
+  /*  .input_type02 li .col_txt { position:static; margin-top:16px; transform: none; }*/
     .input_type02 li dd .inp { width:100%; }
     .input_type02 li dl dd .btn_area {display:flex;justify-content: space-between;}
     .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:0px}
@@ -1068,7 +1072,11 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 	.input_type02.data_read li dl .point_total {font-size:20px}
 	.input_type02 li { padding-top:24px} 
-	.input_type02 li dl dt.non_inp {margin-bottom:8px}
+	.input_type02 li dl dt.non_inp {margin-bottom:19px}
+	.input_type02 li dl.total dt.non_inp { margin-bottom:0}
+
+	.point_total {font-size:20px; /*line-height:193px;*/ }
+	.input_type02 li dl dd { padding-right:0}
 
 }
 

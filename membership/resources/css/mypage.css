@@ -7,10 +7,11 @@
 .top_cont_area { margin:0 auto; background-image:url('../images/bg_mypage.png'); background-repeat:no-repeat; background-position:center top; background-size:cover;}
 .top_cont_area .cont_inner {max-width:1280px; margin:0 auto; }
 .top_profile_area {position:relative; padding-top:92px; padding-left:102px }
-.top_profile_area .profile_pic {position:absolute; left:0;  width:78px; height:78px; border-radius:78px; box-sizing:border-box; border:2px solid #fff; overflow:hidden}
+.top_profile_area .profile_pic {position:absolute; left:0;  width:80px; height:80px; border-radius:78px; box-sizing:border-box; border:2px solid #fff; overflow:hidden; background: #D9D9D9 url(../../resources/images/ico_profile.png) no-repeat 50% 100%;}
 .top_profile_area .txt01{ font-size:36px; font-weight:400; line-height:52px; color:#fff}
 .top_profile_area .txt02 { position:relative; font-size:18px; font-weight:500; line-height:26px; color:#fff; margin-top:4px}
 .top_profile_area .txt02 .btn_ico.modify { position:relative; top:-1px; margin-left:4px; vertical-align:middle}
+
 
 .mypage_point_info {position:relative;height:220px; background:#fff; margin-top:51px; padding:40px; box-sizing: border-box;}
 .mypage_point_info ul {display:flex; flex-direction: row; flex-wrap:wrap; justify-content: space-between; align-items: stretch; height:100%}
@@ -134,9 +135,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_item {position:relative;}
 .point_item dt {font-size:18px; font-weight:500; line-height:1.4;width:85%; white-space: nowrap; text-overflow: ellipsis; overflow:hidden}
 .point_item dd.date { color:#666; font-size:16px; margin-top:16px;width:85%; }
-.point_item dd.point { position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:16px; font-weight:700; width:15%;text-align:right}
-.point_item dd.point.minus {color:#0078FF;}
-.point_item dd.point.plus {color:#FF0000}
+.point_item dd.point { position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:16px; font-weight:700; width:15%;text-align:right;color:#0078FF;}
+
 
 
 /* 포인트 관리 */
@@ -277,6 +277,9 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 .member_info .tit_wrap02 { margin-bottom:20px }
 
+.pointshop_order .input_type02 li dl dd { padding-right:42.5%}
+.inputbox.search .inp {width:331px}
+
 @media (max-width:1023px){
 	 /*포인트샵 */
      .point_change_cont { flex-direction: column; padding:24px 16px; height:auto}
@@ -311,7 +314,10 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_save_wrap .top_sort_wrap .date_wrap ~ .sort_filter{display:block;width:100%;margin-top:32px;}
 
     .list_head_area {flex-direction: column; align-items: flex-start;}
-    
+
+	.inputbox.search .inp {width:100%}
+    .list_sorting_area .option_filter02 .selectbox { margin-left:10px; }
+    .list_head_area .inputbox {width:100%; margin-top:16px}
 }
 
 
@@ -471,8 +477,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .list_sorting_area .option_filter { flex-direction: column; align-items: flex-start;}
     .list_sorting_area .option_filter .stit02{text-align:left; margin-bottom:20px; font-size:14px}
     .list_sorting_area .option_filter02 {position:absolute; right:0px; top:5px; display:flex; }
-    .list_sorting_area .option_filter02 .selectbox { margin-left:10px; }
-    .list_head_area .inputbox {width:100%; margin-top:16px}
+    
     
 
     .bc_space02 {margin-top:60px}
@@ -523,6 +528,10 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_prd_info02 .prd_txt dd.prd_detail ul li span.ptit {min-width:80px;}
 
     .inp_area .body_cont01 ~ .body_cont01 {margin-top:32px}
+
+	.is_mobile .mypage_point_info .tooltip_layer.is-visible   {width:auto;}
+	.input_type02 li dl dd { padding-right:0}
+
     
 }
 

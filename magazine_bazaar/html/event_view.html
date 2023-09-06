@@ -287,8 +287,7 @@
 									<p class="txt_excerpt">하우스의 헤리티지와 한국 전통 의상 스타일의 조화를 이룬 '구찌 2024 크루즈 컬렉션'</p>
 									<div class="txt_meta">
 										<span class="profile_pic">
-											<img alt="프로필"
-												src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
+											<img alt="프로필" src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
 											</span>
 											<em>by</em> <span><a href="#">BAZAAR</a></span>
 										 <span class="time">20230.05.08</span>
@@ -300,9 +299,567 @@
 							<!-- 상세 > body -->
 							<div class="atc_body">
 								<div class="atc_body_cont">
-									<img src="https://image.jtbcplus.kr/data/UPLOAD/default/IMG_2023_03_31/059183962001.jpg" alt="">
+									<img src="../resources/images/temp/temp_promo01.jpg" alt="">
 									<p>선정 6팀에게 응원의 댓글을 남겨주신 분들 중 추첨을 통해 20명에게 록시땅 버베나 오 드 뚜왈렛을 선물로 드립니다. 경품은 응원 댓글을 남겨주신 분들 중 추첨을 통해 증정되며, 상품 미 수령으로 인한 분실 시, 책임지지 않습니다.</p>
 								</div>
+
+								<!-- 지도 모듈 : 지도 + 캡션 -->
+								<div class="map_wrap">
+									<!-- 지도영역 -->
+									<div class="map_area">
+										<div class="map_item">
+											<div class="map_inner">
+												<div class="map_api">
+													<!--
+														D: 개발에서 지도 API 연동 필요. 
+														현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
+														마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
+														API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40)
+													-->
+													<img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지" style="display:block;width:100%;height:100%;object-fit:cover;"><!-- D: 지도 샘플 이미지 -->
+													<span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)"><img src="../resources/images/ico_marker.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+													<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button><!-- D: 확대버튼 -->
+												</div>
+											</div>
+										</div>
+										<p class="caption">지도 / 경복궁</p>
+									</div>
+									<!-- //지도영역 -->
+								</div>
+								<!-- //지도 모듈 : 지도 + 캡션 -->
+
+								<!-- 지도 모듈 : 지도 + 정보(수직정렬(디폴트)) -->
+								<div class="map_wrap">
+									<!-- 지도영역 -->
+									<div class="map_area">
+										<div class="map_item">
+											<div class="map_inner">
+												<div class="map_api">
+													<!--
+														D: 개발에서 지도 API 연동 필요. 
+														현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
+														마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
+														API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40)
+													-->
+													<img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지" style="display:block;width:100%;height:100%;object-fit:cover;"><!-- D: 지도 샘플 이미지 -->
+													<span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)"><img src="../resources/images/ico_marker.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+													<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button><!-- D: 확대버튼 -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //지도영역 -->
+
+									<!-- 지도 정보 영역 -->
+									<div class="map_info">
+										<div class="name_box">
+											<strong class="name">경복궁</strong>
+										</div>
+
+										<ul class="map_list">
+											<li>
+												<em>대표번호</em>
+												<span>없음</span>
+											</li>
+											<li>
+												<em>주소지</em>
+												<span>강원 춘천시 신북읍 맥국2길 123</span>
+											</li>
+											<li>
+												<em>영업시간</em>
+												<span>매일 11:00 - 19:30</span>
+											</li>
+											<li>
+												<em>주차</em>
+												<span>주차 가능</span>
+											</li>
+										</ul>
+
+										<div class="map_exp">
+											<div class="tit_box">
+												<strong class="tit">경복궁의 역사</strong>
+											</div>
+											<div class="txt_box on"><!-- D: 내용 더보기 버튼 클릭 시 on 클래스 추가 -->
+												<p class="txt">1963년 1월 21일 사적으로 지정하는 동시에 궁궐의 조성도 착수하였다.1394년(태조 3) 9월 신궐조성도감(新闕造成都監)을 두고 청성백(靑城伯) 심덕부(沈德符), 좌복야 김주(金湊), 전정당문학 이염(李恬), 중추원학사 이직(李稷) 등을 판사에 임명하여 실무를 담당, 해산(亥山.北岳山)을 주산(主山)으로 삼고 임좌병향(壬坐丙向.北北西_에 앉아 南南東을 바라다봄)의 터를 잡았다.</p>
+											</div>
+											<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+											<div class="btn_box">
+												<button type="button" class="btn_txt has_toggle on"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+													<span class="txt1">더보기</span>
+													<span class="txt2">접기</span>
+												</button>
+											</div>
+											<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+										</div>
+									</div>
+									<!-- //지도 정보 영역 -->
+								</div>
+								<!-- //지도 모듈 : 지도 + 정보(수직정렬(디폴트)) -->
+
+								<!-- 지도 모듈 : 지도 + 정보(수평정렬(PC에서만)) -->
+								<div class="map_wrap horiz"><!-- D: 수평정렬일 경우 horiz 클래스 추가 -->
+									<!-- 지도영역 -->
+									<div class="map_area">
+										<div class="map_item">
+											<div class="map_inner">
+												<div class="map_api">
+													<!--
+														D: 개발에서 지도 API 연동 필요. 
+														현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
+														마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
+														API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40)
+													-->
+													<img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지" style="display:block;width:100%;height:100%;object-fit:cover;"><!-- D: 지도 샘플 이미지 -->
+													<span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)"><img src="../resources/images/ico_marker.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+													<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button><!-- D: 확대버튼 -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //지도영역 -->
+
+									<!-- 지도 정보 영역 -->
+									<div class="map_info">
+										<div class="name_box">
+											<strong class="name">경복궁</strong>
+										</div>
+
+										<ul class="map_list">
+											<li>
+												<em>대표번호</em>
+												<span>없음</span>
+											</li>
+											<li>
+												<em>주소지</em>
+												<span>강원 춘천시 신북읍 맥국2길 123</span>
+											</li>
+											<li>
+												<em>영업시간</em>
+												<span>매일 11:00 - 19:30</span>
+											</li>
+											<li>
+												<em>주차</em>
+												<span>주차 가능</span>
+											</li>
+										</ul>
+
+										<div class="map_exp">
+											<div class="tit_box">
+												<strong class="tit">경복궁의 역사</strong>
+											</div>
+											<div class="txt_box on"><!-- D: 내용 더보기 버튼 클릭 시 on 클래스 추가 -->
+												<p class="txt">1963년 1월 21일 사적으로 지정하는 동시에 궁궐의 조성도 착수하였다.1394년(태조 3) 9월 신궐조성도감(新闕造成都監)을 두고 청성백(靑城伯) 심덕부(沈德符), 좌복야 김주(金湊), 전정당문학 이염(李恬), 중추원학사 이직(李稷) 등을 판사에 임명하여 실무를 담당, 해산(亥山.北岳山)을 주산(主山)으로 삼고 임좌병향(壬坐丙向.北北西_에 앉아 南南東을 바라다봄)의 터를 잡았다.</p>
+											</div>
+											<!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+											<div class="btn_box">
+												<button type="button" class="btn_txt has_toggle on"><!-- D: 토글버튼 - 클릭 시 on 클래스 추가/삭제 -->
+													<span class="txt1">더보기</span>
+													<span class="txt2">접기</span>
+												</button>
+											</div>
+											<!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+										</div>
+									</div>
+									<!-- //지도 정보 영역 -->
+								</div>
+								<!-- //지도 모듈 : 지도 + 정보(수평정렬(PC에서만)) -->
+
+								<!-- 퀴즈 모듈 -->
+								<div class="pick_wrap">
+									<div class="pick_head">
+										<span class="cate">퀴즈</span>
+										<span class="date">2023.05.01 - 2023.05.08</span>
+									</div>
+									<div class="pick_tit">
+										<strong class="tit">2023년은 검은 00의 해라는데요! 무슨띠일까요? HINT. 코스모폴리탄과 노티드의 2nd 콜라보 프로젝트는 귀엽고 사랑스러운 크림버니가 주인공!</strong>
+									</div>
+									<div class="pick_box">
+										<ul class="pick_list type1">
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz01" id="quiz01_1">
+													<label for="quiz01_1">
+														<span class="txt">호랑이</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz01" id="quiz01_2">
+													<label for="quiz01_2">
+														<span class="txt">용</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz01" id="quiz01_3">
+													<label for="quiz01_3">
+														<span class="txt">말</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz01" id="quiz01_4">
+													<label for="quiz01_4">
+														<span class="txt">토끼</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="btn_group">
+										<button class="btn bctype1"><span>제출하고 정답보기</span></button>
+									</div>
+								</div>
+								<!-- //퀴즈 모듈 -->
+
+								<!-- 퀴즈 정답 모듈 -->
+								<div class="pick_wrap">
+									<div class="pick_head">
+										<span class="cate">정답</span>
+										<span class="date">2023.05.01 - 2023.05.08</span>
+									</div>
+									<div class="pick_tit">
+										<strong class="tit">2023년은 검은 00의 해라는데요! 무슨띠일까요? HINT. 코스모폴리탄과 노티드의 2nd 콜라보 프로젝트는 귀엽고 사랑스러운 크림버니가 주인공!</strong>
+									</div>
+									<div class="pick_box">
+										<ul class="pick_list type1">
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz02" id="quiz02_1" disabled><!-- D: 모든 문항 비활성화 처리(disabled) -->
+													<label for="quiz02_1">
+														<span class="txt">호랑이</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz02" id="quiz02_2" disabled>
+													<label for="quiz02_2">
+														<span class="txt">용</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz02" id="quiz02_3" disabled>
+													<label for="quiz02_3">
+														<span class="txt">말</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="quiz02" id="quiz02_4" checked disabled><!-- D: 정답 문항의 경우 (checked + disabled) -->
+													<label for="quiz02_4">
+														<span class="txt">토끼</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="btn_group">
+										<button class="btn bctype1"><span>이벤트로 돌아가기</span></button>
+									</div>
+								</div>
+								<!-- //퀴즈 정답 모듈 -->
+
+								<!-- 투표 모듈 : 텍스트 -->
+								<div class="pick_wrap">
+									<div class="pick_head">
+										<span class="cate">투표</span>
+										<span class="date">2023.05.01 - 2023.05.08</span>
+									</div>
+									<div class="pick_tit">
+										<strong class="tit">픽유어픽! 발렌타인데이와 가장 잘 어울리는 엘르의 스타화보는?</strong>
+									</div>
+									<div class="pick_box">
+										<ul class="pick_list type1">
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote01" id="vote01_1">
+													<label for="vote01_1">
+														<span class="txt">트와이스 나연</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote01" id="vote01_2">
+													<label for="vote01_2">
+														<span class="txt">뉴진스 민지</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote01" id="vote01_3">
+													<label for="vote01_3">
+														<span class="txt">블랙핑크 제니</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote01" id="vote01_4">
+													<label for="vote01_4">
+														<span class="txt">아이브 안유진</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="btn_group">
+										<button class="btn bctype2"><span>결과보기</span></button>
+										<button class="btn bctype1"><span>투표하기</span></button>
+									</div>
+								</div>
+								<!-- //투표 모듈 : 텍스트 -->
+
+								<!-- 투표 결과보기 모듈 : 텍스트 -->
+								<div class="pick_wrap">
+									<div class="pick_head">
+										<span class="cate">투표 결과</span>
+										<span class="total"><strong class="count">20,200</strong>명 참여 중</span><!-- D: PC에서 노출 -->
+										<span class="date">2023.05.01 - 2023.05.08</span>
+									</div>
+									<div class="pick_tit">
+										<strong class="tit">픽유어픽! 발렌타인데이와 가장 잘 어울리는 엘르의 스타화보는?</strong>
+									</div>
+									<div class="pick_count"><!-- D: 모바일에서 노출 -->
+										<span class="total"><strong class="count">20,200</strong>명 참여 중</span>
+									</div>
+									<div class="pick_box">
+										<ul class="pick_result_list">
+											<li class="pick_item on"><!-- D: 내가 투표한 항목일 경우 on 클래스 추가, 결과보기 버튼만 클릭시에는 on클래스 안들어감  -->
+												<div class="pick_rate">
+													<div class="info">
+														<span class="bar_rate" style="width: 20%;"></span>
+														<span class="txt">트와이스 나연</span>
+														<span class="txt_result">
+															<span class="percent"><span>20</span>%</span>
+															<span class="count">4,040</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<div class="info">
+														<span class="bar_rate" style="width: 30%;"></span>
+														<span class="txt">뉴진스 민지</span>
+														<span class="txt_result">
+															<span class="percent"><span>30</span>%</span>
+															<span class="count">6,060</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<div class="info">
+														<span class="bar_rate" style="width: 4%;"></span>
+														<span class="txt">블랙핑크 제니</span>
+														<span class="txt_result">
+															<span class="percent"><span>8</span>%</span>
+															<span class="count">1,616</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<div class="info">
+														<span class="bar_rate" style="width: 32%;"></span>
+														<span class="txt">아이브 안유진</span>
+														<span class="txt_result">
+															<span class="percent"><span>32</span>%</span>
+															<span class="count">6,464</span>
+														</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="btn_group">
+										<button class="btn bctype2"><span>투표 다시하기</span></button>
+										<button class="btn bctype1"><span>이벤트로 돌아가기</span></button>
+									</div>
+								</div>
+								<!-- //투표 결과보기 모듈 : 텍스트 -->
+
+								<!-- 투표 모듈 : 이미지+텍스트 -->
+								<div class="pick_wrap">
+									<div class="pick_head">
+										<span class="cate">투표</span>
+										<span class="date">2023.05.01 - 2023.05.08</span>
+									</div>
+									<div class="pick_tit">
+										<strong class="tit">픽유어픽! 발렌타인데이와 가장 잘 어울리는 엘르의 스타화보는? 픽유어픽! 발렌타인데이와 가장 잘 어울리는 엘르의 스타화보는? 픽유어픽!</strong>
+									</div>
+									<div class="pick_box">
+										<ul class="pick_list type2">
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote02" id="vote02_1">
+													<label for="vote02_1">
+														<span class="thumb"><img src="../resources/images/temp/temp_vote01.jpg" alt=""></span><!-- D: 이미지 영역 -->
+														<span class="txt">트와이스 나연</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote02" id="vote02_2">
+													<label for="vote02_2">
+														<span class="thumb"><img src="../resources/images/temp/temp_vote02.jpg" alt=""></span>
+														<span class="txt">뉴진스 민지</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote02" id="vote02_3">
+													<label for="vote02_3">
+														<span class="thumb"><img src="../resources/images/temp/temp_vote03.jpg" alt=""></span>
+														<span class="txt">세븐틴 정한&amp;준</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote02" id="vote02_4">
+													<label for="vote02_4">
+														<span class="thumb"><img src="../resources/images/temp/temp_vote04.jpg" alt=""></span>
+														<span class="txt">아이브 안유진</span>
+													</label>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_radio">
+													<input type="radio" name="vote02" id="vote02_5">
+													<label for="vote02_5">
+														<span class="thumb"><img src="../resources/images/temp/temp_vote05.jpg" alt=""></span>
+														<span class="txt">이성경</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="btn_group">
+										<button class="btn bctype1"><span>투표하고 결과보기</span></button>
+									</div>
+								</div>
+								<!-- //투표 모듈 : 이미지+텍스트 -->
+
+								<!-- 투표 결과보기 모듈 : 이미지+텍스트 -->
+								<div class="pick_wrap">
+									<div class="pick_head">
+										<span class="cate">투표 결과</span>
+										<span class="total"><strong class="count">20,200</strong>명 참여 중</span><!-- D: PC에서 노출 -->
+										<span class="date">2023.05.01 - 2023.05.08</span>
+									</div>
+									<div class="pick_tit">
+										<strong class="tit">픽유어픽! 발렌타인데이와 가장 잘 어울리는 엘르의 스타화보는? 픽유어픽! 발렌타인데이와 가장 잘 어울리는 엘르의 스타화보는? 픽유어픽!</strong>
+									</div>
+									<div class="pick_count"><!-- D: 모바일에서 노출 -->
+										<span class="total"><strong class="count">20,200</strong>명 참여 중</span>
+									</div>
+									<div class="pick_box">
+										<ul class="pick_result_list">
+											<li class="pick_item on"><!-- D: 내가 투표한 항목일 경우 on 클래스 추가, 결과보기 버튼만 클릭시에는 on클래스 안들어감  -->
+												<div class="pick_rate">
+													<span class="thumb"><img src="../resources/images/temp/temp_vote01.jpg" alt=""></span>
+													<div class="info">
+														<span class="bar_rate" style="width: 20%;"></span>
+														<span class="txt">트와이스 나연</span>
+														<span class="txt_result">
+															<span class="percent"><span>20</span>%</span>
+															<span class="count">4,040</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<span class="thumb"><img src="../resources/images/temp/temp_vote02.jpg" alt=""></span>
+													<div class="info">
+														<span class="bar_rate" style="width: 30%;"></span>
+														<span class="txt">뉴진스 민지</span>
+														<span class="txt_result">
+															<span class="percent"><span>30</span>%</span>
+															<span class="count">6,060</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<span class="thumb"><img src="../resources/images/temp/temp_vote03.jpg" alt=""></span>
+													<div class="info">
+														<span class="bar_rate" style="width: 4%;"></span>
+														<span class="txt">세븐틴 정한&amp;준</span>
+														<span class="txt_result">
+															<span class="percent"><span>8</span>%</span>
+															<span class="count">1,616</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<span class="thumb"><img src="../resources/images/temp/temp_vote04.jpg" alt=""></span>
+													<div class="info">
+														<span class="bar_rate" style="width: 32%;"></span>
+														<span class="txt">아이브 안유진</span>
+														<span class="txt_result">
+															<span class="percent"><span>32</span>%</span>
+															<span class="count">6,464</span>
+														</span>
+													</div>
+												</div>
+											</li>
+											<li class="pick_item">
+												<div class="pick_rate">
+													<span class="thumb"><img src="../resources/images/temp/temp_vote05.jpg" alt=""></span>
+													<div class="info">
+														<span class="bar_rate" style="width: 10%;"></span>
+														<span class="txt">이성경</span>
+														<span class="txt_result">
+															<span class="percent"><span>10</span>%</span>
+															<span class="count">2,020</span>
+														</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="btn_group">
+										<button class="btn bctype2"><span>투표 다시하기</span></button>
+										<button class="btn bctype1"><span>이벤트로 돌아가기</span></button>
+									</div>
+								</div>
+								<!-- //투표 결과보기 모듈 : 이미지+텍스트 -->
+
+								<!-- 개인정보 수집 및 이용 동의 모듈 -->
+								<div class="terms_wrap">
+									<div class="tit_wrap">
+										<div class="tit_area">
+											<h3 class="tit">개인정보 수집 및 이용에 대한 동의<em class="ess">*</em></h3>
+										</div>
+									</div>
+									<div class="terms_box">
+										<ul>
+											<li>이벤트 진행을 위해 개인정보(이름, 휴대폰 번호, 이메일 주소)를 수집합니다.</li>
+											<li>이벤트 참여 시 이벤트 패이지의 안내 및 유의사항을 확인하고 개인정보 제 3자 제공에 동의한 것으로 간주합니다.</li>
+											<li>개인정보는 행사 진행 이외의 목적으로 사용되지 않습니다.</li>
+											<li>개인정보 수집 및 이용에 동의하지 않으실 경우 이벤트 참여가 제한됩니다.</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //개인정보 수집 및 이용 동의 모듈 -->
 
 								<!-- 댓글 모듈 -->
 								<div class="comment_wrap">
@@ -886,76 +1443,29 @@
 	</div>
 	<!-- //알럿2 -->
 
+	<!-- 퀴즈정답 얼럿 -->
+	<div class="popup_alert" data-alert="quiz_alert">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">정답 제출이 완료되었습니다.<br>정답을 확인하시겠어요?</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype2"><span>취소</span></button>
+					<button type="button" class="btn bctype1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="quiz_alert"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //퀴즈정답 얼럿 -->
+
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
-
-	<script>
-		/* 이미지 슬라이드 01  */
-		function viewImgSlide() {
-			var viewImgSlide = $('[data-slide="slider-type01"]');
-			if (viewImgSlide.length < 1) return false;
-
-			viewImgSlide.each(function () {
-				var $this = $(this);
-				var swiper = new Swiper(".viewSwiper", {
-					scrollbar: {
-						el: ".swiper-scrollbar",
-						hide: true,
-					},
-					navigation: {
-						nextEl: ".swiper-button-next",
-						prevEl: ".swiper-button-prev",
-					}
-				});
-
-			});
-		}
-
-		//키워드 태그영역 더보기
-		function tagOpen(){
-			if($(this).hasClass('on')){
-				//닫힘
-				$(this).removeClass('on');
-				$('.tag_wrap').removeClass('on');
-			}else{
-				//열림
-				$(this).addClass('on');
-				$('.tag_wrap').addClass('on');
-			}
-		}
-
-		//키워드 태그영역 가로 스크롤 체크 후 더보기 버튼 노출여부
-		function showTagBtn(){
-			var totalWidth = 84;
-			$('.tag_list li').each(function() {
-				var liWidth = parseInt($(this).css('width'));
-				totalWidth += liWidth;
-			});
-
-			if( window.innerWidth > totalWidth || window.innerWidth > 768 ){
-				$('.tag_wrap .btnbox').hide();
-			} else {
-				$('.tag_wrap .btnbox').show();
-			}
-		}
-
-		$(document).ready(function () {
-			viewImgSlide();
-			progress_bar(); //D: 상세페이지 프로그래스바
-
-			//키워드 태그
-			$('.tag_wrap .btnbox .btn_ico').on("click", tagOpen);
-			showTagBtn();
-		});
-
-		$(window).resize(function(){
-			showTagBtn();
-		});
-
-	</script>
 	<!-- //js -->
-
 </body>
 
 </html>

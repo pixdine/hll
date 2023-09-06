@@ -527,7 +527,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
     .point_save_wrap .tit_wrap .tit { font-size:16px}
     .point_prd_info02 .prd_txt dd.prd_detail ul li span.ptit {min-width:80px;}
-
+	 .body_cont01 .tit_wrap02:first-child { margin-bottom:20px}
     .inp_area .body_cont01 ~ .body_cont01 {margin-top:32px}
 
 	.is_mobile .mypage_point_info .tooltip_layer.is-visible   {width:auto;}

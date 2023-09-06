@@ -318,7 +318,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 	.inputbox.search .inp {width:100%}
     .list_sorting_area .option_filter02 .selectbox { margin-left:10px; }
     .list_head_area .inputbox {width:100%; margin-top:16px}
-	.input_type02 li dl dd { padding-right:23.37%;}
+ .pointshop_order .input_type02 li dl dd { padding-right:23.37%;}
 }
 
 
@@ -531,7 +531,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .inp_area .body_cont01 ~ .body_cont01 {margin-top:32px}
 
 	.is_mobile .mypage_point_info .tooltip_layer.is-visible   {width:auto;}
-	.input_type02 li dl dd { padding-right:0}
+	.pointshop_order .input_type02 li dl dd { padding-right:0;}
 
     
 }

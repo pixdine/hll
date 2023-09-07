@@ -649,7 +649,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .board_st01 .board_list { position:relative; display:flex}
 .board_st01 dl { position:relative; display:table; table-layout:fixed; width:100%;}
 .board_st01 dl dt , .board_st01 dl dd {display:table-cell}
-.board_st01 .b_cate {font-size:16px; font-weight:500; color:#666666; line-height:1.4; width:15%;  box-sizing:border-box; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
+.board_st01 .b_cate {font-size:16px; font-weight:500; color:#666666; line-height:1.4; width:22%;  box-sizing:border-box; white-space:nowrap; /*text-overflow: ellipsis; overflow:hidden*/ }
 .board_st01 .b_tit {font-size:18px; font-weight:500; line-height:1.4; padding:0 3.6%;}
 .board_st01 .b_tit a {display:block; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
 .board_st01 .b_date_time {width:20%; white-space:nowrap; box-sizing:border-box; text-align:right; color:#666; padding-right:20px}
@@ -779,6 +779,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 @media (max-width:1023px){
 	
+	
 }
 @media (max-width:899px){
 	.header {transition: height 0.5s ease; }
@@ -798,6 +799,19 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.btn_area.two .btn, .btn_area.two .btn_b { width:48.36%}
 	/*.btn_area{margin-left:-6px;margin-right:-6px;}
 	.btn_area button{margin:0 6px;}*/
+
+	.board_st01 li {position:relative; padding:20px 0 }
+    .board_st01 dl dt , .board_st01 dl dd {display:flex; flex-direction: column; font-size:14px}
+    .board_st01 .b_cate ,.board_st01 .b_tit, .board_st01 .b_date_time {width:100%; padding:0;}
+    .board_st01 .b_date_time {flex-direction: row; padding-left:0px; margin-top:16px; padding-right:0}
+    .board_st01 .b_date { font-size:14px; padding-right:13px}
+    .board_st01 .b_cate {font-size:12px}
+    .board_st01 .b_time { padding-left:13px; font-size:14px;}
+    .board_st01 .b_state {position:absolute; right:0; bottom:0px; white-space:nowrap; }
+    .board_st01 .b_tit {margin-top:8px}
+    .board_st01 .b_cate {color:var(--point);}
+    .board_st01 .b_tit a {font-size:14px}
+    .board_st01 .board_detail { margin-left:0;}
 }
 
 @media (max-width:768px){
@@ -995,18 +1009,6 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	#ui-datepicker-div {width:calc(100% - 40px);max-width:284px;}
 
 	/* board */
-    .board_st01 li {position:relative; padding:20px 0 }
-    .board_st01 dl dt , .board_st01 dl dd {display:flex; flex-direction: column; font-size:14px}
-    .board_st01 .b_cate ,.board_st01 .b_tit, .board_st01 .b_date_time {width:100%; padding:0;}
-    .board_st01 .b_date_time {flex-direction: row; padding-left:0px; margin-top:16px; padding-right:0}
-    .board_st01 .b_date { font-size:14px; padding-right:13px}
-    .board_st01 .b_cate {font-size:12px}
-    .board_st01 .b_time { padding-left:13px; font-size:14px;}
-    .board_st01 .b_state {position:absolute; right:0; bottom:0px; white-space:nowrap; }
-    .board_st01 .b_tit {margin-top:8px}
-    .board_st01 .b_cate {color:var(--point);}
-    .board_st01 .b_tit a {font-size:14px}
-    .board_st01 .board_detail { margin-left:0;}
     .tbl_btm_area.noline { margin-top:40px}
     .tbl_btm_area .tx_btn {display:block; text-align:left}
     .tbl_btm_area .tx {font-size:12px;line-height:17px; margin-bottom:16px}

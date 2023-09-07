@@ -28,9 +28,12 @@
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
-							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) -->
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1>
+							<!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴
+									열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search" data-popup-toggle="popup_search"><span
+									class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
 					</div>
 					<div class="header_bottom">
@@ -52,7 +55,7 @@
 									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+								<button type="button" class="btn_search" data-popup-toggle="popup_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
 						</div>
 					</div>
@@ -86,134 +89,13 @@
 				</div>
 				<!-- //header_wrap -->
 
-				<!-- 전체메뉴 -->
-				<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
-					<div class="allmenu_dimmed"></div>
-					<div class="allmenu_area">
-						<div class="allmenu_inner">
-							<!-- 상단 닫기 영역 -->
-							<div class="top_area">
-								<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
-							</div>
-							<!-- //상단 닫기 영역 -->
-				
-							<!-- 로그인/회원가입 -->
-							<div class="allmenu_util">
-								<a href="#">LOGIN</a><!-- D: LOGOUT -->
-								<a href="#">SIGNUP</a>
-							</div>
-							<!-- //로그인/회원가입 -->
-				
-							<!-- 단일메뉴 및 버티컬 -->
-							<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
-							<div class="allmenu_single">
-								<li><a href="#">예술산책</a></li>
-								<li><a href="#">바자화보</a></li>
-								<li class="line"><a href="#">SUSTAINABILITY</a></li>
-							</div>
-							<!-- //단일메뉴 및 버티컬 -->
-				
-							<!-- 메뉴 -->
-							<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
-							<div class="allmenu_list">
-								<ul class="depth1">
-									<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
-										<a href="http://www.naver.com" target="_blank">FASHION<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">패션 뉴스</a></li>
-											<li><a href="#">패션 트렌드</a></li>
-											<li><a href="#">셀러브리티 스타일</a></li>
-											<li><a href="#">워치&amp;주얼리</a></li>
-											<li><a href="#">스포츠&amp;아웃도어</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">BEAUTY<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">뷰티 뉴스</a></li>
-											<li><a href="#">뷰티 트렌드</a></li>
-											<li><a href="#">다이어트&amp;헬스</a></li>
-											<li><a href="#">향</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">ART<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">아트 뉴스</a></li>
-											<li><a href="#">인터뷰</a></li>
-											<li><a href="#">전시</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">CELEB<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">셀러브리티 뉴스</a></li>
-											<li><a href="#">인터뷰</a></li>
-											<li><a href="#">셀러브리티 스타일</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">LIFESTYLE<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">사회 뉴스</a></li>
-											<li><a href="#">엔터테이먼트</a></li>
-											<li><a href="#">책</a></li>
-											<li><a href="#">음식</a></li>
-											<li><a href="#">리빙</a></li>
-											<li><a href="#">여행</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">HOROSCOPE<span><em class="blind">열기</em></span></a>
-									</li>
-									<li>
-										<a href="#">EVENT <span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">진행 중 이벤트</a></li>
-											<li><a href="#">당첨자 발표</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							<!-- //메뉴 -->
-				
-							<!-- 외부링크 -->
-							<div class="etc_link">
-								<ul>
-									<li><a href="#" target="_blank" title="새창열림">광고&middot;제휴문의</a></li>
-									<li><a href="#" target="_blank" title="새창열림">미디어킷</a></li>
-									<li><a href="#" target="_blank" title="새창열림">RSS FEED</a></li>
-									<li><a href="#" target="_blank" title="새창열림">포인트제도 안내</a></li>
-									<li><a href="#" target="_blank" title="새창열림">고객센터</a></li>
-								</ul>
-							</div>
-							<!-- //외부링크 -->
-				
-							<!-- sns -->
-							<div class="sns_list">
-								<ul>
-									<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram"
-											target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-									<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank"
-											title="새창열림"><span class="blind">유튜브</span></a></li>
-									<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank"
-											title="새창열림"><span class="blind">페이스북</span></a></li>
-									<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank"
-											title="새창열림"><span class="blind">트위터</span></a></li>
-								</ul>
-							</div>
-							<!-- //sns -->
-						</div>
-					</div>
-				</div>
-				<!-- //전체메뉴 -->
-
 				<!-- 검색 레이어 -->
-				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="search_layer" data-popup="popup_search"><!-- D: 오픈 시 open 클래스 추가 -->
 					<div class="cont_inner">
 						<div class="search_box">
 							<div class="inputbox search">
-								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력"
+									autocomplete="off">
 								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
 								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
 							</div>
@@ -260,8 +142,8 @@
 								<ul>
 									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
 									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
-									<li><button type="button" class="btn_sns twitter"><span class="tit">트위터</span></button></li>
-									<li><button type="button" class="btn_sns copy"><span class="tit">링크복사</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
 								</ul>
 							</div>
 						</div>
@@ -271,6 +153,128 @@
 				<!-- //D: [팝업] 공유하기 -->
 			</header>
 			<!-- //header -->
+
+			<!-- 전체메뉴 -->
+			<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="allmenu_dimmed"></div>
+				<div class="allmenu_area">
+					<div class="allmenu_inner">
+						<!-- 상단 닫기 영역 -->
+						<div class="top_area">
+							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+						</div>
+						<!-- //상단 닫기 영역 -->
+
+						<!-- 로그인/회원가입 -->
+						<div class="allmenu_util">
+							<a href="#">LOGIN</a><!-- D: LOGOUT -->
+							<a href="#">SIGNUP</a>
+						</div>
+						<!-- //로그인/회원가입 -->
+
+						<!-- 단일메뉴 및 버티컬 -->
+						<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
+						<div class="allmenu_single">
+							<li><a href="#">예술산책</a></li>
+							<li><a href="#">바자화보</a></li>
+							<li class="line"><a href="#">SUSTAINABILITY</a></li>
+						</div>
+						<!-- //단일메뉴 및 버티컬 -->
+
+						<!-- 메뉴 -->
+						<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+						<div class="allmenu_list">
+							<ul class="depth1">
+								<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+									<a href="http://www.naver.com" target="_blank">FASHION<span><em class="blind">열기</em></span></a>
+									<ul class="depth2">
+										<li><a href="#">패션 뉴스</a></li>
+										<li><a href="#">패션 트렌드</a></li>
+										<li><a href="#">셀러브리티 스타일</a></li>
+										<li><a href="#">워치&amp;주얼리</a></li>
+										<li><a href="#">스포츠&amp;아웃도어</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">BEAUTY<span><em class="blind">열기</em></span></a>
+									<ul class="depth2">
+										<li><a href="#">뷰티 뉴스</a></li>
+										<li><a href="#">뷰티 트렌드</a></li>
+										<li><a href="#">다이어트&amp;헬스</a></li>
+										<li><a href="#">향</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">ART<span><em class="blind">열기</em></span></a>
+									<ul class="depth2">
+										<li><a href="#">아트 뉴스</a></li>
+										<li><a href="#">인터뷰</a></li>
+										<li><a href="#">전시</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">CELEB<span><em class="blind">열기</em></span></a>
+									<ul class="depth2">
+										<li><a href="#">셀러브리티 뉴스</a></li>
+										<li><a href="#">인터뷰</a></li>
+										<li><a href="#">셀러브리티 스타일</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">LIFESTYLE<span><em class="blind">열기</em></span></a>
+									<ul class="depth2">
+										<li><a href="#">사회 뉴스</a></li>
+										<li><a href="#">엔터테이먼트</a></li>
+										<li><a href="#">책</a></li>
+										<li><a href="#">음식</a></li>
+										<li><a href="#">리빙</a></li>
+										<li><a href="#">여행</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">HOROSCOPE<span><em class="blind">열기</em></span></a>
+								</li>
+								<li>
+									<a href="#">EVENT <span><em class="blind">열기</em></span></a>
+									<ul class="depth2">
+										<li><a href="#">진행 중 이벤트</a></li>
+										<li><a href="#">당첨자 발표</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //메뉴 -->
+
+						<!-- 외부링크 -->
+						<div class="etc_link">
+							<ul>
+								<li><a href="#" target="_blank" title="새창열림">광고&middot;제휴문의</a></li>
+								<li><a href="#" target="_blank" title="새창열림">미디어킷</a></li>
+								<li><a href="#" target="_blank" title="새창열림">RSS FEED</a></li>
+								<li><a href="#" target="_blank" title="새창열림">포인트제도 안내</a></li>
+								<li><a href="#" target="_blank" title="새창열림">고객센터</a></li>
+							</ul>
+						</div>
+						<!-- //외부링크 -->
+
+						<!-- sns -->
+						<div class="sns_list">
+							<ul>
+								<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram"
+										target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank"
+										title="새창열림"><span class="blind">유튜브</span></a></li>
+								<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank"
+										title="새창열림"><span class="blind">페이스북</span></a></li>
+								<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank"
+										title="새창열림"><span class="blind">트위터</span></a></li>
+							</ul>
+						</div>
+						<!-- //sns -->
+					</div>
+				</div>
+			</div>
+			<!-- //전체메뉴 -->
 
 			<!-- container -->
 			<div id="container" class="container">
@@ -535,16 +539,21 @@
 										<p class="ab_emphasis_content">무대를 준비하는 과정에서 더욱 긴장되고 부담되기도 했지만 욕심 낼 만한 일이잖아요?</p>
 									</div>
 
-									<!-- 추천 파티클 -->
-									<div class="ab_recommend_list">
-										<dl>
-											<dt>이 기사와 같이 보면 더 좋아요!</dt>
-											<dd><a href="#">역대급! 루이 비통 프리폴 컬렉션에 참석한 스타들 총정리</a></dd>
-											<dd><a href="#">여름 네일 시안 찾고 있다면 클릭!</a></dd>
-											<dd><a href="#">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</a></dd>
-											<dd><a href="#">여배우의 ‘급빠’법? 이청아의 시상식 전 다이어트</a></dd>
-										</dl>
+									<!-- 관련 기사-->
+									<div class="ab_related_article">
+										<div class="hd">
+											<h2><strong>이 기사와 같이 보면 더 좋아요!</strong></h2>
+										</div>
+										<div class="bd">
+											<ul class="text_type">
+												<li><h2 class="headline"><a href="#">루이 비통 프리폴 컬렉션에 참석한 스타들 총정리</a></h2></li>
+												<li><h2 class="headline"><a href="#">여름 네일 시안 찾고 있다면 클릭!</a></h2></li>
+												<li><h2 class="headline"><a href="#">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</a></h2></li>
+												<li><h2 class="headline"><a href="#">여배우의 ‘급빠’법? 이청아의 시상식 전 다이어트</a></h2></li>
+											</ul>
+										</div>
 									</div>
+									<!-- //관련 기사-->
 
                                     <!-- atc_dtline -->
                                     <div class="atc_dtline_box">
@@ -644,11 +653,11 @@
 										</div>
 										<!-- //리스트 -->
 
-										<!-- 기사 더보기 -->
-										<div class="btn_wrap">
-											<a href="#" class="btn_txt has_plus" target="_blank" title="새창열림"><span>이 키워드의 기사 더보기</span></a>
+										<!-- 더보기 -->
+										<div class="btn_more_wrap">
+											<a href="#" class="btn more noline" target="_blank" title="새창열림"><span>이 키워드의 기사 더보기</span></a>
 										</div>
-										<!-- //기사 더보기 -->
+										<!-- //더보기 -->
 									</div>
 								</div>
 								<!-- //이 기사엔 이런 키워드 -->
@@ -932,10 +941,32 @@
 		</div>
 	</div>
 
+	<!-- 팝업 : 복사하기 알럿 -->
+	<div class="popup_alert" data-alert="alert_1">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">클립보드에 복사되었습니다.</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 복사하기 알럿 -->
+
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
 	
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
 	<script>
 		/* 이미지 슬라이드 01  */
 		function viewImgSlide() {
@@ -998,6 +1029,7 @@
 		$(window).resize(function(){
 			showTagBtn();
 		});
+
 	</script>
 	<!-- //js -->
 

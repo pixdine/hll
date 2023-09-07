@@ -436,6 +436,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .chk_list li .btn_ico { vertical-align:middle;}
 
     .btn_area.sns { width:auto}
+    .btn_area.sns .btn {min-width: auto;}
+    .btn_area.sns .btn span {font-size: 13px;}
 
     .btn.h36 { height:36px; font-size:14px; padding:0 20px}
 

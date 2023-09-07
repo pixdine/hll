@@ -12,27 +12,27 @@ $(document).ready(function(){
 	setAtcList();
 	$("header").length && headerSticky();
 	allmenuOpen();
-    initOnDevice();
-    inputBind();
+  initOnDevice();
+  inputBind();
 
-    $('[data-popup-toggle]').on('click', function(e) {
-        var targetId = $(this).attr('data-popup-toggle')
-        var targetElement = $('[data-popup="' + targetId + '"]')
-        var isVisible = targetElement.is(':visible')
-        var gap = window.innerWidth - document.documentElement.clientWidth
+  $('[data-popup-toggle]').on('click', function(e) {
+      var targetId = $(this).attr('data-popup-toggle')
+      var targetElement = $('[data-popup="' + targetId + '"]')
+      var isVisible = targetElement.is(':visible')
+      var gap = window.innerWidth - document.documentElement.clientWidth
 
-		if(targetId === 'popup_search') {
-			$("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
-		} else {
-			$(this).toggleClass('on', !isVisible)
-		}
-		
-        if (isVisible) {
-            popup.close(targetId, 'popup')
-        } else {
-            popup.open(targetId, 'popup', false)
-        }
-    });
+  if(targetId === 'popup_search') {
+    $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
+  } else {
+    $(this).toggleClass('on', !isVisible)
+  }
+  
+      if (isVisible) {
+          popup.close(targetId, 'popup')
+      } else {
+          popup.open(targetId, 'popup', false)
+      }
+  });
 
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
@@ -93,6 +93,12 @@ $(document).ready(function(){
 		});
 	}
 	$("[data-selectbox]").selectbox();
+
+
+  // 리뷰 댓글 기능 MORE DROP
+  if ($('.more_drop').length > 0) {
+    $('.more_drop').moreDrop();
+  }
 });
 
 
@@ -680,3 +686,21 @@ function enableScroll() {
 
 };
 
+
+// 리뷰 더보기 MORE DROP
+$.fn.moreDrop = function () {
+  return this.each(function (i) {
+    var moreDropBody = $(this);
+    var toggleBtn = moreDropBody.find('.btn_ico');
+    var layerBox = moreDropBody.find('.layer_box');
+    console.log(moreDropBody);
+    toggleBtn.on('click', function () {
+      moreDropBody.addClass('on');
+    });
+    toggleBtn.on('focusout', function () {
+      setTimeout(function () {
+        moreDropBody.removeClass('on');
+      }, 100)
+    });
+  });
+}

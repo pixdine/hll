@@ -247,6 +247,7 @@
 
 .more_drop{position:relative;}
 .more_drop .layer_box{display:none;position:absolute;right:0;top:26px;z-index:2;background-color:#fff;border:1px solid #ccc;}
+.more_drop.on .layer_box{display: block;}
 .more_drop .layer_list{padding:4px 0;}
 .more_drop .layer_list .btnm{display:inline-flex;align-items:center;width:100%;padding:8px 16px;font-size:14px;font-weight:400;color:#999;}
 .more_drop .btnm.modify:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;background:url("../images/ico_modify_16.svg") no-repeat center center;}

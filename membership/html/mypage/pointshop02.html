@@ -19,6 +19,21 @@
 		<!--전체메뉴-->
 		<div class="allmenu_wrap">
 			<div class="cont_inner">
+			<script>
+					function login(){
+						console.log('login');
+						$(".login_info_box").css("display" ,"block");
+						$(".info_box").css("display", "none");
+
+					}
+
+					function logout() {
+						console.log('logout');
+						$(".info_box").css("display", "block");
+						$(".login_info_box").css("display", "none");
+
+					}
+				</script>
 				<!-- login 전 > 모바일에서만 노출됨 -->
 				<div class="info_box">
 					<p class="info_txt">

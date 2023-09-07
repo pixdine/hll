@@ -592,22 +592,23 @@ function setAtcList(){
 
 //상세페이지 프로그래스바
 function progress_bar() {
-	console.log("progress bar");
+	console.log("load progress bar");
 	const progress_wrap = document.createElement('div');
 	progress_wrap.setAttribute('class','progress_bar');
 	document.querySelector('.header').append(progress_wrap);
-    var body = document.body;
-	var  bar = document.querySelector('.progress_bar')
-	window.addEventListener('scroll', function(){
-		setTimeout(function() {
-			if(!body.classList.contains('lockbody')) {
+	var body = document.body;
+	var bar = document.querySelector('.progress_bar');
 
-				console.log("progress bar");
+	// window.addEventListener('scroll', function(){
+	document.querySelector('body').addEventListener('scroll', function(){
+		// setTimeout(function() {
+			if(!body.classList.contains('lockbody')) {
 				var winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-				height = document.documentElement.scrollHeight - window.innerHeight;
+				// height = document.documentElement.scrollHeight - window.innerHeight;
+				height = document.body.scrollHeight - document.documentElement.scrollHeight;
 				bar.style.width = ((winScroll / height) * 100) + "%";
 			}
-		}, 300);
+		// }, 300);
 	});
 }
 
@@ -672,6 +673,7 @@ function enableScroll() {
 	if(body.hasAttribute('scrollY')) {
 		$(body).removeClass('lockbody');
 		body.scrollTop =  Number(body.getAttribute('scrollY'));
+		body.removeAttribute('scrolly');
     }
 
 	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });

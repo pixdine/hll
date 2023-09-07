@@ -35,9 +35,10 @@
 
 /* 기사상세 > body */
 .atc_wrap .atc_body { margin: 40px auto 0; max-width: 792px;}
+
 /* 기사상세 > 본문 이미지 1200 */
-.ab_photo_1200 {position: relative; width:calc(100% + 52%); max-width: 1200px; margin: 24px auto 24px -26%;}
-.ab_photo_1200 img {width: 100%; display:block}
+.ab_photo_1200 {position:relative;left:50%;transform:translateX(-50%);width:1200px;margin:24px auto;}
+.ab_photo_1200 img {width:100%;}
 
 .atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em; }
 body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03em;}
@@ -212,7 +213,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
     .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;}
 
     .atc_body .ab_photo {margin:24px -20px; width:auto} /* 기사상세 > 본문 이미지 792 */
-    .ab_photo_1200 {position: relative; left:0;width:auto; margin: 0 -20px 24px;}
+    .ab_photo_1200{left:0;transform:translateX(0);width:auto;margin:24px -20px;}
 
     .tag_photobundle { margin:20px -20px}
     .tag_photobundle .viewSwiper { padding-bottom:55px}

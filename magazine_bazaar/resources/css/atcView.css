@@ -35,14 +35,15 @@
 
 /* 기사상세 > body */
 .atc_wrap .atc_body { margin: 0 auto; max-width: 792px;}
+
 /* 기사상세 > 본문 이미지 1200 */
-.ab_photo_1200 {position: relative; width:calc(100% + 52%); max-width: 1200px; margin: 24px auto 24px -26%;}
-.ab_photo_1200 img {width: 100%; display:block}
+.ab_photo_1200 {position:relative;left:50%;transform:translateX(-50%);width:1200px;margin:24px auto;}
+.ab_photo_1200 img {width:100%;}
 
 .atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em; }
 body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin:24px auto;} /* 기사상세 > 본문 이미지 792 */
-.atc_body .ab_photo img { width: 100%; display:block}
+.atc_body .ab_photo img { width: 100%; }
 .atc_body .caption {font-size: 14px;line-height: 24px;letter-spacing:0.08em; color:#666; font-weight: 400;text-align: left;margin-top: 12px}
 
 /* 기사상세 > body > 사진 두장씩 */
@@ -98,17 +99,18 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .tag_sns .link_source em { color: #0095F6; display:inline-block; margin-left:4px }  
 
 /* 기사상세 > body > 기사작성자 정보 */
-.atc_dtline_box {padding-top:80px;}
+.atc_dtline_box{margin:80px 0;}
 .atc_dtline_box h3.title {font-family:'Didot'; font-weight:500; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit {font-size:16px; font-weight: 400; line-height:23px; color:#666; letter-spacing:-0.01em}
-.atc_dtline_box .list_credit li {margin-bottom:4px; display:flex; flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;}
+.atc_dtline_box .list_credit li {display:flex; flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;}
+.atc_dtline_box .list_credit li:not(:first-child){margin-top:4px;}
 .atc_dtline_box .list_credit li em { margin-right:8px}
 .atc_dtline_box .list_tag_type_01 {}
 .atc_dtline_box .list_tag_type_01 li { display:inline-block; border:1px solid #ccc; font-size:14px;  margin-right:4px; line-height:36px;}
 .atc_dtline_box .list_tag_type_01 li a { display:block; padding:0 20px}
 
 /* 기사상세 > 키워드 태그 */
-.tag_atc_wrap{margin-top:80px;padding-top:80px;border-top:1px solid #D9D9D9;}
+.tag_atc_wrap{margin-top:80px;padding-top:80px;border-top:1px solid #dbdbdb;}
 .atc_wrap .tag_atc_wrap .cont_inner,
 .atc_wrap.wide .tag_atc_wrap .cont_inner{padding:0;}
 .tag_atc_wrap .tit_wrap{margin-bottom:40px;}
@@ -122,10 +124,24 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .tag_atc_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
 .tag_atc_list li{display:inline-block;width:calc(33.333% - 16px);vertical-align:top;}
 
+/* 기사상세 > 관련 기사 */
+.ab_related_article{margin:80px 0;}
+.ab_related_article .hd h2{font-size:24px;font-weight:500;line-height:35px;color:#111;}
+.ab_related_article .hd h2 strong{font-weight:inherit;}
+.ab_related_article .text_type{margin-top:20px;}
+.ab_related_article .text_type li{position:relative;padding-left:17px;}
+.ab_related_article .text_type li:before{content:'';display:block;position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background-color:#999;}
+.ab_related_article .headline{font-size:18px;font-weight:400;line-height:26px;color:#111;}
+.ab_related_article .headline a{display:block;color:#222;}
+.ab_related_article .text_type li strong{font-weight:400;}
+.ab_related_article .text_type li:not(:first-child){margin-top:8px;}
+
 
 /************************* Media Query *************************/
-@media (max-width:1218px){
-    html { overflow-x:hidden }
+@media (max-width:1216px){
+    html, body {overflow-x:hidden;}
+	.ab_photo_1200{width:calc(100vw - 16px);}
+	.ab_photo_1200 .caption{padding-left:20px;}
 }
 
 @media (max-width:768px){
@@ -148,7 +164,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;}
 
     .atc_body .ab_photo {margin:24px -20px; width:auto} /* 기사상세 > 본문 이미지 792 */
-    .ab_photo_1200 {position: relative; left:0;width:auto; margin: 0 -20px 24px;}
+    .ab_photo_1200{left:0;transform:translateX(0);width:auto;margin:24px -20px;}
 
     .tag_photobundle { margin:20px -20px}
     .tag_photobundle .viewSwiper { padding-bottom:55px}
@@ -172,13 +188,13 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
     .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third02 div:nth-child(3) {margin-left:3%; margin-top:0 }
 
-    .atc_dtline_box { padding-top:60px;}
+    .atc_dtline_box {margin:60px 0;}
     .atc_dtline_box h3.title {font-size:24px; line-height:30px;}
     .atc_dtline_box .list_credit {font-size:14px; line-height:20px;}
 
 	.tag_atc_wrap{margin-top:60px;padding-top:60px;}
 	.tag_atc_wrap .tit_wrap{margin-bottom:20px;}
-	.tag_atc_wrap .btn_more_wrap{margin-top:36px;}
+	.tag_atc_wrap .btn_more_wrap{margin-top:32px;}
 	.tag_wrap{position:relative;margin:0 -20px;}
 	.tag_list{display:block;overflow-x:auto;position:relative;margin-bottom:32px;padding:0 64px 0 20px;white-space:nowrap;font-size:0;}
 	.tag_list::-webkit-scrollbar{display:none;}
@@ -197,4 +213,10 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 	.tag_atc_list ul::-webkit-scrollbar{display:none;}
 	.tag_atc_list li{width:65.377%;margin-right:12px;}
 	.tag_atc_list li:last-child{margin-right:0;}
+
+	.ab_related_article{margin:60px 0;}
+	.ab_related_article .hd h2{font-size:20px;line-height:29px;}
+	.ab_related_article .text_type{margin-top:16px;}
+	.ab_related_article .headline{font-size:16px;line-height:28px;letter-spacing:-0.03em;}
+	.ab_related_article .text_type li:not(:first-child){margin-top:4px;}
 }

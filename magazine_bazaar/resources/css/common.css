@@ -37,7 +37,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section{display:block;}
 ol, ul, li{list-style:none}
 table{width:100%;border-collapse:collapse;border-spacing:0;}
-img{max-width:100%;border:0;}
+img{max-width:100%;border:0;vertical-align:top;}
 i, em, address{font-style:normal;}
 strong, b{font-weight:700;}
 sup{font-size:10px;line-height:1;}
@@ -200,7 +200,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 /* header 공통스타일 */
 .header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}
 .header .logo a{display:block;font-size:0;}
-.header .logo img{width:100%;}
+.header .logo img{width:100%;vertical-align:baseline;}
 .header .btn_menu{display:block;position:relative;z-index:1;width:38px;height:38px;margin-left:-4px;}
 .header .btn_menu:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_menu.svg') center center no-repeat;background-size:28px auto;}
 .header .btn_search{display:block;position:relative;z-index:1;width:38px;height:38px;}

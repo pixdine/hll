@@ -673,7 +673,7 @@ function enableScroll() {
 	if(body.hasAttribute('scrollY')) {
 		$(body).removeClass('lockbody');
 		body.scrollTop =  Number(body.getAttribute('scrollY'));
-		body.removeAttribute('scrolly');
+		body.removeAttribute('scrollY');
     }
 
 	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });

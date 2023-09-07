@@ -753,11 +753,10 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .chk_list li .chk_in { vertical-align:middle; color:#111}
 .chk_list li .btn_ico { vertical-align:middle; position: relative; top:1px;}
 
-.tooltip_layer {position:absolute; top:27px; left: -7px; width:0 ;height:0; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
+.tooltip_layer {position:absolute; top:27px; left: -7px; display: flex; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
 .tooltip_layer.is-visible { width: auto; height: auto; opacity:1; z-index:201; }
-.is_mobile .tooltip_layer.is-visible { width:300px; }
 .tooltip_layer.revert { left: auto; right: -7px; }
-.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 8px 16px 7px; /* white-space: nowrap; */ overflow: hidden;}
+.tooltip_layer p {max-width: 250px; font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 7px 16px 8px; width: max-content;}
 
 .is_pc .tooltip_layer p br { display:none; }
 
@@ -1834,9 +1833,8 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 .tooltip_layer {position:absolute; top:27px; left: -7px; width:0 ;height:0; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
 .tooltip_layer.is-visible { width: auto; height: auto; opacity:1; z-index:201; }
-.is_mobile .tooltip_layer.is-visible { width:300px; }
 .tooltip_layer.revert { left: auto; right: -7px; }
-.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 8px 16px 7px; /* white-space: nowrap; */ overflow: hidden;}
+.tooltip_layer p { font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 7px 16px 8px; /* white-space: nowrap; */ overflow: hidden;}
 
 .is_pc .tooltip_layer p br { display:none; }
 

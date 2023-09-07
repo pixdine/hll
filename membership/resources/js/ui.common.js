@@ -84,7 +84,7 @@ $(document).ready(function () {
                       $("p", layerEl).css("transform", `translate(${-layerEl.offset().left + 20}px, 0)`)
                   }
               } else {
-                console.log("여긴 모냐");
+                console.log("툴팁오픈");
                 // layerEl.removeClass('revert')
               }
             }

@@ -693,14 +693,17 @@ $.fn.moreDrop = function () {
     var moreDropBody = $(this);
     var toggleBtn = moreDropBody.find('.btn_ico');
     var layerBox = moreDropBody.find('.layer_box');
-    console.log(moreDropBody);
     toggleBtn.on('click', function () {
-      moreDropBody.addClass('on');
+      if (moreDropBody.hasClass('on')) {
+        moreDropBody.removeClass('on');
+      } else {
+        moreDropBody.addClass('on');
+      }
     });
-    toggleBtn.on('focusout', function () {
+    toggleBtn.on('blur', function () {
       setTimeout(function () {
         moreDropBody.removeClass('on');
-      }, 100)
+      }, 100);
     });
   });
 }

@@ -343,6 +343,7 @@
 .is_pc .map_wrap.horiz .map_area{width:48.485%;}
 .is_pc .map_wrap.horiz .map_item{padding-top:100%;}
 .is_pc .map_wrap.horiz .map_info{width:51.515%;margin-top:0;padding-left:24px;}
+.is_pc .map_wrap.horiz .map_area .btn_ico.zoom{right:12px;top:12px;}
 
 
 

@@ -228,11 +228,10 @@
 .comment_info .user_info .name{display:block;overflow:hidden;min-width:0;text-overflow:ellipsis;white-space:nowrap;}
 .comment_info .user_info .date{display:block;white-space:nowrap;font-weight:400;color:#999;}
 .comment_info .more_drop{margin-left:auto;}
-.comment_box .btn_box{display:flex;margin-top:2px;}
+.comment_box .btn_box{display:none;margin-top:2px;}
 .comment_box .btn_box .has_toggle{font-size:14px;}
-.comment_txt .txt{overflow:hidden;position:relative;max-height:60px;font-size:14px;font-weight:400;line-height:20px;word-break:break-all;}
-.comment_txt:not(.on) .txt{display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
-.comment_txt.on .txt{overflow:visible;max-height:100%;}
+.comment_txt .txt{position:relative;max-height:100%;font-size:14px;font-weight:400;line-height:20px;word-break:break-all;}
+.comment_txt.hide .txt{overflow:hidden;max-height:60px;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
 .comment_txt~ .comment_img{margin-top:14px;}
 .comment_img img{display:block;}
 .comment_modify{display:none;}
@@ -336,9 +335,8 @@
 .map_wrap .map_exp{margin-top:20px;padding-top:20px;border-top:1px solid #dbdbdb;}
 .map_wrap .map_exp .tit_box{margin-bottom:8px;}
 .map_wrap .map_exp .tit_box .tit{font-size:16px;font-weight:400;line-height:23px;}
-.map_wrap .map_exp .txt_box.on .txt{overflow:visible;max-height:100%;}
-.map_wrap .map_exp .txt_box:not(.on) .txt{display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
-.map_wrap .map_exp .txt_box .txt{overflow:hidden;position:relative;max-height:84px;font-size:16px;font-weight:400;color:#666;line-height:28px;word-break:break-all;}
+.map_wrap .map_exp .txt_box .txt{font-size:16px;font-weight:400;color:#666;line-height:28px;word-break:break-all;}
+.map_wrap .map_exp .txt_box.hide .txt{overflow:hidden;position:relative;max-height:84px;}
 .map_wrap .map_exp .btn_box{margin-top:4px;}
 .is_pc .map_wrap.horiz{display:flex;width:100%;align-items:flex-start;}
 .is_pc .map_wrap.horiz .map_area{width:48.485%;}

@@ -94,8 +94,7 @@ $(document).ready(function(){
 	}
 	$("[data-selectbox]").selectbox();
 
-
-  // 리뷰 댓글 기능 MORE DROP
+  // 상세페이지 댓글 기능 MORE DROP
   if ($('.more_drop').length > 0) {
     $('.more_drop').moreDrop();
   }
@@ -110,19 +109,6 @@ function setCSS(){
 	window.addEventListener('resize', setVh);
 	setVh();
 }
-
-//디바이스 체크
-$(window).on('resize', function(){
-	if (window.innerWidth > 768) {
-		//PC
-		$('body').removeClass('is_mobile').addClass('is_pc');
-	} else {
-		//Mobile
-		$('body').removeClass('is_pc').addClass('is_mobile');
-	}
-    initOnDevice()
-}).resize();
-
 
 //header sticky
 function headerSticky () {
@@ -632,7 +618,6 @@ function familySite(_target){
 	}
 }
 
-
 // body lock scroll ios 대응
 function lockScrollHandle (event) {
 	const e = event || window.event;
@@ -656,7 +641,6 @@ function lockScrollHandle (event) {
 
 	return false;
 }
-
 
 // 스크롤 잠금
 function disableScroll() {
@@ -686,8 +670,47 @@ function enableScroll() {
 
 };
 
+// 상세페이지 댓글 접기
+$.fn.commentToggle = function () {
+  this.off();
 
-// 리뷰 더보기 MORE DROP
+  return this.each(function (i) {
+    var cBox = $(this);
+    var cBoxBtnWrap = cBox.find('.btn_box');
+    var cBoxToggle = cBox.find('.btn_txt.has_toggle');
+    var cBoxToggleTxt = cBox.find('.btn_txt.has_toggle .txt');
+    var commentTxt = cBox.find('.comment_txt');
+    var commentTxtChild = cBox.find('.comment_txt .txt');
+    var lineHeight = commentTxtChild.css('line-height').split('px')[0];
+
+    console.log(commentTxt.height(), commentTxtChild, lineHeight);
+
+    // 3줄이 넘어가면 더보기 버튼이 보여야 합니다.
+    if (commentTxtChild.height() > lineHeight*3) {
+      cBoxBtnWrap.css('display', 'flex');
+      commentTxt.addClass('hide');
+      cBoxToggle.removeClass('on');
+      cBoxToggleTxt.text('더보기')
+    }
+
+    // console.log('lineHeight', lineHeight);
+
+    //리사이징시 재호출되어 중복을 방지하기 위한 이벤트 리스너 제거
+    cBoxToggle.off('click');   
+
+    cBoxToggle.on('click', function () {
+      if ($(this).hasClass('on')) {
+        $(this).removeClass('on').children().text('더보기');
+        commentTxt.addClass('hide');
+      } else {
+        $(this).addClass('on').children().text('접기');
+        commentTxt.removeClass('hide');
+      }
+    });
+  });
+}  
+
+// 상세페이지 댓글 더보기 MORE DROP
 $.fn.moreDrop = function () {
   return this.each(function (i) {
     var moreDropBody = $(this);
@@ -707,3 +730,30 @@ $.fn.moreDrop = function () {
     });
   });
 }
+
+//디바이스 체크
+$(window).on('resize', function(){
+	if (window.innerWidth > 768) {
+		//PC
+		$('body').removeClass('is_mobile').addClass('is_pc');
+	} else {
+		//Mobile
+		$('body').removeClass('is_pc').addClass('is_mobile');
+	}
+  initOnDevice();  
+  
+  // 상세페이지 댓글 접기
+  $('.comment_box').commentToggle();
+}).resize();
+
+// debounce 함수: 주어진 함수를 마지막 호출로부터 지정된 시간이 지나기 전에는 다시 호출되지 않도록 합니다.
+// function debounce(func, wait) {
+//   var timeout;
+//   return function() {
+//     var context = this, args = arguments;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(function() {
+//       func.apply(context, args);
+//     }, wait);
+//   };
+// }

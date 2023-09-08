@@ -460,6 +460,12 @@ background:#fff;overflow:hidden;z-index:230}
 .sns_list .btn_sns{display:block;}
 .sns_list.follow ul{column-gap:47px;flex-wrap:nowrap;}
 
+/* 커스텀 스크롤 */
+.scroll_wrap > * {overflow:auto;}
+.scroll_wrap > *::-webkit-scrollbar{width:4px;height:4px;}
+.scroll_wrap > *::-webkit-scrollbar-thumb{background-color:#111}
+.scroll_wrap > *::-webkit-scrollbar-track{background-color:#dbdbdb;}
+
 
 
 /************************* content *************************/

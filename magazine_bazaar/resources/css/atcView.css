@@ -184,6 +184,40 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_related_article .text_type li strong{font-weight:400;}
 .ab_related_article .text_type li:not(:first-child){margin-top:8px;}
 
+.photo_third03 {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto;}
+.photo_third03 div {display:flex; flex-direction:column; align-items:normal;width:calc(50% - 12px);  }
+.photo_third03 div img {display:block;object-fit: cover;  height:calc(100% - 36px)}
+.photo_third03 .photo_box01:first-child {width:100%;width: 100%;height: 100%; margin:0 0 24px 0}
+.photo_third03 .photo_box01:first-child img {display:inline-block}
+
+.photo_five {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto;}
+.photo_five div {display:flex; flex-direction:column; align-items:normal;width:calc(50% - 12px);  }
+.photo_five div img {display:inline-block;object-fit: cover;  height:calc(100% - 36px)}
+.photo_five .photo_box_center {width:100%;width: 100%;height: 100%; margin:24px auto}
+.photo_five .photo_box_center img {display:block}
+
+.photo_four {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto;}
+.photo_four div {width:calc(50% - 12px); margin:24px 0 0 0; }
+.photo_four div img {display:block; object-fit: cover; width:100%; height:calc(100% - 36px)}
+.photo_four div:nth-child(1), .photo_four div:nth-child(2) {margin-top:0}
+
+.photo_txt {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; align-items: flex-start; height:auto;}
+.photo_txt div {width:calc(50% - 12px); margin:24px 0 0 0; }
+.photo_txt div img {display:block; object-fit: cover; width:100%;}
+.photo_txt div:nth-child(1), .photo_txt div:nth-child(2) {margin-top:0}
+.photo_txt div.txt { padding-bottom:36px;}
+
+.photo_four02 {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto;}
+.photo_four02 div {margin:24px 0 0 0; }
+.photo_four02 div img {display:block; object-fit: cover; width:100%; height:calc(100% - 36px)}
+.photo_four02 div:nth-child(1) , .photo_four02 div:nth-child(4) {width:66%}
+.photo_four02 div:nth-child(3), .photo_four02 div:nth-child(2)  {width:32%}
+
+/* wide > 1200 */
+
+.ab_photo_1200 .tag_photobundle .swiper-slide {height:712px}
+.ab_photo_1200 .tag_photobundle img {width:auto}
+
 
 
 /************************* Media Query *************************/
@@ -280,7 +314,6 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
     .tag_quotation::after {content:''; width:24px; height:17px; }
     .tag_quotation::before {content:'';  width:24px; height:17px;}
 
-
     .tag_quotation02 { position:relative; width:auto; margin:20px; padding:54.7px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
     .tag_quotation02:after {content:''; width:20px; height:20px; }
     .tag_quotation02::before {content:''; width:20px; height:20px; }
@@ -295,5 +328,26 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 	.ab_related_article .text_type{margin-top:16px;}
 	.ab_related_article .headline{font-size:16px;line-height:28px;letter-spacing:-0.03em;}
 	.ab_related_article .text_type li:not(:first-child){margin-top:4px;}
+
+    .photo_third03 { width:auto; margin:0px -20px 24px; }
+    .photo_third03 div {width: calc(50% - 1.5%);}
+    .photo_third03 div img {height: calc(100% - 32px);}
+    .photo_five { width:auto; margin:0px -20px 24px; }
+    .photo_five div {width: calc(50% - 1.5%);}
+    .photo_five div img {height: calc(100% - 32px);}
+    .photo_four { width:auto; margin:0px -20px 24px; }
+    .photo_four div {width: calc(50% - 1.5%);}
+    .photo_four div img {height: calc(100% - 32px);}
+
+    .photo_txt {flex-direction:column; }
+    .photo_txt div {width:100%; margin:20px 0 0 0}
+    .photo_txt div .caption{padding-left:0}
+    .photo_txt div.txt {margin:20px 0 0 0; padding-bottom:0}
+    .photo_txt div:nth-child(1) {order:1}	
+    .photo_txt div:nth-child(2) {order:2}
+    .photo_txt div:nth-child(3) {order:4}	
+    .photo_txt div:nth-child(4) {order:3}	
+    
+    .ab_photo_1200 .tag_photobundle, .ab_photo_1200 .photo_five , .ab_photo_1200 .photo_four { margin:20px 0}
 
 }

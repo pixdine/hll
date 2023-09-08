@@ -257,7 +257,8 @@
 .terms_wrap{margin:80px auto 0;padding-top:80px;border-top:1px solid #dbdbdb;}
 .terms_wrap .tit_wrap{margin-bottom:24px;}
 .terms_wrap .tit_wrap .tit{font-size:16px;line-height:23px;}
-.terms_wrap .terms_box{overflow:auto;max-height:168px;padding:31px;border: 1px solid #dbdbdb;font-size:14px;font-weight:400;line-height:20px;color:#111;}
+.terms_wrap .scroll_wrap {padding:31px 8px 31px 0;border: 1px solid #dbdbdb;}
+.terms_wrap .terms_box{max-height:200px;padding:0 23px 0 31px;font-size:14px;font-weight:400;line-height:20px;color:#111;}
 .terms_wrap .terms_box ul li + li{margin-top:8px;}
 
 /* 투표 & 퀴즈 모듈 */

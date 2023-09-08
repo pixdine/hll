@@ -24,7 +24,7 @@
 .mypage_point_info ul li dl dt .tooltip { vertical-align:top; margin:5px 0 0 4px }
 .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:-5px}
 .mypage_point_info ul li dl dd .bctype1 span { line-height:1.5}
-.mypage_point_info ul li dl dd .tooltip { position:absolute; right:0; bottom:27px}
+.mypage_point_info ul li dl dd .tooltip { position:absolute; right:0; bottom:8px}
 .mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Gotham'; font-size:28px; font-weight:500; text-align:right; padding-right:40px; }
 .mypage_point_info ul li dl dd strong { font-weight:500; font-size:40px;  line-height:1 }
 .mypage_point_info ul li dl dd .c_point {color:var(--point); position:relative; top:-2px}
@@ -343,6 +343,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .mypage_point_info ul li dl dd .bctype1 span {font-size:12px }
     .mypage_point_info ul li dl dd .sep { font-size: 15px;}
     .mypage_point_info ul li dl dd .point {font-size:16px; font-family:'Gotham'; font-weight:500}
+	.mypage_point_info ul li dl dd .tooltip {bottom:5px}
 
     /* 포인트 샵 */
     .point_shop_wrap { margin: 80px auto}
@@ -533,8 +534,9 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 	.is_mobile .mypage_point_info .tooltip_layer.is-visible   {width:auto;}
 	.pointshop_order .input_type02 li dl dd { padding-right:0;}
-
-    
+	
+	.point_shop_wrap .tit_wrap .tit_area .tit span { display:block}
+    .moa_wrap .tit_wrap .tit_area .side { display:none}
 }
 
 @media (max-width:375px){

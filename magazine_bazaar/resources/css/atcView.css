@@ -263,17 +263,20 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
     .tag_vod_box01 { margin:20px -20px; }
     .tag_sns {display:block;width:298px}
 
-    .photo_dual { margin:20px -20px; width:auto} 
+    .photo_dual { margin:20px -20px; width:auto}
+	.photo_dual .photo_box02 .caption{padding-left:0;}
 
     .photo_third {width:auto; margin: 0 -20px 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
     .photo_third div { display:flex; flex-direction:column; align-items:normal; width:calc(50% - 1.5%); }
     .photo_third div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third div:nth-child(3) {margin-left:3%; margin-top:0 }
+	.photo_third div:nth-child(3) .caption{padding-left:0;}
 
     .photo_third02 {width:auto; margin: 0 -20px 20px; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto; }
     .photo_third02 div { display:flex; flex-direction:column; align-items:normal; width:calc(50% - 1.5%);}
     .photo_third02 div:first-child {width: 100%;height: 100%; margin:0 0 24px 0}
     .photo_third02 div:nth-child(3) {margin-left:3%; margin-top:0 }
+	.photo_third02 div:nth-child(3) .caption{padding-left:0;}
 
     .atc_dtline_box {margin:60px 0;}
     .atc_dtline_box h3.title {font-size:24px; line-height:30px;}
@@ -314,15 +317,17 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
     .tag_interview .tag_question {line-height:28px; letter-spacing: -0.03em; color:#111; padding-bottom:10px}
     .tag_interview .tag_answer {line-height:28px; font-weight:400; letter-spacing: -0.03em; color:#111; padding-bottom:10px}
 
-    .tag_quotation { position:relative; width:auto; margin:20px; padding:53px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
+    .tag_quotation { position:relative; width:auto; padding:53px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
     .tag_quotation::after {content:''; width:24px; height:17px; }
     .tag_quotation::before {content:'';  width:24px; height:17px;}
 
-    .tag_quotation02 { position:relative; width:auto; margin:20px; padding:54.7px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
+    .tag_quotation02 { position:relative; width:auto; padding:32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
     .tag_quotation02:after {content:''; width:20px; height:20px; }
     .tag_quotation02::before {content:''; width:20px; height:20px; }
 
+	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
     .ab_emphasis .ab_emphasis_content  {line-height:28px; letter-spacing:-0.03em; }
+	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;}
 
     .ab_recommend_list dt {font-size:20px;line-height:28px; margin-bottom:16px; }
     .ab_recommend_list dd {font-size:16px; line-height:28px; margin-top:4px; padding-left:12px; letter-spacing:-0.03em}
@@ -335,13 +340,18 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
     .photo_third03 { width:auto; margin:0px -20px 24px; }
     .photo_third03 div {width: calc(50% - 1.5%);}
+	.photo_third03 div:nth-child(3) .caption{padding-left:0;}
     .photo_third03 div img {height: calc(100% - 32px);}
     .photo_five { width:auto; margin:0px -20px 24px; }
     .photo_five div {width: calc(50% - 1.5%);}
+	.photo_five div:nth-child(2) .caption,
+	.photo_five div:nth-child(5) .caption{padding-left:0;}
     .photo_five div img {height: calc(100% - 32px);}
     .photo_four { width:auto; margin:0px -20px 24px; }
     .photo_four div {width: calc(50% - 1.5%);}
     .photo_four div img {height: calc(100% - 32px);}
+	.photo_four div:nth-child(even) .caption{padding-left:0;}
+	.photo_four02 div:nth-child(even) .caption{padding-left:0;}
 
     .photo_txt {flex-direction:column; }
     .photo_txt div {width:100%; margin:20px 0 0 0}

@@ -264,14 +264,14 @@
 .terms_wrap .terms_box ul li + li{margin-top:8px;}
 
 /* 투표 & 퀴즈 모듈 */
-.pick_wrap{margin:40px 0;padding:60px;border:1px solid #dbdbdb;}
+.pick_wrap{margin:40px auto;padding:60px;border:1px solid #dbdbdb;letter-spacing:-0.01em;}
 .pick_wrap .pick_head{margin-bottom:12px;text-align:center;font-size:0;}
-.pick_wrap .pick_head span{display:inline-block;position:relative;font-size:14px;line-height:20px;color:#111;}
-.pick_wrap .pick_head .date{font-family:Gotham;color:#666;}
+.pick_wrap .pick_head span{display:inline-block;position:relative;font-size:14px;font-weight:500;line-height:20px;color:#111;}
+.pick_wrap .pick_head .date{font-family:Gotham;color:#666;letter-spacing:0;}
 .pick_wrap .pick_head .cate ~ .date{margin-left:12px;padding-left:12px;}
 .pick_wrap .pick_head .cate ~ .date:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background-color:#dbdbdb;}
 .pick_wrap .pick_head .total{margin-left:8px;font-size:14px;line-height:20px;}
-.pick_wrap .pick_head .total .count{font-family:Gotham;font-weight:500;}
+.pick_wrap .pick_head .total .count{font-family:Gotham;font-weight:500;letter-spacing:0;}
 .pick_wrap .pick_tit{max-width:588px;margin:0 auto 40px;}
 .pick_wrap .pick_tit .tit{display:block;font-size:18px;font-weight:500;line-height:26px;text-align:center;}
 .pick_wrap .pick_count{display:none;margin-bottom:12px;}
@@ -321,13 +321,13 @@
 .pick_result_list .pick_item.on .count{color:#B30010;}
 
 /* 지도 모듈 */
-.map_wrap{margin:40px 0;}
+.map_wrap{max-width:792px;margin:40px auto;}
 .map_wrap .map_area .map_item{overflow:hidden;position:relative;width:100%;height:0;padding-top:62.5%;}
 .map_wrap .map_area .map_inner{display:block;position:absolute;left:0;top:0;width:100%;height:100%;}
 .map_wrap .map_area .map_api{position:relative;width:100%;height:100%;}
 .map_wrap .map_area .btn_ico.zoom{position:absolute;right:24px;top:24px;z-index:10;}
 .map_wrap .map_area .caption{margin-top:12px;font-size:14px;font-weight:400;color:#666;line-height:24px;letter-spacing:0.08em;text-align:left;}
-.map_wrap .map_info{margin-top:24px;}
+.map_wrap .map_info{margin-top:24px;letter-spacing:-0.01em;}
 .map_wrap .map_info .name_box{margin-bottom:12px;}
 .map_wrap .map_info .name_box .name{display:block;font-size:24px;font-weight:500;line-height:36px;}
 .map_wrap .map_list > li{display:flex;}
@@ -341,6 +341,7 @@
 .map_wrap .map_exp .txt_box .txt{font-size:16px;font-weight:400;color:#666;line-height:28px;word-break:break-all;}
 .map_wrap .map_exp .txt_box.hide .txt{overflow:hidden;position:relative;max-height:84px;}
 .map_wrap .map_exp .btn_box{margin-top:4px;}
+.map_wrap .map_exp .btn_box .has_toggle{font-size:16px;}
 .is_pc .map_wrap.horiz{display:flex;width:100%;align-items:flex-start;}
 .is_pc .map_wrap.horiz .map_area{width:48.485%;}
 .is_pc .map_wrap.horiz .map_item{padding-top:100%;}

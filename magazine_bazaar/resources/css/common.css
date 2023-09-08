@@ -325,8 +325,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .footer_link ul{display:flex;flex-wrap:wrap;column-gap:32px;row-gap:8px;}
 .footer_link li a{display:block;font-size:16px;font-weight:500;color:#666;line-height:1.5;}
 .footer_link li.impt a{color:#111;font-weight:700;}
-.footer_sns ul{display:flex;column-gap:24px;}
-.footer_sns li a{display:flex;width:24px;height:24px;align-items:center;justify-content:center;}
+.footer_sns ul{display:flex;column-gap:20px;}
+.footer_sns li a{display:flex;width:28px;height:28px;align-items:center;justify-content:center;}
 .footer_bottom{padding:40px 0 60px;}
 .footer_bottom .cont_inner{display:flex;}
 .footer_logo{width:195px;height:50px;}
@@ -640,7 +640,7 @@ mark{background-color:rgba(255,0,0,.2);}
 .btn_ico.more{width:20px;height:20px;background:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='2' r='1' fill='%23999999'/%3E%3Ccircle cx='8' cy='8' r='1' fill='%23999999'/%3E%3Ccircle cx='8' cy='14' r='1' fill='%23999999'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
 
 /* 더보기 */
-.btn_more_wrap.type1{margin-top:80px;}
+.btn_more_wrap.type1{margin-top:120px;}
 .btn_more_wrap.type2{margin-top:80px;}
 .btn_more_wrap .btn{width:100%;}
 .btn_more_wrap .more{border-color:#ccc;}
@@ -706,7 +706,7 @@ mark{background-color:rgba(255,0,0,.2);}
 	.btn_ico.zoom{width:36px;height:36px;}
 	.has_toggle:after{width:12px;height:12px;background-size:12px auto;}
 
-	.btn_more_wrap.type1{margin-top:32px;}
+	.btn_more_wrap.type1{margin-top:40px;}
 	.btn_more_wrap.type2{margin-top:32px;}
 	.btn_more_wrap .btn{height:44px;font-size:14px;}
 
@@ -803,8 +803,8 @@ mark{background-color:rgba(255,0,0,.2);}
 	.footer_bottom{padding:40px 0;}
 	.footer_bottom .cont_inner{flex-direction:column;}
 	.footer_logo{width:125px;height:32px;}
-	.footer_sns ul{column-gap:20px;}
-	.footer_sns li a{width:20px;height:20px;}
+	.footer_sns ul{column-gap:16px;}
+	.footer_sns li a{width:24px;height:24px;}
 	.footer_info{margin-top:32px;margin-left:0;}
 	.footer_info .addr_wrap em{margin-bottom:12px;font-size:12px;}
 	.footer_info .addr_txt span{font-size:12px;font-weight:400;}

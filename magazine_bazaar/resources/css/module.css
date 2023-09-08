@@ -341,7 +341,7 @@
 .map_wrap .map_exp .txt_box .txt{font-size:16px;font-weight:400;color:#666;line-height:28px;word-break:break-all;}
 .map_wrap .map_exp .txt_box.hide .txt{overflow:hidden;position:relative;max-height:84px;}
 .map_wrap .map_exp .btn_box{margin-top:4px;}
-.map_wrap .map_exp .btn_box .has_toggle{font-size:16px;}
+.is_pc .map_wrap .map_exp .btn_box .has_toggle{font-size:16px;}
 .is_pc .map_wrap.horiz{display:flex;width:100%;align-items:flex-start;}
 .is_pc .map_wrap.horiz .map_area{width:48.485%;}
 .is_pc .map_wrap.horiz .map_item{padding-top:100%;}

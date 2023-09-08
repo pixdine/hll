@@ -683,8 +683,6 @@ $.fn.commentToggle = function () {
     var commentTxtChild = cBox.find('.comment_txt .txt');
     var lineHeight = commentTxtChild.css('line-height').split('px')[0];
 
-    console.log(commentTxt.height(), commentTxtChild, lineHeight);
-
     // 3줄이 넘어가면 더보기 버튼이 보여야 합니다.
     if (commentTxtChild.height() > lineHeight*3) {
       cBoxBtnWrap.css('display', 'flex');
@@ -692,8 +690,6 @@ $.fn.commentToggle = function () {
       cBoxToggle.removeClass('on');
       cBoxToggleTxt.text('더보기')
     }
-
-    // console.log('lineHeight', lineHeight);
 
     //리사이징시 재호출되어 중복을 방지하기 위한 이벤트 리스너 제거
     cBoxToggle.off('click');   

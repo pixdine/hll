@@ -41,7 +41,8 @@
 .ab_photo_1200 {position:relative;left:50%;transform:translateX(-50%);width:1200px;margin:24px auto;}
 .ab_photo_1200 img {width:100%;}
 
-.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em; }
+.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em; word-break:break-all; }
+.atc_body .atc_body_cont p{word-break:break-all;}
 body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin:24px auto;} /* 기사상세 > 본문 이미지 792 */
 .atc_body .ab_photo img { width: 100%; display:block}
@@ -207,7 +208,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .photo_txt div {width:calc(50% - 12px); margin:24px 0 0 0; }
 .photo_txt div img {display:block; object-fit: cover; width:100%;}
 .photo_txt div:nth-child(1), .photo_txt div:nth-child(2) {margin-top:0}
-.photo_txt div.txt { padding-bottom:36px;}
+.photo_txt div.txt { padding-bottom:36px;word-break:break-all;}
 
 .photo_four02 {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto;}
 .photo_four02 div {margin:24px 0 0 0; }

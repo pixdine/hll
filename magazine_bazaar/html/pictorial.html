@@ -233,7 +233,7 @@
 						<div class="cont_inner">
 							<!-- 리스트 -->
 							<div class="pic_atc_list">
-								<ul>
+								<ul class="grid">
 									<li>
 										<div class="atcbox">
 											<a href="#">
@@ -390,8 +390,15 @@
 	</div>
 
 	<!-- js -->
+	<script src="../resources/js/masonry.min.js"></script>
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
 	<!-- //js -->
+
+  <script>
+    $('.pic_atc_list .grid').masonry({
+      itemSelector: 'li',
+    });
+  </script>
 </body>
 </html>

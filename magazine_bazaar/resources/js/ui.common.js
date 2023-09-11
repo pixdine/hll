@@ -754,9 +754,13 @@ $(window).on('resize', function(){
 //   };
 // }
 
-// 공통탭 (숨겨야 하는 요소, 보여야 하는 요소)
-function commonTab (hideEl, showEl) {
-  return {
-
-  }
+// 공통탭 (숨겨야 하는 요소, 보여야 하는 요소 클래스명으로 입력, 내가찍은 탭버튼)
+function commonTab (hideEl, showEl, clicked) {
+  const clickedBtn = $(clicked);
+  const hideElement = hideEl;
+  const showElement = showEl;
+  $(hideEl).hide();
+  $(showEl).show();
+  clickedBtn.parents('.tab_menu').find('li').removeClass('on');
+  clickedBtn.parent().addClass('on');
 }

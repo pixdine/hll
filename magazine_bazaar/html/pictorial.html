@@ -396,9 +396,13 @@
 	<!-- //js -->
 
   <script>
-    $('.pic_atc_list .grid').masonry({
-      itemSelector: 'li',
+    // 이미지가 로드 된 후에 masonry 호출
+    $(window).on('load', function () {
+      $('.pic_atc_list .grid').masonry({
+        itemSelector: 'li',
+      });
     });
+
   </script>
 </body>
 </html>

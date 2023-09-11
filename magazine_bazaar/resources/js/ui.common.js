@@ -753,3 +753,10 @@ $(window).on('resize', function(){
 //     }, wait);
 //   };
 // }
+
+// 공통탭 (숨겨야 하는 요소, 보여야 하는 요소)
+function commonTab (hideEl, showEl) {
+  return {
+
+  }
+}

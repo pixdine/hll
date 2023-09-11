@@ -290,7 +290,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .other_go .go_event  { display:table; background-color:#410C86;width:100%; height:100%;}
 .other_go .go_event a { display:table-cell; vertical-align:middle; font-size:18px; line-height:26px; font-weight:500; color:#fff}
 .other_go .go_event a span { display:inline-block; margin-left:24px}
-.other_go .go_event a span.ico_arr07 { display:inline-block; width:20px; height:10px; background-image: url("data:image/svg+xml,%3Csvg width='22' height='12' viewBox='0 0 22 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-6.95394e-07 6L20 6M20 6L14.2857 11M20 6L14.2857 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A"); background-size:100% 100%;; margin-top:17px}
+.other_go .go_event a span.ico_arr07 { display:block; width:20px; height:10px; background-image: url("data:image/svg+xml,%3Csvg width='22' height='12' viewBox='0 0 22 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-6.95394e-07 6L20 6M20 6L14.2857 11M20 6L14.2857 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A"); background-size:100% 100%;; margin-top:17px}
 
 /* 포인트 모으기 */
 .point_add_list{ }

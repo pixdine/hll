@@ -708,23 +708,23 @@ $.fn.commentToggle = function () {
 
 // 상세페이지 댓글 더보기 MORE DROP
 $.fn.moreDrop = function () {
-  return this.each(function (i) {
-    var moreDropBody = $(this);
-    var toggleBtn = moreDropBody.find('.btn_ico');
-    var layerBox = moreDropBody.find('.layer_box');
-    toggleBtn.on('click', function () {
-      if (moreDropBody.hasClass('on')) {
-        moreDropBody.removeClass('on');
-      } else {
-        moreDropBody.addClass('on');
-      }
+    return this.each(function (i) {
+        var moreDropBody = $(this);
+        var toggleBtn = moreDropBody.find('.btn_ico');
+        var layerBox = moreDropBody.find('.layer_box');
+        toggleBtn.on('click', function () {
+            if (moreDropBody.hasClass('on')) {
+            moreDropBody.removeClass('on');
+            } else {
+            moreDropBody.addClass('on');
+        }
     });
     toggleBtn.on('blur', function () {
-      setTimeout(function () {
-        moreDropBody.removeClass('on');
-      }, 100);
+        setTimeout(function () {
+            moreDropBody.removeClass('on');
+            }, 100);
+        });
     });
-  });
 }
 
 //디바이스 체크
@@ -736,31 +736,38 @@ $(window).on('resize', function(){
 		//Mobile
 		$('body').removeClass('is_pc').addClass('is_mobile');
 	}
-  initOnDevice();  
+    initOnDevice();  
   
-  // 상세페이지 댓글 접기
-  $('.comment_box').commentToggle();
+    // 상세페이지 댓글 접기
+    $('.comment_box').commentToggle();
 }).resize();
 
-// debounce 함수: 주어진 함수를 마지막 호출로부터 지정된 시간이 지나기 전에는 다시 호출되지 않도록 합니다.
-// function debounce(func, wait) {
-//   var timeout;
-//   return function() {
-//     var context = this, args = arguments;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(function() {
-//       func.apply(context, args);
-//     }, wait);
-//   };
-// }
-
-// 공통탭 (숨겨야 하는 요소, 보여야 하는 요소 클래스명으로 입력, 내가찍은 탭버튼)
-function commonTab (hideEl, showEl, clicked) {
-  const clickedBtn = $(clicked);
-  const hideElement = hideEl;
-  const showElement = showEl;
-  $(hideEl).hide();
-  $(showEl).show();
-  clickedBtn.parents('.tab_menu').find('li').removeClass('on');
-  clickedBtn.parent().addClass('on');
+// 탭 컨텐츠
+$.fn.commonTab = function () {
+    let tabBody = [];
+    return this.each(function (i) {
+        tabBody = $(this);
+        const tabMenu = tabBody.find('.tab_menu');
+        const tabMenuItem = tabMenu.find('li');
+        const tabBtn = tabMenuItem.children();
+        tabBtn.on('click', function (e) {
+            e.preventDefault();
+            const curIdx = $(this).parent().index();
+            console.log(curIdx);
+            $(this).parent().siblings().removeClass('on');
+            $(this).parent().addClass('on');
+            tabBody.find('.tab_cont').hide().eq(curIdx).show();
+        });
+    });
 }
+
+// 자유형식탭 (숨겨야 하는 요소, 보여야 하는 요소 클래스명으로 입력, 내가찍은 탭버튼)
+// function freeTab (hideEl, showEl, clicked) {
+//   const clickedBtn = $(clicked);
+//   const hideElement = hideEl;
+//   const showElement = showEl;
+//   $(hideEl).hide();
+//   $(showEl).show();
+//   clickedBtn.parents('.tab_menu').find('li').removeClass('on');
+//   clickedBtn.parent().addClass('on');
+// }

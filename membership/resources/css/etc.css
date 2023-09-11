@@ -13,9 +13,9 @@ body.is_PC .container.etc #content { padding-top:60px}
 .term_type01 dd ol ,.term_type01 dd ul  {margin-top:10px; margin-bottom:10px}
 .term_type01 dd  li ol, .term_type01 dd li ul { margin-left:10px;}
 .term_type01 dd.additional { margin-top:80px} 
-.term_type01 .term_tbl { border-top:2px solid; border-bottom:1px solid #F2F2F2; margin-top:10px}
-.term_type01 .term_tbl table { padding:0;border:0;border-spacing:0px;border-collapse:collapse; width:100%; table-layout:fixed; margin-top:10px}
-.term_type01 .term_tbl table th {font-size:14px; font-weight:500; text-align:center; line-height:1.6; padding:20px 0}
+.term_type01 .term_tbl { border-top:2px solid #111; border-bottom:1px solid #DBDBDB; margin-top:10px}
+.term_type01 .term_tbl table { padding:0;border:0;border-spacing:0px;border-collapse:collapse; width:100%; table-layout:fixed;}
+.term_type01 .term_tbl table th {font-size:14px; font-weight:500; text-align:center; line-height:1.6; padding:20px 0; color:#111}
 .term_type01 .term_tbl table td {font-size:16px; font-weight:500; text-align:center; line-height:1.6; text-align:left; padding:24px 40px; border-top:1px solid #DBDBDB}
 .term_type01 .term_tbl ~ .p_tit { margin-top:40px}
 .term_type01 dd .term_st01 {margin-top:10px}

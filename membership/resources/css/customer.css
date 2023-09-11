@@ -18,9 +18,16 @@ body.is_PC .container.customer #content { padding-top:60px}
 .board_st01 .b_cate { width:15%}
 .board_st01 .b_tit a { white-space:normal; text-overflow:clip; overflow:visible}
 
+.inquiry_in.input_type02 li .radio_list li { width:45%}
+.inquiry_in.input_type02 .radio_list {justify-content: space-between;}
+
 @media (max-width:768px){
     .gray_box.search { margin:0 -20px 43px}
     .gray_box.search .box_inner {padding:32px 20px }
     .gray_box.search .box_inner .inputbox { width:100%; margin:0 auto}
     .search_res { font-size:16px; }
+}
+
+@media (max-width:320px){
+    .inquiry_in.input_type02 li .radio_list li { width:44%}
 }

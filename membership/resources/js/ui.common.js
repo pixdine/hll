@@ -113,7 +113,7 @@ $(document).ready(function () {
 
     $.fn.selectbox = function () {
         this.each(function(index, element) {
-
+            var thisSelect = $(this);
             var defaultValue = $("[data-option] > li.selected:last",element).text();
             $("[data-value]", element).text(defaultValue);
 
@@ -131,9 +131,10 @@ $(document).ready(function () {
                 var selectedText = $(this).text();
 
                 console.log(selectedText)
-                $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
-                $(this).closest("[data-option]").slideUp("fast");
-                $("[data-value]").removeClass("opened");
+                $('.select_option').removeClass('selected');
+				$(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
+				$(this).addClass('selected').closest("[data-option]").slideUp("fast");
+				$("[data-value]").removeClass("opened");
             });
         })
 

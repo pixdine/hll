@@ -59,10 +59,9 @@ $(document).ready(function(){
 		familySite($(this));
 	});
 
-
-
 	$.fn.selectbox = function () {
 		this.each(function(index, element) {
+            var thisSelect = $(this);
 			var defaultValue = $("[data-option] > li.selected:last",element).text();
 			$("[data-value]", element).text(defaultValue);
 
@@ -77,14 +76,13 @@ $(document).ready(function(){
 			$("[data-option] > li", element).click(function(event) {
 				event.stopPropagation();
 				var selectedText = $(this).text();
-
 				console.log(selectedText)
+                $('.select_option').removeClass('selected');
 				$(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
-				$(this).closest("[data-option]").slideUp("fast");
+				$(this).addClass('selected').closest("[data-option]").slideUp("fast");
 				$("[data-value]").removeClass("opened");
 			});
 		})
-
 
 		$(document).click(function() {
 			$(".opened[data-value]").each(function(index,element) {
@@ -769,3 +767,37 @@ $.fn.commonTab = function () {
 //   clickedBtn.parents('.tab_menu').find('li').removeClass('on');
 //   clickedBtn.parent().addClass('on');
 // }
+
+// 공통 스크롤 이벤트
+let lastScrollTop = 0;
+window.addEventListener('scroll', function () {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollTop <=0) {
+        $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
+    }
+    
+    if (currentScrollTop > lastScrollTop) {
+        // 스크롤 다운
+        onScrollDown();
+    } else if (currentScrollTop < lastScrollTop) {
+        // 스크롤 업
+        onScrollUp();
+    }
+
+    // 현재 스크롤 위치를 lastScrollTop에 저장
+    lastScrollTop = currentScrollTop;    
+});
+
+// 스크롤 다운
+function onScrollDown() {
+    console.log("스크롤 다운됨!");
+    $('body').removeClass('scroll_up');
+    $('body').addClass('scroll_down');
+}
+
+// 스크롤 업
+function onScrollUp() {
+    console.log("스크롤 업됨!");
+    $('body').addClass('scroll_up');
+    $('body').removeClass('scroll_down');
+}

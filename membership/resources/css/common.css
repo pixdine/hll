@@ -792,7 +792,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.header_wrap .header_gnb li .sub_menu li {transition: font-size 1s;}
 	.header_wrap .header_gnb li .sub_menu li {font-size:12px; margin-left:1%}
 	/*.header_top .btn_login { transition: display 0.3s ease; display:none}*/
-	.header .header_util_area  { transition: display 0.3s ease; top: 0; height: 100%;}
+	.header .header_util_area  { transition: display 0.3s ease; top: 0; right: 20px; height: 100%;}
     .header .header_util_area .btn_txt02 {display:none}
 	.pointShop.pc {display:block;}
 	.btn_area.two .btn, .btn_area.two .btn_b { width:48.36%}
@@ -908,16 +908,16 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 	/* 전체메뉴 */
 	body.is_mobile .allmenu_wrap {  display:none; transition: height .35s ease-in-out; height:100%; overflow:auto; position:fixed; top:44px; z-index:100; border-bottom:0px; padding-top:0 }
-	body.is_mobile .allmenu_wrap .allmenu_list {display: flex;justify-content:flex-start; flex-direction: column; flex-wrap: wrap; margin-bottom:80px; margin-left:0; }
-	body.is_mobile .allmenu_wrap .allmenu_list li {position:relative; text-align:left; padding:0px; margin-top:32px}
-	body.is_mobile .allmenu_wrap .allmenu_list li a.tit {position:relative; font-size:20px; line-height:28px; font-weight:700; height:auto; width:auto; margin-bottom:16px; overflow:visible; color:#111;display:block  }
+	body.is_mobile .allmenu_wrap .allmenu_list {display: flex;justify-content:flex-start; flex-direction: column; flex-wrap: wrap; margin-bottom:80px; margin-left:0; padding-top: 8px;}
+	body.is_mobile .allmenu_wrap .allmenu_list li {position:relative; text-align:left; padding:0px; margin-top:32px; margin-bottom: 0;}
+	body.is_mobile .allmenu_wrap .allmenu_list li a.tit { position:relative; font-size:20px; line-height:28px; font-weight:700; height:auto; width:auto; overflow:visible; color:#111;display:block  }
 	body.is_mobile .allmenu_wrap .allmenu_list li li {margin-bottom:16px; color:#333; font-weight:500; margin-top:0 }
 	body.is_mobile .allmenu_wrap .allmenu_list li li a { color:#333}
-	body.is_mobile .allmenu_wrap .allmenu_list li.has_menu:before{content:'';display:block;position:absolute;right:0;top:4px;width:16px;height:16px;background:url('../images/ico_plus_24.svg') no-repeat center center / 100% auto;}
+	body.is_mobile .allmenu_wrap .allmenu_list li.has_menu:before{content:'';display:block;position:absolute;right:0;top:6px;width:16px;height:16px;background:url('../images/ico_plus_24.svg') no-repeat center center / 100% auto;}
 	body.is_mobile .allmenu_wrap .allmenu_list li.has_menu.open:before {background-image: url(../images/ico_minus_24.svg);}
 	body.is_mobile .allmenu_wrap.isMenuShow { position:fixed; overflow-y:auto; transition: height .35s ease-in-out; height:100%; border-bottom:0px;}
 	body.is_mobile .allmenu_wrap .allmenu_list li span {position:absolute; display:block; z-index:1; width:24px; height:24px; background:transparent; right:0; top:4px; }
-	body.is_mobile .allmenu_list .depth2 {display:none}
+	body.is_mobile .allmenu_list .depth2 {display:none; margin-top: 16px;}
 	body.is_mobile .allmenu_wrap .allmenu_list li.has_menu.open .depth2 {transition: display .35s ease-in-out; display:block}
 	body.is_mobile .header_wrap .header_gnb { display:none}
 

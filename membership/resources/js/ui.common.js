@@ -148,15 +148,6 @@ $(document).ready(function () {
     allmenuItemSizeInit (); //전체메뉴 아이템사이즈
 });
 
-// 헤더 스크롤
-$.fn.headerScrollEvt = function () {
-    var header = this;
-    var scTop = $('body').scrollTop();
-    // if (scTop > 0) {
-
-    // }
-}
-
 function showLayer(target) {
     $(`#${target}`).show()
 }
@@ -191,22 +182,28 @@ $(window).on("resize", function () {
     if (window.innerWidth > 768) {
         //PC
         $("body").removeClass("is_mobile").addClass("is_pc");
-        allmenuItemSizeInit ();
+        allmenuItemSizeInitPc ();
     } else {
         //Mobile
         $("body").removeClass("is_pc").addClass("is_mobile");
+        allmenuItemSizeInitMo ();
     }
     initOnDevice();
 }).resize();
 
-//전체메뉴 아이템사이즈
-function allmenuItemSizeInit () {
+//전체메뉴 아이템사이즈 pc
+function allmenuItemSizeInitPc () {
     var itemHeightArr = [];
     var itemleng = $('.gnb_menu > li').length;
     for (i = 0; i < itemleng; i++) {
         itemHeightArr[i] = $('.gnb_menu > li').eq(i).width();
         $('.allmenu_list > li').eq(i).width(itemHeightArr[i]);
     }
+}    
+
+//전체메뉴 아이템사이즈 mo
+function allmenuItemSizeInitMo () {
+    $('.allmenu_list > li').removeAttr('style');
 }    
 
 //전체메뉴 > 모바일
@@ -602,6 +599,9 @@ function enableScroll() {
 let lastScrollTop = 0;
 window.addEventListener('scroll', function () {
     let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollTop <=0) {
+        $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
+    }
     
     if (currentScrollTop > lastScrollTop) {
         // 스크롤 다운
@@ -629,5 +629,4 @@ function onScrollUp() {
     console.log("스크롤 업됨!");
     $('body').addClass('scroll_up');
     $('body').removeClass('scroll_down');
-    $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
 }

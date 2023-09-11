@@ -517,6 +517,7 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type04 > ul > li > a{display:flex;align-items:center;justify-content:center;height:60px;padding:0 20px;background-color:#fff;border-bottom:1px solid #ccc;font-size:16px;font-weight:500;color:#999;text-align:center;}
 .tab_menu.type04 > ul > li.on > a{background-color:#111;border-color:#111;color:#fff;}
 .tab_cont {display: none;}
+.tab_cont.active {display: block;}
 
 /* 달력 */
 #ui-datepicker-div {z-index:130!important;margin-top:8px;padding:12px 8px 9px;border:1px solid #dbdbdb;box-shadow:2px 3px 6px 0px rgba(0, 0, 0, 0.1);font-family:'Noto Sans KR', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif;}

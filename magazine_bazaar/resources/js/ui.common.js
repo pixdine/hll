@@ -742,7 +742,7 @@ $(window).on('resize', function(){
     $('.comment_box').commentToggle();
 }).resize();
 
-// 탭 컨텐츠
+// 공통탭 컨텐츠
 $.fn.commonTab = function () {
     return this.each(function (i) {
         tabBody = $(this);

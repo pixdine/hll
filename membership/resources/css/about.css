@@ -1,5 +1,4 @@
 
-.container.about { padding-top:0} 
 .top_visual { position:relative; max-width:1920px;max-height:800px; width:100%; margin:0 auto; height:800px; }
 .top_visual img { position:absolute; top:0; left:0; display:block; height:100%; object-fit:cover; }
 body.is_pc .top_visual img.pc {display:block}

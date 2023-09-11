@@ -1,15 +1,13 @@
 $(document).ready(function () {
-  setCSS();
+    setCSS();
+    cate_swiper();
+    scrollContList();
+    inputBind();
+    scrapList();
 
-
-  cate_swiper();
-  scrollContList();
-  inputBind();
-  scrapList();
-
-  //키워드 태그
-  $(".tag_wrap .btnbox .btn_ico").on("click", tagOpen);
-  showTagBtn();
+    //키워드 태그
+    $(".tag_wrap .btnbox .btn_ico").on("click", tagOpen);
+    showTagBtn();
 
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
@@ -113,48 +111,55 @@ $(document).ready(function () {
     }
     $("[data-accordion]").accordion();
 
-
     $.fn.selectbox = function () {
-      this.each(function(index, element) {
+        this.each(function(index, element) {
 
-          var defaultValue = $("[data-option] > li.selected:last",element).text();
-          $("[data-value]", element).text(defaultValue);
+            var defaultValue = $("[data-option] > li.selected:last",element).text();
+            $("[data-value]", element).text(defaultValue);
 
-          $("[data-value]", element).click(function(event) {
-            event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+            $("[data-value]", element).click(function(event) {
+                event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
 
-              $(this).siblings("[data-option]").slideToggle("fast");
-              if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
-              else $(this).addClass("opened");
+                $(this).siblings("[data-option]").slideToggle("fast");
+                if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
+                else $(this).addClass("opened");
 
-          });
+            });
 
-          $("[data-option] > li", element).click(function(event) {
-            event.stopPropagation();
-            var selectedText = $(this).text();
+            $("[data-option] > li", element).click(function(event) {
+                event.stopPropagation();
+                var selectedText = $(this).text();
 
-            console.log(selectedText)
-            $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
-            $(this).closest("[data-option]").slideUp("fast");
-            $("[data-value]").removeClass("opened");
-          });
-      })
+                console.log(selectedText)
+                $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
+                $(this).closest("[data-option]").slideUp("fast");
+                $("[data-value]").removeClass("opened");
+            });
+        })
 
-
-      $(document).click(function() {
-        $(".opened[data-value]").each(function(index,element) {
-          $(this).trigger('click');
+        $(document).click(function() {
+            $(".opened[data-value]").each(function(index,element) {
+            $(this).trigger('click');
+            });
         });
-      });
-  }
-  $("[data-selectbox]").selectbox();
+    }
 
+    $("[data-selectbox]").selectbox();
+    allmenuItemSizeInit (); //전체메뉴 아이템사이즈
 });
+
+// 헤더 스크롤
+$.fn.headerScrollEvt = function () {
+    var header = this;
+    var scTop = $('body').scrollTop();
+    // if (scTop > 0) {
+
+    // }
+}
 
 function showLayer(target) {
     $(`#${target}`).show()
 }
-
 
 function inputBind() {
     $("input.inp").on("input", function(e) {
@@ -169,33 +174,40 @@ function inputBind() {
     })
 }
 
-
-
 //iOS vh 대응
 function setCSS() {
-  var setVh = () => {
-    document.documentElement.style.setProperty(
-      "--vh",
-      `${window.innerHeight}px`
-    );
-  };
-  window.addEventListener("resize", setVh);
-  setVh();
+    var setVh = () => {
+        document.documentElement.style.setProperty(
+        "--vh",
+        `${window.innerHeight}px`
+        );
+    };
+    window.addEventListener("resize", setVh);
+    setVh();
 }
 
 //디바이스 체크
-$(window)
-  .on("resize", function () {
+$(window).on("resize", function () {
     if (window.innerWidth > 768) {
-      //PC
-      $("body").removeClass("is_mobile").addClass("is_pc");
+        //PC
+        $("body").removeClass("is_mobile").addClass("is_pc");
+        allmenuItemSizeInit ();
     } else {
-      //Mobile
-      $("body").removeClass("is_pc").addClass("is_mobile");
+        //Mobile
+        $("body").removeClass("is_pc").addClass("is_mobile");
     }
     initOnDevice();
-  }).resize();
+}).resize();
 
+//전체메뉴 아이템사이즈
+function allmenuItemSizeInit () {
+    var itemHeightArr = [];
+    var itemleng = $('.gnb_menu > li').length;
+    for (i = 0; i < itemleng; i++) {
+        itemHeightArr[i] = $('.gnb_menu > li').eq(i).width();
+        $('.allmenu_list > li').eq(i).width(itemHeightArr[i]);
+    }
+}    
 
 //전체메뉴 > 모바일
 function allmenuOpenMo() {
@@ -236,53 +248,52 @@ function allmenuOpenMo() {
 }
 
 function allmenuOpen() {
+    // 모바일 상태 제거
+    $(".allmenu_wrap").removeAttr('style');
+    $(".header_top .btn_menu").removeClass("on");
+    enableScroll();// 800px 화면 사이즈 때문에 넣음 ui 는 모바일인데 전체 메뉴는 pc 스타일 이어서 생기는 버그
 
-  // 모바일 상태 제거
-  $(".allmenu_wrap").removeAttr('style');
-  $(".header_top .btn_menu").removeClass("on");
-  enableScroll();// 800px 화면 사이즈 때문에 넣음 ui 는 모바일인데 전체 메뉴는 pc 스타일 이어서 생기는 버그
 
+    // 모바일 이벤트 제거
+    $(".header_top .btn_menu").off('click.allmenuOpenMo');
+    $(".has_menu > a").off('click.allmenuOpenMo');
+    $(".allmenu_wrap .allmenu_dimmed").off('click.allmenuOpenMo');
 
-  // 모바일 이벤트 제거
-  $(".header_top .btn_menu").off('click.allmenuOpenMo');
-  $(".has_menu > a").off('click.allmenuOpenMo');
-  $(".allmenu_wrap .allmenu_dimmed").off('click.allmenuOpenMo');
+    var $menuAll = $(".allmenu_wrap");
+    $gnbArea = $(".gnb_menu > li > a");
 
-  var $menuAll = $(".allmenu_wrap");
-  $gnbArea = $(".gnb_menu > li > a");
-
-  var menuAllShow = {
+    var menuAllShow = {
     gnbHover: function () {
-      $gnbArea.off()
+        $gnbArea.off()
         .on("mouseover.allmenuOpen", function () {
-          var hasClassOn = $menuAll.is('[class*="isMenuShow"]');
-          if (!hasClassOn) {
+            var hasClassOn = $menuAll.is('[class*="isMenuShow"]');
+            if (!hasClassOn) {
             $menuAll.removeClass("isMenuShow");
-          }
-          $menuAll.addClass("isMenuShow");
+            }
+            $menuAll.addClass("isMenuShow");
         })
         .on("mouseleave.allmenuOpen", function () {
-          $menuAll.removeClass("isMenuShow");
+            $menuAll.removeClass("isMenuShow");
         });
     },
 
     menuAllHover: function () {
-      $menuAll.off()
+        $menuAll.off()
         .on("mouseover.allmenuOpen", function () {
-          var hasClassOn = $menuAll.is('[class*="isMenuShow"]');
-          if (!hasClassOn) {
+            var hasClassOn = $menuAll.is('[class*="isMenuShow"]');
+            if (!hasClassOn) {
             $menuAll.removeClass("isMenuShow");
-          }
-          $menuAll.addClass("isMenuShow");
+            }
+            $menuAll.addClass("isMenuShow");
         })
         .on("mouseleave.allmenuOpen", function () {
-          $menuAll.removeClass("isMenuShow");
+            $menuAll.removeClass("isMenuShow");
         });
     },
-  };
+    };
 
-  menuAllShow.gnbHover();
-  menuAllShow.menuAllHover();
+    menuAllShow.gnbHover();
+    menuAllShow.menuAllHover();
 }
 
 function initOnDevice() {
@@ -360,7 +371,6 @@ function showTagBtn(){
     $('.tag_wrap .btnbox').show();
   }
 }
-
 
 $(window).resize(function(){
   showTagBtn();
@@ -454,7 +464,6 @@ function scrapList(){
   });
 
 }
-
 
 //full popup
 const popup = {
@@ -562,7 +571,6 @@ function lockScrollHandle (event) {
 	return false;
 }
 
-
 // 스크롤 잠금
 function disableScroll() {
 	const body = document.querySelector('body');
@@ -589,3 +597,37 @@ function enableScroll() {
 	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });
 
 };
+
+// 공통 스크롤 이벤트
+let lastScrollTop = 0;
+window.addEventListener('scroll', function () {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScrollTop > lastScrollTop) {
+        // 스크롤 다운
+        onScrollDown();
+    } else if (currentScrollTop < lastScrollTop) {
+        // 스크롤 업
+        onScrollUp();
+    }
+
+    // 현재 스크롤 위치를 lastScrollTop에 저장
+    lastScrollTop = currentScrollTop;    
+    $('#header').headerScrollEvt();
+});
+
+// 스크롤 다운
+function onScrollDown() {
+    console.log("스크롤 다운됨!");
+    $('body').removeClass('scroll_up');
+    $('body').addClass('scroll_down');
+    $('.header_gnb .sub_menu').slideUp(200);
+}
+
+// 스크롤 업
+function onScrollUp() {
+    console.log("스크롤 업됨!");
+    $('body').addClass('scroll_up');
+    $('body').removeClass('scroll_down');
+    $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
+}

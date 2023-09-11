@@ -1,3 +1,7 @@
+.container.main { padding-top:135px }
+.container.mypage {  }
+.container.mypage #content { padding-top:60px}
+
 .header .header_util_area .signup {display:none}
 .body_cont_area { background:#fff; margin-top:-100px; padding-top:100px}
 .body_cont_area .cont_inner {  margin:0 auto }

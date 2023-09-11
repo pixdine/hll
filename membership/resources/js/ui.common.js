@@ -145,7 +145,6 @@ $(document).ready(function () {
     }
 
     $("[data-selectbox]").selectbox();
-    allmenuItemSizeInit (); //전체메뉴 아이템사이즈
 });
 
 function showLayer(target) {
@@ -613,7 +612,6 @@ window.addEventListener('scroll', function () {
 
     // 현재 스크롤 위치를 lastScrollTop에 저장
     lastScrollTop = currentScrollTop;    
-    $('#header').headerScrollEvt();
 });
 
 // 스크롤 다운

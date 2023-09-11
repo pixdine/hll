@@ -1,5 +1,5 @@
 
-.container.customer #content { padding-top:60px}
+body.is_PC .container.customer #content { padding-top:60px}
 .board_area {}
 .gray_box.search { margin:0 0 86px}
 .tab_menu.type03 ~ .search {margin-top:16px}

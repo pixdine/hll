@@ -206,7 +206,7 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 .header_wrap .header_gnb li.on .sub_menu {display:block }
 .header_wrap .header_gnb li .sub_menu ul {display:flex; height:63px; justify-content: center;align-items:center}
 .header_wrap .header_gnb li .sub_menu li { font-size:16px; font-weight:500; letter-spacing:-0.01em; color:#666; line-height:1.43em;  }
-.header_wrap .header_gnb li .sub_menu li a {white-space:nowrap; cursor:default}
+.header_wrap .header_gnb li .sub_menu li a {white-space:nowrap;}
 .header_wrap .header_gnb li .sub_menu li a::after { display:none}
 .header_wrap .header_gnb li .sub_menu li.on a {color:var(--point); font-weight:700} 
 .header .btn_menu{display:none;position:absolute;z-index:1;right:0;top:12px;width:24px;height:24px;}
@@ -815,7 +815,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 @media (max-width:768px){
 
-	.container { padding:40px 0 80px;}
+	.container { padding:80px 0 80px;}
 	
 	.allmenu_wrap .btn_txt{font-size:14px;line-height:20px;}
 	.has_plus:after{margin-left:4px;background-size:12px auto;}

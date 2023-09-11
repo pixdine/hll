@@ -1,6 +1,7 @@
-.container.main { padding-top:135px }
+body.is_pc .container.main { padding-top:135px }
+body.is_mobile .container.main { padding-top:40px }
 .container.mypage {  }
-.container.mypage #content { padding-top:60px}
+body.is_pc .container.mypage #content { padding-top:60px}
 
 .header .header_util_area .signup {display:none}
 .body_cont_area { background:#fff; margin-top:-100px; padding-top:100px}
@@ -206,12 +207,15 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 .point_product_list { border-top:1px solid #111; padding-top:40px; margin-top:35px}
 .point_product_list ul {display:flex; flex-wrap:wrap; justify-content: space-between; row-gap:50px; column-gap:24px;}
-.point_product_list ul li{ width: 23.4%}
+.point_product_list ul li{ width: 23.5%}
 .point_product_list ul li .atcbox {}
-.point_product_list ul li .atcbox .imgbox {height:62.07%; border:1px solid #DBDBDB; box-sizing:border-box}
+.point_product_list ul li .atcbox .imgbox {height: 70.32%; border:1px solid #DBDBDB; box-sizing:border-box}
 .point_product_list ul li .atcbox .txtbox {height:37.93%}
 .point_product_list ul li .atcbox .txtbox .price_p {display:block;font-size:18px; font-family:'Gotham'; font-weight:500; line-height:1;  margin-top:6.13%}
 .point_product_list ul li .atcbox .txtbox .tit {display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;/*height:40%;*/font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
+
+.point_product_list ul li .atcbox .imgbox img {left: 50%; top: 50%; width:83.57%; height:83.57%;transform: translate(-50% ,-50%);}
+.point_product_list ul li .atcbox a:hover .imgbox img{ left: 50%; top: 50%;transform: translate(-50% ,-50%) scale(1.1);}
 
 /* select box */
 .selectbox { position:relative; z-index:1;}
@@ -283,7 +287,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .member_info .tit_wrap02 { margin-bottom:20px }
 
 .pointshop_order .input_type02 li dl dd { padding-right:42.5%}
-.inputbox.search .inp {width:331px}
+.inputbox.search .inp {width:336px}
 
 /* 이벤트 모아보기 All*/
 .other_go { padding-bottom:85px}
@@ -412,6 +416,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .pointShop.mo .swiper-slide .price_p {font-size:14px; font-family:'Gotham'; font-weight:500; line-height:1; text-align:center; margin-top:14px }
     .pointShop.mo {display:flex}
     .pointShop.pc {display:none}
+    .point_product_list ul li .atcbox .imgbox img {width: 86.25%; height: 86.25%;}
 
     /* 나의 스크랩 */
     body.is_mobile .myscrap_wrap {margin:80px auto}

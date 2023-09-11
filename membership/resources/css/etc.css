@@ -1,5 +1,6 @@
 
-.container.etc { padding:0 0 180px}
+.container.etc { padding:72px 0 180px}
+.container.etc #content { padding-top:60px}
 .privacy_wrap{}                 
 .term_type01 {}
 .term_type01 dt { font-size:18px; font-weight:700; margin-bottom:40px; }

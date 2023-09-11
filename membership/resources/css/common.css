@@ -140,7 +140,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .btn_txt.only_tx { padding:0}
 .btn_txt02{display:inline-flex;position:relative;padding:10px;font-size:14px;font-weight:500; font-family:'Gotham'; line-height:24px;align-items:center;} /* D: 영문 */
 .btn_txt03 {display:inline-flex; padding:10px;font-size:14px;font-weight:500;line-height:24px;align-items:center;text-decoration:underline; text-underline-position:under; color:#333}
-.has_plus:after{content:'';display:inline-block;width:14px;height:14px;margin:1px 0 0 8px;background:url('../images/ico_plus.svg') no-repeat center center / 100% auto;}
+.has_plus:after{content:'';display:inline-block;width:14px;height:14px;margin:1px 0 0 8px;background:url('../images/ico_plus.svg') no-repeat center 3px / 100% auto;}
 .has_arr1:after{content:'';display:inline-block;width:16px;height:16px;transform:rotate(90deg);margin:1px 0 0 8px;background:url('../images/ico_arrow04.svg') no-repeat center center / 100% auto;}
 .has_arr2:after{content:'';display:inline-block;width:12px;height:12px;margin:1px 0 0 8px; background:url('../images/ico_arrow.svg') no-repeat center center / 100% auto;}
 .has_toggle1{font-weight:400;}

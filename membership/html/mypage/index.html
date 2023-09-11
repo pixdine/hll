@@ -632,7 +632,7 @@
 												</a>
 											</div>
 										</li>
-										<li style="display:none">
+										<li>
 											<div class="atcbox">
 												<a href="#">
 													<div class="imgbox">
@@ -643,17 +643,6 @@
 														<p class="tit">알아두면 쓸데 있는 &lt; 예술산책 &gt; 사용설명서</p>
 													</div>
 												</a>
-											</div>
-										</li>
-										<!-- All 선택 시 노출 -->
-										<li class="other_go" style="display:">
-											<div class="atcbox">
-												<div class="go_event">
-													<a href="#">
-														<span>HARPER'S BAZZAR<br /> 홈페이지에서<br /> 모든 이벤트를 확인하세요!</span>
-														<span class="ico_arr07"></span>
-													</a>
-												</div>
 											</div>
 										</li>
 									</ul>
@@ -713,14 +702,12 @@
 <script>
     const imgData = [
         {
-            pcImgSrc:'../../resources/images/temp/temp_event01_pc.png',
-            moImgSrc:'../../resources/images/temp/temp_event01_mo.png',
+            imgSrc:'../../resources/images/temp/temp_event05_mo.png',
             category:'예술산책',
             tit:'알아두면 쓸데 있는 < 예술산책 > 사용설명서'
         },
         {
-            pcImgSrc: '../../resources/images/temp/temp_event04_pc.png',
-            moImgSrc: '../../resources/images/temp/temp_event04_mo.png',
+            imgSrc: '../../resources/images/temp/temp_event04_pc.png',
             category:'',
             tit:''
         }
@@ -728,20 +715,16 @@
     $('.moa_wrap.event .tag_list a').on('click', function (e) {
         e.preventDefault();
         const lastChild = $('.moa_wrap.event .moa_list li:last-child');
-        const lastChildPcImg = lastChild.find('img').eq(0);
-        const lastChildMoImg = lastChild.find('img').eq(1);
+        const lastChildImg = lastChild.find('img');
         const lastChildCate = lastChild.find('.cate');
         const lastChildTit = lastChild.find('.tit');
         const currentIndex = $(this).parents('li').index();
-        console.log('click', currentIndex);
         if (currentIndex != 0) {
-            lastChildPcImg.attr('src', imgData[1].pcImgSrc);
-            lastChildMoImg.attr('src', imgData[1].moImgSrc);
+            lastChildImg.attr('src', imgData[1].imgSrc);
             lastChildCate.text('');
             lastChildTit.text('');
         } else {
-            lastChildPcImg.attr('src', imgData[0].pcImgSrc);
-            lastChildMoImg.attr('src', imgData[0].moImgSrc);
+            lastChildImg.attr('src', imgData[0].imgSrc);
             lastChildCate.text(imgData[0].category);
             lastChildTit.text(imgData[0].tit);
         }

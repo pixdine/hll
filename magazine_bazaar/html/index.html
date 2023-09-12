@@ -22,7 +22,7 @@
 
 		<div id="wrap" class="wrap">
 			<!-- header -->
-			<header id="header" class="header main"><!-- D: 메인일 떄 main 클래스 추가 -->
+			<header id="header" class="header"><!-- D: 메인일 떄 main 클래스 추가 -->
 				<!-- header_wrap -->
 				<div class="header_wrap">
 					<div class="header_top">
@@ -55,10 +55,37 @@
 							</div>
 						</div>
 					</div>
+                                                            
+                    <!-- D: 플로팅바 영역 -->
+                    <div class="floating_bar">
+                        <div class="cont_inner">
+                            <div class="detail_info">
+                                <!-- 브레드크럼 -->
+                                <div class="breadcrumb">
+                                    <a href="#" class="home">HOME</a>
+                                    <a href="#" class="cate_dep">FASHION</a>
+                                    <a href="#" class="cate_dep">패션 뉴스</a>
+                                </div>
+                                <!-- //브레드크럼 -->
+                                <!-- 기사 타이틀 -->
+                                <div class="txtbox">
+                                    <p class="tit"> 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션</p>
+                                </div>
+                                <!-- //기사 타이틀 -->
+                                <!-- 스크랩, 공유하기 -->
+                                <div class="sharebox">
+                                    <button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+                                    <button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+                                </div>
+                                <!-- //스크랩, 공유하기 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //D: 플로팅바 영역 -->
 				</div>
 				<!-- //header_wrap -->
 
-				<!-- 검색 레이어 -->
+                <!-- 검색 레이어 -->
 				<div class="search_layer" data-popup="popup_search"><!-- D: 오픈 시 open 클래스 추가 -->
 					<div class="cont_inner">
 						<div class="search_box">
@@ -93,6 +120,31 @@
 					</div>
 				</div>
 				<!-- //검색 레이어 -->
+
+				<!-- D: [팝업] 공유하기 -->
+				<div class="popup_layer pop_share" data-layer="popup_share">
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_tit">
+								<h3 class="tit">공유하기</h3>
+							</div>
+							<div class="popup_close">
+								<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+						<div class="popup_cont">
+							<div class="sns_list">
+								<ul>
+									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //D: [팝업] 공유하기 -->
 			</header>
 			<!-- //header -->
 
@@ -1878,6 +1930,9 @@
 	<script src="../resources/js/ui.common.js"></script>
 	<!-- //js -->
 
-
+<script>
+    // 현재 페이지
+    currentPage = 'main';
+</script>
 </body>
 </html>

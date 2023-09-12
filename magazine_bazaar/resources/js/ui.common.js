@@ -1,5 +1,15 @@
+// 멀티헤더를 위한 글로벌 변수 초기화
+var currentPage;
+
 $(document).ready(function(){
 	setCSS();
+
+    // 멀티헤더
+    if (currentPage !== 'main' && currentPage !== 'view') {
+        currentPage = 'sub';
+    }
+    console.log(currentPage);
+    $('.header').addClass(currentPage);
 
 	if($('.kv_full').length){
 		fullImage('.kv_full')
@@ -12,27 +22,27 @@ $(document).ready(function(){
 	setAtcList();
 	$("header").length && headerSticky();
 	allmenuOpen();
-  initOnDevice();
-  inputBind();
+    initOnDevice();
+    inputBind();
 
-  $('[data-popup-toggle]').on('click', function(e) {
-      var targetId = $(this).attr('data-popup-toggle')
-      var targetElement = $('[data-popup="' + targetId + '"]')
-      var isVisible = targetElement.is(':visible')
-      var gap = window.innerWidth - document.documentElement.clientWidth
+    $('[data-popup-toggle]').on('click', function(e) {
+        var targetId = $(this).attr('data-popup-toggle')
+        var targetElement = $('[data-popup="' + targetId + '"]')
+        var isVisible = targetElement.is(':visible')
+        var gap = window.innerWidth - document.documentElement.clientWidth
 
-  if(targetId === 'popup_search') {
-    $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
-  } else {
-    $(this).toggleClass('on', !isVisible)
-  }
-  
-      if (isVisible) {
-          popup.close(targetId, 'popup')
-      } else {
-          popup.open(targetId, 'popup', false)
-      }
-  });
+    if(targetId === 'popup_search') {
+        $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
+    } else {
+        $(this).toggleClass('on', !isVisible)
+    }
+    
+        if (isVisible) {
+            popup.close(targetId, 'popup')
+        } else {
+            popup.open(targetId, 'popup', false)
+        }
+    });
 
 	/* popup open */
 	$('[data-popup-open]').on('click', function(e) {
@@ -92,10 +102,10 @@ $(document).ready(function(){
 	}
 	$("[data-selectbox]").selectbox();
 
-  // 상세페이지 댓글 기능 MORE DROP
-  if ($('.more_drop').length > 0) {
-    $('.more_drop').moreDrop();
-  }
+    // 상세페이지 댓글 기능 MORE DROP
+    if ($('.more_drop').length > 0) {
+        $('.more_drop').moreDrop();
+    }
 });
 
 
@@ -155,8 +165,17 @@ function headerSticky () {
 						}
 					} else {
 						// header.addClass('down');
-						header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
-						// header.css('top', -($('.header_top').outerHeight()));
+                        if ($('body').hasClass('is_pc')) {
+                            if (header.hasClass('main')) {
+                                header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
+                                // header.css('top', -($('.header_top').outerHeight()));
+                            }
+                        } else {
+                            if (header.hasClass('main') || header.hasClass('sub')) {
+                                header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
+                                // header.css('top', -($('.header_top').outerHeight()));
+                            }
+                        }
 					}
 				} else {
 					// up
@@ -184,7 +203,6 @@ function headerSticky () {
 		// }
 	};
 	
-
 	// 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
 	$(document.body).on("scroll", function () {
 		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;

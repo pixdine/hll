@@ -129,7 +129,7 @@ function headerSticky () {
     if (currentPage === 'main') {
         (new IntersectionObserver(
             ([e]) => {
-                if(e.intersectionRatio < 0.1 && !document.body.classList.contains('is_mobile')) {
+                if(e.intersectionRatio < 0.1 && !$('body').hasClass('is_mobile')) {
                     bottomLogo.stop().fadeIn(200)
                 }else{
                     bottomLogo.stop().fadeOut(200)
@@ -148,12 +148,12 @@ function headerSticky () {
 	function scrollCallback(scrollTop) {
 		// ios 15 이하 및 공통 처리
 		var atTop = scrollTop <= 0
-		var atBottom = scrollTop >= document.body.scrollHeight - document.body.clientHeight
+		var atBottom = scrollTop >= $(window).scrollHeight - $(window).clientHeight
 
 		// body lock scroll 상태 계산 안함
 		if(!$('body').hasClass('lockbody')) {
 			if(atTop) lastScroll =  0;
-			if(atBottom) lastScroll = document.body.scrollHeight - document.body.clientHeight;
+			if(atBottom) lastScroll = $(window).scrollHeight - $(window).clientHeight;
 
 			if (Math.abs(lastScroll - scrollTop) > delta) 
 			{
@@ -209,8 +209,9 @@ function headerSticky () {
 	};
 	
 	// 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
-	$(document.body).on("scroll", function () {
+	$(window).on("scroll", function () {
 		var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        scrollCallback(scrollTop);
 
 		window.requestAnimationFrame(function() {
 		  scrollCallback(scrollTop);
@@ -794,7 +795,7 @@ $.fn.commonTab = function () {
 // 공통 스크롤 이벤트
 let lastScrollTop = 0;
 
-$('body').on('scroll', function () {
+$(window).on('scroll', function () {
     let currentScrollTop = $('body').scrollTop();
     if (currentScrollTop <=0) {
         $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
@@ -814,14 +815,14 @@ $('body').on('scroll', function () {
 
 // 스크롤 다운
 function onScrollDown() {
-    console.log("스크롤 다운됨!");
+    // console.log("스크롤 다운됨!");
     $('body').removeClass('scroll_up');
     $('body').addClass('scroll_down');
 }
 
 // 스크롤 업
 function onScrollUp() {
-    console.log("스크롤 업됨!");
+    // console.log("스크롤 업됨!");
     $('body').addClass('scroll_up');
     $('body').removeClass('scroll_down');
     if ($('body').hasClass('is_mobile')) {

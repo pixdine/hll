@@ -569,6 +569,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_add_list ul::-webkit-scrollbar{display:none;}
     .point_add_list li{width:65.377%; display:inline-block; margin-right:12px; padding:0}
     .point_add_list li:last-child{margin-right:0;}
+    .moa_wrap .has_plus:after {background-position:center 3px;}
 }
 
 @media (max-width:375px){

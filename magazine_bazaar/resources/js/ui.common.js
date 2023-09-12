@@ -8,7 +8,6 @@ $(document).ready(function(){
     if (currentPage !== 'main' && currentPage !== 'view') {
         currentPage = 'sub';
     }
-    console.log(currentPage);
     $('.header').addClass(currentPage);
 
 	if($('.kv_full').length){
@@ -127,17 +126,19 @@ function headerSticky () {
     var container = $(".container");
     var bottomLogo = $(".header_bottom .logo a");
 
-    (new IntersectionObserver(
-        ([e]) => {
-            if(e.intersectionRatio < 0.1 && !document.body.classList.contains('is_mobile')) {
-                bottomLogo.stop().fadeIn(200)
-            }else{
-                bottomLogo.stop().fadeOut(200)
-            }
-
-        },
-        {threshold: [0.1, 1]}
-    )).observe($('.header_top')[0])
+    if (currentPage === 'main') {
+        (new IntersectionObserver(
+            ([e]) => {
+                if(e.intersectionRatio < 0.1 && !document.body.classList.contains('is_mobile')) {
+                    bottomLogo.stop().fadeIn(200)
+                }else{
+                    bottomLogo.stop().fadeOut(200)
+                }
+    
+            },
+            {threshold: [0.1, 1]}
+        )).observe($('.header_top')[0])
+    }
 
     var headerTop = $('.header_top').offset().top;
     var headerHeight = $('.header').outerHeight();
@@ -193,12 +194,11 @@ function headerSticky () {
 					}
 				}
 				lastScroll = scrollTop;
-			}
+			} 
+            else if (scrollTop < headerHeight + delta + $('.ad_google').height()) {
+                header.css('transform', 'translate(0, 0)');
+            }
 		} 
-
-        if (scrollTop === 0) {
-            header.css('transform', 'translate(0, 0)');
-        }
 		
 		// ios 16 이상 bouncing 오류 대응
 		// if (scrollTop > headerHeight) {
@@ -793,8 +793,9 @@ $.fn.commonTab = function () {
 
 // 공통 스크롤 이벤트
 let lastScrollTop = 0;
-window.addEventListener('scroll', function () {
-    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+$('body').on('scroll', function () {
+    let currentScrollTop = $('body').scrollTop();
     if (currentScrollTop <=0) {
         $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
     }
@@ -823,4 +824,9 @@ function onScrollUp() {
     console.log("스크롤 업됨!");
     $('body').addClass('scroll_up');
     $('body').removeClass('scroll_down');
+    if ($('body').hasClass('is_mobile')) {
+        if (currentPage == 'main' || currentPage == 'sub') {
+            $('.header').css('transform', 'translate(0, 0)');
+        }
+    }
 }

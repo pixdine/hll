@@ -67,7 +67,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .tag_list{display:flex;flex-wrap:wrap;column-gap:8px;row-gap:12px;overflow:hidden;margin-bottom:48px;}
 .tag_list li{display:inline-block;vertical-align:top;}
 .tag_list li a{display:block;min-height:44px;padding:10px 20px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;}
-.tag_list li.on a{background-color:var(--point);border-color:var(--point);font-weight:500;color:#fff;}
+.tag_list li.on a{background-color:var(--point);border-color:var(--point);font-weight:500;color:#fff;letter-spacing: -0.021em;}
 .tag_atc_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
 .tag_atc_list li{display:inline-block;width:calc(33.333% - 16px);vertical-align:top;}
 .moa_list {  }

@@ -714,6 +714,8 @@
     ]
     $('.moa_wrap.event .tag_list a').on('click', function (e) {
         e.preventDefault();
+        $('.moa_wrap.event .tag_list li').removeClass('on');
+        $(this).parent().addClass('on');
         const lastChild = $('.moa_wrap.event .moa_list li:last-child');
         const lastChildImg = lastChild.find('img');
         const lastChildCate = lastChild.find('.cate');

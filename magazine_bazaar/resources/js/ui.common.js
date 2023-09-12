@@ -172,6 +172,7 @@ function headerSticky () {
                             }
                         } else {
                             if (header.hasClass('main') || header.hasClass('sub')) {
+                                //header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
                                 header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
                                 // header.css('top', -($('.header_top').outerHeight()));
                             }
@@ -187,13 +188,17 @@ function headerSticky () {
 						/* //상세페이지 공유하기 레이어 관련 */
 					} else {
 						// header.removeClass('down')
-						header.css('transform', ``)
+						//header.css('transform', ``)
 						container.removeAttr('style')
 					}
 				}
 				lastScroll = scrollTop;
 			}
 		} 
+
+        if (scrollTop === 0) {
+            header.css('transform', 'translate(0, 0)');
+        }
 		
 		// ios 16 이상 bouncing 오류 대응
 		// if (scrollTop > headerHeight) {

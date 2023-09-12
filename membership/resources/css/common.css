@@ -190,7 +190,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 
 .header .header_top{display:block;}
 .header .cont_inner { padding-bottom:0; text-align:center}
-.header_top .logo {position:absolute; top:19px; left:3.125%; width:97px; height:33px;}
+.header_top .logo {position:absolute;  z-index:1; top:19px; left:3.125%; width:97px; height:33px;}
 .header_top .logo object {width:97px; height:33px;} 
 body.is_pc .header_top .logo object {width:97px; height:33px;} 
 body.is_mobile .header_top .logo object {width:72px; height:24px;} 

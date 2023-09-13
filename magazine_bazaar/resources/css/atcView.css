@@ -222,6 +222,13 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_photo_1200 .tag_photobundle img {width:auto}
 
 
+/* 이벤트 상세 */
+.event_detail_wrap .atc_body{max-width:996px;}
+.event_detail_wrap .atc_header .txt_date{margin-top:40px;font-family:Gotham;font-size:14px;color:#666;line-height:1;}
+.tmp_photo{margin-bottom:24px;}
+.tmp_txt{max-width:792px;margin-left:auto;margin-right:auto;}
+
+
 
 /************************* Media Query *************************/
 @media (max-width:1216px){
@@ -230,7 +237,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 }
 
 @media (max-width:768px){
-    .atc_wrap {margin-bottom:80px;}
+    .atc_wrap {margin-bottom:80px;padding-top:40px;}
     .atc_wrap.wide .cont_inner {max-width:none; width:100%; padding:0 20px; box-sizing:border-box}
     .atc_wrap .atc_header {text-align: center;}
     .atc_wrap .atc_header .txt_category {font-size:14px}

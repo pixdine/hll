@@ -700,9 +700,9 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .input_type02 li { padding-top:32px}
 .input_type02 li:first-child { padding-top:0 }
 .input_type02 li dl { display:flex; align-items: flex-start; }
-.input_type02 li dl dt { width:17%; color:#333; vertical-align:middle; flex-shrink:0;  padding-top:14px; min-width:180px;}
+.input_type02 li dl dt { width:17%; color:#333; vertical-align:middle; flex-shrink:0;  padding-top:14px; min-width:204px;}
 .input_type02 li dl dt.non_inp { padding-top:0}
-.input_type02 li dl dd { flex-grow:1; /*line-height:0; font-size:0; */ position:relative; padding-right:23.37% }
+.input_type02 li dl dd { flex-grow:1; /*line-height:0; font-size:0; */ position:relative;/* padding-right:17%*/ }
 .input_type02 li dl dd .btn_area { margin-top:0 }
 .input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:16px}
 .input_type02 li .inp { /*width:51%;*/ height:52px; display:inline-block }
@@ -722,7 +722,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .input_type02 li dl dd .pw_in { width:51%}
 .input_type02 li dl dd .pw_in .inputbox .inp {width:100%}
 
-.input_type02.line li { border-bottom:1px solid #DBDBDB; padding:32px 100px 32px 0}
+.input_type02.line li { border-bottom:1px solid #DBDBDB; padding:32px 17% 32px 0}
 .input_type02.line li:first-child {border-top:0; padding-top:0}
 .input_type02 li .radio_list { }
 .input_type02 li .radio_list li {padding:0; width:auto; border-bottom:0;}

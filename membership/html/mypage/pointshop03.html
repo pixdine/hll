@@ -172,16 +172,16 @@
 		<div id="container" class="container mypage">
 			<div id="content" class="content ">
 				<div class="cont_inner">
-                    <div class="heading_wrap">
-						<div class="heading_area">
-						   <h2 class="tit">주문/결제</h2>
-						</div>
-                    </div>
+            <div class="heading_wrap">
+							<div class="heading_area">
+								<h2 class="tit">주문/결제</h2>
+							</div>
+             </div>
 					<!--D: 회원 정보 -->
-                    <div class="body_cont01">
-                        <div class="tit_wrap02">
-                            <h3 class="stit">주문상품 정보</h3>
-                        </div>
+						<div class="body_cont01 order_info">
+								<div class="tit_wrap02">
+										<h3 class="stit">주문상품 정보</h3>
+								</div>
                         <div class="point_prd_area">
 							<div class="point_prd_info type02">
 								<div class="prd_img">
@@ -198,12 +198,12 @@
 								</div>
 							</div>
 						</div>
-                        <div  class="inp_area pointshop_order">
+          	<div  class="inp_area pointshop_order">
                             <!--D: 주문자 정보 -->
 							<div class="body_cont01 bc_space01">
 								<div class="tit_wrap02">
 									<h3 class="stit"> 주문자 정보</h3>
-                                    <button type="button" class="btn_txt has_line"><span>정보변경하기</span></button>
+                  <button type="button" class="btn_txt has_line"><span>정보변경하기</span></button>
 								</div>
 							
 								<ul class="input_type02">
@@ -211,22 +211,22 @@
 										<dl>
 											<dt>이름</dt>
 											<dd>
-                                                <div class="inputbox"><!--D : Error 시 error class 추가 -->
-                                                    <input type="text" class="inp" value="김중앙" readonly="">
-                                                    <p class="row_err_txt"></p>
-                                                </div>
-                                            </dd>
+													<div class="inputbox"><!--D : Error 시 error class 추가 -->
+															<input type="text" class="inp" value="김중앙" readonly="">
+															<p class="row_err_txt"></p>
+													</div>
+											</dd>
 										</dl>
 									</li>
 									<li>
 										<dl>
 											<dt>휴대폰 번호</dt>
 											<dd>
-                                                <div class="inputbox"><!--D : Error 시 error class 추가 -->
-                                                    <input type="text" class="inp" value="010-1234-56789" readonly="">
-                                                    <p class="row_err_txt"></p>
-                                                </div>
-                                            </dd>
+													<div class="inputbox"><!--D : Error 시 error class 추가 -->
+															<input type="text" class="inp" value="010-1234-56789" readonly="">
+															<p class="row_err_txt"></p>
+													</div>
+											</dd>
 										</dl>
 									</li>
 								</ul>
@@ -238,54 +238,54 @@
 									<h3 class="stit">모바일상품권 수신자 정보</h3>
 								</div>
 								<ul class="input_type02">
-                                    <li class="info_tx">결제가 완료되면 아래 입력하신 휴대폰 번호로 모바일 상품권이 발송됩니다</li>
+                  <li class="info_tx">결제가 완료되면 아래 입력하신 휴대폰 번호로 모바일 상품권이 발송됩니다</li>
 									<li>
 										<dl>
 											<dt class="non_inp">수신자 선택</dt>
 											<dd>
-                                                <ul class="radio_list">
-                                                    <li><span class="radio_in"><input type="radio" name="withdraw" id="radio1" checked><label for="radio1"><span>주문자 정보와 동일</span></label></span></li>
-                                                    <li><span class="radio_in"><input type="radio" name="withdraw" id="radio2"><label for="radio2"><span>새로입력</span></label></span></li>
-                                               </ul>
-                                            </dd>
+													<ul class="radio_list">
+															<li><span class="radio_in"><input type="radio" name="withdraw" id="radio1" checked><label for="radio1"><span>주문자 정보와 동일</span></label></span></li>
+															<li><span class="radio_in"><input type="radio" name="withdraw" id="radio2"><label for="radio2"><span>새로입력</span></label></span></li>
+													</ul>
+											</dd>
 										</dl>
 									</li>
 									<li>
 										<dl>
 											<dt>받으시는 분<span class="ess">*</span></dt>
 											<dd>
-                                                <div class="inputbox error">
-                                                    <input type="text" class="inp" id="name" placeholder="받으시는 분 이름 입력" title="Placeholder 문구가 나타납니다." autocomplete="off" value="">
-                                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                                    <p class="row_err_txt">받으시는 분 이름을 입력해 주세요.</p>
-                                                </div>
-                                            </dd>
+													<div class="inputbox error">
+															<input type="text" class="inp" id="name" placeholder="받으시는 분 이름 입력" title="Placeholder 문구가 나타납니다." autocomplete="off" value="">
+															<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+															<p class="row_err_txt">받으시는 분 이름을 입력해 주세요.</p>
+													</div>
+											</dd>
 										</dl>
 									</li>
-                                    <li>
+                	<li>
 										<dl>
 											<dt>휴대폰 번호<span class="ess">*</span></dt>
 											<dd>
-                                                <div class="inputbox">
-                                                    <button type="button" class="btn_txt has_line"><span>확인</span></button>
-                                                    <input type="tel" class="inp" id="phone" placeholder="받으시는 분 휴대폰 번호 입력" title="Placeholder 문구가 나타납니다." autocomplete="off" value="">
-                                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                                    <p class="inp_tx">(주의) 통신사 부가서비스 ‘번호도용방지 서비스'에 가입되어 있으면 MMS 수신이 되지 않습니다.</p>
-                                                    <p class="row_err_txt">휴대폰 번호를 확인해 주세요.</p>
-                                                </div>
-                                            </dd>
+													<div class="inputbox">
+															<button type="button" class="btn_txt has_line"><span>확인</span></button>
+															<input type="tel" class="inp" id="phone" placeholder="받으시는 분 휴대폰 번호 입력" title="Placeholder 문구가 나타납니다." autocomplete="off" value="">
+															<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+															<p class="inp_tx">(주의) 통신사 부가서비스 ‘번호도용방지 서비스'에 가입되어 있으면 MMS 수신이 되지 않습니다.</p>
+															<p class="row_err_txt">휴대폰 번호를 확인해 주세요.</p>
+													</div>
+											</dd>
 										</dl>
 									</li>
 									<li>
 										<dl>
 											<dt>전송 메시지<span class="ess">*</span></dt>
 											<dd>
-                                                <div class="inputbox">
-                                                    <input type="text" class="inp" id="msg" placeholder="메시지 입력 (100자 이내)" title="Placeholder 문구가 나타납니다." autocomplete="off" value="">
-                                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                                    <p class="row_err_txt">전송 메시지를 입력해 주세요.</p>
-                                                </div>
-                                            </dd>
+													<div class="inputbox">
+															<input type="text" class="inp" id="msg" placeholder="메시지 입력 (100자 이내)" title="Placeholder 문구가 나타납니다." autocomplete="off" value="">
+															<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+															<p class="row_err_txt">전송 메시지를 입력해 주세요.</p>
+													</div>
+											</dd>
 										</dl>
 									</li>
 								</ul>

@@ -177,7 +177,7 @@
 .colslide_atc_list .atcbox_set .atcbox{width:25%;padding:0 12px;}
 .colslide_atc_list .atcbox .txtbox{margin-top:12px;}
 .is_pc .colslide_atc_list ul{flex-direction:column;gap:50px 0;}
-
+292 183
 
 
 /* 바자화보 */
@@ -581,7 +581,7 @@
 	.even_atc_wrap{margin-bottom:80px;}
 	.even_atc_list ul{display:block;overflow:hidden;overflow-x:auto;display:block;margin:0 -20px;padding:0 20px;font-size:0;white-space:nowrap;}
 	.even_atc_list ul::-webkit-scrollbar{display:none;}
-	.even_atc_list li{display:inline-block;width:77.8666%;margin-left:12px;padding:0;vertical-align:top;}
+	.even_atc_list li{display:inline-block;width:87.165%;margin-left:12px;padding:0;vertical-align:top;}
 	.even_atc_list li:first-of-type{margin-left:0;}
 
 }

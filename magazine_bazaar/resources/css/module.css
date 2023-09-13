@@ -173,7 +173,6 @@
 .follow_box .txt strong em{font-weight:500;}
 
 .colslide_atc_wrap{margin-bottom:180px;}
-.colslide_atc_wrap .tit_wrap{margin-bottom:48px;}
 .colslide_atc_list .atcbox_set{display:flex;margin:0 -12px;}
 .colslide_atc_list .atcbox_set .atcbox{width:25%;padding:0 12px;}
 .colslide_atc_list .atcbox .txtbox{margin-top:12px;}
@@ -509,8 +508,6 @@
 	.follow_box .btnbox .btn{width:100%;height:48px;}
 
 	.colslide_atc_wrap{margin-bottom:80px;}
-	.colslide_atc_wrap .tit_wrap{margin-bottom:32px;}
-	.colslide_atc_wrap .tit_wrap .tit{font-size:22px;line-height:32px;}
 
 	.colslide_atc_list{margin:0 -20px;padding:0 20px;overflow:hidden;}
 	.colslide_atc_list li{margin-right:20px;}

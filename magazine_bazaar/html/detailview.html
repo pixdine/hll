@@ -402,7 +402,7 @@
 									</div>
 
 									<!-- 사진묶음 슬라이드 컨텐츠 -->
-									<div class="tag_photobundle" data-slide="slider-type01">
+									<div class="tag_photobundle">
 										<div class="swiper viewSwiper">
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
@@ -1574,25 +1574,25 @@
         currentPage = 'view';
 
 		/* 이미지 슬라이드 01  */
-		function viewImgSlide() {
-			var viewImgSlide = $('[data-slide="slider-type01"]');
-			if (viewImgSlide.length < 1) return false;
+		// function viewImgSlide() {
+		// 	var viewImgSlide = $('[data-slide="slider-type01"]');
+		// 	if (viewImgSlide.length < 1) return false;
 
-			viewImgSlide.each(function () {
-				var $this = $(this);
-				var swiper = new Swiper(".viewSwiper", {
-					scrollbar: {
-						el: ".swiper-scrollbar",
-						hide: true,
-					},
-					navigation: {
-						nextEl: ".swiper-button-next",
-						prevEl: ".swiper-button-prev",
-					}
-				});
+		// 	viewImgSlide.each(function () {
+		// 		var $this = $(this);
+		// 		var swiper = new Swiper(".viewSwiper", {
+		// 			scrollbar: {
+		// 				el: ".swiper-scrollbar",
+		// 				hide: true,
+		// 			},
+		// 			navigation: {
+		// 				nextEl: ".swiper-button-next",
+		// 				prevEl: ".swiper-button-prev",
+		// 			}
+		// 		});
 
-			});
-		}
+		// 	});
+		// }
 
 		//키워드 태그영역 더보기
 		function tagOpen() {
@@ -1623,7 +1623,7 @@
 		}
 
 		$(document).ready(function () {
-			viewImgSlide();
+			// viewImgSlide();
 			progress_bar(); //D: 상세페이지 프로그래스바
 
 			//키워드 태그
@@ -1634,9 +1634,6 @@
 		$(window).resize(function () {
 			showTagBtn();
 		});
-
-		// 지도 상세 설명 더보기 토글
-		$('.comment_box').commentToggle();
 	</script>
 	<!-- //js -->
 

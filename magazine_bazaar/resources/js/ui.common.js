@@ -4,13 +4,10 @@ var currentPage;
 $(document).ready(function(){
 	setCSS();
 
-    console.log(currentPage);
-
-    // 멀티헤더
+    // 멀티헤더를 위한 현재페이지 표시
     if (currentPage == undefined) {
         currentPage = 'sub';
     }
-    console.log(currentPage);
     $('.header').addClass(currentPage);
 
 	if($('.kv_full').length){
@@ -26,6 +23,11 @@ $(document).ready(function(){
 	allmenuOpen();
     initOnDevice();
     inputBind();
+    
+    // 지도 상세 설명 더보기 토글
+    $('.comment_box').commentToggle();
+
+    $('.tab_wrap').commonTab(); // 탭메뉴, 탭컨텐츠
 
     $('[data-popup-toggle]').on('click', function(e) {
         var targetId = $(this).attr('data-popup-toggle')
@@ -798,8 +800,8 @@ $.fn.commonTab = function () {
 // 공통 스크롤 이벤트
 let lastScrollTop = 0;
 
-$('html, body, .wrap').on('scroll', function () {
-    let currentScrollTop = $('body').scrollTop();
+$(window).on('scroll', function () {
+    let currentScrollTop = $(window).scrollTop();
     if (currentScrollTop <=0) {
         $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
     }
@@ -818,14 +820,14 @@ $('html, body, .wrap').on('scroll', function () {
 
 // 스크롤 다운
 function onScrollDown() {
-    console.log("스크롤 다운됨!");
+    //console.log("스크롤 다운됨!");
     $('body').removeClass('scroll_up');
     $('body').addClass('scroll_down');
 }
 
 // 스크롤 업
 function onScrollUp() {
-    console.log("스크롤 업됨!");
+    //console.log("스크롤 업됨!");
     $('body').addClass('scroll_up');
     $('body').removeClass('scroll_down');
     if ($('body').hasClass('is_mobile')) {

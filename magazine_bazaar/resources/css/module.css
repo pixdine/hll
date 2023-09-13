@@ -69,8 +69,6 @@
 
 /* 카테고리별 기사 모듈 */
 .cate_atc_wrap{margin-bottom:180px;}
-.cate_atc_wrap .tit_wrap{margin-bottom:48px;}
-/* .cate_atc_wrap .tit_wrap .tit{font-size:28px;line-height:41px;} */
 .cate_atc_list.pc{display:flex;}
 .cate_atc_list.pc .big_thumb{width:51%;padding-right:24px;}
 .cate_atc_list.pc .big_thumb .atcbox{position:sticky;top:24px;}
@@ -361,6 +359,11 @@
 .is_pc .map_wrap.horiz .map_info{width:51.515%;margin-top:0;padding-left:24px;}
 .is_pc .map_wrap.horiz .map_area .btn_ico.zoom{right:12px;top:12px;}
 
+/* 짝수 이미지+텍스트 모듈 (셀러브리티 스타일) */
+.even_atc_wrap{margin-bottom:180px;}
+.even_atc_list ul{display:flex;flex-wrap:wrap;margin:0 -12px;gap:50px 0;}
+.even_atc_list li{width:50%;padding:0 12px;}
+.even_atc_list .atcbox .imgbox{padding-top:62.5851%;}
 
 
 
@@ -424,7 +427,6 @@
 	.atcbox .txtbox .tit{height:40px;font-size:14px;line-height:20px;}
 
 	.cate_atc_wrap{margin-bottom:80px;}
-	.cate_atc_wrap .tit_wrap{margin-bottom:32px;}
 	.cate_atc_list.pc{display:none;}
 	.cate_atc_list.mo{display:block;}
 
@@ -582,9 +584,11 @@
 	.pic_atc_list .grid li{width: 100%; padding: 0; margin-bottom: 12px;}
 	.pic_atc_list .grid li:last-child{margin-bottom: 0;}
 
-
-
-
+	.even_atc_wrap{margin-bottom:80px;}
+	.even_atc_list ul{display:block;overflow:hidden;overflow-x:auto;display:block;margin:0 -20px;padding:0 20px;font-size:0;white-space:nowrap;}
+	.even_atc_list ul::-webkit-scrollbar{display:none;}
+	.even_atc_list li{display:inline-block;width:77.8666%;margin-left:12px;padding:0;vertical-align:top;}
+	.even_atc_list li:first-of-type{margin-left:0;}
 
 }
 

@@ -685,6 +685,8 @@ background:#fff;overflow:hidden;z-index:230}
 .ul_tbl .ul_td.datebox > span + span{margin-left:12px;padding-left:12px;}
 .ul_tbl .ul_td.datebox > span + span:before{content:'';display:block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;margin-top:1px;background-color:#dbdbdb;}
 
+/* 서브메인 */
+.sub_main .tit_wrap{margin-bottom:48px;}
 
 
 
@@ -1073,6 +1075,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.ul_tbl .ul_td.datebox{margin-top:19px;text-align:left;}
 	.ul_tbl .ul_td.datebox > span{font-size:14px;line-height:20px;}
 
+	/* 서브메인 */
+	.sub_main .tit_wrap{margin-bottom:32px;}
 
 }
 

@@ -4,10 +4,13 @@ var currentPage;
 $(document).ready(function(){
 	setCSS();
 
+    console.log(currentPage);
+
     // 멀티헤더
-    if (currentPage !== 'main' && currentPage !== 'view') {
+    if (currentPage == undefined) {
         currentPage = 'sub';
     }
+    console.log(currentPage);
     $('.header').addClass(currentPage);
 
 	if($('.kv_full').length){
@@ -148,12 +151,12 @@ function headerSticky () {
 	function scrollCallback(scrollTop) {
 		// ios 15 이하 및 공통 처리
 		var atTop = scrollTop <= 0
-		var atBottom = scrollTop >= $(window).scrollHeight - $(window).clientHeight
+		var atBottom = scrollTop >= window.scrollHeight - window.clientHeight
 
 		// body lock scroll 상태 계산 안함
 		if(!$('body').hasClass('lockbody')) {
 			if(atTop) lastScroll =  0;
-			if(atBottom) lastScroll = $(window).scrollHeight - $(window).clientHeight;
+			if(atBottom) lastScroll = window.scrollHeight - window.clientHeight;
 
 			if (Math.abs(lastScroll - scrollTop) > delta) 
 			{
@@ -795,7 +798,7 @@ $.fn.commonTab = function () {
 // 공통 스크롤 이벤트
 let lastScrollTop = 0;
 
-$(window).on('scroll', function () {
+$('html, body, .wrap').on('scroll', function () {
     let currentScrollTop = $('body').scrollTop();
     if (currentScrollTop <=0) {
         $('.header_gnb .gnb_menu .on .sub_menu').slideDown(200);
@@ -815,14 +818,14 @@ $(window).on('scroll', function () {
 
 // 스크롤 다운
 function onScrollDown() {
-    // console.log("스크롤 다운됨!");
+    console.log("스크롤 다운됨!");
     $('body').removeClass('scroll_up');
     $('body').addClass('scroll_down');
 }
 
 // 스크롤 업
 function onScrollUp() {
-    // console.log("스크롤 업됨!");
+    console.log("스크롤 업됨!");
     $('body').addClass('scroll_up');
     $('body').removeClass('scroll_down');
     if ($('body').hasClass('is_mobile')) {

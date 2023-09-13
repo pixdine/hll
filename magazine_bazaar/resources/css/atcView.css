@@ -225,7 +225,6 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 /************************* Media Query *************************/
 @media (max-width:1216px){
-    html, body {overflow-x:hidden;}
 	.ab_photo_1200{width:calc(100vw - 16px);}
 	.ab_photo_1200 .caption{padding-left:20px;}
 }

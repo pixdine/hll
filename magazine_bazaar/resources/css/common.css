@@ -31,8 +31,7 @@
 }
 
 /* reset */
-html{height:100%;font-size:10px; overflow:auto; }
-body{}
+html, body {font-size:10px;}
 body{font-family:'Noto Sans KR', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif;font-weight:500;color:#111;letter-spacing:-0.01em;line-height:1.4;-webkit-text-size-adjust:none;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;box-sizing:border-box;-webkit-box-sizing:border-box;word-break:keep-all;word-wrap:break-word;white-space:normal;/*font-family:inherit;*/}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section{display:block;}
@@ -84,7 +83,7 @@ a:hover{text-decoration:none;}
 
 /* common */
 :root{
-	--vh:100vh;
+	/* --vh:100vh; */
 	--point : #b30010;
 }
 
@@ -192,7 +191,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 
 /************************* Layout *************************/
-.wrap{position:relative;width:100%;height:100%;margin-left:auto;margin-right:auto;font-size:16px;}
+.wrap{position:relative; font-size:16px;}
 
 
 /* 구글광고배너 */
@@ -243,12 +242,12 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .header.sub{border-bottom:1px solid #dbdbdb;}
 
 /* header 상세(기사상세,이벤트상세) */
-.header.view{position:sticky;top:0;border-bottom:1px solid #dbdbdb;}
+.header.view{border-bottom:1px solid #dbdbdb;}
 .header.view .header_wrap{position:relative;height:72px;overflow:hidden;}
 .header.view .header_top{display:none;}
 .header.view .header_bottom{width:100%;height:100%;background:#fff;transition:all ease 350ms;}
 .header.view .header_bottom .logo{display:block;}
-.header.view.active{position:sticky;top:0;}
+/* .header.view.active{position:sticky;top:0;} */
 .header.view.active .header_bottom{transform:translate3d(0, -72px, 0);}
 .header.view.active .floating_bar{ top : 0; }
 

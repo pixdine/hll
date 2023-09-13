@@ -58,7 +58,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 
 
 /* 모아보기 */
-.moa_wrap { width:100%; margin:180px auto}
+.moa_wrap { width:100%; margin:180px auto 0}
 .moa_wrap .tit_wrap {margin-bottom:60px}
 .moa_wrap .btn_txt {display:none}
 .moa_wrap .tit_wrap .btn_txt {display:block}

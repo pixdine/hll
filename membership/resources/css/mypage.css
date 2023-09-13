@@ -19,6 +19,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 
 
 .mypage_point_info {position:relative;height:220px; background:#fff; padding:40px; box-sizing: border-box;}
+.top_cont_area .mypage_point_info {margin-top:51px}
 .mypage_point_info ul {display:flex; flex-direction: row; flex-wrap:wrap; justify-content: space-between; align-items: stretch; height:100%}
 .mypage_point_info ul li {position:relative; border-left:1px solid #DBDBDB; flex: 1; }
 .mypage_point_info ul li:first-child {border-left:0}

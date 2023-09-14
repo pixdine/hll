@@ -246,7 +246,10 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .cont_inner.pictorial .photo_third div { width:50%; max-width:none; margin-right:0}
 .cont_inner.pictorial .photo_third img {width:100%;} 
 
+.cont_inner.pictorial ~ .cont_inner .atc_body { margin-top:60px}
 
+.btn_wrap { display:flex; flex-direction: row;justify-content: space-around; }
+.btn_wrap .btn {width:100%}
 
 /************************* Media Query *************************/
 @media (max-width:1216px){
@@ -390,6 +393,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 	.tmp_photo{margin:0 -20px 24px;}
 
+    .cont_inner.pictorial .atc_header  {max-width:auto;    padding: 0 20px;}
     .cont_inner.pictorial .ab_photo { margin:20px 0}
     .cont_inner.pictorial .photo_dual { flex-direction: row; flex-wrap: wrap; margin:0; column-gap:0;}
     .cont_inner.pictorial .photo_dual div { width:100%; margin:20px 0}
@@ -397,5 +401,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
     .cont_inner.pictorial .photo_third { flex-direction: row; flex-wrap: wrap; margin:0; column-gap:0;}
     .cont_inner.pictorial .photo_third div { width:100%; margin:20px 0}
+
+    .cont_inner.pictorial ~ .cont_inner .atc_body { margin-top:40px}
 
 }

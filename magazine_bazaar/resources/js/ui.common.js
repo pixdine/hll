@@ -715,13 +715,13 @@ function progress_bar() {
 	var body = document.body;
 	var bar = document.querySelector('.progress_bar');
 
-	// window.addEventListener('scroll', function(){
-	document.querySelector('body').addEventListener('scroll', function(){
+	window.addEventListener('scroll', function(){
 		// setTimeout(function() {
 			if(!body.classList.contains('lockbody')) {
-				var winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-				// height = document.documentElement.scrollHeight - window.innerHeight;
-				height = document.body.scrollHeight - document.documentElement.scrollHeight;
+				var winScroll = $(window).scrollTop();
+				// height = document.documentElement.scrollHeight - this.innerHeight;
+				//height = window.scrollHeight - document.documentElement.scrollHeight;
+				height = document.documentElement.scrollHeight - $(window).height();
 				bar.style.width = ((winScroll / height) * 100) + "%";
 			}
 		// }, 300);

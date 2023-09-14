@@ -843,7 +843,7 @@ $.fn.moreDrop = function () {
             moreDropBody.addClass('on');
         }
     });
-    toggleBtn.on('blur', function () {
+    toggleBtn.on('focusout', function () {
         setTimeout(function () {
             moreDropBody.removeClass('on');
             }, 100);

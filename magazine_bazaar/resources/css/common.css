@@ -284,7 +284,6 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* header 공통스타일 */
 .header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}
-.header .header_wrap{overflow: hidden;}
 .header .logo a{display:block;font-size:0;}
 .header .logo img{width:100%;vertical-align:baseline;}
 .header .btn_menu{display:block;position:relative;z-index:1;width:38px;height:38px;margin-left:-4px;}

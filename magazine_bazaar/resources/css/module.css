@@ -655,6 +655,7 @@
     .carouselTicker .carouselTicker__item .ticker_info {height: 92px; padding: 16px 0 0 12px; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
     .carouselTicker .carouselTicker__item .subject {font-size: 10px;}
     .carouselTicker .carouselTicker__item .desc_txt {margin-top: 6px; font-size: 14px; line-height: 20px; height: 40px;}    
+    
 	.bnr_wrap{margin-bottom:80px;}
 	.bnr_list{margin:0 -20px;}
 	.bnr_list .bnrbox .imgbox .pc{display:none;}

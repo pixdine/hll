@@ -596,8 +596,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}
-.tab_menu.type03 > ul > li > a{display:inline-flex;align-items:center;height:44px;padding:0 16px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:500;color:#111;}
-.tab_menu.type03 > ul > li.on > a{background-color:#111;border-color:#111;color:#fff;}
+.tab_menu.type03 > ul > li > a{display:inline-flex;align-items:center;height:44px;padding:0 16px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;color:#111;}
+.tab_menu.type03 > ul > li.on > a{background-color:#111;border-color:#111;color:#fff;font-weight:500;letter-spacing:-0.02em;}
 
 .tab_menu.type04{margin-bottom:80px;}
 .tab_menu.type04 > ul{display:flex;align-items:center;border-top:2px solid #111;}
@@ -705,16 +705,15 @@ background:#fff;overflow:hidden;z-index:230}
 .event_cont .list_top{margin-bottom:24px;}
 .event_list ul{display:flex;flex-wrap:wrap;gap:44px 0;margin:0 -12px;}
 .event_list li{width:33.3333%;padding:0 12px;}
-
-.bnrbox{position:relative;}
-.bnrbox a{display:block;position:relative;width:100%;height:100%;}
-.bnrbox .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
-.bnrbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:all .3s linear;}
-.bnrbox a:hover .imgbox img{transform:scale(1.1);}
-.bnrbox .txtbox{margin-top:16px;}
-.bnrbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
-.bnrbox .date{margin-top:12px;font-family:Gotham;font-size:16px;font-weight:500;color:#666;line-height:1;}
-.bnrbox .flag{position:absolute;left:0;bottom:0;}
+.event_list li .bnrbox{position:relative;}
+.event_list li .bnrbox a{display:block;position:relative;width:100%;height:100%;}
+.event_list li .bnrbox .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
+.event_list li .bnrbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:all .3s linear;}
+.event_list li .bnrbox a:hover .imgbox img{transform:scale(1.1);}
+.event_list li .bnrbox .txtbox{margin-top:16px;}
+.event_list li .bnrbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
+.event_list li .bnrbox .date{margin-top:12px;font-family:Gotham;font-size:16px;font-weight:500;color:#666;line-height:1;}
+.event_list li .bnrbox .flag{position:absolute;left:0;bottom:0;}
 
 /* 게시판 */
 .ul_tbl_box{border-top:2px solid #111;}
@@ -1104,8 +1103,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.event_list_wrap{margin-bottom:80px;}
 	.event_list > ul{gap:50px 0;margin:0;}
 	.event_list > ul > li{width:100%;padding:0;}
-	.bnrbox .txtbox .tit{height:46px;font-size:16px;line-height:23px;}
-	.bnrbox .date{margin-top:12px;font-size:14px;}
+	.event_list li .bnrbox .txtbox .tit{height:46px;font-size:16px;line-height:23px;}
+	.event_list li .bnrbox .date{margin-top:12px;font-size:14px;}
 
 	/* 게시판 */
 	.ul_tbl .ul_tr{display:block;padding:20px 16px;border-bottom:1px solid #dbdbdb;}
@@ -1124,6 +1123,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.horoscope_wrap .list_top .side{display:block;width:100%;margin:24px 0 0 0;}
 	.horoscope_list ul{gap:40px 12px;}
 	.horoscope_list li{width:calc(50% - 6px);}
+	.horoscope_list li a .tit{font-size:16px;line-height:23px;}
+	.horoscope_list li a .date{margin-top:8px;}
 
 	.popup_horoscope .popup_head{min-height:48px;}
 	.horoscope_box{flex-direction:column;}
@@ -1143,6 +1144,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.cover_atc_wrap .list_top{margin-bottom:20px;}
 	.cover_atc_list ul{gap:12px 0;margin:0 -6px;}
 	.cover_atc_list li{width:50%;padding:0 6px;}
+	.horoscope_list li a:before{margin-bottom:16px;}
 	.cover_atc_list .atcbox .txtbox{padding:0 16px 16px;}
 	.cover_atc_list .atcbox .txtbox:before{height:108px;}
 }

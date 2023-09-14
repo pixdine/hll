@@ -370,4 +370,6 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
     
     .ab_photo_1200 .tag_photobundle, .ab_photo_1200 .photo_five , .ab_photo_1200 .photo_four { margin:20px 0}
 
+	.tmp_photo{margin:0 -20px 24px;}
+
 }

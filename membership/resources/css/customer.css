@@ -11,7 +11,7 @@ body.is_PC .container.customer #content { padding-top:60px}
 
 .search_res { font-size:24px; line-height:1.4; font-weight:700; margin-bottom:24px }
 .search_res strong {color:var(--point) }
-.search_res span { font-family:"Gotham";color:var(--point)  }
+.search_res span { font-family:"Gotham";color:var(--point); font-size:26px; font-weight:500 }
 
  .board_st01.faq_cont .b_tit a {white-space:normal; text-overflow:clip }
 
@@ -24,6 +24,7 @@ body.is_PC .container.customer #content { padding-top:60px}
     .gray_box.search { margin:0 -20px 43px}
     .gray_box.search .box_inner {padding:32px 20px }
     .gray_box.search .box_inner .inputbox { width:100%; margin:0 auto}
+    .search_res span { font-size:18px}
     .search_res { font-size:16px; }
     .inquiry_in.input_type02 li .radio_list li { width:45%}
     .inquiry_in.input_type02 .radio_list {justify-content: space-between;}

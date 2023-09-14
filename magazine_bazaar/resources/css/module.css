@@ -229,24 +229,15 @@
 .comment_img img{display:block;}
 .comment_modify{display:none;}
 
-.is_pc .comment_write{padding:20px 8px 20px 0;}
-.is_pc .comment_write textarea{padding:0 12px 0 20px;}
+.is_pc .comment_write{padding:19px 8px 19px 0;}
+.is_pc .comment_write textarea{padding:0 11px 0 19px;}
 .is_pc .comment_write .comment_bottom{margin:24px 12px 0 20px;}
-.is_pc .comment_write textarea {overflow:auto;}
-.is_pc .comment_write textarea::-webkit-scrollbar{width:4px;height:4px;}
-.is_pc .comment_write textarea::-webkit-scrollbar-thumb{background-color:#111;}
-.is_pc .comment_write textarea::-webkit-scrollbar-track{background-color:#dbdbdb}
-
-
-
 
 .photo_upload{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;}
 .photo_upload .btn_addfile{display:block;position:relative;width:74px;height:74px;background-color:#fff;border:1px dashed #dbdbdb;font-size:12px;line-height:17px;color:#111;}
 .photo_upload .btn_addfile:before{content:'';display:block;width:24px;height:24px;margin:0 auto 2px;background:url("../images/ico_camera_24.svg") no-repeat center center;}
 .photo_upload .btn_addfile:disabled{background-color:#f7f7f7;color:#999;}
 .photo_upload .btn_addfile:disabled:before{background:url("../images/ico_camera_24_gray.svg");}
-
-
 .photo_upload .thumb{display:block;position:relative;overflow:hidden;width:74px;height:74px;}
 .photo_upload .thumb img{display:block;width:100%;height:100%;object-fit:cover;}
 .photo_upload .thumb:before{content:'';display:block;position:absolute;left:0;top:0;width:100%;height:40px;background:linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0) 100%);}
@@ -260,14 +251,6 @@
 .more_drop .btnm.modify:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;background:url("../images/ico_modify_16.svg") no-repeat center center;}
 .more_drop .btnm.del:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;;background:url("../images/ico_del_16.svg") no-repeat center center;}
 .more_drop .btnm.cancel:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;;background:url("../images/ico_close_16_gray.svg") no-repeat center center;}
-
-/* 개인정보 수집 및 이용동의 */
-.terms_wrap{margin:80px auto 0;padding-top:80px;border-top:1px solid #dbdbdb;}
-.terms_wrap .tit_wrap{margin-bottom:24px;}
-.terms_wrap .tit_wrap .tit{font-size:16px;line-height:23px;}
-.terms_wrap .scroll_wrap {padding:31px 8px 31px 0;border: 1px solid #dbdbdb;}
-.terms_wrap .terms_box{max-height:200px;padding:0 23px 0 31px;font-size:14px;font-weight:400;line-height:20px;color:#111;}
-.terms_wrap .terms_box ul li + li{margin-top:8px;}
 
 /* 투표 & 퀴즈 모듈 */
 .pick_wrap{margin:40px auto;padding:60px;border:1px solid #dbdbdb;letter-spacing:-0.01em;}
@@ -360,12 +343,20 @@
 .even_atc_list li{width:50%;padding:0 12px;}
 .even_atc_list .atcbox .imgbox{padding-top:62.5851%;}
 
-/* 진행바 스와이퍼 모듈 (기사) */
-.progress_swiper_wrap{position: relative;overflow-x:hidden;margin-bottom:180px;padding:95px 0 100px;background-color:#f7f7f7;}
-.progress_swiper_wrap .cont_inner {position: relative;}
-.progress_swiper_wrap .tit_wrap{margin-bottom:40px;}
-.progress_swiper_wrap .tit_wrap .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;color:#111;word-break:break-all;}
-.progress_swiper_wrap .date{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;position:relative;overflow:hidden;margin-top:12px;word-break:break-all;font-size:16px;line-height:23px;color:#666;}
+/* 개인정보 수집 및 이용동의 */
+.terms_wrap{max-width:792px;margin:80px auto 0;padding-top:80px;border-top:1px solid #dbdbdb;}
+.terms_wrap .tit_wrap{margin-bottom:24px;}
+.terms_wrap .tit_wrap .tit{font-size:16px;line-height:23px;}
+.terms_wrap .terms_box{padding:31px 8px 31px 0;border: 1px solid #dbdbdb;}
+.terms_wrap .terms_box .box_inner{max-height:200px;padding:0 23px 0 31px;font-size:14px;font-weight:400;line-height:20px;color:#111;}
+.terms_wrap .terms_box .box_inner > *{word-break:break-all;}
+.terms_wrap .btn_group{display:flex;margin-top:40px;}
+.terms_wrap .btn_group .btn{width:100%;}
+.terms_wrap .btn_group .btn ~ .btn{margin-left:16px;}
+
+.popup_register .popup_head{min-height:88px;border-bottom:0;}
+.popup_register .popup_cont .stit{margin-bottom:32px;font-size:24px;font-weight:700;line-height:35px;text-align:center;}
+.popup_register .bx_type01{margin-bottom:32px;}
 
 .progress_swiper{overflow:hidden;position:relative;margin-left:auto;margin-right:auto;padding:0;}
 .progress_swiper li{width:384px;margin-right:24px;}
@@ -534,9 +525,6 @@
 	.colslide_atc_list .atcbox_set{flex-wrap:wrap;gap:24px 0;margin:0 -6px;}
 	.colslide_atc_list .atcbox_set .atcbox{width:50%;padding:0 6px;}
 
-
-
-
 	.pic_atc_wrap{margin-bottom:80px;}
 	.pic_atc_list .atcbox .txtbox{padding:0 24px 24px;}
 	.pic_atc_list .atcbox .txtbox:before{height:120px;}
@@ -544,8 +532,8 @@
 
 	.comment_wrap{margin-top:60px;padding-top:60px;}
 	.comment_wrap .tit_wrap{margin-bottom:16px;}
-	.comment_write{padding:16px 0 16px 16px;}
-	.comment_write textarea{height:60px;padding-right:16px;}
+	.comment_write{padding:15px 0 15px 15px;}
+	.comment_write textarea{height:60px;padding-right:15px;}
 	.comment_write .comment_bottom{margin-right:16px;}
 	.comment_thumb .profile_img{width:28px;height:28px;margin-right:12px;background-size:28px auto;}
 	.comment_info{margin-bottom:5px;}
@@ -554,9 +542,9 @@
 
 	.terms_wrap{margin-top:60px;padding-top:60px;}
 	.terms_wrap .tit_wrap{margin-bottom:16px;}
-	.terms_wrap .terms_box{max-height:236px;padding:15px;}
-	.terms_wrap .terms_box ul li + li{margin-top:8px;}
-
+	.terms_wrap .terms_box{padding:19px 0 19px 0;}
+	.terms_wrap .terms_box .box_inner{padding:0 19px;}
+	.terms_wrap .btn_group{margin-top:16px;}
 
 	.pick_wrap{margin:20px 0;padding:0;border:0;}
 	.pick_wrap .pick_head .total{display:none;}
@@ -603,6 +591,9 @@
 	.even_atc_list ul::-webkit-scrollbar{display:none;}
 	.even_atc_list li{display:inline-block;width:87.165%;margin-left:12px;padding:0;vertical-align:top;}
 	.even_atc_list li:first-of-type{margin-left:0;}
+
+	.popup_register .popup_head{min-height:48px;}
+	.popup_register .popup_cont .stit{font-size:22px;line-height:32px;}
 
 }
 

@@ -14,7 +14,7 @@ body.is_PC .container.member #content { padding-top:60px}
 .agree_chk_list {}
 .agree_chk_list li.agree_all { border-bottom:1px solid #DBDBDB; padding-bottom:24px;}
 .agree_chk_list li.agree_all::after {display:none}
-.agree_chk_list li { color:#666; position:relative; padding-right:20px; margin-top:27px}
+.agree_chk_list li { color:#666; position:relative; padding-right:20px; margin-top:24px}
 /* .agree_chk_list li::after { content:''; position:absolute; right:0; top:6px; width:20px; height:20px; background-image:url('../../resources/images/ico_arrow.svg'); background-repeat:no-repeat; background-position:center center; } */
 .agree_chk_list li em { color:#999; }
 .agree_chk_list li .btn_ico.more { position:absolute; right:0; top:2px; width:20px; height:20px; background-size:auto auto; background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12L9 7L4 2' stroke='%23666' stroke-width='1'/%3E%3C/svg%3E%0A"); }

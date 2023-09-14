@@ -18,7 +18,8 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .top_profile_area .txt02 .btn_ico.modify { position:relative; top:-1px; margin-left:4px; vertical-align:middle}
 
 
-.mypage_point_info {position:relative;height:220px; background:#fff; margin-top:51px; padding:40px; box-sizing: border-box;}
+.mypage_point_info {position:relative;height:220px; background:#fff; padding:40px; box-sizing: border-box;}
+.top_cont_area .mypage_point_info {margin-top:51px}
 .mypage_point_info ul {display:flex; flex-direction: row; flex-wrap:wrap; justify-content: space-between; align-items: stretch; height:100%}
 .mypage_point_info ul li {position:relative; border-left:1px solid #DBDBDB; flex: 1; }
 .mypage_point_info ul li:first-child {border-left:0}
@@ -58,13 +59,13 @@ body.is_pc .container.mypage #content { padding-top:60px}
 
 
 /* 모아보기 */
-.moa_wrap { width:100%; margin:180px auto}
+.moa_wrap { width:100%; margin:180px auto 0}
 .moa_wrap .tit_wrap {margin-bottom:60px}
 .moa_wrap .btn_txt {display:none}
 .moa_wrap .tit_wrap .btn_txt {display:block}
-.tag_wrap{margin-bottom:48px;}
+.tag_wrap{margin-bottom:40px;}
 .tag_wrap .btnbox{display:none;}
-.tag_list{display:flex;flex-wrap:wrap;column-gap:8px;row-gap:12px;overflow:hidden;margin-bottom:48px;}
+.tag_list{display:flex;flex-wrap:wrap;column-gap:8px;row-gap:12px;overflow:hidden;}
 .tag_list li{display:inline-block;vertical-align:top;}
 .tag_list li a{display:block;min-height:44px;padding:10px 20px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;}
 .tag_list li.on a{background-color:var(--point);border-color:var(--point);font-weight:500;color:#fff;letter-spacing: -0.021em;}
@@ -121,7 +122,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_prd_info .prd_txt {}
 .point_prd_info .prd_txt dl {padding-left:204px}
 .point_prd_info .prd_txt dt {font-size:18px; font-weight:500; line-height:1.4; }
-.point_prd_info .prd_txt dd {font-size:16px; line-height:1.4; color:#666; font-weight:400}
+.point_prd_info .prd_txt dd {font-size:16px; line-height:1.5; color:#666; font-weight:400}
 .point_prd_info .prd_txt dd.prd_tit {margin-top:16px; }
 .point_prd_info .prd_txt dd.prd_detail { margin-top:32px; }
 .point_prd_info .prd_txt dd.prd_detail ul {display:flex}
@@ -136,7 +137,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_save_wrap { margin-top:80px}
 .point_save_wrap .tit_wrap{margin-bottom:40px;}
 .point_save_wrap .top_sort_wrap{margin-bottom:24px;}
-.point_save_list { border-top:1px solid #111 }
+.point_save_list { border-top:2px solid #111 }
 .point_save_list li { padding:28px 24px; border-bottom:1px solid #DBDBDB}
 .point_item {position:relative;}
 .point_item dt {font-size:18px; font-weight:500; line-height:1.4;width:85%; white-space: nowrap; text-overflow: ellipsis; overflow:hidden}
@@ -162,7 +163,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .is_pc .popup_scroll::-webkit-scrollbar-track{background-color:transparent;}
 .is_pc .popup_scroll::-webkit-scrollbar-thumb{background-color:#dbdbdb;border-radius:4px;}
 .is_pc .popup_scroll .popup_cont{margin:0 8px 0 0;}
-.point_inq_list li {margin-top:20px}
+.point_inq_list li {margin-top:16px}
 .point_inq_list li:first-child {margin-top:0px}
 .point_inq_list li dl { display:flex; justify-content: space-between;}
 .point_inq_list li dt {font-size:16px; font-weight:500; line-height:23px; text-align:left; }
@@ -229,8 +230,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .selectbox .select_options li.selected { color:#111; font-weight:700}
 
 /* 포인트샵 */
-.point_prd_info02 {display:flex; flex-direction: row; justify-content: space-between; column-gap:8.42%;}
-.point_prd_info02 .prd_img { position:relative; width:50.58%; height:50.58%; flex-shrink: 0;}
+.point_prd_info02 {display:flex; flex-direction: row; justify-content: space-between; column-gap:8.5%;}
+.point_prd_info02 .prd_img { position:relative; width:49%; height:49%; flex-shrink: 0;}
 .point_prd_info02 .prd_img img {display:block}
 .point_prd_info02 .prd_txt { }
 .point_prd_info02 .prd_txt dl {padding:0;}
@@ -285,9 +286,6 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 .important { font-size:12px; line-height:1.6; color:#FF0000; margin-top:8px; padding-left:28px}
 
-.member_info .tit_wrap02 { margin-bottom:20px }
-
-.pointshop_order .input_type02 li dl dd { padding-right:42.5%}
 .inputbox.search .inp {width:336px}
 
 /* 이벤트 모아보기 All*/
@@ -299,7 +297,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 /* 포인트 모으기 */
 .point_add_list{ }
-.point_add_list ul {display:flex}
+.point_add_list ul {display:flex; margin:0 -12px}
 .point_add_list li {width:25%;padding:0 12px;}
 .point_add_list .atcbox{position:relative;width:100%;height:100%;}
 .point_add_list .atcbox .imgbox{padding-top:133.334%;}
@@ -342,7 +340,6 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 	.inputbox.search .inp {width:100%}
     .list_sorting_area .option_filter02 .selectbox { margin-left:10px; }
     .list_head_area .inputbox {width:100%; margin-top:16px}
- .pointshop_order .input_type02 li dl dd { padding-right:23.37%;}
 }
 
 
@@ -456,7 +453,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
     .input_chk_type{}
     .input_chk_type .chk_all {position:static}
-    .chk_list { margin-left:0px; display:flex; flex-wrap:wrap; margin-top:16px}
+    .chk_list { margin-left:0px; display:flex; flex-wrap:wrap; margin-top:16px; column-gap: 0;}
     .chk_list li { position:relative;width:50%; white-space:nowrap; margin-bottom:16px}
     .chk_list li .chk_in { vertical-align:middle; color:#111}
     .chk_list li .btn_ico { vertical-align:middle;}
@@ -477,7 +474,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_prd_info .prd_txt dl { padding-left:100px;}
     .point_prd_info .prd_txt dt {font-size:14px;  }
     .point_prd_info .prd_txt dd {font-size:14px;}
-    .point_prd_info .prd_txt dd.prd_tit {margin-top:12px; }
+    .point_prd_info .prd_txt dd.prd_tit {margin-top:12px; word-break:break-all }
 
     .point_prd_info .prd_img {width:80px; height:80px; }
     .point_prd_info .prd_img img {width:100%}
@@ -537,7 +534,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 	.inputbox.only50 {width:100%}
     .btm_info_box { padding:20px; margin-top:40px }
-
+    
+    .point_agree_area { margin-top:20px; padding-top:32px}
     .point_agree_area dd {margin:16px 0 0}
     .important { padding-left:0}
 
@@ -552,7 +550,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
     .point_save_wrap .tit_wrap .tit { font-size:16px}
     .point_prd_info02 .prd_txt dd.prd_detail ul li span.ptit {min-width:80px;}
-	 .body_cont01 .tit_wrap02:first-child { margin-bottom:20px}
+	 .body_cont01 .tit_wrap02:first-child { margin-bottom:24px}
     .inp_area .body_cont01 ~ .body_cont01 {margin-top:32px}
 
 	.is_mobile .mypage_point_info .tooltip_layer.is-visible   {width:auto;}
@@ -571,6 +569,13 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_add_list li{width:65.377%; display:inline-block; margin-right:12px; padding:0}
     .point_add_list li:last-child{margin-right:0;}
     .moa_wrap .has_plus:after {background-position:center 3px;}
+
+    .tbl_btm_area .btn_txt03 + .btn_area { margin-top:30px}
+
+    
+    .body_cont01.order_info .tit_wrap02:first-child  { margin-bottom:20px}
+    .tbl_btm_area { margin-top:24px;}
+    .point_save_list li { padding:20px 16px}
 }
 
 @media (max-width:375px){

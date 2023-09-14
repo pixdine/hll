@@ -721,7 +721,7 @@ function progress_bar() {
 				var winScroll = $(window).scrollTop();
 				// height = document.documentElement.scrollHeight - this.innerHeight;
 				//height = window.scrollHeight - document.documentElement.scrollHeight;
-				height = document.documentElement.scrollHeight - $(window).height();
+				height = document.documentElement.scrollHeight - $(window).height() - $('.footer').height();
 				bar.style.width = ((winScroll / height) * 100) + "%";
 			}
 		// }, 300);

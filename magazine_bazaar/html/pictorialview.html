@@ -285,8 +285,9 @@
 							</div>
 							<!--// 상세 > header -->
 							<!-- 상세 > body -->
+							<!-- 화보 본문 -->
 							<div class="atc_body pictorial_body">
-								<div class="atc_body_cont"> <!-- 화보 본문 -->
+								<div class="atc_body_cont"> 
 									<div class="ab_photo">
 										<div class="image">
 											<img alt="이미지 캡션 영역" src="../resources/images/temp/temp_visual02.jpg">
@@ -331,34 +332,18 @@
 									</div>
 								</div>
 							</div>
-							<!--// 상세 > body -->
+							<!--// 화보 본문 -->
 						</div>
+
 						<div class="cont_inner">
-							<div class="act_body">
+							<div class="atc_body">
 								<div class="atc_body_cont">
-									<!-- 관련 기사-->
-									<div class="ab_related_article">
-										<div class="hd">
-											<h2><strong>이 기사와 같이 보면 더 좋아요!</strong></h2>
-										</div>
-										<div class="bd">
-											<ul class="text_type">
-												<li>
-													<h2 class="headline"><a href="#">루이 비통 프리폴 컬렉션에 참석한 스타들 총정리</a></h2>
-												</li>
-												<li>
-													<h2 class="headline"><a href="#">여름 네일 시안 찾고 있다면 클릭!</a></h2>
-												</li>
-												<li>
-													<h2 class="headline"><a href="#">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</a></h2>
-												</li>
-												<li>
-													<h2 class="headline"><a href="#">여배우의 ‘급빠’법? 이청아의 시상식 전 다이어트</a></h2>
-												</li>
-											</ul>
-										</div>
+									<style>
+										
+									</style>
+									<div class="btn_wrap">
+										<button type="button" class="btn bctype1" ><span>기사 상세보기</span></button>
 									</div>
-									<!-- //관련 기사-->
 							
 									<!-- atc_dtline -->
 									<div class="atc_dtline_box">
@@ -469,7 +454,7 @@
 							</div>
 						</div>
 					</div>
-
+					<!--// 상세 > body -->
 					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
@@ -781,33 +766,108 @@
 	</div>
 	<!-- //팝업 : 퀴즈 정답제출 알럿 -->
 
+		<style>
+			.pictorial_popup {}
+		
+			.pictorial_popup {display: none;position: fixed;left: 0;top:50%; transform:translateY(-50%); width:100%;height: 100%;z-index: 200;}
+			.pictorial_popup.open {	display: block;}
+		
+			.pictorial_popup .pop_pictorial_inner {position: absolute; width:100%;top:50%; transform: translateY(-50%);}
+			.pictorial_popup .pop_pictorial_cont {position:relative;width:1200px; height:840px; margin:0 auto;}
+			.pictorial_popup .tag_photobundle {margin:0}
+			.pictorial_popup .tag_photobundle .swiper-slide { background:transparent; height:840px;}
+			.pictorial_popup .tag_photobundle .caption {font-size:14px; color:#fff; font-weight:400}
+			.pictorial_popup .popup_close { top:60px; right:60px; z-index:2}
+			.pictorial_popup .btn_close {  width:28px; height:28px; background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.0938 2.91016L2.91141 13.0925' stroke='white'/%3E%3Cpath d='M13.0938 13.0898L2.91141 2.90751' stroke='white'/%3E%3C/svg%3E%0A"); background-size:100% 100%}
+			.pictorial_popup .btn_close:after { display:none}
+
+			.pictorial_popup .viewSwiper .swiper-button-next, .pictorial_popup .swiper-button-prev { position:absolute;top:50%; transform:translateY(-50%);width:22px;height:44px;font-size:0;cursor:pointer;background:url('../resources/images/ico_arrow02.svg') no-repeat 0 0 / 22px auto;z-index:2;}
+			.pictorial_popup .swiper-button-prev {left:56px;transform:translateY(-50%) rotate(-180deg); }
+			
+			@media (max-width:768px){
+				.pictorial_popup .btn_close { width:20px; height:20px;}
+				.pictorial_popup .popup_close { top:68px; right:20px }
+				.pictorial_popup .pop_pictorial_cont { width:100%; height:auto}
+				.pictorial_popup .tag_photobundle .swiper-slide { height:auto}
+			}
+		</style>
+		<button type="button" data-popup-open="pictorial_popup"><span>팝업1_하단버튼O</span></button>
+		<div class="pictorial_popup" data-popup="pictorial_popup">
+			<div class="pictorial_popup_head">
+				<h2 class="blind">화보크게보기</h2>
+				<div class="popup_close">
+					<button type="button" class="btn_close" data-popup-close="pictorial_popup"><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="pop_pictorial_inner">
+				<div class="pop_pictorial_cont">
+					<div class="tag_photobundle" data-slide="slider-pictorial">
+						<div class="swiper viewSwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="../resources/images/temp/temp_view10.png" />
+									<p class="caption">사진1 / Gucci</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="../resources/images/temp/temp_view09.png" />
+									<p class="caption">사진2 / Gucci</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="../resources/images/temp/temp_view08.png" />
+									<p class="caption">사진3 / Gucci</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="../resources/images/temp/temp_view07.png" />
+									<p class="caption">사진4 / Gucci</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="../resources/images/temp/temp_view06.png" />
+									<p class="caption">사진5 / Gucci</p>
+								</div>
+								<div class="swiper-slide">
+									<img
+										src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg"
+										alt="">
+									<p class="caption">사진6 / Gucci</p>
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-scrollbar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
 
 	<script>
-        currentPage = 'view';
+		currentPage = 'view';
 
 		/* 이미지 슬라이드 01  */
-		// function viewImgSlide() {
-		// 	var viewImgSlide = $('[data-slide="slider-type01"]');
-		// 	if (viewImgSlide.length < 1) return false;
+		function viewImgSlide() {
+			var viewImgSlide = $('[data-slide="slider-pictorial"]');
+			if (viewImgSlide.length < 1) return false;
 
-		// 	viewImgSlide.each(function () {
-		// 		var $this = $(this);
-		// 		var swiper = new Swiper(".viewSwiper", {
-		// 			scrollbar: {
-		// 				el: ".swiper-scrollbar",
-		// 				hide: true,
-		// 			},
-		// 			navigation: {
-		// 				nextEl: ".swiper-button-next",
-		// 				prevEl: ".swiper-button-prev",
-		// 			}
-		// 		});
+			viewImgSlide.each(function () {
+				var $this = $(this);
+				var swiper = new Swiper(".viewSwiper", {
+					scrollbar: {
+						el: ".swiper-scrollbar",
+						hide: true,
+					},
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					}
+				});
 
-		// 	});
-		// }
+			});
+		}
 
 		//키워드 태그영역 더보기
 		function tagOpen() {
@@ -838,7 +898,7 @@
 		}
 
 		$(document).ready(function () {
-			// viewImgSlide();
+			viewImgSlide();
 			progress_bar(); //D: 상세페이지 프로그래스바
 
 			//키워드 태그
@@ -849,6 +909,7 @@
 		$(window).resize(function () {
 			showTagBtn();
 		});
+
 	</script>
 	<!-- //js -->
 

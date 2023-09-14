@@ -766,7 +766,7 @@
 	</div>
 	<!-- //팝업 : 퀴즈 정답제출 알럿 -->
 
-		<style>
+		<!-- <style>
 			.pictorial_popup {}
 		
 			.pictorial_popup {display: none;position: fixed;left: 0;top:50%; transform:translateY(-50%); width:100%;height: 100%;z-index: 200;}
@@ -838,8 +838,46 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
+    <div class="photoViewer">
+        <div class="pv_container">
+            <div class="pv_cont">
+                <div class="swiper pvSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../resources/images/temp/temp_view10.png" />
+                            <p class="caption">사진1 / Gucci</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../resources/images/temp/temp_view09.png" />
+                            <p class="caption">사진2 / Gucci</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../resources/images/temp/temp_view08.png" />
+                            <p class="caption">사진3 / Gucci</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../resources/images/temp/temp_view07.png" />
+                            <p class="caption">사진4 / Gucci</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../resources/images/temp/temp_view06.png" />
+                            <p class="caption">사진5 / Gucci</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" alt="">
+                            <p class="caption">사진6 / Gucci</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="pv_next"><img src="../resources/images/photo_viewer_next.png" alt="다음"></button>
+                <button class="pv_prev"><img src="../resources/images/photo_viewer_prev.png" alt="이전"></button>
+            </div>
+
+            <button class="pv_close" title="닫기"><img src="../resources/images/close_photoviewer.png" alt="닫기"></button>
+        </div>
+    </div>
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
@@ -904,11 +942,22 @@
 			//키워드 태그
 			$('.tag_wrap .btnbox .btn_ico').on("click", tagOpen);
 			showTagBtn();
+
 		});
 
 		$(window).resize(function () {
 			showTagBtn();
 		});
+
+        
+    var pvSwiper = new Swiper(".pvSwiper", {
+        navigation: {
+            nextEl: ".pv_next",
+            prevEl: ".pv_prev",
+        },
+    })
+
+    pvSwiper.updateSize()
 
 	</script>
 	<!-- //js -->

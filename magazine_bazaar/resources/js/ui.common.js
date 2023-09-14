@@ -841,9 +841,10 @@ $.fn.moreDrop = function () {
             moreDropBody.removeClass('on');
             } else {
             moreDropBody.addClass('on');
+            $(this).focus();
         }
     });
-    toggleBtn.on('focusout', function () {
+    toggleBtn.on('blur', function () {
         setTimeout(function () {
             moreDropBody.removeClass('on');
             }, 100);

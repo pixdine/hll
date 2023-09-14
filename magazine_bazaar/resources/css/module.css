@@ -59,7 +59,8 @@
 .kv_video .itembox .link{display:block;position:absolute;left:0;top:0;bottom:0;right:0;}
 
 /* article */
-.atcbox a{display:block;width:100%;height:100%;}
+.atcbox{position:relative;}
+.atcbox a{display:block;position:relative;width:100%;height:100%;}
 .atcbox .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
 .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:all .3s linear;}
 .atcbox a:hover .imgbox img{transform:scale(1.1);}

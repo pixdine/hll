@@ -9,7 +9,7 @@ body.is_mobile .top_visual img.pc {display:none}
 .top_visual .txt_box {position:absolute; top:50%; left:50%; transform: translate(-50% ,-50%); color:#fff; max-width:680px; text-align:center}
 .top_visual .txt_box .txt { font-size:48px; font-weight:400; line-height:1.6}
 .top_visual .txt_box .txt strong { font-weight:700}
-.top_visual .txt_box .txts { font-size:18px; font-weight:400; line-height:1.6; text-align:left; margin-top:32px}
+.top_visual .txt_box .txts { font-size:18px; font-weight:400; line-height:1.6; margin-top:32px}
 
 .about_wrap {margin:120px auto 0}
 

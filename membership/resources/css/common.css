@@ -438,7 +438,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}
 .tab_menu.type03 > ul > li > a{display:inline-flex;align-items:center;height:44px;padding:0 16px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;color:#111;}
-.tab_menu.type03 > ul > li.on > a{background-color:var(--point);border-color:var(--point);color:#fff;font-weight:700;}
+.tab_menu.type03 > ul > li.on > a{background-color:var(--point);border-color:var(--point);color:#fff;font-weight:500;}
 
 /* 달력 */
 #ui-datepicker-div {z-index:130!important;margin-top:8px;padding:12px 8px 9px;border:1px solid #dbdbdb;box-shadow:2px 3px 6px 0px rgba(0, 0, 0, 0.1);font-family:'Noto Sans KR', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif;}
@@ -765,7 +765,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .tooltip_layer {position:absolute; top:27px; left: -7px; display: none; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
 .tooltip_layer.is-visible {display: flex; width: auto; height: auto; opacity:1; z-index:201; }
 .tooltip_layer.revert { left: auto; right: -7px; }
-.tooltip_layer p {max-width: 250px; font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 7px 16px 8px; width: max-content;}
+.tooltip_layer p {max-width: 250px; font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 7px 16px 7px; width: max-content;}
 
 .is_pc .tooltip_layer p br { display:none; }
 

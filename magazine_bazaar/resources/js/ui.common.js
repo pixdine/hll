@@ -8,6 +8,7 @@ $(document).ready(function(){
     if (currentPage == undefined) {
         currentPage = 'sub';
     }
+    console.log(currentPage);
     $('.header').addClass(currentPage);
 
 	if($('.kv_full').length){
@@ -23,7 +24,8 @@ $(document).ready(function(){
 	allmenuOpen();
     initOnDevice();
     inputBind();
-    
+    progressSwiper();
+
     // 지도 상세 설명 더보기 토글
     $('.comment_box').commentToggle();
 
@@ -426,6 +428,58 @@ function scrollAtcList(){
 			});
 			mySwiper = undefined;
 		}
+	}
+
+	initSwiper();
+
+	$(window).on('resize', function () {
+		ww = window.innerWidth;
+		initSwiper();
+	});
+}
+
+// 금주의 인기 기사 (기사 progress bar swiper 모듈)
+function progressSwiper(){
+	var swiper = $('.progress_swiper');
+	var ww = window.innerWidth;
+	var mySwiper = undefined;
+	if(swiper.length <= 0) return;
+
+	function initSwiper() {
+		//768px 보다 클 때 swiper 실행
+		//if(ww > 768 && mySwiper == undefined){
+			swiper.each(function(){//각각을 스와이프 적용
+				mySwiper = new Swiper(this, {
+					slidesPerView: 2,
+					spaceBetween: 12,
+                    grid: {
+                        rows: 2,
+                     },
+                    loop: false,
+					autoplay: false,
+					speed: 1000,
+                    pagination: {
+                        el: ".progress_pagination",
+                        type: "progressbar",
+                    },
+                    navigation: {
+                        nextEl: ".progress_swiper_next",
+                        prevEl: ".progress_swiper_prev",
+                    },
+					breakpoints: {
+						1023: {
+							slidesPerView: 4,
+							spaceBetween: 24,
+						},
+					}
+				});
+			});
+		// } else if(ww <= 768 && mySwiper != undefined){
+		// 	swiper.each(function(){
+		// 		this.swiper.destroy(); //각각을 파괴함.
+		// 	});
+		// 	mySwiper = undefined;
+		// }
 	}
 
 	initSwiper();

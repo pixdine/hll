@@ -177,8 +177,6 @@
 .colslide_atc_list .atcbox_set .atcbox{width:25%;padding:0 12px;}
 .colslide_atc_list .atcbox .txtbox{margin-top:12px;}
 .is_pc .colslide_atc_list ul{flex-direction:column;gap:50px 0;}
-292 183
-
 
 /* 바자화보 */
 .pic_atc_wrap{margin-bottom:180px;}
@@ -362,7 +360,29 @@
 .even_atc_list li{width:50%;padding:0 12px;}
 .even_atc_list .atcbox .imgbox{padding-top:62.5851%;}
 
+/* 진행바 스와이퍼 모듈 (기사) */
+.progress_swiper_wrap{position: relative;overflow-x:hidden;margin-bottom:180px;padding:95px 0 100px;background-color:#f7f7f7;}
+.progress_swiper_wrap .cont_inner {position: relative;}
+.progress_swiper_wrap .tit_wrap{margin-bottom:40px;}
+.progress_swiper_wrap .tit_wrap .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;color:#111;word-break:break-all;}
+.progress_swiper_wrap .date{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;position:relative;overflow:hidden;margin-top:12px;word-break:break-all;font-size:16px;line-height:23px;color:#666;}
 
+.progress_swiper{overflow:hidden;position:relative;margin-left:auto;margin-right:auto;padding:0;}
+.progress_swiper li{width:384px;margin-right:24px;}
+.progress_swiper li .txtbox{margin-top:12px;}
+.progress_swiper .swiper-pagination{display:flex;width:100%;height:2px;margin-top:60px;background-color:#dbdbdb;}
+.progress_swiper .swiper-pagination .swiper-pagination-bullet{flex:1;position:relative;cursor:pointer;}
+.progress_swiper .swiper-pagination .swiper-pagination-bullet-active{background-color:#111;}
+.progress_swiper .swiper-pagination .swiper-pagination-bullet:only-child.swiper-pagination-bullet-active,.swiper-pagination.swiper-pagination-lock{display:none}
+.progress_swiper .swiper-scrollbar{height:2px;margin-top:60px;background-color:#dbdbdb;}
+.progress_swiper .swiper-scrollbar .swiper-scrollbar-drag{background-color:#111;}
+
+.progress_swiper_wrap .p_btn{display: flex; position: absolute; top: 6px; right: 40px;}
+.progress_swiper_wrap .p_btn button{width: 24px; height: 24px; margin-left: 32px; cursor: pointer; background-size: 100%;}
+.progress_swiper_wrap .p_btn .progress_swiper_next{background-image: url(../images/progress_next.png);}
+.progress_swiper_wrap .p_btn .progress_swiper_prev{background-image: url(../images/progress_prev.png);}
+.progress_swiper_wrap .p_btn .progress_swiper_next:hover{background-image: url(../images/progress_next_on.png);}
+.progress_swiper_wrap .p_btn .progress_swiper_prev:hover{background-image: url(../images/progress_prev_on.png);}
 
 /************************* keyframes *************************/
 @keyframes fadeIn{

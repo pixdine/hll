@@ -776,7 +776,7 @@ function disableScroll() {
 		$(body).addClass('lockbody');
 	}
 
-	body.addEventListener('touchmove', lockScrollHandle, { passive: false });
+	//body.addEventListener('touchmove', lockScrollHandle, { passive: false });
 
 }
 
@@ -917,14 +917,14 @@ $(window).on('scroll', function () {
 
 // 스크롤 다운
 function onScrollDown() {
-    //console.log("스크롤 다운됨!");
+    // console.log("스크롤 다운됨!");
     $('body').removeClass('scroll_up');
     $('body').addClass('scroll_down');
 }
 
 // 스크롤 업
 function onScrollUp() {
-    //console.log("스크롤 업됨!");
+    // console.log("스크롤 업됨!");
     $('body').addClass('scroll_up');
     $('body').removeClass('scroll_down');
     if ($('body').hasClass('is_mobile')) {

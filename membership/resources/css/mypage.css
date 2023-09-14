@@ -158,11 +158,13 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_change_wrap .point_change_cont { margin-top:24px}
 
 .point_inq_list { margin-top:32px;}
-.popup_scroll {max-height:195px; overflow-y:auto; padding-right:10px;}
+.popup_scroll {max-height:195px; overflow-y:auto;  }
+.popup_scroll.visible_scroll {padding-right:10px;}
 .is_pc .popup_scroll::-webkit-scrollbar{width:8px;height:8px;}
 .is_pc .popup_scroll::-webkit-scrollbar-track{background-color:transparent;}
 .is_pc .popup_scroll::-webkit-scrollbar-thumb{background-color:#dbdbdb;border-radius:4px;}
 .is_pc .popup_scroll .popup_cont{margin:0 8px 0 0;}
+.is_pc .popup_scroll {margin-right:-18px}
 .point_inq_list li {margin-top:16px}
 .point_inq_list li:first-child {margin-top:0px}
 .point_inq_list li dl { display:flex; justify-content: space-between;}

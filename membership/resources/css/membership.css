@@ -1,4 +1,4 @@
-body.is_PC .container.membrship { padding-top:0} 
+body.is_pc .container.membrship { padding-top:0} 
 body.is_mobile .container.membrship { padding-top:40px} 
 
 .membership_wrap {margin:120px auto 0}

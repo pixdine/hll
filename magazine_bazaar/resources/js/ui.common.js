@@ -26,6 +26,7 @@ $(document).ready(function(){
     inputBind();
     articleSlidePc();
     articleSlideMo()
+    colslideAtcList();
 
     // 지도 상세 설명 더보기 토글
     $('.comment_box').commentToggle();
@@ -490,6 +491,47 @@ function articleSlideMo(){
 	initSwiper();
 }
 
+//MOST LIKED ARTICLES
+function colslideAtcList(){
+	var colslideAtcList = $('.colslide_atc_list');
+	var ww = window.innerWidth;
+	var mySwiper = undefined;
+	if(colslideAtcList.length <= 0) return;
+
+	function initSwiper() {
+        var mySwiperArr = [];
+        var slideBody = [];
+		//768px 보다 적을 때 swiper 실행
+		if(ww <= 768 && mySwiper == undefined){
+			colslideAtcList.each(function(i){//각각을 스와이프 적용
+                slideBody[i] = $(this);
+				mySwiper = new Swiper(this, {
+					slidesPerView: 1,
+                    spaceBetween: 24,
+                    loop: false,
+                    autoplay: false,
+                    speed: 500,
+                    pagination: {
+                        el: slideBody[i].find(".swiper-pagination"),
+                    },
+				});
+			});
+		} else if(ww > 768 && mySwiper != undefined){
+			colslideAtcList.each(function(){
+				this.swiper.destroy(); //각각을 파괴함.
+			});
+			mySwiper = undefined;
+		}
+	}
+
+	initSwiper();
+
+	$(window).on('resize', function () {
+		ww = window.innerWidth;
+		initSwiper();
+	});
+}
+
 //4단 모듈 (최신 소식)
 function issueAtcList(){
 	var issueAtcList = $('.issue_atc_list'),
@@ -531,6 +573,7 @@ function issueAtcList(){
 	});
 	initSwiper();
 }
+
 
 //full popup
 const popup = {

@@ -116,6 +116,13 @@ $(document).ready(function(){
     }
 });
 
+// 이미지까지 로드 후 호출
+window.onload = function () {
+    // 티커
+    $('.carouselTicker.rtl').carouselTicker();
+    $('.carouselTicker.ltr').carouselTicker().next();
+}
+
 
 //iOS vh 대응
 function setCSS(){
@@ -857,6 +864,7 @@ $(window).on('resize', function(){
 	if (window.innerWidth > 768) {
 		//PC
 		$('body').removeClass('is_mobile').addClass('is_pc');
+        $('.carouselTicker').carouselTicker('destroy');
 	} else {
 		//Mobile
 		$('body').removeClass('is_pc').addClass('is_mobile');
@@ -865,7 +873,30 @@ $(window).on('resize', function(){
   
     // 상세페이지 댓글 접기
     $('.comment_box').commentToggle();
-}).resize();
+
+    // 티커 리사이즈시 이미지값 다시 가져오기
+    $('.carouselTicker').tickerResizeWidth();
+});
+
+// 티커 리사이즈시 이미지값 다시 가져오기
+$.fn.tickerResizeWidth = function () {
+    var tickerBody = [];
+    return this.each(function (i) {
+        tickerBody[i] = $(this);
+        var itemWidth = 0;
+        var item = tickerBody[i].find('.carouselTicker__item');
+        console.log(item);
+        for(j = 0;j<item.length; j ++) {
+            if ($('body').hasClass('is_pc')) {
+                itemWidth += (item.eq(j).find('img').width() + 24);
+            } else {
+                itemWidth += (item.eq(j).find('img').width() + 13);
+            }
+            console.log(itemWidth);
+        }
+        tickerBody[i].find('.carouselTicker__list').width(itemWidth);
+    });
+}
 
 // 공통탭 컨텐츠
 $.fn.commonTab = function () {

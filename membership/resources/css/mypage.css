@@ -566,9 +566,9 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .other_go .go_event a span.ico_arr07 { height:8.57px; width:17.14px}
 
     .point_add_list {}
-    .point_add_list ul{ display:block; overflow:hidden;overflow-x:auto;white-space:nowrap;margin:0 -20px;padding:0 20px;font-size:0;}
+    .point_add_list ul{ overflow:hidden;overflow-x:auto;white-space:nowrap;margin:0 -20px;padding:0 20px;font-size:0;}
     .point_add_list ul::-webkit-scrollbar{display:none;}
-    .point_add_list li{width:65.377%; display:inline-block; margin-right:12px; padding:0}
+    .point_add_list li{width:65.377%; display:inline-block; margin-right:12px; padding:0; flex-shrink: 0;}
     .point_add_list li:last-child{margin-right:0;}
     .moa_wrap .has_plus:after {background-position:center 3px;}
 

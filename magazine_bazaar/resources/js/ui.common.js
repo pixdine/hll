@@ -508,7 +508,10 @@ function colslideAtcList(){
 					slidesPerView: 1,
                     spaceBetween: 24,
                     loop: true,
-                    autoplay: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
                     speed: 500,
                     pagination: {
                         el: slideBody[i].find(".swiper-pagination"),
@@ -1025,6 +1028,7 @@ $.fn.banSlide = function () {
             },
             autoplay: {
                 delay: 5000,
+                disableOnInteraction: false,
             },
             loop: true
         });
@@ -1044,8 +1048,9 @@ $.fn.promoBanSlide = function () {
             },
             autoplay: {
                 delay: 5000,
+                disableOnInteraction: false,
             },
-            loop: true
+            loop: true,
         });
     })
 }

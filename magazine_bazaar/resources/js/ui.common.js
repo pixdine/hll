@@ -508,7 +508,7 @@ function colslideAtcList(){
 					slidesPerView: 1,
                     spaceBetween: 24,
                     loop: false,
-                    autoplay: false,
+                    autoplay: true,
                     speed: 500,
                     pagination: {
                         el: slideBody[i].find(".swiper-pagination"),

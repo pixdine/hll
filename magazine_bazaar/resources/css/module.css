@@ -566,6 +566,7 @@
 	.colslide_atc_wrap{margin-bottom:80px;}
 
 	.colslide_atc_list{margin:0 -20px;padding:0 20px;overflow:hidden;}
+    .colslide_atc_list ul {flex-direction: row;}
 	.colslide_atc_list li{margin-right:20px;}
 	.colslide_atc_list .atcbox_set{flex-wrap:wrap;gap:24px 0;margin:0 -6px;}
 	.colslide_atc_list .atcbox_set .atcbox{width:50%;padding:0 6px;}

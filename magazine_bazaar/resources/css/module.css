@@ -361,7 +361,7 @@
 
 .article_slide_pc {height: auto; background: #F7F7F7; padding-top: 95px; margin-bottom: 180px;}
 .article_slide_pc .tit_wrap{margin-bottom: 40px;}
-.article_slide_pc .date{margin-top: 12px; color: #666; font-weight: 500; font-size: 14px; line-height: 1; font-family: 'Gotham';}
+.article_slide_pc .date{margin-top: 12px; color: #666; font-weight: 500; font-size: 16px; line-height: 1; font-family: 'Gotham';}
 .article_slide_pc .article_slide{overflow:hidden;position:relative;margin-left:auto;margin-right:auto;padding:0;}
 .article_slide_pc .article_slide li .txtbox{margin-top:12px;}
 .article_slide_pc .article_slide_pagination{display:flex;position: static;width:100%;height:2px;margin-top:60px;background-color:#dbdbdb;}

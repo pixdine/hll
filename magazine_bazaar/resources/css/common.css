@@ -796,8 +796,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* 별자리 운세 팝업 */
 .popup_horoscope .popup_inner{max-width:1200px;}
-.is_pc .popup_horoscope .popup_head{height:64px;border-bottom:0;}
-.is_pc .popup_horoscope .popup_cont.non{margin-top:0;padding:0 20px 48px 28px;}
+.popup_horoscope .popup_head{min-height:64px;border-bottom:0;}
+.popup_horoscope .popup_cont.non{margin-top:0;padding:0 20px 48px 28px;}
 .horoscope_box{display:flex;flex-wrap:wrap;}
 .horoscope_box .imgbox{width:46.329%;}
 .horoscope_box .txtbox{width:53.671%;padding-left:40px;font-size:16px;font-weight:400;line-height:23px;}

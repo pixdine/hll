@@ -1041,7 +1041,8 @@ $.fn.promoBanSlide = function () {
     return this.each(function (i) {
         banArray[i] = $(this);
         var pagination = banArray[i].find('.swiper-pagination');
-        banArray[i] = $(this);
+        var next = banArray[i].find('.btn_next');
+        var prev = banArray[i].find('.btn_prev');
         var banSlide = new Swiper(banArray[i], {
             pagination: {
                 el: pagination,
@@ -1051,6 +1052,10 @@ $.fn.promoBanSlide = function () {
                 disableOnInteraction: false,
             },
             loop: true,
+            navigation: {
+                nextEl: next,
+                prevEl: prev,
+            }
         });
     })
 }

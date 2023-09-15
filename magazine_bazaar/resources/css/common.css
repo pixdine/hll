@@ -1147,7 +1147,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.ul_tbl .ul_td{display:block;width:100% !important;padding:0;border-bottom:0;}
 	.ul_tbl .ul_td.num{display:none;}
 	.ul_tbl .ul_td.tit{font-size:14px;line-height:20px;}
-	.ul_tbl .ul_td.datebox{margin-top:19px;text-align:left;}
+	.ul_tbl .ul_td.datebox{margin-top:16px;text-align:left;}
 	.ul_tbl .ul_td.datebox > span{font-size:14px;line-height:20px;}
 
 	/* 박스 */

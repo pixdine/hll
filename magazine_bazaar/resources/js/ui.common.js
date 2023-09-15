@@ -1003,6 +1003,7 @@ $.fn.photoViewerSwiper = function () {
         });
         close.on('click', function () {
             photoViewerArr[i].removeClass('active');
+            $('body').removeClass('lockbody');
         });
     });
 }

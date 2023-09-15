@@ -660,7 +660,7 @@
     .carouselTicker + .carouselTicker {margin-top: 14px;}
     .carouselTicker .carouselTicker__item {margin: 0 0 0 12px;}
     .carouselTicker .carouselTicker__item img {height: 183px;}
-    .carouselTicker .carouselTicker__item .ticker_info {height: 92px; padding: 16px 0 0 12px; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
+    .carouselTicker .carouselTicker__item .ticker_info {height: 92px; padding: 16px 12px 0; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
     .carouselTicker .carouselTicker__item .subject {font-size: 10px;}
     .carouselTicker .carouselTicker__item .desc_txt {margin-top: 6px; font-size: 14px; line-height: 20px; height: 40px;}    
 

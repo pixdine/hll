@@ -41,8 +41,12 @@ $(document).ready(function(){
 
     if(targetId === 'popup_search') {
         $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
+        document.ontouchmove = function(event) {
+            event.preventDefault();
+        }
     } else {
-        $(this).toggleClass('on', !isVisible)
+        $(this).toggleClass('on', !isVisible);
+        document.ontouchmove = null;
     }
     
         if (isVisible) {

@@ -392,7 +392,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 /* 검색 레이어 */
 .search_layer{display:none;position:absolute;left:0;top:72px;width:100%;background-color:#fff;box-shadow:0 5px 5px 0px rgba(0, 0, 0, 0.05);border-top:1px solid #dbdbdb;z-index:50;}
 .search_layer.open{display:block;}
-.search_layer .cont_inner{max-width:872px;padding:80px 40px;}
+.search_layer .cont_inner{position: relative; max-width:872px;padding:80px 40px;}
+.search_layer.open .cont_inner:before{content: ''; position: absolute; bottom: -100vh; left: -100vw; right: -100vw; z-index: -1; height: 100vh; background-color: rgba(0, 0, 0, 0.7);}
 .header.main .search_layer{top:177px;}
 
 .search_keyword{margin-top:40px;}

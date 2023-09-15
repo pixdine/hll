@@ -405,7 +405,7 @@ function scrollAtcList(){
 				mySwiper = new Swiper(this, {
 					slidesPerView: 3,
 					spaceBetween: 24,
-					loop: false,
+					loop: true,
 					autoplay: false,
 					speed: 1000,
 					scrollbar: {
@@ -449,7 +449,7 @@ function articleSlidePc(){
             mySwiper = new Swiper(this, {
                 slidesPerView: 4,
                 spaceBetween: 24,
-                loop: false,
+                loop: true,
                 autoplay: false,
                 speed: 500,
                 pagination: {
@@ -478,7 +478,7 @@ function articleSlideMo(){
             mySwiperArr[i] = new Swiper(this, {
                 slidesPerView: 1,
                 spaceBetween: 24,
-                loop: false,
+                loop: true,
                 autoplay: false,
                 speed: 500,
                 pagination: {
@@ -507,7 +507,7 @@ function colslideAtcList(){
 				mySwiper = new Swiper(this, {
 					slidesPerView: 1,
                     spaceBetween: 24,
-                    loop: false,
+                    loop: true,
                     autoplay: true,
                     speed: 500,
                     pagination: {
@@ -982,6 +982,7 @@ function viewImgSlide() {
 // 화보 딤 슬라이드 열기
 function openPhotoViewer(){
     $('.photoViewer').addClass('active');
+    $('body').addClass('lockbody');
 }
 
 // 화보 딤 슬라이드
@@ -1019,7 +1020,8 @@ $.fn.banSlide = function () {
             },
             autoplay: {
                 delay: 5000,
-            }
+            },
+            loop: true
         });
     })
 }
@@ -1037,7 +1039,8 @@ $.fn.promoBanSlide = function () {
             },
             autoplay: {
                 delay: 5000,
-            }
+            },
+            loop: true
         });
     })
 }

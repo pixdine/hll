@@ -856,7 +856,6 @@ $(window).on('resize', function(){
 	if (window.innerWidth > 768) {
 		//PC
 		$('body').removeClass('is_mobile').addClass('is_pc');
-        $('.carouselTicker').carouselTicker('destroy');
 	} else {
 		//Mobile
 		$('body').removeClass('is_pc').addClass('is_mobile');
@@ -867,7 +866,9 @@ $(window).on('resize', function(){
     $('.comment_box').commentToggle();
 
     // 티커 리사이즈시 이미지값 다시 가져오기
-    $('.carouselTicker').tickerResizeWidth();
+    if ($('.carouselTicker').length > 0) {
+        $('.carouselTicker').tickerResizeWidth();
+    }
 });
 
 // 티커 리사이즈시 이미지값 다시 가져오기
@@ -983,3 +984,26 @@ function viewImgSlide() {
 function openPhotoViewer(){
     $('.photoViewer').addClass('active');
 }
+
+// 화보 딤 슬라이드
+$.fn.photoViewerSwiper = function () {
+    var photoViewerArr = [];
+    var pvSwiper = [];
+    return this.each(function (i) {
+        photoViewerArr[i] = $(this);
+        pvSwiper[i] = photoViewerArr[i].find('.pvSwiper');
+        var next = photoViewerArr[i].find('.pv_next');
+        var prev = photoViewerArr[i].find('.pv_prev');
+        var close = photoViewerArr[i].find('.pv_close');
+        pvSwiper[i] = new Swiper(pvSwiper[i], {
+            navigation: {
+                nextEl: next,
+                prevEl: prev,
+            },
+        });
+        close.on('click', function () {
+            photoViewerArr[i].removeClass('active');
+        });
+    });
+}
+

@@ -290,43 +290,59 @@
 								<div class="atc_body_cont"> 
 									<div class="ab_photo">
 										<div class="image">
-											<img alt="이미지 캡션 영역" src="../resources/images/temp/temp_visual02.jpg">
-											<span class="mask"></span>
-										</div>
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img alt="이미지 캡션 영역" src="../resources/images/temp/temp_visual02.jpg">
+                                                <span class="mask"></span>
+                                            </a>
+                                       </div>
 									</div>
 									<div class="photo_dual">
 										<div class="photo_box01">
-											<img src="../resources/images/temp/temp_view02.png" alt="" />
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img src="../resources/images/temp/temp_view02.png" alt="" />
+                                            </a>
 										</div>
 										<div class="photo_box02">
-											<img src="../resources/images/temp/temp_view02.png" alt="" />
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img src="../resources/images/temp/temp_view02.png" alt="" />
+                                            </a>
 										</div>
 									</div>
 
-                  <div class="ab_photo">
+                                    <div class="ab_photo">
 										<div class="image">
-											<img alt="이미지 캡션 영역" src="../resources/images/temp/temp_view10.png">
-											<span class="mask"></span>
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img alt="이미지 캡션 영역" src="../resources/images/temp/temp_view10.png">
+                                                <span class="mask"></span>
+                                            </a>
 										</div>
 									</div>
 
 									<div class="photo_dual">
 										<div class="photo_box01">
-											<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202109/29/064a8ca4-d1a2-44a9-b7e8-870846496f3e.jpg" alt="" />
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202109/29/064a8ca4-d1a2-44a9-b7e8-870846496f3e.jpg" alt="" />
+                                            </a>
 										</div>
 										<div class="photo_box02">
-											<img src="../resources/images/temp/temp_view03.png" alt="" />
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img src="../resources/images/temp/temp_view03.png" alt="" />
+                                            </a>
 											<p class="caption">사진2 / Gucci</p>
 										</div>
 									</div>
 
 									<div class="photo_third">
 										<div class="photo_box01">
-											<img src="../resources/images/temp/temp_view06.png" alt="" />
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img src="../resources/images/temp/temp_view06.png" alt="" />
+                                            </a>
 											<p class="caption">사진1 / Gucci</p>
 										</div>
 										<div class="photo_box02">
-											<img src="../resources/images/temp/temp_view14.jpg" alt="" />
+                                            <a href="javascript: openPhotoViewer();" class="btn_open_slide">
+                                                <img src="../resources/images/temp/temp_view14.jpg" alt="" />
+                                            </a>
 											<p class="caption">사진2 / Gucci</p>
 										</div>
 									</div>
@@ -856,81 +872,8 @@
 	</div>
 	<!-- //팝업 : 퀴즈 정답제출 알럿 -->
 
-		<!-- <style>
-			.pictorial_popup {}
-		
-			.pictorial_popup {display: none;position: fixed;left: 0;top:50%; transform:translateY(-50%); width:100%;height: 100%;z-index: 200;}
-			.pictorial_popup.open {	display: block;}
-		
-			.pictorial_popup .pop_pictorial_inner {position: absolute; width:100%;top:50%; transform: translateY(-50%);}
-			.pictorial_popup .pop_pictorial_cont {position:relative;width:1200px; height:840px; margin:0 auto;}
-			.pictorial_popup .tag_photobundle {margin:0}
-			.pictorial_popup .tag_photobundle .swiper-slide { background:transparent; height:840px;}
-			.pictorial_popup .tag_photobundle .caption {font-size:14px; color:#fff; font-weight:400}
-			.pictorial_popup .popup_close { top:60px; right:60px; z-index:2}
-			.pictorial_popup .btn_close {  width:28px; height:28px; background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.0938 2.91016L2.91141 13.0925' stroke='white'/%3E%3Cpath d='M13.0938 13.0898L2.91141 2.90751' stroke='white'/%3E%3C/svg%3E%0A"); background-size:100% 100%}
-			.pictorial_popup .btn_close:after { display:none}
-
-			.pictorial_popup .viewSwiper .swiper-button-next, .pictorial_popup .swiper-button-prev { position:absolute;top:50%; transform:translateY(-50%);width:22px;height:44px;font-size:0;cursor:pointer;background:url('../resources/images/ico_arrow02.svg') no-repeat 0 0 / 22px auto;z-index:2;}
-			.pictorial_popup .swiper-button-prev {left:56px;transform:translateY(-50%) rotate(-180deg); }
-			
-			@media (max-width:768px){
-				.pictorial_popup .btn_close { width:20px; height:20px;}
-				.pictorial_popup .popup_close { top:68px; right:20px }
-				.pictorial_popup .pop_pictorial_cont { width:100%; height:auto}
-				.pictorial_popup .tag_photobundle .swiper-slide { height:auto}
-			}
-		</style>
-		<button type="button" data-popup-open="pictorial_popup"><span>팝업1_하단버튼O</span></button>
-		<div class="pictorial_popup" data-popup="pictorial_popup">
-			<div class="pictorial_popup_head">
-				<h2 class="blind">화보크게보기</h2>
-				<div class="popup_close">
-					<button type="button" class="btn_close" data-popup-close="pictorial_popup"><span class="blind">닫기</span></button>
-				</div>
-			</div>
-			<div class="pop_pictorial_inner">
-				<div class="pop_pictorial_cont">
-					<div class="tag_photobundle" data-slide="slider-pictorial">
-						<div class="swiper viewSwiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="../resources/images/temp/temp_view10.png" />
-									<p class="caption">사진1 / Gucci</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="../resources/images/temp/temp_view09.png" />
-									<p class="caption">사진2 / Gucci</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="../resources/images/temp/temp_view08.png" />
-									<p class="caption">사진3 / Gucci</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="../resources/images/temp/temp_view07.png" />
-									<p class="caption">사진4 / Gucci</p>
-								</div>
-								<div class="swiper-slide">
-									<img src="../resources/images/temp/temp_view06.png" />
-									<p class="caption">사진5 / Gucci</p>
-								</div>
-								<div class="swiper-slide">
-									<img
-										src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg"
-										alt="">
-									<p class="caption">사진6 / Gucci</p>
-								</div>
-							</div>
-							<div class="swiper-button-next"></div>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-scrollbar"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-    <div class="photoViewer active">
+    <!-- 화보 슬라이드 -->
+    <div class="photoViewer">
         <div class="pv_container">
             <div class="pv_cont">
                 <div class="swiper pvSwiper">
@@ -980,6 +923,7 @@
             <button class="pv_close" title="닫기"><img src="../resources/images/close_photoviewer.png" alt="닫기"></button>
         </div>
     </div>
+    <!-- // 화보 슬라이드 -->
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
@@ -1075,7 +1019,13 @@
         }
 
         //pvSwiper.updateSize()
-
+        
+        // 이미지까지 로드 후 호출 티커는 페이지 하단
+        window.onload = function () {
+            // 티커
+            $('.carouselTicker.rtl').carouselTicker(); //우측에서 좌측
+            $('.carouselTicker.ltr').carouselTicker().next(); //좌측에서 우측
+        }
 	</script>
 	<!-- //js -->
 

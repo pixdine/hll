@@ -116,14 +116,6 @@ $(document).ready(function(){
     }
 });
 
-// 이미지까지 로드 후 호출
-window.onload = function () {
-    // 티커
-    $('.carouselTicker.rtl').carouselTicker();
-    $('.carouselTicker.ltr').carouselTicker().next();
-}
-
-
 //iOS vh 대응
 function setCSS(){
 	var setVh = () => {
@@ -987,4 +979,7 @@ function viewImgSlide() {
     });
 }
 
-
+// 화보 딤 슬라이드 열기
+function openPhotoViewer(){
+    $('.photoViewer').addClass('active');
+}

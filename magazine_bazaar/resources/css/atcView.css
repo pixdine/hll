@@ -234,6 +234,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .cont_inner.pictorial .atc_header  {max-width:1200px; margin:0 auto}
 .cont_inner.pictorial .act_body {max-width:792px; margin:40px auto 0}
 .cont_inner.pictorial .atc_body.pictorial_body  {max-width:none; padding:0}
+.cont_inner.pictorial .atc_body.pictorial_body .btn_open_slide {display: block;}
 
 .pictorial_photo img {width:100%}
 .cont_inner.pictorial .caption {display:none}

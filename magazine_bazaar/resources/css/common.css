@@ -91,7 +91,7 @@ a:hover{text-decoration:none;}
 .lockbody { overflow : hidden; }
 .non-oby { overscroll-behavior-y: none }
 
-mark{background-color:rgba(255,0,0,.3);}
+mark{background-color:rgba(255,0,0,.3);color:inherit;}
 
 
 /************************* Form *************************/
@@ -666,11 +666,10 @@ background:#fff;overflow:hidden;z-index:230}
 .nodata .txt .word:before{content:'‘';}
 .nodata .txt .word:after{content:'’';}
 
-/* 에디터 */
+/* 에디터 목록 */
 .editor_wrap{margin-bottom:180px;}
 .editor_list ul{display:flex;flex-wrap:wrap;gap:40px 24px;}
 .editor_list li{width:calc(33.333% - 16px);}
-
 .editor_box{height:319px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
 .editor_box > a{display:block;width:100%;height:100%;}
 .editor_box .editor_head{position:relative;padding:32px;background-color:#111;}
@@ -683,8 +682,9 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_box .editor_body:before{content:'';position:absolute;left:32px;top:32px;display:block;width:32px;height:2px;background-color:#111;}
 
 /* 에디터 상세 */
-.editor_view{position:relative;}
-.editor_view:before{content:'';display:block;width:100%;height:214px;background-color:#111;}
+.editor_view_wrap{position:relative;}
+.editor_view_wrap:before{content:'';display:block;width:100%;height:214px;background-color:#111;}
+.editor_atc_wrap .atc_list_wrap{margin-top:80px;}
 .editor_profile{max-width:1280px;margin:-122px auto 0;padding:0 40px;}
 .editor_profile .profile_area{display:flex;position:relative;padding:48px 60px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
 .editor_profile .profile_img{overflow:hidden;width:88px;height:88px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
@@ -700,6 +700,7 @@ background:#fff;overflow:hidden;z-index:230}
 /* 이벤트 */
 .event_wrap{margin-bottom:180px;}
 .event_cont .list_top{margin-bottom:24px;}
+.event_list_wrap .cont_inner{padding:0;}
 .event_list ul{display:flex;flex-wrap:wrap;gap:44px 0;margin:0 -12px;}
 .event_list li{width:33.3333%;padding:0 12px;}
 .event_list li .bnrbox{position:relative;}
@@ -1088,11 +1089,10 @@ background:#fff;overflow:hidden;z-index:230}
 	.atc_list li{width:50%;padding:0 6px;}
 	
 	/* 결과없음 */
-	.search_cont .nodata{padding:99px 20px 139px;}
 	.nodata{padding:160px 20px;}
 	.nodata .txt{font-size:14px;line-height:22px;}
 
-	/* 에디터 */
+	/* 에디터 목록 */
 	.editor_wrap{margin-bottom:80px;}
 	.editor_list ul{gap:20px 0;}
 	.editor_list li{width:100%;}
@@ -1105,9 +1105,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.editor_box .editor_body:before{left:28px;top:28px;width:24px;}
 	.editor_box .editor_body .txt{font-size:14px;line-height:24px;}
 
-	/* 에디터상세 */
-	.editor_view:before{height:236px;}
-
+	/* 에디터 상세 */
+	.editor_view_wrap:before{height:236px;}
 	.editor_profile{margin-top:-156px;padding:0 20px;}
 	.editor_profile .profile_area{flex-direction:column;padding:0 20px 40px;text-align:center;}
 	.editor_profile .profile_img{width:80px;height:80px;margin:-40px auto 12px;}
@@ -1116,6 +1115,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.editor_profile .profile_info .desc{margin-top:2px;font-size:16px;line-height:23px;}
 	.editor_profile .profile_info .txt{min-height:66px;font-size:14px;line-height:22px;}
 	.editor_profile .btn_box{margin-top:24px;}
+	.editor_atc_wrap .atc_list_wrap{margin-top:40px;}
 
 	/* 리스트 상단 */
 	.list_top{margin-bottom:24px;}

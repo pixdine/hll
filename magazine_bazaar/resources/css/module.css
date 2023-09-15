@@ -414,6 +414,11 @@
 .bnr_slide_list .bnrbox .imgbox .mo{display:none;}
 .bnr_slide_list .control{margin-top:24px;}
 
+/* 리스트 중간에 배너 슬라이드 */
+.bnr_slide_list .swiper-pagination {display: flex; justify-content: center;}
+.bnr_slide_list .swiper-pagination-bullet {width: 20px; height: 2px; margin: 0 3px; background: #DBDBDB; cursor: pointer;}
+.bnr_slide_list .swiper-pagination-bullet-active {background: #111;}
+
 
 /************************* keyframes *************************/
 @keyframes fadeIn{

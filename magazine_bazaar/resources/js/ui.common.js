@@ -41,12 +41,8 @@ $(document).ready(function(){
 
     if(targetId === 'popup_search') {
         $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
-        document.ontouchmove = function(event) {
-            event.preventDefault();
-        }
     } else {
         $(this).toggleClass('on', !isVisible);
-        document.ontouchmove = null;
     }
     
         if (isVisible) {
@@ -591,6 +587,9 @@ const popup = {
     open: function (_target, _type, _hasDimmed = true) {
         this.clientWidth = document.documentElement.clientWidth
         var targetEl = $(`[data-${_type}="${_target}"]`);
+        document.ontouchmove = function(event) {
+            event.preventDefault();
+        }
         switch (_type) {
             case 'popup':
 				var popupCount = $(`.open[data-${_type}`).length || 0;
@@ -649,6 +648,7 @@ const popup = {
     },
     close: function (_target, _type) {
 
+        document.ontouchmove = null;
 
         var _this = this;
         var targetEl = $(`[data-${_type}="${_target}"]`);

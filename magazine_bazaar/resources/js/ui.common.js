@@ -31,9 +31,6 @@ $(document).ready(function(){
     // 지도 상세 설명 더보기 토글
     $('.comment_box').commentToggle();
 
-    // 배너 슬라이드
-    $('.bnr_slide_list').banSlide();
-
     $('.tab_wrap').commonTab(); // 탭메뉴, 탭컨텐츠
 
     $('[data-popup-toggle]').on('click', function(e) {
@@ -1012,6 +1009,21 @@ $.fn.photoViewerSwiper = function () {
 
 // 배너 슬라이드 페이지네이션
 $.fn.banSlide = function () {
+    var banArray = [];
+    return this.each(function (i) {
+        banArray[i] = $(this);
+        var pagination = banArray[i].find('.swiper-pagination');
+        banArray[i] = $(this);
+        var banSlide = new Swiper(banArray[i], {
+            pagination: {
+                el: pagination,
+            },
+        });
+    })
+}
+
+// 이벤트 리스트 슬라이드 페이지네이션
+$.fn.promoBanSlide = function () {
     var banArray = [];
     return this.each(function (i) {
         banArray[i] = $(this);

@@ -885,7 +885,7 @@ $.fn.tickerResizeWidth = function () {
             if ($('body').hasClass('is_pc')) {
                 itemWidth += (item.eq(j).find('img').width() + 24);
             } else {
-                itemWidth += (item.eq(j).find('img').width() + 13);
+                itemWidth += (item.eq(j).find('img').width() + 20);
             }
             // console.log(itemWidth);
         }

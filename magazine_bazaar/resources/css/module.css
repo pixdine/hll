@@ -388,8 +388,10 @@
 .photoViewer .pv_cont .swiper-slide .pv_img{display: flex; flex-direction: column; justify-content: center; height: calc(100vh - 240px);}
 .photoViewer .pv_cont .swiper-slide img{height: 840px;object-fit: contain;}
 .photoViewer .pv_cont .swiper-slide .caption{margin-top: 12px;color: #fff; font-size: 14px; line-height: 24px; text-align: left;}
-.photoViewer .pv_next {position: absolute; top: 50%; right: 50%; width: 48px; margin-right: -512px; transform: translateY(-50%);}
-.photoViewer .pv_prev {position: absolute; top: 50%; left: 50%; width: 48px; margin-left: -512px; transform: translateY(-50%);}
+.photoViewer .pv_next {right: 50%; margin-right: -512px;}
+.photoViewer .pv_prev {left: 50%; margin-left: -512px;}
+.photoViewer .pvSwiper ~ button[role="button"] {position: absolute; top: 50%; width: 48px;  opacity: 0.6; transform: translateY(calc(-50% - 18px));}
+.photoViewer .pvSwiper ~ button[role="button"]:hover {opacity: 1;}
 .photoViewer .pv_close {position: absolute; top: 60px; right: 60px; width: 48px;}
 
 .ticker {padding: 100px 0; margin-bottom: 180px; background: #F7F7F7;}
@@ -401,6 +403,7 @@
 .carouselTicker .carouselTicker__item .ticker_info {position: absolute; bottom: 0; left: 0; right: 0; height: 160px; padding: 57px 0 0 32px; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
 .carouselTicker .carouselTicker__item .subject {color: #fff; font-weight: 500; font-family: 'gotham'; font-size: 12px; line-height: 1;}
 .carouselTicker .carouselTicker__item .desc_txt {margin-top: 8px; color: #fff; font-weight: 500; font-size: 18px; line-height: 26px; text-overflow: ellipsis; overflow: hidden;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; height: 52px;}
+
 /* 가로로 긴 이벤트 배너 모듈 */
 .bnr_wrap{margin-bottom:180px;}
 .bnr_list{overflow:hidden;}
@@ -642,6 +645,15 @@
     .article_slide_mo .pagination .swiper-pagination-bullet{width: 24px;height: 2px;background: #d0d0d0;}
     .article_slide_mo .pagination .swiper-pagination-bullet-active{background: #232323;}
     .article_slide_mo .cont_inner {position: relative;}
+
+    .photoViewer .pv_cont .swiper-slide{display: flex; justify-content: center;}
+    .photoViewer .pv_cont .swiper-slide .pv_img{display: flex; flex-direction: column; justify-content: center; height: calc(100vh - 240px);}
+    .photoViewer .pv_cont .swiper-slide img{height: 840px;object-fit: contain;}
+    .photoViewer .pv_cont .swiper-slide .caption{margin-top: 8px;font-size: 14px; line-height: 24px; text-align: left;}
+    .photoViewer .pv_next {right: 20px; margin-right: 0;}
+    .photoViewer .pv_prev {left: 20px; margin-left: 0;}
+    .photoViewer .pvSwiper ~ button[role="button"] {width: 24px; opacity: 0.6; transform: translateY(calc(-50% - 16px));}
+    .photoViewer .pv_close {top: 68px; right: 20px; width: 20px;}
 
     .ticker {padding: 60px 0 58px; margin-bottom: 80px;}
     .carouselTicker + .carouselTicker {margin-top: 14px;}

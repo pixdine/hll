@@ -885,14 +885,14 @@ $.fn.tickerResizeWidth = function () {
         tickerBody[i] = $(this);
         var itemWidth = 0;
         var item = tickerBody[i].find('.carouselTicker__item');
-        console.log(item);
+        // console.log(item);
         for(j = 0;j<item.length; j ++) {
             if ($('body').hasClass('is_pc')) {
                 itemWidth += (item.eq(j).find('img').width() + 24);
             } else {
                 itemWidth += (item.eq(j).find('img').width() + 13);
             }
-            console.log(itemWidth);
+            // console.log(itemWidth);
         }
         tickerBody[i].find('.carouselTicker__list').width(itemWidth);
     });

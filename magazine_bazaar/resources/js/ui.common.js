@@ -982,7 +982,10 @@ function viewImgSlide() {
 // 화보 딤 슬라이드 열기
 function openPhotoViewer(){
     $('.photoViewer').addClass('active');
-    $('body').addClass('lockbody');
+    $('html').addClass('lockbody');
+	document.ontouchmove = function(event) {
+	  event.preventDefault();
+	}
 }
 
 // 화보 딤 슬라이드
@@ -1003,9 +1006,10 @@ $.fn.photoViewerSwiper = function () {
         });
         close.on('click', function () {
             photoViewerArr[i].removeClass('active');
-            $('body').removeClass('lockbody');
+            $('html').removeClass('lockbody');
         });
     });
+	document.ontouchmove = null;
 }
 
 // 배너 슬라이드 페이지네이션

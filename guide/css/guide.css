@@ -13,9 +13,7 @@
 .pub_list thead th:last-child,
 .pub_list tbody td:last-child{border-right:0;}
 .pub_list thead tr:nth-child(2) th:last-child{border-right:1px #999 solid;}
-
 .pub_list tbody tr:hover{background-color:#f7f7f7;}
-
 .pub_list tr.comon > td{background:#fff5da;color:#212121;}
 .pub_list tr.comon > td:nth-child(9){color:#f78e16}
 .pub_list tr.complete > td{background:#def7ff;color:#212121;}
@@ -27,6 +25,7 @@
 .pub_list tr.modify > td{background:#ffe3f1;color:#80001c;}
 .pub_list .tal{text-align:left;}
 .pub_list a{color:#222;text-decoration:underline;}
+.pub_list .txt_sm{font-size:13px;}
 .line_top td{border-top:2px solid #666;}
 
 .guide_state{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;}

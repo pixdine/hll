@@ -504,19 +504,22 @@ function colslideAtcList(){
 		if(ww <= 768 && mySwiper == undefined){
 			colslideAtcList.each(function(i){//각각을 스와이프 적용
                 slideBody[i] = $(this);
-				mySwiper = new Swiper(this, {
-					slidesPerView: 1,
-                    spaceBetween: 24,
-                    loop: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    speed: 500,
-                    pagination: {
-                        el: slideBody[i].find(".swiper-pagination"),
-                    },
-				});
+                var slideItem = slideBody[i].find('.swiper-slide');
+                if (slideItem.length > 1) {
+                    mySwiper = new Swiper(this, {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        speed: 500,
+                        pagination: {
+                            el: slideBody[i].find(".swiper-pagination"),
+                        },
+                    });
+                }
 			});
 		} else if(ww > 768 && mySwiper != undefined){
 			colslideAtcList.each(function(){
@@ -1021,17 +1024,19 @@ $.fn.banSlide = function () {
     return this.each(function (i) {
         banArray[i] = $(this);
         var pagination = banArray[i].find('.swiper-pagination');
-        banArray[i] = $(this);
-        var banSlide = new Swiper(banArray[i], {
-            pagination: {
-                el: pagination,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            loop: true
-        });
+        var slideItem = banArray[i].find('.swiper-slide');
+        if(slideItem.length > 1) {
+            var banSlide = new Swiper(banArray[i], {
+                pagination: {
+                    el: pagination,
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true
+            });
+        }
     })
 }
 
@@ -1041,21 +1046,24 @@ $.fn.promoBanSlide = function () {
     return this.each(function (i) {
         banArray[i] = $(this);
         var pagination = banArray[i].find('.swiper-pagination');
+        var slideItem = banArray[i].find('.swiper-slide');
         var next = banArray[i].find('.btn_next');
         var prev = banArray[i].find('.btn_prev');
-        var banSlide = new Swiper(banArray[i], {
-            pagination: {
-                el: pagination,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            navigation: {
-                nextEl: next,
-                prevEl: prev,
-            }
-        });
+        if (slideItem.length > 1) {
+            var banSlide = new Swiper(banArray[i], {
+                pagination: {
+                    el: pagination,
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
+                }
+            });
+        }
     })
 }

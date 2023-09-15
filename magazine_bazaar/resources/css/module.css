@@ -419,6 +419,8 @@
 .bnr_slide_list .swiper-pagination-bullet {width: 20px; height: 2px; margin: 0 3px; background: #DBDBDB; cursor: pointer;}
 .bnr_slide_list .swiper-pagination-bullet-active {background: #111;}
 
+.control {display: none;}
+.swiper-container-initialized .control{display: block;}
 
 /************************* keyframes *************************/
 @keyframes fadeIn{

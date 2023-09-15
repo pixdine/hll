@@ -39,11 +39,12 @@ $(document).ready(function(){
         var isVisible = targetElement.is(':visible')
         var gap = window.innerWidth - document.documentElement.clientWidth
 
-    if(targetId === 'popup_search') {
-        $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
-    } else {
-        $(this).toggleClass('on', !isVisible);
-    }
+        if(targetId === 'popup_search') {
+            $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
+            $(".search_layer .cont_inner").append('<div class="sl_bg"></div>');
+        } else {
+            $(this).toggleClass('on', !isVisible);
+        }
     
         if (isVisible) {
             popup.close(targetId, 'popup')
@@ -659,6 +660,7 @@ const popup = {
             if (_type !== 'layer') {
 				console.log(" _this.stack %o", _this.stack);
                 _this.stack.splice(_this.stack.indexOf(targetEl), 1);
+                $(".search_layer .cont_inner .sl_bg").remove();
                 if (!_this.stack.length) {
 					enableScroll();
                     $(_this.dimmed).fadeOut(100, $(_this.dimmed).remove)
@@ -1071,3 +1073,16 @@ $.fn.promoBanSlide = function () {
         }
     })
 }
+
+// 영역에 눌렸을 때 반응하는 스크립트
+document.addEventListener('click', function(event) {
+    // 검색레이어 딤영역
+    const searchWrapBg = document.querySelector('.sl_bg');
+    // 검색레이어 딤영역 클릭 타겟
+    const sbgClick = searchWrapBg.contains(event.target);
+    if (sbgClick) {
+        searchWrapBg.remove();
+        $('.search_layer').removeClass('open').fadeOut(200);
+        $(".btn_search").removeClass('on');
+    }
+});

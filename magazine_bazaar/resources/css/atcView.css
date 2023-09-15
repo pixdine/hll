@@ -4,8 +4,8 @@
 
 /* 기사상세 헤더 */
 .atc_wrap .atc_header {text-align: center; letter-spacing:-0.01em}
-.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 24px}
-.atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom:42px }
+.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 16px}
+.atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom:40px }
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; height:24px}
 .atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden; padding-top:0}
@@ -105,6 +105,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .atc_dtline_box h3.title {font-family:'Didot'; font-weight:500; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit {font-size:16px; font-weight: 400; line-height:23px; color:#666; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit li {display:flex; flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;}
+.atc_dtline_box .list_credit li span{word-break:break-all;}
 .atc_dtline_box .list_credit li:not(:first-child){margin-top:4px;}
 .atc_dtline_box .list_credit li em { margin-right:8px}
 .atc_dtline_box .list_tag_type_01 {}
@@ -112,7 +113,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .atc_dtline_box .list_tag_type_01 li a { display:block; padding:0 20px}
 
 /* 기사상세 > 키워드 태그 */
-.tag_atc_wrap{margin-top:80px;padding-top:80px;border-top:1px solid #dbdbdb;}
+.tag_atc_wrap{max-width:792px;margin-top:80px;padding-top:80px;border-top:1px solid #dbdbdb;letter-spacing:-0.01em;}
 .atc_wrap .tag_atc_wrap .cont_inner,
 .atc_wrap.wide .tag_atc_wrap .cont_inner{padding:0;}
 .tag_atc_wrap .tit_wrap{margin-bottom:40px;}
@@ -253,7 +254,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 /************************* Media Query *************************/
 @media (max-width:1216px){
-	.ab_photo_1200{width:calc(100vw - 16px);}
+	.ab_photo_1200{width:calc(100vw - 17px);}
 	.ab_photo_1200 .caption{padding-left:20px;}
 }
 

@@ -1017,6 +1017,9 @@ $.fn.banSlide = function () {
             pagination: {
                 el: pagination,
             },
+            autoplay: {
+                delay: 5000,
+            }
         });
     })
 }
@@ -1032,6 +1035,9 @@ $.fn.promoBanSlide = function () {
             pagination: {
                 el: pagination,
             },
+            autoplay: {
+                delay: 5000,
+            }
         });
     })
 }

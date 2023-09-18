@@ -1155,9 +1155,10 @@
 										body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:48.23%; transform:none}
 
 										@media (max-width:768px){
-											.shopping_wrap { overflow-y: hidden; overflow-x:auto}
+											.shopping_wrap { overflow-y: hidden; overflow-x:auto; margin:0 -20px}
 											.shopping_wrap::-webkit-scrollbar{display:none;}
-											.shopping_list { flex-direction:row; flex-wrap:nowrap;justify-content: flex-start; padding-bottom:0;}
+											.shopping_list { flex-direction:row; flex-wrap:nowrap;justify-content: flex-start; padding-bottom:0;padding-left:20px}
+											.shopping_list li:last-child .ab_shoppingbox { margin-right:20px}
 										}
 
 										@media (max-width:640px){

@@ -186,9 +186,9 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .selectbox .select_styled.opened::after{transform:translateY(-50%) rotate(180deg);}
 .selectbox .select_options{display:none;position:absolute;right:0;top:28px;padding:3px 4px 3px 0;border:1px solid #ccc;background:#fff;text-align:right;z-index:2;}
 .selectbox .select_options ul{overflow-y:auto;min-width:90px;max-height:216px;}
-.selectbox .select_options *::-webkit-scrollbar{position:relative;left:-5px;width:2px;height:2px;}
-.selectbox .select_options *::-webkit-scrollbar-thumb{background-color:#111;}
-.selectbox .select_options *::-webkit-scrollbar-track{background-color:#dbdbdb;}
+.is_pc .selectbox .select_options *::-webkit-scrollbar{position:relative;left:-5px;width:2px;height:2px;}
+.is_pc .selectbox .select_options *::-webkit-scrollbar-thumb{background-color:#111;}
+.is_pc .selectbox .select_options *::-webkit-scrollbar-track{background-color:#dbdbdb;}
 .selectbox .select_options li{min-width:88px;padding:8px 11px 8px 15px;color:#999;font-size:14px;font-weight:400;line-height:20px;cursor:pointer;}
 .selectbox .select_options li:hover{color:#111;font-weight:700;}
 .selectbox .select_options li.selected{color:#111;font-weight:700;}
@@ -1072,6 +1072,10 @@ background:#fff;overflow:hidden;z-index:230}
 	.radio_in input[type="radio"],
 	.radio_in label:before{top:0;}
 	.radio_in label{font-size:14px;line-height:20px;}
+
+	/* selectbox */
+	.selectbox .select_options{padding:0;}
+	.selectbox .select_options li{padding-right:15px;}
 
 	/* 서브메인 */
 	.sub_main .heading_wrap.eng{margin-bottom:40px;}

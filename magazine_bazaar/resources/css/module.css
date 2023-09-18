@@ -181,16 +181,21 @@
 
 /* 바자화보 */
 .pic_atc_wrap{margin-bottom:180px;}
-.pic_atc_list > ul{position:relative;}
-.pic_atc_list .atcbox{position:relative;}
-.pic_atc_list .atcbox .imgbox{height:100%;padding-top:0;}
-.pic_atc_list .atcbox .imgbox img{position:relative;}
-.pic_atc_list .atcbox .cate{font-size:12px;color:#fff;}
 .pic_atc_list .atcbox .txtbox{position:absolute;left:0;right:0;bottom:0;margin-top:0;padding:0 32px 32px;}
 .pic_atc_list .atcbox .txtbox:before{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:160px;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.6) 100%);}
-.pic_atc_list .atcbox .txtbox .tit{height:auto;max-height:52px;color:#fff;}
+.pic_atc_list .atcbox .txtbox .tit{color:#fff;}
+
 .pic_atc_list .grid {margin-left: -24px;margin-bottom:-24px;}
 .pic_atc_list .grid li{width: 50%;padding: 0 0 24px 24px;}
+.pic_atc_list .grid .atcbox .imgbox{height:100%;padding-top:0;}
+.pic_atc_list .grid .atcbox .imgbox img{position:relative;}
+.pic_atc_list .grid .atcbox .txtbox .tit{height:auto;max-height:52px;}
+
+.pic_atc_list ul:not(.grid){display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px;}
+.pic_atc_list ul:not(.grid) li{width:33.3333%;padding:0 12px;}
+.pic_atc_list ul:not(.grid) .atcbox .imgbox{padding-top:62.5%;}
+.pic_atc_list ul:not(.grid) .atcbox .txtbox{padding:0 24px 24px;}
+.pic_atc_list ul:not(.grid) .atcbox .txtbox:before{height:120px;}
 
 /* 댓글 모듈 */
 .comment_wrap{width:100%;max-width:792px;margin:80px auto 0;padding-top:80px;border-top:1px solid #dbdbdb;}
@@ -575,9 +580,12 @@
 	.colslide_atc_list .atcbox_set .atcbox{width:50%;padding:0 6px;}
 
 	.pic_atc_wrap{margin-bottom:80px;}
-	.pic_atc_list .atcbox .txtbox{padding:0 24px 24px;}
 	.pic_atc_list .atcbox .txtbox:before{height:120px;}
 	.pic_atc_list .atcbox .txtbox .tit{font-size:18px;line-height:26px;}
+	.pic_atc_list .grid .atcbox .txtbox{padding:0 24px 24px;}
+	.pic_atc_list ul:not(.grid){gap:12px 0;margin:0;}
+	.pic_atc_list ul:not(.grid) li{width:100%;padding:0;}
+	.pic_atc_list ul:not(.grid) .atcbox .txtbox .tit{height:52px;}
 
 	.comment_wrap{margin-top:60px;padding-top:60px;}
 	.comment_wrap .tit_wrap{margin-bottom:16px;}

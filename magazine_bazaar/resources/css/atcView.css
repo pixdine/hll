@@ -1,11 +1,11 @@
 
 .atc_wrap { padding-top: 60px; margin-bottom:180px}
-.txt_category {font-family: 'Gotham';color:var(--point);font-size: 16px; text-align: center; margin-bottom:24px}
+.txt_category {font-family: 'Gotham';color:var(--point);font-size: 16px; text-align: center; margin-bottom:24px;line-height:1;}
 
 /* 기사상세 헤더 */
 .atc_wrap .atc_header {text-align: center; letter-spacing:-0.01em}
-.atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px; margin-bottom: 16px}
-.atc_wrap .atc_header .txt_excerpt {font-weight: 400; font-size: 16px;;line-height: 23px;padding-bottom:40px }
+.atc_wrap .atc_header .tit_article {margin-bottom: 14px;font-weight: 700;font-size: 36px;line-height: 52px;}
+.atc_wrap .atc_header .txt_excerpt {padding-bottom:36px;font-weight: 400; font-size: 16px;line-height: 23px;}
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; height:24px}
 .atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background: #E0E0E0 url('../images/ico_profile_default.svg') center center no-repeat;background-size: 24px 24px;border-radius: 24px 24px;margin-right: 12px;box-sizing: border-box; overflow:hidden; padding-top:0}

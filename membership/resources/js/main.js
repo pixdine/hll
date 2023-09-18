@@ -55,9 +55,11 @@ const sceneCover = gsap.utils.toArray('.scene-cover')
 sceneCover.forEach((scene) =>{
     ScrollTrigger.create({
         trigger: scene,
-        start: 'top top',
-        end: 'bottom+=100%',
+        start: 'top 25%',
+        end: 'bottom 75%',
         pin: true,
+        scrub: true,
+        markers: true,
         animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
             yPercent: 100,
             duration: 2,

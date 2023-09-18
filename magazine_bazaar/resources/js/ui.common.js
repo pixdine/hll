@@ -406,7 +406,7 @@ function scrollAtcList(){
 				mySwiper = new Swiper(this, {
 					slidesPerView: 3,
 					spaceBetween: 24,
-					loop: true,
+					loop: false,
 					autoplay: false,
 					speed: 1000,
 					scrollbar: {
@@ -1079,10 +1079,10 @@ document.addEventListener('click', function(event) {
     // 검색레이어 딤영역
     const searchWrapBg = document.querySelector('.sl_bg');
     // 검색레이어 딤영역 클릭 타겟
-    const sbgClick = searchWrapBg.contains(event.target);
-    if (sbgClick) {
+    if (searchWrapBg == event.target) {
         searchWrapBg.remove();
         $('.search_layer').removeClass('open').fadeOut(200);
         $(".btn_search").removeClass('on');
+        $("body").removeClass('lockbody');
     }
 });

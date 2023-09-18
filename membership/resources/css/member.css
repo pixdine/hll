@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 body.is_pc .header{height:72px}
-body.is_pc .container.member { padding-top:72px }
-body.is_pc .container.member #content { padding-top:60px}
+/* body.is_pc .container.member { padding-top:72px } */
+/* body.is_pc .container.member #content { padding-top:60px} */
 /*.container.member { padding-top:0}*/
 .container.member .cont_inner {width:464px; margin:0 auto}
 .info_txt_btm {display:flex; align-items:center; justify-content: space-between; margin-top:6px}

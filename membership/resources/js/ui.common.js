@@ -178,7 +178,7 @@ function setCSS() {
 }
 
 //디바이스 체크
-$(window).on("resize", function () {
+$(window).on("load resize", function () {
     if (window.innerWidth > 768) {
         //PC
         $("body").removeClass("is_mobile").addClass("is_pc");

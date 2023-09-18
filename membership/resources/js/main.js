@@ -18,12 +18,13 @@ keyvisualContents.forEach((content, i) => {
         scrollTrigger: {
             start: `+=${i * 100}%`,
             end: "+=100%",
-            onEnter: () => {
-                content.tl.timeScale(1).play()
-            },
-            onLeaveBack: () => {
-                content.tl.reverse()
-            }
+            scrub: true,
+            // onEnter: () => {
+            //     content.tl.timeScale(1).play()
+            // },
+            // onLeaveBack: () => {
+            //     content.tl.reverse()
+            // }
         }
     })
         .to(`.key-visual__content--0${i + 1} .key-visual__dimmed`, {opacity: 0.6, duration: 0.3}, -0.3)
@@ -43,12 +44,12 @@ keyvisualContents.forEach((content, i) => {
 
 gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx
 
-const beginMotion = (e) => {
-    if(keyvisualVideo.currentTime> 1.9 && !initialized) {
-        keyvisualContents[0].tl.timeScale(1).play()
-        initialized = true
-    }
-}
+// const beginMotion = (e) => {
+//     if(keyvisualVideo.currentTime> 1.9 && !initialized) {
+//         keyvisualContents[0].tl.timeScale(1).play()
+//         initialized = true
+//     }
+// }
 
 const sceneCover = gsap.utils.toArray('.scene-cover')
 sceneCover.forEach((scene) =>{

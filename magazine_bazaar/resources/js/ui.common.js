@@ -81,7 +81,7 @@ $(document).ready(function(){
 	$.fn.selectbox = function () {
 		this.each(function(index, element) {
             var thisSelect = $(this);
-			var defaultValue = $("[data-option] > li.selected:last",element).text();
+			var defaultValue = $("[data-option] li.selected:last",element).text();
 			$("[data-value]", element).text(defaultValue);
 
 			$("[data-value]", element).click(function(event) {
@@ -92,7 +92,7 @@ $(document).ready(function(){
 				else $(this).addClass("opened");
 			});
 
-			$("[data-option] > li", element).click(function(event) {
+			$("[data-option] li", element).click(function(event) {
 				event.stopPropagation();
 				var selectedText = $(this).text();
 				console.log(selectedText)

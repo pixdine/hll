@@ -1075,7 +1075,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 	/* selectbox */
 	.selectbox .select_options{padding:0;}
-	.selectbox .select_options li{padding-right:15px;}
+	.selectbox .select_options ul{min-width:94px;}
+	.selectbox .select_options li{min-width:94px;padding-right:15px;}
 
 	/* 서브메인 */
 	.sub_main .heading_wrap.eng{margin-bottom:40px;}

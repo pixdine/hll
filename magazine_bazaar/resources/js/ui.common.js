@@ -245,6 +245,7 @@ function allmenuOpen() {
 
     function close() {
 		$(".allmenu_wrap").stop().fadeOut(100);
+		$("body").removeClass('lockbody');
 		if(popup.stack.length === 0) enableScroll();
     }
 
@@ -1018,7 +1019,7 @@ $.fn.photoViewerSwiper = function () {
         });
         close.on('click', function () {
             photoViewerArr[i].removeClass('active');
-            $('html').removeClass('lockbody');
+            $('body').removeClass('lockbody');
         });
     });
 	document.ontouchmove = null;

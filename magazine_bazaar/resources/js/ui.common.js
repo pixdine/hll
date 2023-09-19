@@ -1100,5 +1100,6 @@ document.addEventListener('click', function(event) {
         $('.search_layer').removeClass('open').fadeOut(200);
         $(".btn_search").removeClass('on');
         $("body").removeClass('lockbody').removeAttr('scrolly');
+        enableScroll();
     }
 });

@@ -245,8 +245,8 @@ function allmenuOpen() {
 
     function close() {
 		$(".allmenu_wrap").stop().fadeOut(100);
-		$("body").removeClass('lockbody');
 		if(popup.stack.length === 0) enableScroll();
+		$("body").removeClass('lockbody');
     }
 
     $('.header .btn_menu').click(open);
@@ -670,6 +670,7 @@ const popup = {
                 }
             }
         }
+        $("body").removeClass('lockbody');
     }
 }
 

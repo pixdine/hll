@@ -36,16 +36,15 @@ $(document).ready(function(){
     $('[data-popup-toggle]').on('click', function(e) {
         var targetId = $(this).attr('data-popup-toggle')
         var targetElement = $('[data-popup="' + targetId + '"]')
-        //var isVisible = targetElement.is(':visible')
+        var isVisible = targetElement.is(':visible')
         var gap = window.innerWidth - document.documentElement.clientWidth
 
-        // if(targetId === 'popup_search') {
-        //     $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
-        //     $(".search_layer .cont_inner").append('<div class="sl_bg"></div>');
-        // } else {
-        // }
-
-        $(this).toggleClass('on', !isVisible);
+        if(targetId === 'popup_search') {
+            $("[data-popup-toggle='popup_search']").toggleClass('on', !isVisible)
+            $(".search_layer .cont_inner").append('<div class="sl_bg"></div>');
+        } else {
+            $(this).toggleClass('on', !isVisible);
+        }
     
         if (isVisible) {
             popup.close(targetId, 'popup')
@@ -118,9 +117,20 @@ $(document).ready(function(){
     }
 
     // 검색레이어 열기
-    // $('.btn_search').on(function () {
-    //     $('.search_layer').fadeIn(200);
-    // });
+    $('.btn_search').on("click", function () {
+        if (!$(this).hasClass("on")) {
+            $(this).addClass('on');
+            $('.search_layer').fadeIn(200).addClass("open").children().append("<div class='sl_bg'></div>");
+            $('body').addClass("lockbody");
+            disableScroll();
+        } else {
+            $(this).removeClass('on');
+            $('.search_layer').fadeOut(200).removeClass("open");
+            $(".sl_bg").remove();
+            $('body').removeClass("lockbody");
+            enableScroll();
+        }
+    });
 });
 
 //iOS vh 대응

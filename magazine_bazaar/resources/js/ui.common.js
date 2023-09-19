@@ -787,8 +787,7 @@ function disableScroll() {
 		$(body).addClass('lockbody');
 	}
 
-	//body.addEventListener('touchmove', lockScrollHandle, { passive: false });
-
+	body.addEventListener('touchmove', lockScrollHandle, { passive: false });
 }
 
 // 스크롤 잠금 해제
@@ -801,7 +800,7 @@ function enableScroll() {
 		body.removeAttribute('scrollY');
     }
 
-	body.removeEventListener('touchmove', lockScrollHandle, { passive: false });
+	body.removeEventListener('touchmove', lockScrollHandle, { passive: true });
 
 };
 

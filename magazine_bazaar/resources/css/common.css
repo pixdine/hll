@@ -965,7 +965,8 @@ background:#fff;overflow:hidden;z-index:230}
 	/* 검색 레이어 */
 	.search_layer{top:48px;}
 	.header.main .search_layer{top:94px;}
-	.search_layer .cont_inner{padding:40px 20px;}
+	.search_layer .cont_inner{padding:40px 20px; max-width: none;}
+    .search_layer.open .cont_inner .sl_bg{left: 0;right: 0;}
 	.search_keyword{margin-top:32px;}
 	.search_keyword .search_tit{font-size:16px;line-height:23px;}
 	.word_list{row-gap:8px;}

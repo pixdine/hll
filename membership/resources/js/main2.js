@@ -1,3 +1,17 @@
+// 부드러운 스크롤 효과
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+    // console.log(e)
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 gsap.registerPlugin(ScrollTrigger)
 
 const keyvisualVideo = document.querySelector('.key-visual__video')
@@ -25,21 +39,48 @@ keyvisualContents.forEach((content, i) => {
             // onLeaveBack: () => {
             //     content.tl.reverse()
             // }
+            onEnter: () => content.classList.add("active"),
+            onLeave: () => content.classList.remove("active"),
+            onEnterBack: () => content.classList.add("active"),
+            onLeaveBack: () => content.classList.remove("active")
         }
-    })
+    })            
         .to(`.key-visual__content--0${i + 1} .key-visual__dimmed`, {opacity: 0.6, duration: 0.3}, -0.3)
-        .from(`.key-visual__content--0${i + 1}`, i?{autoAlpha: 0}:{}, 0)
-        .from(`.key-visual__content--0${i + 1} .key-visual__title .motion-wrap.direction-down > *`, {
-            yPercent: 100,
-            duration: 2,
-            ease: "power4.inOut"
-        }, 0)
-        .from(`.key-visual__content--0${i + 1} .key-visual__description span`, {
-            yPercent: 100,
-            duration: 2,
-            ease: "power4.inOut"
-        }, 0)
+
+    if (i == 0) {
+        content.tl = gsap.timeline({
+            scrollTrigger: {}
+        })
         .from(`.key-visual__content--0${i + 1} .key-visual__link`, {autoAlpha: 0, duration: 2, ease: "power4.inOut"}, 0)
+    }
+    else {
+        content.tl = gsap.timeline({
+            scrollTrigger: {
+                start: `+=${i * 100}%`,
+                end: "+=100%",
+                scrub: true,
+                // onEnter: () => {
+                //     content.tl.timeScale(1).play()
+                // },
+                // onLeaveBack: () => {
+                //     content.tl.reverse()
+                // }
+            }
+        })
+            .from(`.key-visual__content--0${i + 1}`, i?{autoAlpha: 0}:{}, 0)
+            // .from(`.key-visual__content--0${i + 1} .key-visual__title .motion-wrap.direction-down > *`, {
+            //     yPercent: 100,
+            //     duration: 2,
+            //     ease: "power4.inOut"
+            // }, 0)
+            // .from(`.key-visual__content--0${i + 1} .key-visual__description span`, {
+            //     yPercent: 100,
+            //     duration: 2,
+            //     ease: "power4.inOut"
+            // }, 0)
+            // .from(`.key-visual__content--0${i + 1} .key-visual__link`, {autoAlpha: 0, duration: 2, ease: "power4.inOut"}, 0)
+    
+    }
 })
 
 gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx

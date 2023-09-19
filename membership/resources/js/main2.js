@@ -1,5 +1,8 @@
 // 부드러운 스크롤 효과
-
+$('html').niceScroll({
+    scrollspeed: 30,
+    mousescrollstep: 40
+});
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -100,15 +103,15 @@ sceneCover.forEach((scene) =>{
 
 const mediaServices = gsap.utils.toArray('.media-service__content')
 
-// ScrollTrigger.create({
-//     trigger: ".media-service__container",
-//     start: "top top",
-//     anticipatePin: 1,
-//     pin: true,
-//     //pinSpacing: true,
-//     markers: true,
-//     end: `${mediaServices.length * innerHeight + innerHeight}px`
-// })
+ScrollTrigger.create({
+    trigger: ".media-service__container",
+    start: "top top",
+    anticipatePin: 1,
+    pin: true,
+    pinSpacing: true,
+    markers: true,
+    end: `${mediaServices.length * innerHeight + innerHeight}px`
+})
 
 const mm = gsap.matchMedia();
 
@@ -123,17 +126,24 @@ mediaServices.forEach((service, i) => {
         trigger: service,
         start: 'top bottom',
         end: 'bottom top',
-        //pin: true,
-        //scrub: true,
+        pin: true,
+        scrub: true,
         markers: true,
         onUpdate: (st) => {
             const distance = st.scroll()-st.start - (st.end - st.start)/2
-                gsap.to(text, {translateY: distance, duration:0, ease: "none"} )
-                gsap.to(image1, {translateY: distance, duration:0, ease: "none"} )
-                gsap.to(image2, {translateY: distance, duration:0, ease: "none"} )
-                gsap.to(image3, {translateY: distance, duration:0, ease: "none"} )
-                gsap.to(image4, {translateY: distance, duration:0, ease: "none"} )
-                gsap.to(image5, {translateY: distance, duration:0, ease: "none"} )
+            // gsap.to(text, {translateY: distance, duration:0, ease: "none"} )
+            // gsap.to(image1, {translateY: distance, duration:0, ease: "none"} )
+            // gsap.to(image2, {translateY: distance, duration:0, ease: "none"} )
+            // gsap.to(image3, {translateY: distance, duration:0, ease: "none"} )
+            // gsap.to(image4, {translateY: distance, duration:0, ease: "none"} )
+            // gsap.to(image5, {translateY: distance, duration:0, ease: "none"} )
+            //gsap.from(text, {yPercent: -100} )
+            gsap.to(text, {translateY: distance} )
+            //gsap.to(image1, {translateY: distance} )
+            gsap.to(image2, {translateY: distance} )
+            // gsap.to(image3, {translateY: distance} )
+            // gsap.to(image4, {translateY: distance} )
+            // gsap.to(image5, {translateY: distance} )
         }
     })
 })

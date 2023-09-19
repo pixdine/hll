@@ -218,15 +218,14 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .photo_four02 div:nth-child(3), .photo_four02 div:nth-child(2)  {width:32%}
 
 /* wide > 1200 */
-
 .ab_photo_1200 .tag_photobundle .swiper-slide {height:712px}
 .ab_photo_1200 .tag_photobundle img {width:auto}
 
-
 /* 이벤트 상세 */
 .event_detail_wrap .atc_body{max-width:996px;}
-.event_detail_wrap .atc_header .txt_date{margin-top:40px;font-family:Gotham;font-size:14px;color:#666;line-height:1;}
+.event_detail_wrap .atc_header .txt_date{margin-top:40px;font-family:Gotham;font-size:14px;font-weight:500;color:#666;line-height:1;}
 .tmp_photo{margin-bottom:24px;}
+.tmp_photo img{width:100%;}
 .tmp_txt{max-width:792px;margin-left:auto;margin-right:auto;}
 
 /* 화보 상세 */
@@ -277,6 +276,9 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .prd_info {text-align:left; ma
 body.is_pc .ab_shoppingbox .prd_info dt { margin-top:0}
 body.is_pc .shopping_list li.only .ab_shoppingbox .prd_info dd.store { margin-top:82px }
 body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:48.23%; transform:none}
+
+
+
 /************************* Media Query *************************/
 @media (max-width:1216px){
 	.ab_photo_1200{width:calc(100vw - 17px);}
@@ -290,7 +292,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:48.23%; transfo
     .atc_wrap .atc_header .txt_category {font-size:14px}
     .atc_wrap .atc_header .tit_article {font-size:24px;line-height:35px; margin-bottom:10px }
     .atc_wrap .atc_header .txt_excerpt {font-size: 14px;line-height: 22px; padding-bottom:35px }
-    .atc_wrap .atc_body {max-width:none}
+    .atc_wrap .atc_body {max-width:none;margin-top:32px;}
 	.atc_wrap.wide .atc_body{margin-top:40px;}
 
     .atc_wrap .atc_header .txt_meta { height:20px}
@@ -301,7 +303,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:48.23%; transfo
     .atc_wrap.wide .atc_header_info {width:calc(100% - 40px); bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}
 
-    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;}
+    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;padding-right:20px;}
 
     .atc_body .ab_photo {margin:24px -20px; width:auto} /* 기사상세 > 본문 이미지 792 */
     .ab_photo_1200{left:0;transform:translateX(0);width:auto;margin:24px -20px;}
@@ -417,7 +419,8 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:48.23%; transfo
     
     .ab_photo_1200 .tag_photobundle, .ab_photo_1200 .photo_five , .ab_photo_1200 .photo_four { margin:20px 0}
 
-	.tmp_photo{margin:0 -20px 24px;}
+	.event_detail_wrap .atc_header .txt_date{margin-top:24px;font-size:12px;}
+	.tmp_photo{margin:0 -20px 20px;}
 
     .cont_inner.pictorial .atc_header  {max-width:auto;    padding: 0 20px;}
     .cont_inner.pictorial .ab_photo { margin:20px 0}

@@ -407,7 +407,7 @@
 .carouselTicker .carouselTicker__item img {height: 349px;}
 .carouselTicker .carouselTicker__item .ticker_info {position: absolute; bottom: 0; left: 0; right: 0; height: 160px; padding: 76px 32px 0; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
 .carouselTicker .carouselTicker__item .subject {color: #fff; font-weight: 500; font-family: 'gotham'; font-size: 12px; line-height: 1;}
-.carouselTicker .carouselTicker__item .desc_txt {color: #fff; font-weight: 500; font-size: 18px; line-height: 26px; text-overflow: ellipsis; overflow: hidden;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; height: 52px;}
+.carouselTicker .carouselTicker__item .desc_txt {color: #fff; font-weight: 500; font-size: 18px; line-height: 26px; text-overflow: ellipsis; overflow: hidden;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; height: 52px;word-break:break-all;}
 
 /* 가로로 긴 이벤트 배너 모듈 */
 .bnr_slide_wrap{margin-bottom:180px;}

@@ -114,7 +114,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .myscrap_wrap ~ .btn_more_wrap { margin-top:120px}
 
 /* list data가 없는경우 */
-.no_data .rs_txt { display:none; font-size:24px; line-height:1.1; font-weight:500; color:#666; text-align:center; background:#F7F7F7; padding:170px 0}
+.rs_txt { display:none; font-size:24px; line-height:1.1; font-weight:500; color:#666; text-align:center; background:#F7F7F7; padding:170px 0}
 .no_data .rs_txt { display:block}
 .no_data .img_list, .myscrap_wrap.no_data .myscrap_list {display:none}
 

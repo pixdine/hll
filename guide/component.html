@@ -28,8 +28,6 @@
 						<ul class="guide_desc">
 							<li>주버튼 컬러 : .bctype1 (ex .btn + .bctype1)</li>
 							<li>서브버튼 : .bctype2 (ex .btn + .bctype2)</li>
-							<li>[매체] 버튼 포인트 컬러 : <strong style="color:#111">검정색</strong></li>
-							<li>[통합멤버십] 버튼 포인트 컬러 : <strong style="color:#410C86">보라색</strong></li>
 						</ul>
 
 						<h3 class="h3">H52 (.btn + 컬러타입명)</h3>
@@ -151,7 +149,6 @@
 					<div class="guide_box">
 						<h2 class="h2">Tab</h2>
 						<h3 class="h3">탭메뉴1 (.tab_menu + .type01)</h3>
-						<p class="guide_desc">매체에서는 구분선 없고, 통합멤버십에서는 구분선 있음</p>
 
 						<!-- 탭메뉴 -->
 						<div class="tab_menu type01">
@@ -206,58 +203,6 @@
 					</div>
 				</div>
 				<!-- //탭메뉴 가이드 -->
-
-				<!-- 달력 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">datepicker</h2>
-						<!-- 상단 소팅영역 -->
-						<div class="top_sort_wrap">
-							<!-- 기간설정 -->
-							<div class="date_wrap">
-								<!-- 기간필터 -->
-								<div class="date_filter">
-									<div class="tab_menu type03">
-										<ul>
-											<li class="on"><a href="javascript:;">1주일</a></li><!-- D: 선택 시 on 클래스 추가 -->
-											<li><a href="javascript:;">1개월</a></li>
-											<li><a href="javascript:;">3개월</a></li>
-										</ul>
-									</div>
-								</div>
-								<!-- //기간필터 -->
-
-								<!-- 기간달력 -->
-								<!-- D: 디폴트 1년 이내 조회됨. 위에 있는 기간 필터 클릭 시 해당 필터에 해당하는 날짜로 변경 -->
-								<div class="date_select">
-									<div class="inputbox">
-										<input type="text" id="startDate" class="datepicker" id="name" name="name" title="기간검색 시작일" value="22.08.24" readonly>
-									</div>
-									<div class="space">~</div>
-									<div class="inputbox">
-										<input type="text" id="endDate" class="datepicker" id="name" name="name" title="기간검색 종료일" value="23.08.24"  readonly>
-									</div>
-								</div>
-								<!-- //기간달력 -->
-							</div>
-							<!-- //기간설정 -->
-
-							<!-- 리스트 소팅 -->
-							<div class="sort_filter">
-								<div class="tab_menu type02">
-									<ul>
-										<li class="on"><a href="#">전체</a></li>
-										<li><a href="#">적립</a></li>
-										<li><a href="#">소진</a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- //리스트 소팅 -->
-						</div>
-						<!-- //상단 소팅영역 -->
-					</div>
-				</div>
-				<!-- //달력 가이드 -->
 
 				<!-- 더보기 가이드 -->
 				<div class="guide_sec">
@@ -368,7 +313,7 @@
 						<h2 class="h2">Input</h2>
 						<h3 class="h3">Default</h3>
 						<ul class="guide_desc">
-							<li>Focused : 인풋 색상(#f6f6f6), 인풋 보더 컬러(#333)변경</li>
+							<li>Focused : 인풋 색상(#f7f7f7), 인풋 보더 컬러(#333)변경</li>
 							<li>Typing : 텍스트를 입력하면 삭제버튼 노출</li>
 						</ul>
 						<div class="inputbox">
@@ -432,51 +377,5 @@
 	<script src="../magazine_bazaar/resources/js/swiper.min.js"></script>
 	<script src="../magazine_bazaar/resources/js/ui.common.js"></script>
 	<!-- //js -->
-
-	<script>
-		$(document).ready(function(){
-			/* D: 달력은 퍼블에서는 우선 검수용으로 잡아두었습니다. 개발에서 처리 부탁드립니다. */
-			var today = new Date();
-			var oneYearAgo = new Date();
-			var oneYearLater = new Date();
-			oneYearAgo.setFullYear(today.getFullYear() - 1);
-			oneYearLater.setFullYear(today.getFullYear());
-			
-			$(".date_select #startDate").datepicker({
-				dateFormat : "y.mm.dd",
-				changeMonth:false,
-				changeYear:false,
-				hideIfNoPrevNext: true,
-				yearSuffix: "년",
-				showMonthAfterYear:true,
-				showOn:"button",//달력아이콘노출
-				buttonText:'날짜선택',
-				prevText:'이전 달',
-				nextText:'다음 달',
-				dayNamesMin:['일','월','화','수','목','금','토'],
-				monthNames:[ "01월", "02월", "03월", "04월", "05월", "06월", "07월", "08월", "09월", "10월", "11월", "12월" ],
-				minDate: oneYearAgo,
-				maxDate:oneYearLater,
-			});
-
-			$(".date_select #endDate").datepicker({
-				dateFormat : "y.mm.dd",
-				changeMonth:false,
-				changeYear:false,
-				hideIfNoPrevNext: true,
-				yearSuffix: "년",
-				showMonthAfterYear:true,
-				showOn:"button",//달력아이콘노출
-				buttonText:'날짜선택',
-				prevText:'이전 달',
-				nextText:'다음 달',
-				dayNamesMin:['일','월','화','수','목','금','토'],
-				monthNames:[ "01월", "02월", "03월", "04월", "05월", "06월", "07월", "08월", "09월", "10월", "11월", "12월" ],
-				minDate: oneYearAgo,
-				maxDate:oneYearLater,
-			});
-		});
-	</script>
-
 </body>
 </html>

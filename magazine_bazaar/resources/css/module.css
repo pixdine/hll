@@ -387,12 +387,13 @@
 .photoViewer .pv_cont .swiper-slide{display: flex; justify-content: center;}
 .photoViewer .pv_cont .swiper-slide .pv_img{display: flex; flex-direction: column; justify-content: center;}
 .photoViewer .pv_cont .swiper-slide img{height: 840px;object-fit: contain;}
-.photoViewer .pv_cont .swiper-slide .caption{margin-top: 12px;color: #fff; font-size: 14px; line-height: 24px; text-align: left;}
+.photoViewer .pv_cont .swiper-slide .caption{margin-top: 12px;color: #fff; font-size: 14px; font-weight:400; line-height: 24px; letter-spacing:0.08em; text-align: left;}
 .photoViewer .pv_next {right: 50%; margin-right: -512px;}
 .photoViewer .pv_prev {left: 50%; margin-left: -512px;}
 .photoViewer .pvSwiper ~ button[role="button"] {position: absolute; top: 50%; width: 48px;  opacity: 0.6; transform: translateY(calc(-50% - 18px));}
 .photoViewer .pvSwiper ~ button[role="button"]:hover {opacity: 1;}
-.photoViewer .pv_close {position: absolute; top: 60px; right: 60px; width: 48px;}
+.photoViewer .pv_close {position: absolute; top: 46px; right: 46px; width: 48px; height:48px;}
+.photoViewer .pv_close img{width:28px;height:28px;}
 
 .ticker {padding: 100px 0; margin-bottom: 180px; background: #F7F7F7;}
 .carouselTicker + .carouselTicker {margin-top: 24px;}

@@ -80,40 +80,54 @@ const beginMotion = (e) => {
     }
 }
 
-const sceneCover = gsap.utils.toArray('.scene-cover')
-sceneCover.forEach((scene) =>{
-    ScrollTrigger.create({
-        trigger: scene,
-        start: 'top 0%',
-        end: 'bottom 50%',
-        pin: true,
-        scrub: true,
-        animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
-            yPercent: 100,
-            duration: 2,
-            ease: "power4.inOut",
-            autoAlpha: 0
-        }, 0)
-        // onEnter: () => content.classList.add("active"),
-        // onLeave: () => content.classList.remove("active"),
-        // onEnterBack: () => content.classList.add("active"),
-        // onLeaveBack: () => content.classList.remove("active")
-    })
-})
+let sceneitemArr = [];
+gsap.utils.toArray('.scene-cover .scene-cover__container').forEach((item, i)=> {
+    sceneitemArr[i] = item;
+    gsap.from(sceneitemArr[i], {
+        scrollTrigger: {
+            trigger: sceneitemArr[i],
+            start: "top 85%",
+            end: "bottom 15%",
+            markers: true,
+            scrub: true,
+            toggleClass: "active"
+        }
+    });
+});
+// sceneCover.forEach((scene) =>{
+//     ScrollTrigger.create({
+//         trigger: scene,
+//         start: 'top',
+//         end: 'bottom',
+//         pin: true,
+//         scrub: true,
+//         markers: true,
+//         animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
+//             yPercent: 100,
+//             duration: 2,
+//             ease: "power4.inOut",
+//             autoAlpha: 0
+//         }, 0)
+//         // onEnter: () => content.classList.add("active"),
+//         // onLeave: () => content.classList.remove("active"),
+//         // onEnterBack: () => content.classList.add("active"),
+//         // onLeaveBack: () => content.classList.remove("active")
+//     })
+// })
 
 const mediaServices = gsap.utils.toArray('.media-service__content')
 
-ScrollTrigger.create({
-    trigger: ".media-service__container",
-    start: "top top",
-    anticipatePin: 1,
-    pin: true,
-    pinSpacing: true,
-    markers: true,
-    end: `${mediaServices.length * innerHeight + innerHeight}px`
-})
+// ScrollTrigger.create({
+//     trigger: ".media-service__container",
+//     start: "top",
+//     // anticipatePin: 1,
+//     // pin: true,
+//     // pinSpacing: true,
+//     markers: true,
+//     end: `${mediaServices.length * innerHeight + innerHeight}px`
+// })
 
-const mm = gsap.matchMedia();
+//const mm = gsap.matchMedia();
 
 mediaServices.forEach((service, i) => {
     const text = service.querySelector(".media-service__text")
@@ -126,9 +140,10 @@ mediaServices.forEach((service, i) => {
         trigger: service,
         start: 'top bottom',
         end: 'bottom top',
-        pin: true,
+        //pin: true,
+        pinSpacing: false,
         scrub: true,
-        markers: true,
+        //markers: true,
         onUpdate: (st) => {
             const distance = st.scroll()-st.start - (st.end - st.start)/2
             // gsap.to(text, {translateY: distance, duration:0, ease: "none"} )

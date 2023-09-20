@@ -775,6 +775,13 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 .point_total {font-size:24px; line-height:23px; font-weight:500; font-family:'Gotham'; color:var(--point)}
 
+/* 시스템 접속 장애 */
+.comm_error { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; width:100%}
+.comm_error .ico_error { width:80px; height:80px; margin:0 auto;letter-spacing:-0.01em}
+.comm_error .ico_error img { width:100%;}
+.comm_error .err_comment01 { font-size:36px; font-weight:700; line-height:1.4; letter-spacing:-0.01em; margin:48px 20px 0}
+.comm_error .err_comment02 { font-size:18px; font-weight:500; line-height:1.4; color:#666; margin:16px 20px 0 }
+
 /************************* Media Query *************************/
 @media (max-width:1280px){
 
@@ -1092,6 +1099,11 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.popup_full .radio_list  { row-gap:8px;}
 
 	.tit_wrap02 { margin-bottom:24px; }
+
+	.comm_error .ico_error { width:48px; height:48px;}
+	.comm_error .err_comment01 { font-size:22px; margin:24px 20px 0}
+	.comm_error .err_comment02 { font-size:14px;margin:12px 20px 0}
+	.comm_error .err_comment01 span, .comm_error .err_comment02 span{ display:block}
 }
 
 @media (max-width:320px){

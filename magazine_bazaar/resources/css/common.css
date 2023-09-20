@@ -672,7 +672,7 @@ background:#fff;overflow:hidden;z-index:230}
 /* 에디터 목록 */
 .editor_wrap{margin-bottom:180px;}
 .editor_list ul{display:flex;flex-wrap:wrap;gap:40px 24px;}
-.editor_list li{width:calc(33.333% - 16px);}
+.editor_list li{width:calc(33.334% - 16px);}
 .editor_box{height:319px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
 .editor_box > a{display:block;width:100%;height:100%;}
 .editor_box .editor_head{position:relative;padding:32px;background-color:#111;}
@@ -688,7 +688,7 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_view_wrap{position:relative;}
 .editor_view_wrap:before{content:'';display:block;width:100%;height:214px;background-color:#111;}
 .editor_atc_wrap .atc_list_wrap{margin-top:80px;}
-.editor_profile{max-width:1280px;margin:-122px auto 0;padding:0 40px;}
+.editor_profile{max-width:1280px;margin:-124px auto 0;padding:0 40px;}
 .editor_profile .profile_area{display:flex;position:relative;padding:48px 60px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
 .editor_profile .profile_img{overflow:hidden;width:88px;height:88px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .editor_profile .profile_img img{width:100%;height:100%;object-fit:cover;}
@@ -1129,7 +1129,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.editor_profile .profile_info{padding-left:0;}
 	.editor_profile .profile_info .name{font-size:24px;line-height:35px;}
 	.editor_profile .profile_info .desc{margin-top:2px;font-size:16px;line-height:23px;}
-	.editor_profile .profile_info .txt{min-height:66px;font-size:14px;line-height:22px;}
+	.editor_profile .profile_info .txt{min-height:66px;margin-top:16px;font-size:14px;line-height:22px;}
 	.editor_profile .btn_box{margin-top:24px;}
 	.editor_atc_wrap .atc_list_wrap{margin-top:40px;}
 

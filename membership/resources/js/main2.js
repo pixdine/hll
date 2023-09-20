@@ -1,6 +1,6 @@
 // 부드러운 스크롤 효과
 $('html').niceScroll({
-    scrollspeed: 30,
+    scrollspeed: 20,
     mousescrollstep: 40
 });
 
@@ -24,48 +24,27 @@ keyvisualContents.forEach((content, i) => {
         scrollTrigger: {
             start: `+=${i * 100}%`,
             end: "+=100%",
-            scrub: true,
-            // onEnter: () => {
-            //     content.tl.timeScale(1).play()
-            // },
-            // onLeaveBack: () => {
-            //     content.tl.reverse()
-            // }
-        }
-    })            
-        .to(`.key-visual__content--0${i + 1} .key-visual__dimmed`, {opacity: 0.6, duration: 0.3}, -0.3)
-
-    if (i != 0) {
-        content.tl = gsap.timeline({
-            scrollTrigger: {
-                start: `+=${i * 100}%`,
-                end: "+=100%",
-                scrub: true,
-                // onEnter: () => {
-                //     content.tl.timeScale(1).play()
-                // },
-                // onLeaveBack: () => {
-                //     content.tl.reverse()
-                // }
-                onEnter: () => content.classList.add("active"),
-                onLeave: () => content.classList.remove("active"),
-                onEnterBack: () => content.classList.add("active"),
-                onLeaveBack: () => content.classList.remove("active")
+            onEnter: () => {
+                content.tl.timeScale(1).play()
+            },
+            onLeaveBack: () => {
+                content.tl.reverse()
             }
-        })
-            .from(`.key-visual__content--0${i + 1}`, i?{autoAlpha: 0}:{}, 0)
-            // .from(`.key-visual__content--0${i + 1} .key-visual__title .motion-wrap.direction-down > *`, {
-            //     yPercent: 100,
-            //     duration: 2,
-            //     ease: "power4.inOut"
-            // }, 0)
-            // .from(`.key-visual__content--0${i + 1} .key-visual__description span`, {
-            //     yPercent: 100,
-            //     duration: 2,
-            //     ease: "power4.inOut"
-            // }, 0)
-            // .from(`.key-visual__content--0${i + 1} .key-visual__link`, {autoAlpha: 0, duration: 2, ease: "power4.inOut"}, 0)
-    }
+        }
+    })
+        .to(`.key-visual__content--0${i + 1} .key-visual__dimmed`, {opacity: 0.6, duration: 0.3}, -0.3)
+        .from(`.key-visual__content--0${i + 1}`, i?{autoAlpha: 0}:{}, 0)
+        .from(`.key-visual__content--0${i + 1} .key-visual__title .motion-wrap.direction-down > *`, {
+            yPercent: 100,
+            duration: 2,
+            ease: "power4.inOut"
+        }, 0)
+        .from(`.key-visual__content--0${i + 1} .key-visual__description span`, {
+            yPercent: 100,
+            duration: 2,
+            ease: "power4.inOut"
+        }, 0)
+        .from(`.key-visual__content--0${i + 1} .key-visual__link`, {autoAlpha: 0, duration: 2, ease: "power4.inOut"}, 0)
 })
 
 gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx
@@ -80,36 +59,22 @@ const beginMotion = (e) => {
     }
 }
 
-let sceneCover = [];
-gsap.utils.toArray('.scene-cover').forEach((item, i)=> {
-    sceneCover[i] = item;
-    gsap.from(sceneCover[i], {
-        scrollTrigger: {
-            trigger: sceneitemArr[i],
-            start: "top 85%",
-            end: "bottom 15%",
-            pin: true,
-            markers: true,
-            scrub: true,
-            toggleClass: "active"
-        }
-    });
-});
-
-let sceneitemArr = [];
-gsap.utils.toArray('.scene-cover .scene-cover__container').forEach((item, i)=> {
-    sceneitemArr[i] = item;
-    gsap.from(sceneitemArr[i], {
-        scrollTrigger: {
-            trigger: sceneitemArr[i],
-            start: "top 85%",
-            end: "bottom 15%",
-            markers: true,
-            scrub: true,
-            toggleClass: "active"
-        }
-    });
-});
+const sceneCover = gsap.utils.toArray('.scene-cover')
+sceneCover.forEach((scene) =>{
+    ScrollTrigger.create({
+        trigger: scene,
+        start: 'top 25%',
+        end: 'bottom 75%',
+        // pin: true,
+        // scrub: true,
+        markers: true,
+        animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
+            yPercent: 100,
+            duration: 2,
+            ease: "power4.inOut"
+        }, 0)
+    })
+})
 // sceneCover.forEach((scene) =>{
 //     ScrollTrigger.create({
 //         trigger: scene,

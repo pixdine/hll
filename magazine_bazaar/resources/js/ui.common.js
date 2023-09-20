@@ -1042,7 +1042,7 @@ $.fn.photoViewerSwiper = function () {
             navigation: {
                 nextEl: next,
                 prevEl: prev,
-            },
+            }
         });
         close.on('click', function () {
             console.log("close");
@@ -1050,6 +1050,11 @@ $.fn.photoViewerSwiper = function () {
             $('body').removeClass('lockbody');
             enableScroll();
         });
+
+        if(pvSwiper[i].slides.length <= 1) {
+            pvSwiper[i].navigation.nextEl.style.display = 'none';
+            pvSwiper[i].navigation.prevEl.style.display = 'none';
+        }
     });
 	document.ontouchmove = null;
 }

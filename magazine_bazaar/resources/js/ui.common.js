@@ -86,10 +86,15 @@ $(document).ready(function(){
 
 			$("[data-value]", element).click(function(event) {
 				event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
-
-				$(this).siblings("[data-option]").slideToggle("fast");
-				if ($(this).hasClass("opened") == true )  $(this).removeClass("opened");
-				else $(this).addClass("opened");
+                if ($(this).hasClass("opened")) {
+                    $(this).removeClass("opened");
+                    $("[data-option]").stop().slideUp("fast");
+                } else {
+                    $("[data-value]").removeClass("opened");
+                    $(this).addClass("opened");
+                    $("[data-option]").stop().slideUp("fast");
+                    $(this).siblings("[data-option]").stop().slideDown("fast");
+                }
 			});
 
 			$("[data-option] li", element).click(function(event) {

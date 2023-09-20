@@ -261,8 +261,10 @@ function allmenuOpen() {
 
     function close() {
 		$(".allmenu_wrap").stop().fadeOut(100);
-		if(popup.stack.length === 0) enableScroll();
-		$("body").removeClass('lockbody');
+		if(popup.stack.length === 0 && !$('.search_layer').hasClass('open')) {
+            enableScroll();
+        }
+       
     }
 
     $('.header .btn_menu').click(open);

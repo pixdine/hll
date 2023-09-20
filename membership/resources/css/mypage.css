@@ -103,18 +103,20 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .tbl_btm_area .btn_area {/*margin-top:80px;*/ width:100%}
 .tbl_btm_area .btn_area .btn_b { max-width:384px; margin:0 auto}
 
-.myscrap_area { margin-bottom:-4.17%}
-.myscrap_area .tit_wrap { margin-bottom:40px}
-.myscrap_area.no_scrap { background:#F7F7F7; padding:170px 0}
+.myscrap_wrap { margin-bottom:-4.17%}
+.myscrap_wrap.type02 { margin-top:0}
+.myscrap_wrap .tit_wrap { margin-bottom:40px}
 .img_list { display:flex; flex-direction: row; flex-wrap: wrap;}
 .img_list .atcbox {width:23.5%; margin:0 0  4.17% 2%}
 .img_list .atcbox:nth-child(4n+1), .myscrap_list02 .atcbox:first-child  {margin-left:0}
-.myscrap_area.no_scrap .img_list {display:none}
-.myscrap_area .rs_txt { display:none; font-size:24px; line-height:1.1; font-weight:500; color:#666; text-align:center}
-.myscrap_area.no_scrap .rs_txt { display:block}
 .today_news .tit_wrap { margin-bottom:40px}
 
-.myscrap_area ~ .btn_more_wrap { margin-top:120px}
+.myscrap_wrap ~ .btn_more_wrap { margin-top:120px}
+
+/* list data가 없는경우 */
+.no_data .rs_txt { display:none; font-size:24px; line-height:1.1; font-weight:500; color:#666; text-align:center; background:#F7F7F7; padding:170px 0}
+.no_data .rs_txt { display:block}
+.no_data .img_list, .myscrap_wrap.no_data .myscrap_list {display:none}
 
 /* 포인트관리 */
 .point_prd_info {position:relative; min-height:180px}
@@ -210,7 +212,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 
 .point_product_list { border-top:1px solid #111; padding-top:40px; margin-top:35px}
-.point_product_list ul {display:flex; flex-wrap:wrap; justify-content: space-between; row-gap:50px; column-gap:24px;}
+.point_product_list ul {display:flex; flex-wrap:wrap; justify-content: flex-start; row-gap:50px; column-gap:24px;}
 .point_product_list ul li{ width: 23.5%}
 .point_product_list ul li .atcbox {}
 .point_product_list ul li .atcbox .imgbox {height: 70.32%; border:1px solid #DBDBDB; box-sizing:border-box}
@@ -434,8 +436,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     body.is_mobile .myscrap_wrap .myscrap_list ul li + li { margin-top:0 }
 
     .myscrap_wrap .tit_wrap h2 strong { font-size:22px}
-    .myscrap_area .rs_txt { font-size:14px }
-    .myscrap_area.no_scrap { padding:80px 0}
+    .myscrap_wrap .rs_txt { font-size:14px }
+    .myscrap_wrap.no_scrap { padding:80px 0}
     .heading_wrap {margin-bottom:32px }
 
     .control{margin-top:32px;text-align:center; width:100%}
@@ -469,7 +471,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .img_list {vertical-align:top; display:flex;justify-content: space-between }
     .img_list .atcbox {width:48.21%; margin:0 0 7.16% 0}
     .img_list .atcbox:nth-child(2n+1), .img_list .atcbox:first-child  {margin-left:0}
-    .myscrap_area ~ .btn_more_wrap { margin-top:40px}
+    .myscrap_wrap ~ .btn_more_wrap { margin-top:40px}
 
     /* 포인트관리 */
     .point_prd_info {min-height:80px}

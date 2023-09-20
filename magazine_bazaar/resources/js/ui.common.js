@@ -1010,7 +1010,7 @@ function viewImgSlide() {
 // 화보 딤 슬라이드 열기
 function openPhotoViewer(){
     $('.photoViewer').addClass('active');
-    $('html').addClass('lockbody');
+    $('body').addClass('lockbody');
 	document.ontouchmove = function(event) {
 	  event.preventDefault();
 	}
@@ -1033,8 +1033,10 @@ $.fn.photoViewerSwiper = function () {
             },
         });
         close.on('click', function () {
+            console.log("close");
             photoViewerArr[i].removeClass('active');
             $('body').removeClass('lockbody');
+            enableScroll();
         });
     });
 	document.ontouchmove = null;

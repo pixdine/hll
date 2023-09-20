@@ -80,6 +80,22 @@ const beginMotion = (e) => {
     }
 }
 
+let sceneCover = [];
+gsap.utils.toArray('.scene-cover').forEach((item, i)=> {
+    sceneCover[i] = item;
+    gsap.from(sceneCover[i], {
+        scrollTrigger: {
+            trigger: sceneitemArr[i],
+            start: "top 85%",
+            end: "bottom 15%",
+            pin: true,
+            markers: true,
+            scrub: true,
+            toggleClass: "active"
+        }
+    });
+});
+
 let sceneitemArr = [];
 gsap.utils.toArray('.scene-cover .scene-cover__container').forEach((item, i)=> {
     sceneitemArr[i] = item;

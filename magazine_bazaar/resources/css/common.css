@@ -635,7 +635,8 @@ background:#fff;overflow:hidden;z-index:230}
 .search_top .re_search{margin-top:20px;text-align:right;line-height:1;}
 .search_atc_wrap{margin:80px 0 0;}
 .search_atc_wrap .word_box{margin-bottom:40px;}
-.search_atc_wrap .tab_cont .cont_inner{padding:0;}
+.search_atc_wrap .tab_cont .cont_inner,
+.search_atc_wrap .atc_list_wrap .cont_inner{padding:0;}
 .result_keyword{margin-bottom:40px;font-size:24px;font-weight:400;line-height:35px;}
 .result_keyword .word{font-weight:700;color:#111;}
 .result_keyword .word:before{content:'‘';}

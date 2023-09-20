@@ -63,16 +63,26 @@ const sceneCover = gsap.utils.toArray('.scene-cover')
 sceneCover.forEach((scene) =>{
     ScrollTrigger.create({
         trigger: scene,
-        start: 'top 25%',
-        end: 'bottom 75%',
-        // pin: true,
-        // scrub: true,
+        start: 'top 0%',
+        end: 'bottom 0%',
         markers: true,
         animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
             yPercent: 100,
             duration: 2,
             ease: "power4.inOut"
-        }, 0)
+        }, 0),
+        onEnter: () => {
+            $('.header').addClass('dark');
+        },
+        onLeave: () => {
+            $('.header').removeClass('dark');
+        },
+        onEnterBack: () => {
+            $('.header').addClass('dark');
+        },
+        onLeaveBack: () => {
+            $('.header').removeClass('dark');
+        }
     })
 })
 // sceneCover.forEach((scene) =>{

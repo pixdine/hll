@@ -212,6 +212,7 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 .header .btn_menu{display:none;position:absolute;z-index:1;right:0;top:12px;width:24px;height:24px;}
 .header .btn_menu:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_menu.svg') center center no-repeat;background-size:24px auto;}
 
+.main-page .header.dark .header_gnb li a {color: #111;}
 
 /* container */
 .container { margin:0 auto; padding: 135px 0 180px}

@@ -74,7 +74,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .tag_photobundle .viewSwiper {position:relative; text-align:center; overflow:hidden;  padding-bottom:56px; line-height:0} 
 .tag_photobundle .caption { margin-top:12px }
 .tag_photobundle .swiper-slide  { height:528px; overflow:visible; background: #F7F7F7; }
-.tag_photobundle .swiper-slide img { object-fit:cover; height:100%;}
+.tag_photobundle .swiper-slide img { object-fit:contain; height:100%;} /* 09-20 contain으로 변경 */
 /*.tag_photobundle .swiper-slide::after {content:''; position:absolute; left:0; top:0; z-index:-1; ;width:100%; height:90.39%; }*/
 .tag_photobundle .caption { position:absolute; }
 .tag_photobundle .swiper-scrollbar {border-radius: 0; background-color: #DBDBDB; bottom:-56px;}

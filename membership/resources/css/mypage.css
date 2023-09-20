@@ -34,7 +34,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Gotham'; font-size:28px; font-weight:500; text-align:right; padding-right:40px; }
 .mypage_point_info ul li dl dd strong { font-weight:500; font-size:40px;  line-height:1 }
 .mypage_point_info ul li dl dd .c_point {color:var(--point); position:relative; top:-2px}
-.mypage_point_info ul li dl dd .point {font-size:28px; margin-left:4px}
+.mypage_point_info ul li dl dd .point {font-size:28px; margin-left:4px; margin-bottom:-7px}
 .mypage_point_info ul li dl dd .sep { display:inline-block; margin:0 8px}
 .mypage_point_info ul li dl dd span {line-height:1}
 

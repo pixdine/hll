@@ -8,7 +8,7 @@ body.is_mobile .top_visual img.mo {display:block}
 body.is_mobile .top_visual img.pc {display:none}
 .top_visual .txt_box {position:absolute; top:50%; left:50%; transform: translate(-50% ,-50%); color:#fff; max-width:680px; text-align:center}
 .top_visual .txt_box .txt { font-size:48px; font-weight:400; line-height:1.6}
-.top_visual .txt_box .txt strong { font-weight:700}
+.top_visual .txt_box .txt strong { font-weight:700; display:block}
 .top_visual .txt_box .txts { font-size:18px; font-weight:400; line-height:1.6; margin-top:32px}
 
 .about_wrap {margin:120px auto 0}
@@ -17,6 +17,7 @@ body.is_mobile .top_visual img.pc {display:none}
 .about_cont_left {width:/*25.08%*/316px; flex-shrink:0}
 .about_cont_left dl {position:sticky; transition:top 0.35s ease-in-out; top:120px}
 .about_cont_left dt {font-size:36px; font-weight:700; line-height:1.3}
+.about_cont_left dt span {display:block}
 .about_cont_left dd {font-size:18px; font-weight:500; line-height:1.4; margin-top:32px}
 
 .about_cont_right {width:66%}
@@ -54,6 +55,7 @@ body.is_mobile .about_cont_right .magazine_list .m_img .pc {display:none}
 .about_wrap {margin:60px auto 0}
 .about_cont_left { width:100%; margin-bottom:60px}
 .about_cont_left dt {font-size:22px;}
+.about_cont_left dt span {display:inline-block}
 .about_cont_left dd {font-size:14px;margin-top:12px}
 .about_cont_right {width:100%}
 .about_cont_right .magazine_list .txt_box { position:relative; padding:33px 30px 14px; text-align:center; box-sizing:border-box}

@@ -765,7 +765,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .tooltip_layer {position:absolute; top:27px; left: -7px; display: none; padding:0; opacity:0; z-index: -1; max-width: calc(100vw - 40px); }
 .tooltip_layer.is-visible {display: flex; width: auto; height: auto; opacity:1; z-index:201; }
 .tooltip_layer.revert { left: auto; right: -7px; }
-.tooltip_layer p {max-width: 250px; font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 7px 16px 7px; width: max-content;}
+.tooltip_layer p {max-width: 300px; font-size:12px; line-height:17px; text-align:left; word-break: keep-all; word-wrap: break-word ; background-color: var(--point); color: #fff; padding: 7px 16px 7px; width: max-content;}
 
 .is_pc .tooltip_layer p br { display:none; }
 
@@ -826,6 +826,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 @media (max-width:768px){
 
 	.container { padding:84px 0 80px;}
+	.tooltip_layer p {max-width:250px; }
 	
 	.allmenu_wrap .btn_txt{font-size:14px;line-height:20px;}
 	.has_plus:after{margin-left:4px;background-size:12px auto;}

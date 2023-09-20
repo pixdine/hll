@@ -667,7 +667,7 @@
     .article_slide_mo .pagination .swiper-pagination-bullet-active{background: #232323;}
     .article_slide_mo .cont_inner {position: relative;}
 
-    .photoViewer .pv_cont .swiper-slide{display: block; width: 100%; height: 100%;}
+    .photoViewer .pv_cont .swiper-slide{display: block; width: 100vw !important; height: 100%;}
     .photoViewer .pv_cont .swiper-slide img{width: 100%; height: auto;}
     .photoViewer .pv_cont .swiper-slide .caption{margin: 8px 0 0 20px; font-size: 14px; line-height: 24px; text-align: left;}
     .photoViewer .pv_next {right: 20px; margin-right: 0;}

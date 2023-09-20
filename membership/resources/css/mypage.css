@@ -562,6 +562,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 	
 	.point_shop_wrap .tit_wrap .tit_area .tit span { display:block}
     .moa_wrap .tit_wrap .tit_area .side { display:none}
+    .moa_wrap .tit_wrap .tit_area span {display:block}
 
     .other_go { padding-bottom:79px}
     .other_go .go_event a {font-size:14px; line-height:20px;}

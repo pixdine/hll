@@ -181,12 +181,13 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .box_type02 { background:#fff; border:1px solid #DBDBDB}
 .point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center; justify-content:space-between}
 .point_change_cont .point_left { display:flex;align-items: center; }
+.point_change_cont .p_logo { width:144px; text-align:center}
 .point_change_cont .p_logo { height:auto; margin-right:64px}
-.point_change_cont .p_logo object { width:100%; height:auto}
-.point_change_cont .p_logo.ok  { width:144px;}
-.point_change_cont .p_logo.cj  { width:121px;}
-.point_change_cont .p_logo.hpoint  { width:97px;}
-.point_change_cont .p_logo.payco  { width:97px;}
+.point_change_cont .p_logo object { height:auto}
+.point_change_cont .p_logo.ok object { width:144px;}
+.point_change_cont .p_logo.cj object { width:121px;}
+.point_change_cont .p_logo.hpoint object { width:97px;}
+.point_change_cont .p_logo.payco object { width:97px;}
 .point_change_cont .p_txt {font-size:18px; font-weight:500; flex-grow:2 }
 .point_change_cont .p_txt span {display:inline-block; margin-left:5px}
 .point_change_cont .p_change {display:inline-flex; flex-direction: column; /*width:504px;*/ margin-top:14px; justify-content:flex-end; flex-grow:0}
@@ -319,11 +320,11 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
      .point_change_cont .p_change .btn {min-width:auto; margin-left:19px; width:70px}
      .point_change_cont .btn span span {display:none}
      .point_change_cont .p_change .unit {margin:0 0 0 8px}
-
-    .point_change_cont .p_logo.ok  { width:106px;}
-    .point_change_cont .p_logo.cj  { width:84px;}
-    .point_change_cont .p_logo.hpoint  { width:72px;}
-    .point_change_cont .p_logo.payco  { width:65.62px;}
+    .point_change_cont .p_logo { width:auto; }
+    .point_change_cont .p_logo.ok object { width:106px;}
+    .point_change_cont .p_logo.cj object { width:84px;}
+    .point_change_cont .p_logo.hpoint object { width:72px;}
+    .point_change_cont .p_logo.payco object { width:65.62px;}
  
 }
 

@@ -615,11 +615,16 @@ const popup = {
                 targetEl.fadeIn(100, function () {
                     $(this).addClass('open')
                 });
-				disableScroll();
+				// disableScroll();
 
                 $('.popup_inner', targetEl).click(function (e) {
                     e.stopPropagation();
                 });
+
+                $('html').css({
+					'height':'100%',
+					'overflow':'hidden'
+				})
 
                 break;
             case 'alert':
@@ -672,6 +677,11 @@ const popup = {
         var targetEl = $(`[data-${_type}="${_target}"]`);
 
         targetEl.fadeOut(100, adjustPad);
+
+        $('html').css({
+            'height':'initial',
+            'overflow':'initial'
+        })
 
         function adjustPad() {
             if (_type !== 'layer') {

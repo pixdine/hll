@@ -87,7 +87,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .myscrap_wrap .tit_wrap h2 strong { display:inline-block; color:var(--point); font-family:'Gotham'; font-size: 28px; font-weight:500; margin-left:8px;}
 .myscrap_wrap .myscrap_list {}
 .myscrap_wrap .myscrap_list ul {display:flex; flex-direction:column; }
-.myscrap_wrap .myscrap_list ul li { display:flex; flex-wrap: nowrap;justify-content: space-between}
+.myscrap_wrap .myscrap_list ul li { display:flex; flex-wrap: nowrap;justify-content:flex-start; column-gap:2%;}
 .myscrap_wrap .myscrap_list ul li.swiper-slide .atcbox {width:23.5%}
 .myscrap_wrap .myscrap_list ul li + li { margin-top:50px}
 

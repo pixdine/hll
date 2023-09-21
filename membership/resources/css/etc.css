@@ -31,4 +31,6 @@ body.is_pc .container.etc #content { padding-top:60px}
     .term_type01 dt.p_tit {font-size:18px; font-weight:700; margin-bottom:20px; color:#111}
     .term_type01 dd .term_st01 dt {font-size:14px; text-indent:-18px; padding-left:18px}
     .term_type01 dd .term_st01 dd {font-size:14px;}
+    .term_type01 dd li .term_st01 {font-size:14px; margin-left:-20px}
+    .term_type01 dd li .term_st01 dd { margin-left:40px}
 }

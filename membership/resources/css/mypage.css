@@ -435,6 +435,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     body.is_mobile .myscrap_list .atcbox .imgbox img { display:inline-block}
     body.is_mobile .myscrap_list .swiper-slide .price_p {font-size:14px; font-family:'Gotham'; font-weight:500; line-height:1; text-align:center; margin-top:14px }
     body.is_mobile .myscrap_wrap .myscrap_list ul li + li { margin-top:0 }
+    body.is_mobile .myscrap_wrap.type02 {margin:40px auto}
+    body.is_mobile .myscrap_wrap.type02 {margin-top:0}
 
     .myscrap_wrap .tit_wrap h2 strong { font-size:22px}
     .myscrap_wrap .rs_txt { font-size:14px }

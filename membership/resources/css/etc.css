@@ -10,6 +10,7 @@ body.is_pc .container.etc #content { padding-top:60px}
 .term_type01 dd li {margin-top:5px; text-indent:-20px; padding-left:22px}
 .term_type01 dd li.none {text-indent:0; padding-left:0}
 .term_type01 dd li li {text-indent:-18px; padding-left:10px}
+.term_type01 dd li li a { text-indent:0; padding-left:0}
 .term_type01 dd li:first-child {margin-top:0}
 .term_type01 dd ol ,.term_type01 dd ul  {margin-top:10px; margin-bottom:10px}
 .term_type01 dd  li ol, .term_type01 dd li ul { margin-left:10px;}

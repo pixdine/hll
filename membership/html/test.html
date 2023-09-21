@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        html,body {
+            height: 100%;
+        }
+        .container-wrap {
+            height: 100%;
+        }
+.container {
+  height: 100%;
+}
+
+.layer {
+    width: 100%;
+  height: 100%; /* 각 레이어의 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sticky {
+  top: 0; /* 뷰포트의 상단에 '붙음' */
+  left: 0;
+  z-index: 1; /* 위쪽에 있는 레이어가 아래쪽에 있는 레이어를 덮게 하기 위함 */
+}
+
+.text-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.layer:nth-child(1) { background-color: rgba(255,0,0,0.2); }
+.layer:nth-child(2) { background-color: rgba(0,255,0,0.2); z-index: 2;}
+.layer:nth-child(3) { background-color: rgba(0,0,255,0.2); z-index: 3;}
+.layer:nth-child(4) { background-color: rgba(255,255,0,0.2); z-index: 4;}
+
+.parent {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  overflow: hidden;  /* 자식 요소가 부모 요소의 영역을 벗어나면 숨겨집니다. */
+}
+
+.child {
+  position: absolute;
+  left: 150px;
+  top: 150px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container-wrap">
+        <div class="container">
+            <div class="sticky layer">
+                <div class="text-layer">
+                    Text Layer 1
+                </div>
+                <div class="parent">
+                    <div class="child">This is the child element.</div>
+                  </div>
+            </div>
+            <div class="sticky layer">
+                <div class="text-layer">
+                    Text Layer 2
+                </div>
+            </div>
+            <div class="sticky layer">
+                <div class="text-layer">
+                    Text Layer 3
+                </div>
+            </div>
+            <div class="sticky layer">
+                <div class="text-layer">
+                    Text Layer 4
+                </div>
+            </div>
+          </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+    <script>
+        const textLayer = document.querySelectorAll('.text-layer');
+        window.addEventListener('scroll', function (){
+            let scrollTop = window.scrollY;
+            textLayer.forEach(function(item, index){
+                console.log('item', index);
+                item.style.marginTop = scrollTop + 'px';
+            })
+        })
+
+// gsap.utils.toArray(".layer").forEach((layer, index) => {
+//   gsap.fromTo(layer, 
+//     { bottom: '-100vh' }, 
+//     {
+//       bottom: '0vh',
+//       scrollTrigger: {
+//         start: `top+=${index * 100}vh center`,
+//         end: `top+=${(index + 1) * 100}vh center`,
+//         scrub: 1,  // 애니메이션과 스크롤 사이의 부드러운 관계를 위한 스크럽
+//         markers: true // 마커를 보려면 true로 설정
+//       }
+//     }
+//   );
+// });
+
+    </script>
+</body>
+</html>

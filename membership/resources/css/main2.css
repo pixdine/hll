@@ -1,3 +1,4 @@
+
 .main-page .header {
     position: fixed;
     top: 0;
@@ -50,7 +51,8 @@
     display: block;
    }
    
-   .scene-cover__container, .media-service__text, .key-visual__container {
+   .scene-cover__container, 
+   .key-visual__container {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -170,33 +172,59 @@
    .media-service__container {
     position: relative;
    }
+   
+   .media-service__container .article-wrap {
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+   }
    .media-service__content {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    position: relative;
     padding: 0 40px;
-    overflow: hidden;
-    top: 0;
+    position: relative;
    }
    .media-service__content--elle {
     background-color: #FFF;
+    z-index: 4;
    }
    .media-service__content--cosmopolitan {
     background-color: #EF88AB;
     color: #FFFFFF;
+    z-index: 3;
    }
    .media-service__content--bazaar {
     background-color: #111111;
     color: #FFFFFF;
+    z-index: 2;
    }
    .media-service__content--esquire {
     background-color: #969C98;
     color: #FFFFFF;
+    z-index: 1;
    }
    .media-service__text {
     position: absolute;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
    }
+
+   .media-service__content--cosmopolitan .media-service__text {
+    top: calc(-100vh + 50%);
+   }
+
+   .media-service__content--bazaar .media-service__text {
+    top: calc(-200vh + 50%);
+   }
+
+   .media-service__content--esquire .media-service__text {
+    top: calc(-300vh + 50%);
+   }
+
    @media screen and (max-width: 768px) {
     .media-service__text {
      top: 100px;
@@ -215,6 +243,7 @@
     letter-spacing: -0.01em;
     margin-bottom: 60px;
    }
+
    @media screen and (max-width: 768px) {
     .media-service__phrase {
      font-size: 14px;
@@ -381,6 +410,7 @@
     font-size: 80px;
     font-weight: 700;
     letter-spacing: -0.02em;
+    overflow: hidden;
    }
    @media screen and (max-width: 768px) {
     .scene-cover__title {
@@ -393,6 +423,7 @@
     font-weight: 500;
     letter-spacing: -0.01em;
     color: #666;
+    overflow: hidden;
    }
    @media screen and (max-width: 768px) {
     .scene-cover__subtitle {

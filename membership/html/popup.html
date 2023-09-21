@@ -180,6 +180,7 @@
                         <button type="button" data-alert-open="alert_6"><span>얼럿6_주문/결재</span></button><br>
                         <button type="button" data-alert-open="alert_7"><span>얼럿7_가장 긴 케이스</span></button><br>
                         <button type="button" data-alert-open="alert_8"><span>얼럿8_로그아웃</span></button><br>
+                        <button type="button" data-alert-open="alert_9"><span>얼럿9_비밀번호변경</span></button><br>
 					</div>
                 </div>
             </div>
@@ -357,7 +358,7 @@
                         <div class="box_inner">
                             <p class="txt">
                                 허스트중앙 아이디는<br />
-                                <strong>jaki****@joongang.com</strong> 입니다.
+                                <strong>jaki**@********</strong> 입니다.
                             </p>
                         </div>
                     </div>
@@ -399,12 +400,12 @@
                         <fieldset class="pw_in">
                             <legend>비밀번호 변경</legend>
                             <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
-                                <input type="password" class="inp" placeholder="8~20자 영문 대소문자, 특수문자, 숫자 조합" />
+                                <input type="password" class="inp" placeholder="새로운 비밀번호 입력" />
                                 <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
                                 <p class="row_err_txt"></p>
                             </div>
                             <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
-                                <input type="password" class="inp" placeholder="변경할 비밀번호 한 번 더 입력" />
+                                <input type="password" class="inp" placeholder="비밀번호 한 번 더 입력" />
                                 <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
                                 <p class="row_err_txt"></p>
                             </div>
@@ -446,7 +447,7 @@
                     <dt>변경 비밀번호<em class="ess">*</em></dt>
                     <dd class="inputbox">
                         <div class="inputbox">
-                            <input type="password" class="inp" value="" placeholder="8~20자 영문 대소문자, 특수문자, 숫자 조합" />
+                            <input type="password" class="inp" value="" placeholder="새로운 비밀번호 입력" />
                             <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
                             <p class="row_err_txt">아이디를 입력해 주세요.</p>
                         </div>
@@ -454,7 +455,7 @@
                     <dt>변경 비밀번호 확인<em class="ess">*</em></dt>
                     <dd class="inputbox">
                         <div class="inputbox">
-                            <input type="password" class="inp" value="" placeholder="변경할 비밀번호 한 번 더 입력"  />
+                            <input type="password" class="inp" value="" placeholder="비밀번호 한 번 더 입력"  />
                             <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
                             <p class="row_err_txt">아이디를 입력해 주세요.</p>
                         </div>
@@ -765,6 +766,25 @@
             </div>
             <div class="popup_close">
                 <button type="button" class="btn_close" data-alert-close="alert_8"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!--D : 비밀번호변경 alter -->
+    <div class="popup_alert" data-alert="alert_9">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    변경할 비밀번호를 입력해 주세요.<br />(영문 대소문자, 숫자, 특수문자 중 2가지 조합은 10자 이상, 3가지 조합은 8자 이상)
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_9"><span class="blind">닫기</span></button>
             </div>
         </div>
     </div>

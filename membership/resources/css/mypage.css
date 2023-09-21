@@ -21,8 +21,8 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .mypage_point_info {position:relative;height:220px; background:#fff; padding:40px; box-sizing: border-box;}
 .top_cont_area .mypage_point_info {margin-top:51px}
 .mypage_point_info ul {display:flex; flex-direction: row; flex-wrap:wrap; justify-content: space-between; align-items: stretch; height:100%}
-.mypage_point_info ul li {position:relative; border-left:1px solid #DBDBDB; flex: 1; }
-.mypage_point_info ul li:first-child {border-left:0}
+.mypage_point_info ul li {position:relative; border-left:1px solid #DBDBDB; width:400px }
+.mypage_point_info ul li:first-child {border-left:0;}
 .mypage_point_info ul li dl { margin-left:40px; display:flex;flex-direction:column;justify-content:space-between; height:100% }
 .mypage_point_info ul li:first-child dl {margin-left:0}
 .mypage_point_info ul li dl dt {position:relative;font-size:16px; font-weight:500; color:#666; }
@@ -31,12 +31,16 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:-5px}
 .mypage_point_info ul li dl dd .bctype1 span { line-height:1.5}
 .mypage_point_info ul li dl dd .tooltip { position:absolute; right:0; bottom:8px}
-.mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Gotham'; font-size:28px; font-weight:500; text-align:right; padding-right:40px; }
+.mypage_point_info ul li dl dd {display:flex;flex-direction: row;justify-content: flex-start;align-items: center;font-family:'Gotham'; font-size:28px; font-weight:500; text-align:right; padding-right:40px; padding-bottom:3px }
 .mypage_point_info ul li dl dd strong { font-weight:500; font-size:40px;  line-height:1 }
 .mypage_point_info ul li dl dd .c_point {color:var(--point); position:relative; top:-2px}
 .mypage_point_info ul li dl dd .point {font-size:28px; margin-left:4px; margin-bottom:-7px}
 .mypage_point_info ul li dl dd .sep { display:inline-block; margin:0 8px}
 .mypage_point_info ul li dl dd span {line-height:1}
+body.is_pc .mypage_point_info ul li:first-child, body.is_pc .mypage_point_info ul li:last-child {width:360px}
+body.is_pc .mypage_point_info ul li:first-child dl dd {padding-bottom:0}
+body.is_pc .mypage_point_info ul li:first-child dl dd .sep {margin-bottom:-4px}
+body.is_pc .mypage_point_info ul li:first-child dl dd span {margin-bottom:-7px}
 
 /* 포인트 샵 */
 .point_shop_wrap {margin:180px auto}
@@ -363,13 +367,13 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .mypage_point_info ul li dl dt { font-size:14px; line-height:1.5}
     .mypage_point_info ul li dl dt::after { width:12px; height:12px}
     .mypage_point_info ul li dl dd .c_point {color:var(--point); font-size:20px}
-    .mypage_point_info ul li dl dd {justify-content: flex-start; margin-top:26px}
+    .mypage_point_info ul li dl dd {justify-content: flex-start; margin-top:26px; padding-bottom:0}
     .mypage_point_info ul li dl dd strong {font-size: 20px;}
     .mypage_point_info ul li dl dd span {font-size: 15px;}
     .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:auto; bottom:-4px}
     .mypage_point_info ul li dl dd .bctype1 span {font-size:12px }
-    .mypage_point_info ul li dl dd .sep { font-size: 15px;}
-    .mypage_point_info ul li dl dd .point {font-size:16px; font-family:'Gotham'; font-weight:500}
+    .mypage_point_info ul li dl dd .sep { font-size: 15px;} 
+    .mypage_point_info ul li dl dd .point {font-size:16px; font-family:'Gotham'; font-weight:500; margin-bottom:0}
 	.mypage_point_info ul li dl dd .tooltip {bottom:5px}
 
     /* 포인트 샵 */

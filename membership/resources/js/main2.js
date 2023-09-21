@@ -119,80 +119,85 @@ const mediaService = document.querySelector(".media-service");
 //     pinSpacing: false
 // });
 
+window.addEventListener("scroll", function () {
+  const textLayer = document.querySelectorAll(".media-service__text-wrap");
+  const msImg2 = document.querySelectorAll(".ms-img2");
+  let scrollTop = window.scrollY;
+  const ms = document.querySelector(".media-service");
+  let msOffsetY = ms.getBoundingClientRect().top;
+  console.log(scrollTop, msOffsetY);
+  if (msOffsetY < 0) {
+    textLayer.forEach(function (item, index) {
+      item.style.marginTop = -msOffsetY + "px";
+    });
+    msImg2.forEach(function (item, index) {
+      console.log("item", index);
+      item.style.marginTop = -(msOffsetY * 1.8) + "px";
+    });
+  }
+});
+
 const mediaServices = gsap.utils.toArray(".media-service__content");
 
-mediaServices.forEach((service, i) => {
-  const text = service.querySelector(".media-service__text");
-  const image1 = service.querySelector(".media-service__image--01");
-  const image2 = service.querySelector(".media-service__image--02");
-  const image3 = service.querySelector(".media-service__image--03");
-  const image4 = service.querySelector(".media-service__image--04");
-  const image5 = service.querySelector(".media-service__image--05");
-  ScrollTrigger.create({
-    trigger: service,
-    start: "top top",
-    end: "bottom top",
-    // pin: true,
-    // pinSpacing: false,
-    scrub: true,
-    //markers: true,
-    onUpdate: (st) => {
-      //const distance = st.scroll() - st.start - (st.end - st.start) / 2;
-      const distance = st.scroll() - st.start;
-      //   console.log("ms", i, st.scroll(), st.start, st.end, distance);
-      //   if (i == 0) {
-      //     text.style.marginTop = distance + "px";
-      //     if (st.scroll() > st.start) {
-      //       console.log("index");
-      //       text.style.marginTop = "calc(100vh + " + distance + "px";
-      //     }
-      //   } else {
-      //     if (st.scroll() > st.start) {
-      //       console.log("index");
-      //       text.style.marginTop = "calc(" + i + "00vh + " + distance + "px";
-      //     }
-      //   }
+// mediaServices.forEach((service, i) => {
+//   const text = service.querySelector(".media-service__text");
+//   const image1 = service.querySelector(".media-service__image--01");
+//   const image2 = service.querySelector(".media-service__image--02");
+//   const image3 = service.querySelector(".media-service__image--03");
+//   const image4 = service.querySelector(".media-service__image--04");
+//   const image5 = service.querySelector(".media-service__image--05");
+//   ScrollTrigger.create({
+//     trigger: service,
+//     start: "top top",
+//     end: "bottom top",
+//     // pin: true,
+//     // pinSpacing: false,
+//     scrub: true,
+//     markers: true,
+//     onUpdate: (st) => {
+//       //const distance = st.scroll() - st.start - (st.end - st.start) / 2;
+//       const distance = st.scroll() - st.start;
 
-      //gsap.to(text, { translateY: distance, duration: 0, ease: "none" });
-      // gsap.to(image1, {translateY: distance, duration:0, ease: "none"} )
-      // gsap.to(image2, {translateY: distance, duration:0, ease: "none"} )
-      // gsap.to(image3, {translateY: distance, duration:0, ease: "none"} )
-      // gsap.to(image4, {translateY: distance, duration:0, ease: "none"} )
-      // gsap.to(image5, {translateY: distance, duration:0, ease: "none"} )
-      //gsap.from(text, {yPercent: -100} )
-      //gsap.to(image1, {translateY: distance} )
-      //gsap.to(image2, {translateY: distance} )
-      // gsap.to(image3, {translateY: distance} )
-      // gsap.to(image4, {translateY: distance} )
-      // gsap.to(image5, {translateY: distance} )
-      //   if (i == 3) {
-      //     gsap.to(service, { autoAlpha: 0 });
-      //   } else {
-      //     gsap.to(service, { autoAlpha: 1 });
-      //   }
-    },
-    // onEnter: () => {
-    //     if (i == 1) $('.header').addClass('dark')
-    // },
-    // onEnter: () => {
-    //     if (i == 1) $('.header').addClass('dark')
-    // }
-  });
-});
-// mm.add("(max-width: 768px)", () => {
-//     mediaServices.forEach((service, i) => {
-//         const text = service.querySelector(".media-service__text")
-//         const images = service.querySelector(".media-service__images")
-//         ScrollTrigger.create({
-//             trigger: service,
-//             start: 'top bottom',
-//             end: 'bottom top',
-//             scrub: true,
-//             // markers: true,
-//             animation: gsap.to(images, {xPercent:-100})
-//         })
-//     })
-// })
+//       //gsap.to(text, { translateY: distance, duration: 0, ease: "none" });
+//       // gsap.to(image1, {translateY: distance, duration:0, ease: "none"} )
+//       // gsap.to(image2, {translateY: distance, duration:0, ease: "none"} )
+//       // gsap.to(image3, {translateY: distance, duration:0, ease: "none"} )
+//       // gsap.to(image4, {translateY: distance, duration:0, ease: "none"} )
+//       // gsap.to(image5, {translateY: distance, duration:0, ease: "none"} )
+//       //gsap.from(text, {yPercent: -100} )
+//       //gsap.to(image1, {translateY: distance} )
+//       //gsap.to(image2, {translateY: distance} )
+//       // gsap.to(image3, {translateY: distance} )
+//       // gsap.to(image4, {translateY: distance} )
+//       // gsap.to(image5, {translateY: distance} )
+//       //   if (i == 3) {
+//       //     gsap.to(service, { autoAlpha: 0 });
+//       //   } else {
+//       //     gsap.to(service, { autoAlpha: 1 });
+//       //   }
+//     },
+//     // onEnter: () => {
+//     //     if (i == 1) $('.header').addClass('dark')
+//     // },
+//     // onEnter: () => {
+//     //     if (i == 1) $('.header').addClass('dark')
+//     // }
+//   });
+// });
+// // mm.add("(max-width: 768px)", () => {
+// //     mediaServices.forEach((service, i) => {
+// //         const text = service.querySelector(".media-service__text")
+// //         const images = service.querySelector(".media-service__images")
+// //         ScrollTrigger.create({
+// //             trigger: service,
+// //             start: 'top bottom',
+// //             end: 'bottom top',
+// //             scrub: true,
+// //             // markers: true,
+// //             animation: gsap.to(images, {xPercent:-100})
+// //         })
+// //     })
+// // })
 
 const themeServices = gsap.utils.toArray(".theme-service__content");
 

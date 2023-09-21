@@ -29,7 +29,6 @@
 .atc_wrap.wide .atc_header_img { display:block}
 .atc_wrap.wide .atc_header_info { position:absolute; transform: translateX(-50%); left:50%; bottom:13%;  width:calc(100% - 80px); max-width:792px}
 .atc_wrap.wide .txt_category, .atc_wrap.wide .atc_header_info .tit_article, .atc_wrap.wide .atc_header_info .txt_excerpt { color:#fff}
-.atc_wrap.wide .txt_category { margin-bottom:14px}
 .atc_wrap.wide .atc_header .atc_header_info .txt_meta span a, .atc_wrap.wide .atc_header .atc_header_info .txt_meta em  {color:#fff}
 .atc_wrap.wide .atc_header_info .txt_meta .time {color:#fff}
 

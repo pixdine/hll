@@ -204,19 +204,19 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:8px;}
 
 .list_head_area {display:flex; justify-content: space-between; align-items: center;}
-.list_head_area .list_tot { font-size:24px; line-height:1.8;color:#666; font-weight:500 }
-.list_head_area .list_tot strong { font-size:28px; line-height:1.8; font-family:"Gotham"; font-weight:500; color:var(--point); display:inline-block; margin-left:13px}
+.list_head_area .list_tot { font-size:16px; line-height:1.5;color:#666; font-weight:500 }
+.list_head_area .list_tot strong { font-size:18px; line-height:1; font-family:"Gotham"; font-weight:500; color:var(--point); display:inline-block; margin-left:6px}
 
-.pointshop_list_wrap .tit_wrap ~ .list_head_area { margin-top:40px; padding-top:24px; border-top:1px solid #111;} 
+.pointshop_list_wrap .tit_wrap ~ .list_head_area { margin-top:40px; padding-top:24px; border-top:2px solid #111;} 
 
-.list_sorting_area { display:flex;justify-content: space-between;align-items: center; margin-top:33px}
+.list_sorting_area { display:flex;justify-content: space-between;align-items: center; margin-top:28px}
 .list_sorting_area .option_filter {display:flex; align-items: center; }
 .list_sorting_area .option_filter .stit02 { font-size:20px; line-height:1.4; font-weight:500; display:inline-block;margin-right:40px}
 .list_sorting_area .option_filter02 { display:flex; }
 .list_sorting_area .option_filter02 .selectbox { margin-left:10px; }
 
 
-.point_product_list { border-top:1px solid #111; padding-top:40px; margin-top:35px}
+.point_product_list { border-top:1px solid #DBDBDB; padding-top:40px; margin-top:35px}
 .point_product_list ul {display:flex; flex-wrap:wrap; justify-content: flex-start; row-gap:50px; column-gap:24px;}
 .point_product_list ul li{ width: 23.5%}
 .point_product_list ul li .atcbox {}
@@ -295,7 +295,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 .important { font-size:12px; line-height:1.6; color:#FF0000; margin-top:8px; padding-left:28px}
 
-.inputbox.search .inp {width:336px}
+.inputbox.search .inp {width:335                             px}
 
 /* 이벤트 모아보기 All*/
 .other_go { padding-bottom:85px}

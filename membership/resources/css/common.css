@@ -387,6 +387,11 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btm_info_box li:first-child { margin-top:0}
 .btm_info_box li::before { content:''; position:absolute; left:0; top:7px; width:3px; height:3px; border-radius: 3px 3px; background-color:#ccc}
 
+.btm_info_box02 { background:#FAF6FF; padding:40px; margin-top:180px }
+.btm_info_box02 .info_cont { text-align:center}
+.btm_info_box02 .info_tit { font-size:18px; font-weight:500; margin-bottom:16px}
+
+
 
 /* title */
 .tit_wrap .tit{overflow:hidden;font-size:24px;font-weight:500;line-height:35px;color:#111;}

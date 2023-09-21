@@ -922,11 +922,13 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.popup_cont .input_type01 ~.btn_wrap { margin-top:32px}
 	.popup_cont .gray_box ~.btn_wrap { margin-top:32px}                    
 
-	body.is_mobile .info_box, body.is_mobile .login_info_box {display:block}
+	body.is_mobile .info_box, body.is_mobile .login_info_box {display:block; }
+	body.is_mobile .login_info_box {margin-bottom:8px}
 
 
 	/* 전체메뉴 */
 	body.is_mobile .allmenu_wrap {  display:none; transition: height .35s ease-in-out; height:100%; overflow:auto; position:fixed; top:0; z-index:100; border-bottom:0px; padding-top:0 }
+	body.is_mobile .allmenu_wrap .cont_inner { padding-top:48px; }
 	body.is_mobile .allmenu_wrap .allmenu_list {display: flex;justify-content:flex-start; flex-direction: column; flex-wrap: wrap; margin-bottom:80px; margin-left:0; padding-top: 8px;}
 	body.is_mobile .allmenu_wrap .allmenu_list li {position:relative; text-align:left; padding:0px; margin-top:32px; margin-bottom: 0;}
 	body.is_mobile .allmenu_wrap .allmenu_list li a.tit { position:relative; font-size:20px; line-height:28px; font-weight:700; height:auto; width:auto; overflow:visible; color:#111;display:block  }
@@ -947,20 +949,20 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 
 	/* 전체메뉴 로그인 */
-	.info_box {display:block; padding:40px 0; border-bottom:1px solid #DBDBDB}
+	.info_box {display:block; padding:40px 0 40px; border-bottom:1px solid #DBDBDB}
 	.info_box .info_txt {font-size:22px; line-height:32px; font-weight:400}
 	.info_box .info_txt strong {font-weight:700}
 	.info_box .btn_b { margin-top:40px; }
 	.info_box .info_txt_btm {display:flex; align-items:center; justify-content: space-between; margin-top:16px}
 	.info_box .info_txt_btm p {font-size:14px;color:#666 }
-	.info_box .info_txt_btm .btn_txt {white-space: nowrap;}
+	.info_box .info_txt_btm .btn_txt {white-space: nowrap; padding:0}
 
 	.login_info_box {display:none; margin:0 -20px}
-	.login_info_box .info_txt { background-color:var(--point); padding:40px 0 0 20px; min-height: 186px; box-sizing: border-box;}
+	.login_info_box .info_txt { background-color:var(--point);background-image:url('../images/bg_mypage.png'); background-repeat:no-repeat; background-position:center top; background-size:cover; padding:40px 0 0 20px; min-height: 186px; box-sizing: border-box;}
 	.login_info_box .info_txt p {font-size:28px; line-height:40px; font-weight:400; color:#fff}
 	.login_info_box .info_txt p strong {font-weight: 700;}
-	.login_info_box .info_txt02 { margin:-40px 20px 0; background:#fff; font-size:14px; line-height:20px; padding:40px 20px; text-align:center}
-	.login_info_box .btn_txt { display:flex;justify-content: flex-end; margin-right:12px}
+	.login_info_box .info_txt02 { margin:-40px 20px 0; background:#fff; font-size:14px; line-height:20px; padding:20px 53px; text-align:center}
+	.login_info_box .btn_txt { display:flex;justify-content: flex-end; margin-right:12px; margin-top:6px}
 	
 
 	/* 회원가입 */

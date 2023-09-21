@@ -638,7 +638,7 @@
 												</a>
 											</div>
 										</li>
-										<li>
+										<li class="last_item">
 											<div class="atcbox">
 												<a href="#">
 													<div class="imgbox">
@@ -649,6 +649,16 @@
 														<p class="tit">알아두면 쓸데 있는 &lt; 예술산책 &gt; 사용설명서</p>
 													</div>
 												</a>
+											</div>
+										</li>
+                                        <li class="other_go">
+											<div class="atcbox">
+												<div class="go_event"> 
+                                                    <a href="#">
+                                                        <span>HARPER'S BAZZAR<br /> 홈페이지에서<br /> 모든 이벤트를 확인하세요!</span>
+                                                        <span class="ico_arr07"></span>
+                                                    </a>
+												</div>
 											</div>
 										</li>
 									</ul>
@@ -706,36 +716,18 @@
 	<script src="../../resources/js/ui.common.js"></script>
 
 <script>
-    const imgData = [
-        {
-            imgSrc:'../../resources/images/temp/temp_event05_mo.png',
-            category:'예술산책',
-            tit:'알아두면 쓸데 있는 < 예술산책 > 사용설명서'
-        },
-        {
-            imgSrc: '../../resources/images/temp/temp_event04_pc.png',
-            category:'',
-            tit:''
-        }
-    ]
     $('.moa_wrap.event .tag_list a').on('click', function (e) {
         e.preventDefault();
+        var curIdx = $(this).parent().index();
+        if(curIdx !== 0) {
+            $('.moa_list .last_item').hide();
+            $('.moa_list .other_go').show();
+        } else {
+            $('.moa_list .last_item').show();
+            $('.moa_list .other_go').hide();
+        }
         $('.moa_wrap.event .tag_list li').removeClass('on');
         $(this).parent().addClass('on');
-        const lastChild = $('.moa_wrap.event .moa_list li:last-child');
-        const lastChildImg = lastChild.find('img');
-        const lastChildCate = lastChild.find('.cate');
-        const lastChildTit = lastChild.find('.tit');
-        const currentIndex = $(this).parents('li').index();
-        if (currentIndex != 0) {
-            lastChildImg.attr('src', imgData[1].imgSrc);
-            lastChildCate.text('');
-            lastChildTit.text('');
-        } else {
-            lastChildImg.attr('src', imgData[0].imgSrc);
-            lastChildCate.text(imgData[0].category);
-            lastChildTit.text(imgData[0].tit);
-        }
     });
 </script>
 

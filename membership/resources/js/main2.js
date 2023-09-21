@@ -1,4 +1,4 @@
-// 부드러운 스크롤 효과
+// 부드러운 스크롤 효과 niceScroll
 $('html').niceScroll({
     scrollspeed: 20,
     mousescrollstep: 40
@@ -51,7 +51,6 @@ gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx
 
 const beginMotion = (e) => {
     if(keyvisualVideo.currentTime> 1.9 && !initialized) {
-        //keyvisualContents[0].tl.timeScale(1).play()
         setTimeout(() => {
             $('.key-visual__content--01').addClass('active');
         }, 700);
@@ -65,48 +64,37 @@ sceneCover.forEach((scene) =>{
         trigger: scene,
         start: 'top 0%',
         end: 'bottom 0%',
-        markers: true,
-        animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
-            yPercent: 100,
-            duration: 2,
-            ease: "power4.inOut"
-        }, 0),
-        onEnter: () => {
-            $('.header').addClass('dark');
-        },
-        onLeave: () => {
-            $('.header').removeClass('dark');
-        },
-        onEnterBack: () => {
-            $('.header').addClass('dark');
-        },
-        onLeaveBack: () => {
-            $('.header').removeClass('dark');
-        }
+        // animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
+        //     yPercent: 100,
+        //     duration: 2,
+        //     ease: "power4.inOut"
+        // }, 0),
+        onEnter: () => $('.header').addClass('dark'),
+        onLeave: () => $('.header').removeClass('dark'),
+        onEnterBack: () => $('.header').addClass('dark'),
+        onLeaveBack: () => $('.header').removeClass('dark')
     })
 })
-// sceneCover.forEach((scene) =>{
-//     ScrollTrigger.create({
-//         trigger: scene,
-//         start: 'top',
-//         end: 'bottom',
-//         pin: true,
-//         scrub: true,
-//         markers: true,
-//         animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
-//             yPercent: 100,
-//             duration: 2,
-//             ease: "power4.inOut",
-//             autoAlpha: 0
-//         }, 0)
-//         // onEnter: () => content.classList.add("active"),
-//         // onLeave: () => content.classList.remove("active"),
-//         // onEnterBack: () => content.classList.add("active"),
-//         // onLeaveBack: () => content.classList.remove("active")
-//     })
-// })
 
-const mediaServices = gsap.utils.toArray('.media-service__content')
+gsap.utils.toArray('.scene-cover__container .direction-up').forEach(item => {
+    gsap.from(item, {
+        autoAlpha: 0,
+        yPercent: 100,
+        duration: 2,
+        ease: "power4.inOut",
+        markes: true,
+        scrollTrigger: {
+            trigger: item,
+            start: "0% 100%",
+            end: "0% 0%",
+            markers: true,
+            toggleActions: "play reverse play reverse",
+        }
+    })
+});
+
+const mediaServices = gsap.utils.toArray('.media-service__content');
+console.log(mediaServices);
 
 // ScrollTrigger.create({
 //     trigger: ".media-service__container",
@@ -120,20 +108,28 @@ const mediaServices = gsap.utils.toArray('.media-service__content')
 
 //const mm = gsap.matchMedia();
 
+// gsap.utils.toArray(".parallax__item").forEach((panel, i) => {
+//     ScrollTrigger.create({
+//         trigger: panel,
+//         start: "top top",
+//         pin: true,
+//         pinSpacing: false
+//     });
+// });
+
 mediaServices.forEach((service, i) => {
-    const text = service.querySelector(".media-service__text")
-    const image1 = service.querySelector(".media-service__image--01")
-    const image2 = service.querySelector(".media-service__image--02")
-    const image3 = service.querySelector(".media-service__image--03")
-    const image4 = service.querySelector(".media-service__image--04")
-    const image5 = service.querySelector(".media-service__image--05")
+    const text = service.querySelector(".media-service__text");
+    const image1 = service.querySelector(".media-service__image--01");
+    const image2 = service.querySelector(".media-service__image--02");
+    const image3 = service.querySelector(".media-service__image--03");
+    const image4 = service.querySelector(".media-service__image--04");
+    const image5 = service.querySelector(".media-service__image--05");
     ScrollTrigger.create({
         trigger: service,
-        start: 'top bottom',
+        start: 'top top',
         end: 'bottom top',
-        //pin: true,
+        pin: true,
         pinSpacing: false,
-        scrub: true,
         //markers: true,
         onUpdate: (st) => {
             const distance = st.scroll()-st.start - (st.end - st.start)/2
@@ -144,13 +140,19 @@ mediaServices.forEach((service, i) => {
             // gsap.to(image4, {translateY: distance, duration:0, ease: "none"} )
             // gsap.to(image5, {translateY: distance, duration:0, ease: "none"} )
             //gsap.from(text, {yPercent: -100} )
-            gsap.to(text, {translateY: distance} )
+            //gsap.to(text, {translateY: distance} )
             //gsap.to(image1, {translateY: distance} )
-            gsap.to(image2, {translateY: distance} )
+            //gsap.to(image2, {translateY: distance} )
             // gsap.to(image3, {translateY: distance} )
             // gsap.to(image4, {translateY: distance} )
             // gsap.to(image5, {translateY: distance} )
-        }
+        },
+        // onEnter: () => {
+        //     if (i == 1) $('.header').addClass('dark')
+        // },
+        // onEnter: () => {
+        //     if (i == 1) $('.header').addClass('dark')
+        // }
     })
 })
 // mm.add("(max-width: 768px)", () => {

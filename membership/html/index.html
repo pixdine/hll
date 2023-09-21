@@ -188,8 +188,8 @@
             <section class="key-visual">
                 <article class="key-visual__content key-visual__content--01">
                     <div class="key-visual__media">
-                        <!-- <video class="key-visual__video" autoplay muted ontimeupdate="beginMotion()"> -->
-                        <video class="key-visual__video" autoplay muted>
+                        <video class="key-visual__video" autoplay muted ontimeupdate="beginMotion()">
+                        <!-- <video class="key-visual__video" autoplay muted> -->
                             <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
                         </video>
                         <div class="key-visual__dimmed"></div>
@@ -255,13 +255,14 @@
                     </div>
                 </article>
             </section>
-            <section class="media-service">
-                <div class="scene-cover">
-                    <div class="scene-cover__container">
-                        <div class="scene-cover__title"><span class="motion-wrap direction-up"><span>지금 바로 만나보세요!</span></span></div>
-                        <h2 class="scene-cover__subtitle"><span class="motion-wrap direction-up"><span>허스트중앙의 다양한 미디어 서비스</span></span></h2>
-                    </div>
+            <div class="scene-cover">
+                <div class="scene-cover__container">
+                    <div class="scene-cover__title"><span class="motion-wrap direction-up"><span>지금 바로 만나보세요!</span></span></div>
+                    <h2 class="scene-cover__subtitle"><span class="motion-wrap direction-up"><span>허스트중앙의 다양한 미디어 서비스</span></span></h2>
                 </div>
+            </div>
+
+            <section class="media-service">
                 <div class="media-service__container">
                     <article class="media-service__content media-service__content--elle">
                         <div class="media-service__text">
@@ -373,13 +374,15 @@
                 </article>
                 </div>
             </section>
-            <section class="theme-service">
-                <div class="scene-cover">
-                    <div class="scene-cover__container">
-                        <div class="scene-cover__title"><span class="motion-wrap direction-up"><span>다채롭게 경험해보세요</span></span></div>
-                        <h2 class="scene-cover__subtitle"><span class="motion-wrap direction-up"><span>개인 취향에 맞춘 테마별 서비스</span></span></h2>
-                    </div>
+
+            <div class="scene-cover">
+                <div class="scene-cover__container">
+                    <div class="scene-cover__title"><span class="motion-wrap direction-up"><span>다채롭게 경험해보세요</span></span></div>
+                    <h2 class="scene-cover__subtitle"><span class="motion-wrap direction-up"><span>개인 취향에 맞춘 테마별 서비스</span></span></h2>
                 </div>
+            </div>
+
+            <section class="theme-service">
                 <div class="theme-service__container">
                     <article class="theme-service__content theme-service__content--elle-voice">
                         <div class="theme-service__text">
@@ -484,7 +487,7 @@
 <!-- js -->
 <script src="../resources/js/swiper.min.js"></script>
 <script src="../resources/js/ui.common.js"></script>
-<script src="../resources/js/lenis.min.js"></script>
+<script src="../resources/js/jquery.nicescroll.min.js"></script>
 <script src="../resources/js/main.js" async></script>
 </body>
 </html>

@@ -105,6 +105,8 @@ a:hover{text-decoration:none;}
 
 .tp_uline { color:var(--point); text-decoration:1px solid underline; text-underline-position: under; }
 
+.lh1 {line-height:1}
+
 
 /* button */
 button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#ccc; background-color:#ccc; color:#fff;}

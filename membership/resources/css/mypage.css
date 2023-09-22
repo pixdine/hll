@@ -417,7 +417,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .pointShop.mo { height:auto; flex-wrap:wrap; }
     .pointShop.mo .swiper-wrapper {}
     .pointShop.mo .swiper-slide { display:flex; margin-left:0; width: 100%; height:auto; flex-wrap: wrap;  flex-direction: row; justify-content: space-between}
-    .pointShop.mo .swiper-slide .atcbox {width:calc(50% - 6px); margin-bottom:24px; text-align:center}
+    .pointShop.mo .swiper-slide .atcbox {width:calc(50% - 6px); height:calc(50% - 24px); margin-bottom:24px; text-align:center}
     .pointShop.mo .swiper-slide .imgbox { width:100%; height:85.71%; padding: 7.41%; box-sizing:border-box}
     .pointShop.mo .atcbox .imgbox img { display:inline-block}
     .pointShop.mo .swiper-slide .price_p {font-size:14px; font-family:'Gotham'; font-weight:500; line-height:1; text-align:center; margin-top:14px }

@@ -387,11 +387,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btm_info_box li:first-child { margin-top:0}
 .btm_info_box li::before { content:''; position:absolute; left:0; top:7px; width:3px; height:3px; border-radius: 3px 3px; background-color:#ccc}
 
+/* 하단 안내 박스 > 연보라 */
 .btm_info_box02 { background:#FAF6FF; padding:40px; margin-top:180px }
 .btm_info_box02 .info_cont { text-align:center}
-.btm_info_box02 .info_tit { font-size:18px; font-weight:500; margin-bottom:16px}
-
-
+.btm_info_box02 .info_tit { font-size:18px; font-weight:500; margin-bottom:24px; line-height:1.5}
 
 /* title */
 .tit_wrap .tit{overflow:hidden;font-size:24px;font-weight:500;line-height:35px;color:#111;}
@@ -655,7 +654,6 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .pagination .btn_prev.disabled{background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 21L7 12L16 3' stroke='%23CCCCCC' stroke-width='2'/%3E%3C/svg%3E%0A");}
 .pagination .btn_next.disabled{background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 21L17 12L8 3' stroke='%23CCCCCC' stroke-width='2'/%3E%3C/svg%3E%0A");}
 
-
 /* board  */
 .board_st01 {border-top:2px solid #111}
 .board_st01 li { padding:28px 0; border-bottom: 1px solid #DBDBDB;}
@@ -699,7 +697,6 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .tbl_btm_area .tx_btn { display:flex; justify-content: space-between; width:100%}
 .tbl_btm_area .tx_btn .tx { color:#666}
 .tbl_btm_area .tx_btn .tx dt { font-size:18px; font-weight:500; color:#111; margin-bottom:8px}
-
 
 .no_list { position:relative; font-size:24px; text-align:center; color:#666; min-height:300px; border-width:2px 0 1px; border-style:solid; border-color:#111 none #DBDBDB none}
 .no_list p { position:absolute; top:50%; transform:translateY(-50%) ;width:100%; font-size:24px; text-align:center; color:#666;}
@@ -1062,7 +1059,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.btn_area.type02 { margin-top:40px}
 	.btn_area.type02 button {width:100%}
 	
-  .bc_space01 { margin-top:32px}
+    .bc_space01 { margin-top:32px}
 	.bc_space02 { margin-top:80px}
 	.bc_space03 { margin-top:40px !important}
 
@@ -1112,6 +1109,11 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.comm_error .err_comment01 { font-size:22px; margin:24px 20px 0}
 	.comm_error .err_comment02 { font-size:14px;margin:12px 20px 0}
 	.comm_error .err_comment01 span, .comm_error .err_comment02 span{ display:block}
+
+	.btm_info_box02 { padding:20px; margin-top:80px }
+	.btm_info_box02 span {display:block}
+	.btm_info_box02 .info_tit { font-size:14px;margin-bottom:16px}
+	 .btn.h36 { height:36px; font-size:14px; padding:0 20px}
 }
 
 @media (max-width:320px){

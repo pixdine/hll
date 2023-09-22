@@ -473,7 +473,6 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .btn_area.sns .btn {min-width: auto;}
     .btn_area.sns .btn span {font-size: 13px;}
 
-    .btn.h36 { height:36px; font-size:14px; padding:0 20px}
 
     .img_list {vertical-align:top; display:flex;justify-content: space-between }
     .img_list .atcbox {width:48.21%; margin:0 0 7.16% 0}

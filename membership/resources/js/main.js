@@ -20,59 +20,101 @@ ScrollTrigger.create({
 let initialized = false;
 
 keyvisualContents.forEach((content, i) => {
-  content.tl = gsap
-    .timeline({
-      scrollTrigger: {
-        start: `+=${i * 100}%`,
-        end: "+=100%",
-        onEnter: () => {
-          content.tl.timeScale(1).play();
+  if (i == 0) {
+    content.tl = gsap
+      .timeline({
+        scrollTrigger: {
+          start: `+=${i * 100}%`,
+          end: "+=100%",
         },
-        onLeaveBack: () => {
-          content.tl.reverse();
+      })
+      .to(
+        `.key-visual__content--0${i + 1} .key-visual__dimmed`,
+        { opacity: 0.6, duration: 0.3 },
+        -0.3
+      )
+      .from(`.key-visual__content--0${i + 1}`, i ? { autoAlpha: 0 } : {}, 0)
+      .from(
+        `.key-visual__content--0${
+          i + 1
+        } .key-visual__title .motion-wrap.direction-down > *`,
+        {
+          yPercent: 100,
+          duration: 2,
+          ease: "power4.inOut",
         },
-      },
-    })
-    .to(
-      `.key-visual__content--0${i + 1} .key-visual__dimmed`,
-      { opacity: 0.6, duration: 0.3 },
-      -0.3
-    )
-    .from(`.key-visual__content--0${i + 1}`, i ? { autoAlpha: 0 } : {}, 0)
-    .from(
-      `.key-visual__content--0${
-        i + 1
-      } .key-visual__title .motion-wrap.direction-down > *`,
-      {
-        yPercent: 100,
-        duration: 2,
-        ease: "power4.inOut",
-      },
-      0
-    )
-    .from(
-      `.key-visual__content--0${i + 1} .key-visual__description span`,
-      {
-        yPercent: 100,
-        duration: 2,
-        ease: "power4.inOut",
-      },
-      0
-    )
-    .from(
-      `.key-visual__content--0${i + 1} .key-visual__link`,
-      { autoAlpha: 0, duration: 2, ease: "power4.inOut" },
-      0
-    );
+        0
+      )
+      .from(
+        `.key-visual__content--0${i + 1} .key-visual__description span`,
+        {
+          yPercent: 100,
+          duration: 2,
+          ease: "power4.inOut",
+        },
+        0
+      )
+      .from(
+        `.key-visual__content--0${i + 1} .key-visual__link`,
+        { autoAlpha: 0, duration: 2, ease: "power4.inOut" },
+        0
+      );
+  } else {
+    content.tl = gsap
+      .timeline({
+        scrollTrigger: {
+          start: `+=${i * 100}%`,
+          end: "+=100%",
+          onEnter: () => {
+            content.tl.timeScale(1).play();
+          },
+          onLeaveBack: () => {
+            content.tl.reverse();
+          },
+        },
+      })
+      .to(
+        `.key-visual__content--0${i + 1} .key-visual__dimmed`,
+        { opacity: 0.6, duration: 0.3 },
+        -0.3
+      )
+      .from(`.key-visual__content--0${i + 1}`, i ? { autoAlpha: 0 } : {}, 0)
+      .from(
+        `.key-visual__content--0${
+          i + 1
+        } .key-visual__title .motion-wrap.direction-down > *`,
+        {
+          yPercent: 100,
+          duration: 2,
+          ease: "power4.inOut",
+        },
+        0
+      )
+      .from(
+        `.key-visual__content--0${i + 1} .key-visual__description span`,
+        {
+          yPercent: 100,
+          duration: 2,
+          ease: "power4.inOut",
+        },
+        0
+      )
+      .from(
+        `.key-visual__content--0${i + 1} .key-visual__link`,
+        { autoAlpha: 0, duration: 2, ease: "power4.inOut" },
+        0
+      );
+  }
 });
 
 gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx
 
 const beginMotion = (e) => {
   if (keyvisualVideo.currentTime > 1.9 && !initialized) {
-    setTimeout(() => {
-      $(".key-visual__content--01").addClass("active");
-    }, 700);
+    keyvisualContents[0].tl.timeScale(1).play();
+    // setTimeout(() => {
+    //   $(".key-visual__content--01").addClass("active");
+    // }, 700);
     initialized = true;
   }
 };
@@ -119,6 +161,7 @@ const mediaService = document.querySelector(".media-service");
 //     pinSpacing: false
 // });
 
+// 매체 마스크 이미지 영역
 window.addEventListener("scroll", () => {
   const windowHeight = window.innerHeight;
   const ms = document.querySelector(".media-service");
@@ -129,26 +172,26 @@ window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
   let msOffsetY = ms.getBoundingClientRect().top;
   console.log(scrollTop, msOffsetY);
+  // 처음 이미지가 올라오는 부분
   if (msOffsetY - windowHeight / 2 < 0) {
     ms.classList.add("active");
   } else {
     ms.classList.remove("active");
   }
+
+  // 스크롤이 시작 될 때 각 영역 위치 변경
   if (msOffsetY < 0) {
-    textLayer.forEach((item) => {
+    textLayer.forEach((item, index) => {
       item.style.marginTop = -msOffsetY + "px";
     });
     msImg2.forEach((item) => {
-      console.log("item");
-      item.style.marginTop = -(msOffsetY * 1.8) + "px";
+      item.style.marginTop = -(msOffsetY * 1.66) + "px";
     });
     msImg3.forEach((item) => {
-      console.log("item");
       item.style.marginBottom = msOffsetY / 2 + "px";
     });
     msImg5.forEach((item) => {
-      console.log("item");
-      item.style.marginBottom = msOffsetY / 1.5 + "px";
+      item.style.marginBottom = msOffsetY / 2 + "px";
     });
   }
 });

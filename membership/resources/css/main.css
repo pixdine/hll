@@ -66,22 +66,22 @@
 .media-service__content--cosmopolitan .media-service__text-wrap { top: -100vh;}
 .media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
 .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
-.media-service .ms-img1 {position: absolute; bottom: 284px; right: 180px;}
-.media-service .ms-img2 {position: absolute; top: -130px; width: 100%; left: 50%; z-index: 9; margin-left: -588px; transform: translateY(calc(-100vh - 368px)); transition: margin-top 0.2s ease; pointer-events: none}
+.media-service .ms-img1 {position: absolute; bottom: 284px; right: 180px; opacity: 1;}
+.media-service .ms-img2 {position: absolute; top: -130px; width: 100%; left: 50%; z-index: 9; margin-left: -588px;}
 .media-service .ms-img2 img {display: block;}
 .media-service .ms-img2 img + img {position: relative; top: 100vh;}
 .media-service__content--cosmopolitan .ms-img2 {top: calc(-100vh - 130px);}
 .media-service__content--bazaar .ms-img2 {top: calc(-200vh - 130px);}
 .media-service__content--esquire .ms-img2 {top: calc(-300vh - 130px);}
-.media-service .ms-img3 {position: absolute; bottom: 80px; width: 588px; height: 368px; left: 80px; transition: margin-top 0.5s ease; pointer-events: none;}
+.media-service .ms-img3 {position: absolute; bottom: 80px; width: 588px; height: 368px; left: 80px; transition: margin-top 0.5s ease;}
 .media-service .ms-img3 img {position: absolute; top: 0; left: 0;}
 .media-service .ms-img3 img:nth-of-type(2) {top: auto; bottom: -100vh;}
 .media-service .ms-img3 img:nth-of-type(3) {top: auto; bottom: -200vh;}
 .media-service__content--cosmopolitan .ms-img3 {bottom: calc(100vh + 80px);}
 .media-service__content--bazaar .ms-img3 {bottom: calc(200vh + 80px);}
 .media-service__content--esquire .ms-img3 {bottom: calc(300vh + 80px);}
-.media-service .ms-img4 {position: absolute; bottom: 368px; left: 140px; transition: margin-top 0.2s ease; pointer-events: none;}
-.media-service .ms-img5 {position: absolute; bottom: 164px; right: 80px; width: 180px; height: 240px; transition: margin-top 0.5s ease;}
+.media-service .ms-img4 {position: absolute; bottom: 368px; left: 140px; transition: margin-top 0.2s ease;}
+.media-service .ms-img5 {position: absolute; bottom: 164px; right: 80px; width: 180px; height: 240px;}
 .media-service .ms-img5 img {position: absolute; top: 0; right: 0;}
 .media-service .ms-img5 img:nth-of-type(2) {top: auto; bottom: -100vh;}
 .media-service .ms-img5 img:nth-of-type(3) {top: auto; bottom: -200vh;}

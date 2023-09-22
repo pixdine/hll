@@ -120,14 +120,20 @@ const mediaService = document.querySelector(".media-service");
 // });
 
 window.addEventListener("scroll", () => {
+  const windowHeight = window.innerHeight;
+  const ms = document.querySelector(".media-service");
   const textLayer = document.querySelectorAll(".media-service__text-wrap");
   const msImg2 = document.querySelectorAll(".ms-img2");
   const msImg3 = document.querySelectorAll(".ms-img3");
   const msImg5 = document.querySelectorAll(".ms-img5");
   let scrollTop = window.scrollY;
-  const ms = document.querySelector(".media-service");
   let msOffsetY = ms.getBoundingClientRect().top;
   console.log(scrollTop, msOffsetY);
+  if (msOffsetY - windowHeight / 2 < 0) {
+    ms.classList.add("active");
+  } else {
+    ms.classList.remove("active");
+  }
   if (msOffsetY < 0) {
     textLayer.forEach((item) => {
       item.style.marginTop = -msOffsetY + "px";

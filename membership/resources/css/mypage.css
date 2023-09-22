@@ -295,7 +295,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 .important { font-size:12px; line-height:1.6; color:#FF0000; margin-top:8px; padding-left:28px}
 
-.inputbox.search .inp {width:335                             px}
+.inputbox.search .inp {width:335px}
 
 /* 이벤트 모아보기 All*/
 .other_go { padding-bottom:85px}

@@ -215,6 +215,7 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 
 .main-page .header.dark .header_gnb li a {color: #111;}
 .main-page .header.dark .header_top .logo {background: url(../images/logo_b.svg);}
+.main-page .header.dark .header_wrap .header_util_area button {color: #111;}
 
 
 /* container */

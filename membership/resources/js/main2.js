@@ -119,7 +119,7 @@ const mediaService = document.querySelector(".media-service");
 //     pinSpacing: false
 // });
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   const textLayer = document.querySelectorAll(".media-service__text-wrap");
   const msImg2 = document.querySelectorAll(".ms-img2");
   let scrollTop = window.scrollY;

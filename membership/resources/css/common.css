@@ -344,7 +344,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .tarea.htype02 { height:200px; background:#fff}
 .tarea::placeholder { color:#999; font-size:16px}
 .input_type01 .tarea {margin-top:16px}
-
+.tarea:focus-within {border-color:#111; background:#fff}
+.inputbox.error .tarea { border-color:#FF0000}
 /* input내 컨텐츠 */
 .inp_btm { display:flex; flex-wrap:nowrap; justify-content: space-between; }
 .input_type01 .inp_btm{margin-top:32px;}

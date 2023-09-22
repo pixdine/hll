@@ -171,7 +171,7 @@ window.addEventListener("scroll", () => {
   const msImg5 = document.querySelectorAll(".ms-img5");
   let scrollTop = window.scrollY;
   let msOffsetY = ms.getBoundingClientRect().top;
-  console.log(scrollTop, msOffsetY);
+  //console.log(scrollTop, msOffsetY);
   // 처음 이미지가 올라오는 부분
   if (msOffsetY - windowHeight / 2 < 0) {
     ms.classList.add("active");

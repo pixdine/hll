@@ -18,7 +18,7 @@
 .key-visual__container {left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;}
 .key-visual__mask {height: 100vh;}
 .key-visual__video {width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover;}
-.key-visual__content {height: 100vh; position: relative; padding: 0 40px;}
+.key-visual__content {height: 100vh; position: relative; padding: 0 40px; overflow: hidden;}
 .key-visual__content--01 .key-visual__media .key-visual__dimmed {position: absolute; left: 0; top: 0; width: 100%; height: 100%; content: ""; background-color: #111; opacity: 0;}
 .key-visual__content--02, .key-visual__content--03 {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #111;}
 .key-visual__media {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
@@ -72,6 +72,7 @@
 }
 
 .media-service {opacity: 0; transition: 0.5s;}
+.is_mobile .media-service {opacity: 1;}
 .media-service.active {opacity: 1;}
 
 .media-service__container {position: relative; height: 400vh;}
@@ -119,6 +120,46 @@
 
 @media screen and (max-width: 768px) {
     .media-service__text {top: 100px; left: 50%; transform: translate(-50%, 0);}
+
+    .media-service__container {height: auto;}
+
+    .media-service__container .article-wrap {overflow: hidden; height: 100vh;}
+    .media-service__content {padding: 100px 0 0; position: static;}
+    .media-service__text-wrap {position: static; height: auto;}
+    
+    .media-service__content--cosmopolitan .media-service__text-wrap {top: 0;}
+    .media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
+    .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
+    .media-service .ms-img1 {position: absolute; bottom: 284px; right: 180px;}
+    .media-service .ms-img1 img {height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.1s; overflow: hidden; transform: translateY(100%);}
+    .media-service .ms-img2 {position: absolute; top: -130px; width: 100%; left: 50%; z-index: 9; margin-left: -588px;}
+    .media-service .ms-img2 img {display: block; height: 0; opacity: 0; transition: 0.7s ease; overflow: hidden; transform: translateY(100%);}
+    .media-service .ms-img2 img + img {position: relative; top: calc(-100vh - 736px);}
+    .media-service__content--cosmopolitan .ms-img2 {top: calc(-100vh - 130px);}
+    .media-service__content--bazaar .ms-img2 {top: calc(-200vh - 130px);}
+    .media-service__content--esquire .ms-img2 {top: calc(-300vh - 130px);}
+    .media-service .ms-img3 {position: absolute; bottom: 80px; width: 588px; height: 368px; left: 80px;}
+    .media-service .ms-img3 img {position: absolute; top: 0; left: 0; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.2s; overflow: hidden; transform: translateY(100%);}
+    .media-service .ms-img3 img:nth-of-type(2) {top: auto; bottom: -100vh;}
+    .media-service .ms-img3 img:nth-of-type(3) {top: auto; bottom: -200vh;}
+    .media-service__content--cosmopolitan .ms-img3 {bottom: calc(100vh + 80px);}
+    .media-service__content--bazaar .ms-img3 {bottom: calc(200vh + 80px);}
+    .media-service__content--esquire .ms-img3 {bottom: calc(300vh + 80px);}
+    .media-service .ms-img4 {position: absolute; bottom: 368px; left: 140px; width: 180px; height: 240px;}
+    .media-service .ms-img4 img {position: absolute; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.3s; overflow: hidden; transform: translateY(100%);}
+    .media-service .ms-img5 {position: absolute; bottom: 164px; right: 80px; width: 180px; height: 240px;}
+    .media-service .ms-img5 img {position: absolute; top: 0; right: 0; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.4s; overflow: hidden; transform: translateY(100%);}
+    .media-service .ms-img5 img:nth-of-type(2) {top: auto; bottom: -100vh;}
+    .media-service .ms-img5 img:nth-of-type(3) {top: auto; bottom: -200vh;}
+    .media-service__content--cosmopolitan .ms-img5 {bottom: calc(100vh + 164px);}
+    .media-service__content--bazaar .ms-img5 {bottom: calc(200vh + 164px);}
+    .media-service__content--esquire .ms-img5 {bottom: calc(300vh + 164px);}
+    .media-service.active .ms-img1 img {height: auto; opacity: 1; transform: translateY(0);}
+    .media-service.active .ms-img2 img {height: auto; opacity: 1; transform: translateY(0);}
+    .media-service.active .ms-img3 img {height: auto; opacity: 1; transform: translateY(0);}
+    .media-service.active .ms-img4 img {height: auto; opacity: 1; transform: translateY(0);}
+    .media-service.active .ms-img5 img {height: auto; opacity: 1; transform: translateY(0);}
+    
 }
 
 .media-service__subtitle {margin-top: 43px;}

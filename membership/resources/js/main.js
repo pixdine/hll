@@ -7,6 +7,8 @@ $("html").niceScroll({
 
 gsap.registerPlugin(ScrollTrigger);
 
+const winInWidth = window.innerWidth;
+
 const keyvisualVideo = document.querySelector(".key-visual__video");
 const keyvisualContents = gsap.utils.toArray(".key-visual__content");
 
@@ -61,6 +63,13 @@ keyvisualContents.forEach((content, i) => {
         0
       );
   } else {
+    let scrollImg = content.querySelectorAll(".scroll-el img");
+    let imgW = 0;
+    scrollImg.forEach((item, i) => {
+      imgW += item.clientWidth + 12;
+      console.log(i, imgW);
+    });
+
     content.tl = gsap
       .timeline({
         scrollTrigger: {
@@ -104,8 +113,18 @@ keyvisualContents.forEach((content, i) => {
         `.key-visual__content--0${i + 1} .key-visual__link`,
         { autoAlpha: 0, duration: 2, ease: "power4.inOut" },
         0
+      )
+      .fromTo(
+        ".scroll-el",
+        {
+          x: +winInWidth,
+        },
+        {
+          x: -(imgW - winInWidth),
+        }
       );
   }
+  console.log(winInWidth, outerWidth);
 });
 
 gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx

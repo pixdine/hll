@@ -27,6 +27,7 @@ $(document).ready(function(){
     articleSlidePc();
     articleSlideMo()
     colslideAtcList();
+	top3AtcList();
 
     // 지도 상세 설명 더보기 토글
     $('.comment_box').commentToggle();
@@ -424,32 +425,62 @@ function scrollAtcList(){
 	if(scrollAtcList.length <= 0) return;
 
 	function initSwiper() {
-		//768px 보다 클 때 swiper 실행
-		if(ww > 768 && mySwiper == undefined){
-			scrollAtcList.each(function(){//각각을 스와이프 적용
+		scrollAtcList.each(function(){//각각을 스와이프 적용
+			mySwiper = new Swiper(this, {
+				slidesPerView: 1.14,//초기값 설정 모바일값 먼저
+				spaceBetween: 12,
+				loop: false,
+				autoplay: false,
+				speed: 1000,
+				breakpoints: {
+					769: {//브라우저가 768보다 클 때
+						slidesPerView: 2,
+						spaceBetween: 20,
+						scrollbar: {
+							el: ".swiper-scrollbar",
+						}
+					},
+					1024: {//브라우저가 1024보다 클 때
+						slidesPerView: 3,
+						spaceBetween: 24,
+						scrollbar: {
+							el: ".swiper-scrollbar",
+						}
+					}
+				}
+			});
+		});
+	}
+
+	initSwiper();
+
+	$(window).on('resize', function () {
+		ww = window.innerWidth;
+		initSwiper();
+	});
+}
+
+//금주의 인기기사(TOP3)
+function top3AtcList(){
+	var top3AtcList = $('.top3_atc_list');
+	var ww = window.innerWidth;
+	var mySwiper = undefined;
+	if(top3AtcList.length <= 0) return;
+
+	function initSwiper() {
+		//768px 보다 적을 때 swiper 실행
+		if(ww <= 768 && mySwiper == undefined){
+			top3AtcList.each(function(){//각각을 스와이프 적용
 				mySwiper = new Swiper(this, {
-					slidesPerView: 3,
-					spaceBetween: 24,
+					slidesPerView: 1.14,
+					spaceBetween: 12,
 					loop: false,
 					autoplay: false,
 					speed: 1000,
-					scrollbar: {
-						el: ".swiper-scrollbar",
-					},
-					breakpoints: {
-						1023: {
-							slidesPerView: 3,
-							spaceBetween: 24,
-						},
-						769: {
-							slidesPerView: 2,
-							spaceBetween: 20,
-						}
-					}
 				});
 			});
-		} else if(ww <= 768 && mySwiper != undefined){
-			scrollAtcList.each(function(){
+		} else if(ww > 768 && mySwiper != undefined){
+			top3AtcList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});
 			mySwiper = undefined;

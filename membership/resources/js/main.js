@@ -180,53 +180,55 @@ const mediaService = document.querySelector(".media-service");
 //     pin: true,
 //     pinSpacing: false
 // });
+// 화면이 모바일 사이즈가 아닐 때만 GSAP 애니메이션 적용
+if ($("body").hasClass("is_pc")) {
+  // 매체 마스크 이미지 영역
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+    const windowHeight = window.innerHeight;
+    const ms = document.querySelector(".media-service");
+    const msCont = document.querySelectorAll(".media-service__content");
+    const textLayer = document.querySelectorAll(".media-service__text-wrap");
+    const msImg2 = document.querySelectorAll(".ms-img2");
+    const msImg3 = document.querySelectorAll(".ms-img3");
+    const msImg5 = document.querySelectorAll(".ms-img5");
+    let scrollTop = window.scrollY;
+    let msOffsetY = ms.getBoundingClientRect().top;
+    //console.log(scrollTop, msOffsetY);
+    // 처음 이미지가 올라오는 부분
+    if (msOffsetY - windowHeight / 2 < 0) {
+      ms.classList.add("active");
+    }
 
-// 매체 마스크 이미지 영역
-window.addEventListener("scroll", () => {
-  const header = document.querySelector(".header");
-  const windowHeight = window.innerHeight;
-  const ms = document.querySelector(".media-service");
-  const msCont = document.querySelectorAll(".media-service__content");
-  const textLayer = document.querySelectorAll(".media-service__text-wrap");
-  const msImg2 = document.querySelectorAll(".ms-img2");
-  const msImg3 = document.querySelectorAll(".ms-img3");
-  const msImg5 = document.querySelectorAll(".ms-img5");
-  let scrollTop = window.scrollY;
-  let msOffsetY = ms.getBoundingClientRect().top;
-  //console.log(scrollTop, msOffsetY);
-  // 처음 이미지가 올라오는 부분
-  if (msOffsetY - windowHeight / 2 < 0) {
-    ms.classList.add("active");
-  }
+    let msContArr = [];
 
-  let msContArr = [];
-
-  // 스크롤이 시작 될 때 각 영역 위치 변경
-  if (msOffsetY < 0) {
-    textLayer.forEach((item) => {
-      item.style.marginTop = -msOffsetY + "px";
-    });
-    msImg2.forEach((item) => {
-      item.style.marginTop = -(msOffsetY * 1.8) + "px";
-    });
-    msImg3.forEach((item) => {
-      item.style.marginBottom = msOffsetY / 2 + "px";
-    });
-    msImg5.forEach((item) => {
-      item.style.marginBottom = msOffsetY / 2 + "px";
-    });
-    msCont.forEach((item, i) => {
-      let msContY = [];
-      msContArr[i] = item;
-      msContY[i] = msContArr[i].getBoundingClientRect().top;
-      if (msContY[0] < 0 && msOffsetY + windowHeight > 0) {
-        header.classList.add("dark");
-      } else if (msContY[1] < 0 && msContY[1] + windowHeight > 0) {
-        header.classList.remove("dark");
-      }
-    });
-  }
-});
+    // 스크롤이 시작 될 때 각 영역 위치 변경
+    if (msOffsetY < 0) {
+      textLayer.forEach((item) => {
+        item.style.marginTop = -msOffsetY + "px";
+      });
+      msImg2.forEach((item) => {
+        item.style.marginTop = -(msOffsetY * 1.8) + "px";
+      });
+      msImg3.forEach((item) => {
+        item.style.marginBottom = msOffsetY / 2 + "px";
+      });
+      msImg5.forEach((item) => {
+        item.style.marginBottom = msOffsetY / 2 + "px";
+      });
+      msCont.forEach((item, i) => {
+        let msContY = [];
+        msContArr[i] = item;
+        msContY[i] = msContArr[i].getBoundingClientRect().top;
+        if (msContY[0] < 0 && msOffsetY + windowHeight > 0) {
+          header.classList.add("dark");
+        } else if (msContY[1] < 0 && msContY[1] + windowHeight > 0) {
+          header.classList.remove("dark");
+        }
+      });
+    }
+  });
+}
 
 const mediaServices = gsap.utils.toArray(".media-service__content");
 

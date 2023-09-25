@@ -177,8 +177,6 @@ window.addEventListener("scroll", () => {
   // 처음 이미지가 올라오는 부분
   if (msOffsetY - windowHeight / 2 < 0) {
     ms.classList.add("active");
-  } else {
-    ms.classList.remove("active");
   }
 
   let msContArr = [];
@@ -189,7 +187,7 @@ window.addEventListener("scroll", () => {
       item.style.marginTop = -msOffsetY + "px";
     });
     msImg2.forEach((item) => {
-      item.style.marginTop = -(msOffsetY * 1.5) + "px";
+      item.style.marginTop = -(msOffsetY * 1.8) + "px";
     });
     msImg3.forEach((item) => {
       item.style.marginBottom = msOffsetY / 2 + "px";

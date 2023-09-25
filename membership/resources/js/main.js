@@ -2,6 +2,7 @@
 $("html").niceScroll({
   scrollspeed: 20,
   mousescrollstep: 30,
+  horizrailenabled: false,
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -333,4 +334,33 @@ themeServices.forEach((service, i) => {
       },
       0
     );
+});
+
+$.fn.floatingMenu = function () {
+  var fmBody = this;
+  var fmSection = fmBody.find(".fm-section");
+  var fmBtn = fmBody.find(".btn-f");
+  fmBtn.on("click", function () {
+    var chkCondition = $(this).hasClass("active");
+    if (!chkCondition) {
+      $(this)
+        .addClass("active")
+        .attr("title", "플로팅메뉴 닫기")
+        .children()
+        .text("닫기");
+      fmSection.stop().slideDown(200);
+    } else {
+      $(this)
+        .removeClass("active")
+        .attr("title", "플로팅메뉴 열기")
+        .children()
+        .text("열기");
+      fmSection.stop().slideUp(200);
+    }
+  });
+};
+
+$(document).ready(function () {
+  // 플로팅메뉴
+  $(".floating-menu").floatingMenu();
 });

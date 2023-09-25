@@ -179,3 +179,21 @@
     .scene-cover__subtitle {font-size: 16px;}
 }
    
+.floating-menu {position: fixed; bottom: 80px; right: 80px; z-index: 50;}
+.floating-menu .fm-inner {position: relative;}
+.floating-menu .fm-section {display: none; position: absolute; right: 0; bottom: 80px; background: #fff; border: 1px solid #999;}
+.floating-menu .fm-item {display: flex; align-items: center; width: 282px; height: 48px; padding-left: 32px;}
+.floating-menu .fm-link {color: #999; font-weight: 500; font-size: 18px; white-space: nowrap;}
+.floating-menu .fm-link:hover {color: #111; font-weight: 700;}
+.floating-menu .btn-f {position: relative; width: 68px; height: 68px; background: #111; filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.16)); border-radius: 50%;}
+.floating-menu .btn-f:before {content: ''; position: absolute; top: 50%; left: 50%; width: 24px; height: 24px; background: url(../images/main/fm-more-close.png) 0/100%; transform: translate(-50%, -50%) rotate(0deg); transition: 0.5s;}
+.floating-menu .btn-f.active:before {transform: translate(-50%, -50%) rotate(315deg);}
+
+@media screen and (max-width: 768px) {
+    .floating-menu {bottom: 20px; right: 20px;}
+    .floating-menu .fm-inner {position: relative;}
+    .floating-menu .fm-section {bottom: 64px;}
+    .floating-menu .fm-item {width: 161px; height: 36px; padding-left: 16px;}
+    .floating-menu .fm-link {font-size: 14px;}
+    .floating-menu .btn-f {width: 52px; height: 52px; filter: drop-shadow(1px 4px 6px rgba(0, 0, 0, 0.16));}
+}

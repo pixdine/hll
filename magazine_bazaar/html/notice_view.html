@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>NOTICE 공지 │하퍼스 바자 코리아 (Harper's BAZAAR Korea)</title>
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://www.harpersbazaar.co.kr/event/notice">
+	<meta property="og:url" content="https://www.harpersbazaar.co.kr/event/notice/idx">
 	<meta property="og:title" content="공지 │하퍼스 바자 코리아 (Harper's BAZAAR Korea)  │패션 매거진, 패션 잡지, 화보맛집">
 	<meta property="og:image" content="">
 	<meta property="og:description" content="이벤트와 관련된 정보를 제공합니다" />
@@ -15,6 +15,7 @@
 	<!-- css, Jquery -->
 	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
 	<link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /><!-- D: 상세에서만 해당 css 로드합니다. -->
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
@@ -28,13 +29,14 @@
 
 		<div id="wrap" class="wrap">
 			<!-- header -->
-			<header id="header" class="header">
+			<header id="header" class="header"><!-- D: 기사상세, 이벤트 상세일 경우 view 클래스 추가 -->
 				<!-- header_wrap -->
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
-							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1>
+							<!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
 							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
 					</div>
@@ -57,7 +59,7 @@
 									<a href="#">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
 						</div>
 					</div>
@@ -69,13 +71,12 @@
 								<!-- 브레드크럼 -->
 								<div class="breadcrumb">
 									<a href="#" class="home">HOME</a>
-									<a href="#" class="cate_dep">FASHION</a>
-									<a href="#" class="cate_dep">패션 뉴스</a>
+									<a href="#" class="cate_dep">NOTICE</a>
 								</div>
 								<!-- //브레드크럼 -->
 								<!-- 기사 타이틀 -->
 								<div class="txtbox">
-									<p class="tit"> 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션</p>
+									<p class="tit"> 업사이클링 신진 아티스트 발굴 프로젝트 &lt;Re, Think&gt;</p>
 								</div>
 								<!-- //기사 타이틀 -->
 								<!-- 스크랩, 공유하기 -->
@@ -281,158 +282,54 @@
 
 			<!-- container -->
 			<div id="container" class="container">
-				<div id="content" class="content sub">
-					<div class="event_wrap">
-						<!-- 페이지 타이틀 -->
-						<div class="heading_wrap eng">
-							<div class="heading_area">
-								<h2 class="tit">EVENT</h2>
-							</div>
-						</div>
-						<!-- //페이지 타이틀 -->
-
-						<div class="event_cont">
-							<div class="cont_inner">
-								<!-- 탭메뉴 -->
-								<div class="tab_menu type04">
-									<ul>
-										<li><a href="./event_list.html">ONGOING EVENT</a></li>
-										<li class="on"><a href="./event_list_winner.html">NOTICE</a></li><!-- D: 선택 시 on 클래스 추가 -->
-									</ul>
-								</div>
-								<!-- //탭메뉴 -->
-
-								<div class="list_top">
-									<div class="total">총 <em class="count">72</em>건</div>
-								</div>
-
-								<!-- 당첨자발표 리스트 -->
-								<div class="board_wrap">
-									<!-- 리스트 -->
-									<div class="board_list ul_tbl_box">
-										<ul class="ul_tbl">
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>10</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] &lt;Re, Think&gt; 상금 1천만 원의 주인공에게 투표하세요!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>9</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 업사이클링 신진 아티스트 발굴 프로젝트 &lt;Re, Think&gt;</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>8</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 2022 베스트 커버를 뽑아주세요!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>7</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 기사 속 숨어있는 스탬프를 찾아라!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>6</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 축! 바자 26주년 기념! 바자가 사랑하는 26가지 선물을 드리는 &lt;Gift Shop&gt; 이벤트에 참여해 주신 모든 분들께 감사드리며, 당첨자 명단을 공개합니다!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>5</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 이 옷의 새 주인을 찾습니다!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>4</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 슬지생 백회잔치에 초대합니다!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>3</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] 바자 예술 산책 정식 오픈 기념 “선물 스탬프를 찾아라!”</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>2</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] &lt;바자&gt;는 행복했어요. Special Thanks to All</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-											<li class="ul_tr">
-												<div class="ul_td num">
-													<span>1</span>
-												</div>
-												<div class="ul_td tit">
-													<a href="#">[당첨자발표] &lt;꽃보다바자&gt; AR필터로 인생샷 찍고 선물 받자!</a>
-												</div>
-												<div class="ul_td datebox">
-													<span>2023.07.28</span>
-												</div>
-											</li>
-										</ul>
+				<div id="content" class="content">
+					<div class="atc_wrap event_detail_wrap">
+						<div class="cont_inner">
+							<!-- 상세 > header -->
+							<div class="atc_header">
+								<div class="atc_header_info">
+									<div class="txt_category">NOTICE</div>
+									<h2 class="tit_article">업사이클링 신진 아티스트 발굴 프로젝트 &lt;Re, Think&gt;</h2>
+									<div class="txt_date">
+										<div class="item"><span>기간</span><em>2023.04.03 - 2023.09.30</em></div>
+										<div class="item"><span>당첨자 발표</span><em>2023.10.15</em></div>
 									</div>
-									<!-- //리스트 -->
-
-									<!-- 더보기 -->
-									<div class="btn_more_wrap type1">
-										<button type="button" class="btn more"><span>더보기</span></button>
-									</div>
-									<!-- //더보기 -->
 								</div>
-								<!-- //당첨자발표 리스트 -->
 							</div>
+							<!--// 상세 > header -->
+
+							<!-- 상세 > body -->
+							<div class="atc_body">
+								<div class="atc_body_cont">
+									<p>&lt;하퍼스 바자&gt; X 록시땅의 업사이클링 디자인 공모전 &lt;Re, Think&gt; 독자 투표 &amp; 응원 댓글 이벤트에 참여해 주신 모든 분들께 감사드립니다. 많은 분들께서 선정 6팀을 위한 따뜻한 응원과 격려를 보내주심에 따라 아래와 같이 당첨자(닉네임)를 선별하였습니다.</p>
+									<p>당첨자 분들께서는 ~8월 4일 (금) 까지 아래의 당첨자 정보 &nbsp;입력 링크를 통해 개인 정보 작성을 부탁드립니다. (해당 기간 동안 미 작성 &amp; 제출 시, 당첨 무효)</p>
+									<p>&nbsp;</p>
+									<p>* 당첨자 발표</p>
+									<p>🎁 경품 : 록시땅 버베나 오드 뚜왈렛 (20명)</p>
+								</div>
+							</div>
+							<!--// 상세 > body -->
+
+							<!-- 하단 박스영역 -->
+							<div class="noti_info_box">
+								<div class="box_inner">
+									<div class="txt_box">
+										<p>이벤트에 응모해 주신 모든 분들께 감사드립니다.</p>
+										<p>관련 문의사항은 통합멤버십 / 고객센터 내 <strong>FAQ</strong> 혹은 <strong>1:1 문의</strong>로 문의글을 남겨주세요.</p>
+									</div>
+									<div class="btn_group">
+										<a href="#" class="btn bctype2" target="_blank"><span>FAQ</span></a>
+										<a href="#" class="btn bctype2" target="_blank"><span>1:1 문의</span></a>
+									</div>
+								</div>
+							</div>
+							<!-- //하단 박스영역 -->
+
+							<!-- 목록 버튼영역 -->
+							<div class="btn_list_wrap">
+								<a href="#" class="btn bctype1"><span>목록</span></a>
+							</div>
+							<!-- //목록 버튼영역 -->
 						</div>
 					</div>
 				</div>
@@ -500,9 +397,55 @@
 		</div>
 	</div>
 
+	<!-- 알럿2 -->
+	<div class="popup_alert" data-alert="alert_1">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">클립보드에 복사되었습니다.</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //알럿2 -->
+
+	<!-- 팝업 : 퀴즈 정답제출 알럿 -->
+	<div class="popup_alert" data-alert="quiz_alert">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">정답 제출이 완료되었습니다.<br>정답을 확인하시겠어요?</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype2" data-alert-close="quiz_alert"><span>취소</span></button>
+					<button type="button" class="btn bctype1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="quiz_alert"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 퀴즈 정답제출 알럿 -->
+
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
 	<!-- //js -->
+
+	<script>
+		currentPage = 'view';
+
+		$(document).ready(function () {
+			progress_bar(); //D: 상세페이지 프로그래스바
+		});
+	</script>
 </body>
+
 </html>

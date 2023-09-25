@@ -120,8 +120,8 @@
 /* 3단 모듈 (금주의 인기 기사) */
 .top3_atc_wrap{margin-bottom:180px;}
 .top3_atc_wrap .tit_wrap{margin-bottom:20px;}
-.top3_atc_list ul{font-size:0;}
-.top3_atc_list li{display:inline-block;width:calc(33.333% - 16px);margin-left:24px;vertical-align:top;}
+.top3_atc_list{margin:0 -12px;}
+.top3_atc_list li{width:33.333%;padding:0 12px;}
 .top3_atc_list li .num{margin-bottom:10px;font-family:Didot;font-size:56px;line-height:72px;color:#111;}
 .top3_atc_list li:first-of-type{margin-left:0;}
 .top3_atc_list li .imgbox{padding-top:133.334%;}
@@ -497,20 +497,15 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.scroll_atc_wrap{margin-bottom:80px;padding:60px 0;}
 	.scroll_atc_wrap .tit_wrap{margin-bottom:32px;}
 	.scroll_atc_wrap .hashtag{margin-top:6px;font-size:14px;line-height:20px;}
-
-	.scroll_atc_list ul{display:block;width:100%;overflow-x:auto;margin:0 -20px;padding:0 20px;font-size:0;white-space:nowrap;}
-	.scroll_atc_list ul::-webkit-scrollbar{display:none;}
-	.scroll_atc_list li{display:inline-block;width:87.165%;margin-right:12px;vertical-align:top;}
+	.scroll_atc_list li{width:87.165%;margin-right:12px;}
 	.scroll_atc_list li:last-child{margin-right:0;}
 	.scroll_atc_list li .imgbox{height:0;padding-top:62.672%;}
 	.scroll_atc_list .control{display:none;}
 
 	.top3_atc_wrap{margin-bottom:80px;}
 	.top3_atc_wrap .tit_wrap{margin-bottom:12px;}
-	.top3_atc_list{margin:0 -20px;}
-	.top3_atc_list ul{overflow:hidden;overflow-x:auto;display:block;width:100%;padding:0 20px;font-size:0;white-space:nowrap;}
-	.top3_atc_list ul::-webkit-scrollbar{display:none;}
-	.top3_atc_list li{overflow:hidden;width:87.165%;margin-left:12px;}
+	.top3_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
+	.top3_atc_list li{overflow:hidden;width:87.165%;padding:0;}
 	.top3_atc_list li .num{margin-bottom:8px;font-size:40px;line-height:52px;}
 	.top3_atc_list li .imgbox{padding-top:100%;}
 	.top3_atc_list li .imgbox img.pc{display:none;}

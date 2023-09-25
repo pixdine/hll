@@ -1,8 +1,14 @@
-// 부드러운 스크롤 효과 niceScroll
-$("html").niceScroll({
-  scrollspeed: 20,
-  mousescrollstep: 30,
-  horizrailenabled: false,
+$(window).on("load resize", function () {
+  if (!$("body").hasClass("is_mobile")) {
+    // 부드러운 스크롤 효과 niceScroll
+    $("html").niceScroll({
+      scrollspeed: 20,
+      mousescrollstep: 30,
+      horizrailenabled: false,
+    });
+  } else {
+    $("html").getNiceScroll().remove();
+  }
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +70,7 @@ keyvisualContents.forEach((content, i) => {
       );
   } else {
     let scrollImg = content.querySelectorAll(".scroll-el img");
-    let imgW = 0;
+    let imgW = 12;
     scrollImg.forEach((item, i) => {
       imgW += item.clientWidth + 12;
       console.log(i, imgW);
@@ -124,7 +130,6 @@ keyvisualContents.forEach((content, i) => {
         }
       );
   }
-  console.log(winInWidth, outerWidth);
 });
 
 gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx
@@ -181,20 +186,24 @@ const mediaService = document.querySelector(".media-service");
 //     pinSpacing: false
 // });
 // 화면이 모바일 사이즈가 아닐 때만 GSAP 애니메이션 적용
-if ($("body").hasClass("is_pc")) {
-  // 매체 마스크 이미지 영역
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector(".header");
-    const windowHeight = window.innerHeight;
-    const ms = document.querySelector(".media-service");
-    const msCont = document.querySelectorAll(".media-service__content");
-    const textLayer = document.querySelectorAll(".media-service__text-wrap");
-    const msImg2 = document.querySelectorAll(".ms-img2");
-    const msImg3 = document.querySelectorAll(".ms-img3");
-    const msImg5 = document.querySelectorAll(".ms-img5");
+
+// 매체 마스크 이미지 영역
+window.addEventListener("scroll", () => {
+  function isMobileSize() {
+    return window.innerWidth <= 768; // 768px를 모바일 기준으로 설정
+  }
+  const header = document.querySelector(".header");
+  const windowHeight = window.innerHeight;
+  const ms = document.querySelector(".media-service");
+  const msCont = document.querySelectorAll(".media-service__content");
+  const textLayer = document.querySelectorAll(".media-service__text-wrap");
+  const msImg2 = document.querySelectorAll(".ms-img2");
+  const msImg3 = document.querySelectorAll(".ms-img3");
+  const msImg5 = document.querySelectorAll(".ms-img5");
+
+  if (!isMobileSize()) {
     let scrollTop = window.scrollY;
     let msOffsetY = ms.getBoundingClientRect().top;
-    //console.log(scrollTop, msOffsetY);
     // 처음 이미지가 올라오는 부분
     if (msOffsetY - windowHeight / 2 < 0) {
       ms.classList.add("active");
@@ -227,10 +236,38 @@ if ($("body").hasClass("is_pc")) {
         }
       });
     }
-  });
-}
+  }
+});
+
+$(window).on("load resize", function () {
+  $(
+    ".is_mobile .media-service__text-wrap, .is_mobile .ms-img2, .is_mobile ms-img3, .is_mobile ms-img5"
+  ).css("margin-top", "0px");
+});
 
 const mediaServices = gsap.utils.toArray(".media-service__content");
+
+function isMobileSize() {
+  return window.innerWidth <= 768; // 768px를 모바일 기준으로 설정
+}
+if (isMobileSize) {
+  const msImgWrap = document.querySelectorAll(".ms-img-wrap");
+  let imgW =
+    $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
+  let content = [];
+  msImgWrap.forEach((content, i) => {
+    content[i] = content;
+    ScrollTrigger.create({
+      trigger: content[i],
+      start: "top 90%",
+      end: "bottom 0%",
+      scrub: true,
+      animation: gsap.to(content[i], {
+        x: -(imgW - winInWidth),
+      }),
+    });
+  });
+}
 
 // mediaServices.forEach((service, i) => {
 //   const text = service.querySelector(".media-service__text");

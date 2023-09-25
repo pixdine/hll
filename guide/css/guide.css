@@ -29,6 +29,8 @@
 .txt_sm:before{content:'';display:block;position:absolute;left:0;top:8px;width:3px;height:3px;background:#999;}
 .txt_sm .color1{color:#ff975e;}
 .txt_sm .color2{color:#6396ff;}
+.txt_sm.non{padding-left:0;}
+.txt_sm.non:before{display:none;}
 .txt_sm strong{color:#000;font-weight:500;}
 .line_top td{border-top:2px solid #666;}
 

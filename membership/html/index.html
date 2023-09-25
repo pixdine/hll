@@ -26,7 +26,21 @@
 <body>
 
 <div id="wrap" class="wrap main-page">
+    <script>
+        function login() {
+            console.log('login');
+            $(".login_info_box").css("display", "block");
+            $(".info_box").css("display", "none");
 
+        }
+
+        function logout() {
+            console.log('logout');
+            $(".info_box").css("display", "block");
+            $(".login_info_box").css("display", "none");
+
+        }
+    </script>
     <!--전체메뉴-->
     <div class="allmenu_wrap">
         <div class="cont_inner">
@@ -76,7 +90,7 @@
                     <ul class="depth2">
                         <li><a href="#">공지사항</a></li>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">1:1문의</a></li>
+                        <li><a href="#">1:1 문의</a></li>
                     </ul>
                 </li>
                 <li>
@@ -86,7 +100,7 @@
                         <li><a href="#">회원정보 수정</a></li>
                         <li><a href="#">포인트 관리</a></li>
                         <li><a href="#">포인트 샵</a></li>
-                        <li><a href="#">1:1문의 내역</a></li>
+                        <li><a href="#">1:1 문의 내역</a></li>
                         <li><a href="#">나의 스크랩</a></li>
                     </ul>
                 </li>
@@ -154,7 +168,7 @@
                                     <li><a href="#">회원정보 수정</a></li>
                                     <li><a href="#">포인트 관리</a></li>
                                     <li><a href="#">포인트 샵</a></li>
-                                    <li><a href="#">1:1문의내역</a></li>
+                                    <li><a href="#">1:1 문의 내역</a></li>
                                     <li><a href="#">나의 스크랩</a></li>
                                 </ul>
                             </div>
@@ -526,7 +540,7 @@
                             <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
                         </div>
                     </address>
-                    <p class="copyright">© 2020 Hearst Joongang. All Rights Reserved.</p>
+                    <p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

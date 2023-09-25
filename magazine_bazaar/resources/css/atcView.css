@@ -5,8 +5,8 @@
 /* 기사상세 헤더 */
 .atc_wrap .atc_header {text-align: center; letter-spacing:-0.01em}
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px;}
-.atc_wrap .atc_header .txt_excerpt {margin-top:14px;font-weight: 400; font-size: 16px;line-height: 23px;}
-.atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; margin-top:36px;}
+.atc_wrap .atc_header .txt_excerpt {margin-top:16px;font-weight: 400; font-size: 16px;line-height: 23px;}
+.atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; margin-top:40px;}
 .atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666; line-height: 1.5;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background:url('../images/img_profile.png') center center no-repeat;background-size:100% auto;border-radius:50%;margin-right: 12px;overflow:hidden;}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:100%; height:100%; object-fit:cover;}
@@ -222,10 +222,23 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 /* 이벤트 상세 */
 .event_detail_wrap .atc_body{max-width:996px;}
-.event_detail_wrap .atc_header .txt_date{margin-top:40px;font-family:Gotham;font-size:14px;font-weight:500;color:#666;line-height:1;}
+.event_detail_wrap .atc_body_cont:after{content:'';display:block;clear:both;}
+.event_detail_wrap .atc_header .txt_date{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:40px;}
+.event_detail_wrap .atc_header .txt_date .item{display:inline-flex;align-items:baseline;font-size:14px;font-weight:500;color:#111;line-height:20px;}
+.event_detail_wrap .atc_header .txt_date .item span{margin-right:8px;}
+.event_detail_wrap .atc_header .txt_date .item em{font-family:Gotham;color:#666;line-height:1;}
+.event_detail_wrap .atc_header .txt_date .item ~ .item{margin-left:20px;}
+.event_detail_wrap .btn_list_wrap{display:flex;justify-content:center;margin-top:180px;}
+.event_detail_wrap .btn_list_wrap .btn{width:388px;}
 .tmp_photo{margin-bottom:24px;}
 .tmp_photo img{width:100%;}
-.tmp_txt{max-width:792px;margin-left:auto;margin-right:auto;}
+.tmp_txt{max-width:792px;margin-left:auto;margin-right:auto;text-align:left;}
+.noti_info_box{position:relative;margin-top:80px;padding-top:80px;}
+.noti_info_box:before{content:'';display:block;position:absolute;left:50%;top:0;transform:translateX(-50%);max-width:792px;width:100%;height:1px;background-color:#dbdbdb;}
+.noti_info_box .box_inner{display:flex;align-items:center;padding:40px;background-color:#f7f7f7;letter-spacing:-0.01em;}
+.noti_info_box .txt_box{width:67.143%;font-size:18px;line-height:26px;}
+.noti_info_box .btn_group{display:flex;margin-left:auto;padding-left:20px;}
+.noti_info_box .btn_group .btn ~ .btn{margin-left:16px;}
 
 /* 화보 상세 */
 .cont_inner.pictorial { max-width:1920px; padding:0}
@@ -283,6 +296,11 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:51.48%; transfo
 	.ab_photo_1200{width:calc(100vw - 17px);}
 	.ab_photo_1200 .caption{padding-left:20px;}
 }
+@media (max-width:1023px){
+	.noti_info_box .box_inner{flex-direction:column;}
+	.noti_info_box .txt_box{width:100%;text-align:center;}
+	.noti_info_box .btn_group{margin-top:24px;margin-left:inherit;padding-left:0;}
+}
 
 @media (max-width:768px){
     .atc_wrap {margin-bottom:80px;padding-top:40px;}
@@ -290,11 +308,11 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:51.48%; transfo
     .atc_wrap .atc_header {text-align: center;}
     .atc_wrap .atc_header .txt_category {font-size:14px}
     .atc_wrap .atc_header .tit_article {font-size:24px;line-height:35px;}
-    .atc_wrap .atc_header .txt_excerpt {margin-top:10px;font-size: 14px;line-height: 20px;}
-    .atc_wrap .atc_body {max-width:none;margin-top:36px;}
+    .atc_wrap .atc_header .txt_excerpt {margin-top:12px;font-size: 14px;line-height: 20px;}
+    .atc_wrap .atc_body {max-width:none;margin-top:32px;}
 	.atc_wrap.wide .atc_body{margin-top:40px;}
 
-    .atc_wrap .atc_header .txt_meta { height:20px; margin-top:32px; }
+    .atc_wrap .atc_header .txt_meta { height:20px; margin-top:24px; }
     .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:12px; }
     .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px;}
     .atc_wrap .atc_header .txt_meta .time:after{height:10px;}
@@ -411,17 +429,27 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:51.48%; transfo
     .photo_txt div {width:100%; margin:20px 0 0 0}
     .photo_txt div .caption{padding-left:0}
     .photo_txt div.txt {margin:20px 0 0 0; padding-bottom:0}
-    .photo_txt div:nth-child(1) {order:1}	
+    .photo_txt div:nth-child(1) {order:1}
     .photo_txt div:nth-child(2) {order:2}
-    .photo_txt div:nth-child(3) {order:4}	
-    .photo_txt div:nth-child(4) {order:3}	
+    .photo_txt div:nth-child(3) {order:4}
+    .photo_txt div:nth-child(4) {order:3}
     
     .ab_photo_1200 .tag_photobundle, .ab_photo_1200 .photo_five , .ab_photo_1200 .photo_four { margin:20px 0}
 
-	.event_detail_wrap .atc_header .txt_date{margin-top:24px;font-size:12px;}
+	.event_detail_wrap .atc_header .txt_date{flex-direction:column;margin-top:24px;}
+	.event_detail_wrap .atc_header .txt_date .item{font-size:12px;line-height:17px;}
+	.event_detail_wrap .atc_header .txt_date .item ~ .item{margin-top:6px;margin-left:0;}
+	.event_detail_wrap .atc_header .txt_date .item span{margin-right:6px;}
+	.event_detail_wrap .btn_list_wrap{margin-top:80px;}
 	.tmp_photo{margin:0 -20px 20px;}
+	.noti_info_box{margin-top:60px;padding-top:60px;}
+	.noti_info_box .box_inner{padding:20px;}
+	.noti_info_box .txt_box{font-size:14px;line-height:20px;}
+	.noti_info_box .btn_group{width:100%;margin-top:16px;}
+	.noti_info_box .btn_group .btn{width:100%;height:36px;font-size:14px;}
+	.noti_info_box .btn_group .btn ~ .btn{margin-left:12px;}
 
-    .cont_inner.pictorial .atc_header  {max-width:auto;    padding: 0 20px;}
+    .cont_inner.pictorial .atc_header  {max-width:auto;padding: 0 20px;}
     .cont_inner.pictorial .ab_photo { margin:20px 0}
     .cont_inner.pictorial .photo_dual { flex-direction: row; flex-wrap: wrap; margin:0; column-gap:0;}
     .cont_inner.pictorial .photo_dual div { width:100%; margin:20px 0}

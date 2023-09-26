@@ -21,22 +21,84 @@ const keyvisualContents = gsap.utils.toArray(".key-visual__content");
 let mm = gsap.matchMedia();
 
 mm.add("(max-width: 767px)", () => {
-  //   const kmSection = gsap.utils.toArray(".km-section");
-  //   let content = [];
-  //   var kmImgW = 0;
-  //   kmImgW =
-  //     $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-  //   kmImgW = parseInt(kmImgW);
-  //   kmSection.forEach((content, i) => {
-  //     content[i] = content;
-  //     ScrollTrigger.create({
-  //       trigger: content[i],
-  //       start: "top 90%",
-  //       end: "bottom 0%",
-  //       scrub: true,
-  //       animation: gsap.fromTo(content[i], { x: 0 }, { x: -(imgW - winInWidth) }),
-  //     });
+  const kmSection = gsap.utils.toArray(".km-section");
+  const kmTxtWrap = gsap.utils.toArray(".km-txt-wrap");
+  setTimeout(() => {
+    const km01TxtWrap = (document.querySelector(
+      ".km-section01 .km-txt-wrap"
+    ).style.zIndex = 0);
+    gsap.utils.toArray(".km-txt-wrap .km-txt1").forEach((item) => {
+      gsap.from(item, {
+        autoAlpha: 0,
+        yPercent: 100,
+        duration: 1.5,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: item,
+          start: "-100 90%",
+          end: "+200 10%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+    });
+    gsap.utils.toArray(".km-txt-wrap .km-txt2").forEach((item) => {
+      gsap.from(item, {
+        autoAlpha: 0,
+        yPercent: 100,
+        duration: 1.5,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: item,
+          start: "-100 90%",
+          end: "+200 10%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+    });
+    gsap.utils.toArray(".km-txt-wrap .km-txt3").forEach((item) => {
+      gsap.from(item, {
+        autoAlpha: 0,
+        yPercent: 100,
+        duration: 1.5,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: item,
+          start: "-100 90%",
+          end: "+200 10%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+    });
+    gsap.utils.toArray(".km-txt-wrap .km-link").forEach((item) => {
+      gsap.from(item, {
+        autoAlpha: 0,
+        duration: 1.5,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: item,
+          start: "-100 90%",
+          end: "+200 10%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+    });
+  }, 1200);
+
+  // let content = [];
+  // var kmImgW = 0;
+  // kmImgW =
+  //   $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
+  // kmImgW = parseInt(kmImgW);
+  // kmSection.forEach((content, i) => {
+  //   content[i] = content;
+  //   ScrollTrigger.create({
+  //     trigger: content[i],
+  //     start: "top 90%",
+  //     end: "bottom 0%",
+  //     scrub: true,
+  //     animation: gsap.fromTo(content[i], { x: 0 }, { x: -(imgW - winInWidth) }),
   //   });
+  // });
 });
 
 mm.add("(min-width: 768px)", () => {

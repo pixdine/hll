@@ -18,12 +18,37 @@ const winInWidth = window.innerWidth;
 const keyvisualVideo = document.querySelector(".key-visual__video");
 const keyvisualContents = gsap.utils.toArray(".key-visual__content");
 
-ScrollTrigger.create({
-  trigger: ".key-visual",
-  anticipatePin: 1,
-  start: "top top",
-  pin: true,
-  end: keyvisualContents.length * (innerHeight / 1.5) + innerHeight,
+let mm = gsap.matchMedia();
+
+mm.add("(max-width: 767px)", () => {
+  //   const kmSection = gsap.utils.toArray(".km-section");
+  //   let content = [];
+  //   var kmImgW = 0;
+  //   kmImgW =
+  //     $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
+  //   kmImgW = parseInt(kmImgW);
+  //   kmSection.forEach((content, i) => {
+  //     content[i] = content;
+  //     ScrollTrigger.create({
+  //       trigger: content[i],
+  //       start: "top 90%",
+  //       end: "bottom 0%",
+  //       scrub: true,
+  //       animation: gsap.fromTo(content[i], { x: 0 }, { x: -(imgW - winInWidth) }),
+  //     });
+  //   });
+});
+
+mm.add("(min-width: 768px)", () => {
+  const keyvisualContents = gsap.utils.toArray(".key-visual__content");
+
+  ScrollTrigger.create({
+    trigger: ".key-visual",
+    anticipatePin: 1,
+    start: "top top",
+    pin: true,
+    end: keyvisualContents.length * (innerHeight / 1.5) + innerHeight,
+  });
 });
 
 let initialized = false;

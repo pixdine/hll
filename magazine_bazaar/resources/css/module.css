@@ -255,7 +255,7 @@
 
 /* 투표 & 퀴즈 모듈 */
 .pick_wrap{margin:40px auto;padding:60px;border:1px solid #dbdbdb;letter-spacing:-0.01em;}
-.pick_wrap .pick_head{display:flex;justify-content:center;align-items:baseline;margin-bottom:12px;}
+.pick_wrap .pick_head{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;margin-bottom:12px;}
 .pick_wrap .pick_head span{display:inline-block;position:relative;font-size:14px;font-weight:500;line-height:20px;color:#111;}
 .pick_wrap .pick_head .date{font-family:Gotham;color:#666;letter-spacing:0;line-height:1;}
 .pick_wrap .pick_head .cate ~ .date{margin-left:12px;padding-left:12px;}

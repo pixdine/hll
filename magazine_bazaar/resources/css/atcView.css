@@ -328,7 +328,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:51.48%; transfo
     .tag_photobundle .swiper-container-horizontal>.swiper-scrollbar { bottom:-55px; left:20px; width:calc(100% - 40px)}
 
     .tag_vod_box01 { margin:20px -20px; }
-    .tag_sns {display:block;width:298px}
+    .tag_sns {display:block;width:100%;max-width:298px}
 
     .photo_dual { margin:20px -20px; width:auto}
 	.photo_dual .photo_box01 .caption{padding-right:0;}

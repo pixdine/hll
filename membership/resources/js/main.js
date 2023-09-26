@@ -18,6 +18,7 @@ const winInWidth = window.innerWidth;
 const keyvisualVideo = document.querySelector(".key-visual__video");
 const keyvisualContents = gsap.utils.toArray(".key-visual__content");
 
+// gsap 반응형
 let mm = gsap.matchMedia();
 
 ScrollTrigger.create({
@@ -101,7 +102,6 @@ mm.add("(max-width: 767px)", () => {
     });
   }, 1200);
 
-  console.log(scrollImgW, winInWidth);
   ScrollTrigger.create({
     trigger: ".slide-img",
     start: "top 50%",
@@ -240,15 +240,10 @@ sceneCover.forEach((scene) => {
     trigger: scene,
     start: "top 0%",
     end: "bottom 0%",
-    // animation: gsap.from(scene.querySelectorAll('.motion-wrap.direction-up > *'), {
-    //     yPercent: 100,
-    //     duration: 2,
-    //     ease: "power4.inOut"
-    // }, 0),
-    onEnter: () => $(".header").addClass("dark"),
-    onLeave: () => $(".header").removeClass("dark"),
-    onEnterBack: () => $(".header").addClass("dark"),
-    onLeaveBack: () => $(".header").removeClass("dark"),
+    // onEnter: () => $(".header").addClass("dark"),
+    // onLeave: () => $(".header").removeClass("dark"),
+    // onEnterBack: () => $(".header").addClass("dark"),
+    // onLeaveBack: () => $(".header").removeClass("dark"),
   });
 });
 
@@ -268,16 +263,7 @@ gsap.utils.toArray(".scene-cover__container .direction-up").forEach((item) => {
 });
 
 const mediaService = document.querySelector(".media-service");
-// ScrollTrigger.create({
-//     trigger: mediaService,
-//     start: "top top",
-//     end: '+=400%',
-//     pin: true,
-//     pinSpacing: false
-// });
-// 화면이 모바일 사이즈가 아닐 때만 GSAP 애니메이션 적용
 
-// 매체 마스크 이미지 영역
 window.addEventListener("scroll", () => {
   function isMobileSize() {
     return window.innerWidth <= 767; // 768px를 모바일 기준으로 설정
@@ -319,11 +305,11 @@ window.addEventListener("scroll", () => {
         let msContY = [];
         msContArr[i] = item;
         msContY[i] = msContArr[i].getBoundingClientRect().top;
-        if (msContY[0] < 0 && msOffsetY + windowHeight > 0) {
-          header.classList.add("dark");
-        } else if (msContY[1] < 0 && msContY[1] + windowHeight > 0) {
-          header.classList.remove("dark");
-        }
+        // if (msContY[0] < 0 && msOffsetY + windowHeight > 0) {
+        //   header.classList.add("dark");
+        // } else if (msContY[1] < 0 && msContY[1] + windowHeight > 0) {
+        //   header.classList.remove("dark");
+        // }
       });
     }
   }
@@ -364,74 +350,6 @@ $(window).on("load resize", function () {
 });
 
 const mediaServices = gsap.utils.toArray(".media-service__content");
-
-function isMobileSize() {
-  return window.innerWidth <= 768; // 768px를 모바일 기준으로 설정
-}
-
-function isTabletSize() {
-  return window.innerWidth <= 1023; // 768px를 모바일 기준으로 설정
-}
-
-// mediaServices.forEach((service, i) => {
-//   const text = service.querySelector(".media-service__text");
-//   const image1 = service.querySelector(".media-service__image--01");
-//   const image2 = service.querySelector(".media-service__image--02");
-//   const image3 = service.querySelector(".media-service__image--03");
-//   const image4 = service.querySelector(".media-service__image--04");
-//   const image5 = service.querySelector(".media-service__image--05");
-//   ScrollTrigger.create({
-//     trigger: service,
-//     start: "top top",
-//     end: "bottom top",
-//     // pin: true,
-//     // pinSpacing: false,
-//     scrub: true,
-//     markers: true,
-//     onUpdate: (st) => {
-//       //const distance = st.scroll() - st.start - (st.end - st.start) / 2;
-//       const distance = st.scroll() - st.start;
-
-//       //gsap.to(text, { translateY: distance, duration: 0, ease: "none" });
-//       // gsap.to(image1, {translateY: distance, duration:0, ease: "none"} )
-//       // gsap.to(image2, {translateY: distance, duration:0, ease: "none"} )
-//       // gsap.to(image3, {translateY: distance, duration:0, ease: "none"} )
-//       // gsap.to(image4, {translateY: distance, duration:0, ease: "none"} )
-//       // gsap.to(image5, {translateY: distance, duration:0, ease: "none"} )
-//       //gsap.from(text, {yPercent: -100} )
-//       //gsap.to(image1, {translateY: distance} )
-//       //gsap.to(image2, {translateY: distance} )
-//       // gsap.to(image3, {translateY: distance} )
-//       // gsap.to(image4, {translateY: distance} )
-//       // gsap.to(image5, {translateY: distance} )
-//       //   if (i == 3) {
-//       //     gsap.to(service, { autoAlpha: 0 });
-//       //   } else {
-//       //     gsap.to(service, { autoAlpha: 1 });
-//       //   }
-//     },
-//     // onEnter: () => {
-//     //     if (i == 1) $('.header').addClass('dark')
-//     // },
-//     // onEnter: () => {
-//     //     if (i == 1) $('.header').addClass('dark')
-//     // }
-//   });
-// });
-// // mm.add("(max-width: 768px)", () => {
-// //     mediaServices.forEach((service, i) => {
-// //         const text = service.querySelector(".media-service__text")
-// //         const images = service.querySelector(".media-service__images")
-// //         ScrollTrigger.create({
-// //             trigger: service,
-// //             start: 'top bottom',
-// //             end: 'bottom top',
-// //             scrub: true,
-// //             // markers: true,
-// //             animation: gsap.to(images, {xPercent:-100})
-// //         })
-// //     })
-// // })
 
 const themeServices = gsap.utils.toArray(".theme-service__content");
 
@@ -526,4 +444,18 @@ $.fn.floatingMenu = function () {
 $(document).ready(function () {
   // 플로팅메뉴
   $(".floating-menu").floatingMenu();
+});
+
+// 헤더 색상을 위한 섹션별 정의
+const mainSectionArray = document.querySelectorAll(".header-dark");
+mainSectionArray.forEach((item) => {
+  ScrollTrigger.create({
+    trigger: item,
+    start: "top 0%",
+    end: "bottom 0%",
+    onEnter: () => $(".header").addClass("dark"),
+    onLeave: () => $(".header").removeClass("dark"),
+    onEnterBack: () => $(".header").addClass("dark"),
+    onLeaveBack: () => $(".header").removeClass("dark"),
+  });
 });

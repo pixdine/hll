@@ -20,6 +20,14 @@ const keyvisualContents = gsap.utils.toArray(".key-visual__content");
 
 let mm = gsap.matchMedia();
 
+ScrollTrigger.create({
+  trigger: ".key-visual",
+  anticipatePin: 1,
+  start: "top top",
+  pin: true,
+  end: keyvisualContents.length * (innerHeight / 1.5) + innerHeight,
+});
+
 mm.add("(max-width: 767px)", () => {
   const kmSection = gsap.utils.toArray(".km-section");
   const kmTxtWrap = gsap.utils.toArray(".km-txt-wrap");
@@ -101,17 +109,7 @@ mm.add("(max-width: 767px)", () => {
   // });
 });
 
-mm.add("(min-width: 768px)", () => {
-  const keyvisualContents = gsap.utils.toArray(".key-visual__content");
-
-  ScrollTrigger.create({
-    trigger: ".key-visual",
-    anticipatePin: 1,
-    start: "top top",
-    pin: true,
-    end: keyvisualContents.length * (innerHeight / 1.5) + innerHeight,
-  });
-});
+mm.add("(min-width: 768px)", () => {});
 
 let initialized = false;
 

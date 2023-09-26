@@ -50,13 +50,13 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 /* 기사상세 > body > 사진 두장씩 */
 .photo_dual {width: 100%; margin:24px auto;display: flex;align-content: stretch;justify-content: space-between;}
 .photo_dual div {padding: 0;margin: 0; line-height: 0;max-width: 60%;align-self: stretch;}
-.photo_dual div:first-child {margin-right:3%}
+.photo_dual div:first-child {margin-right:3.04%}
 .photo_dual div img { width: 100%}
 
 /* 기사상세 > body > 사진 3장씩 (좌=>우) */
 .photo_third {width: 100%; margin:24px auto;display: flex;align-content: space-between; justify-content: space-between; flex-flow: column wrap; height: 684px; }
-.photo_third div { display: flex;flex-direction: column;align-items: flex-start;width: 35%; }
-.photo_third div:first-child {align-items: stretch; width: 61.36%;margin-right:3%;height: 100%; }
+.photo_third div { display: flex;flex-direction: column;align-items: flex-start; width: 35%; }
+.photo_third div:first-child {align-items: stretch; width:61.96%;margin-right:3.04%;height: 100%; }
 .photo_third div:nth-child(3) {margin-top: 7.2%;}
 /* 기사상세 > body > 사진 3장씩 (우=>좌) */
 .photo_third02 {width: 100%; height: 684px; margin:24px auto;display: flex; flex-direction: row-reverse; flex-wrap: wrap;flex-flow:column wrap-reverse; }
@@ -278,11 +278,11 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 body.is_pc .shopping_list li.only { width:100% }
 body.is_pc .shopping_list li.only .ab_shoppingbox { flex-direction:row; justify-content:flex-start;padding:0 }
-body.is_pc .shopping_list li.only .ab_shoppingbox .prd_img {width:48.48%; height:100%; margin:0;flex-shrink: 0;}
-body.is_pc .shopping_list li.only .ab_shoppingbox .prd_info {text-align:left; margin:0; width:44.70%; margin-left:3.03%; padding-right:32px; margin-top:5.24%; box-sizing:border-box}
+body.is_pc .shopping_list li.only .ab_shoppingbox .prd_img {width:382px; height:100%; margin:0;flex-shrink: 0;}
+body.is_pc .shopping_list li.only .ab_shoppingbox .prd_info {text-align:left; margin:0; width:384px; margin-left:24px; padding-right:32px; margin-top:5.24%; box-sizing:border-box}
 body.is_pc .shopping_list li.only .ab_shoppingbox  .prd_info dt { margin-top:0}
 body.is_pc .shopping_list li.only .ab_shoppingbox .prd_info dd.store { margin-top:82px }
-body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:51.48%; transform:none}
+body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transform:none}
 
 
 

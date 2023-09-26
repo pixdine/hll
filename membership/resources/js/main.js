@@ -28,6 +28,15 @@ ScrollTrigger.create({
   end: keyvisualContents.length * (innerHeight / 1.5) + innerHeight,
 });
 
+var scrollImgW = 0;
+scrollImgW =
+  $(".km-section02 .slide-img img").eq(0).width() +
+  $(".km-section02 .slide-img img").eq(1).width() +
+  $(".km-section02 .slide-img img").eq(2).width() +
+  $(".km-section02 .slide-img img").eq(3).width() +
+  60;
+scrollImgW = parseInt(scrollImgW);
+
 mm.add("(max-width: 767px)", () => {
   const kmSection = gsap.utils.toArray(".km-section");
   const kmTxtWrap = gsap.utils.toArray(".km-txt-wrap");
@@ -92,21 +101,18 @@ mm.add("(max-width: 767px)", () => {
     });
   }, 1200);
 
-  // let content = [];
-  // var kmImgW = 0;
-  // kmImgW =
-  //   $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-  // kmImgW = parseInt(kmImgW);
-  // kmSection.forEach((content, i) => {
-  //   content[i] = content;
-  //   ScrollTrigger.create({
-  //     trigger: content[i],
-  //     start: "top 90%",
-  //     end: "bottom 0%",
-  //     scrub: true,
-  //     animation: gsap.fromTo(content[i], { x: 0 }, { x: -(imgW - winInWidth) }),
-  //   });
-  // });
+  console.log(scrollImgW, winInWidth);
+  ScrollTrigger.create({
+    trigger: ".slide-img",
+    start: "top 50%",
+    end: "bottom 0%",
+    scrub: true,
+    animation: gsap.fromTo(
+      ".slide-img",
+      { x: 0 },
+      { x: -(scrollImgW - winInWidth) }
+    ),
+  });
 });
 
 mm.add("(min-width: 768px)", () => {});
@@ -285,7 +291,7 @@ window.addEventListener("scroll", () => {
   const msImg3 = document.querySelectorAll(".ms-img3");
   const msImg5 = document.querySelectorAll(".ms-img5");
 
-  if (!isTabletSize()) {
+  if (!isMobileSize()) {
     let scrollTop = window.scrollY;
     let msOffsetY = ms.getBoundingClientRect().top;
     // 처음 이미지가 올라오는 부분
@@ -332,9 +338,6 @@ $(window).on("load resize", function () {
 
   $(".is_pc .media-service").removeClass("active");
 
-  // gsap 반응형
-  let mm = gsap.matchMedia();
-
   var imgW = 0;
   imgW =
     $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
@@ -347,7 +350,7 @@ $(window).on("load resize", function () {
       content[i] = content;
       ScrollTrigger.create({
         trigger: content[i],
-        start: "top 90%",
+        start: "top 50%",
         end: "bottom 0%",
         scrub: true,
         animation: gsap.fromTo(

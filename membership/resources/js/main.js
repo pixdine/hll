@@ -253,9 +253,7 @@ $(window).on("load resize", function () {
   var imgW = 0;
   imgW =
     $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-  $(".ms-img-wrap").removeAttr("style");
-
-  console.log(imgW, winInWidth);
+  imgW = parseInt(imgW);
 
   mm.add("(max-width: 767px)", () => {
     msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");

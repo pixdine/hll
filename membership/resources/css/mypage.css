@@ -21,7 +21,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .mypage_point_info {position:relative;height:220px; background:#fff; padding:40px; box-sizing: border-box;}
 .top_cont_area .mypage_point_info {margin-top:51px}
 .mypage_point_info ul {display:flex; flex-direction: row; flex-wrap:wrap; justify-content: space-between; align-items: stretch; height:100%}
-.mypage_point_info ul li {position:relative; border-left:1px solid #DBDBDB; width:400px }
+.mypage_point_info ul li {position:relative; border-left:1px solid #DBDBDB; width:33.33% }
 .mypage_point_info ul li:first-child {border-left:0;}
 .mypage_point_info ul li dl { margin-left:40px; display:flex;flex-direction:column;justify-content:space-between; height:100% }
 .mypage_point_info ul li:first-child dl {margin-left:0}
@@ -37,7 +37,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .mypage_point_info ul li dl dd .point {font-size:28px; margin-left:4px; margin-bottom:-9px}
 .mypage_point_info ul li dl dd .sep { display:inline-block; margin:0 8px}
 .mypage_point_info ul li dl dd span {line-height:1}
-body.is_pc .mypage_point_info ul li:first-child, body.is_pc .mypage_point_info ul li:last-child {width:360px}
+body.is_pc .mypage_point_info ul li:first-child, body.is_pc .mypage_point_info ul li:last-child {width:30%}
 body.is_pc .mypage_point_info ul li:first-child dl dd {padding-bottom:0}
 body.is_pc .mypage_point_info ul li:first-child dl dd .sep {margin-bottom:-4px}
 body.is_pc .mypage_point_info ul li:first-child dl dd span {margin-bottom:-7px}

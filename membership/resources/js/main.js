@@ -239,9 +239,42 @@ window.addEventListener("scroll", () => {
 });
 
 $(window).on("load resize", function () {
+  const winInWidth = window.innerWidth;
+
   $(
     ".is_mobile .media-service__text-wrap, .is_mobile .ms-img2, .is_mobile ms-img3, .is_mobile ms-img5"
   ).css("margin-top", "0px");
+
+  $(".is_pc .media-service").removeClass("active");
+
+  // gsap 반응형
+  let mm = gsap.matchMedia();
+
+  var imgW = 0;
+  imgW =
+    $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
+  $(".ms-img-wrap").removeAttr("style");
+
+  console.log(imgW, winInWidth);
+
+  mm.add("(max-width: 767px)", () => {
+    msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
+    let content = [];
+    msImgWrap.forEach((content, i) => {
+      content[i] = content;
+      ScrollTrigger.create({
+        trigger: content[i],
+        start: "top 90%",
+        end: "bottom 0%",
+        scrub: true,
+        animation: gsap.fromTo(
+          content[i],
+          { x: 0 },
+          { x: -(imgW - winInWidth) }
+        ),
+      });
+    });
+  });
 });
 
 const mediaServices = gsap.utils.toArray(".media-service__content");
@@ -377,27 +410,6 @@ themeServices.forEach((service, i) => {
       },
       0
     );
-});
-
-// gsap 반응형
-let mm = gsap.matchMedia();
-
-mm.add("(max-width: 767px)", () => {
-  let imgW =
-    $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-
-  msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
-  let content = [];
-  msImgWrap.forEach((content, i) => {
-    content[i] = content;
-    ScrollTrigger.create({
-      trigger: content[i],
-      start: "top 90%",
-      end: "bottom 0%",
-      scrub: true,
-      animation: gsap.to(content[i], { x: -(imgW - winInWidth) }),
-    });
-  });
 });
 
 // 플로팅메뉴

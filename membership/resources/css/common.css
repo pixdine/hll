@@ -1083,6 +1083,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.input_type02 li dd .inputbox.nobtn { padding-right:0 }
 	.input_type02 li dd .inputbox .btn { position:absolute; right:0; width:31.94%; min-width:68px}
 	.input_type02 li dd .inp { width:100%; }
+	.input_type02 li dl dd.mypw_change .btn {width:100%}
 	.input_type02 li dl dd .btn_area {display:flex;justify-content: space-between;}
 	.input_type02 li dl dd .btn_area .btn ~ .btn { margin-left:0px}
 	.input_type02 li dd .inputbox.modify span.inputbox {padding-right:0; width:100%}

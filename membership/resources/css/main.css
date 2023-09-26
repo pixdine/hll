@@ -8,7 +8,7 @@
 .main-page .section-link {font-size: 16px; line-height: 1.25; padding: 16px 52px 16px 24px; border: 1px solid rgba(255, 255, 255, 0.6); background-image: url(../../resources/images/main/main-page_button-arrow.svg); background-position: right 24px center; background-repeat: no-repeat;}
 .main-page .section-link--dark {border-color: rgba(17, 17, 17, 0.6); background-image: url(../../resources/images/main/main-page_button-arrow-dark.svg);}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .main-page .section-link {font-size: 14px; padding: 12px 52px 12px 20px;}
 }
 
@@ -26,23 +26,23 @@
 .key-visual__container {position: absolute; color: #fff; width: 100%; padding: 0 40px;}
 .key-visual__title {font-size: 28px; font-weight: 700; letter-spacing: -0.01em;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .key-visual__title {font-size: 18px;}
 }
 
 .key-visual__title strong {display: block; font-size: 56px; line-height: 1.42857; letter-spacing: -0.02em; margin-top: 24px;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .key-visual__title strong {font-size: 28px;}
 }
 
 .key-visual__description {font-size: 18px; line-height: 1.5556; margin-bottom: 60px; overflow: hidden;}
 .key-visual__description span {display: block; white-space: pre-line;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .key-visual__description span {margin-top: 20px; white-space: normal;}
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .key-visual__description {font-size: 14px;}
 }
 
@@ -62,7 +62,7 @@
 .key-visual .scroll-el img {width: 130px; margin-right: 12px; opacity: 0.2;}
 .key-visual .scroll-el img:last-child {margin-right: 0;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .key-visual__decorators {display: none;}
     .key-visual__decorators-mo {display: block;}
     .key-visual__decorators-mo .mo-img {position: absolute;}
@@ -123,7 +123,7 @@
 .media-service__subtitle {margin-top: 43px;}
 .media-service__phrase {margin-top: 23px; font-size: 18px; font-weight: 500; line-height: 1.5556; letter-spacing: -0.01em; margin-bottom: 60px;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .media-service__images {display: flex; flex-wrap: nowrap; position: absolute; bottom: 0;}
     .media-service__images img {height: 235px; width: auto; max-width: none;}
     .media-service__container {height: auto;}
@@ -140,7 +140,7 @@
     .media-service__content .media-service__phrase {margin: 16px 0 32px; font-size: 14px; line-height: 22px;}
     .media-service .ms-img-wrap {display: flex; position: relative; width: max-content; height: 235px; margin-top: 48px; white-space: nowrap;}
     .media-service .ms-img {position: static; width: auto; height: 235px; margin-left: 12px;}
-    .media-service .ms-img img {height: 100%;}
+    .media-service .ms-img img {height: 100% !important;}
     .media-service .ms-img1 {order: 2;}
     .media-service .ms-img1 img {opacity: 1; transition: 0s ease; transition-delay: 0s; transform: translateY(0);}
     .media-service .ms-img2 {order: 1; margin-left: 0;}
@@ -168,7 +168,7 @@
 .media-service__image--04 {top: 43.7037%; left: 7.2917%;}
 .media-service__image--05 {top: 62.5926%; right: 80px;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .media-service__image {position: relative; top: auto; left: auto; right: auto; bottom: auto; transform: none;}
 }
 
@@ -181,33 +181,33 @@
 .theme-service__content--esquire {background-color: #F7F7F7;}
 .theme-service__text {max-width: 1200px; margin: 0 auto; top: 50%; position: relative; transform: translate(0, -50%);}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .theme-service__text {top: 48px; left: 50%; transform: translate(-50%, 0); text-align: center;}
 }
 
 .theme-service__title {font-size: 36px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 24px;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .theme-service__title {font-size: 24px;}
 }
 
 .theme-service__title strong {display: block; font-size: 20px; margin-bottom: 24px;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .theme-service__title strong {font-size: 16px;}
 }
 
 .theme-service__description {font-size: 18px; line-height: 1.5556; letter-spacing: -0.01em; margin-bottom: 60px; display: block; overflow: hidden;}
 .theme-service__description span {display: block;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .theme-service__description {font-size: 14px; margin-bottom: 30px;}
 }
 
 .theme-service__image {position: absolute; top: 50%; left: calc(50% - 84px); padding-top: 48px; transform: translate(0, -50%);}
 .theme-service__image img {height: auto;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 .theme-service__image {width: 100%; padding-top: 0; left: 50%; transform: translate(-47%, 0);}
 .theme-service__image img {width: 100%;}
 }
@@ -216,13 +216,13 @@
 .scene-cover__container {position: absolute; width: 100%; padding: 0 60px;}
 .scene-cover__title {font-size: 80px; font-weight: 700; letter-spacing: -0.02em; overflow: hidden;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .scene-cover__title {font-size: 36px;}
 }
 
 .scene-cover__subtitle {margin-top: 20px; font-size: 20px; font-weight: 500; letter-spacing: -0.01em; color: #666; overflow: hidden;}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .scene-cover__subtitle {font-size: 16px;}
 }
    
@@ -236,7 +236,7 @@
 .floating-menu .btn-f:before {content: ''; position: absolute; top: 50%; left: 50%; width: 24px; height: 24px; background: url(../images/main/fm-more-close.png) 0/100%; transform: translate(-50%, -50%) rotate(0deg); transition: 0.5s;}
 .floating-menu .btn-f.active:before {transform: translate(-50%, -50%) rotate(315deg);}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .floating-menu {bottom: 20px; right: 20px;}
     .floating-menu .fm-inner {position: relative;}
     .floating-menu .fm-section {bottom: 64px;}

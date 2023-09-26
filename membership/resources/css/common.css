@@ -192,7 +192,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 
 .header .header_top{display:block;}
 .header .cont_inner { padding-bottom:0; text-align:center}
-.header_top .logo {position:absolute;  z-index:1; top:19px; left:3.125%; width:97px; height:33px; background: url(../images/logo_w.svg);}
+.header_top .logo {position:absolute;  z-index:1; top:19px; left:3.125%; width:97px; height:33px; background: url(../images/logo_w.svg) 0/100%;}
 body.is_pc .header_top .logo object {width:97px; height:33px;} 
 body.is_mobile .header_top .logo object {width:72px; height:24px;} 
 .header_top .btn_menu {display:none}
@@ -214,7 +214,7 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 .header .btn_menu:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_menu.svg') center center no-repeat;background-size:24px auto;}
 
 .main-page .header.dark .header_gnb li a {color: #111;}
-.main-page .header.dark .header_top .logo {background: url(../images/logo_b.svg);}
+.main-page .header.dark .header_top .logo {background: url(../images/logo_b.svg) 0/100%;}
 .main-page .header.dark .header_wrap .header_util_area button {color: #111;}
 
 
@@ -839,7 +839,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
     .board_st01 .board_detail { margin-left:0;}
 }
 
-@media (max-width:768px){
+@media (max-width:767px){
 
 	.container { padding:84px 0 80px;}
 	.tooltip_layer p {max-width:250px; }

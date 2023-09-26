@@ -73,7 +73,6 @@ keyvisualContents.forEach((content, i) => {
     let imgW = 12;
     scrollImg.forEach((item, i) => {
       imgW += item.clientWidth + 12;
-      console.log(i, imgW);
     });
 
     content.tl = gsap
@@ -190,7 +189,7 @@ const mediaService = document.querySelector(".media-service");
 // 매체 마스크 이미지 영역
 window.addEventListener("scroll", () => {
   function isMobileSize() {
-    return window.innerWidth <= 768; // 768px를 모바일 기준으로 설정
+    return window.innerWidth <= 767; // 768px를 모바일 기준으로 설정
   }
   const header = document.querySelector(".header");
   const windowHeight = window.innerHeight;
@@ -201,7 +200,7 @@ window.addEventListener("scroll", () => {
   const msImg3 = document.querySelectorAll(".ms-img3");
   const msImg5 = document.querySelectorAll(".ms-img5");
 
-  if (!isMobileSize()) {
+  if (!isTabletSize()) {
     let scrollTop = window.scrollY;
     let msOffsetY = ms.getBoundingClientRect().top;
     // 처음 이미지가 올라오는 부분
@@ -250,23 +249,9 @@ const mediaServices = gsap.utils.toArray(".media-service__content");
 function isMobileSize() {
   return window.innerWidth <= 768; // 768px를 모바일 기준으로 설정
 }
-if (isMobileSize) {
-  const msImgWrap = document.querySelectorAll(".ms-img-wrap");
-  let imgW =
-    $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-  let content = [];
-  msImgWrap.forEach((content, i) => {
-    content[i] = content;
-    ScrollTrigger.create({
-      trigger: content[i],
-      start: "top 90%",
-      end: "bottom 0%",
-      scrub: true,
-      animation: gsap.to(content[i], {
-        x: -(imgW - winInWidth),
-      }),
-    });
-  });
+
+function isTabletSize() {
+  return window.innerWidth <= 1023; // 768px를 모바일 기준으로 설정
 }
 
 // mediaServices.forEach((service, i) => {
@@ -394,6 +379,28 @@ themeServices.forEach((service, i) => {
     );
 });
 
+// gsap 반응형
+let mm = gsap.matchMedia();
+
+mm.add("(max-width: 767px)", () => {
+  let imgW =
+    $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
+
+  msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
+  let content = [];
+  msImgWrap.forEach((content, i) => {
+    content[i] = content;
+    ScrollTrigger.create({
+      trigger: content[i],
+      start: "top 90%",
+      end: "bottom 0%",
+      scrub: true,
+      animation: gsap.to(content[i], { x: -(imgW - winInWidth) }),
+    });
+  });
+});
+
+// 플로팅메뉴
 $.fn.floatingMenu = function () {
   var fmBody = this;
   var fmSection = fmBody.find(".fm-section");

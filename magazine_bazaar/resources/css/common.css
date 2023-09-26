@@ -254,7 +254,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_more_wrap .more:disabled:after,
 .btn_more_wrap .more.disabled:after{opacity:0.4;}
 
-.btn_wrap{display:flex;justify-content:space-between;margin-top:80px;border:1px solid red;}
+.btn_wrap{display:flex;justify-content:space-between;margin-top:80px;}
 .btn_wrap .btn{width:100%;min-width:auto;}
 .btn_wrap .btn ~ .btn{margin-left:16px;}
 

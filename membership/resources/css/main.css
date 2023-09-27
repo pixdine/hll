@@ -2,6 +2,7 @@
 .main-page .header {position: fixed; top: 0; left: 0; right: 0; max-width: none;}
 .main-page .header_wrap {max-width: 1280px; margin: auto; position: relative;}
 .main-page :not(.isMenuShow) + .header {background-color: transparent;}
+.main-page :not(.isMenuShow) + .header.am-open {background-color: #fff;}
 .main-page :not(.isMenuShow) + .header .logo path {fill: #fff;}
 .main-page :not(.isMenuShow) + .header .gnb_menu a {color: #fff;}
 .main-page :not(.isMenuShow) + .header .header_util_area .ctype2 {color: #fff;}

@@ -240,6 +240,7 @@ function allmenuOpenMo() {
     $(".allmenu_wrap").stop().fadeIn(100);
     disableScroll();
     $(".header_top .btn_menu").addClass("on");
+    $(".header").addClass("am-open");
   }
 
   function close() {
@@ -247,6 +248,7 @@ function allmenuOpenMo() {
 
     if (popup.stack.length === 0) enableScroll();
     $(".header_top .btn_menu").removeClass("on");
+    $(".header").removeClass("am-open");
   }
 
   $(".header_top .btn_menu")

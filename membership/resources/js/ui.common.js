@@ -201,13 +201,17 @@ $(window)
     if (window.innerWidth > 768) {
       //PC
       $("body").removeClass("is_mobile").addClass("is_pc");
-      allmenuItemSizeInitPc();
     } else {
       //Mobile
       $("body").removeClass("is_pc").addClass("is_mobile");
-      allmenuItemSizeInitMo();
     }
     initOnDevice();
+
+    if (window.innerWidth > 899) {
+      allmenuItemSizeInitPc();
+    } else {
+      allmenuItemSizeInitMo();
+    }
   })
   .resize();
 
@@ -248,8 +252,13 @@ function allmenuOpenMo() {
   $(".header_top .btn_menu")
     .off()
     .on("click.allmenuOpenMo", function () {
-      if ($(this).hasClass("on")) close();
-      else open();
+      if ($(this).hasClass("on")) {
+        $(".header").removeClass("dark");
+        close();
+      } else {
+        $(".header").addClass("dark");
+        open();
+      }
     });
 
   $(".allmenu_list.depth1 > li").each(function () {

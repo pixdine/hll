@@ -469,5 +469,6 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 
 @media (max-width:640px){
     .shopping_list li {width:87.165%; height:420px}
+    .ab_shoppingbox .bt_area { bottom:32px}
     .ab_shoppingbox .prd_img { width:182px; margin:0 auto }
 }

@@ -404,7 +404,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 .ticker {padding: 100px 0; margin-bottom: 180px; background: #F7F7F7;}
 .carouselTicker + .carouselTicker {margin-top: 24px;}
 .carouselTicker__list {overflow: hidden; will-change: transform;}
-.carouselTicker .carouselTicker__item {width: auto; height: auto; padding: 0 12px; float: left;}
+.carouselTicker .carouselTicker__item {padding: 0 12px; float: left;}
 .carouselTicker .carouselTicker__item .ticker_img {position: relative;}
 .carouselTicker .carouselTicker__item img {height: 349px; box-sizing: border;}
 .carouselTicker .carouselTicker__item .ticker_info {position: absolute; bottom: 0; left: 0; right: 0; height: 160px; padding: 76px 32px 0; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}

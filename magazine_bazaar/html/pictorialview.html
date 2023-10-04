@@ -426,8 +426,8 @@
 											<!-- 리스트 -->
 											<!-- D: 리스트 최대 3개 노출, 리스트가 3개 이하일 경우에도 기사 더보기 버튼 노출 -->
 											<div class="tag_atc_list">
-												<ul class="swiper-wrapper">
-													<li class="swiper-slide">
+												<ul>
+													<li>
 														<div class="atcbox">
 															<a href="#">
 																<div class="imgbox">
@@ -440,7 +440,7 @@
 															</a>
 														</div>
 													</li>
-													<li class="swiper-slide">
+													<li>
 														<div class="atcbox">
 															<a href="#">
 																<div class="imgbox">
@@ -453,7 +453,7 @@
 															</a>
 														</div>
 													</li>
-													<li class="swiper-slide">
+													<li>
 														<div class="atcbox">
 															<a href="#">
 																<div class="imgbox">
@@ -525,10 +525,82 @@
                                         </div>
                                     </a>
                                 </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker01.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">광클 필수! 재빠르게 구매 버튼을 클릭해야 할 '신상' 스니커즈 2</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker02.png">
+                                        <div class="ticker_info">
+                                             <p class="desc_txt">‘너! 내 신발이 돼라!’ 애니메이션에 빠진 스니커즈 #신상신GO</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker03.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">이번엔 누구와? 협업 장인 반스와 컨버스의 파트너는?</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                 <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker04.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">돌아온 카고 열풍! 이번 시즌 카고 팬츠 말고, 카고 스커트 어때? #명품네컷</p>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="carouselTicker ltr">
                             <ul class="carouselTicker__list">
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker05.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">전종서와 다미아니가 만난 나른한 무드의 주얼리 화보는?</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker06.png">
+                                        <div class="ticker_info">
+                                             <p class="desc_txt">종이접기를 연상하게 하는 로에베 신제품의 정체는?</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker07.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">내 발에 착! 감기는 인생 러닝화를 찾고 있다면? #신상신Go</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker08.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">구찌 뱀부 1947 백과 함께한 시적인 시</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="carouselTicker__item">
+                                    <a href="#" class="ticker_img">
+                                        <img src="../resources/images/temp/temp_ticker09.png">
+                                        <div class="ticker_info">
+                                            <p class="desc_txt">‘바비 코어 룩’ 데일리로 코디하는 법? #B_STAR일링</p>
+                                        </div>
+                                    </a>
+                                </li>
                                 <li class="carouselTicker__item">
                                     <a href="#" class="ticker_img">
                                         <img src="../resources/images/temp/temp_ticker05.png">
@@ -784,9 +856,37 @@
         window.onload = function () {
             // 이미지까지 로드 후 호출 티커는 페이지 하단
             // 티커 마우스 올리면 멈추고 스와이프로 방향전환 가능
-            $('.carouselTicker.rtl').carouselTicker(); //우측에서 좌측
-            $('.carouselTicker.ltr').carouselTicker().next(); //좌측에서 우측
+             //우측에서 좌측
+            $('.carouselTicker.rtl').carouselTicker({
+                speed:4
+            });
+            //좌측에서 우측
+            $('.carouselTicker.ltr').carouselTicker({
+                speed:4
+            }).next(); 
         }
+
+        $(window).on("resize", function () {
+            $('.carouselTicker').tickerResizeWidth(); //우측에서 좌측
+        });
+
+
+        // 티커 리사이즈시 이미지값 다시 가져오기
+        $.fn.tickerResizeWidth = function () {
+        var tickerBody = [];
+        return this.each(function (i) {
+            tickerBody[i] = $(this).find('.carouselTicker__list');
+            var itemWidth = 0;
+            var item = tickerBody[i].find(".carouselTicker__item");
+             console.log("length", item.length);
+            for (j = 0; j < item.length; j++) {
+            itemWidth += item.eq(j).innerWidth();
+             console.log(j, itemWidth);
+            }
+            tickerBody[i].width(itemWidth);
+        });
+        };
+
 	</script>
 	<!-- //js -->
 

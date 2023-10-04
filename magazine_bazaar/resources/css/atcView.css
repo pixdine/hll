@@ -122,7 +122,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .tag_list li{display:inline-block;vertical-align:top;}
 .tag_list li a{display:block;min-height:36px;padding:6px 16px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;color:#111;}
 .tag_list li.on a{background-color:#111;border-color:#111;font-weight:500;color:#fff;}
-.tag_atc_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
+.tag_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 24px;}
 .tag_atc_list li{width:calc(33.333% - 16px);}
 
 /* 중간제목 파티클 > 기존 파티클 */

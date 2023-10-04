@@ -341,8 +341,8 @@
 
 /* 짝수 이미지+텍스트 모듈 (셀러브리티 스타일) */
 .even_atc_wrap{margin-bottom:180px;}
-.even_atc_list ul{display:flex;flex-wrap:wrap;margin:0 -12px;gap:50px 0;}
-.even_atc_list li{width:50%;padding:0 12px;}
+.even_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 24px;}
+.even_atc_list li{width:calc(50% - 12px)}
 .even_atc_list .atcbox .imgbox{padding-top:62.5851%;}
 
 /* 개인정보 수집 및 이용동의 */
@@ -644,10 +644,9 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.pic_atc_list .grid li:last-child{margin-bottom: 0;}
 
 	.even_atc_wrap{margin-bottom:80px;}
-	.even_atc_list ul{display:block;overflow:hidden;overflow-x:auto;display:block;margin:0 -20px;padding:0 20px;font-size:0;white-space:nowrap;}
-	.even_atc_list ul::-webkit-scrollbar{display:none;}
-	.even_atc_list li{display:inline-block;width:87.165%;margin-left:12px;padding:0;vertical-align:top;}
-	.even_atc_list li:first-of-type{margin-left:0;}
+	.even_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
+	.even_atc_list ul{flex-wrap:nowrap;gap:0;}
+	.even_atc_list li{width:87.165%;margin-right:12px;}
 
 	.popup_register .popup_head{min-height:48px;}
 	.popup_register .popup_cont .stit{font-size:22px;line-height:32px;}

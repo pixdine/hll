@@ -30,7 +30,7 @@ $(document).ready(function () {
   top3AtcList();
   tagAtcList();
   evenAtcList();
-	shoppingList();
+  shoppingList();
 
   // 지도 상세 설명 더보기 토글
   $(".comment_box").commentToggle();
@@ -631,7 +631,7 @@ function issueAtcList() {
     ww = window.innerWidth;
 
     //768px 부터 swiper 실행
-    if (ww < 769 && mySwiper == undefined) {
+    if (ww <= 768 && mySwiper == undefined) {
       issueAtcList.each(function () {
         //각각을 스와이프 적용
         gaps = "-3%";
@@ -650,7 +650,7 @@ function issueAtcList() {
           watchOverflow: true,
         });
       });
-    } else if (ww > 769 && mySwiper != undefined) {
+    } else if (ww > 768 && mySwiper != undefined) {
       issueAtcList.each(function () {
         this.swiper.destroy(); //각각을 파괴함.
       });
@@ -674,7 +674,7 @@ function tagAtcList() {
     ww = window.innerWidth;
 
     //768px 부터 swiper 실행
-    if (ww < 769 && mySwiper == undefined) {
+    if (ww <= 768 && mySwiper == undefined) {
       tagAtcList.each(function () {
         //각각을 스와이프 적용
         mySwiper = new Swiper(this, {
@@ -688,7 +688,7 @@ function tagAtcList() {
           watchOverflow: true,
         });
       });
-    } else if (ww > 769 && mySwiper != undefined) {
+    } else if (ww > 768 && mySwiper != undefined) {
       tagAtcList.each(function () {
         this.swiper.destroy(); //각각을 파괴함.
       });
@@ -712,7 +712,7 @@ function evenAtcList() {
     ww = window.innerWidth;
 
     //768px 부터 swiper 실행
-    if (ww < 769 && mySwiper == undefined) {
+    if (ww <= 768 && mySwiper == undefined) {
       evenAtcList.each(function () {
         //각각을 스와이프 적용
         mySwiper = new Swiper(this, {
@@ -726,7 +726,7 @@ function evenAtcList() {
           watchOverflow: true,
         });
       });
-    } else if (ww > 769 && mySwiper != undefined) {
+    } else if (ww > 768 && mySwiper != undefined) {
       evenAtcList.each(function () {
         this.swiper.destroy(); //각각을 파괴함.
       });
@@ -897,7 +897,7 @@ function setAtcList() {
     ww = window.innerWidth;
 
     //768px 부터 swiper 실행
-    if (ww < 769 && mySwiper == undefined) {
+    if (ww <= 768 && mySwiper == undefined) {
       setAtcList.each(function () {
         //각각을 스와이프 적용
         mySwiper = new Swiper(this, {
@@ -918,7 +918,7 @@ function setAtcList() {
           watchOverflow: true,
         });
       });
-    } else if (ww > 769 && mySwiper != undefined) {
+    } else if (ww > 768 && mySwiper != undefined) {
       setAtcList.each(function () {
         this.swiper.destroy(); //각각을 파괴함.
       });

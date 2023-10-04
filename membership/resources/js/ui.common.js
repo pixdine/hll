@@ -506,7 +506,7 @@ function pointAddList(){
 		ww = window.innerWidth;
 
 		//768px 부터 swiper 실행
-		if(ww < 769 && mySwiper == undefined){
+		if(ww <= 768 && mySwiper == undefined){
 			pointAddList.each(function(){//각각을 스와이프 적용
 				mySwiper = new Swiper(this, {
 					slidesPerView: 1.6,
@@ -519,7 +519,7 @@ function pointAddList(){
 					watchOverflow: true,
 				});
 			});
-		} else if(ww > 769 && mySwiper != undefined){
+		} else if(ww > 768 && mySwiper != undefined){
 			pointAddList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});

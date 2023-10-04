@@ -832,7 +832,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.allmenu_wrap .cont_inner { padding:48px 20px; }
 
 	/* 전체메뉴 로그인 */
-	.allmenu_wrap .info_box {display: block !important; padding:40px 0 40px; border-bottom:1px solid #DBDBDB}
+	.allmenu_wrap .info_box {display: block; padding:40px 0 40px; border-bottom:1px solid #DBDBDB}
 	.allmenu_wrap .info_box .info_txt {font-size:22px; line-height:32px; font-weight:400}
 	.allmenu_wrap .info_box .info_txt strong {font-weight:700; display:block}
 	.allmenu_wrap .info_box .btn_b { margin-top:40px; }

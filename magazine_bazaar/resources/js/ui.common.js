@@ -608,7 +608,7 @@ function issueAtcList(){
 		ww = window.innerWidth;
 
 		//768px 부터 swiper 실행
-		if(ww < 769 && mySwiper == undefined){
+		if(ww <= 768 && mySwiper == undefined){
 			issueAtcList.each(function(){//각각을 스와이프 적용
 				gaps = '-3%';
 				mySwiper = new Swiper(this, {
@@ -626,7 +626,7 @@ function issueAtcList(){
 					watchOverflow: true,
 				});
 			});
-		} else if(ww > 769 && mySwiper != undefined){
+		} else if(ww > 768 && mySwiper != undefined){
 			issueAtcList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});
@@ -650,7 +650,7 @@ function tagAtcList(){
 		ww = window.innerWidth;
 
 		//768px 부터 swiper 실행
-		if(ww < 769 && mySwiper == undefined){
+		if(ww <= 768 && mySwiper == undefined){
 			tagAtcList.each(function(){//각각을 스와이프 적용
 				mySwiper = new Swiper(this, {
 					slidesPerView: 1.5,
@@ -663,7 +663,7 @@ function tagAtcList(){
 					watchOverflow: true,
 				});
 			});
-		} else if(ww > 769 && mySwiper != undefined){
+		} else if(ww > 768 && mySwiper != undefined){
 			tagAtcList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});
@@ -687,7 +687,7 @@ function evenAtcList(){
 		ww = window.innerWidth;
 
 		//768px 부터 swiper 실행
-		if(ww < 769 && mySwiper == undefined){
+		if(ww <= 768 && mySwiper == undefined){
 			evenAtcList.each(function(){//각각을 스와이프 적용
 				mySwiper = new Swiper(this, {
 					slidesPerView: 1.14,
@@ -700,7 +700,7 @@ function evenAtcList(){
 					watchOverflow: true,
 				});
 			});
-		} else if(ww > 769 && mySwiper != undefined){
+		} else if(ww > 768 && mySwiper != undefined){
 			evenAtcList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});
@@ -826,7 +826,7 @@ function setAtcList(){
 		ww = window.innerWidth;
 
 		//768px 부터 swiper 실행
-		if(ww < 769 && mySwiper == undefined){
+		if(ww <= 768 && mySwiper == undefined){
 			setAtcList.each(function(){//각각을 스와이프 적용
 				mySwiper = new Swiper(this, {
 					spaceBetween: 20,
@@ -846,7 +846,7 @@ function setAtcList(){
 					watchOverflow: true,
 				});
 			});
-		} else if(ww > 769 && mySwiper != undefined){
+		} else if(ww > 768 && mySwiper != undefined){
 			setAtcList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});

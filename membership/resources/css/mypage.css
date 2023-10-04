@@ -432,11 +432,11 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     body.is_mobile .myscrap_wrap .myscrap_list ul {flex-direction: row;}
     body.is_mobile .myscrap_list .swiper-wrapper {}
     body.is_mobile .myscrap_list .swiper-slide { display:flex; margin-left:0; width: 100%; height:auto; flex-wrap: wrap;  flex-direction: row; justify-content: space-between}
-    body.is_mobile .myscrap_wrap .myscrap_list ul li.swiper-slide .atcbox {width:calc(50% - 6px); margin-bottom:24px; text-align:center}
-    body.is_mobile .myscrap_list .swiper-slide .atcbox { height:246px}
+    body.is_mobile .myscrap_wrap .myscrap_list ul li.swiper-slide .atcbox {width:calc(50% - 12px); margin-bottom:24px; text-align:center}
+    body.is_mobile .myscrap_list .swiper-slide .atcbox {/* height:246px*/}
     body.is_mobile .myscrap_list .atcbox .txtbox { text-align:left}
-    body.is_mobile .myscrap_list .atcbox .txtbox .tit { font-size:14px; font-weight:500; line-height:1.5;}
-    body.is_mobile .myscrap_list .swiper-slide .imgbox { width:100%; height:65.85%; padding:0;}
+    body.is_mobile .myscrap_list .atcbox .txtbox .tit { font-size:14px; font-weight:500; line-height:1.5; height:46px}
+    body.is_mobile .myscrap_list .swiper-slide .imgbox { width:100%; padding:0; padding-top:100%}
     body.is_mobile .myscrap_list .atcbox .imgbox img { display:inline-block}
     body.is_mobile .myscrap_list .swiper-slide .price_p {font-size:14px; font-family:'Gotham'; font-weight:500; line-height:1; text-align:center; margin-top:14px }
     body.is_mobile .myscrap_wrap .myscrap_list ul li + li { margin-top:0 }
@@ -588,7 +588,13 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_save_list li { padding:20px 16px}
 }
 
+@media (max-width:640px){
+    body.is_mobile .myscrap_wrap .myscrap_list ul li.swiper-slide .atcbox {width:calc(50% - 6px);}
+}
+
 @media (max-width:375px){
+    body.is_mobile .myscrap_list .swiper-slide .atcbox { height:246px}
+    body.is_mobile .myscrap_list .swiper-slide .imgbox { height:65.85%; padding:0;}
     .point_change_cont .p_change .inputbox .inp {width:191px}
 }
 

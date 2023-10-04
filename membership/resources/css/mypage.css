@@ -307,9 +307,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .other_go .go_event a span.ico_arr07 { display:block; width:20px; height:10px; background-image: url("data:image/svg+xml,%3Csvg width='22' height='12' viewBox='0 0 22 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-6.95394e-07 6L20 6M20 6L14.2857 11M20 6L14.2857 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A"); background-size:100% 100%;; margin-top:17px}
 
 /* 포인트 모으기 */
-.point_add_list{ }
-.point_add_list ul {display:flex; margin:0 -12px}
-.point_add_list li {width:25%;padding:0 12px;}
+.point_add_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
+.point_add_list li{width:calc(25% - 18px);}
 .point_add_list .atcbox{position:relative;width:100%;height:100%;}
 .point_add_list .atcbox .imgbox{padding-top:133.334%;}
 
@@ -576,11 +575,9 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .other_go .go_event a {font-size:14px; line-height:20px;}
     .other_go .go_event a span.ico_arr07 { height:8.57px; width:17.14px}
 
-    .point_add_list {}
-    .point_add_list ul{ overflow:hidden;overflow-x:auto;white-space:nowrap;margin:0 -20px;padding:0 20px;font-size:0;}
-    .point_add_list ul::-webkit-scrollbar{display:none;}
-    .point_add_list li{width:65.377%; display:inline-block; margin-right:12px; padding:0; flex-shrink: 0;}
-    .point_add_list li:last-child{margin-right:0;}
+    .point_add_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
+    .point_add_list ul{flex-wrap:nowrap;gap:0;}
+    .point_add_list li{width:61.194%;margin-right:12px;}
     .moa_wrap .has_plus:after {background-position:center 3px;}
 
     .tbl_btm_area .btn_txt03 + .btn_area { margin-top:30px}

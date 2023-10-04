@@ -4,6 +4,7 @@ $(document).ready(function () {
   scrollContList();
   inputBind();
   scrapList();
+  pointAddList();
 
   //키워드 태그
   $(".tag_wrap .btnbox .btn_ico").on("click", tagOpen);
@@ -493,6 +494,43 @@ function scrapList() {
       initSwiper();
     });
   });
+}
+
+//이 기사엔 이런 키워드 리스트
+function pointAddList(){
+	var pointAddList = $('.point_add_list'),
+		mySwiper = undefined;
+	if(pointAddList.length <= 0) return;
+
+	function initSwiper() {
+		ww = window.innerWidth;
+
+		//768px 부터 swiper 실행
+		if(ww < 769 && mySwiper == undefined){
+			pointAddList.each(function(){//각각을 스와이프 적용
+				mySwiper = new Swiper(this, {
+					slidesPerView: 1.6,
+					spaceBetween: 12,
+					loop: false,
+					autoplay: false,
+					speed: 1000,
+					observer: true,
+					observeParents: true,
+					watchOverflow: true,
+				});
+			});
+		} else if(ww > 769 && mySwiper != undefined){
+			pointAddList.each(function(){
+				this.swiper.destroy(); //각각을 파괴함.
+			});
+			mySwiper = undefined;
+		}
+	}
+
+	$(window).on('resize', function () {
+		initSwiper();
+	});
+	initSwiper();
 }
 
 //full popup

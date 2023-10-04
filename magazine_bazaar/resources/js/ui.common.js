@@ -1051,6 +1051,22 @@ $(window).on("load resize", function () {
   $(".comment_box").commentToggle();
 });
 
+// 티커 리사이즈시 이미지값 다시 가져오기
+$.fn.tickerResizeWidth = function () {
+  var tickerBody = [];
+  return this.each(function (i) {
+    tickerBody[i] = $(this).find(".carouselTicker__list");
+    var itemWidth = 0;
+    var item = tickerBody[i].find(".carouselTicker__item");
+    console.log("length", item.length);
+    for (j = 0; j < item.length; j++) {
+      itemWidth += item.eq(j).outerWidth();
+      console.log(j, itemWidth);
+    }
+    tickerBody[i].width(itemWidth + 1);
+  });
+};
+
 // 공통탭 컨텐츠
 $.fn.commonTab = function () {
   return this.each(function (i) {

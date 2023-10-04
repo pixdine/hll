@@ -858,35 +858,17 @@
             // 티커 마우스 올리면 멈추고 스와이프로 방향전환 가능
              //우측에서 좌측
             $('.carouselTicker.rtl').carouselTicker({
-                speed:4
+                speed:1
             });
             //좌측에서 우측
             $('.carouselTicker.ltr').carouselTicker({
-                speed:4
+                speed:1
             }).next(); 
         }
 
         $(window).on("resize", function () {
             $('.carouselTicker').tickerResizeWidth(); //우측에서 좌측
         });
-
-
-        // 티커 리사이즈시 이미지값 다시 가져오기
-        $.fn.tickerResizeWidth = function () {
-        var tickerBody = [];
-        return this.each(function (i) {
-            tickerBody[i] = $(this).find('.carouselTicker__list');
-            var itemWidth = 0;
-            var item = tickerBody[i].find(".carouselTicker__item");
-             console.log("length", item.length);
-            for (j = 0; j < item.length; j++) {
-            itemWidth += item.eq(j).innerWidth();
-             console.log(j, itemWidth);
-            }
-            tickerBody[i].width(itemWidth);
-        });
-        };
-
 	</script>
 	<!-- //js -->
 

@@ -30,6 +30,7 @@ $(document).ready(function () {
   top3AtcList();
   tagAtcList();
   evenAtcList();
+	shoppingList();
 
   // 지도 상세 설명 더보기 토글
   $(".comment_box").commentToggle();
@@ -737,6 +738,48 @@ function evenAtcList() {
     initSwiper();
   });
   initSwiper();
+}
+
+//상품모듈
+function shoppingList(){
+	var shoppingList = $('.shopping_list'),
+		mySwiper = undefined;
+	if(shoppingList.length <= 0) return;
+
+	function initSwiper() {
+		ww = window.innerWidth;
+
+		//768px 부터 swiper 실행
+		if(ww <= 768 && mySwiper == undefined){
+			shoppingList.each(function(){//각각을 스와이프 적용
+				mySwiper = new Swiper(this, {//초기값 설정 모바일값 먼저
+					slidesPerView: 1.14,
+					spaceBetween: 12,
+					loop: false,
+					autoplay: false,
+					speed: 1000,
+					observer: true,
+					observeParents: true,
+					watchOverflow: true,
+					breakpoints: {
+						640: {//브라우저가 640보다 클 때
+							slidesPerView: 2,
+						},
+					}
+				});
+			});
+		} else if(ww > 768 && mySwiper != undefined){
+			shoppingList.each(function(){
+				this.swiper.destroy(); //각각을 파괴함.
+			});
+			mySwiper = undefined;
+		}
+	}
+
+	$(window).on('resize', function () {
+		initSwiper();
+	});
+	initSwiper();
 }
 
 //full popup

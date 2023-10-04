@@ -28,6 +28,7 @@ $(document).ready(function(){
     articleSlideMo()
     colslideAtcList();
 	top3AtcList();
+	tagAtcList();
 
     // 지도 상세 설명 더보기 토글
     $('.comment_box').commentToggle();
@@ -477,6 +478,9 @@ function top3AtcList(){
 					loop: false,
 					autoplay: false,
 					speed: 1000,
+					observer: true,
+					observeParents: true,
+					watchOverflow: true,
 				});
 			});
 		} else if(ww > 768 && mySwiper != undefined){
@@ -623,6 +627,43 @@ function issueAtcList(){
 			});
 		} else if(ww > 769 && mySwiper != undefined){
 			issueAtcList.each(function(){
+				this.swiper.destroy(); //각각을 파괴함.
+			});
+			mySwiper = undefined;
+		}
+	}
+
+	$(window).on('resize', function () {
+		initSwiper();
+	});
+	initSwiper();
+}
+
+//이 기사엔 이런 키워드 리스트
+function tagAtcList(){
+	var tagAtcList = $('.tag_atc_list'),
+		mySwiper = undefined;
+	if(tagAtcList.length <= 0) return;
+
+	function initSwiper() {
+		ww = window.innerWidth;
+
+		//768px 부터 swiper 실행
+		if(ww < 769 && mySwiper == undefined){
+			tagAtcList.each(function(){//각각을 스와이프 적용
+				mySwiper = new Swiper(this, {
+					slidesPerView: 1.5,
+					spaceBetween: 12,
+					loop: false,
+					autoplay: false,
+					speed: 1000,
+					observer: true,
+					observeParents: true,
+					watchOverflow: true,
+				});
+			});
+		} else if(ww > 769 && mySwiper != undefined){
+			tagAtcList.each(function(){
 				this.swiper.destroy(); //각각을 파괴함.
 			});
 			mySwiper = undefined;

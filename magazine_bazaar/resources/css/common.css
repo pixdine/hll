@@ -891,7 +891,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.btn_ico.download:after{width:16px;height:16px;background-image:url('../images/ico_download_16.svg');}
 
 	.btn_more_wrap.type1{margin-top:40px;}
-	.btn_more_wrap.type2{margin-top:32px;}
+	.btn_more_wrap.type2{margin-top:30px;}
 	.btn_more_wrap .btn{height:44px;font-size:14px;}
 
 	.btn_wrap{margin-top:60px;}

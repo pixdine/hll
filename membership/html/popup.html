@@ -181,6 +181,7 @@
                         <button type="button" data-alert-open="alert_7"><span>얼럿7_가장 긴 케이스</span></button><br>
                         <button type="button" data-alert-open="alert_8"><span>얼럿8_로그아웃</span></button><br>
                         <button type="button" data-alert-open="alert_9"><span>얼럿9_비밀번호변경</span></button><br>
+                        <button type="button" data-alert-open="alert_10"><span>얼럿10_포인트 전환</span></button><br>
 					</div>
                 </div>
             </div>
@@ -788,6 +789,39 @@
             </div>
             <div class="popup_close">
                 <button type="button" class="btn_close" data-alert-close="alert_9"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 포인트전환 alter -->
+    <div class="popup_alert" data-alert="alert_10">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    OK캐시백으로 전환할<br />
+                    포인트를 입력해 주세요.
+                </p>
+                <div class="point_change_cont">
+                    <div class="p_change">
+                        <div class="p_change_box">
+                            <div class="inputbox error">
+                                <input type="text" placeholder="100 포인트 단위로 입력" class="inp">
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                                <p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
+                                <p class="row_err_txt">전환가능 포인트 이하로 입력해주세요.</p>
+                            </div>
+                            <span class="unit">P</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>포인트 전환</span></button><!-- 비활성화 disabled -->
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_10"><span class="blind">닫기</span></button>
             </div>
         </div>
     </div>

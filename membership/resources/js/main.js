@@ -252,9 +252,8 @@ gsap.utils.toArray(".scene-cover__container .direction-up").forEach((item) => {
     scrollTrigger: {
       trigger: item,
       start: "-200 100%",
-      end: "+200 10%",
+      end: "200 10%",
       toggleActions: "play reverse play reverse",
-      markers: true
     },
   });
 });

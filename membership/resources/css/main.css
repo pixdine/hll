@@ -9,6 +9,14 @@
 .main-page .section-link {font-size: 16px; line-height: 1.25; padding: 16px 52px 16px 24px; border: 1px solid rgba(255, 255, 255, 0.6); background-image: url(../../resources/images/main/main-page_button-arrow.svg); background-position: right 24px center; background-repeat: no-repeat;}
 .main-page .section-link--dark {border-color: rgba(17, 17, 17, 0.6); background-image: url(../../resources/images/main/main-page_button-arrow-dark.svg);}
 
+.main-page .header.dark .header_gnb li a {color: #111;}
+.main-page .header.dark .header_top .logo {background: url(../images/logo_b.svg) 0/100%;}
+.main-page .header.dark .header_wrap .header_util_area button {color: #111;}
+.main-page .header.bg-white {background: #fff;}
+.main-page .header.bg-white .header_gnb li a {color: #111;}
+.main-page .header.bg-white .header_top .logo {background: url(../images/logo_b.svg) 0/100%;}
+.main-page .header.bg-white .header_wrap .header_util_area button {color: #111;}
+
 @media screen and (max-width: 767px) {
     .main-page .section-link {font-size: 14px; padding: 12px 52px 12px 20px;}
 }

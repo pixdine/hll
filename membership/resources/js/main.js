@@ -447,15 +447,15 @@ $(document).ready(function () {
 });
 
 // 헤더 색상을 위한 섹션별 정의
-const mainSectionArray = document.querySelectorAll(".header-dark");
+const mainSectionArray = document.querySelectorAll(".header-chg-bg");
 mainSectionArray.forEach((item) => {
   ScrollTrigger.create({
     trigger: item,
     start: "top 0%",
     end: "bottom 0%",
-    onEnter: () => $(".header").addClass("dark"),
-    onLeave: () => $(".header").removeClass("dark"),
-    onEnterBack: () => $(".header").addClass("dark"),
-    onLeaveBack: () => $(".header").removeClass("dark"),
+    onEnter: () => $(".header").addClass("bg-white"),
+    onLeave: () => $(".header").removeClass("bg-white"),
+    onEnterBack: () => $(".header").addClass("bg-white"),
+    onLeaveBack: () => $(".header").removeClass("bg-white"),
   });
 });

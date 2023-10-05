@@ -240,10 +240,6 @@ sceneCover.forEach((scene) => {
     trigger: scene,
     start: "top 0%",
     end: "bottom 0%",
-    // onEnter: () => $(".header").addClass("dark"),
-    // onLeave: () => $(".header").removeClass("dark"),
-    // onEnterBack: () => $(".header").addClass("dark"),
-    // onLeaveBack: () => $(".header").removeClass("dark"),
   });
 });
 
@@ -255,9 +251,10 @@ gsap.utils.toArray(".scene-cover__container .direction-up").forEach((item) => {
     ease: "power4.inOut",
     scrollTrigger: {
       trigger: item,
-      start: "-200 90%",
+      start: "-200 100%",
       end: "+200 10%",
       toggleActions: "play reverse play reverse",
+      markers: true
     },
   });
 });

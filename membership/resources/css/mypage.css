@@ -200,6 +200,10 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_change_cont .p_change .btn { margin-left:40px}
 .point_change_cont .p_change .p_change_box { display:flex;justify-content:flex-end; }
 
+/* 포인트 전환 팝업 */
+.popup_alert .point_change_cont {padding:0; text-align:left; height:122px; align-items: flex-start;}
+.popup_alert .point_change_cont .p_change { margin-top:16px}
+
 .point_change_wrap .point_change_cont { margin-top:24px}
 .point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:8px;}
 
@@ -596,6 +600,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     body.is_mobile .myscrap_list .swiper-slide .atcbox { height:246px}
     body.is_mobile .myscrap_list .swiper-slide .imgbox { height:65.85%; padding:0;}
     .point_change_cont .p_change .inputbox .inp {width:191px}
+    .popup_alert .point_change_cont .p_change .inputbox .inp {width:100%;}
 }
 
 @media (max-width:320px){

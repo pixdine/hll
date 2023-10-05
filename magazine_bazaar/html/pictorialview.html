@@ -873,9 +873,16 @@
 
         $(window).resize(function () {
             showTagBtn();
+            marqueeAutoSlideDestroy();
+            marqueeAutoSlide();
         });
 
         window.onload = function () {
+            marqueeAutoSlide();
+        }
+
+        // 기사 오토스크롤링
+        function marqueeAutoSlide() {
             $('#marquee1').marquee({
                 // Set to false if you want to use jQuery animate method
                 allowCss3Support: true,
@@ -910,6 +917,12 @@
                 pauseOnHover: true,
                 startVisible: true
             });
+        }
+
+        // 기사 오토스크롤 destroy
+        function marqueeAutoSlideDestroy() {
+            $('#marquee1').marquee('destroy');
+            $('#marquee2').marquee('destroy');
         }
     </script>
     <!-- //js -->

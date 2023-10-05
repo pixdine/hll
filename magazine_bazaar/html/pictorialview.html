@@ -516,9 +516,10 @@
                     </div>
                     <!--// 상세 > body -->
 
+
                     <!-- ticker -->
                     <div class="ticker">
-                        <div class="marquee marquee__top">
+                        <div id="marquee1" class="marquee">
                             <ul class="marquee__track">
                                 <li class="marquee__item">
                                     <a href="#" class="marquee__img">
@@ -587,7 +588,7 @@
                             </ul>
                         </div>
 
-                        <div class="marquee marquee__bottom">
+                        <div id="marquee2" class="marquee">
                             <ul class="marquee__track">
                                 <li class="marquee__item">
                                     <a href="#" class="marquee__img">
@@ -805,7 +806,7 @@
     <!-- js -->
     <script src="../resources/js/swiper.min.js"></script>
     <script src="../resources/js/ui.common.js"></script>
-    <script src="../resources/js/jquery.kxbdmarquee.js"></script>
+    <script src="../resources/js/jquery.marquee.min.js"></script>
 
     <script>
         currentPage = 'view';
@@ -875,26 +876,41 @@
         });
 
         window.onload = function () {
-            // 하단 기사 오토 스크롤
-            $(".marquee__top").kxbdMarquee({
-                direction: "right",
-                scrollDelay: 20,
-                isEqual: false
+            $('#marquee1').marquee({
+                // Set to false if you want to use jQuery animate method
+                allowCss3Support: true,
+                // CSS3 easing function
+                css3easing: 'linear',
+                // Requires jQuery easing plugin.
+                easing: 'linear',
+                // Time to wait before starting the animation
+                delayBeforeStart: 0,
+                // 'left', 'right', 'up' or 'down'
+                direction: 'right',
+                // Should the marquee be duplicated to show an effect of continues flow
+                duplicated: true,
+                // Duration of the animation
+                duration: 30000,
+                // Space in pixels between the tickers
+                gap: 0,
+                // On cycle pause the marquee
+                pauseOnCycle: false,
+                // Pause on hover
+                pauseOnHover: true,
+                // The marquee is visible initially positioned next to the border towards it will be moving
+                startVisible: true
             });
 
-            $(".marquee__bottom").kxbdMarquee({
-                direction: "left",
-                scrollDelay: 20,
-                isEqual: false
+            $('#marquee2').marquee({
+                direction: 'left',
+                delayBeforeStart: 0,
+                duplicated: true,
+                duration: 30000,
+                gap: 0,
+                pauseOnHover: true,
+                startVisible: true
             });
-
-            // 줄 바뀜으로 인한 트랙 리사이징
-            // setTimeout(() => {
-            //     var mtWidth = $(".marquee .marquee__track").width();
-            //     $(".marquee .marquee__track").width(mtWidth * 10);
-            // }, 100);
         }
-
     </script>
     <!-- //js -->
 

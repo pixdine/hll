@@ -343,6 +343,13 @@ $(window).on("load resize", function () {
       });
     });
   });
+
+  // 미디어 서비스 
+  if (winInWidth > 768) {
+    setTimeout(() => {
+        $(".ms-img-wrap").removeAttr("style");
+    }, 10);
+  }
 });
 
 const mediaServices = gsap.utils.toArray(".media-service__content");

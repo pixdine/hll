@@ -871,19 +871,34 @@
             $('.photoViewer').photoViewerSwiper();
         });
 
+        // 반응형 트리거를 위한 상태 초기화
+        var browSize = "";
+
+        var width = $(window).width();
+        if (width > 768) {
+            browSize = "pc";
+        } else {
+            browSize = "mobile";
+        }
+
         $(window).resize(function () {
             showTagBtn();
 
             var width = $(window).width();
-            console.log("is_test", width)
 
-            if (width > 767) {
-                if (!$("body").hasClass("is_pc")) {
+            if (width > 787) {
+                setTimeout(() => {
+                    browSize = "pc";
+                }, 10);
+                if ($("body").hasClass("is_pc") && browSize == "mobile") {
                     marqueeAutoSlideDestroy();
                     marqueeAutoSlide();
                 }
             } else {
-                if (!$("body").hasClass("is_mobile")) {
+                setTimeout(() => {
+                    browSize = "mobile";
+                }, 10);
+                if ($("body").hasClass("is_mobile") && browSize == "pc") {
                     marqueeAutoSlideDestroy();
                     marqueeAutoSlide();
                 }

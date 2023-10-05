@@ -873,8 +873,23 @@
 
         $(window).resize(function () {
             showTagBtn();
-            marqueeAutoSlideDestroy();
-            marqueeAutoSlide();
+
+            var width = $(window).width();
+            console.log("is_test", width)
+
+            if (width > 767) {
+                if (!$("body").hasClass("is_pc")) {
+                    marqueeAutoSlideDestroy();
+                    marqueeAutoSlide();
+                    console.log("is_pc");
+                }
+            } else {
+                if (!$("body").hasClass("is_mobile")) {
+                    marqueeAutoSlideDestroy();
+                    marqueeAutoSlide();
+                    console.log("is_mobile");
+                }
+            }
         });
 
         window.onload = function () {

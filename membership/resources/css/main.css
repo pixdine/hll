@@ -15,7 +15,7 @@
 .main-page .header.bg-white {background: #fff;}
 .main-page .header.bg-white .header_gnb li a {color: #111;}
 .main-page .header.bg-white .header_top .logo {background: url(../images/logo_b.svg) 0/100%;}
-.main-page .header.bg-white .header_wrap .header_util_area button {color: #111;}
+.main-page .header.bg-white .header_wrap .header_util_area button {color: #666;}
 
 @media screen and (max-width: 767px) {
     .main-page .section-link {font-size: 14px; padding: 12px 52px 12px 20px;}

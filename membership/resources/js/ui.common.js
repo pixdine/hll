@@ -598,6 +598,7 @@ const popup = {
   close: function (_target, _type) {
     var _this = this;
     var targetEl = $(`[data-${_type}="${_target}"]`);
+    $('body').removeAttr("scrolly");
 
     targetEl.fadeOut(100, adjustPad);
 

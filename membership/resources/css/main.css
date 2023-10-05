@@ -97,9 +97,9 @@
 .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
 .media-service__content .media-service__logo {font-size: 0;}
 .media-service .ms-img {position: absolute;}
-.media-service .ms-img1 {bottom: 284px; right: 180px;}
+.media-service .ms-img1 {bottom: 284px; right: 180px; width: 384px;}
 .media-service .ms-img1 img {height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.1s; overflow: hidden; transform: translateY(100%);}
-.media-service .ms-img2 {top: -130px; width: 100%; left: 50%; z-index: 9; margin-left: -588px;}
+.media-service .ms-img2 {top: -130px; width: 100%; left: 50%; z-index: 9; width: 588px; margin-left: -588px;}
 .media-service .ms-img2 img {display: block; height: 0; opacity: 0; transition: 0.7s ease; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img2 img + img {position: relative; top: calc(-100vh - 736px);}
 .media-service__content--cosmopolitan .ms-img2 {top: calc(-100vh - 130px);}

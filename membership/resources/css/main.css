@@ -35,9 +35,9 @@
 .key-visual__container {position: absolute; color: #fff; width: 100%; padding: 0 40px;}
 .key-visual__title {font-size: 28px; font-weight: 700; letter-spacing: -0.01em;}
 .key-visual__title strong {display: block; font-size: 56px; line-height: 1.42857; letter-spacing: -0.02em; margin-top: 24px;}
-.key-visual__title strong {font-size: 28px;}
+.key-visual__title strong {font-size: 56px;}
 .key-visual__description {font-size: 18px; line-height: 1.5556; margin-bottom: 60px; overflow: hidden;}
-.key-visual__description span {display: block; white-space: pre-line;}
+.key-visual__description span {display: block; margin-top: 40px;}
 
 @media screen and (max-width: 767px) {
     .key-visual {display: none;}

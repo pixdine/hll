@@ -259,5 +259,7 @@
 
 @media screen and (max-width: 899px) {
     .main-page .header_top .btn_menu:after {background-image: url(../images/main/ico-menu-mo.png);}
+    .main-page .header_top .btn_menu:after {background-image: url(../images/main/ico-menu-mo.png);}
+    .main-page .bg-white .header_top .btn_menu:after {background-image: url(../images/main/ico-menu-mo-b.png);}
     .main-page .header.dark .header_top .btn_menu.on:after {background-image: url(../images/ico_close_28.svg);}
 }

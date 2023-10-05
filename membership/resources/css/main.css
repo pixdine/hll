@@ -112,7 +112,7 @@
 .media-service__content--cosmopolitan .ms-img3 {bottom: calc(100vh + 80px);}
 .media-service__content--bazaar .ms-img3 {bottom: calc(200vh + 80px);}
 .media-service__content--esquire .ms-img3 {bottom: calc(300vh + 80px);}
-.media-service .ms-img4 { bottom: 368px; left: 140px; width: 180px; height: 240px;}
+.media-service .ms-img4 { bottom: 368px; left: 140px; width: 196px;}
 .media-service .ms-img4 img {position: absolute; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.3s; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img5 {bottom: 164px; right: 80px; width: 180px; height: 240px;}
 .media-service .ms-img5 img {position: absolute; top: 0; right: 0; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.4s; overflow: hidden; transform: translateY(100%);}
@@ -128,7 +128,12 @@
 .media-service.active .ms-img5 img {height: auto; opacity: 1; transform: translateY(0);}
 
 .media-service__subtitle {margin-top: 43px;}
+.media-service__content--elle .media-service__subtitle {font-family: 'ElleGaborStd';}
+.media-service__content--cosmopolitan .media-service__subtitle {font-family: 'NewsGothicExtraCondensedBold';}
+.media-service__content--bazaar .media-service__subtitle {font-family: 'Gotham Book';}
+.media-service__content--esquire .media-service__subtitle {font-family: 'TTNorms-Medium';}
 .media-service__phrase {margin-top: 23px; font-size: 18px; font-weight: 500; line-height: 1.5556; letter-spacing: -0.01em; margin-bottom: 60px;}
+.media-service__content--elle .media-service__phrase {color: #666;}
 
 @media screen and (max-width: 1023px) {
     .media-service .ms-img {transform: scale(0.7);}

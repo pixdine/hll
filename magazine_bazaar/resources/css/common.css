@@ -308,7 +308,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .header_top .btn_menu{display:none;}
 .header_top .btn_search{display:none;margin-left:auto;order:3;margin-right:-8px;}
 
-.header_bottom{height:72px;padding:16px 0;}
+.header_bottom{height:72px;padding:17px 0;}
 .header_bottom .cont_inner{display:flex;align-items:center;}
 .header_bottom .logo{width:109px;height:28px;margin-right:24px;}
 .header_bottom .btn_menu{margin-right:18px;}
@@ -317,10 +317,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .header_navi ul{font-size:0;}
 .header_navi ul li{position:relative;display:inline-block;}
 .header_navi ul li + li{padding-left:32px;}
-.header_navi ul li a{display:block;padding:8px 0;font-family:Gotham, 'Noto Sans KR';font-size:16px;font-weight:500;color:#111;line-height:24px;letter-spacing:0;}
+.header_navi ul li a{display:block;padding:7px 0;font-family:Gotham, 'Noto Sans KR';font-size:16px;font-weight:500;color:#111;line-height:24px;letter-spacing:0;}
 .header_util{display:flex;margin-left:auto;margin-right:-5px;}
 .header_util .aside{display:flex;column-gap:24px}
-.header_util .aside a{display:inline-block;padding:10px 0;;font-family:Gotham, 'Noto Sans KR';font-size:14px;color:#666;line-height:20px;letter-spacing:0;}
+.header_util .aside a{display:inline-block;padding:9px 0;font-family:Gotham, 'Noto Sans KR';font-size:14px;color:#666;line-height:20px;letter-spacing:0;}
 .header_util .aside a:first-child{margin-left:0;}
 
 /* pc header gnb 구분선 */
@@ -392,7 +392,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .allmenu_wrap .etc_link li:first-child{margin-top:0;}
 .allmenu_wrap .etc_link li a{font-size:18px;line-height:26px;}
 .allmenu_wrap .sns_list{margin-top:60px;}
-.allmenu_wrap .sns_list ul{column-gap:29px;}
+.allmenu_wrap .sns_list ul{justify-content:space-between;}
 
 /* 검색 레이어 */
 .search_layer{display:none;position:absolute;left:0;top:72px;width:100%;background-color:#fff;box-shadow:0 5px 5px 0px rgba(0, 0, 0, 0.05);border-top:1px solid #dbdbdb;z-index:50;}
@@ -878,7 +878,7 @@ background:#fff;overflow:hidden;z-index:230}
 }
 @media (max-width:1023px){
 	.header_navi ul li + li{padding-left:24px;}
-	.header_navi ul li a{padding:9px 0;font-size:15px;line-height:22px;}
+	.header_navi ul li a{padding:8px 0;font-size:15px;line-height:22px;}
 	.is_pc .header_navi ul li.line{padding-right:0;}
 	.is_pc .header_navi ul li.line:after{display:none;}
 	.horoscope_list li{width:calc(33.333% - 16px);}
@@ -1245,4 +1245,5 @@ background:#fff;overflow:hidden;z-index:230}
 	.ui-datepicker .ui-datepicker-calendar td{width:auto;}
 	.ui-datepicker td span,
 	.ui-datepicker td a{width:auto;}
+	.allmenu_wrap .sns_list ul{column-gap:normal;}
 }

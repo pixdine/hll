@@ -335,7 +335,7 @@ $(window).on("load resize", function () {
             start: "top 50%",
             end: "bottom 10%",
             scrub: true,
-            markers: true,
+            //markers: true,
             animation: gsap.fromTo(msImgCont[i], 
                 { 
                     x: 0 

@@ -127,7 +127,7 @@
 .media-service.active .ms-img4 img {height: auto; opacity: 1; transform: translateY(0);}
 .media-service.active .ms-img5 img {height: auto; opacity: 1; transform: translateY(0);}
 
-.media-service .media-service__subtitle {margin-top: 43px;}
+.media-service .media-service__subtitle {margin-top: 43px; font-size: 28px;}
 .media-service .media-service__content--elle .media-service__subtitle {font-family: 'ElleGaborStd';}
 .media-service .media-service__content--cosmopolitan .media-service__subtitle {font-family: 'NewsGothicExtraCondensedBold';}
 .media-service .media-service__content--bazaar .media-service__subtitle {font-family: 'Gotham Book';}

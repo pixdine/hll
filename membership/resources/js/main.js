@@ -229,7 +229,7 @@ gsap.set(keyvisualContents[0], { autoAlpha: 1 });
   
 // 오프닝 영상
 const beginMotion = (e) => {
-    if (keyvisualVideo.currentTime > 1.9 && !initialized) {
+    if (keyvisualVideo.currentTime > 1.2 && !initialized) {
         keyvisualContents[0].tl.timeScale(1).play();
         initialized = true;
     }

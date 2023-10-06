@@ -329,41 +329,46 @@ $(window).on("load resize", function () {
         // 모바일에서 Y스크롤 이동만큼 X로 이동
         const msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
         let msImgCont = [];
-        // msImgWrap.forEach((msImgCont, i) => {
-        //     msImgCont[i] = msImgCont;
-        //     ScrollTrigger.create({
-        //         trigger: msImgCont[i],
-        //         start: "top 50%",
-        //         end: "bottom 0%",
-        //         scrub: true,
-        //         //markers: true,
-        //         animation: gsap.fromTo(msImgCont[i], 
-        //             { 
-        //                 x: 0 
-        //             },
-        //             { 
-        //                 x: -(imgW - winInWidth)
-        //             }
-        //         ),
-        //     });
-        // });
-
-        // 이미지가 완전히 돌아가고 다음섹션으로 넘어가게 하기 위한 PIN고정
-        const msSvCont = document.querySelectorAll(".media-service__content");
-        console.log(msSvCont);
-        let msSvContArr = [];
-        msSvCont.forEach((msSvContArr, i) => {
-            msSvContArr[i] = msSvContArr;
+        msImgWrap.forEach((msImgCont, i) => {
+            msImgCont[i] = msImgCont;
             ScrollTrigger.create({
-                trigger: msSvContArr[i],
-                start: "top 0%",
+                trigger: msImgCont[i],
+                start: "top 50%",
                 end: "bottom 0%",
-                //scrub: true,
-                markers: true,
-                pin: true,
-                pinSpacing : false ,
+                scrub: true,
+                //markers: true,
+                animation: gsap.fromTo(msImgCont[i], 
+                    { 
+                        x: 0 
+                    },
+                    { 
+                        x: -(imgW - winInWidth)
+                    }
+                ),
             });
         });
+
+        // 이미지가 완전히 돌아가고 다음섹션으로 넘어가게 하기 위한 PIN고정
+        ScrollTrigger.create({
+            trigger: ".media-service__content--elle",
+            start: "top top",
+            //end: `+=${imgW - winInWidth}`,
+            end: ``,
+            markers: true,
+            pin: true,
+            pinSpacing : false,
+            anticipatePin: 1,
+        });
+        // ScrollTrigger.create({
+        //     trigger: ".media-service__content--cosmopolitan",
+        //     start: "top 0%",
+        //     end: "bottom",
+        //     //scrub: true,
+        //     markers: true,
+        //     pin: true,
+        //     pinSpacing : false,
+        //     anticipatePin: 1,
+        // });
     });
 
     // 매체 서비스 모바일에서 PC 버전으로 돌아갈 때 버그로 인해 style값 초기화

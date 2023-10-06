@@ -14,16 +14,16 @@ $(window).on("load resize", function () {
     }
 });
   
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+
+const winInWidth = window.innerWidth;
+const keyvisualVideo = document.querySelector(".key-visual__video");
+const keyvisualContents = gsap.utils.toArray(".key-visual__content");
   
-  const winInWidth = window.innerWidth;
-  
-  const keyvisualVideo = document.querySelector(".key-visual__video");
-  const keyvisualContents = gsap.utils.toArray(".key-visual__content");
-  
-  // gsap 반응형
-  let mm = gsap.matchMedia();
-  
+// gsap 반응형
+let mm = gsap.matchMedia();
+
+// PC 오프닝 스크롤 트리거
 ScrollTrigger.create({
     trigger: ".key-visual",
     anticipatePin: 1,
@@ -32,13 +32,13 @@ ScrollTrigger.create({
     end: keyvisualContents.length * (innerHeight / 1.5) + innerHeight,
 });
   
+// 오프닝 두번째 화면에서 이미지값 가져오기
 var scrollImgW = 0;
 scrollImgW =
 $(".km-section02 .slide-img img").eq(0).width() +
 $(".km-section02 .slide-img img").eq(1).width() +
 $(".km-section02 .slide-img img").eq(2).width() +
-$(".km-section02 .slide-img img").eq(3).width() +
-60;
+$(".km-section02 .slide-img img").eq(3).width() + 60;
 scrollImgW = parseInt(scrollImgW);
 
 // GSAP 모바일
@@ -47,9 +47,7 @@ mm.add("(max-width: 767px)", () => {
     const kmTxtWrap = gsap.utils.toArray(".km-txt-wrap");
     window.onload = function () {
         setTimeout(() => {
-            const km01TxtWrap = (document.querySelector(
-            ".km-section01 .km-txt-wrap"
-            ).style.zIndex = 0);
+            const km01TxtWrap = (document.querySelector(".km-section01 .km-txt-wrap").style.zIndex = 0);
             gsap.utils.toArray(".km-txt-wrap .km-txt1").forEach((item) => {
                 gsap.from(item, {
                     autoAlpha: 0,
@@ -57,10 +55,10 @@ mm.add("(max-width: 767px)", () => {
                     duration: 1.5,
                     ease: "power4.inOut",
                     scrollTrigger: {
-                    trigger: item,
-                    start: "-100 90%",
-                    end: "+200 10%",
-                    toggleActions: "play reverse play reverse",
+                        trigger: item,
+                        start: "-100 90%",
+                        end: "+200 10%",
+                        toggleActions: "play reverse play reverse",
                     },
                 });
             });
@@ -71,10 +69,10 @@ mm.add("(max-width: 767px)", () => {
                     duration: 1.5,
                     ease: "power4.inOut",
                     scrollTrigger: {
-                    trigger: item,
-                    start: "-100 90%",
-                    end: "+200 10%",
-                    toggleActions: "play reverse play reverse",
+                        trigger: item,
+                        start: "-100 90%",
+                        end: "+200 10%",
+                        toggleActions: "play reverse play reverse",
                     },
                 });
             });
@@ -85,10 +83,10 @@ mm.add("(max-width: 767px)", () => {
                     duration: 1.5,
                     ease: "power4.inOut",
                     scrollTrigger: {
-                    trigger: item,
-                    start: "-100 90%",
-                    end: "+200 10%",
-                    toggleActions: "play reverse play reverse",
+                        trigger: item,
+                        start: "-100 90%",
+                        end: "+200 10%",
+                        toggleActions: "play reverse play reverse",
                     },
                 });
             });
@@ -98,34 +96,33 @@ mm.add("(max-width: 767px)", () => {
                     duration: 1.5,
                     ease: "power4.inOut",
                     scrollTrigger: {
-                    trigger: item,
-                    start: "-100 90%",
-                    end: "+200 10%",
-                    toggleActions: "play reverse play reverse",
+                        trigger: item,
+                        start: "-100 90%",
+                        end: "+200 10%",
+                        toggleActions: "play reverse play reverse",
                     },
                 });
             });
         }, 1200);
     }
 
-ScrollTrigger.create({
-    trigger: ".slide-img",
-    start: "top 50%",
-    end: "bottom 0%",
-    scrub: true,
-    animation: gsap.fromTo(
-    ".slide-img",
-    { x: 0 },
-    { x: -(scrollImgW - winInWidth) }
-    ),
-});
+    ScrollTrigger.create({
+        trigger: ".slide-img",
+        start: "top 50%",
+        end: "bottom 0%",
+        scrub: true,
+        animation: gsap.fromTo(".slide-img",
+            { x: 0 },
+            { x: -(scrollImgW - winInWidth) }
+        ),
+    });
 });
 
 // GSAP 피시
 mm.add("(min-width: 768px)", () => {});
-  
 let initialized = false;
   
+// 오프닝 섹션별 모션 처리
 keyvisualContents.forEach((content, i) => {
     if (i == 0) {
         content.tl = gsap
@@ -228,19 +225,17 @@ keyvisualContents.forEach((content, i) => {
         );
     }
 });
+gsap.set(keyvisualContents[0], { autoAlpha: 1 });
   
-gsap.set(keyvisualContents[0], { autoAlpha: 1 }); // alpha xxx
-  
+// 오프닝 영상
 const beginMotion = (e) => {
     if (keyvisualVideo.currentTime > 1.9 && !initialized) {
         keyvisualContents[0].tl.timeScale(1).play();
-        // setTimeout(() => {
-        //   $(".key-visual__content--01").addClass("active");
-        // }, 700);
         initialized = true;
     }
 };
 
+// 텍스트 노출 영역 컨테이너
 const sceneCover = gsap.utils.toArray(".scene-cover");
 sceneCover.forEach((scene) => {
     ScrollTrigger.create({
@@ -250,6 +245,7 @@ sceneCover.forEach((scene) => {
     });
 });
 
+// 텍스트 노출 영역 움직이는 요소
 gsap.utils.toArray(".scene-cover__container .direction-up").forEach((item) => {
     gsap.from(item, {
         autoAlpha: 0,
@@ -257,16 +253,18 @@ gsap.utils.toArray(".scene-cover__container .direction-up").forEach((item) => {
         duration: 1,
         ease: "power4.inOut",
         scrollTrigger: {
-        trigger: item,
-        start: "-200 100%",
-        end: "200 10%",
-        toggleActions: "play reverse play reverse",
+            trigger: item,
+            start: "-200 100%",
+            end: "200 10%",
+            toggleActions: "play reverse play reverse",
         },
     });
 });
 
+// 매체 변수 초기화
 const mediaService = document.querySelector(".media-service");
 
+// 매체 모션을 위한 스크롤 이벤트
 window.addEventListener("scroll", () => {
     function isMobileSize() {
         return window.innerWidth <= 767; // 768px를 모바일 기준으로 설정
@@ -280,6 +278,7 @@ window.addEventListener("scroll", () => {
     const msImg3 = document.querySelectorAll(".ms-img3");
     const msImg5 = document.querySelectorAll(".ms-img5");
 
+    // 모바일 사이즈가 아닐 경우에만 움직이게
     if (!isMobileSize()) {
         let scrollTop = window.scrollY;
         let msOffsetY = ms.getBoundingClientRect().top;
@@ -289,7 +288,6 @@ window.addEventListener("scroll", () => {
         }
 
         let msContArr = [];
-
         // 스크롤이 시작 될 때 각 영역 위치 변경
         if (msOffsetY < 0) {
         textLayer.forEach((item) => {
@@ -297,38 +295,39 @@ window.addEventListener("scroll", () => {
         });
         msImg2.forEach((item) => {
             item.style.marginTop = -(msOffsetY * 1.8) + "px";
-            });
-            msImg3.forEach((item) => {
+        });
+        msImg3.forEach((item) => {
             item.style.marginBottom = msOffsetY / 2 + "px";
-            });
-            msImg5.forEach((item) => {
+        });
+        msImg5.forEach((item) => {
             item.style.marginBottom = msOffsetY / 2 + "px";
-            });
-            msCont.forEach((item, i) => {
+        });
+        msCont.forEach((item, i) => {
             let msContY = [];
             msContArr[i] = item;
             msContY[i] = msContArr[i].getBoundingClientRect().top;
-            // if (msContY[0] < 0 && msOffsetY + windowHeight > 0) {
-            //   header.classList.add("dark");
-            // } else if (msContY[1] < 0 && msContY[1] + windowHeight > 0) {
-            //   header.classList.remove("dark");
-            // }
-            });
+        });
         }
     }
 });
   
+// 매체 모션 작업을 반응형을 위한 이벤트
 $(window).on("load resize", function () {
     const winInWidth = window.innerWidth;
 
-    $(".is_mobile .media-service__text-wrap, .is_mobile .ms-img2, .is_mobile ms-img3, .is_mobile ms-img5").css("margin-top", "0px");
+    // 기존 PC에서 이동 되었던 마진값 초기화
+    $(".is_mobile .media-service__text-wrap, .is_mobile .ms-img2, .is_mobile ms-img3, .is_mobile ms-img5")
+        .css("margin-top", "0px");
     $(".is_pc .media-service").removeClass("active");
 
     var imgW = 0;
-    imgW =
-        $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-    imgW = parseInt(imgW);
+    // 빠르게 리사이징 될 시에 이미지값을 제대로 못 가져오는 경우로 인해 setTimeout
+    setTimeout(() => {
+        imgW = $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
+        imgW = parseInt(imgW);
+    }, 10);
 
+    // 모바일에서 Y스크롤 이동만큼 X로 이동
     mm.add("(max-width: 767px)", () => {
         msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
         let content = [];
@@ -339,16 +338,19 @@ $(window).on("load resize", function () {
                 start: "top 50%",
                 end: "bottom 0%",
                 scrub: true,
-                animation: gsap.fromTo(
-                content[i],
-                { x: 0 },
-                { x: -(imgW - winInWidth) }
+                animation: gsap.fromTo(content[i], 
+                    { 
+                        x: 0 
+                    },
+                    { 
+                        x: -(imgW - winInWidth) 
+                    }
                 ),
             });
         });
     });
 
-    // 미디어 서비스 
+    // 매체 서비스 모바일에서 PC 버전으로 돌아갈 때 버그로 인해 style값 초기화
     if (winInWidth > 768) {
         setTimeout(() => {
             $(".ms-img-wrap").removeAttr("style");
@@ -356,8 +358,8 @@ $(window).on("load resize", function () {
     }
 });
   
+// 하단 마지막 부분
 const themeServices = gsap.utils.toArray(".theme-service__content");
-  
 themeServices.forEach((service, i) => {
     service.tl = gsap
         .timeline({
@@ -371,41 +373,33 @@ themeServices.forEach((service, i) => {
         },
     })
     .from(service.querySelector(`.theme-service__image`), {
-    autoAlpha: 0,
-    duration: 1,
-    ease: "power4.inOut",
+        autoAlpha: 0,
+        duration: 1,
+        ease: "power4.inOut",
     })
-    .from(
-    service.querySelectorAll(`.theme-service__title .motion-wrap.direction-up > *`),
+    .from(service.querySelectorAll(`.theme-service__title .motion-wrap.direction-up > *`),
     {
         yPercent: -100,
         duration: 1,
         ease: "power4.inOut",
-        delay: 0.5,
     }, 0)
-    .from(
-    service.querySelectorAll(`.theme-service__title .motion-wrap.direction-down > *`),
+    .from(service.querySelectorAll(`.theme-service__title .motion-wrap.direction-down > *`),
     {
         yPercent: 100,
         duration: 1,
         ease: "power4.inOut",
-        delay: 0.5,
     }, 0)
-    .from(
-    service.querySelector(`.theme-service__description span`),
+    .from(service.querySelector(`.theme-service__description span`),
     {
         yPercent: 100,
         duration: 1,
         ease: "power4.inOut",
-        delay: 0.5,
     }, 0)
-    .from(
-    service.querySelector(`.theme-service__link`),
+    .from(service.querySelector(`.theme-service__link`),
     {
         autoAlpha: 0,
         duration: 1,
         ease: "power4.inOut",
-        delay: 0.5,
     }, 0);
 });
   
@@ -426,7 +420,7 @@ $.fn.floatingMenu = function () {
     });
 };
   
-// 헤더 색상을 위한 섹션별 정의
+// 헤더 배경색을 위한 섹션별 정의
 const mainSectionArray = document.querySelectorAll(".header-chg-bg");
 mainSectionArray.forEach((item) => {
     ScrollTrigger.create({

@@ -176,7 +176,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_inq_list li dl { display:flex; justify-content: space-between;}
 .point_inq_list li dt {font-size:16px; font-weight:500; line-height:23px; text-align:left; }
 .point_inq_list li dd {font-size:20px; font-weight:500; line-height:23px; display:flex; color:#999 ;text-align:right; font-family:'Gotham'}
-.point_inq_list li dd strong {color:var(--point); display:inline-block; margin-right:8px}
+.point_inq_list li dd strong {color:var(--point); display:inline-block; margin-right:8px; font-weight:500}
 .point_inq_list li dd span { display:inline-block;margin-left:8px }
 .point_inq_list li dd span em {font-size:16px; margin-left:4px}
 .point_inq_list li dd strong em {font-size:16px; margin-left:4px}

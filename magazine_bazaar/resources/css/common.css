@@ -392,7 +392,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .allmenu_wrap .etc_link li:first-child{margin-top:0;}
 .allmenu_wrap .etc_link li a{font-size:18px;line-height:26px;}
 .allmenu_wrap .sns_list{margin-top:60px;}
-.allmenu_wrap .sns_list ul{column-gap:29px;}
+.allmenu_wrap .sns_list ul{justify-content:space-between;}
 
 /* 검색 레이어 */
 .search_layer{display:none;position:absolute;left:0;top:72px;width:100%;background-color:#fff;box-shadow:0 5px 5px 0px rgba(0, 0, 0, 0.05);border-top:1px solid #dbdbdb;z-index:50;}
@@ -1245,4 +1245,5 @@ background:#fff;overflow:hidden;z-index:230}
 	.ui-datepicker .ui-datepicker-calendar td{width:auto;}
 	.ui-datepicker td span,
 	.ui-datepicker td a{width:auto;}
+	.allmenu_wrap .sns_list ul{column-gap:normal;}
 }

@@ -321,31 +321,47 @@ $(window).on("load resize", function () {
     $(".is_pc .media-service").removeClass("active");
 
     var imgW = 0;
-    // 빠르게 리사이징 될 시에 이미지값을 제대로 못 가져오는 경우로 인해 setTimeout
-    setTimeout(() => {
-        imgW = $(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24;
-        imgW = parseInt(imgW);
-    }, 10);
+    imgW = ($(".ms-img1").width() + $(".ms-img2").width() + $(".ms-img3").width() + 24);
+    imgW = parseInt(imgW);
+    console.log(imgW, winInWidth, imgW - winInWidth);
 
-    // 모바일에서 Y스크롤 이동만큼 X로 이동
     mm.add("(max-width: 767px)", () => {
-        msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
-        let content = [];
-        msImgWrap.forEach((content, i) => {
-            content[i] = content;
+        // 모바일에서 Y스크롤 이동만큼 X로 이동
+        const msImgWrap = document.querySelectorAll(".is_mobile .ms-img-wrap");
+        let msImgCont = [];
+        // msImgWrap.forEach((msImgCont, i) => {
+        //     msImgCont[i] = msImgCont;
+        //     ScrollTrigger.create({
+        //         trigger: msImgCont[i],
+        //         start: "top 50%",
+        //         end: "bottom 0%",
+        //         scrub: true,
+        //         //markers: true,
+        //         animation: gsap.fromTo(msImgCont[i], 
+        //             { 
+        //                 x: 0 
+        //             },
+        //             { 
+        //                 x: -(imgW - winInWidth)
+        //             }
+        //         ),
+        //     });
+        // });
+
+        // 이미지가 완전히 돌아가고 다음섹션으로 넘어가게 하기 위한 PIN고정
+        const msSvCont = document.querySelectorAll(".media-service__content");
+        console.log(msSvCont);
+        let msSvContArr = [];
+        msSvCont.forEach((msSvContArr, i) => {
+            msSvContArr[i] = msSvContArr;
             ScrollTrigger.create({
-                trigger: content[i],
-                start: "top 50%",
+                trigger: msSvContArr[i],
+                start: "top 0%",
                 end: "bottom 0%",
-                scrub: true,
-                animation: gsap.fromTo(content[i], 
-                    { 
-                        x: 0 
-                    },
-                    { 
-                        x: -(imgW - winInWidth) 
-                    }
-                ),
+                //scrub: true,
+                markers: true,
+                pin: true,
+                pinSpacing : false ,
             });
         });
     });

@@ -82,83 +82,86 @@
 .is_mobile .media-service {opacity: 1;}
 .media-service.active {opacity: 1;}
 
-.media-service__container {position: relative; height: 400vh;}
+.media-service .media-service__container {position: relative; height: 400vh;}
 
-.media-service__container .article-wrap {position: relative; overflow: auto; height: 100vh;}
-.media-service__content {top: 0; left: 0; width: 100%; height: 100vh; padding: 0 40px; position: absolute; overflow: hidden;}
-.media-service__content--elle {background-color: #FFF; z-index: 4;}
-.media-service__content--cosmopolitan {top: 100vh; background-color: #EF88AB; color: #fff; z-index: 3;}
-.media-service__content--bazaar {top: 200vh; background-color: #111; color: #fff; z-index: 2;}
-.media-service__content--esquire {top: 300vh; background-color: #969C98; color: #fff; z-index: 1;}
-.media-service__text-wrap {position: absolute; top: 0; height: 100%; left: 0; z-index: 10; width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;}
+.media-service .media-service__container .article-wrap {position: relative; overflow: auto; height: 100vh;}
+.media-service .media-service__content {top: 0; left: 0; width: 100%; height: 100vh; padding: 0 40px; position: absolute; overflow: hidden;}
+.media-service .media-service__content--elle {background-color: #FFF; z-index: 4;}
+.media-service .media-service__content--cosmopolitan {top: 100vh; background-color: #EF88AB; color: #fff; z-index: 3;}
+.media-service .media-service__content--bazaar {top: 200vh; background-color: #111; color: #fff; z-index: 2;}
+.media-service .media-service__content--esquire {top: 300vh; background-color: #969C98; color: #fff; z-index: 1;}
+.media-service .media-service__text-wrap {position: absolute; top: 0; height: 100%; left: 0; z-index: 10; width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;}
 
-.media-service__content--cosmopolitan .media-service__text-wrap {top: -100vh;}
-.media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
-.media-service__content--esquire .media-service__text-wrap {top: -300vh;}
-.media-service__content .media-service__logo {font-size: 0;}
+.media-service .media-service__content--cosmopolitan .media-service__text-wrap {top: -100vh;}
+.media-service .media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
+.media-service .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
+.media-service .media-service__content .media-service__logo {font-size: 0;}
 .media-service .ms-img {position: absolute;}
 .media-service .ms-img1 {bottom: 284px; right: 180px; width: 384px; margin-top: 0;}
 .media-service .ms-img1 img {height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.1s; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img2 {top: -130px; width: 100%; left: 50%; z-index: 9; width: 588px; margin-left: -588px;}
 .media-service .ms-img2 img {display: block; height: 0; opacity: 0; transition: 0.7s ease; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img2 img + img {position: relative; top: calc(-100vh - 736px);}
-.media-service__content--cosmopolitan .ms-img2 {top: calc(-100vh - 130px);}
-.media-service__content--bazaar .ms-img2 {top: calc(-200vh - 130px);}
-.media-service__content--esquire .ms-img2 {top: calc(-300vh - 130px);}
+.media-service .media-service__content--cosmopolitan .ms-img2 {top: calc(-100vh - 130px);}
+.media-service .media-service__content--bazaar .ms-img2 {top: calc(-200vh - 130px);}
+.media-service .media-service__content--esquire .ms-img2 {top: calc(-300vh - 130px);}
 .media-service .ms-img3 {bottom: 80px; width: 588px; height: 368px; left: 80px;}
 .media-service .ms-img3 img {position: absolute; top: 0; left: 0; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.2s; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img3 img:nth-of-type(2) {top: auto; bottom: -100vh;}
 .media-service .ms-img3 img:nth-of-type(3) {top: auto; bottom: -200vh;}
-.media-service__content--cosmopolitan .ms-img3 {bottom: calc(100vh + 80px);}
-.media-service__content--bazaar .ms-img3 {bottom: calc(200vh + 80px);}
-.media-service__content--esquire .ms-img3 {bottom: calc(300vh + 80px);}
+.media-service .media-service__content--cosmopolitan .ms-img3 {bottom: calc(100vh + 80px);}
+.media-service .media-service__content--bazaar .ms-img3 {bottom: calc(200vh + 80px);}
+.media-service .media-service__content--esquire .ms-img3 {bottom: calc(300vh + 80px);}
 .media-service .ms-img4 { bottom: 368px; left: 140px; width: 196px;}
 .media-service .ms-img4 img {position: absolute; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.3s; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img5 {bottom: 164px; right: 80px; width: 180px; height: 240px;}
 .media-service .ms-img5 img {position: absolute; top: 0; right: 0; height: 0; opacity: 0; transition: 0.7s ease; transition-delay: 0.4s; overflow: hidden; transform: translateY(100%);}
 .media-service .ms-img5 img:nth-of-type(2) {top: auto; bottom: -100vh;}
 .media-service .ms-img5 img:nth-of-type(3) {top: auto; bottom: -200vh;}
-.media-service__content--cosmopolitan .ms-img5 {bottom: calc(100vh + 164px);}
-.media-service__content--bazaar .ms-img5 {bottom: calc(200vh + 164px);}
-.media-service__content--esquire .ms-img5 {bottom: calc(300vh + 164px);}
+.media-service .media-service__content--cosmopolitan .ms-img5 {bottom: calc(100vh + 164px);}
+.media-service .media-service__content--bazaar .ms-img5 {bottom: calc(200vh + 164px);}
+.media-service .media-service__content--esquire .ms-img5 {bottom: calc(300vh + 164px);}
 .media-service.active .ms-img1 img {height: auto; opacity: 1; transform: translateY(0);}
 .media-service.active .ms-img2 img {height: auto; opacity: 1; transform: translateY(0);}
 .media-service.active .ms-img3 img {height: auto; opacity: 1; transform: translateY(0);}
 .media-service.active .ms-img4 img {height: auto; opacity: 1; transform: translateY(0);}
 .media-service.active .ms-img5 img {height: auto; opacity: 1; transform: translateY(0);}
 
-.media-service__subtitle {margin-top: 43px;}
-.media-service__content--elle .media-service__subtitle {font-family: 'ElleGaborStd';}
-.media-service__content--cosmopolitan .media-service__subtitle {font-family: 'NewsGothicExtraCondensedBold';}
-.media-service__content--bazaar .media-service__subtitle {font-family: 'Gotham Book';}
-.media-service__content--esquire .media-service__subtitle {font-family: 'TTNorms-Medium';}
-.media-service__phrase {margin-top: 23px; font-size: 18px; font-weight: 500; line-height: 1.5556; letter-spacing: -0.01em; margin-bottom: 60px;}
-.media-service__content--elle .media-service__phrase {color: #666;}
+.media-service .media-service__subtitle {margin-top: 43px;}
+.media-service .media-service__content--elle .media-service__subtitle {font-family: 'ElleGaborStd';}
+.media-service .media-service__content--cosmopolitan .media-service__subtitle {font-family: 'NewsGothicExtraCondensedBold';}
+.media-service .media-service__content--bazaar .media-service__subtitle {font-family: 'Gotham Book';}
+.media-service .media-service__content--esquire .media-service__subtitle {font-family: 'TTNorms-Medium';}
+.media-service .media-service__phrase {margin-top: 23px; font-size: 18px; font-weight: 500; line-height: 1.5556; letter-spacing: -0.01em; margin-bottom: 60px;}
+.media-service .media-service__content--elle .media-service__phrase {color: #666;}
+
+.media-service .media-service__image {position: absolute;}
+.media-service .media-service__image--01 {top: 50%; right: 9.375%; transform: translate(0, -50%);}
+.media-service .media-service__image--02 {bottom: 80%; right: 51%;}
+.media-service .media-service__image--03 {bottom: 80px; left: 80px;}
+.media-service .media-service__image--04 {top: 43.7037%; left: 7.2917%;}
+.media-service .media-service__image--05 {top: 62.5926%; right: 80px;}
 
 @media screen and (max-width: 1023px) {
-    .media-service .ms-img {transform: scale(0.7);}
+    .media-service .media-service .ms-img {transform: scale(0.7);}
 }
 
 @media screen and (max-width: 767px) {
-    .media-service .ms-img {transform: scale(1);}
-    .media-service__images {display: flex; flex-wrap: nowrap; position: absolute; bottom: 0;}
-    .media-service__images img {height: 235px; width: auto; max-width: none;}
-    .media-service__container {height: initial;}
+    .media-service .media-service .ms-img {transform: scale(1);}
+    .media-service .media-service__images {display: flex; flex-wrap: nowrap; position: absolute; bottom: 0;}
+    .media-service .media-service__images img {height: 235px; width: auto; max-width: none;}
+    .media-service .media-service__container {height: initial;}
 
-    .media-service__container .article-wrap {overflow: hidden; height: 100vh;}
-    .media-service__content {padding: 100px 0 0; position: static;}
-    /* .media-service__content--elle {z-index: 0;}
-    .media-service__content--cosmopolitan {z-index: 0;}
-    .media-service__content--bazaar {z-index: 0;}
-    .media-service__content--esquire {z-index: 0;} */
-    .media-service__text-wrap {position: static; height: auto;}
+    .media-service .media-service__container .article-wrap {overflow: hidden; height: 100vh;}
+    .media-service .media-service__content {padding: 100px 0 0; position: static;}
+    .media-service .media-service__text-wrap {position: static; height: auto;}
     
-    .media-service__content--cosmopolitan .media-service__text-wrap {top: 0;}
-    .media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
-    .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
-    .media-service__content .media-service__logo img {height: 44px;}
-    .media-service__content .media-service__subtitle {font-size: 18px; line-height: 20px;}
-    .media-service__content .media-service__phrase {margin: 16px 0 32px; font-size: 14px; line-height: 22px;}
+    .media-service .media-service__content--cosmopolitan .media-service__text-wrap {top: 0;}
+    .media-service .media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
+    .media-service .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
+    .media-service .media-service__content .media-service__logo img {height: 44px;}
+    .media-service .media-service__content .media-service__subtitle {font-size: 18px; line-height: 20px;}
+    .media-service .media-service__content .media-service__phrase {margin: 16px 0 32px; font-size: 14px; line-height: 22px;}
     .media-service .ms-img-wrap {display: flex; position: relative; width: max-content; height: 235px; margin-top: 48px; white-space: nowrap;}
     .media-service .ms-img {position: static; width: auto; height: 235px; margin-left: 12px;}
     .media-service .ms-img img {height: 100% !important;}
@@ -180,17 +183,39 @@
     .media-service__content--esquire .ms-img3 {bottom: calc(300vh + 80px);} */
     .media-service .ms-img4 {display: none;}
     .media-service .ms-img5 {display: none;}
+
+    .media-service2 .media-service .ms-img {transform: scale(1);}
+    .media-service2 .media-service__images {display: flex; flex-wrap: nowrap; position: absolute; bottom: 0;}
+    .media-service2 .media-service__images img {height: 235px; width: auto; max-width: none;}
+    .media-service2 .media-service__container {height: initial;}
+    .media-service2 .media-service__container .article-wrap {overflow: hidden; height: 100vh;}
+    .media-service2 .media-service__content {padding: 100px 0 0; position: static;}
+    .media-service2 .media-service__text-wrap {position: static; height: auto;}
+    .media-service2 .media-service__content--cosmopolitan .media-service__text-wrap {top: 0;}
+    .media-service2 .media-service__content--bazaar .media-service__text-wrap {top: -200vh;}
+    .media-service2 .media-service__content--esquire .media-service__text-wrap {top: -300vh;}
+    .media-service2 .media-service__content .media-service__logo img {height: 44px;}
+    .media-service2 .media-service__content .media-service__subtitle {font-size: 18px; line-height: 20px;}
+    .media-service2 .media-service__content .media-service__phrase {margin: 16px 0 32px; font-size: 14px; line-height: 22px;}
+    .media-service2 .ms-img-wrap {display: flex; position: relative; width: max-content; height: 235px; margin-top: 48px; white-space: nowrap;}
+    .media-service2 .ms-img {position: static; width: auto; height: 235px; margin-left: 12px;}
+    .media-service2 .ms-img img {height: 100% !important;}
+    .media-service2 .ms-img1 {order: 2;}
+    .media-service2 .ms-img1 img {opacity: 1; transition: 0s ease; transition-delay: 0s; transform: translateY(0);}
+    .media-service2 .ms-img2 {order: 1; margin-left: 0;}
+    .media-service2 .ms-img2 img {opacity: 1; transition: 0s ease; transition-delay: 0s; transform: translateY(0);}
+    .media-service2 .ms-img3 {order: 3;}
+    .media-service2 .ms-img3 img {display: none; position: static; opacity: 1; transition: 0s ease; transition-delay: 0s; transform: translateY(0);}
+    .media-service2 .media-service__content--elle .ms-img3 img:first-child {display: block;}
+    .media-service2 .media-service__content--cosmopolitan .ms-img3 img:first-child {display: block;}
+    .media-service2 .media-service__content--bazaar .ms-img3 img:nth-of-type(2) {display: block;}
+    .media-service2 .media-service__content--esquire .ms-img3 img:last-child {display: block;}
+    .media-service2 .ms-img4 {display: none;}
+    .media-service2 .ms-img5 {display: none;}
 }
 
-.media-service__image {position: absolute;}
-.media-service__image--01 {top: 50%; right: 9.375%; transform: translate(0, -50%);}
-.media-service__image--02 {bottom: 80%; right: 51%;}
-.media-service__image--03 {bottom: 80px; left: 80px;}
-.media-service__image--04 {top: 43.7037%; left: 7.2917%;}
-.media-service__image--05 {top: 62.5926%; right: 80px;}
-
 @media screen and (max-width: 767px) {
-    .media-service__image {position: relative; top: auto; left: auto; right: auto; bottom: auto; transform: none;}
+    .media-service .media-service__image {position: relative; top: auto; left: auto; right: auto; bottom: auto; transform: none;}
 }
 
 .theme-service {overflow: hidden;}

@@ -349,26 +349,33 @@ $(window).on("load resize", function () {
         });
 
         // 이미지가 완전히 돌아가고 다음섹션으로 넘어가게 하기 위한 PIN고정
-        ScrollTrigger.create({
-            trigger: ".media-service__content--elle",
-            start: "top top",
-            //end: `+=${imgW - winInWidth}`,
-            end: ``,
-            markers: true,
-            pin: true,
-            pinSpacing : false,
-            anticipatePin: 1,
-        });
-        // ScrollTrigger.create({
-        //     trigger: ".media-service__content--cosmopolitan",
-        //     start: "top 0%",
-        //     end: "bottom",
-        //     //scrub: true,
-        //     markers: true,
-        //     pin: true,
-        //     pinSpacing : false,
-        //     anticipatePin: 1,
+        // const msSvCont = gsap.utils.toArray(".media-service__content");
+        // console.log(msSvCont);
+        // msSvCont.forEach((msSvContArr, i) => {
+        //     ScrollTrigger.create({
+        //         trigger: msSvContArr,
+        //         start: "top 0%",
+        //         //end: `+=3000`,
+        //         //scrub: true,
+        //         markers: true,
+        //         pin: true,
+        //         pinSpacing : false,
+        //     });
         // });
+        gsap.utils.toArray(".media-service__content").forEach((section) => {
+            gsap.to(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",    // 트리거 요소의 상단이 뷰포트의 상단에 도달했을 때 시작
+                    //end: `+=${imgW - winInWidth}`,       // 트리거 요소의 높이만큼 스크롤이 진행되었을 때 종료
+                    pin: true,
+                    scrub: true,
+                    //markers: true ,       // 스크롤 구간 마커를 표시 (디버깅용)
+                    pinSpacing: false,
+                    anticipatePin: 1,
+                }
+            });
+        });
     });
 
     // 매체 서비스 모바일에서 PC 버전으로 돌아갈 때 버그로 인해 style값 초기화

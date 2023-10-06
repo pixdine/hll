@@ -216,7 +216,7 @@ body.is_mobile .header_top .logo object {width:72px; height:24px;}
 
 /* container */
 .container { margin:0 auto; padding: 135px 0 180px}
-.container.main { padding-top:0}
+.container.main { padding:0;}
 .cont_inner{max-width:1280px;margin:0 auto;padding:0 40px;}
 
 /* body cont */

@@ -143,10 +143,14 @@
     .media-service .ms-img {transform: scale(1);}
     .media-service__images {display: flex; flex-wrap: nowrap; position: absolute; bottom: 0;}
     .media-service__images img {height: 235px; width: auto; max-width: none;}
-    .media-service__container {height: auto;}
+    .media-service__container {height: initial;}
 
     .media-service__container .article-wrap {overflow: hidden; height: 100vh;}
     .media-service__content {padding: 100px 0 0; position: static;}
+    /* .media-service__content--elle {z-index: 0;}
+    .media-service__content--cosmopolitan {z-index: 0;}
+    .media-service__content--bazaar {z-index: 0;}
+    .media-service__content--esquire {z-index: 0;} */
     .media-service__text-wrap {position: static; height: auto;}
     
     .media-service__content--cosmopolitan .media-service__text-wrap {top: 0;}
@@ -215,7 +219,9 @@
 }
 
 .theme-service__description {font-size: 18px; line-height: 1.5556; letter-spacing: -0.01em; margin-bottom: 60px; display: block; overflow: hidden;}
-.theme-service__description span {display: block; color: #666;}
+.theme-service__description span {display: block;}
+.theme-service__content:first-child .theme-service__description span,
+.theme-service__content:last-child .theme-service__description span {color: #666;}
 
 @media screen and (max-width: 767px) {
     .theme-service__description {font-size: 14px; margin-bottom: 30px;}

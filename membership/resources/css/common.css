@@ -699,8 +699,9 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .tbl_btm_area .tx_btn .tx { color:#666}
 .tbl_btm_area .tx_btn .tx dt { font-size:18px; font-weight:500; color:#111; margin-bottom:8px}
 
-.no_list { position:relative; font-size:24px; text-align:center; color:#666; min-height:300px; border-width:2px 0 1px; border-style:solid; border-color:#111 none #DBDBDB none}
+.no_list { position:relative; font-size:24px; text-align:center; color:#666; min-height:508px; border-width:2px 0 1px; border-style:solid; border-color:#111 transparent #DBDBDB transparent}
 .no_list p { position:absolute; top:50%; transform:translateY(-50%) ;width:100%; font-size:24px; text-align:center; color:#666;}
+.point_save_list .no_list { border-top:0 }
 
 /* 회원정보 수정 */
 .tit_wrap02 { position:relative; margin-bottom:32px; }
@@ -1044,6 +1045,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.board_st01 .board_detail p.tit {font-size:14px}
 	.tbl_btm_area .tx_btn .tx { color:#666}
 	.tbl_btm_area .tx_btn .tx dt { font-size:16px; margin-bottom:4px}
+	.no_list { min-height:300px }
 	.no_list p {font-size:14px}
 
 	/* borad > view */

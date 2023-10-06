@@ -7,21 +7,21 @@
 	font-family: 'S-CoreDream';
 	font-style: normal;
 	font-weight: 400;
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format("woff");
+	src: url(../font/S-CoreDream-4Regular.woff) format("woff");
 }
 /* [1] */
 @font-face {
 	font-family: 'S-CoreDream';
 	font-style: normal;
 	font-weight: 500;
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format("woff");
+	src: url(../font/S-CoreDream-5Medium.woff) format("woff");
 }
 /* [2] */
 @font-face {
 	font-family: 'S-CoreDream';
 	font-style: normal;
 	font-weight: 700;
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format("woff");
+	src: url(../font/S-CoreDream-6Bold.woff) format("woff");
 }
 @font-face{
 	font-family: Gotham;

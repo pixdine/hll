@@ -325,42 +325,54 @@ $(window).on("load resize", function () {
     imgW = parseInt(imgW);
     console.log(imgW, winInWidth, imgW - winInWidth);
 
-    // 모바일에서 Y스크롤 이동만큼 X로 이동
-    const msImgWrap = document.querySelectorAll(".is_mobile .media-service .ms-img-wrap");
-    let msImgCont = [];
-    msImgWrap.forEach((msImgCont, i) => {
-        msImgCont[i] = msImgCont;
-        ScrollTrigger.create({
-            trigger: msImgCont[i],
-            start: "top 50%",
-            end: "bottom 10%",
-            scrub: true,
-            //markers: true,
-            animation: gsap.fromTo(msImgCont[i], 
-                { 
-                    x: 0 
-                },
-                { 
-                    x: -(imgW - winInWidth)
-                }
-            ),
+        // 모바일에서 Y스크롤 이동만큼 X로 이동
+        const msImgWrap = document.querySelectorAll(".is_mobile .media-service .ms-img-wrap");
+        let msImgCont = [];
+        msImgWrap.forEach((msImgCont, i) => {
+            msImgCont[i] = msImgCont;
+            ScrollTrigger.create({
+                trigger: msImgCont[i],
+                start: "top 50%",
+                end: "bottom 0%",
+                scrub: true,
+                //markers: true,
+                animation: gsap.fromTo(msImgCont[i], 
+                    { 
+                        x: 0 
+                    },
+                    { 
+                        x: -(imgW - winInWidth)
+                    }
+                ),
+            });
         });
-    });
-    // gsap.utils.toArray(".media-service .media-service__content").forEach((section, i) => {
-    //     let sArray = [];
-    //     sArray[i] = section;
-    //     gsap.to(sArray[i], {
-    //         scrollTrigger: {
-    //             trigger: sArray[i],
-    //             start: "top top",    // 트리거 요소의 상단이 뷰포트의 상단에 도달했을 때 시작
-    //             end: `+=${imgW - winInWidth}`,       // 트리거 요소의 높이만큼 스크롤이 진행되었을 때 종료
-    //             pin: true,
-    //             //markers: true ,       // 스크롤 구간 마커를 표시 (디버깅용)
-    //             pinSpacing: false,
-    //             anticipatePin: 1,
-    //         }
-    //     });
-    // });
+        // gsap.utils.toArray(".media-service .media-service__content").forEach((section, i) => {
+        //     let sArray = [];
+        //     sArray[i] = section;
+        //     gsap.to(sArray[i], {
+        //         scrollTrigger: {
+        //             trigger: sArray[i],
+        //             start: "top top",    // 트리거 요소의 상단이 뷰포트의 상단에 도달했을 때 시작
+        //             end: `+=${imgW - winInWidth}`,       // 트리거 요소의 높이만큼 스크롤이 진행되었을 때 종료
+        //             pin: true,
+        //             //markers: true ,       // 스크롤 구간 마커를 표시 (디버깅용)
+        //             pinSpacing: false,
+        //             anticipatePin: 1,
+        //         }
+        //     });
+        // });
+            // gsap.to(".media-service__content--elle", {
+            //     scrollTrigger: {
+            //         trigger: ".media-service__content--elle",
+            //         start: "top top",    // 트리거 요소의 상단이 뷰포트의 상단에 도달했을 때 시작
+            //         end: `+=${imgW - winInWidth}`,       // 트리거 요소의 높이만큼 스크롤이 진행되었을 때 종료
+            //         pin: true,
+            //         scrub: true,
+            //         //markers: true ,       // 스크롤 구간 마커를 표시 (디버깅용)
+            //         //pinSpacing: false,
+            //         anticipatePin: 1,
+            //     }
+            // });
 
     // 매체 서비스 모바일에서 PC 버전으로 돌아갈 때 버그로 인해 style값 초기화
     if (winInWidth > 768) {

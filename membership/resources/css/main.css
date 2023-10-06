@@ -184,6 +184,7 @@
     .media-service .ms-img4 {display: none;}
     .media-service .ms-img5 {display: none;}
 
+    .media-service2 {overflow: hidden;}
     .media-service2 .media-service .ms-img {transform: scale(1);}
     .media-service2 .media-service__images {display: flex; flex-wrap: nowrap; position: absolute; bottom: 0;}
     .media-service2 .media-service__images img {height: 235px; width: auto; max-width: none;}

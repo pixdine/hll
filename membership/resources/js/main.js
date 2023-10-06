@@ -103,7 +103,7 @@ mm.add("(max-width: 767px)", () => {
                     },
                 });
             });
-        }, 1200);
+        }, 1000);
     }
 
     ScrollTrigger.create({
@@ -229,7 +229,7 @@ gsap.set(keyvisualContents[0], { autoAlpha: 1 });
   
 // 오프닝 영상
 const beginMotion = (e) => {
-    if (keyvisualVideo.currentTime > 1.2 && !initialized) {
+    if (keyvisualVideo.currentTime > 1 && !initialized) {
         keyvisualContents[0].tl.timeScale(1).play();
         initialized = true;
     }

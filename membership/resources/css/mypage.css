@@ -183,8 +183,8 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 /* 포인트 샵*/
 .box_type02 { background:#fff; border:1px solid #DBDBDB}
-.point_change_cont { display:flex; padding:0 40px; height:148px; align-items: center; justify-content:space-between}
-.point_change_cont .point_left { display:flex;align-items: center; }
+.point_change_cont { display:flex; padding:0 40px; height:182px; align-items:flex-start; justify-content:space-between}
+.point_change_cont .point_left { display:flex;align-items: center; margin-top:52px }
 .point_change_cont .p_logo { width:144px; text-align:center}
 .point_change_cont .p_logo { height:auto; margin-right:64px}
 .point_change_cont .p_logo object { height:auto}
@@ -194,7 +194,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_change_cont .p_logo.payco object { width:97px;}
 .point_change_cont .p_txt {font-size:18px; font-weight:500; flex-grow:2 }
 .point_change_cont .p_txt span {display:inline-block; margin-left:5px}
-.point_change_cont .p_change {display:inline-flex; flex-direction: column; /*width:504px;*/ margin-top:14px; justify-content:flex-end; flex-grow:0}
+.point_change_cont .p_change {display:inline-flex; flex-direction: column; /*width:504px;*/ margin-top:48px; justify-content:flex-end; flex-grow:0}
 .point_change_cont .p_change .inputbox .inp { width:306px; }
 .point_change_cont .p_change .unit {font-size:20px; line-height:52px; margin:0 0 0 14px; font-family:'Gotham'; font-weight:500}
 .point_change_cont .p_change .btn { margin-left:40px}
@@ -319,17 +319,17 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 
 @media (max-width:1023px){
 	 /*포인트샵 */
-     .point_change_cont { flex-direction: column; padding:24px 16px; height:auto}
-     .point_change_cont .point_left {width:100%; justify-content: space-between;}
-     .point_change_cont .p_change {width:100%;}
-     .point_change_cont .p_txt {font-size:14px; white-space:nowrap; text-align:right}
-     .point_change_cont .p_txt span {display:none}
-     .point_change_cont .p_change .in_tx {margin-top:8px}
-     .point_change_cont .p_change .p_change_box .inputbox {width:100%}
-     .point_change_cont .p_change .inputbox .inp {width:100%}
-     .point_change_cont .p_change .btn {min-width:auto; margin-left:19px; width:70px}
-     .point_change_cont .btn span span {display:none}
-     .point_change_cont .p_change .unit {margin:0 0 0 8px}
+    .point_change_cont { flex-direction: column; padding:0px 16px; height:191px; justify-content: flex-start}
+    .point_change_cont .point_left {width:100%; justify-content: space-between; margin-top:24px}
+    .point_change_cont .p_change {width:100%; margin-top:12px}
+    .point_change_cont .p_txt {font-size:14px; white-space:nowrap; text-align:right}
+    .point_change_cont .p_txt span {display:none}
+    .point_change_cont .p_change .in_tx {margin-top:8px}
+    .point_change_cont .p_change .p_change_box .inputbox {width:100%}
+    .point_change_cont .p_change .inputbox .inp {width:100%}
+    .point_change_cont .p_change .btn {min-width:auto; margin-left:19px; width:70px}
+    .point_change_cont .btn span span {display:none}
+    .point_change_cont .p_change .unit {margin:0 0 0 8px}
     .point_change_cont .p_logo { width:auto; }
     .point_change_cont .p_logo.ok object { width:106px;}
     .point_change_cont .p_logo.cj object { width:84px;}

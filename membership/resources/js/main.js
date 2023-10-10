@@ -325,6 +325,7 @@ $(window).on("load resize", function () {
     imgW = parseInt(imgW);
     console.log(imgW, winInWidth, imgW - winInWidth);
 
+    mm.add("(max-width: 767px)", () => {
         // 모바일에서 Y스크롤 이동만큼 X로 이동
         const msImgWrap = document.querySelectorAll(".is_mobile .media-service .ms-img-wrap");
         let msImgCont = [];
@@ -346,6 +347,8 @@ $(window).on("load resize", function () {
                 ),
             });
         });
+    });
+    
         // gsap.utils.toArray(".media-service .media-service__content").forEach((section, i) => {
         //     let sArray = [];
         //     sArray[i] = section;

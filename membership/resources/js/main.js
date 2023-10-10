@@ -41,6 +41,8 @@ $(".km-section02 .slide-img img").eq(2).width() +
 $(".km-section02 .slide-img img").eq(3).width() + 60;
 scrollImgW = parseInt(scrollImgW);
 
+console.log(scrollImgW, winInWidth, scrollImgW - winInWidth);
+
 // GSAP 모바일
 mm.add("(max-width: 767px)", () => {
     const kmSection = gsap.utils.toArray(".km-section");
@@ -315,6 +317,14 @@ window.addEventListener("scroll", () => {
 $(window).on("load resize", function () {
     const winInWidth = window.innerWidth;
 
+    // 넓이보다 이미지 요소가 좁으면 가운데 정렬
+    console.log(scrollImgW, winInWidth);
+    if(scrollImgW < winInWidth) {
+        $('.slide-img').addClass("hidden");
+    } else {
+        $('.slide-img').removeClass("hidden");
+    }
+
     // 기존 PC에서 이동 되었던 마진값 초기화
     $(".is_mobile .media-service__text-wrap, .is_mobile .ms-img2, .is_mobile ms-img3, .is_mobile ms-img5")
         .css("margin-top", "0px");
@@ -323,7 +333,6 @@ $(window).on("load resize", function () {
     var imgW = 0;
     imgW = ($(".media-service .ms-img1").width() + $(".media-service .ms-img2").width() + $(".media-service .ms-img3").width() + 24);
     imgW = parseInt(imgW);
-    console.log(imgW, winInWidth, imgW - winInWidth);
 
     mm.add("(max-width: 767px)", () => {
         // 모바일에서 Y스크롤 이동만큼 X로 이동
@@ -348,35 +357,7 @@ $(window).on("load resize", function () {
             });
         });
     });
-    
-        // gsap.utils.toArray(".media-service .media-service__content").forEach((section, i) => {
-        //     let sArray = [];
-        //     sArray[i] = section;
-        //     gsap.to(sArray[i], {
-        //         scrollTrigger: {
-        //             trigger: sArray[i],
-        //             start: "top top",    // 트리거 요소의 상단이 뷰포트의 상단에 도달했을 때 시작
-        //             end: `+=${imgW - winInWidth}`,       // 트리거 요소의 높이만큼 스크롤이 진행되었을 때 종료
-        //             pin: true,
-        //             //markers: true ,       // 스크롤 구간 마커를 표시 (디버깅용)
-        //             pinSpacing: false,
-        //             anticipatePin: 1,
-        //         }
-        //     });
-        // });
-            // gsap.to(".media-service__content--elle", {
-            //     scrollTrigger: {
-            //         trigger: ".media-service__content--elle",
-            //         start: "top top",    // 트리거 요소의 상단이 뷰포트의 상단에 도달했을 때 시작
-            //         end: `+=${imgW - winInWidth}`,       // 트리거 요소의 높이만큼 스크롤이 진행되었을 때 종료
-            //         pin: true,
-            //         scrub: true,
-            //         //markers: true ,       // 스크롤 구간 마커를 표시 (디버깅용)
-            //         //pinSpacing: false,
-            //         anticipatePin: 1,
-            //     }
-            // });
-
+   
     // 매체 서비스 모바일에서 PC 버전으로 돌아갈 때 버그로 인해 style값 초기화
     if (winInWidth > 768) {
         setTimeout(() => {

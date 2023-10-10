@@ -189,6 +189,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .header .btn_menu{display:block;position:relative;z-index:1;width:38px;height:38px;margin-left:-8px;}
 .header .btn_menu:after{content:'';display:block;width:100%;height:100%;text-align:center;background:url('../images/ico_menu.svg') center center no-repeat;background-size:24px auto;}
 .header .btn_menu.on:after{background:#fff url('../images/ico_close_28.svg') no-repeat center center / 24px auto;}
+.header.dark .header_top .btn_menu.on:after {background-image: url(../images/ico_close_28.svg);}
 
 .header .header_top{display:block;}
 .header .cont_inner { padding-bottom:0; text-align:center}

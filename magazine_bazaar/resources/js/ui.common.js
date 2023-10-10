@@ -949,15 +949,18 @@ function progress_bar() {
 
 //패밀리사이트
 function familySite(_target) {
+    console.log("family");
     var el = _target.parent();
+    var speed = 300;
     if (el.hasClass("open")) {
         //닫힘
         el.removeClass("open");
-        el.find(".familysite").stop().slideUp(300);
+        el.find(".familysite").stop().slideUp(speed);
     } else {
         //열림
         el.addClass("open");
-        el.find(".familysite").stop().slideDown(300);
+        el.find(".familysite").stop().slideDown(speed);
+        $('html, body').animate({ scrollTop: $(document).height() }, speed);
     }
 }
 

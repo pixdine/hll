@@ -206,7 +206,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .popup_alert .point_change_cont .p_change .in_tx { font-size:12px; font-weight:500 }
 
 .point_change_wrap .point_change_cont { margin-top:24px}
-.point_change_cont .p_change .in_tx { font-size:14px; font-weight:400; line-height:1.4; margin-top:8px;}
+.point_change_cont .p_change .in_tx { font-size:12px; font-weight:400; line-height:1.4; margin-top:8px;}
 
 .list_head_area {display:flex; justify-content: space-between; align-items: center;}
 .list_head_area .list_tot { font-size:16px; line-height:1.5;color:#666; font-weight:500 }
@@ -321,16 +321,19 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 	 /*포인트샵 */
     .point_change_cont { flex-direction: column; padding:0px 16px; height:191px; justify-content: flex-start}
     .point_change_cont .point_left {width:100%; justify-content: space-between; margin-top:24px}
-    .point_change_cont .p_change {width:100%; margin-top:12px}
+    .point_change_cont .p_change {width:100%; margin-top:14px}
     .point_change_cont .p_txt {font-size:14px; white-space:nowrap; text-align:right}
     .point_change_cont .p_txt span {display:none}
-    .point_change_cont .p_change .in_tx {margin-top:8px}
+    .point_change_cont .p_change .in_tx {position:absolute; margin-top:8px; white-space:nowrap}
+    .point_change_cont .p_change .in_tx strong{ font-weight:500; white-space:nowrap}
+    .point_change_cont .p_change .p_change_box { align-items:flex-start; justify-content:center;}
     .point_change_cont .p_change .p_change_box .inputbox {width:100%}
     .point_change_cont .p_change .inputbox .inp {width:100%}
+    .point_change_cont .p_change .inputbox.error .row_err_txt { position:absolute; top:77px; white-space:nowrap}
     .point_change_cont .p_change .btn {min-width:auto; margin-left:19px; width:70px}
     .point_change_cont .btn span span {display:none}
     .point_change_cont .p_change .unit {margin:0 0 0 8px}
-    .point_change_cont .p_logo { width:auto; }
+    .point_change_cont .p_logo { width:auto; margin-right:0 }
     .point_change_cont .p_logo.ok object { width:106px;}
     .point_change_cont .p_logo.cj object { width:84px;}
     .point_change_cont .p_logo.hpoint object { width:72px;}

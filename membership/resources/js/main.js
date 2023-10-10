@@ -1,7 +1,4 @@
 $(window).on("load resize", function () {
-    // 플로팅메뉴 실행
-    $(".floating-menu").floatingMenu();
-
     if (!$("body").hasClass("is_mobile")) {
         // 부드러운 스크롤 효과 niceScroll
         $("html").niceScroll({
@@ -12,6 +9,11 @@ $(window).on("load resize", function () {
     } else {
         $("html").getNiceScroll().remove();
     }
+});
+
+$(document).ready(function () {
+    // 플로팅메뉴 실행
+    $(".floating-menu").floatingMenu();
 });
   
 gsap.registerPlugin(ScrollTrigger);

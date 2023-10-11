@@ -7,12 +7,16 @@
 .main_aplly_ban .swiper-pagination span {position: relative; color: #fff; font-family: Gotham; font-size: 16px;}
 .main_aplly_ban .swiper-pagination span:first-child {margin-right: 18px;}
 .main_aplly_ban .swiper-pagination span:first-child:after {content: ''; position: absolute; top: 50%; right: -10px; width: 2px; height: 12px; background: #fff; transform: translateY(-50%);}
+.main_aplly_ban .pc-img {display: block;}
+.main_aplly_ban .mo-img {display: none;}
 
 @media (max-width: 767px) {
     .main-container {padding-bottom: 80px;}
 
-    .main_aplly_ban .swiper-pagination {position: absolute; bottom: 12px; right: 12px; left: auto; width: auto; font-size: 0;}
+    .main_aplly_ban .swiper-pagination {bottom: 24px; right: 0; left: 0; text-align: center;}
     .main_aplly_ban .swiper-pagination span {position: relative; color: #fff; font-family: Gotham; font-size: 16px;}
     .main_aplly_ban .swiper-pagination span:first-child {margin-right: 18px;}
     .main_aplly_ban .swiper-pagination span:first-child:after {content: ''; position: absolute; top: 50%; right: -10px; width: 2px; height: 12px; background: #fff; transform: translateY(-50%);}
+    .main_aplly_ban .pc-img {display: none;}
+    .main_aplly_ban .mo-img {display: block;}
 }

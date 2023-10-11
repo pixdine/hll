@@ -121,6 +121,7 @@ $(document).ready(function () {
         });
         });
     };
+
     $("[data-selectbox]").selectbox();
 
     // 상세페이지 댓글 기능 MORE DROP
@@ -131,20 +132,16 @@ $(document).ready(function () {
     // 검색레이어 열기
     $(".btn_search").on("click", function () {
         if (!$(this).hasClass("on")) {
-        $(this).addClass("on");
-        $(".search_layer")
-            .fadeIn(200)
-            .addClass("open")
-            .children()
-            .append("<div class='sl_bg'></div>");
-        $("body").addClass("lockbody");
-        disableScroll();
+            $(this).addClass("on");
+            $(".search_layer").fadeIn(200).addClass("open").children().append("<div class='sl_bg'></div>");
+            $("body").addClass("lockbody");
+            disableScroll();
         } else {
-        $(this).removeClass("on");
-        $(".search_layer").fadeOut(200).removeClass("open");
-        $(".sl_bg").remove();
-        $("body").removeClass("lockbody");
-        enableScroll();
+            $(this).removeClass("on");
+            $(".search_layer").fadeOut(200).removeClass("open");
+            $(".sl_bg").remove();
+            $("body").removeClass("lockbody");
+            enableScroll();
         }
     });
 });
@@ -1048,7 +1045,7 @@ $.fn.commentToggle = function () {
             }
         });
     });
-    };
+};
 
 // 상세페이지 댓글 더보기 MORE DROP
 $.fn.moreDrop = function () {

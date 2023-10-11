@@ -203,6 +203,46 @@ function familySite(_target) {
     }
 }
 
+// 공통 스크롤 이벤트
+let lastScrollTop = 0;
+
+$(window).on("scroll", function () {
+    let currentScrollTop = $(window).scrollTop();
+    if (currentScrollTop <= 0) {
+        $(".header_gnb .gnb_menu .on .sub_menu").slideDown(200);
+    }
+
+    if (currentScrollTop > lastScrollTop) {
+        // 스크롤 다운
+        onScrollDown();
+    } else if (currentScrollTop < lastScrollTop) {
+        // 스크롤 업
+        onScrollUp();
+    }
+
+    // 현재 스크롤 위치를 lastScrollTop에 저장
+    lastScrollTop = currentScrollTop;
+});
+
+// 스크롤 다운
+function onScrollDown() {
+    // console.log("스크롤 다운됨!");
+    $("body").removeClass("scroll_up");
+    $("body").addClass("scroll_down");
+}
+
+// 스크롤 업
+function onScrollUp() {
+    // console.log("스크롤 업됨!");
+    $("body").addClass("scroll_up");
+    $("body").removeClass("scroll_down");
+    if ($("body").hasClass("is_mobile")) {
+        if (currentPage == "main" || currentPage == "sub") {
+        $(".header").css("transform", "translate(0, 0)");
+        }
+    }
+}
+
 // 영역에 눌렸을 때 반응하는 스크립트
 document.addEventListener("click", function (event) {
     // 검색레이어 딤영역 클릭 타겟

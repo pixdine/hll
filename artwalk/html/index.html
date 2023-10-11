@@ -70,24 +70,26 @@
             <div id="container" class="container main-container">
                 <div id="content" class="content">
                     <!-- 신청 고정 배너영역 -->
-                    <div class="main-section main_aplly_ban cont_inner">
-                        <div class="swiper-wrapper">
-                            <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
-                                <img class="pc-img" src="../resources/images/main/img-mab01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
-                                <img class="mo-img" src="../resources/images/main/img-mab01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
-                            </a>
-                            <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
-                                <img class="pc-img" src="../resources/images/main/img-mab01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
-                                <img class="mo-img" src="../resources/images/main/img-mab01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
-                            </a>
-                            <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
-                                <img class="pc-img" src="../resources/images/main/img-mab01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
-                                <img class="mo-img" src="../resources/images/main/img-mab01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
-                            </a>
+                    <div class="main-section cont_inner">
+                        <div class="one-ban-swiper">
+                            <div class="swiper-wrapper">
+                                <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
+                                    <img class="pc-img" src="../resources/images/main/img-mab01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                    <img class="mo-img" src="../resources/images/main/img-mab01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                </a>
+                                <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
+                                    <img class="pc-img" src="../resources/images/main/img-mab01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                    <img class="mo-img" src="../resources/images/main/img-mab01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                </a>
+                                <a href="#none" class="swiper-slide ban01" title="산책 메이트 신청">
+                                    <img class="pc-img" src="../resources/images/main/img-mab01.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                    <img class="mo-img" src="../resources/images/main/img-mab01-mo.png" alt="산책 메이트 신청하시고 다양한 프로그램 참여 혜택을 누리세요!">
+                                </a>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-pagination"></div>
                     </div>
-                    <!--// 신청 고정 배너영역 D: (PC , 모바일 다른 백그라운드) -->
+                    <!--// 신청 고정 배너영역 D: (PC , 모바일 통이미지 배너 1개까지 스와이퍼) -->
                 </div>
             </div>
             <!-- //container -->
@@ -238,26 +240,6 @@
 
     <script>
         $(document).ready(function () {
-            // 신청 고정 배너영역
-            var swiper = new Swiper(".main_aplly_ban", {
-                spaceBetween: 20,
-                pagination: {
-                    el: ".main_aplly_ban .swiper-pagination",
-                    type: "fraction",
-                },
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                loop: true
-            });
-
-            $(".main_aplly_ban").hover(function () {
-                swiper.autoplay.stop();
-            }, function () {
-                swiper.autoplay.start();
-            })
         });
     </script>
 </body>

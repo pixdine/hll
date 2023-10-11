@@ -43,6 +43,9 @@ $(document).ready(function () {
     $(".btn_familysite").click(function () {
         familySite($(this));
     });
+
+    // 통이미지 배너 1개짜리 스와이퍼
+    $(".one-ban-swiper").oneImgSwiper();
 });
 
 //디바이스 체크
@@ -87,6 +90,41 @@ function cate_swiper() {
         }
     });
 }
+
+// 통이미지 배너 1개짜리 스와이퍼
+(function($) {
+    $.fn.oneImgSwiper = function (options) {
+        // 기본 옵션값
+        defaults = {
+            delay: 4000,
+            loop: true,
+        }
+
+        var settings = $.extend({}, defaults, options);
+
+        return this.each(function () {
+            var swiper = new Swiper($(this), {
+                spaceBetween: 20,
+                pagination: {
+                    el: ".one-ban-swiper .swiper-pagination",
+                    type: "fraction",
+                },
+                autoplay: {
+                    delay: settings.delay,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                loop: settings.loop
+            });
+        });
+    }
+})(jQuery);
+
+$(".one-ban-swiper").hover(function () {
+    swiper.autoplay.stop();
+}, function () {
+    swiper.autoplay.start();
+});
 
 // body lock scroll ios 대응
 function lockScrollHandle(event) {

@@ -1,4 +1,14 @@
+// 멀티헤더를 위한 글로벌 변수 초기화
+var currentPage;
+
 $(document).ready(function () {
+    // 멀티헤더를 위한 현재페이지 표시
+    if (currentPage == undefined) {
+        currentPage = "sub";
+    }
+    console.log(currentPage);
+    $(".header").addClass(currentPage);
+
     $("[data-popup-toggle]").on("click", function (e) {
         var targetId = $(this).attr("data-popup-toggle");
         var targetElement = $('[data-popup="' + targetId + '"]');
@@ -102,7 +112,7 @@ function cate_swiper() {
 
         var settings = $.extend({}, defaults, options);
 
-        return this.each(function () {
+        return this.each(function (i) {
             var swiper = new Swiper($(this), {
                 spaceBetween: 20,
                 pagination: {
@@ -116,15 +126,15 @@ function cate_swiper() {
                 },
                 loop: settings.loop
             });
+
+            $(this).hover(function () {
+                swiper.autoplay.stop();
+            }, function () {
+                swiper.autoplay.start();
+            });
         });
     }
 })(jQuery);
-
-$(".one-ban-swiper").hover(function () {
-    swiper.autoplay.stop();
-}, function () {
-    swiper.autoplay.start();
-});
 
 // body lock scroll ios 대응
 function lockScrollHandle(event) {

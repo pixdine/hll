@@ -39,6 +39,21 @@ $(document).ready(function () {
     $("[data-layer-close]").on("click", function (e) {
         popup.close($(this).attr("data-layer-close"), "layer");
     });
+
+    $(".btn_familysite").click(function () {
+        familySite($(this));
+    });
+});
+
+//디바이스 체크
+$(window).on("load resize", function () {
+    if (window.innerWidth > 768) {
+        //PC
+        $("body").removeClass("is_mobile").addClass("is_pc");
+    } else {
+        //Mobile
+        $("body").removeClass("is_pc").addClass("is_mobile");
+    }
 });
 
 // 카테고리별 썸네일 슬라이드
@@ -123,17 +138,22 @@ function enableScroll() {
     body.removeEventListener("touchmove", lockScrollHandle, { passive: true });
 }
 
-//디바이스 체크
-$(window).on("load resize", function () {
-    if (window.innerWidth > 768) {
-        //PC
-        $("body").removeClass("is_mobile").addClass("is_pc");
+//패밀리사이트
+function familySite(_target) {
+    console.log("family");
+    var el = _target.parent();
+    var speed = 300;
+    if (el.hasClass("open")) {
+        //닫힘
+        el.removeClass("open");
+        el.find(".familysite").stop().slideUp(speed);
     } else {
-        //Mobile
-        $("body").removeClass("is_pc").addClass("is_mobile");
+        //열림
+        el.addClass("open");
+        el.find(".familysite").stop().slideDown(speed);
+        $('html, body').animate({ scrollTop: $(document).height() }, speed);
     }
-});
-
+}
 
 // 영역에 눌렸을 때 반응하는 스크립트
 document.addEventListener("click", function (event) {

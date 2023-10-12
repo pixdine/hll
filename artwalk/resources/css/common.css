@@ -547,6 +547,12 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_cont {display: none;}
 .tab_cont.active {display: block;}
 
+/* PC 커스텀 스크롤 */
+.scroll_custom > * {overflow:auto;}
+.is_pc .scroll_custom > *::-webkit-scrollbar{width:4px;height:4px;}
+.is_pc .scroll_custom > *::-webkit-scrollbar-thumb{background-color:#111;}
+.is_pc .scroll_custom > *::-webkit-scrollbar-track{background-color:#dbdbdb}
+
 /* flag */
 .flag{display:inline-block;;overflow:hidden;height:33px;padding:0 14px;background-color:#111;border:2px solid #111;font-size:12px;font-weight:500;color:#fff;text-align:center;line-height:29px;letter-spacing:0;}
 .flag.type2{background-color:#fff;color:#111;}

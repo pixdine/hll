@@ -70,4 +70,10 @@ body.ifr .container::-webkit-scrollbar-thumb{background-color:#dbdbdb;border-rad
 	.login_sns .info_txt{font-size:16px;line-height:23px;}
 
     .tit_wrap .tit {font-size:18px}
+    
+}
+
+@media (max-width:425px) {
+    body.ifr .container {-webkit-overflow-scrolling:touch; }
+    body.ifr .container::-webkit-scrollbar{display:none;}
 }

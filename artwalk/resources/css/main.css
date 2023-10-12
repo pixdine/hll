@@ -1,8 +1,39 @@
 
 .main_container {padding-bottom: 180px;}
-.main_container .main_section {margin-top: 120px;}
+.main_container .main_section {overflow: hidden;margin-top: 120px;}
+
+/* masonry layout */
+.masonry_list {margin: -60px 0 0 -40px;}
+.masonry_list .grid li{width: 33.3333%;padding: 60px 0 0 40px;}
+.masonry_list .item_info{margin-top: 12px;}
+.masonry_list .item_sbj{color: #111;font-weight: 500;font-size: 11px;line-height: 1;}
+.masonry_list .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 12px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}
+
+.main_wc .width_auto_swiper{position: relative;margin-left: -84px;}
+.main_wc .swiper-slide{width: 384px;margin-right: 40px;}
+.main_wc .swiper-slide-active{width: 384px; margin: 0 124px 0 84px;}
+.main_wc .wc_header{display: flex;align-items: center;justify-content: space-between;height: 56px;padding: 0 15px;opacity: 0;}
+.main_wc .present{display: flex;align-items: center;}
+.main_wc .present_img{width: 34px;}
+.main_wc .present_txt{margin-left: 11px;color: #262626;font-family: Gotham;font-size: 16px;font-weight: 500;}
+.main_wc .wc_img{position: relative;}
+.main_wc .wc_img figcaption{display: none;position: absolute;bottom: 24px;left: 24px;right: 24px;height: 48px;color: #fff;font-weight: 500;font-size: 18px;line-height: 24px;}
+.main_wc .wc_cont{display: none;padding: 24px;border: 1px solid #000;}
+.main_wc .wc_cont_txt{color: #111;font-weight: 500;font-size: 14px;line-height: 20px;}
+.main_wc .swiper-slide-active .wc_header{opacity: 1;}
+.main_wc .swiper-slide-active .wc_img figcaption{display: block;}
+.main_wc .swiper-slide-active .wc_cont{display: block;}
+.main_wc .btn_move{position: absolute;top: 228px;width: 40px;cursor: pointer;}
+.main_wc .button_next{left: 492px;}
+.main_wc .button_prev{left: 20px;}
 
 @media (max-width: 768px) {
     .main_container {padding-bottom: 80px;}
     .main_container .main_section {margin-top: 80px;}
+    
+    /* masonry layout */
+    .masonry_list {margin: -24px -6px 0;} 
+    .masonry_list .grid li{width: 50%;padding: 24px 6px 0;}
+    .masonry_list .item_sbj{font-size: 10px;}
+    .masonry_list .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
 }

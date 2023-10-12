@@ -153,6 +153,99 @@
             <!-- container -->
             <div id="container" class="container main_container">
                 <div id="content" class="content">
+                    <!-- 산책코스 -->
+                    <div class="main_section main_wc">
+                        <div class="cont_inner">
+                            <div class="tit_wrap">
+                                <div class="tit_area">
+                                    <h2 class="tit">산책코스</h2>
+                                    <div class="side"><a href="#" class="btn_more" title="산책코스 리스트 페이지로 이동"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                                </div>
+                                <p class="txt">바자 예술산책에서 추천하는 테마별 전시를 코스로 즐기세요</p>
+                            </div>
+
+                            <div class="swiper width_auto_swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="wc_header">
+                                            <div class="present">
+                                                <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
+                                                <div class="present_txt">art___bazaar</div>
+                                            </div>
+                                            <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
+                                         </div>
+
+                                        <div class="wc_img">
+                                            <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
+                                            <img src="../resources/images/temp/temp-aw01.jpg">
+                                        </div>
+
+                                        <div class="wc_cont">
+                                            <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wc_header">
+                                            <div class="present">
+                                                <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
+                                                <div class="present_txt">art___bazaar</div>
+                                            </div>
+                                            <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
+                                         </div>
+
+                                        <div class="wc_img">
+                                            <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
+                                            <img src="../resources/images/temp/temp-aw02.jpg">
+                                        </div>
+
+                                        <div class="wc_cont">
+                                            <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wc_header">
+                                            <div class="present">
+                                                <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
+                                                <div class="present_txt">art___bazaar</div>
+                                            </div>
+                                            <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
+                                         </div>
+
+                                        <div class="wc_img">
+                                            <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
+                                            <img src="../resources/images/temp/temp-aw03.jpg">
+                                        </div>
+
+                                        <div class="wc_cont">
+                                            <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="wc_header">
+                                            <div class="present">
+                                                <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
+                                                <div class="present_txt">art___bazaar</div>
+                                            </div>
+                                            <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
+                                         </div>
+
+                                        <div class="wc_img">
+                                            <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
+                                            <img src="../resources/images/temp/temp-aw04.jpg">
+                                        </div>
+
+                                        <div class="wc_cont">
+                                            <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_move button_next"><img src="../resources/images/ic_arrow_right_40.svg" alt="다음"></div>
+                                <div class="btn_move button_prev"><img src="../resources/images/ic_arrow_left_40.svg" alt="이전"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //산책코스 --> 
+
                     <!-- 아트뉴스 -->
                     <div class="main_section main_an">
                         <div class="cont_inner">
@@ -407,6 +500,16 @@
             
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {
+            // 산책코스 스와이퍼
+            var swiper = new Swiper(".width_auto_swiper", {
+                slidesPerView: "auto",
+                navigation: {
+                    nextEl: ".width_auto_swiper .button_next",
+                    prevEl: ".width_auto_swiper .button_prev",
+                },
+                loop: true
+            });
+            // 아트뉴스 masonry layout
             $('.masonry_list .grid').masonry({
                 itemSelector: 'li',
             });

@@ -9,6 +9,8 @@ $(document).ready(function () {
     console.log(currentPage);
     $(".header").addClass(currentPage);
 
+    $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
+
     $("[data-popup-toggle]").on("click", function (e) {
         var targetId = $(this).attr("data-popup-toggle");
         var targetElement = $('[data-popup="' + targetId + '"]');
@@ -314,6 +316,23 @@ $.fn.moreDrop = function () {
             setTimeout(function () {
                 moreDropBody.removeClass("on");
             }, 100);
+        });
+    });
+};
+
+// 공통탭 컨텐츠
+$.fn.commonTab = function () {
+    return this.each(function (i) {
+        tabBody = $(this);
+        const tabMenu = tabBody.find(".tab_menu");
+        const tabBtn = tabMenu.find("a");
+        tabBtn.on("click", function (e) {
+            e.preventDefault();
+            const curIdx = $(this).parent().index();
+            console.log(curIdx);
+            $(this).parent().siblings().removeClass("on");
+            $(this).parent().addClass("on");
+            $(this).parents(".tab_wrap").find(".tab_cont").removeClass("active").eq(curIdx).addClass("active");
         });
     });
 };

@@ -514,6 +514,9 @@ background:#fff;overflow:hidden;z-index:230}
     .flag{height:20px;padding:0 7px;font-size:10px;border-width:1px;line-height:20px;}
     .flag ~ .flag{margin-left:4px;}
 
+    /* button */
+    .btn{min-width:auto;}
+
 	.heading_wrap{margin:40px auto 28px;padding:0 20px;}
 	.heading_wrap .tit{font-size:24px;line-height:35px;}
 	.heading_wrap .cate{margin-bottom:20px;font-size:14px;}

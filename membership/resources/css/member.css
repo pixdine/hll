@@ -39,6 +39,20 @@ body.is_pc .header{height:72px}
 .tit_wrap { margin-bottom:24px }
 .tit_wrap .tit {font-size:18px}
 
+/* 공통 로그인 */
+body.ifr { }
+body.ifr .allmenu_wrap, body.ifr #header, body.ifr #footer, body.ifr .heading_wrap .tit { display:none }
+body.ifr .wrap {width:auto; }
+body.ifr .container { padding:0 0 30px 0; max-height:552px; overflow-x:hidden; overflow-y:auto; }
+body.is_mobile.ifr .container { max-height:100vh}
+body.ifr .heading_wrap .info_txt{ margin-top:40px; text-align:center; font-size:18px }
+body.ifr .heading_wrap .info_txt span { display:block }
+body.ifr .cont_inner .info_txt {text-align:center}
+
+body.ifr .container::-webkit-scrollbar{width:8px;height:8px;}
+body.ifr .container::-webkit-scrollbar-track{background-color:transparent;}
+body.ifr .container::-webkit-scrollbar-thumb{background-color:#dbdbdb;border-radius:4px;}
+
 
 
 

@@ -9,6 +9,8 @@ $(document).ready(function () {
     console.log(currentPage);
     $(".header").addClass(currentPage);
 
+    $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
+
     $("[data-popup-toggle]").on("click", function (e) {
         var targetId = $(this).attr("data-popup-toggle");
         var targetElement = $('[data-popup="' + targetId + '"]');
@@ -56,6 +58,51 @@ $(document).ready(function () {
 
     // 통이미지 배너 1개짜리 스와이퍼
     $(".one_ban_swiper").oneImgSwiper();
+
+    //셀렉트박스
+    $.fn.selectbox = function () {
+        this.each(function (index, element) {
+            var thisSelect = $(this);
+            var defaultValue = $("[data-option] li.selected:last", element).text();
+            $("[data-value]", element).text(defaultValue);
+
+            $("[data-value]", element).click(function (event) {
+                event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+                if ($(this).hasClass("opened")) {
+                    $(this).removeClass("opened");
+                    $("[data-option]").stop().slideUp("fast");
+                } else {
+                    $("[data-value]").removeClass("opened");
+                    $(this).addClass("opened");
+                    $("[data-option]").stop().slideUp("fast");
+                    $(this).siblings("[data-option]").stop().slideDown("fast");
+                }
+            });
+
+            $("[data-option] li", element).click(function (event) {
+                event.stopPropagation();
+                var selectedText = $(this).text();
+                console.log(selectedText);
+                $(".select_option").removeClass("selected");
+                $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
+                $(this).addClass("selected").closest("[data-option]").slideUp("fast");
+                $("[data-value]").removeClass("opened");
+            });
+        });
+
+        $(document).click(function () {
+            $(".opened[data-value]").each(function (index, element) {
+                $(this).trigger("click");
+            });
+        });
+    };
+
+    $("[data-selectbox]").selectbox();
+
+    // 상세페이지 댓글 기능 MORE DROP
+    if ($(".more_drop").length > 0) {
+        $(".more_drop").moreDrop();
+    }
 });
 
 //디바이스 체크
@@ -250,3 +297,42 @@ document.addEventListener("click", function (event) {
         
     }
 });
+
+// 상세페이지 댓글 더보기 MORE DROP
+$.fn.moreDrop = function () {
+    return this.each(function (i) {
+        var moreDropBody = $(this);
+        var toggleBtn = moreDropBody.find(".btn_ico");
+        var layerBox = moreDropBody.find(".layer_box");
+        toggleBtn.on("click", function () {
+            if (moreDropBody.hasClass("on")) {
+                moreDropBody.removeClass("on");
+            } else {
+                moreDropBody.addClass("on");
+                $(this).focus();
+            }
+        });
+        toggleBtn.on("blur", function () {
+            setTimeout(function () {
+                moreDropBody.removeClass("on");
+            }, 100);
+        });
+    });
+};
+
+// 공통탭 컨텐츠
+$.fn.commonTab = function () {
+    return this.each(function (i) {
+        tabBody = $(this);
+        const tabMenu = tabBody.find(".tab_menu");
+        const tabBtn = tabMenu.find("a");
+        tabBtn.on("click", function (e) {
+            e.preventDefault();
+            const curIdx = $(this).parent().index();
+            console.log(curIdx);
+            $(this).parent().siblings().removeClass("on");
+            $(this).parent().addClass("on");
+            $(this).parents(".tab_wrap").find(".tab_cont").removeClass("active").eq(curIdx).addClass("active");
+        });
+    });
+};

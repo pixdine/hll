@@ -82,43 +82,41 @@ $(document).ready(function () {
         familySite($(this));
     });
 
+    //셀렉트박스
     $.fn.selectbox = function () {
         this.each(function (index, element) {
-        var thisSelect = $(this);
-        var defaultValue = $("[data-option] li.selected:last", element).text();
-        $("[data-value]", element).text(defaultValue);
+            var thisSelect = $(this);
+            var defaultValue = $("[data-option] li.selected:last", element).text();
+            $("[data-value]", element).text(defaultValue);
 
-        $("[data-value]", element).click(function (event) {
-            event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
-            if ($(this).hasClass("opened")) {
-            $(this).removeClass("opened");
-            $("[data-option]").stop().slideUp("fast");
-            } else {
-            $("[data-value]").removeClass("opened");
-            $(this).addClass("opened");
-            $("[data-option]").stop().slideUp("fast");
-            $(this).siblings("[data-option]").stop().slideDown("fast");
-            }
-        });
+            $("[data-value]", element).click(function (event) {
+                event.stopPropagation(); // 클릭 이벤트가 상위 요소로 전파되지 않도록 방지
+                if ($(this).hasClass("opened")) {
+                    $(this).removeClass("opened");
+                    $("[data-option]").stop().slideUp("fast");
+                } else {
+                    $("[data-value]").removeClass("opened");
+                    $(this).addClass("opened");
+                    $("[data-option]").stop().slideUp("fast");
+                    $(this).siblings("[data-option]").stop().slideDown("fast");
+                }
+            });
 
-        $("[data-option] li", element).click(function (event) {
-            event.stopPropagation();
-            var selectedText = $(this).text();
-            console.log(selectedText);
-            $(".select_option").removeClass("selected");
-            $(this)
-            .closest("[data-selectbox]")
-            .find("[data-value]")
-            .text(selectedText);
-            $(this).addClass("selected").closest("[data-option]").slideUp("fast");
-            $("[data-value]").removeClass("opened");
-        });
+            $("[data-option] li", element).click(function (event) {
+                event.stopPropagation();
+                var selectedText = $(this).text();
+                console.log(selectedText);
+                $(".select_option").removeClass("selected");
+                $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
+                $(this).addClass("selected").closest("[data-option]").slideUp("fast");
+                $("[data-value]").removeClass("opened");
+            });
         });
 
         $(document).click(function () {
-        $(".opened[data-value]").each(function (index, element) {
-            $(this).trigger("click");
-        });
+            $(".opened[data-value]").each(function (index, element) {
+                $(this).trigger("click");
+            });
         });
     };
 

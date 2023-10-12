@@ -656,6 +656,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.btn_more_wrap.type1{margin-top:40px;}
 	.btn_more_wrap.type2{margin-top:30px;}
 	.btn_more_wrap .btn{height:44px;font-size:14px;}
+	.btn_more_wrap .btn span{margin-top:2px;}
 
 	.btn_wrap{margin-top:60px;}
 	.btn_wrap .btn ~ .btn{margin-left:12px;}

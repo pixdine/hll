@@ -55,29 +55,49 @@
 					</div>
 
 					<div class="guide_box">
-						<h3 class="h3">텍스트 + 아이콘 버튼 (.btn_txt + has_아이콘명)</h3>
-						<button type="button" class="btn_txt has_arr1"><span>오늘 획득 포인트</span></button>
-
-						<button type="button" class="btn_txt has_toggle1"><span>더보기</span></button>
-						<button type="button" class="btn_txt has_toggle1 on"><span>접기</span></button>
+						<h3 class="h3">더보기/접기 버튼</h3>
+                        <!-- 댓글내용 -->
+                        <div class="comment_box">
+                            <div class="comment_txt">
+                                <p class="txt">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요! 업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작픔으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요. 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요!</p>
+                            </div>
+                            <!-- D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+                            <div class="btn_box">
+                                <button type="button" class="btn_txt has_toggle"><span>더보기</span></button>
+                            </div>
+                            <!-- //D : 내용이 3줄 초과 시 더보기 버튼 영역이 노출되고, 그 이하에서는 더보기 버튼 영역 미노출 -->
+                        </div>
+                        <!-- //댓글내용 -->
 					</div>
 
 					<div class="guide_box">
 						<h3 class="h3">SNS버튼 (.btn_sns + 채널명)</h3>
 
-						<button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button>
-						<button type="button" class="btn_sns youtube"><span class="tit">유튜브</span></button>
-						<button type="button" class="btn_sns instagram"><span class="tit">인스타그램</span></button>
-						<button type="button" class="btn_sns twitter"><span class="tit">X</span></button>
-						<button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button>
-						<button type="button" class="btn_sns copy"><span class="tit">복사</span></button>
+						<div class="sns_list">
+							<ul>
+								<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+								<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+								<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+								<li><button type="button" class="btn_sns copy"><span class="tit">복사</span></button></li>
+							</ul>
+						</div>
+
+						<div class="sns_list">
+							<ul>
+								<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+								<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+								<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+							</ul>
+						</div>
 					</div>
 
 					<div class="guide_box">
 						<h3 class="h3">아이콘버튼 (.btn_ico + 아이콘명)</h3>
 
 						<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button>
-						<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button>
+						<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+						<button type="button" class="btn_ico scrap on"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
 						<button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
 					</div>
 				</div>
@@ -405,5 +425,10 @@
 	<script src="../magazine_bazaar/resources/js/swiper.min.js"></script>
 	<script src="../magazine_bazaar/resources/js/ui.common.js"></script>
 	<!-- //js -->
+
+    <script>
+        //댓글모듈 내 내용 더보기
+        $('.comment_box').commentToggle();
+    </script>
 </body>
 </html>

@@ -196,6 +196,15 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_s:disabled, .btn_s.disabled{background-color:#ccc;border-color:#ccc;color:#fff;}
 .bctype2:disabled, .bctype2.disabled{background-color:#fff;border-color:#ccc;color:#ccc;}
 
+/* icon button */
+.btn_ico{display:inline-flex;}
+.btn_ico.scrap{width:38px;height:38px;background:url('../images/ico_scrap_28.svg') no-repeat center center / 28px auto;}
+.btn_ico.scrap.on{background-image:url('../images/ico_scrap_on_28.svg');}
+.btn_ico.share{width:38px;height:38px;background:url('../images/ico_share_28.svg') no-repeat center center / 28px auto;}
+.btn_ico.del{width:34px;height:34px;background: url('../images/ico_close_20.svg') no-repeat center center / 20px auto;}
+.btn_ico.search{width:34px;height:34px;background:url('../images/ico_search_24.svg') no-repeat center center / 24px auto}
+.btn_ico.more{width:20px;height:20px;background:url('../images/ico_more_16.svg') no-repeat center center / 16px auto;}
+
 /* 더보기 */
 .btn_more_wrap.type1{margin-top:120px;}
 .btn_more_wrap.type2{margin-top:80px;}
@@ -211,6 +220,26 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_wrap{display:flex;justify-content:space-between;margin-top:80px;}
 .btn_wrap .btn{width:100%;min-width:auto;}
 .btn_wrap .btn ~ .btn{margin-left:16px;}
+
+/* sns button */
+.btn_sns{display:inline-flex;flex-direction:column;position:relative;}
+.btn_sns .tit{display:block;width:100%;margin-top:10px;font-size:14px;font-weight:500;color:#666;text-align:center;line-height:20px;}
+.btn_sns:before{content:'';display:block;width:48px;height:48px;margin:0 auto;background-position:center center;background-size:100% auto;background-repeat:no-repeat;}
+.btn_sns.talk:before{background-image:url('../images/ico_round_talk.svg');}
+.btn_sns.talk:hover:before{background-image:url('../images/ico_round_talk_on.svg');}
+.btn_sns.kakao:before{background-image:url('../images/ico_round_kakao.svg');}
+.btn_sns.kakao:hover:before{background-image:url('../images/ico_round_kakao_on.svg');}
+.btn_sns.instagram:before{background-image:url('../images/ico_round_instagram.svg');}
+.btn_sns.instagram:hover:before{background-image:url('../images/ico_round_instagram_on.svg');}
+.btn_sns.youtube:before{background-image:url('../images/ico_round_youtube.svg');}
+.btn_sns.youtube:hover:before{background-image:url('../images/ico_round_youtube_on.svg');}
+.btn_sns.twitter:before{background-image:url('../images/ico_round_twitter.svg');}
+.btn_sns.twitter:hover:before{background-image:url('../images/ico_round_twitter_on.svg');}
+.btn_sns.facebook:before{background-image:url('../images/ico_round_facebook.svg');}
+.btn_sns.facebook:hover:before{background-image:url('../images/ico_round_facebook_on.svg');}
+.btn_sns.copy:before{background-image:url('../images/ico_round_copy.svg');}
+.btn_sns.copy:hover:before{background-image:url('../images/ico_round_copy_on.svg');}
+
 
 /************************* Layout *************************/
 .wrap{position:relative;}
@@ -513,10 +542,16 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}
 .tab_menu.type03 > ul > li > a{display:inline-flex;align-items:center;height:44px;padding:0 15px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;color:#111;}
-.tab_menu.type03 > ul > li.on > a{background-color:#111;border-color:#111;color:#fff;font-weight:500;letter-spacing:-0.02em;}
+.tab_menu.type03 > ul > li.on > a{background-color:#00E4B2;border-color:#00E4B2;font-weight:500;}
 
 .tab_cont {display: none;}
 .tab_cont.active {display: block;}
+
+/* PC 커스텀 스크롤 */
+.scroll_custom > * {overflow:auto;}
+.is_pc .scroll_custom > *::-webkit-scrollbar{width:4px;height:4px;}
+.is_pc .scroll_custom > *::-webkit-scrollbar-thumb{background-color:#111;}
+.is_pc .scroll_custom > *::-webkit-scrollbar-track{background-color:#dbdbdb}
 
 /* flag */
 .flag{display:inline-block;;overflow:hidden;height:33px;padding:0 14px;background-color:#111;border:2px solid #111;font-size:12px;font-weight:500;color:#fff;text-align:center;line-height:29px;letter-spacing:0;}

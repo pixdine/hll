@@ -636,6 +636,14 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert_bottom .btn_wrap button{width:100%;min-width:auto;margin:0 8px;}
 .popup_alert .popup_close{right:18px;top:14px;}
 
+/* 통합로그인 */
+.popup_full.common_login .popup_cont .cont_inner { padding:0 0 30px 0}
+.popup_full.common_login .popup_inner {height:650px}
+.popup_full.common_login .popup_inner iframe { height:100% }
+.is_mobile .popup_full.common_login .popup_inner  {height:100%}
+.popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
+.is_mobile .popup_full.common_login .popup_cont { margin:0}
+
 /* 전체메뉴 */
 .allmenu_wrap { transition: display .35s ease; height:500px; overflow:hidden; position: fixed; top:57px; z-index:101; background:#fff; width:100%;border-bottom:0px solid rgba(0,0,0,.2); display:none; padding-top:25px}
 .allmenu_wrap .allmenu_list {display: flex;justify-content: center; flex-wrap: nowrap; margin-bottom:60px}

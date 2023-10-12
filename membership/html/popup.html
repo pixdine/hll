@@ -172,6 +172,7 @@
                         <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
                         <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
+                        <button type="button" data-popup-open="popup_11"><span>통합로그인</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
                         <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
@@ -182,6 +183,7 @@
                         <button type="button" data-alert-open="alert_8"><span>얼럿8_로그아웃</span></button><br>
                         <button type="button" data-alert-open="alert_9"><span>얼럿9_비밀번호변경</span></button><br>
                         <button type="button" data-alert-open="alert_10"><span>얼럿10_포인트 전환</span></button><br>
+                        
 					</div>
                 </div>
             </div>
@@ -716,6 +718,31 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .popup_full.common_login .popup_cont .cont_inner { padding:0 0 30px 0}
+        .popup_full.common_login .popup_inner {height:650px}
+        .popup_full.common_login .popup_inner iframe { height:100% }
+        .is_mobile .popup_full.common_login .popup_inner  {height:100%}
+        .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
+        .is_mobile .popup_full.common_login .popup_cont { margin:0}
+
+    </style>
+
+    <!--D : 통합로그인 -->
+    <div class="popup_full common_login" data-popup="popup_11">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">로그인</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_11"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <iframe src="member/login_common.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
             </div>
         </div>
     </div>

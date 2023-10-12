@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
 
     // 통이미지 배너 1개짜리 스와이퍼
-    $(".one-ban-swiper").oneImgSwiper();
+    $(".one_ban_swiper").oneImgSwiper();
 });
 
 //디바이스 체크
@@ -116,7 +116,7 @@ function cate_swiper() {
             var swiper = new Swiper($(this), {
                 spaceBetween: 20,
                 pagination: {
-                    el: ".one-ban-swiper .swiper-pagination",
+                    el: ".one_ban_swiper .swiper-pagination",
                     type: "fraction",
                 },
                 autoplay: {

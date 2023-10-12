@@ -116,6 +116,14 @@ $(window).on("load resize", function () {
     }
 });
 
+// 영역에 눌렸을 때 반응하는 스크립트
+document.addEventListener("click", function (event) {
+    // 검색레이어 딤영역 클릭 타겟
+    if (event == event.target) {
+        
+    }
+});
+
 // 카테고리별 썸네일 슬라이드
 function cate_swiper() {
     $('[data-slide="sm_thumb_slide"]').each(function (i) {
@@ -289,14 +297,6 @@ function onScrollUp() {
         }
     }
 }
-
-// 영역에 눌렸을 때 반응하는 스크립트
-document.addEventListener("click", function (event) {
-    // 검색레이어 딤영역 클릭 타겟
-    if (event == event.target) {
-        
-    }
-});
 
 // 상세페이지 댓글 더보기 MORE DROP
 $.fn.moreDrop = function () {

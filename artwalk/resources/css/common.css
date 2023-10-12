@@ -513,7 +513,7 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}
 .tab_menu.type03 > ul > li > a{display:inline-flex;align-items:center;height:44px;padding:0 15px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;color:#111;}
-.tab_menu.type03 > ul > li.on > a{background-color:#111;border-color:#111;color:#fff;font-weight:500;letter-spacing:-0.02em;}
+.tab_menu.type03 > ul > li.on > a{background-color:#00E4B2;border-color:#00E4B2;font-weight:500;}
 
 .tab_cont {display: none;}
 .tab_cont.active {display: block;}

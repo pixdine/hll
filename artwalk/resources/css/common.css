@@ -181,6 +181,15 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .selectbox .select_options li.selected{color:#111;font-weight:700;}
 
 
+/************************* button *************************/
+/* button */
+.btn{display:inline-flex;position:relative;align-items:center;justify-content:center;width:auto;min-width:136px;height:52px;padding:0 20px;font-size:16px;line-height:20px;font-weight:500;letter-spacing:-0.01em;border:1px solid transparent;text-align:center;}/* h52 */
+
+/* button : bgcolor */
+.bctype1{background-color:#111;border-color:#111;color:#fff;}
+.bctype2{background-color:#fff;border-color:#111;color:#111;}
+
+
 /************************* Layout *************************/
 .wrap{position:relative;}
 
@@ -413,8 +422,13 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_cont {display: none;}
 .tab_cont.active {display: block;}
 
+/* flag */
+.flag{display:inline-block;;overflow:hidden;height:33px;padding:0 14px;background-color:#111;border:2px solid #111;font-size:12px;font-weight:500;color:#fff;text-align:center;line-height:29px;letter-spacing:0;}
+.flag.type2{background-color:#fff;color:#111;}
+.flag ~ .flag{margin-left:8px;}
+.flag_area{font-size:0;}
 
-/************************* Media Query *************************/
+
 /************************* Media Query *************************/
 @media (max-width:1280px){
 	.pop_share{right:40px;margin-right:0;}
@@ -450,6 +464,10 @@ background:#fff;overflow:hidden;z-index:230}
 @media screen and (max-width: 767px) {
     /* container */
     .cont_inner{padding: 0 20px;}
+
+    /* flag */
+    .flag{height:20px;padding:0 7px;font-size:10px;border-width:1px;line-height:20px;}
+    .flag ~ .flag{margin-left:4px;}
 
 	.heading_wrap{margin:40px auto 28px;padding:0 20px;}
 	.heading_wrap .tit{font-size:24px;line-height:35px;}

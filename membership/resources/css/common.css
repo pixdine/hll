@@ -642,7 +642,8 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_full.common_login .popup_inner iframe { height:100% }
 .is_mobile .popup_full.common_login .popup_inner  {height:100%}
 .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
-.is_mobile .popup_full.common_login .popup_cont { margin:0}
+/* 통합로그인 */
+.is_mobile .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
 
 /* 전체메뉴 */
 .allmenu_wrap { transition: display .35s ease; height:500px; overflow:hidden; position: fixed; top:57px; z-index:101; background:#fff; width:100%;border-bottom:0px solid rgba(0,0,0,.2); display:none; padding-top:25px}
@@ -1130,6 +1131,10 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 	.btm_info_box02 span {display:block}
 	.btm_info_box02 .info_tit { font-size:14px;margin-bottom:16px}
 	 .btn.h36 { height:36px; font-size:14px; padding:0 20px}
+}
+
+@media (max-width:425px){
+	.is_mobile .popup_full.common_login .popup_cont { margin:0}
 }
 
 @media (max-width:320px){

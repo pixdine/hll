@@ -336,3 +336,23 @@ $.fn.commonTab = function () {
         });
     });
 };
+
+// 좋아요 버튼
+(function($) {
+    $.fn.btnWish = function (options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+
+        return this.each(function (settings){
+            var wishBtn = $(this);
+            wishBtn.on("click", function () {
+                if(!$(this).hasClass("on")){
+                    $(this).addClass("on");
+                } else {
+                    $(this).removeClass("on");
+                }
+            })
+        });
+    }
+})(jQuery);

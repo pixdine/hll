@@ -156,7 +156,7 @@
                     <!-- 메인비주얼 -->
                     <div class="swiper art_main_visual"><!-- D: PC에서는 3개노출 모바일에서는 자동크기 -->
                         <div class="swiper-wrapper">
-                            <a href="#" class="swiper-slide" title="제이디 차 상세페이지로 이동"> 
+                            <a href="#" class="swiper-slide swiper-slide-active" title="제이디 차 상세페이지로 이동"> 
                                 <div class="art_v_img"><img src="../resources/images/main/art_main_visual01.jpg"></div>
                                 
                                 <div class="art_v_guide">
@@ -351,55 +351,7 @@
                                                     <div class="row_bottom">
                                                         <span class="c_list_writer">예술산책</span>
                                                         <span class="c_list_date">23.09.08</span>
-                                                     </div>
-                                                </a>
-                                            </li>
-                                            <li class="c_list_item"> 
-                                                <a href="#" class="c_list_btn">
-                                                    <div class="row_top">
-                                                        <span class="flag type2">최신글</span>
-                                                        <p class="c_list_sbj">최근 다녀온 전시 썰 푼다!</p>
-                                                    </div>
-                                                    <div class="row_bottom">
-                                                        <span class="c_list_writer">1등산책메이트</span>
-                                                        <span class="c_list_date">23.09.08</span>
-                                                    </div>
-                                                </a>
-                                            </li> 
-                                            <li class="c_list_item">
-                                                <a href="#" class="c_list_btn">
-                                                    <div class="row_top">
-                                                        <span class="flag type2">최신글</span>
-                                                        <p class="c_list_sbj">아이와 함께 다녀온 미술관 후기 아이와 함께 다녀온 미술관</p>
-                                                    </div>
-                                                    <div class="row_bottom">
-                                                        <span class="c_list_writer">산책매니아</span>
-                                                        <span class="c_list_date">23.09.08</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="c_list_item">
-                                                <a href="#" class="c_list_btn">
-                                                    <div class="row_top">
-                                                        <span class="flag type2">최신글</span>
-                                                        <p class="c_list_sbj">최고의 전시회, 요시다 유니 개인전</p>
-                                                    </div>
-                                                    <div class="row_bottom">
-                                                        <span class="c_list_writer">산책조아</span>
-                                                        <span class="c_list_date">23.09.08</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="c_list_item">
-                                                <a href="#" class="c_list_btn">
-                                                    <div class="row_top">
-                                                        <span class="flag">공지사항</span>
-                                                        <p class="c_list_sbj">[바자전 : HOLI _ DAY, 세개의 렌즈] 에 초대합니다!</p>
-                                                    </div>
-                                                    <div class="row_bottom">
-                                                        <span class="c_list_writer">예술산책</span>
-                                                        <span class="c_list_date">23.09.08</span>
-                                                     </div>
+                                                        </div>
                                                 </a>
                                             </li>
                                             <li class="c_list_item"> 
@@ -799,14 +751,25 @@
         // DOM만 다 읽어낸 후 실행할 코드
         $(document).ready(function () {
 
+            //커뮤니티
+            var cListClone = $("#cList .c_list_track").html();
+            console.log(cListClone);
+            $("#cList .c_list_track").append(cListClone);
         });
 
         var wcSwiper;
             
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {
-            //커뮤니티
-            marqueeAutoSlide();
+            // 메인비주얼 스와이퍼
+            var mainVisualSwiper = new Swiper(".art_main_visual", {
+                speed: 1,
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: ".art_main_visual .btn_next",
+                    prevEl: ".art_main_visual .btn_prev",
+                },
+            });
 
             // 전시정보 스와이퍼
             var exSwiper = new Swiper(".swiper_pc_3_mo_auto", {
@@ -841,6 +804,9 @@
 
             // 좋아요 버튼 실행 스와이퍼가 실행된 후에 호출해야 하므로 하단에 위치
             $(".js-btn-wish").btnWish();
+
+            
+            handleMarquee();
         });
 
         // 페이지의 모든 리소스가 리사이징 된 후 실행할 코드
@@ -857,39 +823,42 @@
             });
         })
 
-        // 커뮤니티 오토스크롤링
-        function marqueeAutoSlide() {
-            $('#cList').marquee({
-                // Set to false if you want to use jQuery animate method
-                allowCss3Support: true,
-                // CSS3 easing function
-                css3easing: 'linear',
-                // Requires jQuery easing plugin.
-                easing: 'linear',
-                // Time to wait before starting the animation
-                delayBeforeStart: 0,
-                // 'left', 'right', 'up' or 'down'
-                direction: 'up',
-                // Should the marquee be duplicated to show an effect of continues flow
-                duplicated: true,
-                // Duration of the animation
-                duration: 30000,
-                // Space in pixels between the tickers
-                gap: 0,
-                // On cycle pause the marquee
-                pauseOnCycle: false,
-                // Pause on hover
-                pauseOnHover: true,
-                // The marquee is visible initially positioned next to the border towards it will be moving
-                startVisible: true
-            });
-        }
+        function handleMarquee(){
+            const marquee = document.querySelector('.c_list');
+            let speed = 1;
+            let lastScrollPos = 0;
+            let timer;
 
-        // 기사 오토스크롤 destroy
-        function marqueeAutoSlideDestroy() {
-            $('#cList').marquee('destroy');
-        }        
+            mouseEntered = false;
+            document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
+                mouseEntered = true;
+            })
+            document.querySelector('.c_list_track').addEventListener('mouseleave', function() {
+                mouseEntered = false
+            })
 
+            const container = marquee.querySelector('.c_list_track');
+            const content = marquee.querySelector('.c_list_track > *');
+            //Get total width
+            const  elHeight = content.offsetHeight;
+            
+            //Duplicate content
+            let clone = content.cloneNode(true);
+            container.appendChild(clone);
+            
+            let progress = 1;
+            function loop(){
+                if (mouseEntered === false) {progress = progress-speed;} 
+                if (progress <= (elHeight*-4-96)) {progress=0;}
+                container.style.transform = 'translateY(' + progress + 'px)';
+                window.requestAnimationFrame(loop);
+            }
+            loop();
+            
+            function handleSpeedClear(){
+                speed = 1;
+            }
+        };
     </script>
 </body>
 

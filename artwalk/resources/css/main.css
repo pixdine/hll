@@ -121,6 +121,23 @@
     .main_container {padding-bottom: 80px;}
     .main_container .main_section {margin-top: 80px;}
 
+    /* 전시정보 */
+    .main_container .ex_info .swiper_pc_3_mo_auto{overflow: initial;}
+    .main_container .ex_info .swiper_pc_3_mo_auto .swiper-slide{width: 198px;}
+    .main_container .ex_info .ex_guide{padding: 8px;}
+    .main_container .ex_info .ex_sbj{height: 32px;font-size: 12px;line-height: 16px;}
+    .main_container .ex_info .ex_range{display: block;height: auto;margin-top: 8px;}
+    .main_container .ex_info .ex_date{font-size: 10px;line-height: 1;}
+    .main_container .ex_info .ex_flag{margin-left: 0;padding: 4px;font-size: 10px;line-height: 12px;}
+    .main_container .ex_info .ex_loc_row{margin-top: 8px;}
+    .main_container .ex_info .ex_loc_sub{font-size: 10px;line-height: 12px}
+    .main_container .ex_info .ex_place{margin-left: 10px;}
+    .main_container .ex_info .ex_place:before{top: 50%;left: -6px;height: 8px;}
+    .main_container .ex_info .ex_top{padding: 8px;}
+    .main_container .ex_info .ex_top_flag{display: flex;}
+    .main_container .ex_info .btn_wish{width: 16px;height: 16px;}
+    .main_container .ex_info .btn_move {display: none;}
+
     /* 커뮤니티 */
     .main_cmnt{padding: 40px 0;background: url(../images/main/bg_community_mo.png) 50%/cover no-repeat;}
     .main_cmnt .flex_col{height: auto;}

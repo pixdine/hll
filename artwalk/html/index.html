@@ -271,8 +271,8 @@
                                                     <span class="ex_flag">오픈예정</span>
                                                 </div>
                                                 <div class="ex_loc_row">
-                                                    <span class="ex_loc">서울/강서구</span>
-                                                    <span class="ex_place">스페이스K서울</span>
+                                                    <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                    <span class="ex_place ex_loc_sub">스페이스K서울</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -302,8 +302,8 @@
                                                     <span class="ex_flag">종료</span>
                                                 </div>
                                                 <div class="ex_loc_row">
-                                                    <span class="ex_loc">서울/강서구</span>
-                                                    <span class="ex_place">타데우스로팍</span>
+                                                    <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                    <span class="ex_place ex_loc_sub">타데우스로팍</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -776,7 +776,6 @@
                     nextEl: ".ex_info .button_next",
                     prevEl: ".ex_info .button_prev",
                 },
-                loop: true,
                 breakpoints: {
                     768: {
                         slidesPerView: 3,
@@ -854,8 +853,6 @@
 
             //Get total width
             const elHeight = content.offsetHeight;
-
-            console.log(play);
 
             function loop(){
                 // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.

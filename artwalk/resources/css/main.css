@@ -4,41 +4,76 @@
 
 /* 예술산책 메인비주얼 */
 .art_main_visual{position: relative;overflow: hidden;}
-.art_main_visual .swiper-slide {display: flex;}
-.art_main_visual .art_v_img {width: 100%;height: 100vh;overflow: hidden;}
-.art_main_visual .art_v_img img {height: 100%;object-fit: cover;animation: scaleTo0 1s linear forwards;}
-.art_main_visual .swiper-slide-active .art_v_img img {animation: scaleTo100 1s linear forwards;}
-.art_main_visual .art_v_guide {display: flex;align-items: center;width: 100%;transition: 0.5s;opacity: 0;}
+.art_main_visual .mv_slide {position: relative;width: 100vw;height: 100vh;overflow: hidden;}
+.art_main_visual .mv_slide_item {display: flex;position: absolute;top: 0;left: 0;width: 100%;height: calc(100% - 72px);z-index: 1;}
+.art_main_visual .mv_slide_item.active {z-index: 4;}
+.art_main_visual .mv_slide_item.active-before {z-index: 5;}
+.art_main_visual .mv_slide_item.active-after {z-index: 6;}
+/* .art_main_visual .mv_slide_item.next {z-index: 2;} */
+.art_main_visual .art_v_img_col {display: flex;align-items: center;justify-content: center;position: relative;width: 50%;height: 100%;overflow: hidden;}
+.art_main_visual .mv_slide_item.active-before .art_v_img_col {background: #000;}
+.art_main_visual .art_v_img {position: absolute;width: 100%;height: 100%;overflow: hidden;display: flex;align-items: center;justify-content: center;}
+.art_main_visual .active-after .art_v_img {animation: scaleTo0 1s linear;}
+.art_main_visual .art_v_img2 {position: absolute;width: 50vw;height: 100vh;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+.art_main_visual .art_v_img img {position: absolute;top: 0;left: 0;width: 50vw;height: 100vh;max-width: none;object-fit: cover;animation: scaleUp 5s linear;}
+.art_main_visual .smv_slide_item_active .art_v_img img {animation: scaleTo100 1s linear forwards;}
+.art_main_visual .art_v_guide {display: flex;align-items: center;width: 50%;transition: 0.5s;}
+.art_main_visual .alpha0 .art_v_guide {animation: fadeOut 1s linear forwards;}
+.art_main_visual .alpha100 .art_v_guide {animation: fadeIn 1s linear forwards;}
 .art_main_visual .swiper-slide-active .art_v_guide {opacity: 1;}
 .art_main_visual .art_v_tit {color: #FFF;font-size: 36px;font-weight: 600;line-height: 48px;}
 .art_main_visual .art_v_desc {margin-top: 25px;color: #FFF;font-size: 18px;font-weight: 200;line-height: 24px;}
-.art_main_visual .swiper-slide:nth-of-type(2n+1){background-color: #21B5FF;}
-.art_main_visual .swiper-slide:nth-of-type(2n+2){background-color: #FF5081;}
-.art_main_visual .swiper-slide:nth-of-type(2n+2) .art_v_img{order:2;}
-.art_main_visual .swiper-slide:nth-of-type(2n+2) .art_v_guide{order:1;}
-.art_main_visual .swiper-slide:nth-of-type(2n+2) .art_v_guide {justify-content: flex-end;text-align: right;}
-.art_main_visual .swiper-slide:nth-of-type(2n+1) .art_v_guide_sub {padding-left: 100px;}
-.art_main_visual .swiper-slide:nth-of-type(2n+2) .art_v_guide_sub {padding-right: 100px;}
-.art_main_visual .btn_move {position: absolute;top: 50%;z-index: 1;width: 48px;transform: translateY(-50%);cursor: pointer;opacity: 0.6;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+1) .art_v_guide{background-color: #21B5FF;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide{background-color: #FF5081;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_img_col{order:2;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide{order:1;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide {justify-content: flex-end;text-align: right;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+1) .art_v_guide_sub {padding-left: 100px;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide_sub {padding-right: 100px;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+1).active-before .art_v_img {width: 100%;height: 0;animation: height100 1s linear forwards;}
+.art_main_visual .mv_slide_item:nth-of-type(2n+2).active-before .art_v_img {width: 0;height: 100%;animation: width100 1s linear forwards;}
+.art_main_visual .btn_move {position: absolute;top: 50%;z-index: 10;width: 48px;transform: translateY(-50%);cursor: pointer;opacity: 0.6;}
 .art_main_visual .btn_next {right: 80px;}
 .art_main_visual .btn_prev {left: 80px;}
-.art_main_visual .rotate_txt {position: absolute;top: 175px;left: calc(50% + 40px);z-index: 1;width: 160px;animation: rotate360 20s linear infinite;}
+.art_main_visual .rotate_txt {position: absolute;top: 175px;left: calc(50% + 40px);z-index: 10;width: 160px;animation: rotate360 20s linear infinite;}
+.art_main_visual .mv_page_wrap {display: flex;justify-content: center;position: absolute;bottom: 120px;left: 0;right: 0;z-index: 10;}
+.art_main_visual .pager {position: relative;width: 40px;height: 2px;margin: 0 4px;background: rgba(255, 255, 255, 0.2);}
+.art_main_visual .pager.active:before {content: ''; position: absolute;top: 0;left: 0;z-index: 1;width: 100%;height: 100%;background: #fff;animation: pagerProgress 5s linear;}
 
 @keyframes scaleTo0 {
-    0% {
-        transform: scale(1); /* 시작할 때 원래 크기 */
-    }
-    100% {
-        transform: scale(0); /* 애니메이션 끝날 때의 크기 */
+    to {
+        width: 0;
+        height: 0;
     }
 }
 
-@keyframes scaleTo100 {
-    0% {
-        transform: scale(0); /* 시작할 때 원래 크기 */
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
     }
-    100% {
-        transform: scale(1); /* 애니메이션 끝날 때의 크기 */
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes width100 {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes height100 {
+    to {
+        height: 100%;
     }
 }
 
@@ -48,6 +83,15 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes pagerProgress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
     }
 }
 

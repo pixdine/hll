@@ -750,17 +750,14 @@
 
         // DOM만 다 읽어낸 후 실행할 코드
         $(document).ready(function () {
-
-            //커뮤니티
-            var cListClone = $("#cList .c_list_track").html();
-            console.log(cListClone);
-            $("#cList .c_list_track").append(cListClone);
         });
 
         var wcSwiper;
             
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {
+            var windowSize = $(window).width();
+
             // 메인비주얼 스와이퍼
             var mainVisualSwiper = new Swiper(".art_main_visual", {
                 speed: 1,
@@ -805,12 +802,18 @@
             // 좋아요 버튼 실행 스와이퍼가 실행된 후에 호출해야 하므로 하단에 위치
             $(".js-btn-wish").btnWish();
 
-            
-            handleMarquee();
+            // 오토스크롤 함수
+            if (windowSize < 768) {
+                handleMarquee("stop");
+            } else {
+                handleMarquee("start", 1);
+            }
         });
 
         // 페이지의 모든 리소스가 리사이징 된 후 실행할 코드
         $(window).on('resize', function () {
+            var windowSize = $(window).width();
+
             // 산책코스 스와이퍼 고정사이즈가 아닐 때 리사이징 할 때는 재실행을 하지 않으면 이동간격이 맞지 않음.
             wcSwiper.destroy();
             wcSwiper = new Swiper(".width_auto_swiper", {
@@ -821,42 +824,86 @@
                 },
                 loop: true,
             });
+
+            // 오토스크롤 함수
+            if (windowSize < 768) {
+                handleMarquee("stop");
+            } else {
+                handleMarquee("start", 1);
+            }
         })
 
-        function handleMarquee(){
+        // 커뮤니티 자동스크롤
+        var scrollAni; // 애니메이션 변수 초기화
+        function handleMarquee(play, setSpeed){
+            // 뷰포트 너비를 확인합니다.
+            const viewportWidth = window.innerWidth;
+
+            // 모바일 사이즈를 정의합니다. 일반적으로 이 값은 768px 이하입니다. 
+            // 하지만 프로젝트의 반응형 브레이크포인트에 따라 다를 수 있습니다.
+            const mobileSize = 767;
+
             const marquee = document.querySelector('.c_list');
-            let speed = 1;
+            let speed = setSpeed;
             let lastScrollPos = 0;
             let timer;
-
-            mouseEntered = false;
-            document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
-                mouseEntered = true;
-            })
-            document.querySelector('.c_list_track').addEventListener('mouseleave', function() {
-                mouseEntered = false
-            })
+            var progress = 0;
 
             const container = marquee.querySelector('.c_list_track');
             const content = marquee.querySelector('.c_list_track > *');
+
             //Get total width
-            const  elHeight = content.offsetHeight;
-            
-            //Duplicate content
-            let clone = content.cloneNode(true);
-            container.appendChild(clone);
-            
-            let progress = 1;
+            const elHeight = content.offsetHeight;
+
+            console.log(play);
+
             function loop(){
+                // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
                 if (mouseEntered === false) {progress = progress-speed;} 
                 if (progress <= (elHeight*-4-96)) {progress=0;}
                 container.style.transform = 'translateY(' + progress + 'px)';
-                window.requestAnimationFrame(loop);
+                scrollAni = window.requestAnimationFrame(loop);
             }
-            loop();
-            
+
+            function initial() {
+                progress = 0
+                mouseEntered = true;
+                container.style.transform = 'translateY(0px)';
+                cancelAnimationFrame(scrollAni);
+            }
+
+            if (play == "start") {
+                mouseEntered = false;
+                document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
+                    mouseEntered = true;
+                })
+                document.querySelector('.is_pc .c_list_track').addEventListener('mouseleave', function() {
+                    mouseEntered = false
+                })
+
+                if (marquee.classList.contains("has_clone")) {
+                    var cloneItems = document.querySelectorAll('.c_list_track .clone');
+                } else {
+                    var items = document.querySelectorAll('.c_list_track .c_list_item');
+                    var clonedItems = [];
+                    items.forEach(function(item) {
+                        var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
+                        clone.classList.add("clone")
+                        clonedItems.push(clone);
+                    });
+                    clonedItems.forEach(function(item) {
+                        container.appendChild(item);
+                    });
+                    marquee.classList.add("has_clone");
+                }
+
+                loop();
+            } else {
+                initial();
+            }
+
             function handleSpeedClear(){
-                speed = 1;
+                speed = setSpeed;
             }
         };
     </script>

@@ -125,6 +125,158 @@ document.addEventListener("click", function (event) {
         
     }
 });
+//header sticky
+function headerSticky() {
+    var lastScroll = 0;
+    var headerTop = $(".header").offset().top;
+    var delta = 100; // ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
+    var header = $(".header");
+    var container = $(".container");
+    var bottomLogo = $(".header_bottom .logo a");
+
+    if (currentPage === "main") {
+        new IntersectionObserver(
+        ([e]) => {
+            if (e.intersectionRatio < 0.1 && !$("body").hasClass("is_mobile")) {
+            bottomLogo.stop().fadeIn(200);
+            } else {
+            bottomLogo.stop().fadeOut(200);
+            }
+        },
+        { threshold: [0.1, 1] }
+        ).observe($(".header_top")[0]);
+    }
+
+    var headerTop = $(".header_top").offset().top;
+    var headerHeight = $(".header").outerHeight();
+    var headerTopHeight = $(".header_top").outerHeight();
+    var headerBottomHeight = $(".header_bottom").outerHeight();
+
+    function scrollCallback(scrollTop) {
+        // ios 15 이하 및 공통 처리
+        var atTop = scrollTop <= 0;
+        var atBottom = scrollTop >= window.scrollHeight - window.clientHeight;
+
+        // body lock scroll 상태 계산 안함
+        if (!$("body").hasClass("lockbody")) {
+            if (atTop) lastScroll = 0;
+            if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
+
+            if (Math.abs(lastScroll - scrollTop) > delta) {
+                if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
+                //down
+                if (header.hasClass("view")) {
+                    //기사상세 헤더
+                    console.log("down > 11 ");
+                    if (headerTop < scrollTop) {
+                        header.addClass("active");
+                    }
+                } else {
+                    if ($("body").hasClass("is_pc")) {
+                        if (header.hasClass("main")) {
+                            header.css("transform", `translate(0, ${-headerTopHeight}px)`);
+                        }
+                    } else {
+                        if (header.hasClass("main") || header.hasClass("sub")) {
+                            header.css("transform", `translate(0, ${-headerTopHeight}px)`);
+                        }
+                    }
+                }
+                } else {
+                    // up
+                    if (header.hasClass("view")) {
+                        //기사상세 헤더
+                        $(".popup_layer", header).fadeOut(100);
+                        header.removeClass("active");
+                        /* 상세페이지 공유하기 레이어 관련 */
+
+                        /* //상세페이지 공유하기 레이어 관련 */
+                } else {
+                        container.removeAttr("style");
+                    }
+                }
+                lastScroll = scrollTop;
+            } else if (scrollTop < headerHeight + delta + $(".ad_google").height()) {
+                header.css("transform", "translate(0, 0)");
+            }
+        }
+    }
+
+    // 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
+    $(window).on("scroll", function () {
+        var scrollTop =
+        document.body.scrollTop || document.documentElement.scrollTop;
+        scrollCallback(scrollTop);
+
+        window.requestAnimationFrame(function () {
+            scrollCallback(scrollTop);
+        });
+    });
+
+    // resize 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
+    $(window).on("resize", function () {
+        window.requestAnimationFrame(function () {
+            headerTopHeight = $(".header_top").outerHeight();
+        });
+    });
+}
+
+//전체메뉴
+function allmenuOpen() {
+    function open() {
+        $(".allmenu_wrap").stop().fadeIn(100);
+        disableScroll();
+    }
+
+    function close() {
+        $(".allmenu_wrap").stop().fadeOut(100);
+        if (popup.stack.length === 0 && !$(".search_layer").hasClass("open")) {
+         enableScroll();
+        }
+    }
+
+    $(".header .btn_menu").click(open);
+
+    $(".btn_menu_close").click(close);
+
+    $(".allmenu_list .depth1 > li").each(function () {
+        $(this).toggleClass("has_menu", $(this).find(".depth2").length > 0);
+    });
+
+    $(".has_menu > a > span").click(function (e) {
+        var $depth1 = $(this).parent().parent();
+        var $btnTxt = $(this).find("em");
+
+        console.log($(this));
+        e.preventDefault();
+        $depth1.toggleClass("open");
+
+        if ($depth1.hasClass("open")) $btnTxt.text("닫기");
+        else $btnTxt.text("열기");
+    });
+
+    $(".allmenu_wrap .allmenu_dimmed").click(close);
+}
+
+function initOnDevice() {
+    $(".has_menu").toggleClass(
+        "open",
+        !document.body.classList.contains("is_mobile")
+    );
+}
+
+function inputBind() {
+    $("input.inp").on("input", function (e) {
+        if (e.target.value && !this.classList.contains("typed")) {
+            this.classList.add("typed");
+        } else if (!e.target.value && this.classList.contains("typed")) {
+            this.classList.remove("typed");
+        }
+    });
+    $("input.inp + .del").on("click", function () {
+        $(this).prev("input").val("").removeClass("typed").focus();
+    });
+}
 
 // 카테고리별 썸네일 슬라이드
 function cate_swiper() {

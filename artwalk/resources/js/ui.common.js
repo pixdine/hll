@@ -524,3 +524,25 @@ function setCSS() {
     window.addEventListener("resize", setVh);
     setVh();
 }
+
+//상세페이지 프로그래스바
+function progress_bar() {
+    console.log("load progress bar");
+    const progress_wrap = document.createElement("div");
+    progress_wrap.setAttribute("class", "progress_bar");
+    document.querySelector(".header").append(progress_wrap);
+    var body = document.body;
+    var bar = document.querySelector(".progress_bar");
+
+    window.addEventListener("scroll", function () {
+        // setTimeout(function() {
+        if (!body.classList.contains("lockbody")) {
+            var winScroll = $(window).scrollTop();
+            // height = document.documentElement.scrollHeight - this.innerHeight;
+            //height = window.scrollHeight - document.documentElement.scrollHeight;
+            height = document.documentElement.scrollHeight - $(window).height() - $(".footer").height();
+            bar.style.width = (winScroll / height) * 100 + "%";
+        }
+        // }, 300);
+    });
+}

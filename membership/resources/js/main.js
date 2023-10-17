@@ -46,7 +46,7 @@ scrollImgW = parseInt(scrollImgW);
 console.log(scrollImgW, winInWidth, scrollImgW - winInWidth);
 
 // GSAP 모바일
-mm.add("(max-width: 767px)", () => {
+mm.add("(max-width: 768px)", () => {
     const kmSection = gsap.utils.toArray(".km-section");
     const kmTxtWrap = gsap.utils.toArray(".km-txt-wrap");
     window.onload = function () {
@@ -336,7 +336,7 @@ $(window).on("load resize", function () {
     imgW = ($(".media-service .ms-img1").width() + $(".media-service .ms-img2").width() + $(".media-service .ms-img3").width() + 24);
     imgW = parseInt(imgW);
 
-    mm.add("(max-width: 767px)", () => {
+    mm.add("(max-width: 768px)", () => {
         // 모바일에서 Y스크롤 이동만큼 X로 이동
         const msImgWrap = document.querySelectorAll(".is_mobile .media-service .ms-img-wrap");
         let msImgCont = [];

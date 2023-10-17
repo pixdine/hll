@@ -938,11 +938,11 @@
             // 좋아요 버튼 실행 스와이퍼가 실행된 후에 호출해야 하므로 하단에 위치
             $(".js-btn-wish").btnWish();
 
-            // 오토스크롤 함수
+            // 커뮤니티 오토스크롤
             if (windowSize <= 768) {
-                handleMarquee("stop");
+                handleMarquee(1, 48);
             } else {
-                handleMarquee("start", 1);
+                handleMarquee(1, 96);
             }
         });
 
@@ -963,9 +963,9 @@
 
             // 오토스크롤 함수
             if (windowSize <= 768) {
-                handleMarquee("stop");
+                handleMarquee(1, 48);
             } else {
-                handleMarquee("start", 1);
+                handleMarquee(1, 96);
             }
         })
 
@@ -1038,7 +1038,7 @@
 
         // 커뮤니티 자동스크롤
         var scrollAni; // 애니메이션 변수 초기화
-        function handleMarquee(play, setSpeed){
+        function handleMarquee(setSpeed, marginBottom){
             // 뷰포트 너비를 확인합니다.
             const viewportWidth = window.innerWidth;
 
@@ -1058,50 +1058,40 @@
             //Get total width
             const elHeight = content.offsetHeight;
 
+            mouseEntered = false;
+            document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
+                mouseEntered = true;
+            })
+            document.querySelector('.c_list_track').addEventListener('mouseleave', function() {
+                mouseEntered = false
+            })
+
+            if (marquee.classList.contains("has_clone")) {
+                var cloneItems = document.querySelectorAll('.c_list_track .clone');
+            } else {
+                var items = document.querySelectorAll('.c_list_track .c_list_item');
+                var clonedItems = [];
+                items.forEach(function(item) {
+                    var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
+                    clone.classList.add("clone")
+                    clonedItems.push(clone);
+                });
+                clonedItems.forEach(function(item) {
+                    container.appendChild(item);
+                });
+                marquee.classList.add("has_clone");
+            }
+
             function loop(){
+                var size = marginBottom;
                 // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
                 if (mouseEntered === false) {progress = progress-speed;} 
-                if (progress <= (elHeight*-4-96)) {progress=0;}
+                if (progress <= elHeight*-4-size) {progress=0;}
                 container.style.transform = 'translateY(' + progress + 'px)';
                 scrollAni = window.requestAnimationFrame(loop);
             }
 
-            function initial() {
-                progress = 0
-                mouseEntered = true;
-                container.style.transform = 'translateY(0px)';
-                cancelAnimationFrame(scrollAni);
-            }
-
-            if (play == "start") {
-                mouseEntered = false;
-                document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
-                    mouseEntered = true;
-                })
-                document.querySelector('.is_pc .c_list_track').addEventListener('mouseleave', function() {
-                    mouseEntered = false
-                })
-
-                if (marquee.classList.contains("has_clone")) {
-                    var cloneItems = document.querySelectorAll('.c_list_track .clone');
-                } else {
-                    var items = document.querySelectorAll('.c_list_track .c_list_item');
-                    var clonedItems = [];
-                    items.forEach(function(item) {
-                        var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
-                        clone.classList.add("clone")
-                        clonedItems.push(clone);
-                    });
-                    clonedItems.forEach(function(item) {
-                        container.appendChild(item);
-                    });
-                    marquee.classList.add("has_clone");
-                }
-
-                loop();
-            } else {
-                initial();
-            }
+            loop();
 
             function handleSpeedClear(){
                 speed = setSpeed;

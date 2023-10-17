@@ -161,15 +161,14 @@
     .main_cmnt .side{position: absolute;top: 0;right: 0;width: 24px;height: 24px;margin-top: 0;}
     .main_cmnt .side .btn_more{width: 24px;height: 24px;}
     .main_cmnt .side .btn_more:after{width: 24px;height: 24px;background:url(../images/ic_plus_24.svg) no-repeat center center / 24px auto;}
-    .main_cmnt .c_list_track{transform: translateY(0) !important;}
+    .main_cmnt .c_list{height: 356px;}
     .main_cmnt .c_list_item{margin-bottom: 12px;padding: 12px;}
     .main_cmnt .c_list_item .row_top{display: flex;align-items: center;}
-    .main_cmnt .c_list_item .row_top .flag{height: auto;padding: 6px 12px;font-size: 12px;}
+    .main_cmnt .c_list_item .row_top .flag{height: auto;padding: 4px 12px 2px;font-size: 12px;}
     .main_cmnt .c_list_item .c_list_sbj{margin-left: 8px;font-size: 14px;line-height: 20px;}
     .main_cmnt .c_list_item .row_bottom{margin-top: 12px;}
     .main_cmnt .c_list_item .c_list_writer{font-size: 12px;line-height: 16px;}
     .main_cmnt .c_list_item .c_list_date{font-size: 12px;line-height: 16px;}
-    .main_cmnt .c_list_item.clone {display: none;}
 
     /* 산책코스 */
     .main_wc .width_auto_swiper{margin-left: -6px;}

@@ -3,18 +3,21 @@
 /* font */
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean);
 
-@font-face {
+/* 디자인 : 200 => coding: 400 */
+@font-face { 
 	font-family: 'S-CoreDream';
 	font-style: normal;
 	font-weight: 400;
 	src: url(../font/S-CoreDream-4Regular.woff) format("woff");
 }
+/* 디자인 : 500 => coding: 500 */
 @font-face {
 	font-family: 'S-CoreDream';
 	font-style: normal;
 	font-weight: 500;
 	src: url(../font/S-CoreDream-5Medium.woff) format("woff");
 }
+/* 디자인 : 600 => coding: 700 */
 @font-face {
 	font-family: 'S-CoreDream';
 	font-style: normal;

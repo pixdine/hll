@@ -646,6 +646,8 @@ background:#fff;overflow:hidden;z-index:230}
 }
 
 @media screen and (max-width: 767px) {
+	.pc_br{display:none;}
+	.mo_br{display:block;}
     /* container */
     .cont_inner{padding: 0 20px;}
 

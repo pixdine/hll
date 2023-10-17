@@ -129,10 +129,10 @@
     .art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_img_col{order:2;}
     .art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide{order:1;}
     .art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide{align-items: flex-start;justify-content: flex-start;text-align: left;}
-    .art_main_visual .mv_slide_item:nth-of-type(2n+1) .art_v_guide_sub{padding: 160px 0 0 50px;}
-    .art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide_sub{padding: 40px 0 0 50px;}
+    .art_main_visual .mv_slide_item:nth-of-type(2n+1) .art_v_guide_sub{padding: 136px 0 0 50px;}
+    .art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide_sub{padding: 32px 0 0 50px;}
     .art_main_visual .btn_move{display: none;}
-    .art_main_visual .rotate_txt{top: calc(50% + 40px);left: 32px;width: 100px;}
+    .art_main_visual .rotate_txt{top: calc(50% + 32px);left: 32px;width: 72px;}
     .art_main_visual .mv_page_wrap{bottom: 40px;}
     .art_main_visual .pager{width: 24px;}
 

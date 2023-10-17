@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     setCSS();
     setMainCSS();
-    
+
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 
     $("[data-popup-toggle]").on("click", function (e) {
@@ -534,7 +534,7 @@ function setMainCSS() {
         `${window.innerHeight}px`
         );
     };
-    setMainCSS();
+    setMainVh();
 }
 
 //상세페이지 프로그래스바

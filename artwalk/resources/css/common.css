@@ -603,6 +603,9 @@ background:#fff;overflow:hidden;z-index:230}
 .flag.type3{background-color:var(--point);}
 .flag ~ .flag{margin-left:8px;}
 .flag_area{font-size:0;}
+.flag.sm{height: 22px;padding: 0 8px;color: #fff;font-size: 12px;font-weight: 500;line-height: 18px;background: #111;}
+.flag.type2.sm{background-color:#fff;color:#111;line-height: 18px;}
+.flag.type3.sm{background-color:var(--point);}
 
 /* 하나짜리 배너 스와이프 */
 .one_ban_swiper {overflow: hidden; position: relative;}
@@ -655,6 +658,7 @@ background:#fff;overflow:hidden;z-index:230}
     /* flag */
     .flag{height:20px;padding:0 7px;font-size:10px;border-width:1px;line-height:20px;}
     .flag ~ .flag{margin-left:4px;}
+    .flag.sm{height: 20px;padding: 0 4px;font-size: 10px;line-height: 20px;}
 
 	.btn{min-width:auto;}
 	.has_plus:after{background-size:12px auto;}

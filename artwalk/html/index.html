@@ -367,7 +367,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
+                                    <!-- <div class="swiper-slide">
                                         <a href="#" title="제이디 차 상세페이지로 이동"> 
                                             <figure class="ex_img_fig">
                                                 <figcaption>제이디 차 포스터</figcaption>
@@ -457,7 +457,7 @@
                                                 <span class="blind">좋아요</span>
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="btn_move button_next"><img src="../resources/images/ic_arrow_right_48.svg" alt="다음"></div>
@@ -881,7 +881,6 @@
     <script src="../resources/js/swiper.min.js"></script>
     <script src="../resources/js/ui.common.js"></script>
     <script src="../resources/js/jquery.marquee.min.js"></script>
-
     <!-- //js -->
 
     <script>
@@ -902,6 +901,10 @@
             mainVisual(5000, 1000);
 
             // 전시정보 스와이퍼
+            if($(".swiper_pc_3_mo_auto .swiper-slide").length <= 3) {
+                console.log($(".swiper_pc_3_mo_auto .swiper-slide").length);
+                $(".ex_info .btn_move").hide();
+            }
             var exSwiper = new Swiper(".swiper_pc_3_mo_auto", {
                 slidesPerView: "auto",
                 spaceBetween: 12,

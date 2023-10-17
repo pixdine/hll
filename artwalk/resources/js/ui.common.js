@@ -9,6 +9,8 @@ $(document).ready(function () {
     console.log(currentPage);
     $(".header").addClass(currentPage);
 
+    setCSS();
+
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 
     $("[data-popup-toggle]").on("click", function (e) {
@@ -358,3 +360,15 @@ $.fn.commonTab = function () {
         });
     }
 })(jQuery);
+
+//iOS vh 대응
+function setCSS() {
+    var setVh = () => {
+        document.documentElement.style.setProperty(
+        "--vh",
+        `${window.innerHeight}px`
+        );
+    };
+    window.addEventListener("resize", setVh);
+    setVh();
+}

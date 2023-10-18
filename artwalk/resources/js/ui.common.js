@@ -10,7 +10,6 @@ $(document).ready(function () {
     $(".header").addClass(currentPage);
 
     setCSS();
-    setMainCSS();
 
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 
@@ -524,17 +523,6 @@ function setCSS() {
     };
     window.addEventListener("resize", setVh);
     setVh();
-}
-
-//iOS 메인비주얼 vh 대응
-function setMainCSS() {
-    var setMainVh = () => {
-        document.documentElement.style.setProperty(
-        "--mainVh",
-        `${window.innerHeight}px`
-        );
-    };
-    setMainVh();
 }
 
 //상세페이지 프로그래스바

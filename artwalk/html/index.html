@@ -889,9 +889,36 @@
 
         // DOM만 다 읽어낸 후 실행할 코드
         $(document).ready(function () {
+            setMainVisualHeight();
         });
 
-        var wcSwiper;
+        //iOS 메인비주얼 vh 대응
+        function setMainVisualHeight() {
+            var setMainVisualVh = () => {
+                document.documentElement.style.setProperty(
+                "--mainVisualVh",
+                `${window.innerHeight}px`
+                );
+            };
+            // resize 이벤트 리스너를 추가합니다.
+            window.addEventListener('resize', function() {
+                // 새 창의 너비와 높이를 가져옵니다.
+                var newWidth = window.innerWidth;
+                var newHeight = window.innerHeight;
+
+                // 너비가 변경되었으나 높이는 변경되지 않은 경우에만 코드를 실행합니다.
+                if (newWidth !== lastWidth && newHeight === lastHeight) {
+                    // 여기에 너비가 변경되었을 때 원하는 코드를 추가합니다.
+                    console.log("너비가 변경되었으나 높이는 변경되지 않았습니다.");
+                    setMainVisualHeight()
+                }
+
+                // 최신 너비와 높이 값으로 업데이트합니다.
+                lastWidth = newWidth;
+                lastHeight = newHeight;
+            });
+            setMainVisualVh();
+        }
             
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {
@@ -921,7 +948,7 @@
             });
 
             // 산책코스 스와이퍼
-            wcSwiper = new Swiper(".width_auto_swiper", {
+            var wcSwiper = new Swiper(".width_auto_swiper", {
                 slidesPerView: "auto",
                 navigation: {
                     nextEl: ".width_auto_swiper .button_next",

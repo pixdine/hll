@@ -100,7 +100,7 @@
 .main_wc .active-display.after .present_txt{opacity: 0;transform: translateY(-10%);}
 .main_wc .active-display.hidden .present_txt{opacity: 0;transform: translateY(10%);}
 .main_wc .active-display .wc_img{position: relative;margin: -1px 0;border: 1px solid #111;}
-.main_wc .active-display .wc_img:before {content: ''; position: absolute; top: 77px; bottom: 0; left: 0; right: 0; background: linear-gradient(360deg, rgba(17, 17, 17, 0.80) 0%, rgba(17, 17, 17, 0.00) 100%);}
+.main_wc .active-display .wc_img:before {content: '';position: absolute;top: 77px;bottom: 0;left: 0;right: 0;z-index: 1;background: linear-gradient(360deg, rgba(17, 17, 17, 0.80) 0%, rgba(17, 17, 17, 0.00) 100%);}
 .main_wc .active-display .wc_img img{width: 382px;height: 382px;max-width: none;transition: 0.2s ease-out;opacity: 1;}
 .main_wc .active-display.hidden .wc_img img{opacity: 0;}
 .main_wc .active-display .wc_img figcaption{position: absolute;bottom: 32px;left: 24px;right: 24px;z-index: 1;height: 72px;color: #fff;font-weight: 500;font-size: 28px;line-height: 36px;transition: 0.2s ease-out;opacity: 1;transform: translateY(0%);}
@@ -109,7 +109,7 @@
 .main_wc .swiper-slide{width: 424px;padding: 0 20px;transition: min-width 0.3s ease;}
 .main_wc .swiper-slide-active{width: 588px; padding: 0 102px;}
 .main_wc .swiper-slide .wc_img{position: relative;}
-.main_wc .swiper-slide .wc_img:before {content: ''; position: absolute; top: 77px; bottom: 0; left: 0; right: 0; background: linear-gradient(360deg, rgba(17, 17, 17, 0.80) 0%, rgba(17, 17, 17, 0.00) 100%);}
+.main_wc .swiper-slide .wc_img:before {content: '';position: absolute;top: 77px;bottom: 0;left: 0;right: 0;background: linear-gradient(360deg, rgba(17, 17, 17, 0.80) 0%, rgba(17, 17, 17, 0.00) 100%);}
 .main_wc .btn_move{position: absolute;top: 228px;width: 40px;cursor: pointer;}
 .main_wc .button_next{left: 508px;}
 .main_wc .button_prev{left: 40px;}
@@ -186,8 +186,10 @@
     .main_wc .wc_header{height: 44px;padding: 0 12px;}
     .main_wc .active-display .present_img{width: 30px;}
     .main_wc .active-display .present_txt{margin-left: 6px;font-size: 14px;}
+    .main_wc .active-display .wc_img:before {top: 63px;}
     .main_wc .active-display .wc_img img{width: 100%;height: auto;}
     .main_wc .active-display .wc_img figcaption{bottom: 12px;left: 12px;right: 12px;height: 40px;font-size: 14px;line-height: 20px;}
+    .main_wc .swiper-slide .wc_img:before {top: 63px;}
     .main_wc .btn_move{display: none;}
     
     /* masonry layout */

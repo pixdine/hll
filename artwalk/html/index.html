@@ -549,86 +549,40 @@
                                 <p class="txt">바자 예술산책에서 추천하는 테마별 전시를 코스로 즐기세요</p>
                             </div>
 
-                            <div class="swiper width_auto_swiper">
+                            <div class="swiper active_dp_swiper">
+                                <div class="active-display">
+                                    <div class="wc_header">
+                                        <div class="present">
+                                            <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
+                                            <div class="present_txt">art___bazaar111</div>
+                                        </div>
+                                        <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
+                                     </div>
+                                    
+                                    <figure class="wc_img">
+                                        <figcaption>프리즈 위크에 열리는 청담동 전시 111</figcaption>
+                                        <img src="../resources/images/temp/temp-aw01.jpg" loading="lazy">
+                                    </figure>
+                                </div>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="wc_header">
-                                                <div class="present">
-                                                    <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
-                                                    <div class="present_txt">art___bazaar</div>
-                                                </div>
-                                                <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
-                                             </div>
-                                            
-                                            <div class="wc_img">
-                                                <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
-                                                <img src="../resources/images/temp/temp-aw01.jpg">
-                                            </div>
-                                            
-                                            <div class="wc_cont">
-                                                <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
-                                            </div>
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw01.jpg"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="wc_header">
-                                                <div class="present">
-                                                    <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
-                                                    <div class="present_txt">art___bazaar</div>
-                                                </div>
-                                                <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
-                                            </div>
-
-                                            <div class="wc_img">
-                                                <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
-                                                <img src="../resources/images/temp/temp-aw02.jpg">
-                                            </div>
-
-                                            <div class="wc_cont">
-                                                <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
-                                            </div>
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw02.jpg"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="wc_header">
-                                                <div class="present">
-                                                    <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
-                                                    <div class="present_txt">art___bazaar</div>
-                                                </div>
-                                                <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
-                                            </div>
-
-                                            <div class="wc_img">
-                                                <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
-                                                <img src="../resources/images/temp/temp-aw03.jpg">
-                                            </div>
-
-                                            <div class="wc_cont">
-                                                <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
-                                            </div>
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw03.jpg"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="wc_header">
-                                                <div class="present">
-                                                    <div class="present_img"><img src="../resources/images/wc_logo.png"></div>
-                                                    <div class="present_txt">art___bazaar</div>
-                                                </div>
-                                                <button class="btn_more" title="내용 더보기"><img src="../resources/images/ic_dot_20.svg" alt="더보기"></button>
-                                            </div>
-
-                                            <div class="wc_img">
-                                                <figcaption>프리즈 위크에 열리는 청담동 전시 7</figcaption>
-                                                <img src="../resources/images/temp/temp-aw04.jpg">
-                                            </div>
-
-                                            <div class="wc_cont">
-                                                <p class="wc_cont_txt">프리즈 위크에 청담동에 위치한 갤러리에서 열리는 전시를 소개합니다.</p>
-                                            </div>
+                                            <div class="wc_img"><img src="../resources/images/temp/temp-aw04.jpg"></div>
                                         </a>
                                     </div>
                                 </div>
@@ -892,12 +846,10 @@
             setMainVisualHeight();
         });
 
-
         //iOS 메인비주얼 vh 대응
         // 현재 창의 너비와 높이를 추적하는 변수를 초기화합니다.
         var lastWidth = window.innerWidth;
         var lastHeight = window.innerHeight;
-
         function setMainVisualHeight() {
             var setMainVisualVh = () => {
                 document.documentElement.style.setProperty(
@@ -954,17 +906,10 @@
                     }
                 },  
             });
-
-            // 산책코스 스와이퍼
-            wcSwiper = new Swiper(".width_auto_swiper", {
-                slidesPerView: "auto",
-                navigation: {
-                    nextEl: ".width_auto_swiper .button_next",
-                    prevEl: ".width_auto_swiper .button_prev",
-                },
-                loop: true,
-            });
             
+            // 산책코스
+            $(".active_dp_swiper").activeDpSwiper();
+
             // 아트뉴스 masonry layout
             $('.masonry_list .grid').masonry({
                 itemSelector: 'li',
@@ -984,17 +929,6 @@
         // 페이지의 모든 리소스가 리사이징 된 후 실행할 코드
         $(window).on('resize', function () {
             var windowSize = $(window).width();
-
-            // 산책코스 스와이퍼 고정사이즈가 아닐 때 리사이징 할 때는 재실행을 하지 않으면 이동간격이 맞지 않음.
-            wcSwiper.destroy();
-            wcSwiper = new Swiper(".width_auto_swiper", {
-                slidesPerView: "auto",
-                navigation: {
-                    nextEl: ".width_auto_swiper .button_next",
-                    prevEl: ".width_auto_swiper .button_prev",
-                },
-                loop: true,
-            });
 
             // 오토스크롤 함수
             if (windowSize <= 768) {
@@ -1132,6 +1066,94 @@
                 speed = setSpeed;
             }
         };
+    
+        // 산책코스 스와이퍼
+        (function($) {
+            $.fn.activeDpSwiper = function (){
+                return this.each(function (i) {
+                    var adBody = $(this);
+                    var nextBtn = adBody.find(".button_next");
+                    var prevBtn = adBody.find(".button_prev");
+                    // 산책코스 스와이퍼 고정사이즈가 아닐 때 리사이징 할 때는 재실행을 하지 않으면 이동간격이 맞지 않음.
+                    var adSwiper;
+                    function makeSwiper() {
+                        // 기존에 Swiper 인스턴스가 존재한다면 파괴합니다.
+                        if (adSwiper !== undefined) {
+                            adSwiper.destroy(true, true); // 첫번째 파라미터는 이벤트 리스너 제거, 두번째 파라미터는 슬라이드와 스타일을 초기 상태로 돌립니다.
+                        }
+
+                        adSwiper = new Swiper(adBody, {
+                            slidesPerView: "auto",
+                            navigation: {
+                                nextEl: nextBtn,
+                                prevEl: prevBtn
+                            },
+                            loop: true,
+                        });
+                        adSwiper.on("slideChangeTransitionStart", function(){
+                            var activeDpBox = $(".active_dp_swiper .active-display");
+                            activeDpBox.addClass("after");
+                        });
+                        adSwiper.on('slideChangeTransitionEnd', function () {
+                            var activeDpBox = $(".active_dp_swiper .active-display");
+                            var currentImg = $(".active_dp_swiper .active-display .wc_img img");
+                            var imgSrc = $(".active_dp_swiper .swiper-slide-active img").attr("src");
+                            activeDpBox.addClass("hidden");
+                            activeDpBox.on('transitionend', function handler() {
+                                // 중복 실행을 방지하기 위해 이벤트 리스너를 제거합니다.
+                                activeDpBox.off('transitionend', handler);
+                                activeDpBox.removeClass('after');
+
+                                // 이미지 소스를 변경합니다. 여기서 'new-image-source.jpg'는 새 이미지 경로로 변경해야 합니다.
+                                currentImg.attr("src", imgSrc);
+
+                                // 이미지 로딩이 끝나면 페이드 인합니다.
+                                $(currentImg).on("load", function(){
+                                    $(".present_img img").attr("src", testData[adSwiper.realIndex].instagramLogo);
+                                    $(".present_txt").text(testData[adSwiper.realIndex].instagramUserName);
+                                    adBody.find("figcaption").text(testData[adSwiper.realIndex].figureCaption);
+                                    activeDpBox.removeClass('hidden');
+                                });
+                            });
+                        });
+                    }
+                    makeSwiper();
+
+                    // 리사이즈 이벤트에 대한 처리
+                    $(window).on('resize', function() {
+                        // 일정 시간이 지난 후 리사이즈 이벤트가 한 번만 발생하도록 디바운스(debounce) 처리를 추천합니다.
+                        // 디바운스 함수를 사용하지 않는 경우, 리사이즈할 때마다 아래의 코드가 반복 실행됩니다.
+
+                        // Swiper 재생성
+                        makeSwiper();
+                    });
+                });
+            }
+        })(jQuery);
+
+        // 산책코스 임의 데이터
+        const testData = [
+            {
+                instagramLogo : '../resources/images/wc_logo.png',
+                instagramUserName : 'art___bazaar111',
+                figureCaption: '프리즈 위크에 열리는 청담동 전시 111',
+            },
+            {
+                instagramLogo : '../resources/images/wc_logo.png',
+                instagramUserName : 'art___bazaar222',
+                figureCaption: '프리즈 위크에 열리는 청담동 전시 222',
+            },
+            {
+                instagramLogo : '../resources/images/wc_logo.png',
+                instagramUserName : 'art___bazaar333',
+                figureCaption: '프리즈 위크에 열리는 청담동 전시 333',
+            },
+            {
+                instagramLogo : '../resources/images/wc_logo.png',
+                instagramUserName : 'art___bazaar444',
+                figureCaption: '프리즈 위크에 열리는 청담동 전시 444',
+            },
+        ]
     </script>
 </body>
 

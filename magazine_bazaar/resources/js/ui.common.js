@@ -587,12 +587,12 @@ function colslideAtcList() {
                         spaceBetween: 24,
                         loop: true,
                         autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
+                            delay: 5000,
+                            disableOnInteraction: false,
                         },
                         speed: 500,
-                        pagination: {
-                        el: slideBody[i].find(".swiper-pagination"),
+                            pagination: {
+                            el: slideBody[i].find(".swiper-pagination"),
                         },
                     });
                 }
@@ -1145,7 +1145,7 @@ function onScrollUp() {
     $("body").removeClass("scroll_down");
     if ($("body").hasClass("is_mobile")) {
         if (currentPage == "main" || currentPage == "sub") {
-        $(".header").css("transform", "translate(0, 0)");
+            $(".header").css("transform", "translate(0, 0)");
         }
     }
 }

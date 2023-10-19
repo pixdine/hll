@@ -268,7 +268,7 @@ function allmenuOpen() {
         $(this).toggleClass("has_menu", $(this).find(".depth2").length > 0);
     });
 
-    $(".has_menu > a > span").click(function (e) {
+    $(".has_menu > a").click(function (e) {
         var $depth1 = $(this).parent().parent();
         var $btnTxt = $(this).find("em");
 

@@ -201,9 +201,6 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#">HOROSCOPE<span></span></a>
-										</li>
-										<li>
 											<a href="#">마이페이지 <span></span></a>
 										</li>
 										<li>
@@ -860,10 +857,10 @@
                                                 <li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">Harper’s BAZAAR</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+                                                <!-- <li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">CLOSE UP</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">eee</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">eee</a></li> -->
                                             </ul>
                                         </div>
                                         <!-- //리스트 -->
@@ -875,7 +872,7 @@
                                         <!-- 리스트 -->
                                         <div class="familysite_list global">
                                             <ul>
-                                                <li><a href="#" target="_blank" title="새창열림">BELGIUM</a></li>
+                                                <!-- <li><a href="#" target="_blank" title="새창열림">BELGIUM</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">BRAZIL</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">CANADA</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">CHINA</a></li>
@@ -887,19 +884,19 @@
                                                 <li><a href="#" target="_blank" title="새창열림">HONG-KONG</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">HUNGARY</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">INDIA</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">ITALY</a></li> -->
                                                 <li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">NORWAY</a></li>
+                                                <!-- <li><a href="#" target="_blank" title="새창열림">NORWAY</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">QUEBEC</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">RUSSIA</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">SLOVENIA</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">SOUTH AFRICA</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">SOUTH AFRICA</a></li> -->
                                                 <li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">SWEDEN</a></li>
+                                                <!-- <li><a href="#" target="_blank" title="새창열림">SWEDEN</a></li> -->
                                                 <li><a href="#" target="_blank" title="새창열림">TAWAN</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">THAILAND</a></li>
-                                                <li><a href="#" target="_blank" title="새창열림">TURKEY</a></li>
+                                                <!-- <li><a href="#" target="_blank" title="새창열림">THAILAND</a></li> -->
+                                                <!-- <li><a href="#" target="_blank" title="새창열림">TURKEY</a></li> -->
                                                 <li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
                                                 <li><a href="#" target="_blank" title="새창열림">USA</a></li>
                                             </ul>
@@ -1211,8 +1208,6 @@
 
                                 // 이미지 로딩이 끝나면 페이드 인하고 데이터가 들어갑니다.
                                 $(currentImg).on("load", function(){
-                                    $(".present_img img").attr("src", data[adSwiper.realIndex].instagramLogo);
-                                    $(".present_txt").text(data[adSwiper.realIndex].instagramUserName);
                                     adBody.find("figcaption").text(data[adSwiper.realIndex].figureCaption);
                                     activeDpBox.removeClass('hidden');
                                 });
@@ -1232,23 +1227,15 @@
         // 산책코스 임시 데이터
         const testData = [
             {
-                instagramLogo : '../resources/images/wc_logo.png',
-                instagramUserName : 'art___bazaar111',
                 figureCaption: '프리즈 위크에 열리는 청담동 전시 111',
             },
             {
-                instagramLogo : '../resources/images/wc_logo.png',
-                instagramUserName : 'art___bazaar222',
                 figureCaption: '프리즈 위크에 열리는 청담동 전시 222',
             },
             {
-                instagramLogo : '../resources/images/wc_logo.png',
-                instagramUserName : 'art___bazaar333',
                 figureCaption: '프리즈 위크에 열리는 청담동 전시 333',
             },
             {
-                instagramLogo : '../resources/images/wc_logo.png',
-                instagramUserName : 'art___bazaar444',
                 figureCaption: '프리즈 위크에 열리는 청담동 전시 444',
             },
         ]

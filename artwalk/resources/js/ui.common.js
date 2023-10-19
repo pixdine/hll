@@ -269,7 +269,7 @@ function allmenuOpen() {
     });
 
     $(".has_menu > a").click(function (e) {
-        var $depth1 = $(this).parent().parent();
+        var $depth1 = $(this).parent();
         var $btnTxt = $(this).find("em");
 
         console.log($(this));

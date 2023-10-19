@@ -802,7 +802,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.allmenu_util a{font-size:14px;}
 	.allmenu_single{margin-bottom:36px;padding-bottom:36px}
 	.allmenu_single li a{font-size:24px;line-height:35px;}
-	.allmenu_list .allmenu_list{margin-top:40px;padding-top: 40px;}
+	.allmenu_list + .allmenu_list{margin-top:40px;padding-top: 40px;}
 	.allmenu_list .depth1 > li{margin-top:29px;}
 	.allmenu_list .depth1 > li > a{font-size:24px;line-height:32px;}
     .allmenu_list .depth1 > li > a.arrow{background-size: 20px;}

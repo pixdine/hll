@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     setCSS(); //Ios 100vh 대응
     allmenuOpen(); //전체메뉴실행
-
+    headerSticky() // 헤더 스티키
 
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 
@@ -188,25 +188,25 @@ function headerSticky() {
             if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
 
             if (Math.abs(lastScroll - scrollTop) > delta) {
-                if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
-                //down
-                if (header.hasClass("view")) {
-                    //기사상세 헤더
-                    console.log("down > 11 ");
-                    if (headerTop < scrollTop) {
-                        header.addClass("active");
-                    }
-                } else {
-                    if ($("body").hasClass("is_pc")) {
-                        if (header.hasClass("main")) {
-                            header.css("transform", `translate(0, ${-headerTopHeight}px)`);
+                if (scrollTop > lastScroll && lastScroll > headerHeight) {
+                    //down
+                    if (header.hasClass("view")) {
+                        //기사상세 헤더
+                        console.log("down > 11 ");
+                        if (headerTop < scrollTop) {
+                            header.addClass("active");
                         }
                     } else {
-                        if (header.hasClass("main") || header.hasClass("sub")) {
-                            header.css("transform", `translate(0, ${-headerTopHeight}px)`);
+                        if ($("body").hasClass("is_pc")) {
+                            if (header.hasClass("main")) {
+                                header.css("transform", `translate(0, ${-headerTopHeight}px)`);
+                            }
+                        } else {
+                            if (header.hasClass("main") || header.hasClass("sub")) {
+                                header.css("transform", `translate(0, ${-headerTopHeight}px)`);
+                            }
                         }
                     }
-                }
                 } else {
                     // up
                     if (header.hasClass("view")) {

@@ -196,16 +196,6 @@ function headerSticky() {
                         if (headerTop < scrollTop) {
                             header.addClass("active");
                         }
-                    } else {
-                        if ($("body").hasClass("is_pc")) {
-                            if (header.hasClass("main")) {
-                                header.css("transform", `translate(0, ${-headerTopHeight}px)`);
-                            }
-                        } else {
-                            if (header.hasClass("main") || header.hasClass("sub")) {
-                                header.css("transform", `translate(0, ${-headerTopHeight}px)`);
-                            }
-                        }
                     }
                 } else {
                     // up

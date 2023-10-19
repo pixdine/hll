@@ -64,8 +64,8 @@
 .main_container .ex_info .ex_place:before{content: '';position: absolute;top: calc(50% - 1px);left: -13px;width: 2px;height: 12px;background: #111;opacity: 0.2;transform: translateY(-50%);}
 .main_container .ex_info .ex_top{display: flex;align-items: center;justify-content: space-between;position: absolute;top: 0;left: 0;z-index: 1;width: 100%;padding: 20px;}
 .main_container .ex_info .ex_top_flag{display: flex;}
-.main_container .ex_info .btn_wish{width: 28px;height: 28px;background: url(../images/ico_heart_like.svg) 0/100%;}
-.main_container .ex_info .btn_wish.on{background-image: url(../images/ico_heart_like_on.svg);}
+.main_container .ex_info .btn_wish{width: 28px;height: 28px;background: url(../images/ico_scrap_28.svg) 0/100%;}
+.main_container .ex_info .btn_wish.on{background-image: url(../images/ico_scrap_on_28.svg);}
 .main_container .ex_info .btn_move {position: absolute;top: 451px;width: 48px;cursor: pointer;opacity: 0.6;}
 .main_container .ex_info .button_prev{left: -48px;}
 .main_container .ex_info .button_next{right: -48px;}
@@ -154,7 +154,8 @@
     .main_container .ex_info .ex_place:before{top: 50%;left: -6px;height: 8px;}
     .main_container .ex_info .ex_top{padding: 8px;}
     .main_container .ex_info .ex_top_flag{display: flex;}
-    .main_container .ex_info .btn_wish{width: 16px;height: 16px;}
+    .main_container .ex_info .btn_wish{width: 16px;height: 16px;background-image: url(../images/ico_scrap_16.svg);}
+    .main_container .ex_info .btn_wish.on{background-image: url(../images/ico_scrap_on_16.svg)}
     .main_container .ex_info .btn_move{display: none;}
     .main_container .ex_info .mo_br{display: block;}
 

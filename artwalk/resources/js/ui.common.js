@@ -9,7 +9,9 @@ $(document).ready(function () {
     console.log(currentPage);
     $(".header").addClass(currentPage);
 
-    setCSS();
+    setCSS(); //Ios 100vh 대응
+    allmenuOpen(); //전체메뉴실행
+
 
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 

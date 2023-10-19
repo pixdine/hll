@@ -637,7 +637,7 @@ background:#fff;overflow:hidden;z-index:230}
 .one_ban_swiper .swiper-pagination {position: absolute; bottom: 12px; right: 12px; left: auto; width: auto; font-size: 0;}
 .one_ban_swiper .swiper-pagination span {position: relative; color: #fff; font-family: Gotham; font-size: 16px;}
 .one_ban_swiper .swiper-pagination span:first-child {margin-right: 18px;}
-.one_ban_swiper .swiper-pagination span:first-child:after {content: ''; position: absolute; top: 50%; right: -10px; width: 2px; height: 12px; background: #fff; transform: translateY(-50%);}
+.one_ban_swiper .swiper-pagination span:first-child:after {content: ''; position: absolute; top: calc(50% + 1px); right: -10px; width: 2px; height: 12px; background: #fff; transform: translateY(-50%);}
 .one_ban_swiper .pc_img {display: block;}
 .one_ban_swiper .mo_img {display: none;}
 
@@ -747,8 +747,8 @@ background:#fff;overflow:hidden;z-index:230}
 
     /* 하나짜리 배너 스와이프 */
     .one_ban_swiper .swiper-pagination {bottom: 24px; right: 0; left: 0; text-align: center;}
-    .one_ban_swiper .swiper-pagination span {position: relative; color: #fff; font-family: Gotham; font-size: 16px;}
-    .one_ban_swiper .swiper-pagination span:first-child {margin-right: 18px;}
+    .one_ban_swiper .swiper-pagination span {display: inline-flex;position: relative; color: #fff; font-family: Gotham; font-size: 16px; width: 10px;}
+    .one_ban_swiper .swiper-pagination span:first-child {margin-right: 18px;justify-content: flex-end;}
     .one_ban_swiper .swiper-pagination span:first-child:after {content: ''; position: absolute; top: 50%; right: -10px; width: 2px; height: 12px; background: #fff; transform: translateY(-50%);}
     .one_ban_swiper .pc_img {display: none;}
     .one_ban_swiper .mo_img {display: block;}

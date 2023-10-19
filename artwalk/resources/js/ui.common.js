@@ -447,27 +447,30 @@ function cate_swiper() {
 
         var settings = $.extend({}, defaults, options);
 
-        return this.each(function (i) {
-            var swiper = new Swiper($(this), {
-                spaceBetween: 20,
-                pagination: {
-                    el: ".one_ban_swiper .swiper-pagination",
-                    type: "fraction",
-                },
-                autoplay: {
-                    delay: settings.delay,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                loop: settings.loop
+        var swiperBody = this;
+        if(swiperBody.find('.swiper-slide').length > 1) {
+            return this.each(function (i) {
+                var swiper = new Swiper($(this), {
+                    spaceBetween: 20,
+                    pagination: {
+                        el: ".one_ban_swiper .swiper-pagination",
+                        type: "fraction",
+                    },
+                    autoplay: {
+                        delay: settings.delay,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    loop: settings.loop
+                });
+    
+                $(this).hover(function () {
+                    swiper.autoplay.stop();
+                }, function () {
+                    swiper.autoplay.start();
+                });
             });
-
-            $(this).hover(function () {
-                swiper.autoplay.stop();
-            }, function () {
-                swiper.autoplay.start();
-            });
-        });
+        }
     }
 })(jQuery);
 

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>HLL | Hearst Joongang - Membership</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/member.css"/>
+    <link rel="stylesheet" type="text/css" href="../resources/css/mypage.css" />
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../resources/js/jquery-ui.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+    <style>
+        
+
+    </style>
+
+    <div id="wrap" class="wrap">
+
+        <!--전체메뉴-->
+        <div class="allmenu_wrap">
+            <div class="cont_inner">
+                <!-- login 전 > 모바일에서만 노출됨 -->
+                <div class="info_box">
+                    <p class="info_txt">
+                        로그인 후 허스트중앙 멤버십의
+                        <strong>특별한 혜택을 확인하세요.</strong>
+                    </p>
+                    <button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
+                    <div class="info_txt_btm">
+                        <p>아직 허스트 중앙 회원이 아니신가요?</p>
+                        <a href="#" class="btn_txt has_arr2">회원가입</a>
+                    </div>
+                </div>
+                <!--// login 전-->
+                <!-- login 후 > 모바일에서만 노출됨 -->
+                <div class="login_info_box" style="display:none">
+                    <div class="info_txt">
+                        <p><strong>김중앙님,</strong><br />안녕하세요!</p>
+                    </div>
+
+                    <div class="info_txt02 box_type01">
+                        허스트중앙 통합멤버십을 통해 보다 많은
+                        혜택을 누려보세요!
+                    </div>
+                    <a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a>
+                </div>
+
+                <ul class="allmenu_list depth1">
+                    <li class="">
+                        <a href="#" class="tit">서비스 소개<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">멤버십<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">포인트 안내</a></li>
+                            <li><a href="#">포인트 관리</a></li>
+                            <li><a href="#">포인트 샵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">고객센터<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">마이페이지<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">마이홈</a></li>
+                            <li><a href="#">회원정보 수정</a></li>
+                            <li><a href="#">포인트 관리</a></li>
+                            <li><a href="#">포인트 샵</a></li>
+                            <li><a href="#">1:1문의 내역</a></li>
+                            <li><a href="#">나의 스크랩</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--// login 전-->
+        </div>
+        <!--// 전체메뉴-->
+
+        <!-- header -->
+        <header id="header" class="header"><!-- D: 메인일 때 main 클래스 추가 -->
+            <div class="header_wrap">
+                <div class="header_top">
+                    <div class="cont_inner">
+                        <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_memebrship.svg" alt="HEARST joongang"></a></h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+                        <div class="header_util_area">
+                            <button type="button" class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                            <button type="button" class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_bottom">
+                    <div class="cont_inner">
+                        <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+                        <strong class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+                        <div class="header_navi">
+                            <ul>
+                                <li><a href="#">전시정보</a></li>
+                                <li><a href="#">산책코스</a></li>
+                                <li><a href="#">아트뉴스</a></li>
+                                <li><a href="#">커뮤니티</a></li>
+                                <li class="has_sub_menu"><a href="#">예술백과</a><!-- D: 하위메뉴가 있을 경우 has_sub_menu클래스추가 -->
+                                    <div class="sub_menu">
+                                        <ul class="sub_menu_list">
+                                            <li class="ssm_item"><a href="#">갤러리 정보</a></li>
+                                            <li class="ssm_item"><a href="#">작가 정보</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">마이페이지</a></li>
+                            </ul>
+                        </div>
+                        <div class="header_util">
+                            <div class="aside">
+                                <a href="#">LOGIN</a><!-- D: LOGOUT -->
+                                <a href="#">SIGNUP</a>
+                            </div>
+                            <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- container -->
+        <div id="container" class="container">
+            <div id="content" class="content ">
+                <div class="cont_inner" style="min-height:500px">
+                   <!-- 팝업버튼 -->
+					<div class="cont_inner" style="padding-bottom:100px;">
+						<button type="button" data-popup-open="popup_1"><span>이용약관</span></button><br>
+                        <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
+						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
+						<button type="button" data-popup-open="popup_4"><span>비밀번호 재설정</span></button><br>
+                        <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
+                        <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
+                        <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
+                        <button type="button" data-popup-open="popup_11"><span>통합로그인</span></button><br>
+						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
+						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
+                        <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
+                        <button type="button" data-alert-open="alert_4"><span>얼럿4_쿠폰재발송 완료</span></button><br>
+                        <button type="button" data-alert-open="alert_5"><span>얼럿5_포인트부족</span></button><br>
+                        <button type="button" data-alert-open="alert_6"><span>얼럿6_주문/결재</span></button><br>
+                        <button type="button" data-alert-open="alert_7"><span>얼럿7_가장 긴 케이스</span></button><br>
+                        <button type="button" data-alert-open="alert_8"><span>얼럿8_로그아웃</span></button><br>
+                        <button type="button" data-alert-open="alert_9"><span>얼럿9_비밀번호변경</span></button><br>
+                        <button type="button" data-alert-open="alert_10"><span>얼럿10_포인트 전환</span></button><br>
+                        
+					</div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <div class="footer_top">
+                <div class="cont_inner">
+                    <div class="footer_link">
+                        <ul>
+                            <li><a href="#" target="_blank">이용약관</a></li>
+                            <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                            <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                            <li><a href="#" target="_blank">윤리경영</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="cont_inner">
+                    <div class="footer_info">
+                        <address class="addr_wrap">
+
+                            <div class="addr_txt">
+                                <em>허스트중앙(유)</em>
+                                <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                <span class="ceo">대표자 : 강주연</span>
+                                <br class="pc_br">
+                                <span class="num">사업자등록번호 : 104-81-55280</span>
+                                <br class="mo_br">
+                                <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+                            </div>
+                        </address>
+                        <p class="copyright">© 2020 Hearst Joongang. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <!--팝업위치-->
+    <!--D : 이용약관-->
+    <div class="popup_full" data-popup="popup_1">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">이용약관</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_1"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <p class="stxt">허스트중앙(유) 온라인 서비스 이용 약관 (필수)</p>
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+                sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa<br>sasaa
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>동의</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 허스트중앙 회원탈퇴-->
+    <div class="popup_full" data-popup="popup_2">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">허스트중앙 회원탈퇴</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_2"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+               <div class="gray_box">
+                    <div class="box_inner">
+                        <p class="txt">
+                            김중앙님,<br>
+                            허스트중앙 멤버십 포인트가 <strong class="font_type01">500P</strong>남았습니다.
+                        </p>
+                        <p class="stxt">
+                            회원 탈퇴 후 기존 회원정보 및 포인트는 모두 삭제되어
+                            복구가 불가능하니 이 점 참고하시기 바랍니다
+                        </p>
+                    </div>
+               </div>
+
+
+                <dl class="input_type01">
+                    <dt>아이디</dt>
+                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
+                        <input type="text" class="inp" value="jakim@gmail.com" placeholder="" readonly/>
+                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                    </dd>
+                    <dt>비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <input type="password" class="inp" placeholder="비밀번호 입력"/>
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        <p class="row_err_txt">비밀번호를 입력해 주세요.</p>
+                    </dd>
+                    <dt>탈퇴 사유<em class="ess">*</em></dt>
+                    <dd class="type01">
+                       <ul class="radio_list">
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio1"><label for="radio1"><span>서비스 장애와 오류</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio2"><label for="radio2"><span>유용한 정보 부족</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio3"><label for="radio3"><span>접속 속도 저하</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio4"><label for="radio4"><span>고객서비스 불만</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio5"><label for="radio5"><span>복잡한 구성으로 이용 불편</span></label></span></li>
+                            <li><span class="radio_in"><input type="radio" name="withdraw" id="radio6"><label for="radio6"><span>기타</span></label></span></li>
+                       </ul>
+                       <!--D : 기타사유 입력 -->
+						<div class="inputbox lh1 error"> <!--  에러문구 노출 시 error class 추가 -->
+						   <textarea class="tarea" placeholder="기타 사유 입력 (500자 이내)"></textarea>
+						   <p class="row_err_txt">기타 사유를 입력해 주세요.</p>
+						   <!-- <p class="row_err_txt">탈퇴 사유는 500자까지 작성 가능합니다.</p> -->
+						</div>
+                    </dd>
+                </dl>
+                <div class="info_gray_box">
+                    <ul>
+                        <li>회원탈퇴를 하시면 허스트중앙의 온라인 회원 및 서비스에 대하여 통합 탈퇴됩니다.</li>
+                        <li>재가입은 회원탈퇴 후 30일 이후 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>동의</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 아이디 찾기-->
+    <div class="popup_full" data-popup="popup_3">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">아이디 찾기</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_3"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont non">
+                <div class="pop_tit_wrap">
+                    <h2 class="tit">
+                        아이디를 잊으셨나요?
+                    </h2>
+                    <p class="info_txt">회원가입 시 입력하신 이름과 휴대폰 번호를 입력해주세요.</p>
+                </div>
+                <dl class="input_type01">
+                    <dt>이름</dt>
+                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
+                        <input type="text" class="inp"  placeholder="이름 입력" />
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                    </dd>
+                    <dt>휴대폰 번호</dt>
+                    <dd class="inputbox">
+                        <input type="tel" class="inp" placeholder="휴대폰 번호 숫자만 입력" />
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        <p class="row_err_txt">숫자만 입력해 주세요</p>
+                    </dd>
+                </dl>
+
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1" disabled><span>확인</span></button>
+                </div>
+
+                <div class="body_cont02">
+
+                    <div class="gray_box">
+                        <div class="box_inner">
+                            <p class="txt">
+                                허스트중앙 아이디는<br />
+                                <strong>jaki**@********</strong> 입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap">
+                        <button type="button" class="btn bctype1"><span>LOGIN</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 비밀번호 재설정-->
+    <div class="popup_full" data-popup="popup_4">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">비밀번호 재설정</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_4"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="pop_tit_wrap">
+                    <h2 class="tit">
+                        PASS 인증이 완료되었습니다.
+                    </h2>
+                    <p class="info_txt">비밀번호를 재설정하신 후 서비스를 이용해 주세요.</p>
+                </div>
+                <dl class="input_type01">
+                    <dt>멤버십 아이디</dt>
+                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
+                        <input type="text" class="inp" value="jaki****@joongang.kr" placeholder="" readonly />
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                    </dd>
+                    <dt>비밀번호 재설정<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <fieldset class="pw_in">
+                            <legend>비밀번호 변경</legend>
+                            <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+                                <input type="password" class="inp" placeholder="새로운 비밀번호 입력" />
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                                <p class="row_err_txt"></p>
+                            </div>
+                            <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
+                                <input type="password" class="inp" placeholder="비밀번호 한 번 더 입력" />
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                                <p class="row_err_txt"></p>
+                            </div>
+                        </fieldset>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1" disabled><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 비밀번호 변경-->
+    <div class="popup_full" data-popup="popup_7">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">비밀번호 변경</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_7"><span
+                            class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="pop_tit_wrap">
+                    <p class="info_txt">현재 비밀번호 및 변경하실 비밀번호를 입력하신 후 저장 버튼을 클릭해 주세요.</p>
+                </div>
+                <dl class="input_type01">
+                    <dt>현재 비밀번호<em class="ess">*</em></dt>
+                    <dd>
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="jaki****@joongang.kr" placeholder="" />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                    <dt>변경 비밀번호<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="" placeholder="새로운 비밀번호 입력" />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                    <dt>변경 비밀번호 확인<em class="ess">*</em></dt>
+                    <dd class="inputbox">
+                        <div class="inputbox">
+                            <input type="password" class="inp" value="" placeholder="비밀번호 한 번 더 입력"  />
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>저장</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 개인정보 수정 alter -->
+    <div class="popup_alert" data-alert="alert_1" >
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">회원정보 수정을 취소하시겠습니까?</p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 개인정보 수정 완료 alter -->
+    <div class="popup_alert" data-alert="alert_2">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    회원정보 변경이 완료되었습니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 쿠폰 재발송 alter -->
+    <div class="popup_alert" data-alert="alert_3">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    재발송 하시겠습니까?
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_3"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!--D : 쿠폰 재발송 완료 alter -->
+    <div class="popup_alert" data-alert="alert_4">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    재발송 되었습니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_4"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 가장 긴 케이스 alter -->
+    <div class="popup_alert" data-alert="alert_7">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                회원정보 항목 중 수정한 항목이 존재합니다.<br />
+                저장하지 않은 회원 정보는<br />저장되지 않습니다.<br />회원정보 수정을 취소하시겠습니까?
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_7"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--D : 오늘 획득 포인트 -->
+    <div class="popup_full" data-popup="popup_5">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">오늘 획득 포인트</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_5"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont non">
+                <div class="gray_box">
+                    <div class="box_inner">
+                        <p class="txt">
+                            김중앙님,<br>
+                            오늘 적립하신 포인트는 <strong class="font_type01">172P</strong> 입니다.
+                        </p>
+                        <p class="stxt">
+                            매체별 적립 가능한 포인트를 확인하시고 모든 포인트를 획득하세요!
+                            서비스명을 클릭하시면 해당 사이트로 이동합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="point_inq_list">
+                    <ul class="popup_scroll visible_scroll">
+                        <li>
+                            <dl>
+                                <dt>엘르</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>코스모폴리탄</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>하퍼스바자</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>에스콰이어</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>eee콘텐츠</dt>
+                                <dd><strong>5</strong>/<span>20<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>엘르</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>코스모폴리탄</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>하퍼스바자</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>에스콰이어</dt>
+                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>eee콘텐츠</dt>
+                                <dd><strong>5</strong>/<span>20<em>P</em></span></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 전체누적 포인트 -->
+    <div class="popup_full" data-popup="popup_6">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">전체 누적 포인트</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_6"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont non">
+                <div class="gray_box">
+                    <div class="box_inner">
+                        <p class="txt">
+                            김중앙님!<br>
+                            회원가입 후 지금까지 <strong class="font_type01">54,867P</strong>를 적립했습니다.
+                        </p>
+                        <p class="stxt">*최근 1년 기준이며, 소진/소멸 포인트는 제외되었습니다.</p>
+                    </div>
+                </div>
+                <div class="point_inq_list">
+                    <ul class="popup_scroll"><!-- 스크롤이 생기면 visible_scroll 클래스 추가 -->
+                        <li>
+                            <dl>
+                                <dt>엘르</dt>
+                                <dd><strong>960<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>코스모폴리탄</dt>
+                                <dd><strong>917<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>하퍼스바자</dt>
+                                <dd><strong>745<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>에스콰이어</dt>
+                                <dd><strong>1,045<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>회원가입/기타</dt>
+                                <dd><strong>50,000<em>P</em></strong></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 통합로그인 -->
+    <div class="popup_full common_login" data-popup="popup_11">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">로그인</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_11"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <!-- iframe 영역-->
+                <iframe src="member/login_common.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 포인트 부족 alter -->
+    <div class="popup_alert" data-alert="alert_5">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    사용 가능한 포인트가 부족합니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_5"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+     <!--D : 주문 결재 alter -->
+     <div class="popup_alert" data-alert="alert_6">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    구매하시겠습니까?
+                    <span>받으시는 분 : <em class="point">01012345678</em></span>
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_6"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 로그아웃 alter -->
+    <div class="popup_alert" data-alert="alert_8">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    로그아웃 되었습니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_8"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!--D : 비밀번호변경 alter -->
+    <div class="popup_alert" data-alert="alert_9">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    변경할 비밀번호를 입력해 주세요.<br />(영문 대소문자, 숫자, 특수문자 중 2가지 조합은 10자 이상, 3가지 조합은 8자 이상)
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_9"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 포인트전환 alter -->
+    <div class="popup_alert" data-alert="alert_10">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    OK캐시백으로 전환할<br />
+                    포인트를 입력해 주세요.
+                </p>
+                <div class="point_change_cont">
+                    <div class="p_change">
+                        <div class="p_change_box">
+                            <div class="inputbox error">
+                                <input type="text" placeholder="100 포인트 단위로 입력" class="inp">
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                                <p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
+                                <p class="row_err_txt">전환가능 포인트 이하로 입력해주세요.</p>
+                            </div>
+                            <span class="unit">P</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>포인트 전환</span></button><!-- 비활성화 disabled -->
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_10"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
+
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+</body>
+</html>

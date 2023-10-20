@@ -60,8 +60,8 @@ $(document).ready(function () {
         familySite($(this));
     });
 
-    // 통이미지 배너 1개짜리 스와이퍼
-    $(".one_ban_swiper").oneImgSwiper();
+    // 통이미지 배너 1개짜리 스와이퍼(PC, MO 이미지 따로) 
+    $(".one_ban_swiper").oneImgSwiper(); // 매개변수로 시간과 루프 조절 기본값 4000, true 예)$(".one_ban_swiper").oneImgSwiper(3000, true);
 
     //셀렉트박스
     $.fn.selectbox = function () {
@@ -426,7 +426,7 @@ function cate_swiper() {
     });
 }
 
-// 통이미지 배너 1개짜리 스와이퍼
+// 통이미지 배너 1개짜리 스와이퍼 (PC, MO 이미지 따로)
 (function($) {
     $.fn.oneImgSwiper = function (options) {
         // 기본 옵션값
@@ -612,14 +612,14 @@ $.fn.commonTab = function () {
 
 // 좋아요 버튼
 (function($) {
-    $.fn.btnWish = function (options) {
+    $.fn.btnScrap = function (options) {
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
 
         return this.each(function (i){
-            var wishBtn = $(this);
-            wishBtn.on("click", function () {
+            var scrapBtn = $(this);
+            scrapBtn.on("click", function () {
                 if(!$(this).hasClass("on")){
                     $(this).addClass("on");
                     console.log(i+1 + "번째 좋아요 버튼")

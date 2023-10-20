@@ -80,6 +80,7 @@
 						<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button>
 						<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
 						<button type="button" class="btn_ico scrap on"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+                        <button type="button" class="btn_ico scrap sz_28 js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
 						<button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
 					</div>
 				</div>
@@ -164,13 +165,15 @@
 						<h3 class="h3">타이틀 영역 사이드에 노출</h3>
 						<ul class="guide_desc">
 							<li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
+                            <li>[공통] PC 폰트크기 28px, MO 폰트크기 20px</li>
+                            <li>[메인] PC 폰트크기 48px, MO 폰트크기 22px (main.css에 재정의)</li>
 						</ul>
 
 						<!-- 타이틀영역 -->
 						<div class="tit_wrap">
 							<div class="tit_area">
-								<h2 class="tit">바자의 픽</h2>
-								<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+								<h2 class="tit">전시장 근처 핫플은 어디?</h2>
+								<div class="side"><a href="#" class="btn_more"><span>eee 더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
 							</div>
 						</div>
 						<!-- //타이틀영역 -->
@@ -213,13 +216,17 @@
 					<div class="guide_box">
 						<h2 class="h2">타이틀</h2>
 						<h3 class="h3">모듈 위 타이틀 영역</h3>
+						<ul class="guide_desc">
+							<li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
+                            <li>[공통] PC 폰트크기 28px, MO 폰트크기 20px</li>
+                            <li>[메인] PC 폰트크기 48px, MO 폰트크기 22px (main.css에 재정의)</li>
+						</ul>
 						<!-- 타이틀영역 -->
 						<div class="tit_wrap">
 							<div class="tit_area">
-								<h2 class="tit">산책코스</h2>
-								<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+								<h2 class="tit">전시장 근처 핫플은 어디?</h2>
+								<div class="side"><a href="#" class="btn_more"><span>eee 더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
 							</div>
-                            <p class="txt">바자 예술산책에서 추천하는 테마별 전시를 코스로 즐기세요</p>
 						</div>
 						<!-- //타이틀영역 -->
 					</div>
@@ -340,8 +347,16 @@
 	<!-- //wrap -->
 
 	<!-- js -->
-	<script src="../magazine_bazaar/resources/js/swiper.min.js"></script>
-	<script src="../magazine_bazaar/resources/js/ui.common.js"></script>
+	<script src="../artwalk/resources/js/swiper.min.js"></script>
+	<script src="../artwalk/resources/js/ui.common.js"></script>
 	<!-- //js -->
+
+    <script>
+        // 페이지의 모든 리소스가 로드된 후 실행할 코드
+        $(window).on('load', function () {
+            // 스크랩
+            $(".js-btn-scrap").btnScrap();
+        });
+    </script>
 </body>
 </html>

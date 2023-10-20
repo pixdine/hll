@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     setCSS(); //Ios 100vh 대응
     allmenuOpen(); //전체메뉴실행
-    headerSticky() // 헤더 스티키
+    $("header").length && headerSticky(); // 헤더 스티키
 
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 

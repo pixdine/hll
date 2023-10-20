@@ -329,6 +329,15 @@ const popup = {
                 });
 
                 break;
+            case "popsheet":
+                console.log(1212);
+                targetEl.fadeIn(100);
+
+                $("[data-popsheet-open]", targetEl).click(function (e) {
+                    e.stopPropagation();
+                });
+
+                break;
             default:
                 console.log("pop open default !");
                 break;

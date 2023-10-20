@@ -657,6 +657,14 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_ex_item .ex_top_flag{display: flex;}
 .comm_ex_item .btn_wish{width: 28px;height: 28px;background: url(../images/ico_scrap_28.svg) 0/100%;}
 .comm_ex_item .btn_wish.on{background-image: url(../images/ico_scrap_on_28.svg);}
+.ex_info .button_prev{left: -48px;}
+.ex_info .button_next{right: -48px;}
+.ex_info .mo_br{display: none;}
+.ex_info .cont_inner{position: relative;}
+.ex_info .swiper_pc_3_mo_auto{overflow: hidden;}
+.ex_info .swiper_pc_3_mo_auto .swiper-slide{position: relative;}
+.ex_info .swiper_pc_3_mo_auto .swiper-slide a{display: block;}
+.ex_info .btn_move {position: absolute;top: 451px;width: 48px;cursor: pointer;opacity: 0.6;}
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -925,5 +933,10 @@ background:#fff;overflow:hidden;z-index:230}
     .comm_ex_item .ex_place:before{top: 50%;left: -6px;height: 8px;}
     .comm_ex_item .ex_top{padding: 8px;}
     .comm_ex_item .ex_top_flag{display: flex;}
-
+    .ex_info .swiper_pc_3_mo_auto{overflow: initial;}
+    .ex_info .swiper_pc_3_mo_auto .swiper-slide{width: 148px;}
+    .ex_info .btn_wish{width: 16px;height: 16px;background-image: url(../images/ico_scrap_16.svg);}
+    .ex_info .btn_wish.on{background-image: url(../images/ico_scrap_on_16.svg)}
+    .ex_info .btn_move{display: none;}
+    .ex_info .mo_br{display: block;}    
 }

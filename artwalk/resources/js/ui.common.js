@@ -59,6 +59,9 @@ $(document).ready(function () {
     $(".btn_familysite").click(function () {
         familySite($(this));
     });
+    
+    // 전시정보 스와이퍼
+    $(".swiper_pc_3_mo_auto").exSwiper();
 
     // 통이미지 배너 1개짜리 스와이퍼(PC, MO 이미지 따로) 
     $(".one_ban_swiper").oneImgSwiper(); // 매개변수로 시간과 루프 조절 기본값 4000, true 예)$(".one_ban_swiper").oneImgSwiper(3000, true);

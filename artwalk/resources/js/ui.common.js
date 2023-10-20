@@ -337,7 +337,6 @@ const popup = {
                 break;
             case "popsheet":
                 targetEl.addClass("top");
-                targetEl.fadeIn(100);
 
                 $("[data-popsheet-open]", targetEl).click(function (e) {
                     e.stopPropagation();
@@ -369,7 +368,6 @@ const popup = {
         var _this = this;
         var targetEl = $(`[data-${_type}="${_target}"]`);
 
-        targetEl.fadeOut(100, adjustPad);
 
         $("html").css({
             height: "initial",
@@ -392,6 +390,9 @@ const popup = {
 
         if (_type == 'popsheet'){
             targetEl.removeClass("top");
+            adjustPad();
+        } else {
+            targetEl.fadeOut(100, adjustPad);
         }
     },
 };

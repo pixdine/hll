@@ -530,7 +530,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert .popup_close{right:18px;top:14px;}
 
 /* p-sheet */
-.popup_sheet {display:none;position:fixed;left:0;bottom:-100vh;width:100%;height:100%;z-index:200;}
+.popup_sheet {position:fixed;left:0;bottom:-100vh;width:100%;height:100%;z-index:200;transition: 0s;}
 .popup_sheet.top {bottom: 0;}
 .popup_sheet .sheet_bottom {padding:16px 20px 32px;}
 .popup_sheet .btn_wrap {margin-top: 0;justify-content: center;}
@@ -768,7 +768,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.popup_alert_cont .alert_txt{min-height:46px;font-size:16px;line-height:23px;}
 	.popup_alert_bottom{padding:16px 24px 24px;}
         
-    .popup_sheet.top {transition: 0.3s;}
+    .popup_sheet{display: block;transition: 0.3s;}
     .popup_sheet .sheet_bottom {padding:16px 20px 32px;}
     .popup_sheet .btn_wrap {margin-top: 0;justify-content: center;}
     .popup_sheet .btn_wrap .btn {width: 180px;}

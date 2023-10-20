@@ -69,6 +69,9 @@ $(document).ready(function () {
     // 전시정보 스와이퍼
     $(".swiper_pc_3_mo_auto").exSwiper();
 
+    // 전시장 근처 핫플 스와이퍼
+    $(".swiper_post").postSwiper();
+
     // 통이미지 배너 1개짜리 스와이퍼(PC, MO 이미지 따로) 
     $(".one_ban_swiper").oneImgSwiper(); // 매개변수로 시간과 루프 조절 기본값 4000, true 예)$(".one_ban_swiper").oneImgSwiper(3000, true);
 
@@ -759,4 +762,43 @@ function viewImgSlide() {
         });
     }
 })(jQuery);
-      
+
+//전시장 근처 핫플 스와이퍼
+(function($) {
+    $.fn.postSwiper = function(options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+    
+        return this.each(function (i){
+            var swiperBody = $(this);
+            var swiperSlide = swiperBody.find(".swiper-slide");
+            var btnNext = swiperBody.find(".button_next");
+            var btnPrev = swiperBody.find(".button_prev");
+            if(swiperSlide.length <= 3) {
+                btnNext.hide();
+                btnPrev.hide();
+            }
+
+            var postSwiper = new Swiper(swiperBody, {
+                slidesPerView: 1.334,
+                spaceBetween: 12,
+                navigation: {
+                    nextEl: btnNext,
+                    prevEl: btnPrev,
+                },
+                pagination: {
+                    el: swiperBody.find(".swiper-pagination"),
+                },
+
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+
+                    }
+                },
+            });
+        });
+    }
+})(jQuery);

@@ -956,24 +956,7 @@
             mainVisual(5000, 1000);
 
             // 전시정보 스와이퍼
-            if($(".swiper_pc_3_mo_auto .swiper-slide").length <= 3) {
-                console.log($(".swiper_pc_3_mo_auto .swiper-slide").length);
-                $(".ex_info .btn_move").hide();
-            }
-            var exSwiper = new Swiper(".swiper_pc_3_mo_auto", {
-                slidesPerView: "auto",
-                spaceBetween: 12,
-                navigation: {
-                    nextEl: ".ex_info .button_next",
-                    prevEl: ".ex_info .button_prev",
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    }
-                },  
-            });
+            $(".swiper_pc_3_mo_auto").exSwiper();
             
             // 산책코스
             $(".active_dp_swiper").activeDpSwiper(testData);

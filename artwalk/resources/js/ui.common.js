@@ -685,3 +685,40 @@ function viewImgSlide() {
         });
     });
 }
+
+// 전시정보 스와이퍼
+(function($) {
+    $.fn.exSwiper = function(options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+    
+        return this.each(function (i){
+            var swiperBody = $(this);
+            var swiperSlide = swiperBody.find(".swiper-slide");
+            var btnNext = swiperBody.siblings(".button_next");
+            var btnPrev = swiperBody.siblings(".button_prev");
+            if(swiperSlide.length <= 3) {
+                btnNext.hide();
+                btnPrev.hide();
+            }
+
+            var exSwiper = new Swiper(swiperBody, {
+                slidesPerView: "auto",
+                spaceBetween: 12,
+                navigation: {
+                    nextEl: btnNext,
+                    prevEl: btnPrev,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    }
+                },  
+            });    
+        });
+    }
+})(jQuery);
+
+            

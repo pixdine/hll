@@ -45,6 +45,9 @@ $(document).ready(function () {
     $("[data-layer-open]").on("click", function (e) {
         popup.open($(this).attr("data-layer-open"), "layer");
     });
+    $("[data-popsheet-open]").on("click", function (e) {
+        popup.open($(this).attr("data-popsheet-open"), "popsheet");
+    });
 
     $("[data-popup-close]").on("click", function (e) {
         popup.close($(this).attr("data-popup-close"), "popup");
@@ -54,6 +57,9 @@ $(document).ready(function () {
     });
     $("[data-layer-close]").on("click", function (e) {
         popup.close($(this).attr("data-layer-close"), "layer");
+    });
+    $("[data-popsheet-close]").on("click", function (e) {
+        popup.close($(this).attr("data-popsheet-close"), "popsheet");
     });
 
     $(".btn_familysite").click(function () {
@@ -330,7 +336,7 @@ const popup = {
 
                 break;
             case "popsheet":
-                console.log(1212);
+                targetEl.addClass("top");
                 targetEl.fadeIn(100);
 
                 $("[data-popsheet-open]", targetEl).click(function (e) {
@@ -382,6 +388,10 @@ const popup = {
                     _this.dimmed.style.zIndex = window.getComputedStyle(_this.stack[_this.stack.length - 1][0]).getPropertyValue("z-index") - 1;
                 }
             }
+        }
+
+        if (_type == 'popsheet'){
+            targetEl.removeClass("top");
         }
     },
 };

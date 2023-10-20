@@ -72,6 +72,9 @@ $(document).ready(function () {
     // 통이미지 배너 1개짜리 스와이퍼(PC, MO 이미지 따로) 
     $(".one_ban_swiper").oneImgSwiper(); // 매개변수로 시간과 루프 조절 기본값 4000, true 예)$(".one_ban_swiper").oneImgSwiper(3000, true);
 
+    // 설명 더보기
+    $(".desc_more").descMore();
+    
     //셀렉트박스
     $.fn.selectbox = function () {
         this.each(function (index, element) {
@@ -687,7 +690,7 @@ function progress_bar() {
         }
         // }, 300);
     });
-}
+} 
 
 // 상세, 화보 슬라이드
 function viewImgSlide() {
@@ -744,4 +747,16 @@ function viewImgSlide() {
     }
 })(jQuery);
 
-            
+// 설명 더보기
+(function($) {
+    $.fn.descMore = function(){
+        return this.each(function (i){
+            var descBody = $(this);
+            var descBtn = descBody.find(".btn_view");
+            descBtn.on("click", function(){
+                $(this).toggleClass("on");
+            });
+        });
+    }
+})(jQuery);
+      

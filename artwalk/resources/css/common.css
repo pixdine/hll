@@ -722,6 +722,10 @@ background:#fff;overflow:hidden;z-index:230}
     .btn{min-width:auto;}
     .has_plus:after{background-size:12px auto;}
     .has_arr01:after{margin-left:4px;background-size:12px auto;}
+    .btn_ico.scrap{background-image:url('../images/ico_scrap_24.svg');background-size:24px auto;}
+    .btn_ico.scrap.on{background-image:url('../images/ico_scrap_24_on.svg');background-size:24px auto;}
+    .btn_ico.scrap.sz_28{width:16px;height:16px;background-image:url('../images/ico_scrap_16.svg');background-size:16px auto;}
+    .btn_ico.scrap.sz_28.on{background-image:url('../images/ico_scrap_on_16.svg');}
     .btn_ico.zoom{width:36px;height:36px;}
     .btn_ico.download{width:32px;height:32px;}
     .btn_ico.download:after{width:16px;height:16px;background-image:url('../images/ico_download_16.svg');}
@@ -848,9 +852,6 @@ background:#fff;overflow:hidden;z-index:230}
     .header .btn_menu{margin-left:-6px;}
     .header .btn_menu:after{background-image:url('../images/ico_menu_24.svg');background-size:24px auto;}
     .header .btn_search:after{background-image:url('../images/ico_search_24.svg');background-size:24px auto;}
-    .btn_ico.scrap{background-image:url('../images/ico_scrap_24.svg');background-size:24px auto;}
-    .btn_ico.scrap.on{background-image:url('../images/ico_scrap_24_on.svg');background-size:24px auto;}
-    .btn_ico.share{background-image:url('../images/ico_share_24.svg');background-size:24px auto;}
 
     .header_top{display: block;height:48px;padding:0;}
     .header_top .cont_inner{height:100%;}
@@ -966,5 +967,5 @@ background:#fff;overflow:hidden;z-index:230}
     .ex_info .btn_wish{width: 16px;height: 16px;background-image: url(../images/ico_scrap_16.svg);}
     .ex_info .btn_wish.on{background-image: url(../images/ico_scrap_on_16.svg)}
     .ex_info .btn_move{display: none;}
-    .ex_info .mo_br{display: block;}    
+    .ex_info .mo_br{display: block;}
 }

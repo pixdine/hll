@@ -665,3 +665,23 @@ function progress_bar() {
         // }, 300);
     });
 }
+
+// 상세, 화보 슬라이드
+function viewImgSlide() {
+    var viewImgSlide = $('[data-slide="slider-type01"]');
+    if (viewImgSlide.length < 1) return false;
+
+    viewImgSlide.each(function () {
+        var $this = $(this);
+        var swiper = new Swiper(".viewSwiper", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    });
+}

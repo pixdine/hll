@@ -146,11 +146,11 @@
                    <!-- 팝업버튼 -->
 					<div class="cont_inner" style="padding-bottom:100px;">
 						<button type="button" data-popsheet-open="sheet_1"><span>전시정보 > 전시상세 (지도)</span></button><br>
-						<button type="button" data-popup-open="popup_1"><span>운영규정</span></button><br>
-                        <button type="button" data-popup-open="popup_2"><span>리뷰 작성하기</span></button><br>
-						<button type="button" data-popup-open="popup_3"><span>리뷰 상세보기</span></button><br>
-						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
-						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
+						<button type="button" data-popup-open="popup_1"><span>전시정보 > 전시상세 > 운영규정</span></button><br>
+                        <button type="button" data-popup-open="popup_2"><span>전시정보 > 전시상세 > 리뷰 작성하기</span></button><br>
+						<button type="button" data-popup-open="popup_3"><span>전시정보 > 전시상세 > 리뷰 상세보기</span></button><br>
+						<button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
+						<button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button><br>
 					</div>
                 </div>
             </div>
@@ -268,12 +268,10 @@
             <div class="popup_head">
                 <h2 class="tit">리뷰 상세보기 <span class="total"><em class="current">1</em>/459</span></h2><!-- D: class="current" 영역에 현재 몇번째 리뷰인지 표시 -->
                 <div class="popup_close">
-                    <button type="button" class="btn_close" data-popup-close="popup_2"><span class="blind">닫기</span></button>
+                    <button type="button" class="btn_close" data-popup-close="popup_3"><span class="blind">닫기</span></button>
                 </div>
             </div>
             <div class="popup_cont">
-
-
                 <!-- 리뷰상세 -->
                 <div class="review_detail">
                     <div class="comment_item">
@@ -347,15 +345,18 @@
         </div>
     </div>
 
-    <!--D : 개인정보 수정 alter -->
-    <div class="popup_alert" data-alert="alert_1" >
+    <!--D : 얼럿1 -->
+    <div class="popup_alert" data-alert="alert_1">
         <div class="popup_alert_inner">
             <div class="popup_alert_cont">
-                <p class="alert_txt">회원정보 수정을 취소하시겠습니까?</p>
+                <p class="alert_txt">
+                    해당 전시가 찜 되었습니다.<br>
+                    찜한 전시는 마이페이지에서 확인 가능합니다.
+                </p>
             </div>
             <div class="popup_alert_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype2"><span>마이페이지</span></button>
                     <button type="button" class="btn bctype1"><span>확인</span></button>
                 </div>
             </div>
@@ -365,12 +366,12 @@
         </div>
     </div>
 
-    <!--D : 개인정보 수정 완료 alter -->
+    <!--D : 얼럿2 -->
     <div class="popup_alert" data-alert="alert_2">
         <div class="popup_alert_inner">
             <div class="popup_alert_cont">
                 <p class="alert_txt">
-                    회원정보 변경이 완료되었습니다.
+                    로그인 후 이용 가능한 서비스 입니다. 
                 </p>
             </div>
             <div class="popup_alert_bottom">
@@ -380,65 +381,6 @@
             </div>
             <div class="popup_close">
                 <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 쿠폰 재발송 alter -->
-    <div class="popup_alert" data-alert="alert_3">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    재발송 하시겠습니까?
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_3"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-    <!--D : 쿠폰 재발송 완료 alter -->
-    <div class="popup_alert" data-alert="alert_4">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    재발송 되었습니다.
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_4"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 가장 긴 케이스 alter -->
-    <div class="popup_alert" data-alert="alert_7">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                회원정보 항목 중 수정한 항목이 존재합니다.<br />
-                저장하지 않은 회원 정보는<br />저장되지 않습니다.<br />회원정보 수정을 취소하시겠습니까?
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_7"><span class="blind">닫기</span></button>
             </div>
         </div>
     </div>

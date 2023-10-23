@@ -139,6 +139,12 @@ $(document).ready(function () {
             enableScroll();
         }
     });
+
+    // 하단 고정 버튼이 있을 경우
+    if($('.content_bottom').length){
+        const content_bottom = $('.content_bottom').innerHeight();
+        $(".footer").css("padding-bottom", content_bottom + "px");
+    }
 });
 
 //디바이스 체크
@@ -726,15 +732,16 @@ function viewImgSlide() {
     
         return this.each(function (i){
             var swiperBody = $(this);
+            var swiperContainer = $(this).find(".swiper");
             var swiperSlide = swiperBody.find(".swiper-slide");
-            var btnNext = swiperBody.siblings(".button_next");
-            var btnPrev = swiperBody.siblings(".button_prev");
+            var btnNext = swiperBody.find(".button_next");
+            var btnPrev = swiperBody.find(".button_prev");
             if(swiperSlide.length <= 3) {
                 btnNext.hide();
                 btnPrev.hide();
             }
 
-            var exSwiper = new Swiper(swiperBody, {
+            var exSwiper = new Swiper(swiperContainer, {
                 slidesPerView: "auto",
                 spaceBetween: 12,
                 navigation: {
@@ -747,7 +754,7 @@ function viewImgSlide() {
                         spaceBetween: 40,
                     }
                 },  
-            });    
+            });
         });
     }
 })(jQuery);
@@ -774,6 +781,7 @@ function viewImgSlide() {
     
         return this.each(function (i){
             var swiperBody = $(this);
+            var swiperContainer = $(this).find(".swiper");
             var swiperSlide = swiperBody.find(".swiper-slide");
             var btnNext = swiperBody.find(".button_next");
             var btnPrev = swiperBody.find(".button_prev");
@@ -782,7 +790,7 @@ function viewImgSlide() {
                 btnPrev.hide();
             }
 
-            var postSwiper = new Swiper(swiperBody, {
+            var postSwiper = new Swiper(swiperContainer, {
                 slidesPerView: 1.334,
                 spaceBetween: 12,
                 navigation: {
@@ -792,14 +800,12 @@ function viewImgSlide() {
                 pagination: {
                     el: swiperBody.find(".swiper-pagination"),
                 },
-
                 breakpoints: {
                     768: {
                         slidesPerView: 3,
                         spaceBetween: 24,
-
                     }
-                },
+                },  
             });
         });
     }

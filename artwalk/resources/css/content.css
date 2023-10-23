@@ -368,7 +368,7 @@
     
     
     .tab_wrap .tab_menu.type03 { padding-right:0px; }
-    .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap }
+    .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap; gap:8px }
     .tab_wrap .tab_menu ul li a{white-space:nowrap;}
     .tab_wrap .tab_menu.type03 > ul > li ~ li { margin-left:0}
     .tab_wrap.on .tab_menu.type03 > ul{white-space:normal; }

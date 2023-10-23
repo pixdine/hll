@@ -777,9 +777,10 @@ function viewImgSlide() {
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
-    
+
         return this.each(function (i){
             var swiperBody = $(this);
+            var swiperContainer = $(this).find(".swiper");
             var swiperSlide = swiperBody.find(".swiper-slide");
             var btnNext = swiperBody.find(".button_next");
             var btnPrev = swiperBody.find(".button_prev");
@@ -788,7 +789,7 @@ function viewImgSlide() {
                 btnPrev.hide();
             }
 
-            var postSwiper = new Swiper(swiperBody, {
+            var postSwiper = new Swiper(swiperContainer, {
                 slidesPerView: 1.334,
                 spaceBetween: 12,
                 navigation: {
@@ -798,12 +799,10 @@ function viewImgSlide() {
                 pagination: {
                     el: swiperBody.find(".swiper-pagination"),
                 },
-
                 breakpoints: {
                     768: {
                         slidesPerView: 3,
                         spaceBetween: 24,
-
                     }
                 },
             });

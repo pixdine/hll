@@ -267,6 +267,7 @@
 @media screen and (max-width: 768px) {
     .container{padding-bottom:80px;}
     .container .section{margin-top:80px;}
+    .bazaarspick .section {margin-top:40px;}
 
     /* 상단 상세 영역 */
     .detail_wrap{margin:40px 0 80px;padding-bottom:80px;border-width:12px;}

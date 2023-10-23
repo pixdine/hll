@@ -857,8 +857,7 @@ background:#fff;overflow:hidden;z-index:230}
     /* selectbox */
     .selectbox .select_styled::after{margin-top:-1px;}
     .selectbox .select_options{padding:0;}
-    .selectbox .select_options ul{min-width:94px;}
-    .selectbox .select_options li{min-width:94px;padding-right:15px;}
+    .selectbox .select_options li{padding-right:15px;}
 
     .inputbox .inp{padding:0 16px;}
     .btn_ico.search{background-image:url('../images/ico_search_20.svg');background-size:20px auto;}

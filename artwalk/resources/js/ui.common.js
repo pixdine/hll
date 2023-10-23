@@ -703,6 +703,8 @@ function viewImgSlide() {
     viewImgSlide.each(function () {
         var $this = $(this);
         var swiper = new Swiper(".viewSwiper", {
+            observer: true,
+            observeParents: true,
             scrollbar: {
                 el: ".swiper-scrollbar",
                 hide: true,

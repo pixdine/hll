@@ -220,8 +220,8 @@
     </div> 
 
     <!--D : 댓글입력하기 팝업 --> 
-    <div class="popup_full" data-popup="popup_2">
-        <div class="popup_inner">
+    <div class="popup_full" data-popup="popup_2" style="display: block">
+        <div class="popup_inner review">
             <div class="popup_head">
                 <h2 class="tit">리뷰 작성하기</h2>
                 <div class="popup_close">
@@ -229,12 +229,38 @@
                 </div>
             </div>
             <div class="popup_cont">
-                <h3 class=""></h3>
+                <p class="subject">영국 내셔널갤러리 명화전《거장의 시선, 사람을 향하다》</p>
+                <div class="guide_row">
+                    <span class="guide_txt">관람 후기 작성</span>
+                    <span class="guide_txt_sub">* 50자 이상, 1,000자 이내</span>
+                </div> 
+
                 <div class="textarea_wrap">
-                    <textarea class="textarea review_text_area" placeholder="내용을 입력해 주세요." title="내용을 입력해 주세요."></textarea>
+                    <textarea class="textarea review_text_area" maxlength="1000" placeholder="내용을 입력해 주세요." title="내용을 입력해 주세요."></textarea>
                     <div class="cnt_txt">
-                        <span class="current"></span>
+                        <span class="current">0</span>
                         <span class="total"></span>
+                    </div>
+                </div>
+
+                <div class="guide_row">
+                    <span class="guide_txt">이미지 등록</span>
+                    <div class="guide_txt attach_cnt">
+                        (<span class="current"></span>/<span class="total"></span>)
+                    </div>
+                    <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
+                </div> 
+
+                <div class="attach_pic">
+                    <button class="btn_attach"><!--D : 갯수나 용량 초과하면 disabled 클래스 추가 --> 
+                        <span class="txt">사진첨부</span>
+                    </button>
+                    <!-- <button class="btn_attach disabled"></button> -->
+                    <div class="attach_img">
+                        <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                        <button class="btn_del" title="첨부 이미지 삭제">
+                            <span class="blind">첨부 이미지 삭제</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -756,10 +782,39 @@
         </div>
     </div>
 
-
-
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
+
+    <script>
+
+        (function($) {
+            $.fn.textareaWithCount = function (options) {
+                // 기본 옵션값
+                defaults = {
+                    delay: 4000,
+                    textLength: 1000,
+                }
+
+                var settings = $.extend({}, defaults, options);
+                return this.each(function (i) {
+                    var taBody = $(this);
+                    var textarea = taBody.find(".textarea");
+                    taBody.attr("maxlength", settings.textLength);
+                    var currentCnt = taBody.find('.current');
+                    var totalCnt = taBody.find('.total');
+                    console.log(totalCnt);
+                    totalCnt.text("/"+settings.textLength);
+                    taBody.on('input', function() {
+                        var textLength = textarea.val().length;
+                        currentCnt.text(textLength);
+                    });
+                });
+            }
+        })(jQuery);
+
+        // 텍스트 에어리어
+        $(".textarea_wrap").textareaWithCount();
+    </script>
 </body>
 </html>

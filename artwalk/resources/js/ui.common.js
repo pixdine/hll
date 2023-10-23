@@ -381,7 +381,6 @@ const popup = {
         var _this = this;
         var targetEl = $(`[data-${_type}="${_target}"]`);
 
-
         $("html").css({
             height: "initial",
             overflow: "initial",

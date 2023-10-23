@@ -474,6 +474,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 /* popup */
 .dimmed{position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:199;}
 .popup_inner{display:flex;flex-direction:column;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);max-width:588px;height:auto;max-height:650px;background-color:#fff;overflow:hidden;z-index:210;}
+.popup_inner.review{max-width: 792px;}
 .popup_close{position:absolute;right:20px;top:20px;}
 .popup_close .btn_close{display:block;width:40px;height:40px;}
 .popup_close .btn_close:after{content:'';display:block;width:100%;height:100%;background:url('../images/ico_close_20.svg') no-repeat center center / 20px auto;}
@@ -512,10 +513,11 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_full .p_agree .agree_sbj{color: #111;font-family: 'noto sans kr';font-weight: 500;font-size: 16px;line-height: 28px;}
 .popup_full .p_agree .agree_cont{margin-top: 16px;}
 .popup_full .p_agree .agree_txt{color: #111;font-family: 'noto sans kr';font-size: 16px;line-height: 28px;}
-.popup_full .popup_cont .subject{color: #111;font-size: 20px;line-height: 28px;}
-.popup_full .popup_cont .guide_wrap{display: flex;}
+.popup_full .popup_cont .subject{color: #111;font-weight: 600;font-size: 20px;line-height: 28px;}
+.popup_full .popup_cont .guide_row{display: flex;align-items: center;margin-top: 40px;}
+.popup_full .popup_cont .subject + .guide_row{margin-top: 32px;}
 .popup_full .popup_cont .guide_txt{color: #111;font-size: 18px;font-weight: 500;line-height: 24px;}
-.popup_full .popup_cont .guide_txt_sub{color: #666;font-size: 14px;font-weight: 500;line-height: 20px;}
+.popup_full .popup_cont .guide_txt_sub{margin-left: 8px;color: #666;font-size: 14px;font-weight: 500;line-height: 20px;}
 
 /* layer */
 .popup_layer{display:none;position:absolute;right:0;top:0;width:100%;background-color:#fff;border:1px solid #dbdbdb;z-index:100;}
@@ -659,6 +661,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* 하나짜리 배너 스와이프 */
 .one_ban_swiper {overflow: hidden; position: relative;}
+.one_ban_swiper + .one_ban_swiper{margin-top: 80px;}
 .one_ban_swiper .swiper-pagination {position: absolute; bottom: 12px; right: 12px; left: auto; width: auto; font-size: 0;}
 .one_ban_swiper .swiper-pagination span {position: relative; color: #fff; font-family: Gotham; font-size: 16px;}
 .one_ban_swiper .swiper-pagination span:first-child {margin-right: 18px;}
@@ -690,6 +693,19 @@ background:#fff;overflow:hidden;z-index:230}
 .ex_info .swiper_pc_3_mo_auto .swiper-slide{position: relative;}
 .ex_info .swiper_pc_3_mo_auto .swiper-slide a{display: block;}
 .ex_info .btn_move {position: absolute;top: 451px;width: 48px;cursor: pointer;opacity: 0.6;}
+
+/* 텍스트에어리어 */
+.guide_row + .textarea_wrap{margin-top: 16px;}
+.textarea_wrap{padding: 24px;border: 1px solid #999;}
+.textarea{width: 100%;height: 140px;margin: 0;padding: 0;border: 0;resize:none;font-family: Noto Sans KR;font-size: 16px;line-height: 28px;}
+.textarea::placeholder{color: #999;font-family: Noto Sans KR;font-size: 16px;line-height: 28px;}
+.textarea_wrap .cnt_txt{color: #999;font-weight: 200;font-size: 14px;line-height: 20px;}
+.textarea_wrap .current{color: #111;}
+.is_pc .textarea::-webkit-scrollbar{width:8px;height:8px;}
+.is_pc .textarea::-webkit-scrollbar-track{background-color:transparent;}
+.is_pc .textarea::-webkit-scrollbar-thumb{background-color:#dbdbdb;border-radius:4px;}
+
+
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -853,6 +869,7 @@ background:#fff;overflow:hidden;z-index:230}
     .inputbox.search .btn_ico.del{right:44px;top:9px;}
 
     /* 하나짜리 배너 스와이프 */
+    .one_ban_swiper + .one_ban_swiper{margin-top: 40px;}
     .one_ban_swiper .swiper-pagination {bottom: 24px; right: 0; left: 0; text-align: center;}
     .one_ban_swiper .swiper-pagination span {display: inline-flex;position: relative; color: #fff; font-family: Gotham; font-size: 16px; width: 10px;}
     .one_ban_swiper .swiper-pagination span:first-child {margin-right: 18px;justify-content: flex-end;}

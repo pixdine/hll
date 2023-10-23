@@ -472,11 +472,12 @@ function cate_swiper() {
         }
 
         var settings = $.extend({}, defaults, options);
-
-        var swiperBody = this;
-        if(swiperBody.find('.swiper-slide').length > 1) {
-            return this.each(function (i) {
-                var swiper = new Swiper($(this), {
+        var swiperBody = [];
+        return this.each(function (i) {
+            swiperBody[i] = $(this);
+            var slideLength = $(this).find(".swiper-slide").length;
+            if(slideLength>1){
+                swiperBody[i] = new Swiper(swiperBody[i], {
                     spaceBetween: 20,
                     pagination: {
                         el: ".one_ban_swiper .swiper-pagination",
@@ -491,12 +492,12 @@ function cate_swiper() {
                 });
     
                 $(this).hover(function () {
-                    swiper.autoplay.stop();
+                    swiperBody[i].autoplay.stop();
                 }, function () {
-                    swiper.autoplay.start();
+                    swiperBody[i].autoplay.start();
                 });
-            });
-        }
+            }
+        });
     }
 })(jQuery);
 

@@ -138,6 +138,13 @@ $(document).ready(function () {
             enableScroll();
         }
     });
+
+    
+    // 하단 고정 버튼이 있을 경우
+    if($('.content_bottom').length){
+        const content_bottom = $('.content_bottom').innerHeight();
+        $(".footer").css("padding-bottom", content_bottom + "px");
+    }
 });
 
 //디바이스 체크

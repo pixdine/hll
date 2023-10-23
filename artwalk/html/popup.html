@@ -9,6 +9,7 @@
 	<!-- css, Jquery -->
 	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../resources/css/content.css"/>
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<script src="../resources/js/jquery-ui.min.js"></script>
 	<!-- //css, Jquery -->
@@ -146,22 +147,10 @@
 					<div class="cont_inner" style="padding-bottom:100px;">
 						<button type="button" data-popsheet-open="sheet_1"><span>전시정보 > 전시상세 (지도)</span></button><br>
 						<button type="button" data-popup-open="popup_1"><span>운영규정</span></button><br>
-                        <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
-						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
-						<button type="button" data-popup-open="popup_4"><span>비밀번호 재설정</span></button><br>
-                        <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
-                        <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
-                        <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
+                        <button type="button" data-popup-open="popup_2"><span>리뷰 작성하기</span></button><br>
+						<button type="button" data-popup-open="popup_3"><span>리뷰 상세보기</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
-                        <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
-                        <button type="button" data-alert-open="alert_4"><span>얼럿4_쿠폰재발송 완료</span></button><br>
-                        <button type="button" data-alert-open="alert_5"><span>얼럿5_포인트부족</span></button><br>
-                        <button type="button" data-alert-open="alert_6"><span>얼럿6_주문/결재</span></button><br>
-                        <button type="button" data-alert-open="alert_7"><span>얼럿7_가장 긴 케이스</span></button><br>
-                        <button type="button" data-alert-open="alert_8"><span>얼럿8_로그아웃</span></button><br>
-                        <button type="button" data-alert-open="alert_9"><span>얼럿9_비밀번호변경</span></button><br>
-                        <button type="button" data-alert-open="alert_10"><span>얼럿10_포인트 전환</span></button><br>
 					</div>
                 </div>
             </div>
@@ -252,155 +241,86 @@
         </div>
     </div>
 
-    <!--D : 아이디 찾기-->
-    <div class="popup_full" data-popup="popup_3">
-        <div class="popup_inner">
+    <!--D : 리뷰상세보기 팝업 -->
+    <div class="popup_full popup_review_detail" data-popup="popup_3">
+        <div class="popup_inner review">
             <div class="popup_head">
-                <h2 class="tit">아이디 찾기</h2>
+                <h2 class="tit">리뷰 상세보기 <span class="total"><em class="current">1</em>/459</span></h2><!-- D: class="current" 영역에 현재 몇번째 리뷰인지 표시 -->
                 <div class="popup_close">
-                    <button type="button" class="btn_close" data-popup-close="popup_3"><span class="blind">닫기</span></button>
-                </div>
-            </div>
-            <div class="popup_cont non">
-                <div class="pop_tit_wrap">
-                    <h2 class="tit">
-                        아이디를 잊으셨나요?
-                    </h2>
-                    <p class="info_txt">회원가입 시 입력하신 이름과 휴대폰 번호를 입력해주세요.</p>
-                </div>
-                <dl class="input_type01">
-                    <dt>이름</dt>
-                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
-                        <input type="text" class="inp"  placeholder="이름 입력" />
-                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
-                    </dd>
-                    <dt>휴대폰 번호</dt>
-                    <dd class="inputbox">
-                        <input type="tel" class="inp" placeholder="휴대폰 번호 숫자만 입력" />
-                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                        <p class="row_err_txt">숫자만 입력해 주세요</p>
-                    </dd>
-                </dl>
-
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype1" disabled><span>확인</span></button>
-                </div>
-
-                <div class="body_cont02">
-
-                    <div class="gray_box">
-                        <div class="box_inner">
-                            <p class="txt">
-                                허스트중앙 아이디는<br />
-                                <strong>jaki**@********</strong> 입니다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="btn_wrap">
-                        <button type="button" class="btn bctype1"><span>LOGIN</span></button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 비밀번호 재설정-->
-    <div class="popup_full" data-popup="popup_4">
-        <div class="popup_inner">
-            <div class="popup_head">
-                <h2 class="tit">비밀번호 재설정</h2>
-                <div class="popup_close">
-                    <button type="button" class="btn_close" data-popup-close="popup_4"><span class="blind">닫기</span></button>
+                    <button type="button" class="btn_close" data-popup-close="popup_2"><span class="blind">닫기</span></button>
                 </div>
             </div>
             <div class="popup_cont">
-                <div class="pop_tit_wrap">
-                    <h2 class="tit">
-                        PASS 인증이 완료되었습니다.
-                    </h2>
-                    <p class="info_txt">비밀번호를 재설정하신 후 서비스를 이용해 주세요.</p>
-                </div>
-                <dl class="input_type01">
-                    <dt>멤버십 아이디</dt>
-                    <dd class="inputbox"><!--D : Error 시 error class 추가 -->
-                        <input type="text" class="inp" value="jaki****@joongang.kr" placeholder="" readonly />
-                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                        <p class="row_err_txt">아이디를 입력해 주세요.</p>
-                    </dd>
-                    <dt>비밀번호 재설정<em class="ess">*</em></dt>
-                    <dd class="inputbox">
-                        <fieldset class="pw_in">
-                            <legend>비밀번호 변경</legend>
-                            <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
-                                <input type="password" class="inp" placeholder="새로운 비밀번호 입력" />
-                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                <p class="row_err_txt"></p>
-                            </div>
-                            <div class="inputbox nobtn modify"><!--D : Error 시 error class 추가 -->
-                                <input type="password" class="inp" placeholder="비밀번호 한 번 더 입력" />
-                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                <p class="row_err_txt"></p>
-                            </div>
-                        </fieldset>
-                    </dd>
-                </dl>
-            </div>
-            <div class="popup_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype1" disabled><span>확인</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!--D : 비밀번호 변경-->
-    <div class="popup_full" data-popup="popup_7">
-        <div class="popup_inner">
-            <div class="popup_head">
-                <h2 class="tit">비밀번호 변경</h2>
-                <div class="popup_close">
-                    <button type="button" class="btn_close" data-popup-close="popup_7"><span
-                            class="blind">닫기</span></button>
+
+                <!-- 리뷰상세 -->
+                <div class="review_detail">
+                    <div class="comment_item">
+                        <div class="comment_cont">
+                            <!-- 상단 정보영역 -->
+                            <div class="comment_info">
+                                <!-- 프로필 이미지 영역-->
+                                <div class="comment_thumb">
+                                    <div class="profile_img">
+                                        <!-- D: 프로필 이미지 미등록 시 아래 이미지 랜덤하게 노출 (통합멤버십과 동일)
+                                            img_profile1.png
+                                            img_profile2.png
+                                            img_profile3.png
+                                            img_profile4.png
+                                            img_profile5.png
+                                            img_profile6.png
+                                        -->
+                                        <img src="../resources/images/img_profile1.png" alt="프로필 이미지">
+                                    </div>
+                                </div>
+                                <!-- //프로필 이미지 영역-->
+
+                                <div class="user_info">
+                                    <span class="name">bazaar_05</span>
+                                    <span class="date">2023.09.26</span>
+                                </div>
+                            </div>
+                            <!-- //상단 정보영역 -->
+
+                            <!-- 리뷰내용 -->
+                            <div class="comment_box">
+                                <div class="comment_txt">
+                                    <p class="txt">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 유니크한 디자인의 블라인드 다채로운 색상의 화병 감각적인 종이화분이며 블루투스 스피커 벽걸이 조명 거울 모두 그저 작품이네요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작품으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요! 앞으로도 이런 아름다운 기획들과 선한 마음들이 넘쳐나는 세상이 되길! 우리 후손들이 좀 더 편히 숨쉴 수 있는 지구가 되길 바래봅니다! 모두 응원합니다 그리고 감사합니다들이 넘쳐나는 세상이 되길! 우리 후손들이 좀 더 편히 숨쉴 수 있는 지구가 되길 바래봅니다! 모두 응원합니다 그리고 감사합니다들이 넘쳐나는 세상이 되길! 우리 후손들이 좀 더 편히 숨쉴 수 있는 지구가 되길 바래봅니다! 모두 응원합니다 그리고 감사합니다.</p>
+                                </div>
+
+                                <!-- 슬라이드 -->
+                                <!-- D: 이미지가 없는 경우 해당 영역 미노출 -->
+                                <div class="review_slide">
+                                    <div class="swiper viewSwiper" data-slide="slider-type01">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="https://pixdine.github.io/hll/magazine_bazaar/resources/images/temp/temp_upload01.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../resources/images/temp/temp_exhb_detail03.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../resources/images/temp/temp_exhb_detail04.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../resources/images/temp/temp_exhb_detail04.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                                <!-- //슬라이드 -->
+                            </div>
+                            <!-- //리뷰내용 -->
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="popup_cont">
-                <div class="pop_tit_wrap">
-                    <p class="info_txt">현재 비밀번호 및 변경하실 비밀번호를 입력하신 후 저장 버튼을 클릭해 주세요.</p>
-                </div>
-                <dl class="input_type01">
-                    <dt>현재 비밀번호<em class="ess">*</em></dt>
-                    <dd>
-                        <div class="inputbox">
-                            <input type="password" class="inp" value="jaki****@joongang.kr" placeholder="" />
-                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
-                        </div>
-                    </dd>
-                    <dt>변경 비밀번호<em class="ess">*</em></dt>
-                    <dd class="inputbox">
-                        <div class="inputbox">
-                            <input type="password" class="inp" value="" placeholder="새로운 비밀번호 입력" />
-                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
-                        </div>
-                    </dd>
-                    <dt>변경 비밀번호 확인<em class="ess">*</em></dt>
-                    <dd class="inputbox">
-                        <div class="inputbox">
-                            <input type="password" class="inp" value="" placeholder="비밀번호 한 번 더 입력"  />
-                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                            <p class="row_err_txt">아이디를 입력해 주세요.</p>
-                        </div>
-                    </dd>
-                </dl>
+                <!-- //리뷰상세 -->
             </div>
             <div class="popup_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>저장</span></button>
+                    <button type="button" class="btn_link" disabled><span>이전글</span></button><!-- D: 이전글이 없는 경우 disabled 추가 -->
+                    <button type="button" class="btn_link"><span>다음글</span></button><!-- D: 다음글이 없는 경우 disabled 추가 -->
                 </div>
             </div>
         </div>
@@ -503,264 +423,6 @@
     </div>
 
 
-    <!--D : 오늘 획득 포인트 -->
-    <div class="popup_full" data-popup="popup_5">
-        <div class="popup_inner">
-            <div class="popup_head">
-                <h2 class="tit">오늘 획득 포인트</h2>
-                <div class="popup_close">
-                    <button type="button" class="btn_close" data-popup-close="popup_5"><span class="blind">닫기</span></button>
-                </div>
-            </div>
-            <div class="popup_cont non">
-                <div class="gray_box">
-                    <div class="box_inner">
-                        <p class="txt">
-                            김중앙님,<br>
-                            오늘 적립하신 포인트는 <strong class="font_type01">172P</strong> 입니다.
-                        </p>
-                        <p class="stxt">
-                            매체별 적립 가능한 포인트를 확인하시고 모든 포인트를 획득하세요!
-                            서비스명을 클릭하시면 해당 사이트로 이동합니다.
-                        </p>
-                    </div>
-                </div>
-                <div class="point_inq_list">
-                    <ul class="popup_scroll visible_scroll">
-                        <li>
-                            <dl>
-                                <dt>엘르</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>코스모폴리탄</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>하퍼스바자</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>에스콰이어</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>eee콘텐츠</dt>
-                                <dd><strong>5</strong>/<span>20<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>엘르</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>코스모폴리탄</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>하퍼스바자</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>에스콰이어</dt>
-                                <dd><strong>5</strong>/<span>5<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>eee콘텐츠</dt>
-                                <dd><strong>5</strong>/<span>20<em>P</em></span></dd>
-                            </dl>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 전체누적 포인트 -->
-    <div class="popup_full" data-popup="popup_6">
-        <div class="popup_inner">
-            <div class="popup_head">
-                <h2 class="tit">전체 누적 포인트</h2>
-                <div class="popup_close">
-                    <button type="button" class="btn_close" data-popup-close="popup_6"><span class="blind">닫기</span></button>
-                </div>
-            </div>
-            <div class="popup_cont non">
-                <div class="gray_box">
-                    <div class="box_inner">
-                        <p class="txt">
-                            김중앙님!<br>
-                            회원가입 후 지금까지 <strong class="font_type01">54,867P</strong>를 적립했습니다.
-                        </p>
-                        <p class="stxt">*최근 1년 기준이며, 소진/소멸 포인트는 제외되었습니다.</p>
-                    </div>
-                </div>
-                <div class="point_inq_list">
-                    <ul class="popup_scroll"><!-- 스크롤이 생기면 visible_scroll 클래스 추가 -->
-                        <li>
-                            <dl>
-                                <dt>엘르</dt>
-                                <dd><strong>960<em>P</em></strong></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>코스모폴리탄</dt>
-                                <dd><strong>917<em>P</em></strong></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>하퍼스바자</dt>
-                                <dd><strong>745<em>P</em></strong></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>에스콰이어</dt>
-                                <dd><strong>1,045<em>P</em></strong></dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <dl>
-                                <dt>회원가입/기타</dt>
-                                <dd><strong>50,000<em>P</em></strong></dd>
-                            </dl>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 포인트 부족 alter -->
-    <div class="popup_alert" data-alert="alert_5">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    사용 가능한 포인트가 부족합니다.
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_5"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-
-     <!--D : 주문 결재 alter -->
-     <div class="popup_alert" data-alert="alert_6">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    구매하시겠습니까?
-                    <span>받으시는 분 : <em class="point">01012345678</em></span>
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_6"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 로그아웃 alter -->
-    <div class="popup_alert" data-alert="alert_8">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    로그아웃 되었습니다.
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_8"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-    <!--D : 비밀번호변경 alter -->
-    <div class="popup_alert" data-alert="alert_9">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    변경할 비밀번호를 입력해 주세요.<br />(영문 대소문자, 숫자, 특수문자 중 2가지 조합은 10자 이상, 3가지 조합은 8자 이상)
-                </p>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_9"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-
-    <!--D : 포인트전환 alter -->
-    <div class="popup_alert" data-alert="alert_10">
-        <div class="popup_alert_inner">
-            <div class="popup_alert_cont">
-                <p class="alert_txt">
-                    OK캐시백으로 전환할<br />
-                    포인트를 입력해 주세요.
-                </p>
-                <div class="point_change_cont">
-                    <div class="p_change">
-                        <div class="p_change_box">
-                            <div class="inputbox error">
-                                <input type="text" placeholder="100 포인트 단위로 입력" class="inp">
-                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-                                <p class="in_tx">전환 가능 포인트 : 52,805 (2일 전 기준)</p>
-                                <p class="row_err_txt">전환가능 포인트 이하로 입력해주세요.</p>
-                            </div>
-                            <span class="unit">P</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popup_alert_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype1"><span>포인트 전환</span></button><!-- 비활성화 disabled -->
-                </div>
-            </div>
-            <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_10"><span class="blind">닫기</span></button>
-            </div>
-        </div>
-    </div>
-
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
@@ -794,6 +456,9 @@
 
         // 텍스트 에어리어
         $(".textarea_wrap").textareaWithCount();
+
+        // 상세 슬라이드
+        viewImgSlide();
     </script>
 </body>
 </html>

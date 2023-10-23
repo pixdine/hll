@@ -272,7 +272,11 @@
 								</div>
 								<div class="cont_body">
 									<div class="benefit_wrap">
-										<h3>산책메이트 특별 혜택</h3>
+										<div class="tit_wrap">
+											<div class="tit_area">
+												<h2 class="tit">산책메이트 특별 혜택</h2>
+											</div>
+										</div>
 										<div class="benefit_info">
 											<ul>
 												<li>
@@ -321,7 +325,7 @@
 										</div>
 
 										<div class="btn_area">
-											<button class="btn bctype1"><span>산책메이트 신청하러 가기</span></button>
+											<a href="#" class="btn bctype1" target="_blank" title="산책메이트 신청하러 바로가기"><span>산책메이트 신청하러 가기</span></a>
 										</div>
 										<div class="prod_txt">
 											<p>
@@ -341,10 +345,8 @@
 								<div class="one_ban_swiper">
 									<div class="swiper-wrapper">
 										<a href="https://pf.kakao.com/_xaxmEXb " class="swiper-slide ban01" target="_blank" title="예술산책 카톡 채널 추가 링크 이동 새창">
-											<img class="pc_img" src="../resources/images/img-obs03.png"
-												alt="예술산책 카톡 채널 추가하시고 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
-											<img class="mo_img" src="../resources/images/img-obs03-mo.png"
-												alt="예술산책 카톡 채널 추가하시고 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
+											<img class="pc_img" src="../resources/images/img-obs03.png" alt="예술산책 카톡 채널 추가하시고 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
+											<img class="mo_img" src="../resources/images/img-obs03-mo.png" alt="예술산책 카톡 채널 추가하시고 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
 										</a>
 									</div>
 									<div class="swiper-pagination"></div>
@@ -485,47 +487,6 @@
 	<!-- js -->
 	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
-
-	<script>
-		currentPage = 'sub';
-		//키워드 태그영역 더보기
-		function tagOpen() {
-			if ($(this).hasClass('on')) {
-				//닫힘
-				$(this).removeClass('on');
-				$('.tab_wrap').removeClass('on');
-			} else {
-				//열림
-				$(this).addClass('on');
-				$('.tab_wrap').addClass('on');
-			}
-		}
-
-		//키워드 태그영역 가로 스크롤 체크 후 더보기 버튼 노출여부
-		function showTagBtn() {
-			var totalWidth = 84;
-			$('.tab_wrap li').each(function () {
-				var liWidth = parseInt($(this).css('width'));
-				totalWidth += liWidth;
-			});
-
-			if (window.innerWidth > totalWidth || window.innerWidth > 768) {
-				$('.tab_wrap .btnbox').hide();
-			} else {
-				$('.tab_wrap .btnbox').show();
-			}
-		}
-
-		$(document).ready(function () {
-			//키워드 태그
-			$('.tab_wrap .btnbox .btn_ico').on("click", tagOpen);
-			showTagBtn();
-		});
-
-		$(window).resize(function () {
-			showTagBtn();
-		});
-	</script>
 	<!-- //js -->
 
 </body>

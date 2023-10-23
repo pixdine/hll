@@ -244,13 +244,11 @@
 
 /*산책메이트 혜택 안내*/
 .container .sub .heading_wrap h2.tit img{display:block;margin: 0 auto 32px;}
-.bodycont_wrap .cont_inner .top_txt{margin-top:-40px;margin-bottom:120px;}
+.bodycont_wrap .cont_inner .top_txt{margin-bottom:120px;}
 .bodycont_wrap .cont_inner .top_txt p{font-size:20px;font-weight:500;text-align:center;}
-.benefit_wrap h3{font-size:28px;font-weight:600;line-height: 34px;}
-.benefit_wrap .benefit_info{margin-top:24px;}
-.benefit_wrap .benefit_info ul{display:flex;flex-wrap:wrap;justify-content: space-between;}
-.benefit_wrap .benefit_info ul li{width:calc(50% - 12px);margin-top:24px;padding:30px 0 60px;text-align: center;border: 2px solid #111;}
-.benefit_wrap .benefit_info ul li .badge{display:inline-block;padding:6px 16px;color:#fff;font-size:16px;font-weight:500;background-color:#FF5081;}
+.benefit_wrap .benefit_info ul{display:flex;flex-wrap:wrap;justify-content: space-between;row-gap:24px;}
+.benefit_wrap .benefit_info ul li{width:calc(50% - 12px);padding:30px 0 60px;text-align: center;border: 2px solid #111;}
+.benefit_wrap .benefit_info ul li .badge{display:inline-block;padding:10px 16px;color:#fff;font-size:16px;font-weight:500;background-color:#FF5081;line-height:1;letter-spacing:-0.01em;}
 .benefit_wrap .benefit_info ul li .txt{margin-top:32px;}
 .benefit_wrap .benefit_info ul li .txt p{font-size:24px;font-weight:500;line-height:32px;}
 .benefit_wrap .benefit_info ul li .txt p em{display:block;color:#666;font-size:20px;line-height:28px;}
@@ -418,9 +416,8 @@
     .container .sub .heading_wrap h2.tit img{width:101px;height:10px;margin-bottom:12px;}
     .bodycont_wrap .cont_inner .top_txt p{font-size:16px;}
     .bodycont_wrap .cont_inner .top_txt{margin-bottom:56px;}
-    .benefit_wrap h3{font-size:20px;line-height:28px;}
-    .benefit_wrap .benefit_info{margin-top:12px;}
-    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom: 40px;margin-top:12px;}
+    .benefit_wrap .benefit_info ul{row-gap:12px;}
+    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom: 40px;}
     .benefit_wrap .benefit_info ul li i{height:180px;background-size:180px 180px;}
     .benefit_wrap .benefit_info ul li .txt p{font-size:18px;line-height:24px;}
     .benefit_wrap .benefit_info ul li .txt p em{font-size:14px;line-height:20px;}

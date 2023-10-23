@@ -357,7 +357,6 @@
 
     .cont_heading_area .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
    
-    
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .bazaarspick_list li {width:calc(50% - 5.5px); margin-left:0}
@@ -368,6 +367,7 @@
     .bazaarspick_list li .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
     
     
+    .tab_wrap .tab_menu.type03 { padding-right:0px; }
     .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap }
     .tab_wrap .tab_menu ul li a{white-space:nowrap;}
     .tab_wrap .tab_menu.type03 > ul > li ~ li { margin-left:0}

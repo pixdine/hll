@@ -202,7 +202,7 @@
 .bazaarspick_list li .txtbox .tit { position:relative; z-index:2; color:#fff; font-size:28px; line-height:36px}
 .bazaarspick_list li .atcbox .btn_wish { position:absolute; top:20px; right:24px; z-index:1}
 .bazaarspick_list li .txtbox::after {content:''; position:absolute; bottom:-32px; left:0; z-index:1; width:100%; height:100%; padding-top:60%; background: rgb(17,17,17); background: linear-gradient(0deg, rgba(17,17,17,0.8) 0%, rgba(255,255,255,0) 100%);}
-.bazaarspick_list .ex_top { position:absolute; right:21px; top:23px; z-index:1}
+.bazaarspick_list .ex_top { position:absolute; right:20px; top:20px; z-index:1}
 /* 산책코스 > 상세 */
 .bazaarspick .detail_header { margin-top:60px; margin-bottom:0px}
 .bazaarspick .detail_header .tit { text-align:left; font-size:28px; line-height:32px; font-weight:600}
@@ -323,16 +323,16 @@
     .bazaarspick .btn_more_wrap.type1 { margin-top:40px }
 
     .cont_heading_area .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
-
+   
     .bazaarspick .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
-
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .bazaarspick_list li {width:calc(50% - 5.5px); margin-left:0}
     .bazaarspick_list li .txtbox { position:absolute; z-index:1; bottom:12px; padding:0 12px; }
     .bazaarspick_list li .txtbox .tit {font-size:14px; line-height:20px;height:40px}
     .bazaarspick_list li .txtbox::after { bottom:-12px; }
-    .bazaarspick_list .ex_top {right:10px; top:8px;}
+    .bazaarspick_list .ex_top {right:8px; top:8px;}
+    
     
     .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap }
     .tab_wrap .tab_menu ul li a{white-space:nowrap;}
@@ -345,10 +345,10 @@
     .tab_wrap.on .tab_menu .btnbox:before{display:none;}
     .tab_wrap .tab_menu .btnbox{right:-20px;}
 
-
-
     /* 산책코스 > 상세 */
+    .bazaarspick .detail_header { margin-top:32px;}
     .bazaarspick .detail_header .tit { text-align:left; font-size:20px; line-height:28px; font-weight:600}
+    .bazaarspick .detail_slide ~ .detail_txt { margin-top:16px}
 
     /* 전시장 근처 핫플 */
     .post_ex_item a{padding:15px 15px 31px;}

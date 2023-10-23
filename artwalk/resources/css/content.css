@@ -230,6 +230,27 @@
 .ex_post .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:40px;height:2px;margin:0 4px;cursor:pointer;background-color:rgba(17,17,17,0.2);}
 .ex_post .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(17,17,17,1);}
 
+/*산책메이트 혜택 안내*/
+.container .sub .heading_wrap h2.tit img{display:block;margin: 0 auto 32px;}
+.bodycont_wrap .cont_inner .top_txt{margin-top:-40px;margin-bottom:120px;}
+.bodycont_wrap .cont_inner .top_txt p{font-size:20px;font-weight:500;text-align:center;}
+.benefit_wrap h3{font-size:28px;font-weight:600;line-height: 34px;}
+.benefit_wrap .benefit_info{margin-top:24px;}
+.benefit_wrap .benefit_info ul{display:flex;flex-wrap:wrap;justify-content: space-between;}
+.benefit_wrap .benefit_info ul li{width:calc(50% - 12px);margin-top:24px;padding:30px 0 60px;text-align: center;border: 2px solid #111;}
+.benefit_wrap .benefit_info ul li .badge{display:inline-block;padding:6px 16px;color:#fff;font-size:16px;font-weight:500;background-color:#FF5081;}
+.benefit_wrap .benefit_info ul li .txt{margin-top:32px;}
+.benefit_wrap .benefit_info ul li .txt p{font-size:24px;font-weight:500;line-height:32px;}
+.benefit_wrap .benefit_info ul li .txt p em{display:block;color:#666;font-size:20px;line-height:28px;}
+.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;}
+.benefit_wrap .benefit_info ul li i.icon1{background-image:url('../images/ico_benefit01.png');}
+.benefit_wrap .benefit_info ul li i.icon2{background-image:url('../images/ico_benefit02.png');}
+.benefit_wrap .benefit_info ul li i.icon3{background-image:url('../images/ico_benefit03.png');}
+.benefit_wrap .benefit_info ul li i.icon4{background-image:url('../images/ico_benefit04.png');}
+.benefit_wrap .btn_area{margin-top:120px;text-align:center;}
+.benefit_wrap .btn_area .btn{width:384px;}
+.benefit_wrap .prod_txt{margin-top:16px;}
+.benefit_wrap .prod_txt p{text-align:center;font-size:16px;line-height:24px;color:#666;}
 
 /* 아트뉴스 */
 .sub .masonry_list {}
@@ -375,6 +396,21 @@
     .ex_post .btn_move{display:none;}
     .ex_post .swiper-pagination{display:none;}
 
+
+    /*산책메이트 혜택 안내*/
+    .container .sub .heading_wrap h2.tit img{width:101px;height:10px;margin-bottom:12px;}
+    .bodycont_wrap .cont_inner .top_txt p{font-size:16px;}
+    .bodycont_wrap .cont_inner .top_txt{margin-bottom:56px;}
+    .benefit_wrap h3{font-size:20px;line-height:28px;}
+    .benefit_wrap .benefit_info{margin-top:12px;}
+    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom: 40px;margin-top:12px;}
+    .benefit_wrap .benefit_info ul li i{height:180px;background-size:180px 180px;}
+    .benefit_wrap .benefit_info ul li .txt p{font-size:18px;line-height:24px;}
+    .benefit_wrap .benefit_info ul li .txt p em{font-size:14px;line-height:20px;}
+    .benefit_wrap .benefit_info ul li .txt p .br{display:block;}
+    .benefit_wrap .btn_area{margin-top:80px;}
+    .benefit_wrap .btn_area .btn{width:100%;}
+    .benefit_wrap .prod_txt p{font-size:14px;line-height:20px;}
     /* 아트뉴스 */
     .sub .masonry_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .sub .masonry_list li {width:calc(50% - 5.5px); margin-left:0}
@@ -382,6 +418,7 @@
     .sub .masonry_list li .item_info { height:86px; padding:10px}
     .sub .masonry_list li .item_sbj{font-size: 10px;}
     .sub .masonry_list li .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
+
 }
 
 @media screen and (max-width: 320px) {

@@ -138,13 +138,6 @@ $(document).ready(function () {
             enableScroll();
         }
     });
-
-    
-    // 하단 고정 버튼이 있을 경우
-    if($('.content_bottom').length){
-        const content_bottom = $('.content_bottom').innerHeight();
-        $(".footer").css("padding-bottom", content_bottom + "px");
-    }
 });
 
 //디바이스 체크
@@ -471,12 +464,11 @@ function cate_swiper() {
         }
 
         var settings = $.extend({}, defaults, options);
-        var swiperBody = [];
-        return this.each(function (i) {
-            swiperBody[i] = $(this);
-            var slideLength = $(this).find(".swiper-slide").length;
-            if(slideLength>1){
-                swiperBody[i] = new Swiper(swiperBody[i], {
+
+        var swiperBody = this;
+        if(swiperBody.find('.swiper-slide').length > 1) {
+            return this.each(function (i) {
+                var swiper = new Swiper($(this), {
                     spaceBetween: 20,
                     pagination: {
                         el: ".one_ban_swiper .swiper-pagination",
@@ -491,12 +483,12 @@ function cate_swiper() {
                 });
     
                 $(this).hover(function () {
-                    swiperBody[i].autoplay.stop();
+                    swiper.autoplay.stop();
                 }, function () {
-                    swiperBody[i].autoplay.start();
+                    swiper.autoplay.start();
                 });
-            }
-        });
+            });
+        }
     }
 })(jQuery);
 
@@ -731,16 +723,15 @@ function viewImgSlide() {
     
         return this.each(function (i){
             var swiperBody = $(this);
-            var swiperContainer = $(this).find(".swiper");
             var swiperSlide = swiperBody.find(".swiper-slide");
-            var btnNext = swiperBody.find(".button_next");
-            var btnPrev = swiperBody.find(".button_prev");
+            var btnNext = swiperBody.siblings(".button_next");
+            var btnPrev = swiperBody.siblings(".button_prev");
             if(swiperSlide.length <= 3) {
                 btnNext.hide();
                 btnPrev.hide();
             }
 
-            var exSwiper = new Swiper(swiperContainer, {
+            var exSwiper = new Swiper(swiperBody, {
                 slidesPerView: "auto",
                 spaceBetween: 12,
                 navigation: {
@@ -777,10 +768,9 @@ function viewImgSlide() {
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
-
+    
         return this.each(function (i){
             var swiperBody = $(this);
-            var swiperContainer = $(this).find(".swiper");
             var swiperSlide = swiperBody.find(".swiper-slide");
             var btnNext = swiperBody.find(".button_next");
             var btnPrev = swiperBody.find(".button_prev");
@@ -789,7 +779,7 @@ function viewImgSlide() {
                 btnPrev.hide();
             }
 
-            var postSwiper = new Swiper(swiperContainer, {
+            var postSwiper = new Swiper(swiperBody, {
                 slidesPerView: 1.334,
                 spaceBetween: 12,
                 navigation: {
@@ -799,10 +789,12 @@ function viewImgSlide() {
                 pagination: {
                     el: swiperBody.find(".swiper-pagination"),
                 },
+
                 breakpoints: {
                     768: {
                         slidesPerView: 3,
                         spaceBetween: 24,
+
                     }
                 },
             });

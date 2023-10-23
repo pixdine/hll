@@ -548,7 +548,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_sheet .btn_wrap {margin-top: 0;justify-content: center;}
 .popup_sheet .btn_wrap .btn {width: 180px;}
 .popup_sheet .btn_wrap .btn + .btn {margin-left: 24 px;}
-.popup_sheet .psheet_head{padding:26px 90px 26px 28px;border-bottom:1px solid #dbdbdb;}
+ .popup_sheet .psheet_head{padding:26px 90px 26px 28px;border-bottom:1px solid #dbdbdb;}
 .popup_sheet .psheet_head .tit{font-size:24px;line-height:32px;font-weight:600;text-align:left;}
 .popup_sheet .psheet_inner{width:100%;}
 .popup_sheet .psheet_close{position: absolute;right:18px;top:24px;}
@@ -572,7 +572,6 @@ background:#fff;overflow:hidden;z-index:230}
 .tit_wrap{margin-bottom:48px;}
 .tit_wrap .tit{overflow:hidden;font-size:28px;font-weight:700;line-height:32px;color:#111;}
 .tit_wrap .tit .num{font-family:Gotham;font-weight:500;color:#FF5081;}
-.tit_wrap .txt{margin-top:12px;font-size:20px;font-weight:400;line-height:28px;color:#666;}
 .tit_wrap .side{margin-left:auto;flex-shrink:0;}
 .tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:2px 10px;font-family:'Noto Sans KR';font-size:16px;color:#111;line-height:28px;}
 .tit_wrap .btn_more:after{content:'';display:inline-block;width:16px;height:16px;margin:1px 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23111111'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23111111'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
@@ -775,8 +774,7 @@ background:#fff;overflow:hidden;z-index:230}
     /* title */
     .tit_wrap{margin-bottom:24px;}
     .tit_wrap .tit{font-size:20px;line-height:28px;}
-    .tit_wrap .txt{margin-top:6px;font-size:14px;line-height:20px;}
-    .tit_wrap .btn_more{display:block;width:28px;height:28px;margin-right:-3px;padding:0;}
+    .tit_wrap .btn_more{display:block;width:32px;height:32px;margin-right:-5px;padding:0;}
     .tit_wrap .btn_more span{display:none;}
     .tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23111111' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
 
@@ -849,7 +847,7 @@ background:#fff;overflow:hidden;z-index:230}
     .tab_menu.type02 > ul > li{display:inline-block;vertical-align:top;}
     .tab_menu.type02 > ul > li > a{font-size:14px;line-height:20px;}
 
-    .tab_menu.type03 > ul{display:block;position:relative;overflow-x:auto;overflow-y:hidden;white-space:nowrap;margin:0 -20px;padding:0 20px;font-size:0;-webkit-overflow-scrolling:touch;gap:8px;}
+    .tab_menu.type03 > ul{display:block;position:relative;overflow-x:auto;overflow-y:hidden;white-space:nowrap;margin:0 -20px;padding:0 20px;font-size:0;-webkit-overflow-scrolling:touch;}
     .tab_menu.type03 > ul::-webkit-scrollbar{display:none;}
     .tab_menu.type03 > ul > li{display:inline-block;vertical-align:top;}
     .tab_menu.type03 > ul > li ~ li{margin-left:8px;}
@@ -927,7 +925,7 @@ background:#fff;overflow:hidden;z-index:230}
     .allmenu_list + .allmenu_list{margin-top:40px;padding-top: 40px;}
     .allmenu_list .depth1 > li{margin-top:29px;}
     .allmenu_list .depth1 > li > a{font-size:24px;line-height:32px;}
-    .allmenu_list .depth1 > li > a.arrow{background-size: 20px;} 
+    .allmenu_list .depth1 > li > a.arrow{background-size: 20px;}
     .allmenu_list .depth1 > li > a span{right:0;width:35px;height:33px;}
     .allmenu_list .depth1 > li.has_menu > a span:before{top:8px;right:0;width:16px;height:16px;}
     .allmenu_list .depth2{margin:16px 0 30px;}
@@ -950,7 +948,7 @@ background:#fff;overflow:hidden;z-index:230}
     .search_keyword{margin-top:32px;}
     .search_keyword .search_tit{font-size:16px;line-height:23px;}
     .word_list{row-gap:8px;}
- 
+
     /* footer */
     .footer_top{padding:19px 0;}
     .footer_link ul{gap:8px 17px;}

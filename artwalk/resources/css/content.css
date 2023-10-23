@@ -222,7 +222,7 @@
 .ex_post .cont_inner{position:relative;}
 .ex_post .swiper_post{overflow:hidden;}
 .ex_post{padding:120px 0;background-color:#f7f7f7;}
-.ex_post .swiper-slide{width:100%;max-width:384px;margin-right:24px;}
+.ex_post .swiper-slide{width:100%;max-width:32%;margin-right:24px;}
 .ex_post .btn_move {position: absolute;top: 50%;transform:translateY(-50%);width: 48px;cursor: pointer;opacity: 0.6;}
 .ex_post .button_prev{left: -48px;}
 .ex_post .button_next{right: -48px;}

@@ -237,7 +237,7 @@
 
                             <!-- 콘텐츠 영역 -->
                             <div class="detail_body">
-                                <!-- case1 : 전시상세_무료전시 -->
+                                <!-- 전시상세 -->
                                 <div class="detail_view_area">
                                     <div class="img_group">
                                         <div class="img_box">
@@ -261,7 +261,13 @@
                                                 <div class="tit">기간</div>
                                                 <div class="cont">
                                                     <div class="date_box">
-                                                        <p class="date">2023.09.01 - 2023.10.21</p>
+                                                        <p class="date">2023.06.17 - 2023.12.31</p>
+                                                        <!-- D: 전시 오픈예정, 전시 종료일 경우 노출 -->
+                                                        <div class="flag_area">
+                                                            <span class="flag sm">오픈예정</span><!-- D: 오픈예정 -->
+                                                            <!-- <span class="flag sm">종료</span> --><!-- D: 종료 -->
+                                                        </div>
+                                                        <!-- //D: 전시 오픈예정, 전시 종료일 경우 노출 -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -271,147 +277,23 @@
                                                     <button type="button" class="btn_link map"><span>아라리오 갤러리 서울</span></button>
                                                 </div>
                                             </div>
+                                            <!-- D: 무료일 경우 -->
                                             <div class="dtl_info">
                                                 <div class="tit">관람료</div>
                                                 <div class="cont">
                                                     <p>무료관람</p>
                                                 </div>
                                             </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">작가</div>
-                                                <div class="cont">
-                                                    <ul class="item_list">
-                                                        <li><a href="#" class="btn_arr"><span>날리니 말라니</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">장르</div>
-                                                <div class="cont">
-                                                    <div class="flag_area">
-                                                        <!-- D: [장르 구분] 회화, 사진, 미디어아트, 설치, 조각, 퍼포먼스, 행사, 기타 -->
-                                                        <span class="flag sm">미디어아트</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- //전시상세정보-->
-                                        <!-- PC_전시상세정보 버튼 노출 -->
-                                        <!-- D: 모바일 버튼은 하단에 class="content_bottom" 에 노출 -->
-                                        <div class="btn_wrap">
-                                            <button type="button" class="btn bctype1"><span>무료전시</span></button><!-- D: 비활성화일 경우 disabled 추가 -->
-                                        </div>
-                                        <!-- //PC_전시상세정보 버튼 노출 -->
-                                    </div>
-                                </div>
-                                <!-- //case1 : 전시상세_무료전시 -->
-
-                                <!-- case2 : 전시상세_예매하기 -->
-                                <div class="detail_view_area">
-                                    <div class="img_group">
-                                        <div class="img_box">
-                                            <img src="../../resources/images/temp/temp_exhb_detail02.png" alt="">
-                                            <div class="flag_area">
-                                                <span class="flag">추천</span>
-                                                <span class="flag type2">이벤트</span>
-                                            </div>
-                                        </div>
-                                        <!-- D: 이미지 출처에 입력된 내용이 없는 경우 해당 영역 미노출 -->
-                                        <div class="desc_more">
-                                            <button type="button" class="btn_view"><span>이미지출처</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-                                            <div class="desc">아니쉬 카푸어(b.1954) 〈In-between II〉 2021 Oil, fibreglass and silicone on canvas 244 x 305 x 46 cm ⓒ Anish Kapoor. All rights reserved DACS/SACK, 2023 사진: Dave Morgan 이미지 제공: 국제갤러리</div>
-                                        </div>
-                                        <!-- //D: 이미지 출처에 입력된 내용이 없는 경우 해당 영역 미노출 -->
-                                    </div>
-                                    <div class="info_group">
-                                        <!-- 전시상세정보-->
-                                        <div class="dtl_info_wrap">
-                                            <div class="dtl_info">
-                                                <div class="tit">기간</div>
-                                                <div class="cont">
-                                                    <div class="date_box">
-                                                        <p class="date">2023.06.17 - 2023.12.31</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">장소</div>
-                                                <div class="cont">
-                                                    <button type="button" class="btn_link map"><span>CxC 아트 뮤지엄</span></button>
-                                                </div>
-                                            </div>
+                                            <!-- //D: 무료일 경우 -->
+                                            <!-- D: 관람료가 있는 경우 -->
                                             <div class="dtl_info">
                                                 <div class="tit">관람료</div>
                                                 <div class="cont">
                                                     <p>18,000원</p>
                                                 </div>
                                             </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">작가</div>
-                                                <div class="cont">
-                                                    <ul class="item_list">
-                                                        <li><a href="#" class="btn_arr"><span>앙리 마티스</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">장르</div>
-                                                <div class="cont">
-                                                    <div class="flag_area">
-                                                        <!-- D: [장르 구분] 회화, 사진, 미디어아트, 설치, 조각, 퍼포먼스, 행사, 기타 -->
-                                                        <span class="flag sm">회화</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- //전시상세정보-->
-                                        <!-- PC_전시상세정보 버튼 노출 -->
-                                         <!-- D: 모바일 버튼은 하단에 class="content_bottom" 에 노출 -->
-                                        <div class="btn_wrap">
-                                            <button type="button" class="btn bctype1"><span>예매하기</span></button>
-                                        </div>
-                                        <!-- //PC_전시상세정보 버튼 노출 -->
-                                    </div>
-                                </div>
-                                <!-- //case2 : 전시상세_무료전시 -->
-
-                                <!-- case3 : 전시상세_오픈예정 -->
-                                <div class="detail_view_area">
-                                    <div class="img_group">
-                                        <div class="img_box">
-                                            <img src="../../resources/images/temp/temp_exhb_detail03.png" alt="">
-                                            <div class="flag_area">
-                                                <span class="flag">추천</span>
-                                                <span class="flag type2">이벤트</span>
-                                            </div>
-                                        </div>
-                                        <!-- D: 이미지 출처에 입력된 내용이 없는 경우 해당 영역 미노출 -->
-                                        <div class="desc_more">
-                                            <button type="button" class="btn_view"><span>이미지출처</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-                                            <div class="desc">아니쉬 카푸어(b.1954) 〈In-between II〉 2021 Oil, fibreglass and silicone on canvas 244 x 305 x 46 cm ⓒ Anish Kapoor. All rights reserved DACS/SACK, 2023 사진: Dave Morgan 이미지 제공: 국제갤러리</div>
-                                        </div>
-                                        <!-- //D: 이미지 출처에 입력된 내용이 없는 경우 해당 영역 미노출 -->
-                                    </div>
-                                    <div class="info_group">
-                                        <!-- 전시상세정보-->
-                                        <div class="dtl_info_wrap">
-                                            <div class="dtl_info">
-                                                <div class="tit">기간</div>
-                                                <div class="cont">
-                                                    <div class="date_box">
-                                                        <p class="date">2023.06.17 - 2023.12.31</p>
-                                                        <div class="flag_area">
-                                                            <span class="flag sm">오픈예정</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">장소</div>
-                                                <div class="cont">
-                                                    <button type="button" class="btn_link map"><span>국립중앙박물관</span></button>
-                                                </div>
-                                            </div>
+                                            <!-- //D: 관람료가 있는 경우 -->
+                                            <!-- D: 관람료가 유료/얼리버드, 유료/일반일 경우 -->
                                             <div class="dtl_info">
                                                 <div class="tit">관람료</div>
                                                 <div class="cont">
@@ -428,6 +310,7 @@
                                                     <p style="color:#666;">정확한 관람료 및 할인 혜택에 대한 내용은 예매처에서 확인이 가능합니다.</p>
                                                 </div>
                                             </div>
+                                            <!-- //D: 관람료가 유료/얼리버드, 유료/일반일 경우 -->
                                             <div class="dtl_info">
                                                 <div class="tit">작가</div>
                                                 <div class="cont">
@@ -440,9 +323,9 @@
                                             <div class="dtl_info">
                                                 <div class="tit">장르</div>
                                                 <div class="cont">
-                                                    <div class="flag_area genre">
+                                                    <div class="flag_area">
                                                         <!-- D: [장르 구분] 회화, 사진, 미디어아트, 설치, 조각, 퍼포먼스, 행사, 기타 -->
-                                                        <span class="flag sm">회화</span>
+                                                        <span class="flag sm">미디어아트</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -451,83 +334,17 @@
                                         <!-- PC_전시상세정보 버튼 노출 -->
                                          <!-- D: 모바일 버튼은 하단에 class="content_bottom" 에 노출 -->
                                         <div class="btn_wrap">
-                                            <button type="button" class="btn bctype1" disabled><span>오픈예정</span></button><!-- D: 비활성화일 경우 disabled 추가 -->
+                                            <button type="button" class="btn bctype1"><span>예매하기</span></button><!-- D: 비활성화일 경우 disabled 추가 -->
+                                            <!-- 케이스별 버튼
+                                            <button type="button" class="btn bctype1"><span>무료전시</span></button>
+                                            <button type="button" class="btn bctype1" disabled><span>오픈예정</span></button>
+                                            <button type="button" class="btn bctype1" disabled><span>전시 종료</span></button>
+                                            -->
                                         </div>
                                         <!-- //PC_전시상세정보 버튼 노출 -->
                                     </div>
                                 </div>
-                                <!-- //case3 : 전시상세_오픈예정 -->
-
-                                <!-- case4 : 전시상세_전시종료 -->
-                                <div class="detail_view_area">
-                                    <div class="img_group">
-                                        <div class="img_box">
-                                            <img src="../../resources/images/temp/temp_exhb_detail03.png" alt="">
-                                            <div class="flag_area">
-                                                <span class="flag">추천</span>
-                                                <span class="flag type2">이벤트</span>
-                                            </div>
-                                        </div>
-                                        <!-- D: 이미지 출처에 입력된 내용이 없는 경우 해당 영역 미노출 -->
-                                        <div class="desc_more">
-                                            <button type="button" class="btn_view"><span>이미지출처</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-                                            <div class="desc">아니쉬 카푸어(b.1954) 〈In-between II〉 2021 Oil, fibreglass and silicone on canvas 244 x 305 x 46 cm ⓒ Anish Kapoor. All rights reserved DACS/SACK, 2023 사진: Dave Morgan 이미지 제공: 국제갤러리</div>
-                                        </div>
-                                        <!-- //D: 이미지 출처에 입력된 내용이 없는 경우 해당 영역 미노출 -->
-                                    </div>
-                                    <div class="info_group">
-                                        <!-- 전시상세정보-->
-                                        <div class="dtl_info_wrap">
-                                            <div class="dtl_info">
-                                                <div class="tit">기간</div>
-                                                <div class="cont">
-                                                    <div class="date_box">
-                                                        <p class="date">2023.08.23 - 2023.09.27</p>
-                                                        <div class="flag_area">
-                                                            <span class="flag sm">종료</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">장소</div>
-                                                <div class="cont">
-                                                    <button type="button" class="btn_link map"><span>갤러리바톤</span></button>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">관람료</div>
-                                                <div class="cont">
-                                                    <p>무료관람</p>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">작가</div>
-                                                <div class="cont">
-                                                    <ul class="item_list">
-                                                        <li><a href="#" class="btn_arr"><span>이재석</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="dtl_info">
-                                                <div class="tit">장르</div>
-                                                <div class="cont">
-                                                    <div class="flag_area genre">
-                                                        <span class="flag sm">회화</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- //전시상세정보-->
-                                        <!-- PC_전시상세정보 버튼 노출 -->
-                                         <!-- D: 모바일 버튼은 하단에 class="content_bottom" 에 노출 -->
-                                        <div class="btn_wrap">
-                                            <button type="button" class="btn bctype1" disabled><span>전시 종료</span></button><!-- D: 비활성화일 경우 disabled 추가 -->
-                                        </div>
-                                        <!-- //PC_전시상세정보 버튼 노출 -->
-                                    </div>
-                                </div>
-                                <!-- //case4 : 전시상세_전시종료 -->
+                                <!-- //전시상세 -->
 
                                 <!-- 전시정보 -->
                                 <div class="section ex_detail_info">
@@ -544,16 +361,16 @@
                                         <div class="swiper viewSwiper" data-slide="slider-type01">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
+                                                    <img src="../../resources/images/temp/temp_exhb_detail02.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../../resources/images/temp/temp_exhb_detail03.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
                                                     <img src="../../resources/images/temp/temp_exhb_detail04.png" alt="">
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <img src="../../resources/images/temp/temp_exhb_detail05.png" alt="">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="../../resources/images/temp/temp_exhb_detail06.png" alt="">
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <img src="../../resources/images/temp/temp_exhb_detail07.png" alt="">
                                                 </div>
                                             </div>
                                             <div class="swiper-button-next"></div>
@@ -595,12 +412,12 @@
                                 <!-- MO_전시상세정보 버튼 노출 -->
                                 <div class="content_bottom">
                                     <div class="btn_wrap">
-                                        <button type="button" class="btn bctype1"><span>무료전시</span></button><!-- D: case1 : 전시상세_무료전시 -->
-                                        <!-- D: 케이스별 버튼노출 -->
-                                        <!-- <button type="button" class="btn bctype1"><span>예매하기</span></button> --><!-- D: case2 : 전시상세_예매하기 -->
-                                        <!-- <button type="button" class="btn bctype1"><span>오픈예정</span></button> --><!-- D: case3 : 전시상세_오픈예정 -->
-                                        <!-- <button type="button" class="btn bctype1"><span>전시 종료</span></button> --><!-- D: case4 : 전시상세_전시종료 -->
-                                        <!-- //D: 케이스별 버튼노출 -->
+                                        <button type="button" class="btn bctype1"><span>예매하기</span></button><!-- D: 비활성화일 경우 disabled 추가 -->
+                                        <!-- 케이스별 버튼
+                                        <button type="button" class="btn bctype1"><span>무료전시</span></button>
+                                        <button type="button" class="btn bctype1" disabled><span>오픈예정</span></button>
+                                        <button type="button" class="btn bctype1" disabled><span>전시 종료</span></button>
+                                        -->
                                     </div>
                                 </div>
                                 <!-- //MO_전시상세정보 버튼 노출 -->
@@ -862,7 +679,7 @@
                                                             <!-- D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
                                                             <div class="comment_img">
                                                                 <img src="https://pixdine.github.io/hll/magazine_bazaar/resources/images/temp/temp_upload01.jpg" alt="">
-                                                                <span class="total">5</span><!-- D: 이미지가 두개이상 등록된 경우 노출 -->
+                                                                <span class="total">5</span><!-- D: 이미지가 2개이상 등록된 경우 노출 -->
                                                             </div>
                                                             <!-- //D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
                                                         </div>
@@ -916,7 +733,7 @@
                                                             <!-- D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
                                                             <div class="comment_img">
                                                                 <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202308/18/2bd5975c-51ac-4ca1-b1f6-5ca9580f7c52.jpg" alt="">
-                                                                <span class="total">10</span><!-- D: 이미지가 두개이상 등록된 경우 노출 -->
+                                                                <span class="total">10</span><!-- D: 이미지가 2개이상 등록된 경우 노출 -->
                                                             </div>
                                                             <!-- //D: 업로드 된 이미지가 노출되며 사진 첨부시에만 노출 -->
                                                         </div>

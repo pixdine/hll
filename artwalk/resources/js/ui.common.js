@@ -801,3 +801,29 @@ function viewImgSlide() {
         });
     }
 })(jQuery);
+
+// 텍스트 에어리어
+(function($) {
+    $.fn.textareaWithCount = function (options) {
+        // 기본 옵션값
+        defaults = {
+            delay: 4000,
+            textLength: 0,
+        }
+
+        var settings = $.extend({}, defaults, options);
+        return this.each(function (i) {
+            var taBody = $(this);
+            var textarea = taBody.find(".textarea");
+            taBody.attr("maxlength", settings.textLength);
+            var currentCnt = taBody.find('.current');
+            var totalCnt = taBody.find('.total');
+            console.log(totalCnt);
+            totalCnt.text("/"+settings.textLength);
+            taBody.on('input', function() {
+                var textLength = textarea.val().length;
+                currentCnt.text(textLength);
+            });
+        });
+    }
+})(jQuery);

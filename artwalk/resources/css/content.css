@@ -360,10 +360,11 @@
 
     /* 팝업 : 리뷰 상세보기 */
     .popup_review_detail .popup_bottom .btn_wrap .btn_link{font-size:14px;line-height:20px;}
-    .review_slide .viewSwiper .swiper-slide{height:auto;max-height:335px;}
+    review_slide .viewSwiper .swiper-slide{height:auto;max-height:335px;}
 
     /* 산책코스 */
-    .bazaarspick .bodycont_wrap .cont_inner {padding:40px 20px 0px}
+    .bazaarspick .sub .bodycont_wrap .cont_inner {padding:40px 20px 0px}
+    .bazaarspick .bodycont_wrap .cont_inner {padding:80px 20px 0px}
     .container .sub .heading_wrap {}
     .container .sub .heading_wrap { margin:0; height:150px; background-image:url('../../resources/images/bg_top_tit_mo.png'); background-size:375px 150px}
     .container .sub .heading_area { display:flex; max-width:1920px; height:150px; margin:0 auto; justify-content:center; align-items:center}
@@ -428,6 +429,7 @@
     .benefit_wrap .btn_area .btn{width:100%;}
     .benefit_wrap .prod_txt p{font-size:14px;line-height:20px;}
     /* 아트뉴스 */
+    .artnews .sub .bodycont_wrap .cont_inner {padding:40px 20px 0px}
     .sub .masonry_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .sub .masonry_list li {width:calc(50% - 5.5px); margin-left:0}
     .sub .masonry_list li .item_img img {width:100%}

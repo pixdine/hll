@@ -230,6 +230,18 @@
 .ex_post .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:40px;height:2px;margin:0 4px;cursor:pointer;background-color:rgba(17,17,17,0.2);}
 .ex_post .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(17,17,17,1);}
 
+
+/* 아트뉴스 */
+.sub .masonry_list {}
+.sub .masonry_list ul {display:flex; row-gap:50px; flex-wrap:wrap }
+.sub .masonry_list li {position:relative; width:32%; margin-left:2%}
+.sub .masonry_list li:first-child { margin-left:0 }
+.sub .masonry_list li:nth-child(3n+1) { margin-left:0}
+.sub .masonry_list li .item_img img {width:100%}
+.sub .masonry_list li .item_info { height:119px; border:1px solid #111; padding:12px}
+.sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
+.sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}	
+
 /************************* Media Query *************************/
 @media screen and (max-width: 768px) {
     .container{padding-bottom:80px;}
@@ -324,14 +336,15 @@
 
     .cont_heading_area .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
    
-    .bazaarspick .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
+    
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .bazaarspick_list li {width:calc(50% - 5.5px); margin-left:0}
     .bazaarspick_list li .txtbox { position:absolute; z-index:1; bottom:12px; padding:0 12px; }
     .bazaarspick_list li .txtbox .tit {font-size:14px; line-height:20px;height:40px}
     .bazaarspick_list li .txtbox::after { bottom:-12px; }
-    .bazaarspick_list .ex_top {right:8px; top:8px;}
+    .bazaarspick_list li .ex_top {right:8px; top:8px;}
+    .bazaarspick_list li .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
     
     
     .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap }
@@ -361,6 +374,14 @@
     .ex_post .swiper_post .swiper-slide{width:100%;max-width:74%;margin-right:12px;}
     .ex_post .btn_move{display:none;}
     .ex_post .swiper-pagination{display:none;}
+
+    /* 아트뉴스 */
+    .sub .masonry_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
+    .sub .masonry_list li {width:calc(50% - 5.5px); margin-left:0}
+    .sub .masonry_list li .item_img img {width:100%}
+    .sub .masonry_list li .item_info { height:86px; padding:10px}
+    .sub .masonry_list li .item_sbj{font-size: 10px;}
+    .sub .masonry_list li .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
 }
 
 @media screen and (max-width: 320px) {

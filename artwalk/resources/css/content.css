@@ -58,9 +58,9 @@
 .row_list .atcbox a{display:flex;width:100%;height:100%;}
 .row_list .atcbox .imgbox{overflow:hidden;position:relative;width:32%;height:0;padding-top:20%;}
 .row_list .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
-.row_list .atcbox .txtbox{display:flex;flex:1;justify-content:center;flex-direction:column;padding:0 5%;border:1px solid #111;border-left:0;}
-.row_list .atcbox .txtbox .cate{display:block;margin-bottom:12px;font-family:Gotham;font-size:11px;font-weight:500;line-height:1;}
-.row_list .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;font-size:20px;font-weight:500;line-height:28px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
+.row_list .atcbox .txtbox{display:flex;flex:1;justify-content:center;flex-direction:column;margin-top:0;padding:0 5%;border:1px solid #111;border-left:0;}
+.row_list .atcbox .txtbox .cate{display:block;margin-bottom:12px;font-family:Gotham;font-size:11px;font-weight:500;color:#111;line-height:1;}
+.row_list .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:auto;font-size:20px;font-weight:500;line-height:28px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
 
 /* 리뷰 등록배너 */
 .review_box{width:100%;height:140px;background:#221E1F url('../images/bg_review.png') no-repeat center center;}
@@ -202,7 +202,7 @@
 .bazaarspick_list li .txtbox .tit { position:relative; z-index:2; color:#fff; font-size:28px; line-height:36px}
 .bazaarspick_list li .atcbox .btn_wish { position:absolute; top:20px; right:24px; z-index:1}
 .bazaarspick_list li .txtbox::after {content:''; position:absolute; bottom:-32px; left:0; z-index:1; width:100%; height:100%; padding-top:60%; background: rgb(17,17,17); background: linear-gradient(0deg, rgba(17,17,17,0.8) 0%, rgba(255,255,255,0) 100%);}
-.bazaarspick_list .ex_top { position:absolute; right:21px; top:23px; z-index:1}
+.bazaarspick_list .ex_top { position:absolute; right:20px; top:20px; z-index:1}
 /* 산책코스 > 상세 */
 .bazaarspick .detail_header { margin-top:60px; margin-bottom:0px}
 .bazaarspick .detail_header .tit { text-align:left; font-size:28px; line-height:32px; font-weight:600}
@@ -222,7 +222,7 @@
 .ex_post .cont_inner{position:relative;}
 .ex_post .swiper_post{overflow:hidden;}
 .ex_post{padding:120px 0;background-color:#f7f7f7;}
-.ex_post .swiper-slide{width:100%;max-width:384px;margin-right:24px;}
+.ex_post .swiper-slide{width:100%;max-width:32%;margin-right:24px;}
 .ex_post .btn_move {position: absolute;top: 50%;transform:translateY(-50%);width: 48px;cursor: pointer;opacity: 0.6;}
 .ex_post .button_prev{left: -48px;}
 .ex_post .button_next{right: -48px;}
@@ -231,6 +231,7 @@
 .ex_post .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(17,17,17,1);}
 
 
+<<<<<<< HEAD
 
 /*산책메이트 혜택 안내*/
 .container .sub .heading_wrap h2.tit img{display:block;margin: 0 auto 32px;}
@@ -254,6 +255,18 @@
 .benefit_wrap .prod_txt{margin-top:16px;}
 .benefit_wrap .prod_txt p{text-align:center;font-size:16px;line-height:24px;color:#666;}
 
+=======
+/* 아트뉴스 */
+.sub .masonry_list {}
+.sub .masonry_list ul {display:flex; row-gap:50px; flex-wrap:wrap }
+.sub .masonry_list li {position:relative; width:32%; margin-left:2%}
+.sub .masonry_list li:first-child { margin-left:0 }
+.sub .masonry_list li:nth-child(3n+1) { margin-left:0}
+.sub .masonry_list li .item_img img {width:100%}
+.sub .masonry_list li .item_info { height:119px; border:1px solid #111; padding:12px}
+.sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
+.sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}	
+>>>>>>> 3caa99da4f64a74452a5d1feb8da32e7dfd219c6
 
 /************************* Media Query *************************/
 @media screen and (max-width: 768px) {
@@ -348,16 +361,17 @@
     .bazaarspick .btn_more_wrap.type1 { margin-top:40px }
 
     .cont_heading_area .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
-
-    .bazaarspick .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
-
+   
+    
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .bazaarspick_list li {width:calc(50% - 5.5px); margin-left:0}
     .bazaarspick_list li .txtbox { position:absolute; z-index:1; bottom:12px; padding:0 12px; }
     .bazaarspick_list li .txtbox .tit {font-size:14px; line-height:20px;height:40px}
     .bazaarspick_list li .txtbox::after { bottom:-12px; }
-    .bazaarspick_list .ex_top {right:10px; top:8px;}
+    .bazaarspick_list li .ex_top {right:8px; top:8px;}
+    .bazaarspick_list li .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
+    
     
     .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap }
     .tab_wrap .tab_menu ul li a{white-space:nowrap;}
@@ -370,10 +384,10 @@
     .tab_wrap.on .tab_menu .btnbox:before{display:none;}
     .tab_wrap .tab_menu .btnbox{right:-20px;}
 
-
-
     /* 산책코스 > 상세 */
+    .bazaarspick .detail_header { margin-top:32px;}
     .bazaarspick .detail_header .tit { text-align:left; font-size:20px; line-height:28px; font-weight:600}
+    .bazaarspick .detail_slide ~ .detail_txt { margin-top:16px}
 
     /* 전시장 근처 핫플 */
     .post_ex_item a{padding:15px 15px 31px;}
@@ -383,10 +397,11 @@
 
     .ex_post{padding:60px 0;}
     .ex_post .swiper_post{overflow: initial;}
-    .ex_post .swiper_post .swiper-slide{width:100%;max-width:inherit;margin-right:12px;}
+    .ex_post .swiper_post .swiper-slide{width:100%;max-width:74%;margin-right:12px;}
     .ex_post .btn_move{display:none;}
     .ex_post .swiper-pagination{display:none;}
 
+<<<<<<< HEAD
 
     /*산책메이트 혜택 안내*/
     .container .sub .heading_wrap h2.tit img{width:101px;height:10px;margin-bottom:12px;}
@@ -402,6 +417,15 @@
     .benefit_wrap .btn_area{margin-top:80px;}
     .benefit_wrap .btn_area .btn{width:100%;}
     .benefit_wrap .prod_txt p{font-size:14px;line-height:20px;}
+=======
+    /* 아트뉴스 */
+    .sub .masonry_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
+    .sub .masonry_list li {width:calc(50% - 5.5px); margin-left:0}
+    .sub .masonry_list li .item_img img {width:100%}
+    .sub .masonry_list li .item_info { height:86px; padding:10px}
+    .sub .masonry_list li .item_sbj{font-size: 10px;}
+    .sub .masonry_list li .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
+>>>>>>> 3caa99da4f64a74452a5d1feb8da32e7dfd219c6
 }
 
 @media screen and (max-width: 320px) {

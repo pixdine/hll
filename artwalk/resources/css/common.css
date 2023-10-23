@@ -512,6 +512,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_full .p_agree .agree_sbj{color: #111;font-family: 'noto sans kr';font-weight: 500;font-size: 16px;line-height: 28px;}
 .popup_full .p_agree .agree_cont{margin-top: 16px;}
 .popup_full .p_agree .agree_txt{color: #111;font-family: 'noto sans kr';font-size: 16px;line-height: 28px;}
+.popup_full .popup_cont .subject{color: #111;font-size: 20px;line-height: 28px;}
+.popup_full .popup_cont .guide_wrap{display: flex;}
+.popup_full .popup_cont .guide_txt{color: #111;font-size: 18px;font-weight: 500;line-height: 24px;}
+.popup_full .popup_cont .guide_txt_sub{color: #666;font-size: 14px;font-weight: 500;line-height: 20px;}
 
 /* layer */
 .popup_layer{display:none;position:absolute;right:0;top:0;width:100%;background-color:#fff;border:1px solid #dbdbdb;z-index:100;}
@@ -542,7 +546,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_sheet .btn_wrap {margin-top: 0;justify-content: center;}
 .popup_sheet .btn_wrap .btn {width: 180px;}
 .popup_sheet .btn_wrap .btn + .btn {margin-left: 24 px;}
- .popup_sheet .psheet_head{padding:26px 90px 26px 28px;border-bottom:1px solid #dbdbdb;}
+.popup_sheet .psheet_head{padding:26px 90px 26px 28px;border-bottom:1px solid #dbdbdb;}
 .popup_sheet .psheet_head .tit{font-size:24px;line-height:32px;font-weight:600;text-align:left;}
 .popup_sheet .psheet_inner{width:100%;}
 .popup_sheet .psheet_close{position: absolute;right:18px;top:24px;}
@@ -904,7 +908,7 @@ background:#fff;overflow:hidden;z-index:230}
     .allmenu_list + .allmenu_list{margin-top:40px;padding-top: 40px;}
     .allmenu_list .depth1 > li{margin-top:29px;}
     .allmenu_list .depth1 > li > a{font-size:24px;line-height:32px;}
-    .allmenu_list .depth1 > li > a.arrow{background-size: 20px;}
+    .allmenu_list .depth1 > li > a.arrow{background-size: 20px;} 
     .allmenu_list .depth1 > li > a span{right:0;width:35px;height:33px;}
     .allmenu_list .depth1 > li.has_menu > a span:before{top:8px;right:0;width:16px;height:16px;}
     .allmenu_list .depth2{margin:16px 0 30px;}
@@ -927,7 +931,7 @@ background:#fff;overflow:hidden;z-index:230}
     .search_keyword{margin-top:32px;}
     .search_keyword .search_tit{font-size:16px;line-height:23px;}
     .word_list{row-gap:8px;}
-
+ 
     /* footer */
     .footer_top{padding:19px 0;}
     .footer_link ul{gap:8px 17px;}

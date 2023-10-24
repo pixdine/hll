@@ -226,7 +226,8 @@
 						<button type="button" data-popsheet-open="sheet_1"><span>전시정보 > 전시상세 (지도)</span></button><br>
 						<button type="button" data-popup-open="popup_1"><span>전시정보 > 전시상세 > 운영규정</span></button><br>
                         <button type="button" data-popup-open="popup_2"><span>전시정보 > 전시상세 > 리뷰 작성하기</span></button><br>
-						<button type="button" data-popup-open="popup_3"><span>전시정보 > 전시상세 > 리뷰 상세보기</span></button><br>
+                        <button type="button" data-popup-open="popup_3"><span>전시정보 > 전시상세 > 리뷰 수정 하기</span></button><br>
+						<button type="button" data-popup-open="popup_4"><span>전시정보 > 전시상세 > 리뷰 상세보기</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button><br>
 					</div>
@@ -343,8 +344,65 @@
         </div>
     </div>
 
+    <!--D : 댓글수정하기 팝업 --> 
+    <div class="popup_full" data-popup="popup_3">
+        <div class="popup_inner review">
+            <div class="popup_head">
+                <h2 class="tit">리뷰 수정하기</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_2"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <p class="subject">영국 내셔널갤러리 명화전《거장의 시선, 사람을 향하다》</p>
+                <div class="guide_row">
+                    <span class="guide_txt">관람 후기 작성</span>
+                    <span class="guide_txt_sub">* 50자 이상, 1,000자 이내</span>
+                </div> 
+
+                <div class="textarea_wrap">
+                    <textarea class="textarea review_text_area" maxlength="1000" placeholder="내용을 입력해 주세요." title="내용을 입력해 주세요.">업사이클링으로 이렇게 아름다운 오브제들이 탄생할 수 있다니! 경이롭고 아름다워요~ 모든 작가님들의 작품들이 전부 멋져서 투표하는데 고민이 많이 되었어요 저는 만약 제품을 구입할 수 있다면 뭘 고를지에 초점을 맞춰 투표해보았어요! 유니크한 디자인의 블라인드 다채로운 색상의 화병 감각적인 종이화분이며 블루투스 스피커 벽걸이 조명 거울 모두 그저 작품이네요! 폐기물로 쌓여 처리될 것들에 창의성을 불어넣어 작품으로 만드신 그 귀한 재능이 앞으로도 선하고 이롭게 사용되시길 바래요 여섯팀 모두 너무나 고생하셨고 멋지세요! 그리고 이렇게 멋진 프로젝트를 기획하신 바자르와 록시땅 직원분들 모두 고생많으셨어요! 앞으로도 이런 아름다운 기획들과 선한 마음들이 넘쳐나는 세상이 되길! 우리 후손들이 좀 더 편히 숨쉴 수 있는 지구가 되길 바래봅니다! 모두 응원합니다 그리고 감사합니다</textarea>
+                    <div class="cnt_txt">
+                        <span class="current">0</span>
+                        <span class="total"></span>
+                    </div>
+                </div>
+
+                <div class="attach_pic_comp">
+                    <div class="guide_row">
+                        <span class="guide_txt">이미지 등록</span>
+                        <div class="guide_txt attach_cnt">
+                            &nbsp;(<span class="current"></span>/<span class="total"></span>)
+                        </div>
+                        <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
+                    </div> 
+                    
+                    <div class="attach_pic">
+                        <button class="btn_attach" title="이미지 첨부하기">
+                            <span class="txt">사진첨부</span>
+                        </button>
+                        <input type="file" id="image-upload" multiple/><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <!-- <button class="btn_attach disabled"></button> -->
+                        <!-- <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>등록</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--D : 리뷰상세보기 팝업 -->
-    <div class="popup_full popup_review_detail" data-popup="popup_3">
+    <div class="popup_full popup_review_detail" data-popup="popup_4">
         <div class="popup_inner review">
             <div class="popup_head">
                 <h2 class="tit">리뷰 상세보기 <span class="total"><em class="current">1</em>/459</span></h2><!-- D: class="current" 영역에 현재 몇번째 리뷰인지 표시 -->

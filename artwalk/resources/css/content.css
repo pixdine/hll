@@ -431,6 +431,9 @@
     .sub .masonry_list li .item_sbj{font-size: 10px;}
     .sub .masonry_list li .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
 
+
+    /*작가정보*/
+    .container .sub .heading_wrap.view{background-image: url('../../resources/images/bg_top_view.png');}
 }
 
 @media screen and (max-width: 320px) {

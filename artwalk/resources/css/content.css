@@ -177,7 +177,7 @@
 
 .bodycont_wrap { max-width:1280px; margin:0 auto}
 .cont_heading_area {position:relative}
-.cont_heading_area .selectbox { position:absolute; right:0; top:11px}
+.cont_heading_area.type01 .selectbox { position:absolute; right:0; top:11px}
 .bodycont_section .cont_body {margin:40px 0px 0px}
 
 .atcbox{position:relative;}
@@ -368,7 +368,7 @@
     .container .sub .heading_wrap h2.tit { color:#fff; text-align:center; font-size:24px; font-weight:500; }
     .bodycont_section .cont_body {margin:24px 0px 0px}
 
-    .cont_heading_area .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
+    .cont_heading_area.type01 .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
    
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }

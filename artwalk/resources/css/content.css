@@ -177,7 +177,7 @@
 
 .bodycont_wrap { max-width:1280px; margin:0 auto}
 .cont_heading_area {position:relative}
-.cont_heading_area .selectbox { position:absolute; right:0; top:11px}
+.cont_heading_area.type01 .selectbox { position:absolute; right:0; top:11px}
 .bodycont_section .cont_body {margin:40px 0px 0px}
 
 .atcbox{position:relative;}
@@ -270,6 +270,20 @@
 .sub .masonry_list li .item_info { height:119px; border:1px solid #111; padding:12px}
 .sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
 .sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}	
+
+/* 갤러리정보 */
+.gallary_list { }
+.gallary_list ul {display:flex; flex-wrap:wrap; column-gap:24px; row-gap:50px; justify-content:space-between; }
+.gallary_list li { width:calc(50% - 12px); margin-left:0}
+.gallary_list li .item_img {}
+.gallary_list li .item_img img {width:100%}
+.gallary_list li .item_info {height:108px; border:1px solid #111; padding:24px}
+.gallary_list li .item_sbj {color: #111; font-weight: 500;font-size:24px;line-height:24px;}
+.gallary_list li .item_loc { display:flex; flex-wrap: nowrap; white-space:nowrap; margin-top: 16px;color: #111;font-weight: 500;font-size:14px;line-height:20px; max-width:100%; }	
+.gallary_list li .item_loc span { position:relative; padding-left:12px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; flex-basis:auto; min-width:auto} 
+.gallary_list li .item_loc span::before { content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%); width:2px; height:12px; background:rgba(17,17,17,0.2)}
+.gallary_list li .item_loc span:first-child { padding-left:0; padding-right:12px; flex-shrink:0}
+.gallary_list li .item_loc span:first-child::before {display:none}
 
 /************************* Media Query *************************/
 @media screen and (max-width: 768px) {
@@ -368,7 +382,7 @@
     .container .sub .heading_wrap h2.tit { color:#fff; text-align:center; font-size:24px; font-weight:500; }
     .bodycont_section .cont_body {margin:24px 0px 0px}
 
-    .cont_heading_area .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
+    .cont_heading_area.type01 .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
    
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
@@ -431,6 +445,18 @@
     .sub .masonry_list li .item_sbj{font-size: 10px;}
     .sub .masonry_list li .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
 
+
+    /*작가정보*/
+    .container .sub .heading_wrap.view{background-image: url('../../resources/images/bg_top_view.png');}
+
+    /* 갤러리 정보*/
+    .gallary_list ul {column-gap:0px; row-gap:36px; }
+    .gallary_list li { width:100%; margin-left:0}
+    .gallary_list li .item_info { height:72px; padding:12px; }
+    .gallary_list li .item_sbj { font-size:14px;line-height:20px;}
+    .gallary_list li .item_loc { font-size:12px;line-height:16px; margin-top:12px; }	
+    .gallary_list li .item_loc span {padding-left:8px;}
+    .gallary_list li .item_loc span:first-child { padding-right:8px}
 }
 
 @media screen and (max-width: 320px) {

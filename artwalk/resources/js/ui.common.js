@@ -139,12 +139,6 @@ $(document).ready(function () {
             enableScroll();
         }
     });
-
-    // 하단 고정 버튼이 있을 경우
-    if($('.content_bottom').length){
-        const content_bottom = $('.content_bottom').innerHeight();
-        $(".footer").css("padding-bottom", content_bottom + "px");
-    }
 });
 
 //디바이스 체크
@@ -152,9 +146,16 @@ $(window).on("load resize", function () {
     if (window.innerWidth > 768) {
         //PC
         $("body").removeClass("is_mobile").addClass("is_pc");
+        $(".footer").css("padding-bottom", 0);
     } else {
         //Mobile
         $("body").removeClass("is_pc").addClass("is_mobile");
+
+        // 하단 고정 버튼이 있을 경우
+        if($('.content_bottom').length){
+            const content_bottom = $('.content_bottom').innerHeight();
+            $(".footer").css("padding-bottom", content_bottom + "px");
+        }
     }
 });
 

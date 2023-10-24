@@ -287,7 +287,7 @@
     </div> 
 
     <!--D : 댓글입력하기 팝업 --> 
-    <div class="popup_full" data-popup="popup_2" style="display: block">
+    <div class="popup_full" data-popup="popup_2">
         <div class="popup_inner review">
             <div class="popup_head">
                 <h2 class="tit">리뷰 작성하기</h2>
@@ -310,31 +310,34 @@
                     </div>
                 </div>
 
-                <div class="guide_row">
-                    <span class="guide_txt">이미지 등록</span>
-                    <div class="guide_txt attach_cnt">
-                        (<span class="current"></span>/<span class="total"></span>)
-                    </div>
-                    <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
-                </div> 
-
-                <div class="attach_pic">
-                    <button class="btn_attach"><!--D : 갯수나 용량 초과하면 disabled 클래스 추가 --> 
-                        <span class="txt">사진첨부</span>
-                    </button>
-                    <!-- <button class="btn_attach disabled"></button> -->
-                    <div class="attach_img">
-                        <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
-                        <button class="btn_del" title="첨부 이미지 삭제">
-                            <span class="blind">첨부 이미지 삭제</span>
+                <div class="attach_pic_comp">
+                    <div class="guide_row">
+                        <span class="guide_txt">이미지 등록</span>
+                        <div class="guide_txt attach_cnt">
+                            &nbsp;(<span class="current"></span>/<span class="total"></span>)
+                        </div>
+                        <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
+                    </div> 
+                    
+                    <div class="attach_pic">
+                        <button class="btn_attach" title="이미지 첨부하기">
+                            <span class="txt">사진첨부</span>
                         </button>
+                        <input type="file" id="image-upload" multiple/><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <!-- <button class="btn_attach disabled"></button> -->
+                        <!-- <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div class="popup_bottom">
                 <div class="btn_wrap">
                     <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>동의</span></button>
+                    <button type="button" class="btn bctype1"><span>등록</span></button>
                 </div>
             </div>
         </div>
@@ -470,10 +473,15 @@
 
     <script>
         // 텍스트 에어리어
-        $(".textarea_wrap").textareaWithCount();
+        $(".textarea_wrap").textareaWithCount({
+            maxlength: 1000 // 최대글자 허용 수
+        });
 
         // 상세 슬라이드
         viewImgSlide();
+
+        // 이미지 첨부 옵션값은 ui.common.js 참고
+        $(".attach_pic_comp").attachPicture();
     </script>
 </body>
 </html>

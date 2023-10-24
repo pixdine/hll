@@ -265,7 +265,7 @@
     </div> 
 
     <!--D : 전시 정보 > 필터 -->
-    <div class="popup_sheet top" data-popsheet="sheet_2" style="display: block">
+    <div class="popup_sheet " data-popsheet="sheet_2">
         <div class="ps_inner">
             <div class="psheet_head">
                 <h2 class="tit">필터 설정</h2>
@@ -664,6 +664,75 @@
             </div>
         </div>
     </div>
+
+ 
+    <!--D : 예술산책 / 커뮤니티 > 글쓰기 --> 
+    <div class="popup_full" data-popup="popup_5" style="display: block">
+        <div class="popup_inner review">
+            <div class="popup_head">
+                <h2 class="tit">리뷰 작성하기</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_5"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="select_inp_row">
+                    <select class="select_inp_select">
+                        <option value="">카테고리 선택</option>
+                        <option value="">카테고리 선택2</option>
+                        <option value="">카테고리 선택3</option>
+                        <option value="">카테고리 선택4</option>
+                    </select>
+                    <div class="inputbox">
+                        <input type="text" class="inp" id="point" placeholder="제목을 입력해 주세요." title="제목을 입력해 주세요." autocomplete="off">
+                    </div>
+                </div>
+                <div class="guide_row">
+                    <span class="guide_txt">내용작성</span>
+                    <span class="guide_txt_sub">* 50자 이상, 1,000자 이내</span>
+                </div> 
+
+                <div class="textarea_wrap">
+                    <textarea class="textarea review_text_area" maxlength="1000" placeholder="내용을 입력해 주세요." title="내용을 입력해 주세요."></textarea>
+                    <div class="cnt_txt">
+                        <span class="current">0</span>
+                        <span class="total"></span>
+                    </div>
+                </div>
+
+                <div class="attach_pic_comp">
+                    <div class="guide_row">
+                        <span class="guide_txt">이미지 등록</span>
+                        <div class="guide_txt attach_cnt">
+                            &nbsp;(<span class="current"></span>/<span class="total"></span>)
+                        </div>
+                        <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
+                    </div> 
+                    
+                    <div class="attach_pic">
+                        <button class="btn_attach" title="이미지 첨부하기">
+                            <span class="txt">사진첨부</span>
+                        </button>
+                        <input type="file" id="image-upload" multiple/><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <!-- <button class="btn_attach disabled"></button> -->
+                        <!-- <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>등록</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!--D : 얼럿1 -->
     <div class="popup_alert" data-alert="alert_1">

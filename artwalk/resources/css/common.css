@@ -738,6 +738,11 @@ background:#fff;overflow:hidden;z-index:230}
 .filter_comp .fc_btn_toggle{position: absolute;top: 6px;right: -10px;width: 40px;height: 40px;background: url(../images/ic_arrow_down_20.svg) 50%/20px no-repeat;}
 .filter_comp.open .fc_btn_toggle{background-image: url(../images/ic_arrow_up_20.svg);}
 
+/* 셀렉트 + 인풋1 */
+.select_inp_row{display: flex;justify-content: space-between;}
+.select_inp_row .select_inp_select{width: 254px;height: 52px;padding: 0 16px;color: #111;font-weight: 500;font-size: 16px;background: url(../images/ic_arrow_down_black_20.svg) calc(100% - 16px) 50%/20px no-repeat;border: 1px solid #ccc;}
+.select_inp_row .inputbox{width: calc(100% - 266px);}
+
 /************************* Media Query *************************/
 @media (max-width:1280px){
 	.pop_share{right:40px;margin-right:0;}
@@ -1053,6 +1058,11 @@ background:#fff;overflow:hidden;z-index:230}
     .filter_comp .fc_list{display: block;white-space: nowrap;padding-bottom: 30px;overflow-x: auto;-webkit-overflow-scrolling:touch;} 
     .filter_comp .fc_item{display: inline-block;} 
     .filter_comp .fc_checkbox_wrap{position: relative;} 
+
+    /* 셀렉트 + 인풋1 */
+    .select_inp_row{display: block;}
+    .select_inp_row .select_inp_select{width: 100%;}
+    .select_inp_row .inputbox{width: 100%;margin-top: 12px;}
 }
 
 @media screen and (max-width: 280px) {

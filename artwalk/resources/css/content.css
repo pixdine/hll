@@ -271,6 +271,22 @@
 .sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
 .sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}	
 
+/*작가정보*/
+.sub .masonry_list li .item_info.type2{padding: 24px;height: 106px;}
+.sub .masonry_list li .item_info.type2 .item_desc{height: auto;}
+.artist_top{position:relative;height:300px; background-image:url('../../resources/images/bg_top_view.png'); background-repeat:repeat; background-position:50% 0%;}
+.artist_wrap{position:relative;}
+.artist_wrap .cont_inner{margin-top:-300px;}
+.artist_wrap .artist_info{display: flex;flex-direction: row-reverse;justify-content: space-between;align-items: end;}
+.artist_cont .tit{font-size:32px;font-weight:500;letter-spacing: -0.01em;line-height:40px;}
+.artist_cont .flag_area{margin-top:16px;}
+.artist_txt{margin-top:60px;padding-top:40px;border-top:1px solid #DBDBDB;}
+.artist_txt p{font-size:16px;letter-spacing: -0.01em;font-family: 'Noto Sans KR';line-height: 28px;font-weight:400;}
+.artist_txt .artist_txt_demo{margin-top:40px;}
+.artist_txt .artist_txt_demo strong{font-weight:700;font-size:16px;letter-spacing: -0.01em;font-family: 'Noto Sans KR';}
+.artist_txt .artist_txt_demo ul li{position:relative;font-size:16px;font-weight:400;font-family: 'Noto Sans KR';line-height: 28px;padding-left: 10px;}
+.artist_txt .artist_txt_demo ul li::before{content: '-';position: absolute;top: 0;left: 0;color: #111;}
+
 /* 갤러리정보 */
 .gallary_list { }
 .gallary_list ul {display:flex; flex-wrap:wrap; column-gap:24px; row-gap:50px; justify-content:space-between; }
@@ -383,7 +399,6 @@
     .bodycont_section .cont_body {margin:24px 0px 0px}
 
     .cont_heading_area.type01 .selectbox { position:relative; right:auto; top:0; display:flex; justify-content:flex-end; margin-top:32px}
-   
 
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .bazaarspick_list li {width:calc(50% - 5.5px); margin-left:0}
@@ -447,7 +462,12 @@
 
 
     /*작가정보*/
-    .container .sub .heading_wrap.view{background-image: url('../../resources/images/bg_top_view.png');}
+    .sub .masonry_list li .item_info.type2{height:74px;padding: 12px;}
+    .artist_wrap .artist_top{margin: 0;height: 216px;background-image: url('../../resources/images/bg_top_view_mo.png');background-size: 375px 150px;}
+    .artist_wrap .artist_info{display:block;}
+    .artist_wrap .artist_info .artist_img img{width:100%;}
+    .artist_wrap .artist_info .artist_cont{margin-top:24px;}
+    .artist_txt{margin-top: 32px;padding-top: 24px;}
 
     /* 갤러리 정보*/
     .gallary_list ul {column-gap:0px; row-gap:36px; }

@@ -271,6 +271,20 @@
 .sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
 .sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}	
 
+/* 갤러리정보 */
+.gallary_list { }
+.gallary_list ul {display:flex; flex-wrap:wrap; column-gap:24px; row-gap:50px; justify-content:space-between; }
+.gallary_list li { width:calc(50% - 12px); margin-left:0}
+.gallary_list li .item_img {}
+.gallary_list li .item_img img {width:100%}
+.gallary_list li .item_info {height:108px; border:1px solid #111; padding:24px}
+.gallary_list li .item_name{color: #111; font-weight: 500;font-size:24px;line-height:24px;}
+.gallary_list li .item_addr { display:flex; flex-wrap: nowrap; white-space:nowrap; margin-top: 16px;color: #111;font-weight: 500;font-size:14px;line-height:20px; max-width:100%; }	
+.gallary_list li .item_addr span { position:relative; padding-left:12px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; flex-basis:auto; min-width:auto} 
+.gallary_list li .item_addr span::before { content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%); width:2px; height:12px; background:rgba(17,17,17,0.2)}
+.gallary_list li .item_addr span:first-child { padding-left:0; padding-right:12px; flex-shrink:0}
+.gallary_list li .item_addr span:first-child::before {display:none}
+
 /************************* Media Query *************************/
 @media screen and (max-width: 768px) {
     .container{padding-bottom:80px;}
@@ -434,6 +448,15 @@
 
     /*작가정보*/
     .container .sub .heading_wrap.view{background-image: url('../../resources/images/bg_top_view.png');}
+
+    /* 갤러리 정보*/
+    .gallary_list ul {column-gap:0px; row-gap:36px; }
+    .gallary_list li { width:100%; margin-left:0}
+    .gallary_list li .item_info { height:72px; padding:12px; }
+    .gallary_list li .item_name { font-size:14px;line-height:20px;}
+    .gallary_list li .item_addr { font-size:12px;line-height:16px; margin-top:12px; }	
+    .gallary_list li .item_addr span {padding-left:8px;}
+    .gallary_list li .item_addr span:first-child { padding-right:8px}
 }
 
 @media screen and (max-width: 320px) {

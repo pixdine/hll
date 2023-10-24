@@ -177,7 +177,6 @@
 .container .sub .heading_wrap h2.tit { color:#fff; text-align:center; font-size:48px; font-weight:500;  max-width:1920px }
 
 .bodycont_wrap { max-width:1280px; margin:0 auto}
-.bodycont_wrap .cont_inner { padding:0px 40px 0px}
 .cont_heading_area {position:relative}
 .cont_heading_area .selectbox { position:absolute; right:0; top:11px}
 .bodycont_section .cont_body {margin:40px 0px 0px}
@@ -367,7 +366,6 @@
     review_slide .viewSwiper .swiper-slide{height:auto;max-height:335px;}
 
     /* 산책코스 */
-    .bodycont_wrap .cont_inner {padding:0px 20px 0px}
     .container .sub .heading_wrap {}
     .container .sub .heading_wrap { margin:0; height:150px; background-image:url('../../resources/images/bg_top_tit_mo.png'); background-size:375px 150px}
     .container .sub .heading_area { display:flex; max-width:1920px; height:150px; margin:0 auto; justify-content:center; align-items:center}

@@ -224,6 +224,7 @@
                    <!-- 팝업버튼 -->
 					<div class="cont_inner" style="padding-bottom:100px;">
 						<button type="button" data-popsheet-open="sheet_1"><span>전시정보 > 전시상세 (지도)</span></button><br>
+						<button type="button" data-popsheet-open="sheet_2"><span>전시 정보 > 필터</span></button><br>
 						<button type="button" data-popup-open="popup_1"><span>전시정보 > 전시상세 > 운영규정</span></button><br>
                         <button type="button" data-popup-open="popup_2"><span>전시정보 > 전시상세 > 리뷰 작성하기</span></button><br>
                         <button type="button" data-popup-open="popup_3"><span>전시정보 > 전시상세 > 리뷰 수정 하기</span></button><br>
@@ -238,6 +239,7 @@
     </div>
 
     <!--팝업위치-->
+    
     <!--D : PC_예술산책 / 전시정보 > 전시상세 (지도) -->
     <div class="popup_sheet" data-popsheet="sheet_1">
         <div class="ps_inner">
@@ -259,10 +261,188 @@
                     <button type="button" class="btn bctype1"><span>위치 정보 더보기</span></button>
                 </div>
             </div>
+        </div>  
+    </div> 
+
+    <!--D : 전시 정보 > 필터 -->
+    <div class="popup_sheet top" data-popsheet="sheet_2" style="display: block">
+        <div class="ps_inner">
+            <div class="psheet_head">
+                <h2 class="tit">필터 설정</h2>
+                <div class="psheet_close">
+                    <button type="button" class="btn_close" data-popsheet-close="sheet_2"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="psheet_cont">
+                <div class="filter_comp">
+                    <div class="fc_header">
+                        <div class="fc_header_row">
+                            <div class="fc_header_tit">
+                                <span class="fc_tit_txt">전시상태</span>
+                                <span class="fc_cnt"></span>
+                            </div>
+                            <button class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
+                        </div>
+                    </div>
+
+                    <div class="fc_list_wrap">
+                        <ul class="fc_list">
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row01-01" class="fc_checkbox" name="row01" data-check="all">
+                                    <label for="row01-01" class="fc_label">전체</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row01-02" class="fc_checkbox fc_checkbox_sub" name="row01">
+                                    <label for="row01-02" class="fc_label">오픈예정</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row01-03" class="fc_checkbox fc_checkbox_sub" name="row01">
+                                    <label for="row01-03" class="fc_label">진행중</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row01-04" class="fc_checkbox fc_checkbox_sub" name="row01">
+                                    <label for="row01-04" class="fc_label">종료</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="fc_btn_toggle js-filter-toggle">
+                        <span class="blind">열기</span>
+                    </button>
+                </div>
+
+                <div class="filter_comp">
+                    <div class="fc_header">
+                        <div class="fc_header_row">
+                            <div class="fc_header_tit">
+                                <span class="fc_tit_txt">장르</span>
+                                <span class="fc_cnt"></span>
+                            </div>
+                            <button class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
+                        </div>
+                    </div>
+
+                    <div class="fc_list_wrap">
+                        <ul class="fc_list">
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-01" class="fc_checkbox" name="row02" data-check="all">
+                                    <label for="row02-01" class="fc_label">전체</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-02" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-02" class="fc_label">회화</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-03" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-03" class="fc_label">사진</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-04" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-04" class="fc_label">미디어아트</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-05" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-05" class="fc_label">설치</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-06" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-06" class="fc_label">조각</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-07" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-07" class="fc_label">퍼포먼스</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-08" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-08" class="fc_label">행사</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row02-09" class="fc_checkbox fc_checkbox_sub" name="row02">
+                                    <label for="row02-09" class="fc_label">기타</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="fc_btn_toggle js-filter-toggle">
+                        <span class="blind">열기</span>
+                    </button>
+                </div>
+
+                <div class="filter_comp">
+                    <div class="fc_header">
+                        <div class="fc_header_row">
+                            <div class="fc_header_tit">
+                                <span class="fc_tit_txt">관람료</span>
+                                <span class="fc_cnt"></span>
+                            </div>
+                            <button class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
+                        </div>
+                    </div>
+
+                    <div class="fc_list_wrap">
+                        <ul class="fc_list">
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row03-01" class="fc_checkbox" name="row03" data-check="all">
+                                    <label for="row03-01" class="fc_label">전체</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row03-02" class="fc_checkbox fc_checkbox_sub" name="row03">
+                                    <label for="row03-02" class="fc_label">무료</label>
+                                </div>
+                            </li>
+                            <li class="fc_item">
+                                <div class="fc_checkbox_wrap">
+                                    <input type="checkbox" id="row03-03" class="fc_checkbox fc_checkbox_sub" name="row03">
+                                    <label for="row03-03" class="fc_label">유료</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="fc_btn_toggle js-filter-toggle">
+                        <span class="blind">열기</span>
+                    </button>
+                </div>
+            </div>
+            <div class="sheet_bottom">
+                <di v class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>전체해제</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
         </div> 
     </div> 
-    
-    <!--D : 운영규정-->
+     
+    <!--D : 예술산책 / 전시정보 > 전시상세 (운영규정)-->
     <div class="popup_full" data-popup="popup_1">
         <div class="popup_inner">
             <div class="popup_head">
@@ -287,7 +467,7 @@
         </div>
     </div> 
 
-    <!--D : 댓글입력하기 팝업 --> 
+    <!--D : 예술산책 / 전시정보 > 전시상세 (댓글입력하기) --> 
     <div class="popup_full" data-popup="popup_2">
         <div class="popup_inner review">
             <div class="popup_head">
@@ -344,7 +524,7 @@
         </div>
     </div>
 
-    <!--D : 댓글수정하기 팝업 --> 
+    <!--D : 예술산책 / 전시정보 > 전시상세 (댓글수정하기) --> 
     <div class="popup_full" data-popup="popup_3">
         <div class="popup_inner review">
             <div class="popup_head">
@@ -396,6 +576,7 @@
                 <div class="btn_wrap">
                     <button type="button" class="btn bctype2"><span>취소</span></button>
                     <button type="button" class="btn bctype1"><span>등록</span></button>
+                    <button type="button" class="btn bctype2"><span>삭제</span></button>
                 </div>
             </div>
         </div>
@@ -540,6 +721,60 @@
 
         // 이미지 첨부 옵션값은 ui.common.js 참고
         $(".attach_pic_comp").attachPicture();
+
+        // 필터
+        (function($) {
+            $.fn.exFilter = function (options) {
+                return this.each(function(){
+                    var filterBody = $(this);
+                    var filterToggle = filterBody.find(".js-filter-toggle");
+                    var filterListWrap = filterBody.find(".fc_list_wrap");
+                    var checkAll = filterBody.find("[data-check='all']");
+                    var checkboxes = filterBody.find(".fc_checkbox_sub");
+                    var cancel = filterBody.find(".fc_btn_cancel");
+                    var countEl = filterBody.find(".fc_cnt"); // 체크박스가 체크된 갯수를 표시할 위치
+                    filterToggle.on("click", function(){
+                        filterBody.toggleClass("open");
+                        if(filterBody.hasClass("open")){
+                            filterListWrap.stop().slideDown(200);
+                        } else {
+                            filterListWrap.stop().slideUp(200);
+                        }
+                    });
+                    // 전체선택
+                    checkAll.on("change", function (){
+                        var isChecked = $(this).prop('checked');
+                        checkboxes.prop('checked', false);
+                        // 전체 선택이 되면 체크박스의 총 갯수를, 해제되면 0을 표시합니다.
+                        updateCount('');
+                    });
+
+                     // 개별 체크박스 클릭 시 "전체 선택" 체크박스 상태 업데이트
+                    checkboxes.on("change", function() {
+                        var checkedLength = checkboxes.filter(":checked").length;
+                        checkAll.prop('checked', false);
+                        updateCount(checkedLength); // 체크된 체크박스 갯수 업데이트
+                    });
+
+                    // 선택해제
+                    cancel.on("click", function (){
+                        // 모든 체크박스의 선택을 취소합니다.
+                        checkboxes.prop('checked', false);
+                        // "전체 선택" 체크박스도 해제합니다.
+                        checkAll.prop('checked', false);
+                        updateCount(''); // 체크된 갯수를 0으로 업데이트
+                    });
+
+                    // 체크된 체크박스의 갯수를 업데이트하는 함수
+                    function updateCount(count) {
+                        countEl.text(count); // 체크된 체크박스의 갯수를 텍스트로 설정
+                    }
+                });
+            }
+        })(jQuery);
+
+        // 필터
+        $(".filter_comp").exFilter();
     </script>
 </body>
 </html>

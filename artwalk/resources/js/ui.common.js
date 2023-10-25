@@ -972,9 +972,11 @@ function viewImgSlide() {
             var swiperSlide = swiperBody.find(".swiper-slide");
             var btnNext = swiperBody.find(".button_next");
             var btnPrev = swiperBody.find(".button_prev");
-            if(swiperSlide.length <= 3) {
+            var pagenation = swiperBody.find(".swiper-pagination");
+            if(swiperSlide.length < 3) {
                 btnNext.hide();
                 btnPrev.hide();
+                pagenation.hide();
             }
 
             var rvSwiper = new Swiper(swiperContainer, {

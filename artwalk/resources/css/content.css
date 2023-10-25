@@ -529,6 +529,7 @@
     .sub .masonry_list li .item_info.type2{height:74px;padding: 12px;}
     .artist_wrap .artist_top{margin: 0;height: 216px;background-image: url('../../resources/images/bg_top_view_mo.png');background-size: 375px 150px;}
     .artist_wrap .artist_info{display:block;}
+    .artist_wrap .artist_info .artist_img{width:100%;height: auto;max-height: 335px;}
     .artist_wrap .artist_info .artist_img img{width:100%;}
     .artist_wrap .artist_info .artist_cont{margin-top:24px;}
     .artist_txt{margin-top: 32px;padding-top: 24px;}

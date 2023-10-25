@@ -28,7 +28,8 @@
 	font-family: Gotham;
 	font-style: normal;
 	font-weight: 500;
-	src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff");
+	/* src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff"); */
+	src: url(../font/Gotham-Medium.woff) format("woff");
 	unicode-range: U+000-5ff,U+06??
 }
 @font-face {
@@ -680,9 +681,10 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_ex_item .ex_date{color: #111;font-family: Gotham;font-size: 14px;font-weight: 500;line-height: 20px;}
 .comm_ex_item .ex_range .flag{margin-left: 12px;}
 .comm_ex_item .ex_loc_row{display: flex;margin-top: 13px;}
-.comm_ex_item .ex_loc_sub{color: #111;font-size: 14px;font-weight: 500;line-height: 20px;word-break:break-all;}
-.comm_ex_item .ex_place{position: relative;margin-left: 26px;}
-.comm_ex_item .ex_place:before{content: '';position: absolute;top: calc(50% - 1px);left: -13px;width: 2px;height: 12px;background: #111;opacity: 0.2;transform: translateY(-50%);}
+.comm_ex_item .ex_loc{position: relative;}
+.comm_ex_item .ex_loc:after{content: '';position: absolute;top: calc(50% - 1px);right: -13px;width: 2px;height: 12px;background: #111;opacity: 0.2;transform: translateY(-50%);}
+.comm_ex_item .ex_loc_sub{color: #111;font-size: 14px;font-weight: 500;line-height: 20px;word-break:break-all;white-space: nowrap;}
+.comm_ex_item .ex_place{position: relative;margin-left: 26px;overflow: hidden;text-overflow: ellipsis;}
 .comm_ex_item .ex_top{display: flex;align-items: center;justify-content: space-between;position: absolute;top: 0;left: 0;z-index: 1;width: 100%;padding: 20px;}
 .comm_ex_item .ex_top_flag{display: flex;}
 .comm_ex_item .btn_wish{width: 28px;height: 28px;background: url(../images/ico_scrap_28.svg) 0/100%;}
@@ -1034,9 +1036,9 @@ background:#fff;overflow:hidden;z-index:230}
     .comm_ex_item .ex_date{display: block;font-size: 10px;line-height: 1;}
     .comm_ex_item .ex_range .flag{margin: 8px 0 0 0;}
     .comm_ex_item .ex_loc_row{margin-top: 8px;}
+    .comm_ex_item .ex_loc:after{top: 50%;right: -6px;height: 8px;}
     .comm_ex_item .ex_loc_sub{font-size: 10px;line-height: 12px}
     .comm_ex_item .ex_place{margin-left: 10px;}
-    .comm_ex_item .ex_place:before{top: 50%;left: -6px;height: 8px;}
     .comm_ex_item .ex_top{padding: 8px;}
     .comm_ex_item .ex_top_flag{display: flex;}
     .ex_info .swiper_pc_3_mo_auto .swiper{overflow: initial;}

@@ -272,7 +272,7 @@
                                         </div>
                                         <div class="sort_calendar">
                                             <div class="inputbox calendar">
-                                                <input type="tetx" class="inp" value="23.10.12 ~ 23.10.25" readonly>
+                                                <input type="text" id="datepicker" class="inp" value="23.10.12 ~ 23.10.25" readonly>
                                             </div>
                                         </div>
                                         <div class="side">
@@ -832,8 +832,13 @@
         </div>
     </div>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!-- js -->
     <script src="../../resources/js/swiper.min.js"></script>
+    <script src="../../resources/js/flatpickr.min.js"></script>
+    <!-- 한국어 로케일 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
 
     <script>
@@ -842,6 +847,29 @@
             // 스크랩
             $(".js-btn-scrap").btnScrap();
         });
+
+        //flatpickr 달력
+        $("#datepicker").flatpickr({
+            locale: 'ko',
+            mode: 'range',
+            showMonths: 2,
+            dateFormat: "Y.m.d",
+            onChange: function(selectedDates, dateStr, instance) {
+                // 선택된 날짜 범위를 가져옵니다.
+                if (selectedDates.length == 2) {
+                    // 시작 날짜와 종료 날짜를 얻습니다.
+                    let startDate = flatpickr.formatDate(selectedDates[0], "y.m.d"); // '23.10.12' 형식
+                    let endDate = flatpickr.formatDate(selectedDates[1], "y.m.d");
+
+                    // 새 형식으로 날짜 문자열을 만듭니다.
+                    let newFormat = startDate + " ~ " + endDate;
+
+                    // 이 문자열을 인풋 필드에 설정합니다.
+                    instance.input.value = newFormat;
+                }
+            },
+        });
+
     </script>
     <!-- //js -->
 </body>

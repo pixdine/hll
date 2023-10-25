@@ -50,7 +50,7 @@ textarea, select{outline:none;}
 select::-ms-expand{display:none;}
 select:disabled{pointer-events:none;}
 
-button{overflow:visible;display:inline-block;margin:0;padding:0;border:0;border-radius:0;background:none;font-family:inherit;font-size:16px;font-weight:400;color:#111;line-height:inherit;vertical-align:top;text-decoration:none;cursor:pointer;touch-action:manipulation;}
+button{overflow:visible;display:inline-block;margin:0;padding:0;border:0;border-radius:0;background:none;font-family:inherit;font-size:16px;font-weight:400;color:#111;line-height:inherit;vertical-align:top;text-decoration:none;cursor:pointer;touch-action:manipulation;text-align:left;}
 button::-moz-focus-inner{padding:0;border:0;}
 button span,
 button:after{position:relative;}

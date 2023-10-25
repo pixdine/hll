@@ -313,6 +313,7 @@
 .gallary .dtl_info ~ .dtl_info { margin-top:0; }
 .gallary_link { font-size:28px; font-weight:600; margin-top:60px}
 .gallary_link .btn_arr:after { width:24px; height:24px; margin:0 0 0 8px; background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 14L29 24L19 34' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A");background-repeat:no-repeat; background-position:center center;}
+.gallary .detail_view_area .info_group { padding:20px 0 32px}
 
 /* 갤러리정보 > 카카오 맵 */
 .map_wrap {max-width:996px;}

@@ -273,11 +273,13 @@
 
 /*작가정보*/
 .sub .masonry_list li .item_info.type2{padding: 24px;height: 106px;}
-.sub .masonry_list li .item_info.type2 .item_desc{height: auto;}
+.sub .masonry_list li .item_info.type2 .item_desc{height: auto;-webkit-line-clamp: 1;}
 .artist_top{position:relative;height:300px; background-image:url('../../resources/images/bg_top_view.png'); background-repeat:repeat; background-position:50% 0%;}
 .artist_wrap{position:relative;}
 .artist_wrap .cont_inner{margin-top:-300px;}
 .artist_wrap .artist_info{display: flex;flex-direction: row-reverse;justify-content: space-between;align-items: end;}
+.artist_wrap .artist_info .artist_img{width:408px;height:408px;}
+.artist_wrap .artist_info .artist_img img{width:100%;height:100%;object-fit: cover;}
 .artist_cont .tit{font-size:32px;font-weight:500;letter-spacing: -0.01em;line-height:40px;}
 .artist_cont .flag_area{margin-top:16px;}
 .artist_txt{margin-top:60px;padding-top:40px;border-top:1px solid #DBDBDB;}

@@ -326,10 +326,10 @@
 /* 전시정보 */
 .list_top .sort_select{margin-right:32px;line-height:1;}
 .list_top .sort_select .selectbox ~ .selectbox{margin-left:32px;}
-.calendar{width:206px;}
-.calendar:after{content:'';display:block;position:absolute;right:16px;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url('../images/ico_calender_16.svg') no-repeat center center;}
-.calendar .inp{height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:400;}
-.calendar .inp[readonly]{background-color:#fff;}
+.inputbox.calendar{width:206px;background-color:#fff;}
+.inputbox.calendar:after{content:'';display:block;position:absolute;right:16px;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url('../images/ico_calender_16.svg') no-repeat center center;}
+.inputbox.calendar .inp{height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:400;cursor:pointer;z-index:1;}
+.inputbox.calendar .inp[readonly]{background-color:transparent;}
 .comm_ex_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -20px 0;}
 .comm_ex_list li{width:33.333%;padding:0 20px;}
 .comm_ex_list .comm_ex_item a{display:block;}

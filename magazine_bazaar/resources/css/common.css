@@ -559,6 +559,13 @@ background:#fff;overflow:hidden;z-index:230}
 .sns_list .btn_sns{display:block;}
 .sns_list.follow ul{column-gap:47px;flex-wrap:nowrap;}
 
+/* 팝업 : 통합로그인 */
+.popup_full.common_login .popup_cont .cont_inner { padding:0 0 30px 0}
+.popup_full.common_login .popup_inner {height:650px}
+.popup_full.common_login .popup_inner iframe { height:100% }
+.is_mobile .popup_full.common_login .popup_inner  {height:100%}
+.popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
+
 
 
 /************************* content *************************/
@@ -1232,6 +1239,10 @@ background:#fff;overflow:hidden;z-index:230}
 	.horoscope_list li a:before{margin-bottom:16px;}
 	.cover_atc_list .atcbox .txtbox{padding:0 16px 16px;}
 	.cover_atc_list .atcbox .txtbox:before{height:108px;}
+}
+
+@media (max-width:425px){
+	.is_mobile .popup_full.common_login .popup_cont { margin:0}
 }
 
 @media (max-width:340px){

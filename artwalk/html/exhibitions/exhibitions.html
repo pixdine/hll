@@ -274,6 +274,8 @@
                                             <div class="inputbox calendar">
                                                 <input type="text" id="datepicker" class="inp" value="23.10.12 ~ 23.10.25" readonly>
                                             </div>
+
+                                            <div id="flatpickr"></div>
                                         </div>
                                         <div class="side">
                                             <button type="button" class="btn_filter"><span>상세 검색 필터</span></button>
@@ -832,7 +834,7 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="../../resources/css/flatpickr.css">
 
     <!-- js -->
     <script src="../../resources/js/swiper.min.js"></script>
@@ -848,12 +850,19 @@
             $(".js-btn-scrap").btnScrap();
         });
 
+        var calendarContainer = document.getElementById("flatpickr");
+
         //flatpickr 달력
         $("#datepicker").flatpickr({
             locale: 'ko',
             mode: 'range',
             showMonths: 2,
             dateFormat: "Y.m.d",
+            allowInput :false,
+            disableMobile: "true",
+            appendTo: calendarContainer,
+            static: true,
+            inline: true,
             onChange: function(selectedDates, dateStr, instance) {
                 // 선택된 날짜 범위를 가져옵니다.
                 if (selectedDates.length == 2) {
@@ -869,6 +878,10 @@
                 }
             },
         });
+
+        $(".numInput").on("change", function(){
+            alert(111);
+        })
 
     </script>
     <!-- //js -->

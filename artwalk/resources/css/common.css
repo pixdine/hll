@@ -564,6 +564,9 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_sheet .psheet_cont .filter_comp{width: 746px;}
 .is_pc .popup_sheet .psheet_cont{margin:0 8px 0 0;}
 
+/* 지도팝업 */
+.popup_map{}
+
 /* 팝업 : 팔로우하기 */
 .popup_sns .popup_cont.non{padding:0 62px 56px 70px;text-align:center;}
 .popup_sns .popup_cont .stxt{margin-bottom:32px;} 

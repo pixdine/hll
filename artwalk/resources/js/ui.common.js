@@ -308,9 +308,9 @@ const popup = {
     open: function (_target, _type, _hasDimmed = true) {
         this.clientWidth = document.documentElement.clientWidth;
         var targetEl = $(`[data-${_type}="${_target}"]`);
-        document.ontouchmove = function (event) {
-            event.preventDefault();
-        };
+        // document.ontouchmove = function (event) {
+        //     event.preventDefault();
+        // };
         switch (_type) {
             case "popup":
                 var popupCount = $(`.open[data-${_type}`).length || 0;

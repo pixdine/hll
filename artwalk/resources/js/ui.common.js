@@ -87,6 +87,7 @@ $(document).ready(function () {
         this.each(function (index, element) {
             var thisSelect = $(this);
             var defaultValue = $("[data-option] li.selected:last", element).text();
+            var selectBtn = thisSelect.find(".select_option");
             $("[data-value]", element).text(defaultValue);
 
             $("[data-value]", element).click(function (event) {
@@ -102,11 +103,11 @@ $(document).ready(function () {
                 }
             });
 
-            $("[data-option] li", element).click(function (event) {
+            selectBtn.click(function (event) {
                 event.stopPropagation();
                 var selectedText = $(this).text();
                 console.log(selectedText);
-                $(".select_option").removeClass("selected");
+                selectBtn.siblings(".select_option").removeClass("selected");
                 $(this).closest("[data-selectbox]").find("[data-value]").text(selectedText);
                 $(this).addClass("selected").closest("[data-option]").slideUp("fast");
                 $("[data-value]").removeClass("opened");

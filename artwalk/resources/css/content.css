@@ -57,11 +57,11 @@
 /* 관련기사 */
 .row_list li ~ li{margin-top:24px;}
 .row_list .atcbox a{display:flex;width:100%;height:100%;}
-.row_list .atcbox .imgbox{overflow:hidden;position:relative;width:32%;height:0;padding-top:20%;}
+.row_list .atcbox .imgbox{width:32%;padding-top:20%;}
 .row_list .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .row_list .atcbox .txtbox{display:flex;flex:1;justify-content:center;flex-direction:column;margin-top:0;padding:0 5%;border:1px solid #111;border-left:0;}
-.row_list .atcbox .txtbox .cate{display:block;margin-bottom:12px;font-family:Gotham;font-size:11px;font-weight:500;color:#111;line-height:1;}
-.row_list .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:auto;font-size:20px;font-weight:500;line-height:28px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
+.row_list .atcbox .txtbox .cate{margin-bottom:12px;color:#111;}
+.row_list .atcbox .txtbox .tit{height:56px;font-size:20px;line-height:28px;}
 
 /* 리뷰 등록배너 */
 .review_box{width:100%;height:140px;background:#221E1F url('../images/bg_review.png') no-repeat center center;}
@@ -225,8 +225,9 @@
 .post_ex_item .ex_img_fig{overflow:hidden;position:relative;width:100%;height:0;padding-top:75%;}
 .post_ex_item .ex_img_fig img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:all .3s linear;}
 .post_ex_item .ex_guide{margin-top:24px;}
-.post_ex_item .ex_sbj{font-size:18px;font-weight:500;line-height:24px;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
+.post_ex_item .ex_sbj{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;font-size:18px;font-weight:500;line-height:24px;}
 .post_ex_item .ex_loc_row{margin-top:12px;font-size:14px;line-height:18px;color:#666;}
+.post_ex_item .ex_loc_sub{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
 
 .ex_post .cont_inner{position:relative;}
 .ex_post .swiper_post{overflow:hidden;}
@@ -311,29 +312,33 @@
 .comm_ex_list li{width:33.333%;padding:0 20px;}
 
 /* 전시리뷰 */
-.review_item{display:flex;flex-wrap:wrap;position:relative;border:1px solid #111;background-color:#fff;}
+.review_item{display:flex;flex-wrap:wrap;position:relative;background-color:#fff;}
 .review_item a{display:inherit;width:100%;height:100%;}
+.review_item .review_cont{flex:1;min-width:0;padding:31px;border:1px solid #111;}
+.review_item .review_img{display:none;overflow:hidden;position:relative;width:50%;height:294px;}
+.review_item .review_img img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
+.review_item.photo .review_img{display:block;}
 .review_item .ex_sbj{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:12px;font-size:18px;line-height:24px;word-break:break-all;}
-.review_item .comment_txt .txt{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:144px;font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:24px;color:#111;word-break:break-all;}
-.review_item .review_cont{flex:1;min-width:0;padding:31px;}
-.review_item .review_img{overflow:hidden;position:relative;width:50%;height:292px;}
-.review_item .review_img img{width:100%;height:100%;object-fit:cover;}
-.review_item .comment_info{margin:22px 0 0 0;}
+.review_item .comment_txt .txt{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:144px;font-family:'Noto Sans KR';font-size:16px;line-height:24px;color:#111;word-break:break-all;}
+.review_item .comment_info{margin:22px 0 0;}
 .review_item .comment_thumb .profile_img{width:28px;height:28px;}
+.review_item .comment_info .user_info > span ~ span{margin-left:12px;padding-left:12px;}
 
 .ex_review{padding:120px 0;background-color:#f7f7f7;}
-.ex_review .cont_inner{position:relative;}
-.ex_review .swiper_pc_2_mo_auto{overflow:hidden;}
-.ex_review .swiper-slide{margin-right:24px;}
-.ex_review .btn_move {position: absolute;top: 50%;transform:translateY(-50%);width: 48px;cursor: pointer;opacity: 0.6;}
-.ex_review .button_prev{left: -48px;}
-.ex_review .button_next{right: -48px;}
+.ex_review .swiper_pc_2_mo_auto{position:relative;}
+.ex_review .swiper_pc_2_mo_auto .swiper{overflow:hidden;}
+.ex_review .btn_move {position: absolute;top: 123px;width: 48px;cursor: pointer;opacity: 0.6;}
+.ex_review .button_prev{left: -88px;}
+.ex_review .button_next{right: -88px;}
 .ex_review .swiper-pagination{margin-top:48px;font-size:0;text-align:center;}
 .ex_review .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:40px;height:2px;margin:0 4px;cursor:pointer;background-color:rgba(17,17,17,0.2);}
 .ex_review .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(17,17,17,1);}
 
 
 /************************* Media Query *************************/
+@media (max-width:1023px){
+    .review_item .comment_info .user_info .date{display:none;}
+}
 @media screen and (max-width: 768px) {
     .container{padding-bottom:80px;}
     .container .bodycont_section { margin-top:40px}
@@ -344,6 +349,7 @@
 
     /* 상단 상세 영역 */
     .detail_wrap{margin:40px 0 80px;padding-bottom:80px;border-width:12px;}
+    .detail_wrap .bodycont_section{margin-top:80px;}
     .detail_header{margin-bottom:24px;}
     .detail_header .tit{font-size:24px;line-height:32px;}
     .detail_view_area .img_group{width:100%;}
@@ -381,7 +387,7 @@
     .row_list li ~ li{margin-top:12px;}
     .row_list .atcbox .imgbox{width:49.851%;padding-top:31.048%;}
     .row_list .atcbox .txtbox .cate{margin-bottom:8px;font-size:10px;}
-    .row_list .atcbox .txtbox .tit{font-size:14px;line-height:20px;}
+    .row_list .atcbox .txtbox .tit{height:40px;font-size:14px;line-height:20px;}
 
     /* 리뷰 등록배너 */
     .review_box{height:auto;padding:16px 0;background-image:none;}
@@ -516,17 +522,23 @@
     .comm_ex_list li{width:50%;padding:0 6px;}
 
     /* 전시리뷰 */
-    .ex_review{padding:40px 0;}
-    .ex_review .swiper-pagination{display:none;}
-    .ex_review .swiper_pc_2_mo_auto{margin:0 -20px;padding:0 20px;}
-    .ex_review .review_item.photo .comment_txt .txt{height:80px;-webkit-line-clamp:4;}
-    .ex_review .swiper-slide{width:248px;}
     .review_item a{flex-direction:column;}
+    .review_item .review_cont{padding:19px;order:2;}
     .review_item .review_img{width:100%;height:248px;order:1;}
-    .review_item .comment_txt .txt{height:328px;font-size:14px;line-height:20px;-webkit-line-clamp:16;}
-    .review_cont{order:2;}
-    .review_item .review_cont{padding:19px;}
-    .review_item .ex_sbj{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:auto;font-family:'Noto Sans KR';font-size:16px;line-height:24px;white-space:normal;}
+    .review_item .ex_sbj{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:48px;font-family:'Noto Sans KR';font-size:16px;line-height:24px;white-space:normal;}
+    .review_item .comment_info{margin:20px 0 0;}
+    .review_item .comment_txt .txt{-webkit-line-clamp:16;height:328px;font-size:14px;line-height:20px;}
+    .review_item .comment_thumb .profile_img{width:24px;height:24px;margin-right:8px;background-size:100% auto;}
+    .review_item .comment_info .user_info > span{font-size:12px;line-height:16px;}
+    .review_item .comment_info .user_info > span ~ span{margin-left:8px;padding-left:8px;}
+    .review_item .comment_info .user_info > span ~ span:before{height:10px;margin-top:1px;}
+    .review_item .comment_info .user_info .date{display:block;}
+    .review_item.photo .comment_txt .txt{-webkit-line-clamp:4;height:80px;}
+
+    .ex_review{padding:40px 0;}
+    .ex_review .swiper_pc_2_mo_auto .swiper{overflow:initial;}
+    .ex_review .swiper_pc_2_mo_auto .swiper-slide{width:248px;}
+    .ex_review .swiper-pagination{display:none;}
 
 }
 

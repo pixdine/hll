@@ -687,14 +687,15 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_ex_item .ex_top_flag{display: flex;}
 .comm_ex_item .btn_wish{width: 28px;height: 28px;background: url(../images/ico_scrap_28.svg) 0/100%;}
 .comm_ex_item .btn_wish.on{background-image: url(../images/ico_scrap_on_28.svg);}
-.ex_info .button_prev{left: -48px;}
-.ex_info .button_next{right: -48px;}
+.ex_info .button_prev{left: -88px;}
+.ex_info .button_next{right: -88px;}
 .ex_info .mo_br{display: none;}
 .ex_info .cont_inner{position: relative;}
-.ex_info .swiper_pc_3_mo_auto{overflow: hidden;}
+.ex_info .swiper_pc_3_mo_auto{position:relative;}
+.ex_info .swiper_pc_3_mo_auto .swiper{overflow:hidden;}
 .ex_info .swiper_pc_3_mo_auto .swiper-slide{position: relative;}
 .ex_info .swiper_pc_3_mo_auto .swiper-slide a{display: block;}
-.ex_info .btn_move {position: absolute;top: 451px;width: 48px;cursor: pointer;opacity: 0.6;}
+.ex_info .btn_move {position: absolute;top: 50%; transform:translateY(-50%);width: 48px;cursor: pointer;opacity: 0.6;}
 
 /* 텍스트에어리어 */
 .guide_row + .textarea_wrap{margin-top: 16px;}
@@ -813,7 +814,7 @@ background:#fff;overflow:hidden;z-index:230}
     .tit_wrap{margin-bottom:24px;}
     .tit_wrap .tit{font-size:20px;line-height:28px;}
     .tit_wrap .txt{margin-top:6px;font-size:14px;line-height:20px;}
-    .tit_wrap .btn_more{display:block;width:32px;height:32px;margin-right:-5px;padding:0;}
+    .tit_wrap .btn_more{display:block;width:28px;height:28px;margin-right:-5px;padding:0;}
     .tit_wrap .btn_more span{display:none;}
     .tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23111111' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
 
@@ -1038,7 +1039,7 @@ background:#fff;overflow:hidden;z-index:230}
     .comm_ex_item .ex_place:before{top: 50%;left: -6px;height: 8px;}
     .comm_ex_item .ex_top{padding: 8px;}
     .comm_ex_item .ex_top_flag{display: flex;}
-    .ex_info .swiper_pc_3_mo_auto{overflow: initial;}
+    .ex_info .swiper_pc_3_mo_auto .swiper{overflow: initial;}
     .ex_info .swiper_pc_3_mo_auto .swiper-slide{width: 148px;}
     .ex_info .btn_wish{width: 16px;height: 16px;background-image: url(../images/ico_scrap_16.svg);}
     .ex_info .btn_wish.on{background-image: url(../images/ico_scrap_on_16.svg)}

@@ -159,7 +159,7 @@
 .ex_hplace{padding:120px 0;background-color:#f7f7f7;}
 
 /* 팝업 : 리뷰 상세보기 */
-.popup_review_detail .popup_inner{max-width:792px;}
+.popup_review_detail .popup_inner{max-width:792px;height:650px;}
 .popup_review_detail .popup_head .total{color:#666;}
 .popup_review_detail .popup_head .total .current{color:#111;}
 .popup_review_detail .popup_bottom{padding-bottom:40px;}
@@ -429,6 +429,7 @@
     .photo_upload .thumb{width:74px;height:74px;}
 
     /* 팝업 : 리뷰 상세보기 */
+    .popup_review_detail .popup_inner{height:100%;}
     .popup_review_detail .popup_bottom .btn_wrap .btn_link{font-size:14px;line-height:20px;}
     review_slide .viewSwiper .swiper-slide{height:auto;max-height:335px;}
 

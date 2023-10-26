@@ -304,6 +304,9 @@
                                 <button type="button" onclick="openPhotoViewer();"><span>팝업_바자화보 > 화보 슬라이드 팝업<br>(기사상세 > 사진묶음 슬라이드 > 크게보기, 커버 > 커버 이미지 팝업과 동일)</span></button>
                             </li>
                             <li>
+                                <button type="button" data-popup-open="popup_login"><span>통합로그인</span></button>
+                            </li>
+                            <li>
                                 <button type="button" data-popup-open="popup_sample"><span>기본 풀팝업 샘플</span></button>
                             </li>
                             <li>
@@ -668,6 +671,25 @@
         </div>
     </div>
     <!-- //팝업 : 샘플 -->
+
+    <!-- 팝업 : 로그인팝업 -->
+    <div class="popup_full common_login" data-popup="popup_login" style="">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">로그인</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_login"><span
+                            class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <!-- iframe 영역-->
+                <iframe src="../../membership/html/member/login_common.html" title="로그인" height="100%" width="100%"
+                    scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 : 로그인팝업 -->
 
     <!-- 팝업 : 복사하기 알럿 -->
     <div class="popup_alert" data-alert="alert_1">

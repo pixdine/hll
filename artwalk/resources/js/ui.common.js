@@ -712,17 +712,22 @@ function viewImgSlide() {
     if (viewImgSlide.length < 1) return false;
 
     viewImgSlide.each(function () {
+        console.log("viewImgSlide", viewImgSlide)
         var $this = $(this);
-        var swiper = new Swiper(".viewSwiper", {
+        var thisScrollBar = $this.find(".swiper-scrollbar");
+        var btnNext = $this.find(".swiper-button-next");
+        var btnPrev = $this.find(".swiper-button-prev");
+        var thisScrollBar = $this.find(".swiper-scrollbar");
+        var swiper = new Swiper($this, {
             observer: true,
             observeParents: true,
             scrollbar: {
-                el: ".swiper-scrollbar",
+                el: thisScrollBar,
                 hide: true,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: btnNext,
+                prevEl: btnPrev,
             },
         });
     });

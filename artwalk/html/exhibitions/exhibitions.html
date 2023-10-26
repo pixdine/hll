@@ -1031,7 +1031,7 @@
 
     <!-- js -->
     <script src="../../resources/js/swiper.min.js"></script>
-    <script src="../../resources/js/flatpickr.min.js"></script>
+    <script src="../../resources/js/flatpickr.js"></script>
     <!-- flatpickr 한국어 로케일 -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
@@ -1042,6 +1042,19 @@
             // 스크랩
             $(".js-btn-scrap").btnScrap();
         });
+
+        // 년도 input에서 받아와서 다른 요소에 입력
+        function inputYear(){
+            const numInput = $(".numInput.cur-year");
+            var year = [];
+            setTimeout(() => {
+                numInput.each(function (i){
+                    year[i] = $(this).val();
+                    console.log(year[i]);
+                    $(".flatpickr-wrapper .new-year").eq(i).text(year[i]+"년");
+                })
+            }, 10);
+        }
 
         var calendarContainer = document.getElementById("flatpickr");
 
@@ -1056,6 +1069,12 @@
             appendTo: calendarContainer,
             static: true,
             inline: true,
+            // onReady 이벤트 후크를 사용하여 달력이 준비된 직후 실행할 함수를 정의합니다.
+            onReady: function(selectedDates, dateStr, instance) {
+                // 여기에 달력이 로드된 후 실행할 코드를 추가합니다.
+                inputYear();
+                // 예를 들어, 달력 요소에 추가적인 클래스를 추가하거나 초기화 작업을 수행할 수 있습니다.
+            },
             onChange: function(selectedDates, dateStr, instance) {
                 // 선택된 날짜 범위를 가져옵니다.
                 if (selectedDates.length == 2) {
@@ -1069,13 +1088,13 @@
                     // 이 문자열을 인풋 필드에 설정합니다.
                     instance.input.value = newFormat;
                 }
+                console.log("change");
             },
+            onMonthChange: function(selectedDates, dateStr, instance) {
+                // 월이 바뀌었을 때 로직을 수행합니다.
+                inputYear();
+            }
         });
-
-        $(".numInput").on("change", function(){
-            alert(111);
-        })
-
     </script>
     <!-- //js -->
 </body>

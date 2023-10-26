@@ -296,7 +296,7 @@
 .gallary_list li .item_img {}
 .gallary_list li .item_img img {width:100%}
 .gallary_list li .item_info {height:108px; border:1px solid #111; padding:24px}
-.gallary_list li .item_sbj {color: #111; font-weight: 500;font-size:24px;line-height:24px;}
+.gallary_list li .item_sbj {color: #111; font-weight: 500;font-size:24px;line-height:24px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; max-width:100%}
 .gallary_list li .item_loc { display:flex; flex-wrap: nowrap; white-space:nowrap; margin-top: 16px;color: #111;font-weight: 500;font-size:14px;line-height:20px; max-width:100%; }	
 .gallary_list li .item_loc span { position:relative; padding-left:12px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; flex-basis:auto; min-width:auto} 
 .gallary_list li .item_loc span::before { content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%); width:2px; height:12px; background:rgba(17,17,17,0.2)}

@@ -289,7 +289,11 @@
 .artist_cont .flag_area{margin-top:16px;}
 .artist_txt{margin-top:60px;padding-top:40px;border-top:1px solid #DBDBDB;line-height: 28px;font-weight:400;font-family: 'Noto Sans KR';}
 
-
+ /* 작가정보 > 리스트 */
+.gallary .masonry_list li .atcbox { display:table; width:100%; height:100%}
+.gallary .masonry_list li .atcbox a { display:flex; flex-direction:column; justify-content:flex-start; height:100%;}
+.gallary .masonry_list li .atcbox a .item_img { flex-shrink: 0;}
+.gallary .masonry_list li .item_info.type2 { height:auto; min-height:106px;display:flex; flex-basis:auto; flex-direction:column; height:100%; justify-content: space-between; align-items:stretch}
 
 /* 갤러리정보 */
 .gallary_list { }
@@ -546,6 +550,9 @@
     .artist_txt{margin-top: 32px;padding-top: 24px;}
     .sub .masonry_list li .item_info .flag_area{display: flex;flex-wrap: wrap;row-gap:4px;}
     .sub .masonry_list li .item_info .flag_area .flag{margin-left:2px;}
+
+    /* 작가정보 > 리스트 */
+    .gallary .masonry_list li .item_info.type2 { height:100%; min-height:72px}
 
     /* 갤러리 정보*/
     .gallary .detail_wrap { padding-bottom:0}

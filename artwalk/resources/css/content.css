@@ -520,7 +520,7 @@
     .benefit_wrap .benefit_info ul{row-gap:12px;}
     .benefit_wrap .benefit_info ul li{width:100%;padding-bottom: 40px;}
     .benefit_wrap .benefit_info ul li i{width:180px;height:180px;background-size:180px 180px;}
-    .benefit_wrap .benefit_info ul li .badge{padding: 8px 16px;}
+    .benefit_wrap .benefit_info ul li .badge{padding: 10px 16px 6px;}
     .benefit_wrap .benefit_info ul li .txt{margin-top:12px;}
     .benefit_wrap .benefit_info ul li .txt p{font-size:18px;line-height:24px;}
     .benefit_wrap .benefit_info ul li .txt p em{font-size:14px;line-height:20px;}

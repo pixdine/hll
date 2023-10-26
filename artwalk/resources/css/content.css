@@ -61,7 +61,7 @@
 .row_list .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .row_list .atcbox .txtbox{display:flex;flex:1;justify-content:center;flex-direction:column;margin-top:0;padding:0 5%;border:1px solid #111;border-left:0;}
 .row_list .atcbox .txtbox .cate{margin-bottom:12px;color:#111;}
-.row_list .atcbox .txtbox .tit{height:56px;font-size:20px;line-height:28px;}
+.row_list .atcbox .txtbox .tit{height:auto;font-size:20px;line-height:28px;}
 
 /* 리뷰 등록배너 */
 .review_box{width:100%;height:140px;background:#221E1F url('../images/bg_review.png') no-repeat center center;}
@@ -147,14 +147,15 @@
 .photo_upload .thumb:before{content:'';display:block;position:absolute;left:0;top:0;width:100%;height:40px;background:linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0) 100%);}
 .photo_upload .thumb .btn_del{display:inline-block;position:absolute;right:0;top:0;width:24px;height:24px;background:url("../images/ico_close_16_white.svg") no-repeat top 2px right 2px;}
 
+/* 더보기(수정/삭제/취소) */
 .more_drop{position:relative;}
 .more_drop .layer_box{display:none;position:absolute;right:0;top:26px;z-index:2;background-color:#fff;border:1px solid #ccc;}
 .more_drop.on .layer_box{display: block;}
 .more_drop .layer_list{padding:4px 0;}
 .more_drop .layer_list .btnm{display:inline-flex;align-items:center;width:100%;padding:8px 15px;font-size:14px;font-weight:400;color:#999;}
-.more_drop .btnm.modify:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;background:url("../images/ico_modify_16.svg") no-repeat center center;}
-.more_drop .btnm.del:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;;background:url("../images/ico_del_16.svg") no-repeat center center;}
-.more_drop .btnm.cancel:before{content:'';display:inline-block;width:16px;height:16px;margin:2px 8px 0 0;;background:url("../images/ico_close_16_gray.svg") no-repeat center center;}
+.more_drop .btnm.modify:before{content:'';display:inline-block;width:16px;height:16px;margin:0 8px 0 0;background:url("../images/ico_modify_16.svg") no-repeat center center;}
+.more_drop .btnm.del:before{content:'';display:inline-block;width:16px;height:16px;margin:0 8px 0 0;;background:url("../images/ico_del_16.svg") no-repeat center center;}
+.more_drop .btnm.cancel:before{content:'';display:inline-block;width:16px;height:16px;margin:0 8px 0 0;;background:url("../images/ico_close_16_gray.svg") no-repeat center center;}
 
 /* 전시장 근처 핫플 */
 .ex_hplace{padding:120px 0;background-color:#f7f7f7;}
@@ -195,7 +196,7 @@
 .bazaarspick .wc_img figcaption{position: absolute;bottom:32px;left:24px;right: 24px;z-index: 1;height: 72px;color: #fff;font-weight: 500;font-size: 28px;line-height: 36px; display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;}
 /* 공통으로 이동 후 삭제 */
 
-.tab_wrap .tab_menu.type03 { padding-right:64px; }
+.tab_wrap .tab_menu.type03 { padding-right:44px; }
 .tab_wrap .tab_menu.type03 ul { display:flex;}
 .tab_wrap .tab_menu .btnbox{display:block;position:absolute;right:0;top:0;width:64px;height:36px;}
 .tab_wrap .tab_menu .btnbox .btn_ico{display:block;position:absolute;right:0;top:0;width:64px;height:100%;background:linear-gradient(to left, #fff 65%, #fff 0%, transparent);}
@@ -242,16 +243,17 @@
 .ex_post .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(17,17,17,1);}
 
 /*산책메이트 혜택 안내*/
+.container.benefit .bodycont_section{margin-top:80px;}
 .container .sub .heading_wrap h2.tit img{display:block;margin: 0 auto 32px;}
 .bodycont_wrap .cont_inner .top_txt{margin-bottom:120px;}
-.bodycont_wrap .cont_inner .top_txt p{font-size:20px;font-weight:500;text-align:center;}
+.bodycont_wrap .cont_inner .top_txt p{font-size:20px;font-weight:500;text-align:center;line-height:28px;}
 .benefit_wrap .benefit_info ul{display:flex;flex-wrap:wrap;justify-content: space-between;row-gap:24px;}
-.benefit_wrap .benefit_info ul li{width:calc(50% - 12px);padding:30px 0 60px;text-align: center;border: 2px solid #111;}
+.benefit_wrap .benefit_info ul li{width:calc(50% - 12px);padding:30px 10px 60px;text-align: center;border: 2px solid #111;}
 .benefit_wrap .benefit_info ul li .badge{display:inline-block;padding:10px 16px;color:#fff;font-size:16px;font-weight:500;background-color:#FF5081;line-height:1;letter-spacing:-0.01em;}
 .benefit_wrap .benefit_info ul li .txt{margin-top:32px;}
 .benefit_wrap .benefit_info ul li .txt p{font-size:24px;font-weight:500;line-height:32px;}
-.benefit_wrap .benefit_info ul li .txt p em{display:block;color:#666;font-size:20px;line-height:28px;}
-.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;}
+.benefit_wrap .benefit_info ul li .txt p em{display:block;color:#666;font-size:20px;line-height:28px;margin-top:8px;}
+.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;width:240px;margin:0 auto 16px;}
 .benefit_wrap .benefit_info ul li i.icon1{background-image:url('../images/ico_benefit01.png');}
 .benefit_wrap .benefit_info ul li i.icon2{background-image:url('../images/ico_benefit02.png');}
 .benefit_wrap .benefit_info ul li i.icon3{background-image:url('../images/ico_benefit03.png');}
@@ -287,7 +289,11 @@
 .artist_cont .flag_area{margin-top:16px;}
 .artist_txt{margin-top:60px;padding-top:40px;border-top:1px solid #DBDBDB;line-height: 28px;font-weight:400;font-family: 'Noto Sans KR';}
 
-
+ /* 작가정보 > 리스트 */
+.gallary .masonry_list li .atcbox { display:table; width:100%; height:100%}
+.gallary .masonry_list li .atcbox a { display:flex; flex-direction:column; justify-content:flex-start; height:100%;}
+.gallary .masonry_list li .atcbox a .item_img { flex-shrink: 0;}
+.gallary .masonry_list li .item_info.type2 { height:auto; min-height:106px;display:flex; flex-basis:auto; flex-direction:column; height:100%; justify-content: space-between; align-items:stretch}
 
 /* 갤러리정보 */
 .gallary_list { }
@@ -295,10 +301,10 @@
 .gallary_list li { width:calc(50% - 12px); margin-left:0}
 .gallary_list li .item_img img {width:100%}
 .gallary_list li .item_info {height:108px; border:1px solid #111; padding:24px}
-.gallary_list li .item_sbj {color: #111; font-weight: 500;font-size:24px;line-height:24px;}
+.gallary_list li .item_sbj {color: #111; font-weight: 500;font-size:24px;line-height:24px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; max-width:100%}
 .gallary_list li .item_loc { display:flex; flex-wrap: nowrap; white-space:nowrap; margin-top: 16px;color: #111;font-weight: 500;font-size:14px;line-height:20px; max-width:100%; }	
 .gallary_list li .item_loc span { position:relative; padding-left:12px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; flex-basis:auto; min-width:auto} 
-.gallary_list li .item_loc span::before { content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%); width:2px; height:12px; background:rgba(17,17,17,0.2)}
+.gallary_list li .item_loc span::before { content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%); width:2px; height:12px; margin-top:-1px; background:rgba(17,17,17,0.2)}
 .gallary_list li .item_loc span:first-child { padding-left:0; padding-right:12px; flex-shrink:0}
 .gallary_list li .item_loc span:first-child::before {display:none}
 
@@ -321,7 +327,7 @@
 .map_wrap .map_area .map_inner{display:block;position:absolute;left:0;top:0;width:100%;height:100%;}
 .map_wrap .map_area .map_api{position:relative;width:100%;height:100%;}
 .map_wrap .map_area .btn_ico.zoom{position:absolute;right:20px;top:20px;z-index:10;}
-.map_wrap .map_area .btn_ico.kakao_map {position:absolute;right:13px;bottom:11px;z-index:10;}
+.map_wrap .map_area .btn_ico.kakao_map {position:absolute;right:20px;bottom:20px;z-index:10;}
 
 
 /* 전시정보 */
@@ -386,10 +392,11 @@
     .detail_view_area .btn_wrap{display:none;}
     .detail_view_area ~ .sec_detail{margin-top:80px;}
 
+    /* 이미지 출처 */
     .desc_more{margin-top:12px;}
     .desc_more .desc{margin-top:8px;}
     .desc_more .btn_view{font-size:12px;line-height:16px;}
-    .desc_more .btn_view:after{width:12px;height:12px;margin:0 0 0 4px;}
+    .desc_more .btn_view:after{width:12px;height:12px;margin:0 0 0 4px;background-position:center -1px;}
 
     .dtl_info{display:flex;flex-wrap:wrap;font-size:14px;line-height:20px;}
     .dtl_info ~ .dtl_info{margin-top:20px;}
@@ -420,7 +427,7 @@
     .review_box{height:auto;padding:16px 0;background-image:none;}
     .review_box .box_inner{padding:0 4.776%;}
     .review_box .txt_box{width:52%;padding-right:10px;}
-    .review_box p{font-size:14px;line-height:20px;}
+    .review_box p{position:relative;top:2px;font-size:14px;line-height:20px;}
     .review_regist .noti_box{margin-top:12px;}
     .review_regist .noti_box .btn_link{font-size:14px;line-height:20px;}
 
@@ -451,6 +458,11 @@
     .photo_upload .btn_addfile{width:74px;height:74px;font-size:12px;line-height:17px;}
     .photo_upload .btn_addfile:before{margin-bottom:2px;}
     .photo_upload .thumb{width:74px;height:74px;}
+
+    /* 더보기(수정/삭제/취소) */
+    .more_drop .btnm.modify:before,
+    .more_drop .btnm.del:before,
+    .more_drop .btnm.cancel:before{margin-top:-1px;}
 
     /* 팝업 : 리뷰 상세보기 */
     .popup_review_detail .popup_inner{height:100%;}
@@ -504,12 +516,15 @@
     .ex_post .swiper-pagination{display:none;}
 
     /*산책메이트 혜택 안내*/
+    .container.benefit .bodycont_section{margin-top:40px;}
     .container .sub .heading_wrap h2.tit img{width:101px;height:10px;margin-bottom:12px;}
-    .bodycont_wrap .cont_inner .top_txt p{font-size:16px;}
+    .bodycont_wrap .cont_inner .top_txt p{font-size:16px;line-height:24px;}
     .bodycont_wrap .cont_inner .top_txt{margin-bottom:56px;}
     .benefit_wrap .benefit_info ul{row-gap:12px;}
-    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom: 40px;}
-    .benefit_wrap .benefit_info ul li i{height:180px;background-size:180px 180px;}
+    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom:38px;}
+    .benefit_wrap .benefit_info ul li i{width:180px;height:180px;background-size:180px 180px;margin-bottom:12px;}
+    .benefit_wrap .benefit_info ul li .badge{padding: 10px 16px 6px;}
+    .benefit_wrap .benefit_info ul li .txt{margin-top:12px;}
     .benefit_wrap .benefit_info ul li .txt p{font-size:18px;line-height:24px;}
     .benefit_wrap .benefit_info ul li .txt p em{font-size:14px;line-height:20px;}
     .benefit_wrap .benefit_info ul li .txt p .br{display:block;}
@@ -535,6 +550,9 @@
     .sub .masonry_list li .item_info .flag_area{display: flex;flex-wrap: wrap;row-gap:4px;}
     .sub .masonry_list li .item_info .flag_area .flag{margin-left:2px;}
 
+    /* 작가정보 > 리스트 */
+    .gallary .masonry_list li .item_info.type2 { height:100%; min-height:72px}
+
     /* 갤러리 정보*/
     .gallary .detail_wrap { padding-bottom:0}
     .gallary_list ul {column-gap:0px; row-gap:36px; }
@@ -550,8 +568,8 @@
     .gallary .dtl_info { font-size:14px; width:100%; gap:0px; }
     .gallary .dtl_info .tit { width:57px }
     .gallary .map_wrap .map_area .map_item{ padding-top:62.4%;}
-    .map_wrap .map_area .btn_ico.zoom{right:7px; top:12px; width:40px; height:40px}
-    .map_wrap .map_area .btn_ico.kakao_map{right:2px; bottom:4px;}
+    .map_wrap .map_area .btn_ico.zoom{right:12px; top:12px;}
+    .map_wrap .map_area .btn_ico.kakao_map{right:12px; bottom:12px;}
     .gallary_link { font-size:20px;margin-top:32px}
     .gallary_link .btn_arr:after { width:20px; height:20px; margin:0 0 0 8px; background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 14L29 24L19 34' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A");background-repeat:no-repeat; background-position:center center;}
     

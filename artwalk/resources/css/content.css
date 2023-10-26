@@ -521,9 +521,9 @@
     .sub .masonry_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .sub .masonry_list li {width:calc(50% - 5.5px); margin-left:0}
     .sub .masonry_list li .item_img img {width:100%}
-    .sub .masonry_list li .item_info { height:86px; padding:10px}
+    .sub .masonry_list li .item_info { height:86px; padding:12px}
     .sub .masonry_list li .item_sbj{font-size: 10px;}
-    .sub .masonry_list li .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
+    .sub .masonry_list li .item_desc{height: 40px;margin-top:6px;font-size: 14px;line-height: 20px;}
 
     /*작가정보*/
     .sub .masonry_list li .item_info.type2{padding: 12px;height:auto;}

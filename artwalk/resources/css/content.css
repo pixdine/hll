@@ -268,13 +268,13 @@
 .sub .masonry_list li:first-child { margin-left:0 }
 .sub .masonry_list li:nth-child(3n+1) { margin-left:0}
 .sub .masonry_list li .item_img img {width:100%}
-.sub .masonry_list li .item_info { height:119px; border:1px solid #111; padding:12px}
+.sub .masonry_list li .item_info { height:119px; border:1px solid #111; padding:24px}
 .sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
-.sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}
+.sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 12px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;word-break: break-all;}
 
 /*작가정보*/
-.sub .masonry_list li .item_info.type2{padding: 24px;height: 106px;}
-.sub .masonry_list li .item_info.type2 .item_desc{height: auto;-webkit-line-clamp: 1;word-break: break-all;}
+.sub .masonry_list li .item_info.type2{height: 106px;}
+.sub .masonry_list li .item_info.type2 .item_desc{height: auto;-webkit-line-clamp: 1;}
 .sub .masonry_list li .item_img{overflow: hidden;position: relative;height: 0;padding-top: 100%;}
 .sub .masonry_list li .item_img img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: fill;}
 .artist_top{position:relative;height:300px; background-image:url('../../resources/images/bg_top_view.png'); background-repeat:repeat; background-position:50% 0%;}

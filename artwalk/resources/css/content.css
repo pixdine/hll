@@ -535,7 +535,7 @@
     .artist_txt{margin-top: 32px;padding-top: 24px;}
     .sub .masonry_list li .item_info .flag_area{display: flex;flex-wrap: wrap;row-gap:4px;}
     .sub .masonry_list li .item_info .flag_area .flag{margin-left:2px;}
-     
+    
     /* 갤러리 정보*/
     .gallary .detail_wrap { padding-bottom:0}
     .gallary_list ul {column-gap:0px; row-gap:36px; }

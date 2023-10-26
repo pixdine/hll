@@ -244,7 +244,7 @@
     <!--팝업위치-->
     
     <!--D : PC_예술산책 / 전시정보 > 전시상세 (지도) -->
-    <div class="popup_sheet" data-popsheet="sheet_1">
+    <div class="popup_sheet exhibitions_map" data-popsheet="sheet_1">
         <div class="ps_inner">
             <div class="psheet_head">
                 <h2 class="tit">국립중앙박물관</h2>
@@ -254,11 +254,32 @@
             </div>
             <div class="psheet_cont">
                 <p class="stxt">서울특별시 용산구 서빙고로 137 국립중앙박물관</p>
-                <div class="ex_map">
-                    <img src="../resources/images/temp/temp_map.jpg">
-                    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)"><img src="../resources/images/ico_marker.svg" alt="마커"></span>
-                    <button class="btn_new_open" title="카카오맵에서 보기"><img src="../resources/images/ico_kakaomap.png" alt="카카오맵아이콘"></button>
+                <div class="map_wrap">
+                    <!-- 지도영역 -->
+                    <div class="map_area">
+                        <div class="map_item">
+                            <div class="map_inner">
+                                <div class="map_api">
+                                    <!--
+                                        D: 개발에서 지도 API 연동 필요. 
+                                        현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
+                                        마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
+                                        API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40)
+                                    -->
+                                    <img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지"><!-- D: 지도 샘플 이미지 -->
+                                    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)">
+                                        <img src="../resources/images/ico_marker.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+                                    <button type="button" class="btn_ico zoom" data-popup-open="popup_map"><span
+                                            class="blind">크게보기</span></button><!-- D: 확대버튼 -->
+                                    <button type="button" class="btn_ico kakao_map"><span class="blind">카카오
+                                            맵</span></button><!-- D: 카카오 맵 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //지도영역 -->
                 </div>
+
             </div>
             <div class="sheet_bottom">
                 <div class="btn_wrap">

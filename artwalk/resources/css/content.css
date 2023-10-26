@@ -246,14 +246,14 @@
 .container.benefit .bodycont_section{margin-top:80px;}
 .container .sub .heading_wrap h2.tit img{display:block;margin: 0 auto 32px;}
 .bodycont_wrap .cont_inner .top_txt{margin-bottom:120px;}
-.bodycont_wrap .cont_inner .top_txt p{font-size:20px;font-weight:500;text-align:center;}
+.bodycont_wrap .cont_inner .top_txt p{font-size:20px;font-weight:500;text-align:center;line-height:28px;}
 .benefit_wrap .benefit_info ul{display:flex;flex-wrap:wrap;justify-content: space-between;row-gap:24px;}
 .benefit_wrap .benefit_info ul li{width:calc(50% - 12px);padding:30px 10px 60px;text-align: center;border: 2px solid #111;}
 .benefit_wrap .benefit_info ul li .badge{display:inline-block;padding:10px 16px;color:#fff;font-size:16px;font-weight:500;background-color:#FF5081;line-height:1;letter-spacing:-0.01em;}
 .benefit_wrap .benefit_info ul li .txt{margin-top:32px;}
 .benefit_wrap .benefit_info ul li .txt p{font-size:24px;font-weight:500;line-height:32px;}
 .benefit_wrap .benefit_info ul li .txt p em{display:block;color:#666;font-size:20px;line-height:28px;margin-top:8px;}
-.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;width:240px;margin:0 auto;padding-bottom: 12px;}
+.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;width:240px;margin:0 auto;margin-bottom:16px;}
 .benefit_wrap .benefit_info ul li i.icon1{background-image:url('../images/ico_benefit01.png');}
 .benefit_wrap .benefit_info ul li i.icon2{background-image:url('../images/ico_benefit02.png');}
 .benefit_wrap .benefit_info ul li i.icon3{background-image:url('../images/ico_benefit03.png');}
@@ -515,10 +515,10 @@
     /*산책메이트 혜택 안내*/
     .container.benefit .bodycont_section{margin-top:40px;}
     .container .sub .heading_wrap h2.tit img{width:101px;height:10px;margin-bottom:12px;}
-    .bodycont_wrap .cont_inner .top_txt p{font-size:16px;}
+    .bodycont_wrap .cont_inner .top_txt p{font-size:16px;line-height:24px;}
     .bodycont_wrap .cont_inner .top_txt{margin-bottom:56px;}
     .benefit_wrap .benefit_info ul{row-gap:12px;}
-    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom: 40px;}
+    .benefit_wrap .benefit_info ul li{width:100%;padding-bottom:38px;}
     .benefit_wrap .benefit_info ul li i{width:180px;height:180px;background-size:180px 180px;}
     .benefit_wrap .benefit_info ul li .badge{padding: 10px 16px 6px;}
     .benefit_wrap .benefit_info ul li .txt{margin-top:12px;}

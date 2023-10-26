@@ -253,7 +253,7 @@
 .benefit_wrap .benefit_info ul li .txt{margin-top:32px;}
 .benefit_wrap .benefit_info ul li .txt p{font-size:24px;font-weight:500;line-height:32px;}
 .benefit_wrap .benefit_info ul li .txt p em{display:block;color:#666;font-size:20px;line-height:28px;margin-top:8px;}
-.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;width:240px;margin:0 auto;margin-bottom:16px;}
+.benefit_wrap .benefit_info ul li i{display:block;background-repeat: no-repeat;background-position: center;background-size: 240px 240px;height:240px;width:240px;margin:0 auto 16px;}
 .benefit_wrap .benefit_info ul li i.icon1{background-image:url('../images/ico_benefit01.png');}
 .benefit_wrap .benefit_info ul li i.icon2{background-image:url('../images/ico_benefit02.png');}
 .benefit_wrap .benefit_info ul li i.icon3{background-image:url('../images/ico_benefit03.png');}
@@ -519,7 +519,7 @@
     .bodycont_wrap .cont_inner .top_txt{margin-bottom:56px;}
     .benefit_wrap .benefit_info ul{row-gap:12px;}
     .benefit_wrap .benefit_info ul li{width:100%;padding-bottom:38px;}
-    .benefit_wrap .benefit_info ul li i{width:180px;height:180px;background-size:180px 180px;}
+    .benefit_wrap .benefit_info ul li i{width:180px;height:180px;background-size:180px 180px;margin-bottom:12px;}
     .benefit_wrap .benefit_info ul li .badge{padding: 10px 16px 6px;}
     .benefit_wrap .benefit_info ul li .txt{margin-top:12px;}
     .benefit_wrap .benefit_info ul li .txt p{font-size:18px;line-height:24px;}

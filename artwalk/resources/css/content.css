@@ -287,10 +287,8 @@
 .artist_cont .flag_area{margin-top:16px;}
 .artist_txt{margin-top:60px;padding-top:40px;border-top:1px solid #DBDBDB;}
 .artist_txt p{font-size:16px;letter-spacing: -0.01em;font-family: 'Noto Sans KR';line-height: 28px;font-weight:400;}
-.artist_txt .artist_txt_demo{margin-top:40px;}
-.artist_txt .artist_txt_demo strong{font-weight:700;font-size:16px;letter-spacing: -0.01em;font-family: 'Noto Sans KR';}
-.artist_txt .artist_txt_demo ul li{position:relative;font-size:16px;font-weight:400;font-family: 'Noto Sans KR';line-height: 28px;padding-left: 10px;}
-.artist_txt .artist_txt_demo ul li::before{content: '-';position: absolute;top: 0;left: 0;color: #111;}
+.artist_txt strong{display:block;margin:40px 0 5px;font-weight:700;font-size:16px;letter-spacing: -0.01em;font-family: 'Noto Sans KR';}
+
 
 /* 갤러리정보 */
 .gallary_list { }
@@ -531,13 +529,13 @@
     .sub .masonry_list li .item_info.type2{padding: 12px;height:auto;}
     .artist_wrap .artist_top{margin: 0;height: 216px;background-image: url('../../resources/images/bg_top_view_mo.png');background-size: 375px 150px;}
     .artist_wrap .artist_info{display:block;}
-    .artist_wrap .artist_info .artist_img{width:100%;height: auto;}
+    .artist_wrap .artist_info .artist_img{width:100%; padding-top: 100%;}
     .artist_wrap .artist_info .artist_img img{width:100%;}
     .artist_wrap .artist_info .artist_cont{margin-top:24px;}
     .artist_txt{margin-top: 32px;padding-top: 24px;}
-    .sub .masonry_list li .item_info .flag_area{display: flex;flex-wrap: wrap;row-gap: 2px;}
+    .sub .masonry_list li .item_info .flag_area{display: flex;flex-wrap: wrap;row-gap:4px;}
     .sub .masonry_list li .item_info .flag_area .flag{margin-left:2px;}
-    
+     
     /* 갤러리 정보*/
     .gallary .detail_wrap { padding-bottom:0}
     .gallary_list ul {column-gap:0px; row-gap:36px; }

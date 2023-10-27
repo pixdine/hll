@@ -461,7 +461,7 @@
             </div>
             <div class="sheet_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>전체해제</span></button>
+                    <button type="button" class="btn bctype2" onclick="filterCheckboxCancel('.fc_checkbox');"><span>전체해제</span></button>
                     <button type="button" class="btn bctype1"><span>확인</span></button>
                 </div>
             </div>
@@ -880,6 +880,12 @@
 
         // 필터
         $(".filter_comp").exFilter();
+
+        // 필터 체크박스 전체해제
+        function filterCheckboxCancel(eliment){
+            var checkboxEl = $(eliment);
+            checkboxEl.prop("checked", false);
+        }
     </script>
 </body>
 </html>

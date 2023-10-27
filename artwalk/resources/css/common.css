@@ -515,8 +515,6 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_full .popup_head{padding:28px 90px 27px 28px;border-bottom:1px solid #dbdbdb;}
 .popup_full .popup_head .tit{font-size:24px;line-height:32px;font-weight:700;text-align:left;word-break:break-all;}
 .popup_full .popup_inner{width:100%;}
-.popup_full .popup_head{min-height:88px;padding:28px 90px 27px 28px;border-bottom:1px solid #dbdbdb;}
-.popup_full .popup_head .tit{font-size:24px;line-height:32px;font-weight:700;text-align:left;}
 .popup_full .popup_close{right:18px;top:24px;}
 .popup_full .popup_cont{padding:32px 20px 0 28px;}
 .popup_full .popup_cont.non{padding:32px 20px 32px 28px;}

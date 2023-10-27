@@ -161,7 +161,8 @@
 .ex_hplace{padding:120px 0;background-color:#f7f7f7;}
 
 /* 팝업 : 리뷰 상세보기 */
-.popup_review_detail .popup_inner{max-width:792px;height:650px;}
+.popup_review_detail .popup_inner{height:650px;}
+.popup_review_detail .popup_inner .popup_cont{padding-bottom:0;}
 .popup_review_detail .popup_head .total{color:#666;}
 .popup_review_detail .popup_head .total .current{color:#111;}
 .popup_review_detail .popup_bottom{padding-bottom:40px;}

@@ -887,7 +887,7 @@ background:#fff;overflow:hidden;z-index:230}
     .popup_sheet .psheet_head .tit{font-size: 18px;line-height:24px; }
     .popup_sheet .psheet_inner{width:100%;}
     .popup_sheet .psheet_close{right:10px;top:5px;}
-    .popup_sheet .psheet_cont{max-height: 345px;margin: 0;padding:40px 20px 20px;overflow-y: auto;}
+    .popup_sheet .psheet_cont{max-height: 345px;margin: 0;padding: 20px;overflow-y: auto;}
     .popup_sheet .psheet_cont .stxt{font-size:16px;line-height:24px;}
     .popup_sheet .filter_wrap{height: auto;}
     .popup_sheet .psheet_cont .filter_comp{width: auto;}

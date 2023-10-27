@@ -482,6 +482,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_inner{display:flex;flex-direction:column;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);max-width:588px;height:auto;max-height:650px;background-color:#fff;overflow:hidden;z-index:210;}
 .popup_inner.review{max-width: 792px;}
 .popup_inner.review .popup_cont{padding-bottom:32px;}
+.is_pc .popup_inner.review .popup_cont{margin-bottom:8px;}
 .popup_close{position:absolute;right:20px;top:20px;}
 .popup_close .btn_close{display:block;width:40px;height:40px;}
 .popup_close .btn_close:after{content:'';display:block;width:100%;height:100%;background:url('../images/ico_close_20.svg') no-repeat center center / 20px auto;}
@@ -758,7 +759,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* 셀렉트 + 인풋1 */
 .select_inp_row{display: flex;justify-content: space-between;}
-.select_inp_row .select_inp_select{width: 254px;height: 52px;padding: 0 16px;color: #111;font-weight: 500;font-size: 16px;background: url(../images/ic_arrow_down_black_20.svg) calc(100% - 16px) 50%/20px no-repeat;border: 1px solid #ccc;}
+.select_inp_row .select_inp_select{width: 254px;height: 52px;padding: 0 50px 0 16px;color: #111;font-weight: 500;font-size: 16px;background: url(../images/ic_arrow_down_black_20.svg) calc(100% - 16px) 50%/20px no-repeat;border: 1px solid #ccc;}
 .select_inp_row .inputbox{width: calc(100% - 266px);}
 
 /************************* Media Query *************************/

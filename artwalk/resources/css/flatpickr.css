@@ -22,6 +22,7 @@
     touch-action: manipulation;
     background: #fff;
     filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.10));
+    max-width: 628px;
 }
 
 .flatpickr-calendar.open,
@@ -505,6 +506,7 @@ span.flatpickr-weekday:first-child {
     -ms-flex-align: start;
     align-items: flex-start;
     margin-top: 12px;
+    max-width: 628px;
 }
 
 .flatpickr-days:focus {
@@ -531,6 +533,13 @@ span.flatpickr-weekday:first-child {
     -webkit-transform: translate3d(0px, 0px, 0px);
     transform: translate3d(0px, 0px, 0px);
     opacity: 1;
+}
+
+.dayContainer .yearMonthContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
 }
 
 .flatpickr-day {
@@ -883,6 +892,10 @@ span.flatpickr-weekday:first-child {
 
     .flatpickr-calendar.open + .flatpickr-dim {
         display: block;
+    }
+
+    .flatpickr-months {
+        display: none;
     }
 
     .flatpickr-months .flatpickr-prev-month,

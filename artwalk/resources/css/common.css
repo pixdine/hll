@@ -326,7 +326,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* header 상세 상단 플로팅바 */
 .floating_bar{display: none;position:absolute;top:72px;width:100%;background:#fff;transition:top ease 350ms; -webkit-backface-visibility: hidden;overflow:hidden; }
-.header.view .floating_bar{display: block;height:0;overflow: hidden;}
+.header.view .floating_bar{display: block;height:0;overflow: hidden;transition: 0.2s;}
 .header.view.active .floating_bar{height: 72px;overflow: initial;}
 .floating_bar .cont_inner{height:100%;}
 .floating_bar .detail_info{display:flex;align-items:center;position:relative;height:100%;}

@@ -527,10 +527,10 @@
                     </div> 
                     
                     <div class="attach_pic">
-                        <button class="btn_attach" title="이미지 첨부하기">
+                        <button class="btn_attach" title="이미지 첨부하기"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
                             <span class="txt">사진첨부</span>
                         </button>
-                        <input type="file" id="image-upload" multiple/><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <input type="file" id="image-upload" multiple/>
                         <!-- <button class="btn_attach disabled"></button> -->
                         <!-- <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
@@ -574,27 +574,50 @@
                     </div>
                 </div>
 
-                <div class="attach_pic_comp">
+                <div class="attach_pic_comp attached">
                     <div class="guide_row">
                         <span class="guide_txt">이미지 등록</span>
                         <div class="guide_txt attach_cnt">
-                            &nbsp;(<span class="current"></span>/<span class="total"></span>)
+                            &nbsp;(<span class="current">5</span>/<span class="total">10</span>)
                         </div>
                         <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
                     </div> 
                     
                     <div class="attach_pic">
-                        <button class="btn_attach" title="이미지 첨부하기">
+                        <button class="btn_attach" disabled="disabled"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
                             <span class="txt">사진첨부</span>
                         </button>
-                        <input type="file" id="image-upload" multiple/><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
-                        <!-- <button class="btn_attach disabled"></button> -->
-                        <!-- <div class="attach_img">
+                        <input type="file" id="image-upload" multiple/>
+                        <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
                             <button class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
-                        </div> -->
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach02.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach03.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach04.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach05.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

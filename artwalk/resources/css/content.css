@@ -282,8 +282,8 @@
 .artist_top{position:relative;height:300px; background-image:url('../../resources/images/bg_top_view.png'); background-repeat:repeat; background-position:50% 0%;}
 .artist_wrap{position:relative;}
 .artist_wrap .cont_inner{margin-top:-300px;}
-.artist_wrap .artist_info{display: flex;flex-direction: row-reverse;justify-content: space-between;align-items: end;}
-.artist_wrap .artist_info .artist_img{width:408px;overflow: hidden;position: relative;height: 0;padding-top: 40.964%; flex-shrink: 0;}
+.artist_wrap .artist_info{display: flex;flex-direction: row-reverse;justify-content: space-between;align-items: end; column-gap:10px;}
+.artist_wrap .artist_info .artist_img{width:408px;overflow: hidden;position: relative;height: 408px; flex-shrink: 0;}
 .artist_wrap .artist_info .artist_img img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 .artist_cont .tit{font-size:32px;font-weight:500;letter-spacing: -0.01em;line-height:40px;}
 .artist_cont .flag_area{margin-top:16px;}
@@ -546,7 +546,7 @@
     .sub .masonry_list li .item_info.type2{padding: 12px;height:auto;}
     .artist_wrap .artist_top{margin: 0;height: 216px;background-image: url('../../resources/images/bg_top_view_mo.png');background-size: 375px 150px;}
     .artist_wrap .artist_info{display:block;}
-    .artist_wrap .artist_info .artist_img{width:100%; padding-top: 100%;}
+    .artist_wrap .artist_info .artist_img{width:100%; height:0; padding-top: 100%;}
     .artist_wrap .artist_info .artist_img img{width:100%;}
     .artist_wrap .artist_info .artist_cont{margin-top:24px;}
     .artist_txt{margin-top: 32px;padding-top: 24px;}

@@ -230,6 +230,7 @@
                         <button type="button" data-popup-open="popup_3"><span>전시정보 > 전시상세 > 리뷰 수정 하기</span></button><br>
                         <button type="button" data-popup-open="popup_4"><span>전시정보 > 전시상세 > 리뷰 상세보기</span></button><br>
                         <br>
+                        <button type="button" data-popup-open="popup_5"><span>커뮤니티 > 글쓰기</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>갤러리 정보 > 지도 크게보기</span></button><br>
                         <br>
                         <button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
@@ -238,7 +239,7 @@
                 </div>
             </div>
         </div>
-        <!-- //container --> 
+        <!-- //container -->
     </div>
 
     <!--팝업위치-->
@@ -690,6 +691,87 @@
         </div>
     </div>
 
+    <!--D : 예술산책 / 커뮤니티 > 글쓰기 --> 
+    <div class="popup_full" data-popup="popup_5">
+        <div class="popup_inner review">
+            <div class="popup_head">
+                <h2 class="tit">커뮤니티</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_5"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="select_inp_row">
+                    <select class="select_inp_select">
+                        <option value="">카테고리 선택</option>
+                        <option value="">아트&예술</option>
+                        <option value="">전시장 주변 맛집</option>
+                        <option value="">전시 질문</option>
+                        <option value="">전시 소식</option>
+                        
+                    </select>
+                    <div class="inputbox">
+                        <input type="text" class="inp" id="point" placeholder="제목을 입력해 주세요." title="제목을 입력해 주세요." autocomplete="off">
+                    </div>
+                </div>
+                <div class="guide_row">
+                    <span class="guide_txt">내용작성</span>
+                    <span class="guide_txt_sub">* 50자 이상, 1,000자 이내</span>
+                </div> 
+
+                <div class="textarea_wrap">
+                    <textarea class="textarea review_text_area" maxlength="1000" placeholder="내용을 입력해 주세요." title="내용을 입력해 주세요."></textarea>
+                    <div class="cnt_txt">
+                        <span class="current">0</span>
+                        <span class="total"></span>
+                    </div>
+                </div>
+
+                <div class="attach_pic_comp">
+                    <div class="guide_row">
+                        <span class="guide_txt">이미지 등록</span>
+                        <div class="guide_txt attach_cnt">
+                            &nbsp;(<span class="current"></span>/<span class="total"></span>)
+                        </div>
+                        <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
+                    </div> 
+                    
+                    <div class="attach_pic">
+                        <button class="btn_attach" title="이미지 첨부하기">
+                            <span class="txt">사진첨부</span>
+                        </button>
+                        <input type="file" id="image-upload" multiple/><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <!-- <button class="btn_attach disabled"></button> -->
+                        <!-- <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                            <button class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>등록</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 예술산책 / 지도 --> 
+    <div class="popup_map" data-popup="popup_6">
+        <div class="pm_inner">
+            <div class="pm_map" style="background-color: #FF6565;color: #fff;">
+                지도가 들어가는 영역
+            </div>
+        </div>
+        <div class="pop_map_close">
+            <button type="button" class="btn_close" data-popup-close="popup_6"><span class="blind">닫기</span></button>
+        </div>
+    </div>
+
     <!--D : 얼럿1 -->
     <div class="popup_alert" data-alert="alert_1">
         <div class="popup_alert_inner">
@@ -709,18 +791,6 @@
             <div class="popup_close">
                 <button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
             </div>
-        </div>
-    </div>
-
-    <!--D : 예술산책 / 지도 --> 
-    <div class="popup_map" data-popup="popup_6">
-        <div class="pm_inner">
-            <div class="pm_map" style="background-color: #FF6565;color: #fff;">
-                지도가 들어가는 영역
-            </div>
-        </div>
-        <div class="pop_map_close">
-            <button type="button" class="btn_close" data-popup-close="popup_6"><span class="blind">닫기</span></button>
         </div>
     </div>
 

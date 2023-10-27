@@ -220,7 +220,7 @@
         <!-- container -->
         <div id="container" class="container" style="display: flex; align-items: center; height: 90vh; overflow-y: auto;">
             <div id="content" class="content ">
-                <div class="cont_inner" style="min-height:500px">
+                <div class="cont_inner">
                    <!-- 팝업버튼 -->
 					<div class="cont_inner" style="padding-bottom:100px;">
 						<button type="button" data-popsheet-open="sheet_1"><span>전시정보 > 전시상세 (지도)</span></button><br>
@@ -229,8 +229,9 @@
                         <button type="button" data-popup-open="popup_2"><span>전시정보 > 전시상세 > 리뷰 작성하기</span></button><br>
                         <button type="button" data-popup-open="popup_3"><span>전시정보 > 전시상세 > 리뷰 수정 하기</span></button><br>
 						<button type="button" data-popup-open="popup_4"><span>전시정보 > 전시상세 > 리뷰 상세보기</span></button><br>
-						<button type="button" data-popup-open="popup_5"><span>예술산책 / 커뮤니티 > 글쓰기</span></button><br>
-						<button type="button" data-popup-open="popup_6"><span>지도</span></button><br>
+                        <br>
+						<button type="button" data-popup-open="popup_5"><span>커뮤니티 > 글쓰기</span></button><br>
+						<button type="button" data-popup-open="popup_6"><span>갤러리 정보 > 지도 크게보기</span></button><br>
                         <br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button><br>
@@ -244,7 +245,7 @@
     <!--팝업위치-->
     
     <!--D : PC_예술산책 / 전시정보 > 전시상세 (지도) -->
-    <div class="popup_sheet" data-popsheet="sheet_1">
+    <div class="popup_sheet exhibitions_map" data-popsheet="sheet_1">
         <div class="ps_inner">
             <div class="psheet_head">
                 <h2 class="tit">국립중앙박물관</h2>
@@ -254,11 +255,30 @@
             </div>
             <div class="psheet_cont">
                 <p class="stxt">서울특별시 용산구 서빙고로 137 국립중앙박물관</p>
-                <div class="ex_map">
-                    <img src="../resources/images/temp/temp_map.jpg">
-                    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)"><img src="../resources/images/ico_marker.svg" alt="마커"></span>
-                    <button class="btn_new_open" title="카카오맵에서 보기"><img src="../resources/images/ico_kakaomap.png" alt="카카오맵아이콘"></button>
+                <div class="map_wrap">
+                    <!-- 지도영역 -->
+                    <div class="map_area">
+                        <div class="map_item">
+                            <div class="map_inner">
+                                <div class="map_api">
+                                    <!--
+                                        D: 개발에서 지도 API 연동 필요. 
+                                        현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
+                                        마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
+                                        API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40)
+                                    -->
+                                    <img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지"><!-- D: 지도 샘플 이미지 -->
+                                    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)">
+                                        <img src="../resources/images/ico_marker.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+                                    <button type="button" class="btn_ico kakao_map"><span class="blind">카카오
+                                            맵</span></button><!-- D: 카카오 맵 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //지도영역 -->
                 </div>
+
             </div>
             <div class="sheet_bottom">
                 <div class="btn_wrap">
@@ -675,7 +695,7 @@
     <div class="popup_full" data-popup="popup_5">
         <div class="popup_inner review">
             <div class="popup_head">
-                <h2 class="tit">리뷰 작성하기</h2>
+                <h2 class="tit">커뮤니티</h2>
                 <div class="popup_close">
                     <button type="button" class="btn_close" data-popup-close="popup_5"><span class="blind">닫기</span></button>
                 </div>

@@ -274,7 +274,10 @@
                                             <div class="dtl_info">
                                                 <div class="tit">장소</div>
                                                 <div class="cont">
-                                                    <button type="button" class="btn_link map"><span>아라리오 갤러리 서울</span></button>
+                                                    <div class="place_box">
+                                                        <button type="button" class="btn_link"><span>아라리오 갤러리 서울</span></button>
+                                                        <button type="button" class="btn_ico map"><span class="blind">지도 팝업 보기</span></button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- D: 무료일 경우 -->
@@ -326,6 +329,7 @@
                                                     <div class="flag_area">
                                                         <!-- D: [장르 구분] 회화, 사진, 미디어아트, 설치, 조각, 퍼포먼스, 행사, 기타 -->
                                                         <span class="flag sm">미디어아트</span>
+                                                        <span class="flag sm">퍼포먼스</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -543,7 +547,7 @@
                                     <!-- //D: 이미지가 등록안된 경우 해당 영역 미노출 -->
                                     <div class="txtbox">
                                         <h4 class="tit"><strong>Editor’s Comment</strong></h4>
-                                        <p>대표적인 설치 구조물 &lt;행동 부피&gt;에는 64명의 하루가 담겨있다. 소속, 성별, 나이, 이념과 무관한 대중의 행동을 수집한다. 산책, 기도, 커피 마시기, 다이어리 쓰기 등의 반복되는 일상의 행동을 지속한 시간을 계산한다. 각각의 시간을 부피로 재해석하여 각기 다른 풍선의 크기로 표현한다. 맹목적인 목표 지향이나 성과와는 상관 없는 모든 행동을 시각화한 결과물이다. 작가는 맹목적인 성장만을 강요하는 현대 사회가 인간에게 주는 피로감과 무기력함에 대해 이야기하며 공생을 위한 대안적 삶을 함께 고민할 것을 제안한다.</p>
+                                        <p class="txt">대표적인 설치 구조물 &lt;행동 부피&gt;에는 64명의 하루가 담겨있다. 소속, 성별, 나이, 이념과 무관한 대중의 행동을 수집한다. 산책, 기도, 커피 마시기, 다이어리 쓰기 등의 반복되는 일상의 행동을 지속한 시간을 계산한다. 각각의 시간을 부피로 재해석하여 각기 다른 풍선의 크기로 표현한다. 맹목적인 목표 지향이나 성과와는 상관 없는 모든 행동을 시각화한 결과물이다. 작가는 맹목적인 성장만을 강요하는 현대 사회가 인간에게 주는 피로감과 무기력함에 대해 이야기하며 공생을 위한 대안적 삶을 함께 고민할 것을 제안한다.</p>
                                         <p class="editor_by">Commented by. <span class="name">에디터 park</span></p>
                                     </div>
                                 </div>
@@ -902,10 +906,10 @@
                                     <!-- //리스트 -->
 
                                     <!-- 더보기영역 -->
-                                    <!-- D: 댓글수에 따른 버튼 출력 여부
-                                        1. 댓글 수 1~10개 : 더보기 버튼 미노출 (해당영역 전체 미노출)
-                                        2. 댓굴 수 10개 초과 ~ 최대 미만 : 활성 상태 더보기 버튼 노출
-                                        3. 댓글 전체 출력 : 비활성화 상태 더보기 버튼 노출
+                                    <!-- D: 리뷰수에 따른 버튼 출력 여부
+                                        1. 리뷰 수 1~5개 : 더보기 버튼 미노출 (해당영역 전체 미노출)
+                                        2. 리뷰 수 5개 초과 ~ 최대 미만 : 활성 상태 더보기 버튼 노출
+                                        3. 리뷰 전체 출력 : 비활성화 상태 더보기 버튼 노출
                                     -->
                                     <div class="btn_more_wrap type1">
                                         <button type="button" class="btn more"><span>더보기(10/32)</span></button><!-- D: 비활성화일 때 disabled 추가 -->
@@ -1026,7 +1030,7 @@
                                                         <figcaption>제이디 차 포스터</figcaption>
                                                         <img class="ex_img" src="../../resources/images/temp/temp_ex_img01.jpg" alt="전시정보 관련 포스터">
                                                     </figure>
-                                                    
+
                                                     <div class="ex_guide">
                                                         <span class="ex_sbj">제이디 차 - 구미호 혹은 우리를 호리는 것들 이야기</span>
                                                         <div class="ex_range">
@@ -1038,13 +1042,13 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                
+
                                                 <div class="ex_top">
                                                     <div class="ex_top_flag">
                                                         <span class="flag">추천</span>
                                                         <span class="flag type2">이벤트</span>
                                                     </div>
-                                                
+
                                                     <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
                                                         <span class="blind">스크랩</span>
                                                     </button>
@@ -1058,7 +1062,7 @@
                                                         <figcaption>맥스 달튼, 영화의 순간들 포스터</figcaption>
                                                         <img class="ex_img" src="../../resources/images/temp/temp_ex_img02.jpg" alt="전시정보 관련 포스터">
                                                     </figure>
-                                                    
+
                                                     <div class="ex_guide">
                                                         <span class="ex_sbj">맥스 달튼, 영화의 순간들</span>
                                                         <div class="ex_range">
@@ -1071,13 +1075,13 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                
+
                                                 <div class="ex_top">
                                                     <div class="ex_top_flag">
                                                         <span class="flag">추천</span>
                                                         <span class="flag type2">이벤트</span>
                                                     </div>
-                                                
+
                                                     <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
                                                         <span class="blind">스크랩</span>
                                                     </button>
@@ -1091,7 +1095,7 @@
                                                         <figcaption>도널드 저드 포스터</figcaption>
                                                         <img class="ex_img" src="../../resources/images/temp/temp_ex_img03.jpg" alt="전시정보 관련 포스터">
                                                     </figure>
-                                                    
+
                                                     <div class="ex_guide">
                                                         <span class="ex_sbj">도널드 저드</span>
                                                         <div class="ex_range">
@@ -1104,109 +1108,12 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                
+
                                                 <div class="ex_top">
                                                     <div class="ex_top_flag">
                                                         <span class="flag">추천</span>
                                                     </div>
-                                                
-                                                    <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
-                                                        <span class="blind">스크랩</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="comm_ex_item">
-                                                <a href="#" title="제이디 차 상세페이지로 이동"> 
-                                                    <figure class="ex_img_fig">
-                                                        <figcaption>제이디 차 포스터</figcaption>
-                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img01.jpg" alt="전시정보 관련 포스터">
-                                                    </figure>
-                                                    
-                                                    <div class="ex_guide">
-                                                        <span class="ex_sbj">제이디 차 - 구미호 혹은 우리를 호리는 것들 이야기</span>
-                                                        <div class="ex_range">
-                                                            <span class="ex_date">2023.07.13 - 2023.10.12</span>
-                                                        </div>
-                                                        <div class="ex_loc_row">
-                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
-                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="ex_top">
-                                                    <div class="ex_top_flag">
-                                                        <span class="flag">추천</span>
-                                                        <span class="flag type2">이벤트</span>
-                                                    </div>
-                                                
-                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
-                                                        <span class="blind">스크랩</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="comm_ex_item">
-                                                <a href="#" title="맥스 달튼, 영화의 순간들 상세페이지로 이동"> 
-                                                    <figure class="ex_img_fig">
-                                                        <figcaption>맥스 달튼, 영화의 순간들 포스터</figcaption>
-                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img02.jpg" alt="전시정보 관련 포스터">
-                                                    </figure>
-                                                    
-                                                    <div class="ex_guide">
-                                                        <span class="ex_sbj">맥스 달튼, 영화의 순간들</span>
-                                                        <div class="ex_range">
-                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
-                                                            <span class="flag sm">오픈예정</span>
-                                                        </div>
-                                                        <div class="ex_loc_row">
-                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
-                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="ex_top">
-                                                    <div class="ex_top_flag">
-                                                        <span class="flag">추천</span>
-                                                        <span class="flag type2">이벤트</span>
-                                                    </div>
-                                                
-                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
-                                                        <span class="blind">스크랩</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="comm_ex_item">
-                                                <a href="#" title="도널드 저드 상세페이지로 이동"> 
-                                                    <figure class="ex_img_fig">
-                                                        <figcaption>도널드 저드 포스터</figcaption>
-                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img03.jpg" alt="전시정보 관련 포스터">
-                                                    </figure>
-                                                    
-                                                    <div class="ex_guide">
-                                                        <span class="ex_sbj">도널드 저드</span>
-                                                        <div class="ex_range">
-                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
-                                                            <span class="flag sm">종료</span>
-                                                        </div>
-                                                        <div class="ex_loc_row">
-                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
-                                                            <span class="ex_place ex_loc_sub">타데우스로팍</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                
-                                                <div class="ex_top">
-                                                    <div class="ex_top_flag">
-                                                        <span class="flag">추천</span>
-                                                    </div>
-                                
+
                                                     <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
                                                         <span class="blind">스크랩</span>
                                                     </button>

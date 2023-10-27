@@ -15,7 +15,6 @@
 .detail_view_area .img_box img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .detail_view_area .img_box .flag_area{position:absolute;left:20px;top:20px;}
 .detail_view_area .info_group{flex:1;padding-left:60px;}
-.detail_view_area .btn_link.map:after{content:'';display:inline-block;width:24px;height:24px;margin:0 0 0 4px;background:url('../images/ico_marker.svg') no-repeat center center / 100% auto;}
 
 .dtl_info{font-size:18px;line-height:24px;color:#111;}
 .dtl_info ~ .dtl_info{margin-top:40px;}
@@ -24,6 +23,7 @@
 .dtl_info .date_box{display:flex;flex-direction:column;}
 .dtl_info .date_box .date{font-family:Gotham;font-weight:500;}
 .dtl_info .date_box .flag_area{margin-top:8px;}
+.dtl_info .place_box{display:flex;flex-wrap:wrap;gap:4px;}
 .dtl_info  .item_list li ~ li{margin-top:8px;}
 
 .content_bottom{display:none;}
@@ -335,7 +335,7 @@
 .list_top .sort_select .selectbox ~ .selectbox{margin-left:32px;}
 .inputbox.calendar{width:206px;background-color:#fff;}
 .inputbox.calendar:after{content:'';display:block;position:absolute;right:16px;top:14px;width:16px;height:16px;background:url('../images/ico_calender_16.svg') no-repeat center center;}
-.inputbox.calendar .inp{width: 206px;height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:400;cursor:pointer;z-index:1;}
+.inputbox.calendar .inp{width: 206px;height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:400;line-height:46px;cursor:pointer;z-index:1;}
 .inputbox.calendar .inp[readonly]{background-color:transparent;}
 .comm_ex_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -20px 0;}
 .comm_ex_list li{width:33.333%;padding:0 20px;}
@@ -392,7 +392,6 @@
     .detail_view_area .img_group{width:100%;}
     .detail_view_area .img_box .flag_area{left:8px;top:8px;}
     .detail_view_area .info_group{width:100%;margin-top:32px;padding:0;}
-    .detail_view_area .btn_link.map:after{width:20px;height:20px;}
     .detail_view_area .btn_wrap{display:none;}
     .detail_view_area ~ .sec_detail{margin-top:80px;}
 
@@ -582,6 +581,8 @@
     .list_top .sort_select .selectbox ~ .selectbox{margin-left:32px;}
     .list_top .sort_calendar{order:1;width:100%;margin-bottom:32px;}
     .list_top .side{order:3;}
+    .inputbox.calendar .inp{height:36px;line-height:38px;}
+	.inputbox.calendar:after{top:10px;}
     .comm_ex_list ul{gap:24px 0;margin:0 -6px;}
     .comm_ex_list li{width:50%;padding:0 6px;}
 

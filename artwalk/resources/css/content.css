@@ -339,7 +339,7 @@
 .list_top .sort_select .selectbox ~ .selectbox{margin-left:32px;}
 .inputbox.calendar{width:206px;background-color:#fff;}
 .inputbox.calendar:after{content:'';display:block;position:absolute;right:16px;top:14px;width:16px;height:16px;background:url('../images/ico_calender_16.svg') no-repeat center center;}
-.inputbox.calendar .inp{width: 206px;height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:400;line-height:46px;cursor:pointer;z-index:1;}
+.inputbox.calendar .inp{width: 206px;height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:200;line-height:46px;cursor:pointer;z-index:1;}
 .inputbox.calendar .inp[readonly]{background-color:transparent;}
 .comm_ex_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -20px 0;}
 .comm_ex_list li{width:33.333%;padding:0 20px;}

@@ -279,7 +279,7 @@
                                         </div>
                                         <div class="sort_calendar">
                                             <div class="inputbox calendar">
-                                                <input type="text" id="datepicker" class="inp" value="23.10.12" readonly>
+                                                <input type="text" id="datepicker" class="inp" value="" readonly>
                                             </div>
 
                                         </div>
@@ -1041,6 +1041,7 @@
     <!-- flatpickr 한국어 로케일 -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/calendar.js"></script>
 
     <script>
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
@@ -1049,92 +1050,7 @@
             $(".js-btn-scrap").btnScrap();
         });
 
-        // 년도 input에서 받아와서 다른 요소에 입력
-        function inputYear(){
-            const numInput = $(".numInput.cur-year");
-            var year = [];
-            setTimeout(() => {
-                numInput.each(function (i){
-                    year[i] = $(this).val();
-                    $(".flatpickr-wrapper .new-year").eq(i).text(year[i]+"년");
-                })
-            }, 10);
-        }
-
-        //var calendarContainer = document.getElementById("flatpickr");
-
-        // 현재 날짜를 가져옵니다.
-        var currentDate = new Date();
-
-        // 현재 날짜부터 5개월 후의 날짜를 계산합니다.
-        var maxDateSet = new Date();
-        maxDateSet.setMonth(currentDate.getMonth() + 5);
-
-        //flatpickr 달력
-        var flatpickrInstance = flatpickr("#datepicker", {
-            locale: 'ko',
-            mode: 'range',
-            showMonths: 2,
-            dateFormat: "Y.m.d",
-            allowInput :false,
-            disableMobile: "true",
-            //appendTo: calendarContainer,
-            static: true,
-            //inline: true,
-            minDate: "today",
-            maxDate: maxDateSet,
-            // onReady 이벤트 후크를 사용하여 달력이 준비된 직후 실행할 함수를 정의합니다.
-            onReady: function(selectedDates, dateStr, instance) {
-                // 여기에 달력이 로드된 후 실행할 코드를 추가합니다.
-                inputYear();
-                $(".flatpickr-wrapper").append("<div class='flatpickr-dim'></div>");
-            },
-            onChange: function(selectedDates, dateStr, instance) {
-                // 선택된 날짜 범위를 가져옵니다.
-                if (selectedDates.length == 2) {
-                    // 시작 날짜와 종료 날짜를 얻습니다.
-                    let startDate = flatpickr.formatDate(selectedDates[0], "y.m.d"); // '23.10.12' 형식
-                    let endDate = flatpickr.formatDate(selectedDates[1], "y.m.d");
-
-                    // 새 형식으로 날짜 문자열을 만듭니다.
-                    let newFormat = startDate + " ~ " + endDate;
-
-                    // 이 문자열을 인풋 필드에 설정합니다.
-                    instance.input.value = newFormat;
-                }
-                console.log("change");
-            },
-            onMonthChange: function(selectedDates, dateStr, instance) {
-                // 월이 바뀌었을 때 로직을 수행합니다.
-                inputYear();
-            }
-        });
-
-        // 화면 크기에 따라 조건을 설정합니다.
-        function adjustCalendarView() {
-            // 현재 화면 너비를 확인합니다.
-            const width = window.innerWidth;
-
-            // 모바일 화면 너비 조건을 설정합니다.
-            const isMobile = width <= 768;
-
-            // flatpickr 인스턴스 설정을 변경합니다.
-            if (isMobile) {
-                // 모바일 화면에 대한 설정입니다. 예를 들어, 한 번에 여러 달을 표시하도록 설정합니다.
-                flatpickrInstance.set("showMonths", 5); // 원하는 달의 수로 변경하세요.
-                //flatpickrInstance.set("inline", true);
-            } else {
-                // 데스크탑 화면에 대한 기본 설정입니다.
-                flatpickrInstance.set("showMonths", 2); // 기본값으로 되돌립니다.
-                //flatpickrInstance.set("inline", false);
-            }
-        }
-
-        // 화면 크기가 변경될 때 함수를 호출합니다.
-        window.addEventListener('resize', adjustCalendarView);
-
-        // 페이지 로드 시 초기 설정을 위해 함수를 호출합니다.
-        adjustCalendarView();
+        $('#datepicker').customFlatpickr();
     </script>
     <!-- //js -->
 </body>

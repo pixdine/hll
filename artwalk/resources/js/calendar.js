@@ -6,7 +6,7 @@
 
         // 현재 날짜부터 5개월 후의 날짜를 계산합니다.
         var maxDateSet = new Date();
-        maxDateSet.setMonth(currentDate.getMonth() + 5);
+        maxDateSet.setMonth(currentDate.getMonth() + 3);
 
         // 기본 옵션을 설정합니다. 사용자가 제공하는 옵션으로 덮어쓸 수 있습니다.
         var settings = $.extend({

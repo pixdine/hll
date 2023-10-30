@@ -705,11 +705,13 @@
                             </div>
 
 							<!-- masonry layout 리스트-->
-							<div class="masonry_list">
+							<div class="artnews_list">
 								<ul class="grid">
 									<li>
                                         <a href="#">
-                                            <div class="item_img"><img src="../resources/images/temp/temp-main-an01.jpg" alt=""></div>
+                                            <div class="item_img">
+                                                <img src="../resources/images/temp/temp-main-an01.jpg" alt="">
+                                            </div>
                                         </a>
                                         <div class="item_info">
                                             <p class="item_sbj">ART NEWS</p>
@@ -736,20 +738,20 @@
 									</li>
 									<li>
                                         <a href="#">
-                                            <div class="item_img"><img src="../resources/images/temp/temp-main-an05.jpg" alt=""></div>
-                                        </a>
-                                        <div class="item_info">
-                                            <p class="item_sbj">EXHIBITION</p>
-                                            <p class="item_desc">전 세계 9인의 여성 예술가를 조명하는, 미스 디올 전시</p>
-                                        </div>
-									</li>
-									<li>
-                                        <a href="#">
                                             <div class="item_img"><img src="../resources/images/temp/temp-main-an04.jpg" alt=""></div>
                                         </a>
                                         <div class="item_info">
                                             <p class="item_sbj">INTERVIEW</p>
                                             <p class="item_desc">#바자아트위크 흘러가는 시간을 소장할 수 있을까?</p>
+                                        </div>
+									</li>
+									<li>
+                                        <a href="#">
+                                            <div class="item_img"><img src="../resources/images/temp/temp-main-an05.jpg" alt=""></div>
+                                        </a>
+                                        <div class="item_info">
+                                            <p class="item_sbj">EXHIBITION</p>
+                                            <p class="item_desc">전 세계 9인의 여성 예술가를 조명하는, 미스 디올 전시</p>
                                         </div>
 									</li>
 									<li>
@@ -962,9 +964,9 @@
             $(".active_dp_swiper").activeDpSwiper();
 
             // 아트뉴스 masonry layout
-            $('.masonry_list .grid').masonry({
-                itemSelector: 'li',
-            });
+            // $('.masonry_list .grid').masonry({
+            //     itemSelector: 'li',
+            // });
 
             // 스크랩
             $(".js-btn-scrap").btnScrap();

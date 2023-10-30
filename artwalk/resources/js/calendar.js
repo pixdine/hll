@@ -54,7 +54,9 @@
                 console.log('onReady', formattedStartDate, formattedEndDate);
             },
             onOpen: function(selectedDates, dateStr, instance) {
-                $("html").css("overflow", "hidden");
+                if($("body").hasClass("is_mobile")){
+                    $("html").css("overflow", "hidden");
+                }
             },
             onChange: function(selectedDates, dateStr, instance) {
                

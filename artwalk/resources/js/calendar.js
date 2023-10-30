@@ -163,8 +163,7 @@
             adjustCalendarView();
 
             $(document).on("click", ".js-close-dtpkr", function() {
-                // instance.clear(); // flatpickr 인스턴스를 지웁니다.
-                // instance.close(); // flatpickr 인스턴스를 닫습니다.
+                instance.close(); // flatpickr 인스턴스를 닫습니다.
             });
         });
     };

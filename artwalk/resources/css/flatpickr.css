@@ -903,6 +903,7 @@ span.flatpickr-weekday:first-child {
         right: 0;
         width: 100% !important;
         height: 550px;
+        max-height:85vh;
         overflow-y: hidden;
     }    
 

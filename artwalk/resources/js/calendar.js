@@ -47,6 +47,9 @@
 
                 console.log('onReady', formattedStartDate, formattedEndDate);
             },
+            onOpen: function(selectedDates, dateStr, instance) {
+                $("html").css("overflow", "hidden");
+            },
             onChange: function(selectedDates, dateStr, instance) {
                 // 선택된 날짜 범위를 가져옵니다.
                 if (selectedDates.length == 2) {
@@ -66,6 +69,9 @@
             onMonthChange: function(selectedDates, dateStr, instance) {
                 // 월이 바뀌었을 때 로직을 수행합니다.
                 inputYear();
+            },
+            onClose: function(selectedDates, dateStr, instance) {
+                $("html").css("overflow", "initial");
             },
         }, options);
 
@@ -140,6 +146,9 @@
             window.addEventListener('resize', function(){
                 adjustCalendarView();
                 inputYear();
+                instance.clear();
+                instance.close();
+                instance.open();
             });
 
             // 페이지 로드 시 초기 설정을 위해 함수를 호출합니다.

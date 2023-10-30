@@ -279,7 +279,7 @@
                                         </div>
                                         <div class="sort_calendar">
                                             <div class="inputbox calendar">
-                                                <input type="text" id="datepicker" class="inp" value="23.10.12 ~ 23.10.25" readonly>
+                                                <input type="text" id="datepicker" class="inp" value="" readonly>
                                             </div>
 
                                         </div>
@@ -1041,6 +1041,7 @@
     <!-- flatpickr 한국어 로케일 -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/calendar.js"></script>
 
     <script>
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
@@ -1049,6 +1050,7 @@
             $(".js-btn-scrap").btnScrap();
         });
 
+        $('#datepicker').customFlatpickr();
     </script>
     <!-- //js -->
 </body>

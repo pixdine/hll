@@ -234,6 +234,13 @@
                         <br>
                         <button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
                         <button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button><br>
+                        <br>
+                        <!--D : 달력 -->
+                        달력
+                        <div class="inputbox calendar">
+                            <input type="text" id="datepicker" class="inp" value="" readonly>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -766,10 +773,17 @@
         </div>
     </div>
 
+    <link rel="stylesheet" href="../resources/css/flatpickr.css">
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
+
+    <!-- 달력 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="../resources/js/flatpickr.js"></script>
+    <script src="../resources/js/calendar.js"></script>
+    <!-- // 달력 -->
 
     <script>
         // 텍스트 에어리어
@@ -842,6 +856,9 @@
             var checkboxEl = $(eliment);
             checkboxEl.prop("checked", false);
         }
+
+        // 달력
+        $('#datepicker').customFlatpickr();
     </script>
 </body>
 </html>

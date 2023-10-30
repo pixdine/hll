@@ -149,6 +149,7 @@
                     instance.set("showMonths", 5); // 원하는 달의 수로 변경하세요.
 
                     moMonth();
+                    inputYear();
                 } else {
                     // 데스크탑 화면에 대한 기본 설정입니다.
                     instance.set("showMonths", 2); // 기본값으로 되돌립니다.
@@ -158,7 +159,6 @@
             // 화면 크기가 변경될 때 함수를 호출합니다.
             window.addEventListener('resize', function(){
                 adjustCalendarView();
-                inputYear();
             });
 
             // 페이지 로드 시 초기 설정을 위해 함수를 호출합니다.

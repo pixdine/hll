@@ -33,6 +33,9 @@
                 // 달력에 시작 날짜와 종료 날짜를 설정합니다.
                 instance.setDate([now, oneWeekFromNow]);
 
+                // 초기 선택된 날짜를 저장합니다.
+                instance._initialDates = [now, oneWeekFromNow];
+
                 // 'y.m.d' 형식으로 날짜를 포맷합니다 (년도를 두 자리로 표시).
                 var formattedStartDate = instance.formatDate(now, "y.m.d"); // '23.10.20' 형태
                 var formattedEndDate = instance.formatDate(oneWeekFromNow, "y.m.d"); // '23.10.27' 형태
@@ -45,12 +48,16 @@
                 $(".flatpickr-wrapper .flatpickr-calendar").prepend("<div class='flatpickr-title'>기간 설정</div>");
                 $(".flatpickr-wrapper .flatpickr-calendar").append("<button class='flatpickr-close js-close-dtpkr'><img src='../../resources/images/ic_close_20.png'></button>");
 
+                // 달력을 시작 날짜로 이동합니다.
+                instance.jumpToDate(now);
+
                 console.log('onReady', formattedStartDate, formattedEndDate);
             },
             onOpen: function(selectedDates, dateStr, instance) {
                 $("html").css("overflow", "hidden");
             },
             onChange: function(selectedDates, dateStr, instance) {
+               
                 // 선택된 날짜 범위를 가져옵니다.
                 if (selectedDates.length == 2) {
                     // 시작 날짜와 종료 날짜를 얻습니다.
@@ -72,6 +79,10 @@
             },
             onClose: function(selectedDates, dateStr, instance) {
                 $("html").css("overflow", "initial");
+                // 선택된 날짜가 하나만 있으면 초기 선택된 날짜로 되돌립니다.
+                if (selectedDates.length === 1) {
+                    instance.setDate(instance._initialDates);
+                }
             },
         }, options);
 
@@ -146,17 +157,14 @@
             window.addEventListener('resize', function(){
                 adjustCalendarView();
                 inputYear();
-                instance.clear();
-                instance.close();
-                instance.open();
             });
 
             // 페이지 로드 시 초기 설정을 위해 함수를 호출합니다.
             adjustCalendarView();
 
             $(document).on("click", ".js-close-dtpkr", function() {
-                instance.clear(); // flatpickr 인스턴스를 지웁니다.
-                instance.close(); // flatpickr 인스턴스를 닫습니다.
+                // instance.clear(); // flatpickr 인스턴스를 지웁니다.
+                // instance.close(); // flatpickr 인스턴스를 닫습니다.
             });
         });
     };

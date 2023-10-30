@@ -134,6 +134,9 @@
             // 필요한 추가 로직이 있다면 여기에 작성하십시오.
             // 예: 이벤트 리스너 연결, 추가 메서드 등
 
+            // 이전 isMobile 상태를 저장하기 위한 변수
+            var wasMobile;
+
             // 화면 크기에 따라 조건을 설정합니다.
             function adjustCalendarView() {
                 // 현재 화면 너비를 확인합니다.
@@ -143,16 +146,20 @@
                 const isMobile = width <= 768;
 
                 // flatpickr 인스턴스 설정을 변경합니다.
-                if (isMobile) {
-                    console.log("mobile");
-                    // 모바일 화면에 대한 설정입니다. 예를 들어, 한 번에 여러 달을 표시하도록 설정합니다.
-                    instance.set("showMonths", 5); // 원하는 달의 수로 변경하세요.
-
-                    moMonth();
+                if (wasMobile !== isMobile) {
+                    if (isMobile) {
+                        console.log("mobile");
+                        instance.set("showMonths", 5);
+                        moMonth();
+                        $("html").css("overflow", "hidden");
+                    } else {
+                        instance.set("showMonths", 2);
+                        $("html").css("overflow", "initial");
+                    }
+                    
+                    // 이전 상태 업데이트
+                    wasMobile = isMobile;
                     inputYear();
-                } else {
-                    // 데스크탑 화면에 대한 기본 설정입니다.
-                    instance.set("showMonths", 2); // 기본값으로 되돌립니다.
                 }
             }
 

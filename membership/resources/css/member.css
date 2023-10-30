@@ -53,8 +53,18 @@ body.ifr .container::-webkit-scrollbar{width:8px;height:8px;}
 body.ifr .container::-webkit-scrollbar-track{background-color:transparent;}
 body.ifr .container::-webkit-scrollbar-thumb{background-color:#dbdbdb;border-radius:4px;}
 
+/* 2023-10-30 통합로그인 iframe */
+.popup_full.login_common_pop .popup_cont .cont_inner { padding:0 0 32px 0} 
+.popup_full.login_common_pop .heading_wrap .info_txt span { display:block }
+.popup_full.login_common_pop .heading_wrap .info_txt {text-align:center; margin-top:0 }
+.popup_full.login_common_pop .login_sns .info_txt {text-align:center;}
 
-
+/* 2023-10-30 통합로그인 iframe */
+.is_mobile .popup_full.login_common_pop .popup_cont { padding:0; margin: 0}
+.is_mobile .popup_full.login_common_pop .popup_cont .cont_inner { padding:0 20px 32px; width:auto} 
+.is_mobile .popup_full.login_common_pop .heading_wrap .info_txt {text-align:left; font-size:16px}
+.is_mobile .popup_full.login_common_pop .heading_wrap .info_txt span { display:block; margin-top:0 }
+.is_mobile .login_common_pop .heading_wrap .info_txt{ margin-top:40px; text-align:center; font-size:18px }
 
 
 @media (max-width:768px){

@@ -642,6 +642,8 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_full.common_login .popup_inner iframe { height:100% }
 .is_mobile .popup_full.common_login .popup_inner  {height:100%}
 .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
+      
+
 /* 통합로그인 */
 .is_mobile .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
 

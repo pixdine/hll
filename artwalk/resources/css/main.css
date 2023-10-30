@@ -43,8 +43,8 @@
 .art_main_visual .btn_move{position: absolute;top: 50%;z-index: 10;width: 48px;transform: translateY(-50%);cursor: pointer;opacity: 0.6;}
 .art_main_visual .btn_next{right: 80px;}
 .art_main_visual .btn_prev{left: 80px;}
-.art_main_visual .rotate_txt{position: absolute;top: 175px;left: calc(50% + 40px);z-index: 10;width: 160px;animation: rotate360 20s linear infinite;}
-.art_main_visual .mv_page_wrap{display: flex;justify-content: center;position: absolute;bottom: 120px;left: 0;right: 0;z-index: 10;}
+.art_main_visual .rotate_txt{position: absolute;top: 15%;left: calc(50% + 40px);z-index: 10;width: 8.333%;max-width: 160px;animation: rotate360 20s linear infinite;}
+.art_main_visual .mv_page_wrap{display: flex;justify-content: center;position: absolute;bottom: 50px;left: 0;right: 0;z-index: 10;}
 .art_main_visual .pager{position: relative;width: 40px;height: 2px;margin: 0 4px;background: rgba(255, 255, 255, 0.2);}
 .art_main_visual .pager.active:before{content: ''; position: absolute;top: 0;left: 0;z-index: 1;width: 0;height: 100%;background: #fff;animation: pagerProgress 5s linear;}
 

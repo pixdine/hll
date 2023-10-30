@@ -172,7 +172,8 @@
                         <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
                         <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
-                        <button type="button" data-popup-open="popup_11"><span>통합로그인</span></button><br>
+                       <!-- <button type="button" data-popup-open="popup_11"><span>통합로그인 >  iframe</span></button><br>-->
+                        <button type="button" data-popup-open="popup_12"><span>통합로그인</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
                         <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
@@ -722,7 +723,7 @@
         </div>
     </div>
 
-    <!--D : 통합로그인 -->
+    <!--D : 통합로그인 > iframe-->
     <div class="popup_full common_login" data-popup="popup_11">
         <div class="popup_inner">
             <div class="popup_head">
@@ -736,6 +737,12 @@
                 <iframe src="member/login_common.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
             </div>
         </div>
+    </div>
+
+    <!--D : 통합로그인 -->
+    <div class="popup_full" data-popup="popup_12" style="display: ">
+        <!-- iframe 영역-->
+        <iframe src="member/login_common02.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
     </div>
 
     <!--D : 포인트 부족 alter -->

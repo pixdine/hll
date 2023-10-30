@@ -642,6 +642,21 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_full.common_login .popup_inner iframe { height:100% }
 .is_mobile .popup_full.common_login .popup_inner  {height:100%}
 .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
+
+/* 2023-10-30 통합로그인 iframe */
+.popup_full.login_common_pop .popup_cont .cont_inner { padding:0 0 32px 0} 
+.popup_full.login_common_pop .heading_wrap .info_txt span { display:block }
+.popup_full.login_common_pop .heading_wrap .info_txt {text-align:center; margin-top:0 }
+.popup_full.login_common_pop .login_sns .info_txt {text-align:center;}
+
+/* 2023-10-30 통합로그인 iframe */
+.is_mobile .popup_full.login_common_pop .popup_cont { padding:0; margin: 0}
+.is_mobile .popup_full.login_common_pop .popup_cont .cont_inner { padding:0 20px 32px; width:auto} 
+.is_mobile .popup_full.login_common_pop .heading_wrap .info_txt {text-align:left; font-size:16px}
+.is_mobile .popup_full.login_common_pop .heading_wrap .info_txt span { display:block; margin-top:0 }
+.is_mobile .login_common_pop .heading_wrap .info_txt{ margin-top:40px; text-align:center; font-size:18px }
+      
+
 /* 통합로그인 */
 .is_mobile .popup_full.common_login .popup_cont { overflow:hidden; padding:0; margin:8px 8px 8px 0}
 

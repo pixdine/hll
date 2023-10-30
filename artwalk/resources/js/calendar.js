@@ -105,8 +105,6 @@
             }                    
         }
 
-
-
         // 이제 각 요소에 대해 flatpickr를 초기화합니다.
         return this.each(function() {
             var $this = $(this); // 현재 요소에 대한 jQuery 객체
@@ -148,6 +146,7 @@
             adjustCalendarView();
 
             $(document).on("click", ".js-close-dtpkr", function() {
+                instance.clear(); // flatpickr 인스턴스를 지웁니다.
                 instance.close(); // flatpickr 인스턴스를 닫습니다.
             });
         });

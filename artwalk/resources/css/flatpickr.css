@@ -892,6 +892,7 @@ span.flatpickr-weekday:first-child {
     }
 
     .flatpickr-calendar {
+        max-width: none;
         padding: 0;
     }
 
@@ -902,9 +903,20 @@ span.flatpickr-weekday:first-child {
         left: 0;
         right: 0;
         width: 100% !important;
-        max-height: 550px;
-        overflow-y: auto;
+        height: 550px;
+        overflow-y: hidden;
     }    
+
+    .flatpickr-innerContainer {
+        display: block;
+        height: calc(100% - 48px);
+        overflow: hidden;
+    }
+
+    .flatpickr-rContainer {
+        display: block;
+        height: 100%;
+    }
 
     .flatpickr-dim {
         position: fixed;
@@ -961,6 +973,10 @@ span.flatpickr-weekday:first-child {
     .flatpickr-days {
         display: block;
         width: 100% !important;
+        max-width: none;
+        height: calc(100% - 47px);
+        overflow-y: auto;
+        margin-top: 0;
     }
 
     .dayContainer {

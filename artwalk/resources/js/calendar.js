@@ -9,7 +9,8 @@
         minDateSet.setMonth(currentDate.getMonth() - 11);
         var maxDateSet = new Date();
         //maxDateSet.setMonth(currentDate.getMonth() + 10);
-        maxDateSet.setMonth(currentDate.getMonth() + 3);
+        maxDateSet.setMonth(currentDate.getMonth() + 5); // 현재 월에 5를 더하여 5개월 후의 월을 설정합니다.
+        maxDateSet.setDate(0);
 
         // 기본 옵션을 설정합니다. 사용자가 제공하는 옵션으로 덮어쓸 수 있습니다.
         var settings = $.extend({

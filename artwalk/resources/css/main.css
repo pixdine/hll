@@ -105,8 +105,10 @@
 /* 아트뉴스 */
 .artnews_list {margin: 0 0 0 -40px;} 
 .artnews_list .grid {display: flex; flex-wrap: wrap; margin-top: -60px;}
-.artnews_list .grid li{width:  calc(33.3333% - 40px);margin-left: 40px;padding-top: 60px;}
+.artnews_list .grid li{position: relative; width:  calc(33.3333% - 40px);margin-left: 40px;padding-top: 60px;}
 .artnews_list .grid li:nth-of-type(5){margin-top: -125px;}
+.artnews_list .item_img .pc-img{display: block;}
+.artnews_list .item_img .mo-img{display: none;}
 .artnews_list .item_info{margin-top: 16px;}
 .artnews_list .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
 .artnews_list .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 12px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}
@@ -172,18 +174,23 @@
     .main_wc .active-display .wc_img figcaption{bottom: 12px;left: 12px;right: 12px;height: 40px;font-size: 14px;line-height: 20px;}
     .main_wc .swiper-slide .wc_img:before {top: 63px;}
     .main_wc .btn_move{display: none;}
-    
-    /* masonry layout */
-    .masonry_list {margin: -24px -6px 0;} 
-    .masonry_list .grid li{width: 50%;padding: 24px 6px 0;}
-    .masonry_list .item_sbj{font-size: 10px;}
-    .masonry_list .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
 
     /* 아트뉴스 */
     .artnews_list {margin: 0 0 0 0;} 
-    .artnews_list .grid{justify-content: space-between;}
-    .artnews_list .grid li{width: calc(50% - 6px);margin-left: 0;}
+    .artnews_list .grid{justify-content: space-between; margin-top: -24px;}
+    .artnews_list .grid li{width: calc(50% - 6px);margin-left: 0;padding-top: 24px;}
+    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(50vw - 26px) * -0.25) * 1.3);}
+    .artnews_list .grid li:nth-of-type(5){margin-top: 0;}
+    .artnews_list .item_img .pc-img{display: none;}
+    .artnews_list .item_img .mo-img{display: block;}
     .artnews_list .item_sbj{font-size: 10px;}
     .artnews_list .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
+}
 
+@media (max-width: 500px) {
+    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(calc(50vw - 26px) * -0.25) * 1.3) + 1px);}
+}
+
+@media (max-width: 400px) {
+    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(calc(50vw - 26px) * -0.25) * 1.3) + 2px);}
 }

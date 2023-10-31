@@ -9,7 +9,7 @@
         minDateSet.setMonth(currentDate.getMonth() - 11);
         var maxDateSet = new Date();
         //maxDateSet.setMonth(currentDate.getMonth() + 10);
-        maxDateSet.setMonth(currentDate.getMonth() + 5); // 현재 월에 5를 더하여 5개월 후의 월을 설정합니다.
+        maxDateSet.setMonth(currentDate.getMonth() + 4); // 현재 월에 5를 더하여 5개월 후의 월을 설정합니다.
         maxDateSet.setDate(0);
 
         // 기본 옵션을 설정합니다. 사용자가 제공하는 옵션으로 덮어쓸 수 있습니다.
@@ -38,7 +38,7 @@
                 //instance.setDate([now, oneWeekFromNow]);
 
                 // 초기 선택된 날짜를 저장합니다.
-                instance._initialDates = [now, oneWeekFromNow];
+                //instance._initialDates = [now, oneWeekFromNow];
 
                 // 'y.m.d' 형식으로 날짜를 포맷합니다 (년도를 두 자리로 표시).
                 var formattedStartDate = instance.formatDate(now, "y.m.d"); // '23.10.20' 형태
@@ -155,12 +155,14 @@
                     if (isMobile) {
                         console.log("mobile");
                         instance.set("showMonths", 5);
+                        instance.setDate(instance._initialDates);
                         moMonth();
                         if($("html").hasClass("dp-open")){
                             $("html").css("overflow", "hidden");
                         }
                     } else {
                         instance.set("showMonths", 2);
+                        instance.setDate(instance._initialDates);
                         if($("html").hasClass("dp-open")){
                             $("html").css("overflow", "initial");
                         }

@@ -180,8 +180,8 @@
 
 .cont_heading_area {position:relative}
 /*.cont_heading_area.type01 .selectbox { position:absolute; right:0; top:11px}*/
-.bodycont_section .cont_body {margin:40px 0px 0px}
-.cont_heading_area.type01 { display:flex; flex-direction: row; justify-content: space-between;}
+/*.bodycont_section .cont_body {margin:40px 0px 0px}*/
+.cont_heading_area.type01 { display:flex; flex-direction: row; justify-content: space-between; margin-bottom:40px}
 .cont_heading_area.type01 .tab_wrap .tab_menu.type03 { padding-right:0px;}
 .cont_heading_area.type01 .selectbox { margin-top:11px}
 
@@ -481,9 +481,9 @@
     .container .sub .heading_wrap { margin:0; height:150px; background-image:url('../../resources/images/bg_top_tit_mo.png'); background-size:375px 150px}
     .container .sub .heading_area { display:flex; max-width:1920px; height:150px; margin:0 auto; justify-content:center; align-items:center}
     .container .sub .heading_wrap h2.tit { color:#fff; text-align:center; font-size:24px; font-weight:500; }
-    .bodycont_section .cont_body {margin:24px 0px 0px}
+    /*.bodycont_section .cont_body { margin:24px 0px 0px}*/
 
-    .cont_heading_area.type01  {flex-direction:column }
+    .cont_heading_area.type01  {flex-direction:column; margin-bottom:24px }
     .cont_heading_area.type01 .tab_wrap .tab_menu.type03 { padding-right:30px}
     .cont_heading_area.type01 .selectbox { position:relative; right:0; top:0; display:flex; justify-content:flex-end; margin-top:32px}
 

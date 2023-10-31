@@ -482,7 +482,7 @@
     .container .sub .heading_area { display:flex; max-width:1920px; height:150px; margin:0 auto; justify-content:center; align-items:center}
     .container .sub .heading_wrap h2.tit { color:#fff; text-align:center; font-size:24px; font-weight:500; }
     /*.bodycont_section .cont_body { margin:24px 0px 0px}*/
-
+    .cont_heading_area{margin-bottom:24px;}
     .cont_heading_area.type01  {flex-direction:column; margin-bottom:24px }
     .cont_heading_area.type01 .tab_wrap .tab_menu.type03 { padding-right:30px}
     .cont_heading_area.type01 .selectbox { position:relative; right:0; top:0; display:flex; justify-content:flex-end; margin-top:32px}

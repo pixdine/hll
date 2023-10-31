@@ -31,7 +31,7 @@
                 oneWeekFromNow.setDate(now.getDate() + 7); // 오늘로부터 7일 후
 
                 // 달력에 시작 날짜와 종료 날짜를 설정합니다.
-                //instance.setDate([now, oneWekFromNow]);
+                //instance.setDate([now, oneWeekFromNow]);
 
                 // 초기 선택된 날짜를 저장합니다.
                 instance._initialDates = [now, oneWeekFromNow];

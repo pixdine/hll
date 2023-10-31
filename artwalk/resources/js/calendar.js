@@ -4,7 +4,7 @@
          // 현재 날짜를 가져옵니다.
          var currentDate = new Date();
 
-        // 현재 날짜부터 5개월 후의 날짜를 계산합니다.
+        // min date, max date 설정
         var minDateSet = new Date();
         minDateSet.setMonth(currentDate.getMonth() - 11);
         var maxDateSet = new Date();

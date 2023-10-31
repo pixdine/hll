@@ -105,11 +105,11 @@
 /* 아트뉴스 */
 .artnews_list {margin: 0 0 0 -40px;} 
 .artnews_list .grid {display: flex; flex-wrap: wrap; margin-top: -60px;}
-.artnews_list .grid li{width: calc(33.3333% - 40px);margin-left: 40px;padding-top: 60px;}
+.artnews_list .grid li{width:  calc(33.3333% - 40px);margin-left: 40px;padding-top: 60px;}
 .artnews_list .grid li:nth-of-type(5){margin-top: -125px;}
-.artnews_list .item_info{margin-top: 12px;}
+.artnews_list .item_info{margin-top: 16px;}
 .artnews_list .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
-.artnews_list .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}
+.artnews_list .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 12px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;}
 
 
 @media (max-width: 768px) {

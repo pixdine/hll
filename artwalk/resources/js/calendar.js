@@ -5,7 +5,10 @@
          var currentDate = new Date();
 
         // 현재 날짜부터 5개월 후의 날짜를 계산합니다.
+        var minDateSet = new Date();
+        minDateSet.setMonth(currentDate.getMonth() - 11);
         var maxDateSet = new Date();
+        //maxDateSet.setMonth(currentDate.getMonth() + 10);
         maxDateSet.setMonth(currentDate.getMonth() + 3);
 
         // 기본 옵션을 설정합니다. 사용자가 제공하는 옵션으로 덮어쓸 수 있습니다.
@@ -16,9 +19,9 @@
             showMonths: 2,
             dateFormat: "y.m.d",
             allowInput :false,
-            disableMobile: "false",
+            disableMobile: "true",
             static: true,
-            minDate: "today",
+            minDate: 'today',
             maxDate: maxDateSet,
             // onReady 이벤트 후크를 사용하여 달력이 준비된 직후 실행할 함수를 정의합니다.
             onReady: function(selectedDates, dateStr, instance) {
@@ -57,6 +60,7 @@
                 if($("body").hasClass("is_mobile")){
                     $("html").css("overflow", "hidden");
                 }
+                $("html").addClass("dp-open");
             },
             onChange: function(selectedDates, dateStr, instance) {
                
@@ -80,7 +84,7 @@
                 inputYear();
             },
             onClose: function(selectedDates, dateStr, instance) {
-                $("html").css("overflow", "initial");
+                $("html").css("overflow", "initial").removeClass("dp-open");
                 // 선택된 날짜가 하나만 있으면 초기 선택된 날짜로 되돌립니다.
                 if (selectedDates.length === 1) {
                     instance.setDate(instance._initialDates);
@@ -151,10 +155,14 @@
                         console.log("mobile");
                         instance.set("showMonths", 5);
                         moMonth();
-                        $("html").css("overflow", "hidden");
+                        if($("html").hasClass("dp-open")){
+                            $("html").css("overflow", "hidden");
+                        }
                     } else {
                         instance.set("showMonths", 2);
-                        $("html").css("overflow", "initial");
+                        if($("html").hasClass("dp-open")){
+                            $("html").css("overflow", "initial");
+                        }
                     }
                     
                     // 이전 상태 업데이트

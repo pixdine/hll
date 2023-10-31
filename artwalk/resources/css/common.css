@@ -759,7 +759,7 @@ background:#fff;overflow:hidden;z-index:230}
 .filter_comp .fc_header_tit .fc_tit_txt{margin-right: 8px;color: #111;font-weight: 500;font-size: 18px;}
 .filter_comp .fc_header_tit .fc_cnt{color: #111;font-weight: 500;font-size: 18px;}
 .filter_comp .fc_btn_cancel{margin-left: 8px;color: #999;font-weight: 500;font-size: 14px;line-height: 20px;border-bottom: 1px solid #999;}
-.filter_comp .fc_list_wrap{display: none;margin-bottom: 40px;} 
+.filter_comp .fc_list_wrap{margin-bottom: 40px;} 
 .filter_comp:last-child .fc_list_wrap{margin-bottom: 0;}
 .filter_comp .fc_list{display: flex;flex-wrap:wrap;gap: 8px;} 
 .filter_comp .fc_checkbox_wrap{position: relative;} 
@@ -1104,7 +1104,7 @@ background:#fff;overflow:hidden;z-index:230}
     /* 필터 */
     .filter_comp .fc_header_tit .fc_tit_txt{font-size: 16px;}
     .filter_comp .fc_header_tit .fc_cnt{font-size: 16px;}
-    .filter_comp .fc_list_wrap{display: none;position: relative;height: 36px;margin-bottom: 36px;overflow: hidden;} 
+    .filter_comp .fc_list_wrap{position: relative;height: 36px;margin-bottom: 36px;overflow: hidden;} 
     .filter_comp .fc_list_wrap:after{content: '';position: absolute;top: 0;bottom: 0;right: -10px;width: 37px;background: linear-gradient(90deg, rgba(255, 255, 255, 0), #ffffff 100%);} 
     .filter_comp .fc_list{display: block;white-space: nowrap;padding-bottom: 30px;overflow-x: auto;-webkit-overflow-scrolling:touch;} 
     .filter_comp .fc_item{display: inline-block;} 

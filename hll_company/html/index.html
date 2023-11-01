@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>예술산책ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.harpersbazaar.co.kr/artwalk">
+    <meta property="og:title" content="예술산책ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="국내외 아트신에서 펼쳐지는 주요 전시와 이슈를 가장 빠르게 확인해보세요." />
+    <meta name="keywords" content="바자,하퍼스바자,아트 서비스, 문화,예술,아트,전시,추천전시,전시정보,아트뉴스">
+    <meta name="format-detection" content="telephone=no">
+    <!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <!-- //css, Jquery -->
+</head>
+
+<body>
+    <div id="bazaar">
+        <div id="wrap" class="wrap">
+			<!-- header -->
+			<header id="header" class="header">
+				<!-- header_wrap -->
+				<div class="header_wrap">
+					<div class="header_top">
+						<div class="cont_inner">
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+						</div>
+					</div>
+					<div class="header_bottom">
+						<div class="cont_inner">
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+							<div class="header_navi">
+								<ul>
+									<li><a href="#">전시정보</a></li>
+									<li><a href="#">산책코스</a></li>
+									<li><a href="#">아트뉴스</a></li>
+									<li><a href="#">커뮤니티</a></li>
+									<li class="has_sub_menu"><a href="#">예술백과</a><!-- D: 하위메뉴가 있을 경우 has_sub_menu클래스추가 -->
+                                        <div class="sub_menu">
+                                            <ul class="sub_menu_list">
+                                                <li class="ssm_item"><a href="#">갤러리 정보</a></li>
+                                                <li class="ssm_item"><a href="#">작가 정보</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+									<li><a href="#">마이페이지</a></li>
+								</ul>
+							</div>
+							<div class="header_util">
+								<div class="aside">
+									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a>
+								</div>
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+							</div>
+						</div>
+					</div>
+
+					<!-- D: 플로팅바 영역 -->
+					<div class="floating_bar">
+						<div class="cont_inner">
+							<div class="detail_info">
+								<!-- 브레드크럼 -->
+								<div class="breadcrumb">
+									<a href="#" class="home">HOME</a>
+									<a href="#" class="cate_dep">전시 정보</a>
+								</div>
+								<!-- //브레드크럼 -->
+								<!-- 기사 타이틀 -->
+								<div class="txtbox">
+									<p class="tit">이재석 《극단적으로 복잡하나 매우 우아하게 설계된》</p>
+								</div>
+								<!-- //기사 타이틀 -->
+								<!-- 스크랩, 공유하기 -->
+								<div class="sharebox">
+									<button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+									<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+								</div>
+								<!-- //스크랩, 공유하기 -->
+							</div>
+						</div>
+					</div>
+					<!-- //D: 플로팅바 영역 -->
+				</div>
+				<!-- //header_wrap -->
+
+				<!-- 검색 레이어 -->
+				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+					<div class="cont_inner">
+						<div class="search_box">
+							<div class="inputbox search">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+							</div>
+
+							<!-- 추천 키워드 -->
+							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="search_keyword">
+								<h3 class="search_tit">추천 키워드</h3>
+								<!-- 키워드 리스트 -->
+								<!-- D: 최대 10개까지 노출 -->
+								<ul class="word_list">
+									<li><a href="#">#어윈올라프</a></li>
+									<li><a href="#">#불가리</a></li>
+									<li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+									<li><a href="#">#갤러리</a></li>
+									<li><a href="#">#5월전시</a></li>
+									<li><a href="#">#패션아이템</a></li>
+									<li><a href="#">#백남준</a></li>
+									<li><a href="#">#반팔재킷</a></li>
+									<li><a href="#">#구찌 패션쇼</a></li>
+									<li><a href="#">#STAR일링</a></li>
+								</ul>
+								<!-- //키워드 리스트 -->
+							</div>
+							<!-- //추천 키워드 -->
+						</div>
+					</div>
+				</div>
+				<!-- //검색 레이어 -->
+
+				<!-- D: [팝업] 공유하기 -->
+				<div class="popup_layer pop_share" data-layer="popup_share">
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_tit">
+								<h3 class="tit">공유하기</h3>
+							</div>
+							<div class="popup_close">
+								<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+						<div class="popup_cont">
+							<div class="sns_list">
+								<ul>
+									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //D: [팝업] 공유하기 -->
+			</header>
+			<!-- //header -->
+
+			<!-- 전체메뉴 -->
+			<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="allmenu_dimmed"></div>
+				<div class="allmenu_area">
+					<div class="allmenu_cont">
+						<!-- 상단 닫기 영역 -->
+						<div class="top_area">
+							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+						</div>
+						<!-- //상단 닫기 영역 -->
+
+						<div class="scroll_custom">
+							<div class="allmenu_inner">
+								<!-- 로그인/회원가입 -->
+								<div class="allmenu_util">
+									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a>
+								</div>
+								<!-- //로그인/회원가입 -->
+
+								<!-- 메뉴 -->
+								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+								<div class="allmenu_list">
+									<ul class="depth1">
+										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+											<a href="#">전시정보<span></a>
+										</li>
+										<li>
+											<a href="#">산책코스<span></a>
+										</li>
+										<li>
+											<a href="#">아트뉴스<span></a>
+										</li>
+										<li>
+											<a href="#">커뮤니티<span></a>
+										</li>
+										<li class="has_menu">
+											<a href="#">예술백과<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">갤러리 정보</a></li>
+												<li><a href="#">작가 정보</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">마이페이지 <span></span></a>
+										</li>
+										<li>
+											<a href="#">산책메이트 혜택 안내<span></span></a>
+										</li>
+									</ul>
+								</div>
+								<!-- //메뉴 -->
+
+                                <div class="allmenu_list">
+                                    <ul class="depth1">
+										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+											<a href="#" class="arrow">하퍼스바자</a>
+										</li>
+                                    </ul>
+                                </div>
+								<!-- sns -->
+								<div class="sns_list">
+									<ul class="jc-fs">
+										<li><a href="https://www.instagram.com/p/CmgUDfVusMr/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://pf.kakao.com/_xaxmEXb" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오채널</span></a></li>
+									</ul>
+								</div>
+								<!-- //sns -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //전체메뉴 -->
+
+            <!-- container -->
+            <div id="container" class="container main_container">
+                <div id="content" class="content">
+                    
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer id="footer" class="footer">
+                <div class="footer_top">
+                    <div class="cont_inner">
+                        <div class="footer_link">
+                            <ul>
+                                <li><a href="#" target="_blank">이용약관</a></li>
+                                <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                                <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                                <li><a href="#" target="_blank">윤리경영</a></li>
+                                <li><a href="#" target="_blank">Contact us</a></li>
+                                <li><a href="#" target="_blank">RSS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="cont_inner">
+                        <div class="footer_logo">
+                            <img src="../resources/images/logo_hll.svg" alt="HLL">
+                        </div>
+                        <div class="footer_info">
+                            <address class="addr_wrap">
+                                <em>에이치엘엘중앙(주)</em>
+                                <div class="addr_txt">
+                                    <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                    <span class="ceo">대표자 : 강주연</span>
+                                    <br class="pc_br">
+                                    <span class="num">사업자등록번호 : 887-86-02919</span>
+                                    <br class="mo_br">
+                                    <span class="report">통신판매업신고 : 제 2022-서울강남-04005호</span>
+                                </div>
+                            </address>
+                            <p class="copyright">© 2023 hLL. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="family_wrap">
+                    <button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+                    <div class="familysite">
+                        <div class="cont_inner">
+                            <div class="family_row">
+                                <div class="tab_menu type02">
+                                    <ul>
+                                        <li class="on">FAMILY</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab_cont_wrap">
+                                    <ul class="family_list">
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">ELLE</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">COSMOPOLITAN</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">Harper’s  BAZAAR</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">ESQUIRE</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">ELLEVOICE</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">CLOSE UP</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">예술산책</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">eee</a></li>
+                                        <li class="list_item"><a href="#" target="_blank" class="list_btn">통합멤버십</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- //footer -->
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="../resources/js/swiper.min.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <!-- //js -->
+
+    <script>
+        
+    </script>
+</body>
+
+</html>

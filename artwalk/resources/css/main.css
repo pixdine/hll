@@ -179,18 +179,10 @@
     .artnews_list {margin: 0 0 0 0;} 
     .artnews_list .grid{justify-content: space-between; margin-top: -24px;}
     .artnews_list .grid li{width: calc(50% - 6px);margin-left: 0;padding-top: 24px;}
-    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(50vw - 26px) * -0.25) * 1.3);}
+    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(50vw - 26px) * -0.25) * 1.34);}
     .artnews_list .grid li:nth-of-type(5){margin-top: 0;}
     .artnews_list .item_img .pc-img{display: none;}
     .artnews_list .item_img .mo-img{display: block;}
     .artnews_list .item_sbj{font-size: 10px;}
     .artnews_list .item_desc{height: 40px;margin-top: 8px;font-size: 14px;line-height: 20px;}
-}
-
-@media (max-width: 500px) {
-    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(calc(50vw - 26px) * -0.25) * 1.3) + 1px);}
-}
-
-@media (max-width: 400px) {
-    .artnews_list .grid li:nth-of-type(4){margin-top: calc(calc(calc(calc(50vw - 26px) * -0.25) * 1.3) + 2px);}
 }

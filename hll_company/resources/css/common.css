@@ -119,6 +119,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .bctype2{background-color:#fff;border-color:var(--point);color:var(--point);}
 .bctype3{background-color:#fff;border-color:#fff;color:#111;}
 .bctype4{background-color:#fff;border-color:#DBDBDB;color:#111;}
+.bctype5{background-color:transparent;border-color:#ccc;color:#111;}
 
 /* button : disabled */
 .btn:disabled, .btn.disabled,

@@ -236,10 +236,12 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .tab_menu.type01 > ul > li.on > a{font-weight:700;color:var(--point);}
 .tab_menu.type01 > ul > li > a > span{display:inline-block;margin-left:8px;font-family:Gotham;}
 
-.tab_menu.type02 > ul{display:flex;flex-wrap:wrap;gap:8px 0;}
-.tab_menu.type02 > ul > li{position:relative;font-size:16px;font-weight:700;color:var(--point);line-height:23px;}
+.tab_menu.type02 > ul{display:flex;flex-wrap:wrap;gap:8px 0;margin:0 -16px;}
+.tab_menu.type02 > ul > li{position:relative;}
 .tab_menu.type02 > ul > li:after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background-color:#dbdbdb;}
 .tab_menu.type02 > ul > li:last-child:after{display:none;}
+.tab_menu.type02 > ul > li > a{display:block;padding:0 16px;font-size:16px;font-weight:500;color:#999;line-height:23px;}
+.tab_menu.type02 > ul > li.on > a{font-weight:700;color:var(--point);}
 
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}

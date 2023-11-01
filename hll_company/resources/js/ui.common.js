@@ -265,6 +265,9 @@ function setCSS() {
     setVh();
 }
 
+// 공통 스크롤 이벤트
+let lastScrollTop = 0;
+
 $(window).on("scroll", function () {
     let currentScrollTop = $(window).scrollTop();
     if (currentScrollTop <= 0) {

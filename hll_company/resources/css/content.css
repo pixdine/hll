@@ -69,7 +69,8 @@
 .board_st01.faq_cont .board_list{position:relative;display:block;}
 .board_st01 .board_list .b_btn{display: block;position: relative;padding-left:20px;}
 .board_st01 .board_list .b_btn:before{content:'Q.';position:absolute;top:0;left:0;color:var(--point);line-height:1.4;font-size:18px;font-weight:400;}
-.board_st01 .board_list .b_btn::after{content: '';position: absolute;top:0;right: 0;width:24px;height:24px;background:url('../images/ico_arrow_down.png')right center no-repeat;background-size: 18px auto;}
+.board_st01 .board_list .b_btn::after{content: '';position: absolute;top:0;right: 0;width:24px;height:24px;background:url('../images/ic_arrow_down_24.png')right center no-repeat;background-size: 24px auto;}
+.board_st01 .board_list .b_btn.is-expanded::after{background-image:url('../images/ic_arrow_up_24.png');}
 .board_st01.faq_cont .board_list .b_tit{font-size: 18px;font-weight: 500;line-height: 1.4;color:var(--point)}
 .board_st01.faq_cont .board_detail{margin-top: 28px;background:#F7F7F7;}
 .board_st01 .board_detail div.view{font-size: 16px;font-weight: 500;color:#666;line-height: 28px;background-color: #F7F7F7;}

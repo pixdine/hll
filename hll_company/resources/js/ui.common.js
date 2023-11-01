@@ -31,19 +31,66 @@ $(document).ready(function () {
     });
     $("[data-popsheet-close]").on("click", function (e) {
         popup.close($(this).attr("data-popsheet-close"), "popsheet");
+    });   
+    
+    // 현재 상태를 추적하기 위한 변수
+    var currentDevice = '';
+
+    if (window.innerWidth > 768){
+        currentDevice = 'PC';
+        $("body").addClass("is_pc");
+        $(".header .gnb").removeAttr("style");
+    } else {
+        currentDevice = 'Mobile';
+        $("body").addClass("is_mobile")
+        $(".header .gnb_item.has_sm").addClass("open");
+    }
+    // 디바이스 체크 함수
+    function checkDevice() {
+        console.log('checkDevice', currentDevice);
+        if (window.innerWidth > 768 && currentDevice !== 'PC') {
+            //PC
+            $("body").removeClass("is_mobile").addClass("is_pc");
+            $(".header .gnb_item.has_sm").removeClass("open");
+            $(".header .gnb").removeAttr("style");
+            currentDevice = 'PC'; // 현재 상태 업데이트
+        } else if (window.innerWidth <= 768 && currentDevice !== 'Mobile') {
+            //Mobile
+            $("body").removeClass("is_pc").addClass("is_mobile");
+            $(".header .gnb_item.has_sm").addClass("open");
+            currentDevice = 'Mobile'; // 현재 상태 업데이트
+        }
+    }  
+
+    $(".header").allMenu();
+    
+    //디바이스 체크
+    $(window).on("load resize", function(){
+        checkDevice();
     });    
 });
 
-//디바이스 체크
-$(window).on("load resize", function () {
-    if (window.innerWidth > 768) {
-        //PC
-        $("body").removeClass("is_mobile").addClass("is_pc");
-    } else {
-        //Mobile
-        $("body").removeClass("is_pc").addClass("is_mobile");
-    }
-});
+// 전체메뉴 네비게이션
+$.fn.allMenu = function(){
+    const $this = this;
+    const $Gnb = $this.find(".gnb");
+    const $btnClose = $this.find(".btn-close-am");
+    const $btnOpen = $this.find(".btn-open-am");
+    const $gnbLink = $this.find(".has_sm .gnb_link");
+    $btnOpen.on("click",function(){
+        $Gnb.show();
+        $(".header .gnb_item.has_sm").addClass("open");
+    });
+    $btnClose.on("click",function(){
+        $Gnb.hide();
+    });
+    $gnbLink.on("click",function(e){
+        if($("body").hasClass("is_mobile")){
+            e.preventDefault();
+            $(this).parent().toggleClass("open");
+        }
+    });
+}
 
 //full popup
 const popup = {
@@ -238,7 +285,6 @@ function inputBind() {
 
 //패밀리사이트
 function familySite(_target) {
-    console.log("family");
     var el = _target.parent();
     var speed = 300;
     if (el.hasClass("open")) {
@@ -298,11 +344,6 @@ function onScrollUp() {
     // console.log("스크롤 업됨!");
     $("body").addClass("scroll_up");
     $("body").removeClass("scroll_down");
-    if ($("body").hasClass("is_mobile")) {
-        if (currentPage == "main" || currentPage == "sub") {
-        $(".header").css("transform", "translate(0, 0)");
-        }
-    }
 }
 
 // 아코디언리스트

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>HLL | Hearst Joongang - Membership</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css"/>
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../resources/js/jquery-ui.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <header id="header" class="header">
+            <div class="cont_inner">
+                <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_hll.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+                <nav class="gnb">
+                    <button class="btn-close-am" title="전체 메뉴 닫기"><img src="../resources/images/ic_close_24.png"></button>
+
+                    <ul class="gnb_list">
+                        <li class="gnb_item"><a href="#" class="gnb_link">COMPANY</a></li>
+                        <li class="gnb_item has_sm"><a href="#" class="gnb_link">BUSINESS</a>
+                            <ul class="sub_menu">
+                                <li class="sm_item"><a href="#" class="sm_link">ELLE</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">COSMOPOLITAN</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">Harper’s BAZAAR</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">ESQUIRE</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">STUDIO DOT</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">YEET</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_item"><a href="#" class="gnb_link">AD INFO</a></li> 
+                        <li class="gnb_item has_sm"><a href="#" class="gnb_link">CAREER</a>
+                            <ul class="sub_menu">
+                                <li class="sm_item"><a href="#" class="sm_link">Recruitment</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">HLL Life</a></li>
+                                <li class="sm_item"><a href="#"  class="sm_link">Process</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">FAQ</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">Find Job</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_item"><a href="#" class="gnb_link">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <button class="btn-open-am" title="전체 메뉴 열기"><img src="../resources/images/ic_menu_24.png"></button>
+        </header> 
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="container" style="display: flex; align-items: center; height: 90vh; overflow-y: auto;">
+            <div id="content" class="content">
+                <div class="cont_inner">
+                   <!-- 팝업버튼 -->
+                    <!-- <div class="cont_inner" style="padding-bottom:100px;">
+                        <button type="button" data-popsheet-open="sheet_1"><span>전시 정보 > 전시상세 (지도)</span></button><br>
+                        <button type="button" data-popsheet-open="sheet_2"><span>전시 정보 > 필터</span></button><br>
+                        <button type="button" data-popup-open="popup_1"><span>전시 정보 > 전시상세 > 운영규정</span></button><br>
+                        <button type="button" data-popup-open="popup_2"><span>전시 정보 > 전시상세 > 리뷰 작성하기</span></button><br>
+                        <button type="button" data-popup-open="popup_3"><span>전시 정보 > 전시상세 > 리뷰 수정 하기</span></button><br>
+                        <button type="button" data-popup-open="popup_4"><span>전시 정보 > 전시상세 > 리뷰 상세보기</span></button><br>
+                        <br>
+                        <button type="button" data-popup-open="popup_6"><span>갤러리 정보 > 지도 크게보기</span></button><br>
+                        <br>
+                        <button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
+                        <button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button><br>
+                        <br>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- //container --> 
+    </div>
+
+    <!--팝업위치-->
+    
+    <!--D : 얼럿1 -->
+    <div class="popup_alert" data-alert="alert_1">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    해당 전시가 찜 되었습니다.<br>
+                    찜한 전시는 마이페이지에서 <br>
+                    확인 가능합니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>마이페이지</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 예술산책 / 지도 --> 
+    <div class="popup_map" data-popup="popup_6">
+        <div class="pm_inner">
+            <div class="pm_map" style="background-color: #FF6565;color: #fff;">
+                지도가 들어가는 영역
+            </div>
+        </div>
+        <div class="pop_map_close">
+            <button type="button" class="btn_close" data-popup-close="popup_6"><span class="blind">닫기</span></button>
+        </div>
+    </div>
+
+    <!--D : 얼럿2 -->
+    <div class="popup_alert" data-alert="alert_2">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    로그인 후 이용 가능한 서비스 입니다. 
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="../resources/js/swiper.min.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <!-- // js -->
+
+    <script>
+    </script>
+</body>
+</html>

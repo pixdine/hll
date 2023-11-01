@@ -43,7 +43,7 @@
 .agree_area{margin-top:40px;}
 
 /*career - recruitment */
-.top_sort_wrap + .body_cont01{margin-top:25px;}
+.top_sort_wrap + .body_cont01{margin-top:24px;}
 
 .board_st01 .board_list{position: relative;display: flex;align-items:center;}
 .board_st01 .status{width:10%}
@@ -57,7 +57,7 @@
 .board_st01 .b_cate.point{color:var(--point);}
 .board_st01 .b_tit{font-size: 18px;font-weight: 500;line-height: 1.4;padding: 0 2%;}
 .board_st01 .b_tit a{display:block; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
-.board_st01 .b_date{width: 20%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;}
+.board_st01 .b_date{width: 20%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;font-weight:400;}
 
 .board_st01.view_cont .board_detail{border-top: 1px solid #DBDBDB;margin-top: 28px;padding: 40px 134px;margin-left: 0;}
 .board_st01.view_cont .board_detail .view{background: #fff;padding: 0;line-height: 1.8;color:#111;font-weight:400;}
@@ -145,6 +145,9 @@
 .subscrip_wrap .s_sort{width:20%;font-size: 16px;font-weight: 700;line-height: 1.4;box-sizing: border-box;white-space: nowrap;}
 .subscrip_wrap .s_link{font-size: 18px;font-weight: 500;line-height: 1.4;padding: 0 3.6%;}
 .subscrip_wrap .s_share{width: 10%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;}
+.subscrip_wrap .btn{background-color:#FF7C21;color:#fff;font-size: 12px;width:44px;min-width: 44px;height: 20px;padding: 0 4px;}
+.ico_share span{padding-left:12px;background: url('../images/ico_share.png') left center no-repeat; background-size: 8px 8px;}
+
 
 .step_wrap.rss{padding:0;}
 .step_wrap.rss ul li .st1{background-image: url('../images/ico_step_rss1.png');}
@@ -160,23 +163,28 @@
 /************************* Media Query *************************/
 
 @media (max-width: 899px){
+    .board_st01 li{position:relative;padding:20px 0;}
     .board_st01 dl dt, .board_st01 dl dd{display: flex;flex-direction: column;font-size: 14px;}
     .board_st01 .b_cate, .board_st01 .b_tit, .board_st01 .b_date{width:100%;padding:0;}
     .board_st01 .b_cate{font-size:12px;}
-    .board_st01 .b_tit{margin-top:8px;}
+    .board_st01 .b_tit{margin-top:8px;font-size:14px;}
     .board_st01 .b_date{flex-direction: row;padding-left: 0px;margin-top: 16px;padding-right: 0;}
-    .board_st01 .b_tit{margin-top:8px;}
 
     .board_st01 .board_list .b_btn:before{font-size:14px;}
     .board_st01.faq_cont .board_list .b_tit{font-size:14px;}
 
     .board_st01.view_cont .board_list{display:block;position:relative;}
     .board_st01 .status{width:auto;position:absolute;bottom:0;right:0;}
-    .board_st01 .status span{font-size:14px;font-weight:500;}
+    .board_st01 .status span{font-size:12px;font-weight:500;padding:4px 8px;}
     
 }
 
 @media screen and (max-width: 768px) {
+    .no_list{min-height: 300px;}
+    .no_list p{font-size:14px;}
+
+    .container{padding-bottom:80px;}
+
     .content .cont_inner{padding-top:40px;}
 
     .heading_wrap{padding: 0 20px;}
@@ -215,7 +223,7 @@
     .board_st01.view_cont li{padding: 20px 0;}
     .board_st01.view_cont .b_cate{width:auto;}
     .board_st01.view_cont .b_tit{padding: 0;font-size: 14px;line-height: 1.4;}
-    .board_st01.view_cont .board_detail{padding:20px 0;}
+    .board_st01.view_cont .board_detail{padding:20px 0;margin-top:20px;}
     
     .board_st01 .board_detail div.view{font-size:14px;font-weight:400;}
     .board_st01.faq_cont .board_detail{margin-top:20px;}
@@ -255,5 +263,27 @@
     .process_wrap ul li .point{font-size:20px;line-height:29px;}
     .process_wrap ul li p{font-size:16px;line-height:23px;margin-top:12px;}
     .info_txt{margin-top:32px;}
+
+
+    /*rss*/
+    .cont_sec{padding:40px 0;}
+    .cont_sec:first-child{padding-top:0;}
+    .cont_sec+.cont_sec{border-top:0;}
+    .cont_sec .txt{margin-top:0;width:100%;}
+    .cont_sec .tit_wrap{margin-bottom:16px;}
+    .cont_sec .tit_wrap .tit{font-size:24px;}
+
+    .subscrip_wrap dl dt, .subscrip_wrap dl dd{display:flex;flex-direction:column;}
+    .subscrip_wrap .s_sort, .subscrip_wrap .s_link, .subscrip_wrap .s_share{padding:0;}
+    .subscrip_wrap ul li{padding:20px 0;} 
+    .subscrip_wrap .s_sort{font-size:12px;line-height: 1.2;}
+    .subscrip_wrap .s_link{margin-top:8px;font-size:14px;}
+    .subscrip_wrap .s_share{margin-top:16px;}
+
+
+    .sec_area{padding:80px 0;}
+    .sec_area .tit_wrap .tit{font-size:24px;}
+    .sec_area .cont_inner{padding-top:0;}
+    .sec_area .cont_sec .txt{margin-top:0;}
     
 }

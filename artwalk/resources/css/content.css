@@ -35,6 +35,7 @@
 .dtl_info{font-size:18px;line-height:24px;color:#111;}
 .dtl_info ~ .dtl_info{margin-top:40px;}
 .dtl_info .tit{margin-bottom:16px;color:#666;}
+.dtl_info .cont .btn_link{font-size:inherit;}
 .dtl_info .flag_area{line-height:1;}
 .dtl_info .date_box{display:flex;flex-direction:column;}
 .dtl_info .date_box .date{font-family:Gotham;font-weight:500;}
@@ -86,8 +87,6 @@
 .review_box .btn_box{margin-left:auto;}
 .review_box .btn{background-color:#00E4B2;border-color:#00E4B2;}
 .review_regist .noti_box{margin-top:16px;}
-.review_regist .noti_box .btn_link{padding-left:20px;font-size:16px;line-height:24px;color:#666;}
-.review_regist .noti_box .btn_link:before{content:'';display:block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url('../images/ico_notice_16.svg') no-repeat 0 0 / 100% auto;}
 
 /* 에디터 코멘트 */
 .editor_comment{margin-top:60px;padding:60px;background-color:#f7f7f7;font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;}
@@ -185,19 +184,17 @@
 .popup_review_detail .popup_head .total .current{color:#111;}
 .popup_review_detail .popup_bottom{padding-bottom:40px;}
 .popup_review_detail .popup_bottom .btn_wrap{justify-content:space-between;}
-.popup_review_detail .popup_bottom .btn_wrap .btn_link{font-size:16px;line-height:24px;}
 .review_detail .comment_info{margin-bottom:12px;}
 .review_slide{margin-top:16px;}
 .review_slide .viewSwiper .swiper-slide{height:460px;background-color:#f7f7f7;}
 
-
-/* 산책코스 */
+/* 리스트 상단 영역 */
 .cont_heading_area {position:relative; margin-bottom:40px}
-/*.cont_heading_area.type01 .selectbox { position:absolute; right:0; top:11px}*/
-/*.bodycont_section .cont_body {margin:40px 0px 0px}*/
 .cont_heading_area.type01 { display:flex; flex-direction: row; justify-content: space-between; }
-.cont_heading_area.type01 .tab_wrap .tab_menu.type03 { padding-right:0px;}
+.cont_heading_area .tab_wrap .tab_menu.type03 { padding-right:0px;}
 .cont_heading_area.type01 .selectbox { margin-top:11px}
+.cont_heading_area.type02{margin-bottom:24px;}
+.cont_heading_area.type02 .tab_wrap ~ .list_top{margin-top:40px;}
 
 .atcbox{position:relative;}
 .atcbox a{display:block;position:relative;width:100%;height:100%;}
@@ -214,13 +211,7 @@
 .atcbox .wc_img figcaption{position: absolute;bottom:32px;left:24px;right: 24px;z-index: 1;height: 72px;color: #fff;font-weight: 500;font-size: 28px;line-height: 36px; display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;word-break:break-all;}
 /* 공통으로 변경  */
 
-.tab_wrap .tab_menu.type03 { padding-right:64px; }
-.tab_wrap .tab_menu.type03 ul { display:flex;}
-.tab_wrap .tab_menu .btnbox{display:block;position:absolute;right:0;top:0;width:64px;height:36px;}
-.tab_wrap .tab_menu .btnbox .btn_ico{display:block;position:absolute;right:0;top:0;width:64px;height:100%;background:linear-gradient(to left, #fff 65%, #fff 0%, transparent);}
-.tab_wrap .tab_menu .btnbox .btn_ico:after{content:'';display:block;position:absolute;left:24px;top:50%;transform:translateY(-50%);width:24px;height:24px;background:url('../../resources/images/ico_arrow_down_24.svg') no-repeat 0 0 / 100% auto;}
-.tab_wrap .tab_menu .btnbox .btn_ico.on:after{transform:translateY(-50%) rotate(180deg);}
-
+/* 산책코스 */
 .bazaarspick_list {}
 .bazaarspick_list ul {display:flex; row-gap:50px; flex-wrap:wrap }
 .bazaarspick_list li {position:relative; width:32%; margin-left:2%}
@@ -521,7 +512,6 @@
     .review_box .txt_box{width:52%;padding-right:10px;}
     .review_box p{position:relative;top:2px;font-size:14px;line-height:20px;}
     .review_regist .noti_box{margin-top:12px;}
-    .review_regist .noti_box .btn_link{font-size:14px;line-height:20px;}
 
     /* 에디터 코멘트 */
     .editor_comment{margin-top:32px;padding:20px 20px 32px;font-size:14px;line-height:20px;}
@@ -558,37 +548,26 @@
 
     /* 팝업 : 리뷰 상세보기 */
     .popup_review_detail .popup_inner{height:100%;}
-    .popup_review_detail .popup_bottom .btn_wrap .btn_link{font-size:14px;line-height:20px;}
     review_slide .viewSwiper .swiper-slide{height:auto;max-height:335px;}
 
-    /* 산책코스 */
-    /*.bodycont_section .cont_body { margin:24px 0px 0px}*/
+    /* 리스트 상단 영역 */
     .cont_heading_area{margin-bottom:24px;}
     .cont_heading_area.type01  {flex-direction:column;}
-    .cont_heading_area.type01 .tab_wrap .tab_menu.type03 { padding-right:30px}
+    .cont_heading_area .tab_wrap .tab_menu.type03 { padding-right:35px}
     .cont_heading_area.type01 .selectbox { position:relative; right:0; top:0; display:flex; justify-content:flex-end; margin-top:32px}
+    .cont_heading_area.type02 .tab_wrap ~ .list_top{margin-top:40px;}
 
+    /* 산책코스 */
     .bazaarspick_list ul {column-gap:11px; row-gap:24px; justify-content:space-between; }
     .bazaarspick_list li {width:calc(50% - 5.5px); margin-left:0}
     .bazaarspick_list li .txtbox { position:absolute; z-index:1; bottom:12px; padding:0 12px; }
     .bazaarspick_list li .txtbox .tit {font-size:14px; line-height:20px;height:40px}
     .bazaarspick_list li .txtbox::after { bottom:-12px; }
+
     /* 공통가이드로 변경 */
     .atcbox .ex_top {right:8px; top:8px;}
     .atcbox .wc_img:before{top:42px;}
     .atcbox .wc_img figcaption{bottom: 12px;left:12px;right:12px;height:40px;color: #fff; font-weight: 500;font-size:14px;line-height:20px;}
-
-    .tab_wrap.on .tab_menu.type03 { padding-right:0px; }
-    .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap; gap:8px }
-    .tab_wrap .tab_menu ul li a{white-space:nowrap;}
-    .tab_wrap .tab_menu.type03 > ul > li ~ li { margin-left:0}
-    .tab_wrap.on .tab_menu.type03 > ul{white-space:normal; }
-    .tab_wrap.on .tab_menu.type03 > ul > li > a{height:36px;white-space:normal;}
-    .tab_wrap.on .tab_menu ul {display:flex;flex-wrap:wrap;column-gap:8px;}
-    .tab_wrap.on .tab_menu ul li{padding-right:0;}
-    .tab_wrap.on .tab_menu ul li a{white-space:nowrap;}
-    .tab_wrap.on .tab_menu .btnbox:before{display:none;}
-    .tab_wrap .tab_menu .btnbox{right:-20px;}
 
     /* 산책코스 > 상세 */
     .bazaarspick .detail_header { margin-top:32px;}

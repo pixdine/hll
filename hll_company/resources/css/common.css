@@ -131,6 +131,10 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .ctype1{color:#999;}
 .ctype2{color:#666;}
 
+/* icon button */
+.btn_ico{display:inline-flex;}
+.btn_ico.del{width:34px;height:34px;background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.3638 3.63593L3.63585 16.3638' stroke='%23111111' stroke-width='2'/%3E%3Cpath d='M16.3638 16.3643L3.63585 3.6364' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 20px auto;}
+
 /************************* Form *************************/
 input[type="text"]:disabled,
 input[type="password"]:disabled,
@@ -208,7 +212,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .inputbox .inp[readonly]{background-color:#f7f7f7;cursor:default;-webkit-tap-highlight-color:transparent;}
 .inputbox .inp[readonly]:focus{border-color:#ccc;}
 .inputbox .inp[readonly]:focus::placeholder{color:#999;border-color:#ccc;}
-.inputbox .btn_ico.del{position:absolute;right:9px;top:26px /*50%*/;height:34px;}
+.inputbox .btn_ico.del{position:absolute;right:9px;top:26px;height:34px;}
 .inputbox .inp + .del { transform:translateY(-50%) scale(0); }
 .inputbox .inp.typed{padding-right:52px;}
 .inputbox .inp.typed:focus + .del,

@@ -32,7 +32,7 @@
 
 .input_type02 {display:flex; flex-direction: column;}
 .input_type02.line > li{border-bottom:1px solid #DBDBDB; padding:32px 17% 32px 0}
-.input_type02.line > li:first-child{border-top:0; padding-top:0;padding-right:8%;}
+.input_type02.line > li:first-child{border-top:0; padding-top:0;padding-right:6%;}
 .input_type02.line > li:nth-child(2){margin-top:14px;}
 .input_type02 li .radio_list li {padding:0; width:auto; border-bottom:0;margin-bottom:14px;}
 .input_type02 li .radio_list li:last-child {margin-right:0}
@@ -222,6 +222,8 @@
     .heading_wrap{padding: 0 20px;}
     .container .heading_wrap{height:180px;background-size:cover}
     .container .contactus .heading_wrap{background-image:url('../images/bg_contactus_mo.png');}
+    .container .career .heading_wrap{background-image:url('../images/bg_career_mo.png');}
+    .container .rss .heading_wrap{background-image:url('../images/bg_rss_mo.png');}
     .container .heading_wrap .heading_area{display: flex;max-width: 1920px;height: 180px;margin: 0 auto;justify-content: center;align-items: center;}
     .container .heading_wrap h2.tit{font-size:32px;line-height:32px;}
     .container .heading_wrap h2.tit em{font-size:14px;line-height: 20px;margin-bottom:4px;}

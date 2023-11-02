@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>마이페이지ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.harpersbazaar.co.kr/artwalk/mypage">
+    <meta property="og:title" content="마이페이지ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="내가 찜한 전시, 내가 쓴 글, 내가 참여한 이벤트 등 나의 활동을 확인해보세요." />
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../resources/css/content.css" />
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <!-- //css, Jquery -->
+</head>
+
+<body>
+    <div id="bazaar">
+        <div id="wrap" class="wrap">
+            <!-- header -->
+            <header id="header" class="header">
+                <!-- header_wrap -->
+                <div class="header_wrap">
+                    <div class="header_top">
+                        <div class="cont_inner">
+                            <h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+                            <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+                        </div>
+                    </div>
+                    <div class="header_bottom">
+                        <div class="cont_inner">
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+                            <strong class="logo"><a href="./index.html"><img src="../../resources/images/logo.svg" alt="예술산책"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+                            <div class="header_navi">
+                                <ul>
+                                    <li><a href="#">전시정보</a></li>
+                                    <li><a href="#">산책코스</a></li>
+                                    <li><a href="#">아트뉴스</a></li>
+                                    <li><a href="#">커뮤니티</a></li>
+                                    <li class="has_sub_menu"><a href="#">예술백과</a><!-- D: 하위메뉴가 있을 경우 has_sub_menu클래스추가 -->
+                                        <div class="sub_menu">
+                                            <ul class="sub_menu_list">
+                                                <li class="ssm_item"><a href="#">갤러리 정보</a></li>
+                                                <li class="ssm_item"><a href="#">작가 정보</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">마이페이지</a></li>
+                                </ul>
+                            </div>
+                            <div class="header_util">
+                                <div class="aside">
+                                    <a href="#">LOGIN</a><!-- D: LOGOUT -->
+                                    <a href="#">SIGNUP</a>
+                                </div>
+                                <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D: 플로팅바 영역 -->
+                    <div class="floating_bar">
+                        <div class="cont_inner">
+                            <div class="detail_info">
+                                <!-- 브레드크럼 -->
+                                <div class="breadcrumb">
+                                    <a href="#" class="home">HOME</a>
+                                    <a href="#" class="cate_dep">마이페이지</a>
+                                </div>
+                                <!-- //브레드크럼 -->
+                                <!-- 기사 타이틀 -->
+                                <div class="txtbox">
+                                    <p class="tit"></p>
+                                </div>
+                                <!-- //기사 타이틀 -->
+                                <!-- 스크랩, 공유하기 -->
+                                <div class="sharebox">
+                                    <button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+                                    <button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+                                </div>
+                                <!-- //스크랩, 공유하기 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //D: 플로팅바 영역 -->
+                </div>
+                <!-- //header_wrap -->
+
+                <!-- 검색 레이어 -->
+                <div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+                    <div class="cont_inner">
+                        <div class="search_box">
+                            <div class="inputbox search">
+                                <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+                                <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+                            </div>
+
+                            <!-- 추천 키워드 -->
+                            <!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+                            <div class="search_keyword">
+                                <h3 class="search_tit">추천 키워드</h3>
+                                <!-- 키워드 리스트 -->
+                                <!-- D: 최대 10개까지 노출 -->
+                                <ul class="word_list">
+                                    <li><a href="#">#어윈올라프</a></li>
+                                    <li><a href="#">#불가리</a></li>
+                                    <li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+                                    <li><a href="#">#갤러리</a></li>
+                                    <li><a href="#">#5월전시</a></li>
+                                    <li><a href="#">#패션아이템</a></li>
+                                    <li><a href="#">#백남준</a></li>
+                                    <li><a href="#">#반팔재킷</a></li>
+                                    <li><a href="#">#구찌 패션쇼</a></li>
+                                    <li><a href="#">#STAR일링</a></li>
+                                </ul>
+                                <!-- //키워드 리스트 -->
+                            </div>
+                            <!-- //추천 키워드 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //검색 레이어 -->
+
+                <!-- D: [팝업] 공유하기 -->
+                <div class="popup_layer pop_share" data-layer="popup_share">
+                    <div class="popup_inner">
+                        <div class="popup_head">
+                            <div class="popup_tit">
+                                <h3 class="tit">공유하기</h3>
+                            </div>
+                            <div class="popup_close">
+                                <button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+                            </div>
+                        </div>
+                        <div class="popup_cont">
+                            <div class="sns_list">
+                                <ul>
+                                    <li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+                                    <li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+                                    <li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+                                    <li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //D: [팝업] 공유하기 -->
+            </header>
+            <!-- //header -->
+
+            <!-- 전체메뉴 -->
+            <div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+                <div class="allmenu_dimmed"></div>
+                <div class="allmenu_area">
+                    <div class="allmenu_cont">
+                        <!-- 상단 닫기 영역 -->
+                        <div class="top_area">
+                            <button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+                        </div>
+                        <!-- //상단 닫기 영역 -->
+
+                        <div class="scroll_custom">
+                            <div class="allmenu_inner">
+                                <!-- 로그인/회원가입 -->
+                                <div class="allmenu_util">
+                                    <a href="#">LOGIN</a><!-- D: LOGOUT -->
+                                    <a href="#">SIGNUP</a>
+                                </div>
+                                <!-- //로그인/회원가입 -->
+
+                                <!-- 메뉴 -->
+                                <!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+                                <div class="allmenu_list">
+                                    <ul class="depth1">
+                                        <li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+                                            <a href="#">전시정보<span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산책코스<span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">아트뉴스<span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">커뮤니티<span></a>
+                                        </li>
+                                        <li class="has_menu">
+                                            <a href="#">예술백과<span><em class="blind">열기</em></span></a>
+                                            <ul class="depth2">
+                                                <li><a href="#">갤러리 정보</a></li>
+                                                <li><a href="#">작가 정보</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">마이페이지 <span></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산책메이트 혜택 안내<span></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //메뉴 -->
+
+                                <div class="allmenu_list">
+                                    <ul class="depth1">
+                                        <li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+                                            <a href="#" class="arrow">하퍼스바자</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- sns -->
+                                <div class="sns_list">
+                                    <ul class="jc-fs">
+                                        <li><a href="https://www.instagram.com/p/CmgUDfVusMr/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+                                        <li><a href="https://pf.kakao.com/_xaxmEXb" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오채널</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- //sns -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //전체메뉴 -->
+
+            <!-- container -->
+            <div id="container" class="container mypage"><!-- D: 마이페이지 mypage 클래스 추가 -->
+                <div id="content" class="content sub">
+                    <!-- sub title -->
+                    <div class="heading_wrap">
+                        <div class="heading_area">
+                            <h2 class="tit">
+                                <img src="../../resources/images/img-title-bk.svg" alt="예술산책">
+                                <span>마이페이지</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <!--// sub title -->
+                    <div class="bodycont_wrap">
+                        <!-- 나의 커뮤니티 -->
+                        <div class="bodycont_section">
+                            <div class="cont_inner">
+                                <div class="tit_wrap">
+                                    <div class="tit_area">
+                                        <h2 class="tit">나의 커뮤니티</h2>
+                                    </div>
+                                </div>
+                                <div class="cont_heading_area type01">
+                                    <div class="tab_menu type02">
+                                        <ul>
+                                            <li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                            <li><a href="javascript:;">글</a></li>
+                                            <li><a href="javascript:;">댓글</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="cont_body">
+                                    <!-- 게시판 -->
+                                    <div class="board_wrap">
+                                        <!-- 목록 -->
+                                        <div class="board_list">
+                                            <ul class="cnt_list">
+                                                <!-- 내가 작성한 댓글/답글(대댓글) -->
+                                                <li>
+                                                    <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">댓글</span>
+                                                                    <span class="cate">전시장 주변 정보</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">«MMCA 현대차 시리즈 2023:정연두-백년 여행기» 전시 연계 행사로 서경식 교수(도쿄경제대학 명예교수)와의 대담을 국립현대미술관 서울에서 진행합니다. 정연두 작가의 작업을 중심으로 디아스포라에 대한 다양한 비평적 관점을 제시해줄 이번 대담에 많은 관심 부탁드립니다.</strong>
+                                                                <p class="txt">※ 해당 행사는 전시관람권 소유자에 한하여 무료로 참여 가능합니다. ※ 해당 행사는 «MMCA 현대차 시리즈 2023:정연두-백년 여행기» 연계 강연 예약페이지를 통해 참가할 수 있으며, 노쇼(no-show) 청중석에 한해 현장 접수가 가능합니다.</p>
+                                                            </div>
+                                                            <!-- 댓글/답글(대댓글) -->
+                                                            <div class="reply_box">
+                                                                <span class="ico_reply">댓글</span>
+                                                                <p class="reply_txt">MMCA 현대차 시리즈 2023, 정연두 백년 여행기 전시는 많은 작품이 있는 것은 아니지만 작품 하나하나마다 인상적이었고 새로웠어요! 저는 이민 생활을 한 적이 없어서 깊은 공감은 못했지만, 뮤지컬이나 다양한 매체로 접한 적이 있어서 어느 정도 공감이 되더라고요. 백년초 설화에서 작품의 서사가 시작됐다는 점도 재미있었고 텍스트, 퍼포먼스, 영상, 사운드 등 다양한 시도로 표현해서 흥미롭게 관람했어요 다른 문화를 접하고 낯섦에 대한 공감을 이끌어내는 전시 잘 봤습니다! </p>
+                                                            </div>
+                                                            <!-- //댓글/답글(대댓글) -->
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <!-- //내가 작성한 댓글/답글(대댓글) -->
+                                                <!-- 내가 작성한 글 -->
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시장 주변 정보</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">90년대나 2000년대 초만 해도 에티오피아 커피하면 많은 사람들이 예가체프를 떠올리곤 했습니다. 그때도 에티오피아의 다양한 지역에서 커피를 재배했는데 왜 예가체프의 커피가 유독 유명했던 것일까요?</strong>
+                                                                <p class="txt">가공방식과 관련이 있을 것 같습니다. 1970년대에 들어 예가체프에서 워시드 가공이 시작되는데요. 아직 에티오피아 대부분의 지역에서 내추럴 가공을 하던 시절이었지요. 예가체프에서 자생하는 특유의 과일스러운 커피와 워시드 가공이 만나 만들어낸 시트러스 향미는 내추럴 커피에서는 느끼기 어려운 신선한 향미였습니다. 지금도 예가체프하면 레몬 노트를 떠올리는 사람들을 종종 만나게 됩니다. 시간이 흘러 예가체프 부근의 구지와 시다마 지역에서도 워시드 가공이 시작되었고, 최근 들어선 리무와 짐마 지역에서도 양질의 워시드 커피를 만날 수 있게 되었습니다. 과거 ‘에티오피아 워시드’의 영광을 이끌었던 예가체프는 이제 다른 지역의 커피들과 함께 여전히 에티오피아 커피의 명예를 지키고 있어요. 이번에 소개드리는 콩가 워테는 예가체프의 워시드 커피답게 좋은 시트러스 향미를 보여줍니다. 오렌지나 유자 같은 노랑색 과일이 떠오르고, 파이나 타르트의 달콤한 향미도 느끼실 수 있어요. ‘역시 예가체프구나’ 하는 생각을 하게 되는 좋은 커피입니다.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <!-- //내가 작성한 글 -->
+                                                <li>
+                                                    <div class="board_item reply">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">댓글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">[바자전 : HOLI _ DAY, 세개의 렌즈] 에 초대합니다!</strong>
+                                                                <p class="txt">하퍼스 바자가 &lt;바자 아트&gt; 한국판 창간 10주년을 맞아, 사진전 &lt;바자전 : HOLI-DAY, 세 개의 렌즈&gt;을 선보입니다. 두손 갤러리에서 오는 8월 4일부터 19일까지 진행되는 이번 사진전에는 목정욱(@mokjungwook), 신선혜(@studioioo), 제임스 해리스(@james_harris_London) 3인의 시선으로 바라본 홀리데이가 담겨있습니다. 또한, 작가 3인의 작품을 소장할 수 있는 굿즈샵과 전시 오픈 첫 주 관람객에게만 제공되는 특별 선물도 놓치지 마세요! *입장 마감 시간: 월-목&토-일 18시 30분 / 금 20시 30분</p>
+                                                            </div>
+                                                            <div class="reply_box">
+                                                                <span class="ico_reply">댓글</span>
+                                                                <p class="reply_txt">정말 기대되네요!</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">미구엘 슈발리에 《디지털 뷰티》 아라아트센터 주변 맛집 소개</strong>
+                                                                <p class="txt">아라아트센터는 종로3가역 4번출구에서 조금 걸어가면 찾을 수 있어요. 근처에 에스팀 아카데미가 있는데, 처음에 건물이 알록달록해서 여기가 전시장인줄 알았답니다..ㅋㅋㅋ에스팀 건물이 보이면 바로 옆에 아라아트센터가 있을거에요!</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item reply">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">댓글</span>
+                                                                    <span class="cate">전시 질문</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">요시다 유니 개인전 [YOSHIDA YUNI; Alchemy]에 이 작품은 어떤 의미가 있나요?</strong>
+                                                                <p class="txt">이 작품은 어떤 의미가 있나요?</p>
+                                                            </div>
+                                                            <!-- 댓글/답글(대댓글) -->
+                                                            <div class="reply_box">
+                                                                <span class="ico_reply">댓글</span>
+                                                                <p class="reply_txt">요시다 유니 개인전 'YOSHIDA YUNI; Alchemy'는 예술가의 창작과정과 예술적 탐구에 대한 깊은 의미와 방향을 나타내고 있습니다. 이 전시는 유니의 작품을 통해 자연의 원소와 인간의 상상력, 과학적 발견과 예술의 힘이 어우러져 새로운 창작의 세계를 탐구하는 과정을 보여줍니다.</p>
+                                                            </div>
+                                                            <!-- //댓글/답글(대댓글) -->
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시장 주변 정보</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">일러스트레이터 키크니의 &lt;일러바치기&gt; 전시회와 신사 데이트 풀코스 5</strong>
+                                                                <p class="txt">전시회부터 맛집, 카페, 레코드 바까지 분위기 좋은 곳으로 엄선했다.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">7월 추천 전시회</strong>
+                                                                <p class="txt">11월에는 어떤 전시회들이 있을까요?</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 질문</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">경복궁 근처 추천 전시 문의</strong>
+                                                                <p class="txt">주말에 경복궁 근처로 나들이 갈건데 경복궁 근처에 전시회 추천 좀 해주세요~~~</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">국립현대미술관 전시회 모음</strong>
+                                                                <p class="txt">지금 국립현대미술관에서 만날 수 있는 전시는?</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">지금 을지로에서는 어떤 전시가 진행되고 있을까요?</strong>
+                                                                <p class="txt">지금 을지로에서는 어떤 전시가 진행되고 있을까요?</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">명품 브랜드가 운영하는 공간 모음</strong>
+                                                                <p class="txt">패션 브랜드와 예술의 만남!</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="board_item">
+                                                        <a href="#">
+                                                            <div class="detail_box">
+                                                                <div class="cate_box">
+                                                                    <span class="flag sm">글</span>
+                                                                    <span class="cate">전시 소식</span>
+                                                                    <span class="date">2023.07.06</span>
+                                                                </div>
+                                                                <strong class="tit">사진 덕후들을 위한 사진전 모음</strong>
+                                                                <p class="txt">셔터를 누르는 순간, 그 감각을 직접 느껴보세요!</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- //목록 -->
+
+                                        <!-- 더보기 -->
+                                        <div class="btn_more_wrap type1">
+                                            <button type="button" class="btn more"><span>더보기</span></button>
+                                        </div>
+                                        <!-- //더보기 -->
+                                    </div>
+                                    <!-- //게시판 -->
+
+                                    <!-- 마이페이지 메인으로 이동 -->
+                                    <div class="btn_area">
+                                        <a href="#" class="btn bctype1"><span>마이페이지 메인으로</span></a>
+                                    </div>
+                                    <!-- //마이페이지 메인으로 이동 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //나의 커뮤니티 -->
+
+                        <!-- 신청 고정 배너영역 -->
+                        <div class="bodycont_section">
+                            <div class="cont_inner">
+                                <div class="one_ban_swiper">
+                                    <div class="swiper-wrapper">
+                                        <a href="https://pf.kakao.com/_xaxmEXb" class="swiper-slide ban01" target="_blank" title="예술산책 카톡채널 추가 새창">
+                                            <img class="pc_img" src="../../resources/images/img-obs03.png" alt="예술산책 카톡 채널 추가하시고, 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
+                                            <img class="mo_img" src="../../resources/images/img-obs03-mo.png" alt="예술산책 카톡 채널 추가하시고, 매월 새로운 이벤트와 소식! 산책메이트들에게만 드리는 혜택도 놓치지 마세요!">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// 신청 고정 배너영역 D: (PC , 모바일 통이미지 스와이퍼) -->
+                    </div>
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer id="footer" class="footer">
+                <div class="footer_top">
+                    <div class="cont_inner">
+                        <div class="footer_link">
+                            <ul>
+                                <li><a href="#" target="_blank">매체소개</a></li>
+                                <li><a href="#" target="_blank">고객센터</a></li>
+                                <li><a href="#" target="_blank">포인트정책</a></li>
+                                <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                                <li><a href="#" target="_blank">이용약관</a></li>
+                                <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                                <li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+                                <li><a href="#" target="_blank">윤리경영</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_sns">
+                            <ul>
+                                <li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank" title="인스타그램 바로가기"><img src="../../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+                                <li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank" title="유튜브 바로가기"><img src="../../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+                                <li><a href="https://www.facebook.com/bazaarkorea/" target="_blank" title="페이스북 바로가기"><img src="../../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+                                <li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터X 바로가기"><img src="../../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="cont_inner">
+                        <div class="footer_logo">
+                            <img src="../../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
+                        </div>
+                        <div class="footer_info">
+                            <address class="addr_wrap">
+                                <em>허스트중앙(유)</em>
+                                <div class="addr_txt">
+                                    <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                    <span class="ceo">대표자 : 강주연</span>
+                                    <br class="pc_br">
+                                    <span class="num">사업자등록번호 : 104-81-55280</span>
+                                    <br class="mo_br">
+                                    <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+                                    <span class="email">이메일 : <a href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
+                                </div>
+                            </address>
+                            <p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="family_wrap">
+                    <button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+                    <div class="familysite">
+                        <div class="cont_inner">
+                            <div class="tab_wrap">
+                                <div class="tab_menu type02">
+                                    <ul>
+                                        <li class="on"><a href="javascript:;">FAMILY</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                        <li><a href="javascript:;">GLOBAL</span></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab_cont_wrap">
+                                    <!-- Family 탭 내용 -->
+                                    <div class="tab_cont active">
+                                        <!-- 리스트 -->
+                                        <div class="familysite_list family">
+                                            <ul>
+                                                <li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">Harper’s BAZAAR</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">CLOSE UP</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">eee</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //리스트 -->
+                                    </div>
+                                    <!-- //Family 탭 내용 -->
+
+                                    <!-- Global 탭 내용 -->
+                                    <div class="tab_cont">
+                                        <!-- 리스트 -->
+                                        <div class="familysite_list global">
+                                            <ul>
+                                                <li><a href="#" target="_blank" title="새창열림">USA</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">TAWAN</a></li>
+                                                <li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //리스트 -->
+                                    </div>
+                                    <!-- //Global 탭 내용 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- //footer -->
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="../../resources/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+
+    <script>
+        // 페이지의 모든 리소스가 로드된 후 실행할 코드
+        $(window).on('load', function () {
+            // 스크랩
+            $(".js-btn-scrap").btnScrap();
+        });
+    </script>
+    <!-- //js -->
+</body>
+</html>

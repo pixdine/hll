@@ -53,6 +53,9 @@ $(document).ready(function () {
             $("body").removeClass("is_mobile").addClass("is_pc");
             $(".header .gnb_item.has_sm").removeClass("open");
             $(".header .gnb").removeAttr("style");
+            if($("html").hasClass("gnb_open")){
+                $("html").css("overflow", "initial").removeClass("gnb_open");
+            }
             currentDevice = 'PC'; // 현재 상태 업데이트
         } else if (window.innerWidth <= 768 && currentDevice !== 'Mobile') {
             //Mobile
@@ -80,9 +83,11 @@ $.fn.allMenu = function(){
     $btnOpen.on("click",function(){
         $Gnb.show();
         $(".header .gnb_item.has_sm").addClass("open");
+        $("html").css("overflow", "hidden").addClass("gnb_open");
     });
     $btnClose.on("click",function(){
         $Gnb.hide();
+        $("html").css("overflow", "initial").removeClass("gnb_open");
     });
     $gnbLink.on("click",function(e){
         if($("body").hasClass("is_mobile")){

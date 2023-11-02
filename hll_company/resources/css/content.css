@@ -200,7 +200,7 @@
     .step_wrap ul li{flex:none;width:calc(50% - 20px);}
     .step_wrap ul li:nth-child(odd){margin-right:40px;}
     .step_wrap ul li:nth-child(even){margin-right:0;}
-    .step_wrap ul li:not(:last-child):after{width:28px;height:28px;right:-37px;top: calc(50% - 14px);}
+    .step_wrap ul li:not(:last-child):after{width:28px;height:28px;right:-35px;top: calc(50% - 14px);}
     .step_wrap ul li:nth-child(1),.step_wrap ul li:nth-child(2){margin-bottom:39px;}    
     .step_wrap ul li:nth-child(3){order:4;margin-right:0;}
     .step_wrap ul li:nth-child(4){order:3;margin-right:40px;}

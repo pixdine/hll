@@ -184,7 +184,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .chk_in label > span em { color:#999 !important}
 
 .chk_list {display:flex; flex-wrap:wrap;column-gap: 32px; }
-.chk_list li { position:relative; white-space:nowrap; margin-bottom:21px; line-height:1; }
+.chk_list li { position:relative; white-space:nowrap; margin-bottom:14px; line-height:1; }
 .chk_list li .chk_in { vertical-align:middle; color:#111}
 
 /* radio */
@@ -196,7 +196,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .radio_in label > span{display:inline-block;font-size:inherit;word-break:inherit; color:#666}
 .radio_in input[type="radio"]:checked + label > span { color:#111 }
 
-.radio_list {display:flex; flex-wrap:wrap; justify-content: flex-start; row-gap:15px; column-gap:32px;}
+.radio_list {display:flex; flex-wrap:wrap; justify-content: flex-start; row-gap:16px; column-gap:32px;}
 .radio_list li {line-height:1;}
 .radio_list li:nth-child(2),.radio_list li:nth-child(5) {width:202px}
 .popup_full .radio_list {column-gap: 0;}
@@ -369,6 +369,7 @@ background:#fff;overflow:hidden;z-index:230}
 	/*check*/
 	.chk_list{column-gap: 0;}
 	.chk_list li{position: relative;width: 50%;white-space: nowrap;margin-bottom: 16px;}
+	.chk_list li:last-child{margin-bottom:0;}
 	.chk_in label{font-size: 14px;line-height: 20px;}
 
 	/* tab */

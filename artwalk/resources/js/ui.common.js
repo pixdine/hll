@@ -869,9 +869,7 @@ function viewImgSlide() {
 
         var settings = $.extend({}, defaults, options);
         return this.each(function (i) {
-            if ($(this).hasClass("attached")) {
-                return false;
-            } else {
+            if (!$(this).hasClass("attached")) {
                 var apBody = $(this);
                 var currentCnt = apBody.find(".attach_cnt .current");
                 var totalCnt = apBody.find('.attach_cnt .total');

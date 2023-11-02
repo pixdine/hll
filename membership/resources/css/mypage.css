@@ -239,9 +239,9 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .selectbox .select_styled::after {content:'';position:absolute; right:0; top:4px;display:inline-block;width:12px;height:12px;margin:0 0 0 8px;background:url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.08325 14.5L12.0833 8.5L6.08325 2.5' stroke='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 100% auto; transform: rotate(90deg);}
 .selectbox .select_styled.opened::after { transform: rotate(270deg);}
 .selectbox .select_options { position:absolute; right:0; top:28px; border:1px solid #ccc; padding:4px 0; background:#fff; display:none}
-.selectbox .select_options li { padding:8px 16px; color:#999; font-size:14px; font-weight:400; line-height:1.6; cursor: pointer;}
-.selectbox .select_options li:hover { color:#111; font-weight:700}
-.selectbox .select_options li.selected { color:#111; font-weight:700}
+.selectbox .select_options li { padding:8px 16px; color:#999; font-size:14px; font-weight:500; line-height:1.6; cursor: pointer;}
+.selectbox .select_options li:hover { color:#111; }
+.selectbox .select_options li.selected { color:#111; }
 
 /* 포인트샵 */
 .point_prd_info02 {display:flex; flex-direction: row; justify-content: space-between; column-gap:8.5%;}

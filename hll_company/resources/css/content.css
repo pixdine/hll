@@ -108,17 +108,19 @@
 
 .step_wrap{overflow: hidden;padding:60px 0 120px;}
 .step_wrap ul{display:flex;}
-.step_wrap ul li{position: relative;width:20%;text-align:center;/*height: 0;padding-bottom: 20%;*/}
+.step_wrap ul li{position: relative;flex:1;text-align:center;/*height: 0;padding-bottom: 20%;*/}
 .step_wrap ul li:not(:last-child){margin-right:90px;}
-.step_wrap ul li::before{content:'';position:absolute;left:0;height:99%;width:99%;border:1px solid var(--point);border-radius:50%;}
 .step_wrap ul li:not(:last-child):after{content: '';display:inline-block;background:url('../images/ico_step_right.png') no-repeat;background-size: cover;width:48px;height:48px;position: absolute;right: -65px;top: calc(50% - 24px);}
-.step_wrap ul li .cont{padding:52px 0;}
 .step_wrap ul li i{display: block;margin: 0 auto;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px;width: 48px;}
-.step_wrap ul li strong{color:var(--point);font-size:20px;line-height:29px;margin-top:30px;display:block;}
+.step_wrap ul li strong{color:var(--point);font-size:20px;margin-top:30px;display:block;}
 .step_wrap ul li .st1{background-image: url('../images/ico_step1.png');}
 .step_wrap ul li .st2{background-image: url('../images/ico_step2.png');}
 .step_wrap ul li .st3{background-image: url('../images/ico_step3.png');}
 .step_wrap ul li .st4{background-image: url('../images/ico_step4.png');}
+
+
+.circle{border:1px solid var(--point);border-radius:50%;display: flex;justify-content: center;align-items: center;width:100%;}
+.circle:before {content: "";display: block;padding-top: 100%;}
 
 .process_wrap{background-color:#F5F5FD;padding:60px 0 180px;}
 .process_wrap ul{background-color:#fff;padding:12px 60px;}
@@ -180,6 +182,23 @@
     .board_st01 .status{width:auto;position:absolute;bottom:0;right:0;}
     .board_st01 .status span{font-size:12px;font-weight:500;padding:4px 8px;}
     
+    
+    .top_sort_wrap{flex-direction: column;align-items: flex-start;gap: 32px;}
+
+    .step_wrap{padding:0 0 40px;}
+    .step_wrap ul{flex-wrap: wrap;}
+    .step_wrap ul li{flex:none;width:calc(50% - 20px);}
+    .step_wrap ul li:nth-child(odd){margin-right:40px;}
+    .step_wrap ul li:nth-child(even){margin-right:0;}
+    .step_wrap ul li:not(:last-child):after{width:28px;height:28px;right:-37px;top: calc(50% - 14px);}
+    .step_wrap ul li:nth-child(1),.step_wrap ul li:nth-child(2){margin-bottom:39px;}    
+    .step_wrap ul li:nth-child(3){order:4;margin-right:0;}
+    .step_wrap ul li:nth-child(4){order:3;margin-right:40px;}
+    .step_wrap ul li:nth-child(2)::after{top:auto;right:calc(50% - 14px);bottom:-34px;transform: rotate(90deg);}
+    .step_wrap ul li:nth-child(3)::after{transform: rotate(180deg);left: -35px;}
+
+    .step_wrap ul li i{width:32px;height:32px;background-size:32px 32px;}
+    .step_wrap ul li strong{font-size:14px;line-height:20px;margin-top:6px}
 }
 
 @media screen and (max-width: 768px) {
@@ -223,8 +242,6 @@
     
     .tab_menu.type03{width:100%;}
 
-    .top_sort_wrap{flex-direction: column;align-items: flex-start;gap: 32px;}
-
     .board_st01.view_cont li{padding: 20px 0;}
     .board_st01.view_cont .b_cate{width:auto;}
     .board_st01.view_cont .b_tit{padding: 0;font-size: 14px;line-height: 1.4;}
@@ -248,18 +265,6 @@
     .life_list li p{font-size:16px;line-height:23px;}
 
     /*process*/
-    .step_wrap{padding:0 0 40px;}
-    .step_wrap ul{flex-wrap: wrap;}
-    .step_wrap ul li{flex:none;width:calc(50% - 22px);}
-    .step_wrap ul li:nth-child(odd){margin-right:40px;}
-    .step_wrap ul li:nth-child(even){margin-right:0;}
-    .step_wrap ul li:not(:last-child):after{width:28px;height:28px;right:-37px;top: calc(50% - 14px);}
-    .step_wrap ul li:nth-child(1),.step_wrap ul li:nth-child(2){margin-bottom:39px;}
-    .step_wrap ul li:nth-child(2)::after{top:auto;right:calc(50% - 14px);bottom:-34px;transform: rotate(90deg);}
-    .step_wrap ul li:nth-child(3)::after{transform: rotate(180deg);right: -35px;}
-    .step_wrap ul li .cont{padding:34px 0;}
-    .step_wrap ul li i{width:32px;height:32px;background-size:32px 32px;}
-    .step_wrap ul li strong{font-size:14px;line-height:20px;margin-top:6px}
 
 
     .process_wrap{padding:0 0 80px;}

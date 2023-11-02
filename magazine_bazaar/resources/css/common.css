@@ -1112,6 +1112,8 @@ background:#fff;overflow:hidden;z-index:230}
 	/* selectbox */
 	.selectbox .select_options{padding:0;}
 	.selectbox .select_options li{padding-right:15px;}
+	.selectbox .select_options li:first-child{padding-top:11px;}
+	.selectbox .select_options li:last-child{padding-bottom:11px;}
 
 	/* 서브메인 */
 	.sub_main .heading_wrap.eng{margin-bottom:40px;}

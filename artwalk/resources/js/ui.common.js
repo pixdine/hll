@@ -839,7 +839,6 @@ function viewImgSlide() {
             taBody.attr("maxlength", settings.maxlength);
             var currentCnt = taBody.find('.current');
             var totalCnt = taBody.find('.total');
-            console.log(totalCnt);
             totalCnt.text("/"+settings.maxlength);
             taBody.on('input', function() {
                 var maxlength = textarea.val().length;

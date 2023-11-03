@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>SEARCH 검색 │ 하퍼스 바자 코리아 (Harper's BAZAAR Korea)</title>
+    <title>SEARCH 검색결과ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스</title>
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.harpersbazaar.co.kr/search">
-    <meta property="og:title" content="검색 │ 하퍼스 바자 코리아 (Harper's BAZAAR Korea) │ 패션 매거진, 패션 잡지, 화보맛집">
+    <meta property="og:url" content="https://www.harpersbazaar.co.kr/artwalk/search">
+    <meta property="og:title" content="검색결과ㅣ예술을 산책하듯 가볍게 즐기는 아트 정보 큐레이션 서비스">
     <meta property="og:image" content="">
-    <meta property="og:description" content="검색 결과" />
+    <meta property="og:description" content="{검색어}의 핫플레이스 검색결과는 {}건 입니다. 국내외 아트신에서 펼쳐지는 주요 전시와 이슈를 가장 빠르게 확인해보세요." />
     <meta name="keywords" content="하퍼스바자, 바자, BAZAAR, Harper's BAZAAR, SEARCH, 검색, 기사검색">
     <meta name="format-detection" content="telephone=no">
     <!-- css, Jquery -->
@@ -20,6 +20,7 @@
 </head>
 <body>
     <div id="bazaar">
+        <div id="wrap" class="wrap">
             <!-- header -->
             <header id="header" class="header">
                 <!-- header_wrap -->
@@ -69,12 +70,12 @@
                                 <!-- 브레드크럼 -->
                                 <div class="breadcrumb">
                                     <a href="#" class="home">HOME</a>
-                                    <a href="#" class="cate_dep">전시 정보</a>
+                                    <a href="#" class="cate_dep">검색</a>
                                 </div>
                                 <!-- //브레드크럼 -->
                                 <!-- 기사 타이틀 -->
                                 <div class="txtbox">
-                                    <p class="tit">이재석 《극단적으로 복잡하나 매우 우아하게 설계된》</p>
+                                    <p class="tit">검색</p>
                                 </div>
                                 <!-- //기사 타이틀 -->
                                 <!-- 스크랩, 공유하기 -->
@@ -105,18 +106,13 @@
                             <div class="search_keyword">
                                 <h3 class="search_tit">추천 키워드</h3>
                                 <!-- 키워드 리스트 -->
-                                <!-- D: 최대 10개까지 노출 -->
+                                <!-- D: 최대 5개까지 노출 -->
                                 <ul class="word_list">
-                                    <li><a href="#">#어윈올라프</a></li>
-                                    <li><a href="#">#불가리</a></li>
-                                    <li><a href="#">#블랙핑크하퍼스바자커버</a></li>
-                                    <li><a href="#">#갤러리</a></li>
-                                    <li><a href="#">#5월전시</a></li>
-                                    <li><a href="#">#패션아이템</a></li>
                                     <li><a href="#">#백남준</a></li>
-                                    <li><a href="#">#반팔재킷</a></li>
-                                    <li><a href="#">#구찌 패션쇼</a></li>
-                                    <li><a href="#">#STAR일링</a></li>
+                                    <li><a href="#">#8월전시</a></li>
+                                    <li><a href="#">#갤러리</a></li>
+                                    <li><a href="#">#산책메이트</a></li>
+                                    <li><a href="#">#앙리 마티스</a></li>
                                 </ul>
                                 <!-- //키워드 리스트 -->
                             </div>
@@ -229,15 +225,16 @@
             <!-- //전체메뉴 -->
 
             <!-- container -->
-            <div id="container" class="container">
+            <div id="container" class="container search"><!-- D: 검색페이지 search 클래스 추가 -->
                 <div id="content" class="content sub">
+                    <!-- 검색결과 : 검색결과 없는 경우 -->
                     <div class="search_result_wrap">
                         <!-- 상단 검색 영역 -->
                         <div class="search_top">
                             <div class="cont_inner">
                                 <div class="search_box">
                                     <div class="inputbox search">
-                                        <input type="search" class="inp" id="search" name="search" value="앙리 마티스" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+                                        <input type="search" class="inp" id="search" name="search" value="ㄱㄴㄷㄹㄹㄷㄴㄱ" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
                                         <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
                                         <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
                                     </div>
@@ -247,7 +244,7 @@
                                     <div class="search_keyword">
                                         <h3 class="search_tit">추천 키워드</h3>
                                         <!-- 키워드 리스트 -->
-                                        <!-- D: 최대 10개까지 노출 -->
+                                        <!-- D: 최대 5개까지 노출 -->
                                         <ul class="word_list">
                                             <li><a href="#">#백남준</a></li>
                                             <li><a href="#">#8월전시</a></li>
@@ -268,7 +265,7 @@
                             <!-- 검색결과가 없는 경우 노출 -->
                             <!--
                             <div class="nodata">
-                                <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
+                                <p class="txt type1"><strong class="word">블랙픽스하퍼스ㅂㅈ커버</strong> 에 대한 검색 결과가 없습니다.</p>
                             </div>
                             -->
                             <!-- //검색결과가 없는 경우 노출 -->
@@ -285,113 +282,569 @@
                                             <div class="tab_menu type01">
                                                 <ul>
                                                     <li class="on"><a href="javascript:;">전체<span>3,091</span></a></li><!-- D: 선택 시 on 클래스 추가 -->
-                                                    <li><a href="javascript:;">전시정보<span>22</span></a></li>
-                                                    <li><a href="javascript:;">아트뉴스<span>18</span></a></li>
-                                                    <li><a href="javascript:;">갤러리<span>10</span></a></li>
-                                                    <li><a href="javascript:;">작가<span>0</span></a></li>
-                                                    <li><a href="javascript:;">이벤트<span>0</span></a></li>
+                                                    <li><a href="javascript:;">전시정보<span>3,090</span></a></li>
+                                                    <li><a href="javascript:;">산책코스<span>1</span></a></li>
+                                                    <li><a href="javascript:;">아트뉴스<span>22</span></a></li>
+                                                    <li><a href="javascript:;">갤러리<span>1</span></a></li>
+                                                    <li class="disabled"><a href="javascript:;">작가<span>0</span></a></li><!-- D: 해당 내용이 없는 경우 disabled 클래스 추가 -->
+                                                    <li><a href="javascript:;">이벤트<span>7</span></a></li>
                                                 </ul>
                                             </div>
-
-                                            <div class="list_sort">
-                                                <div class="selectbox" data-selectbox>
-                                                    <div class="select_styled" data-value>관련도순</div>
-                                                    <div class="select_options" data-option>
-                                                        <ul>
-                                                            <li class="select_option selected">관련도순</li>
-                                                            <li class="select_option">인기순</li>
-                                                            <li class="select_option">최신순</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
 
-                                        <div class="tab_cont_wrap">
-                                            <!-- 전체 탭 내용 -->
-                                            <div class="tab_cont active">
-                                                <!-- D: 전체 탭에서 검색결과가 없는 경우 노출 -->
-                                                <div class="nodata">
-                                                    <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
+                                        <!-- 전시정보 -->
+                                        <div class="bodycont_section">
+                                            <div class="tit_wrap line">
+                                                <div class="tit_area">
+                                                    <h2 class="tit">전시정보 <strong class="num">3,090</strong></h2>
                                                 </div>
-                                                <!-- D: //전체 탭에서 검색결과가 없는 경우 노출 -->
-
-                                                <!-- D: 전체 탭에서 검색결과가 있는 경우 노출 -->
-                                                <p style="padding:40px 0;">전체 목록에 대한 마크업 추가될 예정(추가 시 이 부분 삭제)</p>
-                                                <!-- //D: 전체 탭에서 검색결과가 있는 경우 노출 -->
                                             </div>
-                                            <!-- //전체 탭 내용 -->
+                                            <div class="comm_ex_wrap">
+                                                <div class="comm_ex_list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="comm_ex_item">
+                                                                <a href="#" title="《앙리 마티스, LOVE & JAZZ》 상세페이지로 이동"> 
+                                                                    <figure class="ex_img_fig">
+                                                                        <figcaption>《앙리 마티스, LOVE & JAZZ》 포스터</figcaption>
+                                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img11.jpg" alt="전시정보 관련 포스터">
+                                                                    </figure>
 
-                                            <!-- 전시정보 탭 내용 -->
-                                            <div class="tab_cont">
-                                                <!-- D: 전시정보 탭에서 검색결과가 없는 경우 노출 -->
-                                                <div class="nodata">
-                                                    <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
+                                                                    <div class="ex_guide">
+                                                                        <span class="ex_sbj">《<mark>앙리 마티스</mark>, LOVE & JAZZ》</span>
+                                                                        <div class="ex_range">
+                                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                                            <span class="flag sm">오픈예정</span>
+                                                                        </div>
+                                                                        <div class="ex_loc_row">
+                                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                                <div class="ex_top">
+                                                                    <div class="ex_top_flag">
+                                                                        <span class="flag">추천</span>
+                                                                        <span class="flag type2">이벤트</span>
+                                                                    </div>
+
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="comm_ex_item">
+                                                                <a href="#" title="제이디 차 상세페이지로 이동">
+                                                                    <figure class="ex_img_fig">
+                                                                        <figcaption>제이디 차 포스터</figcaption>
+                                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img01.jpg" alt="전시정보 관련 포스터">
+                                                                    </figure>
+
+                                                                    <div class="ex_guide">
+                                                                        <span class="ex_sbj">제이디 차 - 구미호 혹은 우리를 호리는 것들 이야기</span>
+                                                                        <div class="ex_range">
+                                                                            <span class="ex_date">2023.07.13 - 2023.10.12</span>
+                                                                        </div>
+                                                                        <div class="ex_loc_row">
+                                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                                <div class="ex_top">
+                                                                    <div class="ex_top_flag">
+                                                                        <span class="flag">추천</span>
+                                                                        <span class="flag type2">이벤트</span>
+                                                                    </div>
+
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="comm_ex_item">
+                                                                <a href="#" title="맥스 달튼, 영화의 순간들 상세페이지로 이동">
+                                                                    <figure class="ex_img_fig">
+                                                                        <figcaption>맥스 달튼, 영화의 순간들 포스터</figcaption>
+                                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img02.jpg" alt="전시정보 관련 포스터">
+                                                                    </figure>
+
+                                                                    <div class="ex_guide">
+                                                                        <span class="ex_sbj">맥스 달튼, 영화의 순간들</span>
+                                                                        <div class="ex_range">
+                                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                                            <span class="flag sm">오픈예정</span>
+                                                                        </div>
+                                                                        <div class="ex_loc_row">
+                                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                                <div class="ex_top">
+                                                                    <div class="ex_top_flag">
+                                                                        <span class="flag">추천</span>
+                                                                        <span class="flag type2">이벤트</span>
+                                                                    </div>
+
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="comm_ex_item">
+                                                                <a href="#" title="도널드 저드 상세페이지로 이동">
+                                                                    <figure class="ex_img_fig">
+                                                                        <figcaption>도널드 저드 포스터</figcaption>
+                                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img03.jpg" alt="전시정보 관련 포스터">
+                                                                    </figure>
+
+                                                                    <div class="ex_guide">
+                                                                        <span class="ex_sbj">도널드 저드</span>
+                                                                        <div class="ex_range">
+                                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                                            <span class="flag sm">종료</span>
+                                                                        </div>
+                                                                        <div class="ex_loc_row">
+                                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                                            <span class="ex_place ex_loc_sub">타데우스로팍</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                                <div class="ex_top">
+                                                                    <div class="ex_top_flag">
+                                                                        <span class="flag">추천</span>
+                                                                    </div>
+
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="comm_ex_item">
+                                                                <a href="#" title="이시 우드 《I Like To Watch》 상세페이지로 이동">
+                                                                    <figure class="ex_img_fig">
+                                                                        <figcaption>이시 우드 《I Like To Watch》 포스터</figcaption>
+                                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img04.jpg" alt="전시정보 관련 포스터">
+                                                                    </figure>
+
+                                                                    <div class="ex_guide">
+                                                                        <span class="ex_sbj">이시 우드 《I Like To Watch》</span>
+                                                                        <div class="ex_range">
+                                                                            <span class="ex_date">2023.07.13 - 2023.10.12</span>
+                                                                        </div>
+                                                                        <div class="ex_loc_row">
+                                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                                            <span class="ex_place ex_loc_sub">스페이스K서울</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                                <div class="ex_top">
+                                                                    <div class="ex_top_flag">
+                                                                        <span class="flag">추천</span>
+                                                                        <span class="flag type2">이벤트</span>
+                                                                    </div>
+
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="comm_ex_item">
+                                                                <a href="#" title="《Nalini MALANI: My Reality is Different》 상세페이지로 이동"> 
+                                                                    <figure class="ex_img_fig">
+                                                                        <figcaption>《Nalini MALANI: My Reality is Different》 포스터</figcaption>
+                                                                        <img class="ex_img" src="../../resources/images/temp/temp_ex_img05.jpg" alt="전시정보 관련 포스터">
+                                                                    </figure>
+
+                                                                    <div class="ex_guide">
+                                                                        <span class="ex_sbj">《Nalini MALANI: My Reality is Different》</span>
+                                                                        <div class="ex_range">
+                                                                            <span class="ex_date">2023.06.29 - 2023.09.04</span>
+                                                                        </div>
+                                                                        <div class="ex_loc_row">
+                                                                            <span class="ex_loc ex_loc_sub">서울/강서구</span>
+                                                                            <span class="ex_place ex_loc_sub">아라리오 갤러리 서울</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                                <div class="ex_top">
+                                                                    <div class="ex_top_flag">
+                                                                        <span class="flag">추천</span>
+                                                                        <span class="flag type2">이벤트</span>
+                                                                    </div>
+
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <!-- D: //전시정보 탭에서 검색결과가 없는 경우 노출 -->
-
-                                                <!-- D: 전시정보 탭에서 검색결과가 있는 경우 노출 -->
-                                                <p style="padding:40px 0;">전시정보 목록에 대한 마크업 추가될 예정(추가 시 이 부분 삭제)</p>
-                                                <!-- //D: 전시정보 탭에서 검색결과가 있는 경우 노출 -->
-                                            </div>
-                                            <!-- //전시정보 탭 내용 -->
-
-                                            <!-- 아트뉴스 탭 내용 -->
-                                            <div class="tab_cont">
-                                                <!-- D: 아트뉴스 탭에서 검색결과가 없는 경우 노출 -->
-                                                <div class="nodata">
-                                                    <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
+                                                <!-- D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                                <div class="btn_more_wrap type1">
+                                                    <button type="button" class="btn more"><span>더보기</span></button>
                                                 </div>
-                                                <!-- D: //아트뉴스 탭에서 검색결과가 없는 경우 노출 -->
-
-                                                <!-- D: 아트뉴스 탭에서 검색결과가 있는 경우 노출 -->
-                                                <p style="padding:40px 0;">아트뉴스 목록에 대한 마크업 추가될 예정(추가 시 이 부분 삭제)</p>
-                                                <!-- //D: 전시정보 탭에서 검색결과가 있는 경우 노출 -->
+                                                <!-- //D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
                                             </div>
-                                            <!-- //아트뉴스 탭 내용 -->
-
-                                            <!-- 갤러리 탭 내용 -->
-                                            <div class="tab_cont">
-                                                <!-- D: 갤러리 탭에서 검색결과가 없는 경우 노출 -->
-                                                <div class="nodata">
-                                                    <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
-                                                </div>
-                                                <!-- D: //갤러리 탭에서 검색결과가 없는 경우 노출 -->
-
-                                                <!-- D: 갤러리 탭에서 검색결과가 있는 경우 노출 -->
-                                                <p style="padding:40px 0;">갤러리 목록에 대한 마크업 추가될 예정(추가 시 이 부분 삭제)</p>
-                                                <!-- //D: 갤러리 탭에서 검색결과가 있는 경우 노출 -->
-                                            </div>
-                                            <!-- //갤러리 탭 내용 -->
-
-                                            <!-- 작가 탭 내용 -->
-                                            <div class="tab_cont">
-                                                <!-- D: 작가 탭에서 검색결과가 없는 경우 노출 -->
-                                                <div class="nodata">
-                                                    <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
-                                                </div>
-                                                <!-- D: //작가 탭에서 검색결과가 없는 경우 노출 -->
-
-                                                <!-- D: 작가 탭에서 검색결과가 있는 경우 노출 -->
-                                                <p style="padding:40px 0;">작가 목록에 대한 마크업 추가될 예정(추가 시 이 부분 삭제)</p>
-                                                <!-- //D: 작가 탭에서 검색결과가 있는 경우 노출 -->
-                                            </div>
-                                            <!-- //작가 탭 내용 -->
-
-                                            <!-- 이벤트 탭 내용 -->
-                                            <div class="tab_cont">
-                                                <!-- D: 이벤트 탭에서 검색결과가 없는 경우 노출 -->
-                                                <div class="nodata">
-                                                    <p class="txt type1"><strong class="word">앙리 마티스</strong> 에 대한 검색 결과가 없습니다.</p>
-                                                </div>
-                                                <!-- D: //이벤트 탭에서 검색결과가 없는 경우 노출 -->
-
-                                                <!-- D: 이벤트 탭에서 검색결과가 있는 경우 노출 -->
-                                                <p style="padding:40px 0;">이벤트 목록에 대한 마크업 추가될 예정(추가 시 이 부분 삭제)</p>
-                                                <!-- //D: 이벤트 탭에서 검색결과가 있는 경우 노출 -->
-                                            </div>
-                                            <!-- //이벤트 탭 내용 -->
                                         </div>
+                                        <!-- //전시정보 -->
+
+                                        <!-- 산책코스 -->
+                                        <div class="bodycont_section">
+                                            <div class="tit_wrap line">
+                                                <div class="tit_area">
+                                                    <h2 class="tit">산책코스 <strong class="num">1</strong></h2>
+                                                </div>
+                                            </div>
+                                            <div class="cont_body">
+                                                <div class="bazaarspick_list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <figure class="wc_img">
+                                                                        <figcaption><mark>앙리 마티스</mark> 서거 70주년 특별전 : LOVE & JAZZ</figcaption>
+                                                                        <img src="../../resources/images/temp/temp-aw03.jpg" loading="lazy">
+                                                                    </figure>
+                                                                </a>
+                                                                <div class="ex_top">
+                                                                    <button class="btn_ico scrap sz_28 js-btn-scrap on" title="스크랩 누르기">
+                                                                        <span class="blind">스크랩</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                                <!--
+                                                <div class="btn_more_wrap type1">
+                                                    <button type="button" class="btn more"><span>더보기</span></button>
+                                                </div>
+                                                -->
+                                                <!-- //D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                            </div>
+                                        </div>
+                                        <!-- //산책코스 -->
+
+                                        <!-- 아트뉴스 -->
+                                        <div class="bodycont_section">
+                                            <div class="tit_wrap line">
+                                                <div class="tit_area">
+                                                    <h2 class="tit">아트뉴스 <strong class="num">22</strong></h2>
+                                                </div>
+                                            </div>
+
+                                            <div class="cont_body">
+                                                <div class="masonry_list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artnews01.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">ART NEWS</p>
+                                                                        <p class="item_desc">설화수, 달항아리에 담다</p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artnews02.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">INTERVIEW</p>
+                                                                        <p class="item_desc">'<mark>앙리 마티스</mark> 특별전' 전시 얼리버트 티켓 오픈</p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artnews03.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">EXHIBITION</p>
+                                                                        <p class="item_desc">프리즈 서울 그 작품은 얼마에 팔렸을까?</p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artnews04.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">EXHIBITION</p>
+                                                                        <p class="item_desc">장소마저 특별! 금호동에서 열리는 나이키 전시가 특별한 이유</p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artnews01.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">ART NEWS</p>
+                                                                        <p class="item_desc">설화수, 달항아리에 담다</p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artnews02.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">INTERVIEW</p>
+                                                                        <p class="item_desc">당신 곁에 미술</p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                                <!--
+                                                <div class="btn_more_wrap type1">
+                                                    <button type="button" class="btn more"><span>더보기</span></button>
+                                                </div>
+                                                -->
+                                                <!-- //D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                            </div>
+                                        </div>
+                                        <!-- //아트뉴스 -->
+
+                                        <!-- 갤러리 -->
+                                        <div class="bodycont_section">
+                                            <div class="tit_wrap line">
+                                                <div class="tit_area">
+                                                    <h2 class="tit">갤러리 <strong class="num">22</strong></h2>
+                                                </div>
+                                            </div>
+                                            <div class="cont_body">
+                                                <div class="gallary_list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/gallary01.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">갤러리 508</p>
+                                                                        <p class="item_loc"><span>서울/강남구</span><span>서울 강남구 도산대로67길 14 1층</span></p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/gallary02.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">G Gallery</p>
+                                                                        <p class="item_loc"><span>서울/강남구</span><span>서울 강남구 삼성로 748 제이에스하우스제이에스하우스제이에스하우스제이에스하우스 B1</span></p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/gallary03.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">더현대 서울 6층, ALT.1</p>
+                                                                        <p class="item_loc"><span>서울/강남구</span><span>서울 영등포구 여의대로 108 더현대 서울</span></p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_name"><img src="../../resources/images/temp/gallary04.png" alt=""></div>
+                                                                    <div class="item_info">
+                                                                        <p class="item_sbj">CxC아트뮤지엄 <mark>앙리 마티스</mark></p>
+                                                                        <p class="item_loc"><span>서울/광진구</span><span>서울 광진구 아차산로272 스타시티 3층 <mark>앙리 마티스</mark> 특별전</span></p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- D: 1~4개 까지는 더보기 버튼 노출 안함. 5개 이상부터 더보기 버튼 노출 -->
+                                                <div class="btn_more_wrap type1">
+                                                    <button type="button" class="btn more"><span>더보기</span></button>
+                                                </div>
+                                                <!-- //D: 1~4개 까지는 더보기 버튼 노출 안함. 5개 이상부터 더보기 버튼 노출 -->
+                                            </div>
+                                        </div>
+                                        <!-- //갤러리 -->
+
+                                        <!-- 작가 -->
+                                        <div class="bodycont_section">
+                                            <div class="tit_wrap line">
+                                                <div class="tit_area">
+                                                    <h2 class="tit">작가 <strong class="num">1</strong></h2>
+                                                </div>
+                                            </div>
+                                            <div class="cont_body">
+                                                <div class="masonry_list">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="atcbox">
+                                                                <a href="#">
+                                                                    <div class="item_img"><img src="../../resources/images/temp/artist04.png" alt=""></div>
+                                                                    <div class="item_info type2">
+                                                                        <div class="flag_area">
+                                                                            <span class="flag sm">회화</span>
+                                                                            <span class="flag sm">사진</span>
+                                                                            <span class="flag sm">미디어아트</span>
+                                                                        </div>
+                                                                        <p class="item_desc"><mark>앙리 마티스</mark></p>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                                <!--
+                                                <div class="btn_more_wrap type1">
+                                                    <button type="button" class="btn more"><span>더보기</span></button>
+                                                </div>
+                                                -->
+                                                <!-- //D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                            </div>
+                                        </div>
+                                        <!-- //작가 -->
+
+                                        <!-- 이벤트 -->
+                                        <div class="bodycont_section">
+                                            <div class="tit_wrap line">
+                                                <div class="tit_area">
+                                                    <h2 class="tit">이벤트 <strong class="num">7</strong></h2>
+                                                </div>
+                                            </div>
+                                            <!-- 게시판 -->
+                                            <div class="board_wrap">
+                                                <!-- 목록 -->
+                                                <div class="board_list">
+                                                    <ul class="cmm_list">
+                                                        <li>
+                                                            <div class="board_item">
+                                                                <a href="#">
+                                                                    <div class="detail_box">
+                                                                        <strong class="tit"><mark>앙리 마티스</mark> 전시회 초대권 이벤트</strong>
+                                                                    </div>
+                                                                    <div class="info_box">
+                                                                        <span class="flag sm type3">진행중</span>
+                                                                        <span class="item date">2023.06.29 - 2023.10.28</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="board_item">
+                                                                <a href="#">
+                                                                    <div class="detail_box">
+                                                                        <strong class="tit">10월 예술산책 모나코-몬테카를로 발레단의 &lt;로미오와 줄리엣&gt; 초대권 이벤트</strong>
+                                                                    </div>
+                                                                    <div class="info_box">
+                                                                        <span class="flag sm type3">진행중</span>
+                                                                        <span class="item date">2023.06.29 - 2023.10.28</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="board_item">
+                                                                <a href="#">
+                                                                    <div class="detail_box">
+                                                                        <strong class="tit">'공간'이라는 개념은 늘 그 자리에 있습니다. 공간을 이루는 사람과 환경은 시간에 따라 변하지만, 그 공간을 타고 흐르는 기운은 항상 그곳을 감싸고 있죠.</strong>
+                                                                    </div>
+                                                                    <div class="info_box">
+                                                                        <span class="flag sm type3">진행중</span>
+                                                                        <span class="item date">2023.06.29 - 2023.10.28</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="board_item">
+                                                                <a href="#">
+                                                                    <div class="detail_box">
+                                                                        <strong class="tit">구정아 《공중부양》 티켓 이벤트</strong>
+                                                                    </div>
+                                                                    <div class="info_box">
+                                                                        <span class="flag sm">종료</span>
+                                                                        <span class="item date">2023.06.29 - 2023.10.28</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="board_item">
+                                                                <a href="#">
+                                                                    <div class="detail_box">
+                                                                        <strong class="tit">개인전에서 유니는 예술을 통해 현실과 상상, 미래와 과거를 연결하고, 그 속에서 새로운 예술의 형태와 의미를 발견하고자 합니다. 그녀의 작품은 자연의 소재와 기술적 요소를 결합하며, 관객들에게 과학과 예술의 경계를 초월하는 아름다움을 선사합니다.</strong>
+                                                                    </div>
+                                                                    <div class="info_box">
+                                                                        <span class="flag sm">종료</span>
+                                                                        <span class="item date">2023.06.29 - 2023.10.28</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="board_item">
+                                                                <a href="#">
+                                                                    <div class="detail_box">
+                                                                        <strong class="tit">데이비드 살레 《World People》 티켓 이벤트</strong>
+                                                                    </div>
+                                                                    <div class="info_box">
+                                                                        <span class="flag sm">종료</span>
+                                                                        <span class="item date">2023.06.29 - 2023.10.28</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- //목록 -->
+
+                                                <!-- D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                                <div class="btn_more_wrap type1">
+                                                    <button type="button" class="btn more"><span>더보기</span></button>
+                                                </div>
+                                                <!-- //D: 1~6개 까지는 더보기 버튼 노출 안함. 7개 이상부터 더보기 버튼 노출 -->
+                                            </div>
+                                            <!-- //게시판 -->
+                                        </div>
+                                        <!-- //이벤트 -->
                                     </div>
                                 </div>
                             </div>
@@ -399,6 +852,7 @@
                         </div>
                         <!-- //검색 결과 영역 -->
                     </div>
+                    <!-- //검색결과 : 검색결과 없는 경우 -->
                 </div>
             </div>
             <!-- //container -->
@@ -512,11 +966,6 @@
     <!-- js -->
     <script src="../../resources/js/swiper.min.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
-
-    <script>
-        // 탭메뉴, 탭컨텐츠
-        $('.tab_wrap').commonTab();
-    </script>
     <!-- //js -->
 </body>
 </html>

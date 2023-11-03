@@ -100,7 +100,7 @@ a:hover{text-decoration:none;}
 .lockbody { overflow : hidden; height: 100%;}
 .non-oby { overscroll-behavior-y: none }
 
-mark{background-color:#FFFF44;color:inherit;}
+mark{background-color:rgba(255,80,129,.6);color:inherit;}
 
 
 /************************* Form *************************/
@@ -631,6 +631,7 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type01 > ul > li > a{display:block;padding:0 8px;font-size:18px;font-weight:500;color:#999;line-height:26px;}
 .tab_menu.type01 > ul > li.on > a{font-weight:700;color:#111;}
 .tab_menu.type01 > ul > li > a > span{display:inline-block;margin-left:8px;font-family:Gotham;font-weight:500;line-height:22px;}
+.tab_menu.type01 > ul > li.disabled > a{color:#ccc;pointer-events:none;}
 
 .tab_menu.type02 > ul{display:flex;flex-wrap:wrap;gap:8px 0;margin:0 -16px;}
 .tab_menu.type02 > ul > li{position:relative;}
@@ -638,6 +639,7 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type02 > ul > li:last-child:after{display:none;}
 .tab_menu.type02 > ul > li > a{display:block;padding:0 16px;font-size:16px;font-weight:500;color:#999;line-height:24px;}
 .tab_menu.type02 > ul > li.on > a{font-weight:700;color:#111;}
+.tab_menu.type02 > ul > li.disabled > a{color:#ccc;pointer-events:none;}
 
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}
@@ -679,7 +681,7 @@ background:#fff;overflow:hidden;z-index:230}
 .result_word .word{font-weight:700;}
 .result_word .word:before{content:'‘';}
 .result_word .word:after{content:'’';}
-.result_sorting{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:40px;}
+.result_sorting{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:60px;}
 .result_sorting .total{font-size:24px;font-weight:400;line-height:35px;}
 .result_sorting .total .count{font-family:Gotham;font-size:26px;font-weight:500;line-height:34px;}
 .word_box{display:flex;flex-wrap:wrap;align-items:center;gap:12px 8px;}
@@ -837,9 +839,9 @@ background:#fff;overflow:hidden;z-index:230}
     .result_word{margin-bottom:20px;}
     .result_word .txt{font-size:16px;line-height:23px;}
     .result_word .count{font-size:18px;}
-    .result_keyword{margin-bottom:20px;font-size:16px;line-height:23px;}
+    .result_keyword{margin-bottom:20px;font-size:16px;line-height:24px;}
     .result_keyword .count{font-size:18px;line-height:17px;}
-    .result_sorting{margin-bottom:20px;}
+    .result_sorting{margin-bottom:48px;}
     .result_sorting .word_box{row-gap:8px;width:100%;}
     .result_sorting .word_box .tag:last-of-type{margin-right:12px;}
     .result_sorting .word_box .total_num{font-size:16px;line-height:23px;}

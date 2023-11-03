@@ -381,7 +381,6 @@
 .mypage.main .thumb_item .info_box .tit{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .mypage.main .thumb_item .info_box .txt{display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;max-height:140px;}
 .mypage.main .nodata{padding:170px 40px;background-color:#f7f7f7;}
-.mypage.main .tit_wrap.line ~ .board_wrap .board_list{margin-top:-24px;border-top:0;}
 .mypage.main .cnt_list .board_item:not(.reply) .detail_box .tit{white-space:nowrap;text-overflow:ellipsis;}
 .mypage.main .cnt_list .board_item .reply_box .reply_txt{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .mypage .cont_heading_area{margin-bottom:24px;}
@@ -402,6 +401,8 @@
 .board_list{border-top:2px solid #111;}
 .board_list li{border-bottom:1px solid #dbdbdb;}
 .board_list li.noti_fixed{background-color:rgba(0, 228, 178, 0.04);}
+
+.tit_wrap.line ~ .board_wrap .board_list{margin-top:-24px;border-top:0;}
 
 .board_item{padding:24px 0;}
 .board_item *{word-break:break-all;}

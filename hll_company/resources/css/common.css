@@ -371,6 +371,13 @@ background:#fff;overflow:hidden;z-index:230}
 
 
 /************************* Media Query *************************/
+
+@media screen and (max-width: 996px) {
+	.header .cont_inner { justify-content: flex-start;}
+	.header .gnb_list { margin-left:80px}
+	.header .gnb_link { white-space:nowrap}
+}
+
 @media screen and (max-width: 768px) {
     .cont_inner {padding: 0 20px;}
 
@@ -436,6 +443,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.header .btn-close-am{display: block;}
 	.header .btn-close-am {position: absolute;top: 12px;right: 20px;width: 24px;}
 	.header .btn-open-am {position: absolute;top: 50%;right: 20px;width: 24px;transform: translateY(-50%);}
+
+	.header .gnb_list { margin-left:0px} /* mobile 전체메뉴 */
 	
 	/* footer */
 	.footer_top{padding: 20px 0;}

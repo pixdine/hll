@@ -1,0 +1,9 @@
+.main_header{position: fixed;top: 0;left: 0;right: 0;}
+
+.main_container .section{padding-top: 72px;}
+.main_container .intro_video{position: absolute;top: 0;left: 50%;height: calc(100vh - 72px);transform: translateX(-50%);}
+.main_container .intro_first{position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 2;}
+.main_container .intro_first .if_inner{height: 100%;padding-top: 180px;}
+.main_container .intro_first .if_top{position: relative;}
+.main_container .intro_first .if_slogan{}
+.main_container .intro_second{display: none;position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 1;}

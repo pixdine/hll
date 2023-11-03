@@ -292,7 +292,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 
 /* header */
-.header{position: relative;z-index: 1;}
+.header{position: sticky;top: 0;left: 0;right: 0;z-index: 1;background: #fff;}
 .header .cont_inner{display: flex;position: relative;height: 72px;align-items: center;justify-content: center;}
 .header .logo{position: absolute;top: 50%;left: 40px;width: 80px;transform: translateY(-50%);}
 .header .logo a{display: flex;}

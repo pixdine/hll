@@ -28,7 +28,7 @@
                     <div class="cont_inner">
                         <h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_hll.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
                         <nav class="gnb">
-                            <button class="btn-close-am" title="전체 메뉴 닫기"><img src="../resources/images/ic_close_24.png"></button>
+                            <button class="btn-close-am" title="전체 메뉴 닫기"><img src="./../resources/images/ic_close_24.png"></button>
 
                             <ul class="gnb_list">
                                 <li class="gnb_item"><a href="#" class="gnb_link">COMPANY</a></li>
@@ -57,7 +57,7 @@
                         </nav>
                     </div>
 
-                    <button class="btn-open-am" title="전체 메뉴 열기"><img src="../resources/images/ic_menu_24.png"></button>
+                    <button class="btn-open-am" title="전체 메뉴 열기"><img src="../../resources/images/ic_menu_24.png"></button>
                 </header> 
                 <!-- //header -->
             <!-- container -->
@@ -79,6 +79,51 @@
 
                     <div class="cont_inner">
                         <div class="cont_body">
+                            <div class="life_slide">
+                                <div class="swiper" data-slide="slider-life">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="txt">
+                                                <strong>
+                                                    투명한 HLLer!<br/>
+                                                    위/아래/옆 동료와 공유해가며 똑똑하게 일합니다
+                                                </strong>
+                                                <p>투명하게 정보를 공유해요. 투명한 정보 공유는 주도적인 업무의 시작이니까요.숨기지 않고 열려 있는 분위기 속에서 스스로의 일을 즐깁니다. 복잡하게 일하지 않아요. 변화되는 환경을 따라잡기 위한 새로운 일을 하기 위해, 과거의 불필요한 업무대신 효율적이고 생산적인 업무 방식에 대해 항상 고민합니다. 집중하고 몰입해서 일하고 제 때 퇴근해서 워라밸 찾기, 똑똑한 HLLer의 일하는 방식입니다.</p>
+                                            </div>
+                                            <div class="img">
+                                                <img src="../../resources/images/temp/life_slide01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="txt">
+                                                <strong>
+                                                    즐기는 HLLer! <br/>
+                                                    유연하고 과감한 시도를 합니다
+                                                </strong>
+                                                <p>변화하면 기회가 됩니다. 우리는 지속적인 셀프 체크업을 통해 성장해 나가고 있습니다. 변화를 즐기며, 크리에이티브 분야의 최고가 되기 위해 노력합니다. 나와 나의 팀 그리고 회사의 목표가 같으면 어렵지 않아요. Me grow, We grow!</p>
+                                            </div>
+                                            <div class="img">
+                                                <img src="../../resources/images/temp/life_slide02.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="txt">
+                                                <strong>
+                                                    대화하는 HLLer! <br/>
+                                                    자유로운 문화를 만들고 서로를 존중합니다
+                                                </strong>
+                                                <p>우리 사무실엔 벽이 없어요. 더 나은 소통과 개개인의 자율성을 지향하니까요. 공간적 제약 없는 자유로운 분위기 속에서 동료와의 반가운 소통을 하고 있어요.
+                                                    동료와 함께 성장하는 배려심도 중요합니다. 경청과 공감은 오픈 커뮤니케이션의 시작입니다, 내 의견을 명확하게 말하는 것도 잊지 마세요!</p>
+                                            </div>
+                                            <div class="img">
+                                                <img src="../../resources/images/temp/life_slide03.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
                             <div class="life_wrap">
                                 <div class="tit_wrap">
                                     <div class="tit_area">
@@ -220,6 +265,7 @@
         </div>
     </div>
 	<!-- js -->
+    <script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 
 	<script>
@@ -247,6 +293,8 @@
 					$("#checkAll").prop("checked", true);
 				}
 			}
+
+            lifeSlide() ;
 
 
 		});

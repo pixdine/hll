@@ -51,7 +51,7 @@
 .board_st01 .board_list{position: relative;display: flex;align-items:center;}
 .board_st01 .status{width:10%}
 .board_st01 .status .point{color:var(--point);}
-.board_st01 .b_badge{display: inline-block;padding: 5px 8px;font-size:14px;font-weight:500;line-height:1;}
+.board_st01 .b_badge{display: inline-block;padding: 5px 8px;font-size:14px;font-weight:500;line-height:1.4;}
 .board_st01 .b_badge.end{color:#666;background-color:#F7F7F7;}
 .board_st01 .b_badge.ing{color:var(--point);background-color:#F5F5FD;}
 .board_st01 dl{position: relative;display: table;table-layout: fixed;width: 100%;}
@@ -84,9 +84,21 @@
 
 
 /*HLL life*/
+.life_slide{position:relative;padding:60px 0 120px;}
+.life_slide .swiper{overflow: hidden;}
+.life_slide .swiper .swiper-slide{display:flex;align-items:center;gap:60px;}
+.life_slide .swiper .swiper-slide div{flex:1}
+.life_slide .swiper .swiper-slide .txt strong{display:block;margin-bottom:16px;font-size:28px;line-height:41px;}
+.life_slide .swiper .swiper-slide .txt p{font-size:18px;font-weight:400;line-height:26px;color:#666;}
+.life_slide .swiper-button-next,.swiper-button-prev { position: absolute; top:50%; transform: translateY(-50%); width:40px; height:40px; background: transparent url('../images/ic_arrow_right_40.svg') center center no-repeat; background-size:100% 100%; margin-top:-20px; cursor:pointer}
+.life_slide .swiper-button-next {right:-80px}
+.life_slide .swiper-button-prev {transform: translateY(-50%) rotate(180deg);left:-80px}
+.life_slide .swiper-button-disabled { opacity:0.4; cursor:default;}
+
 .life_list{display:flex;flex-wrap:wrap;column-gap:40px;}
-.life_list li{width:calc(33.333% - 27px);padding:48px 0;border-top:1px solid #DBDBDB;}
-.life_list li:first-child,.life_list li:nth-child(2),.life_list li:nth-child(3){border-top:0;padding-top: 40px;}
+.life_list li{width:calc(33.333% - 27px);padding:48px 0;border-bottom:1px solid #DBDBDB;}
+.life_list li:first-child,.life_list li:nth-child(2),.life_list li:nth-child(3){padding-top: 40px;}
+li:nth-last-child(-n+2) {border-bottom:0;}
 .life_list li i{display: block;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px;width: 48px;}
 .life_list li strong{color:var(--point);font-size:22px;font-weight:500;display:block;margin-top:26px;line-height:28px;}
 .life_list li p{font-size:18px;font-weight:500;color:#666;line-height:26px;margin-top:12px;word-break: break-all;}
@@ -268,10 +280,16 @@
     .board_st01.view_cont .board_detail .btn_area{margin-bottom:0;}
 
     /*HLL life*/
-
+    .life_slide{padding:0 0 60px;}
+    .life_slide .swiper .swiper-slide{flex-direction:column-reverse;gap:16px;}
+    .life_slide .swiper .swiper-slide div{flex:none}
+    .life_slide .swiper .swiper-slide .txt strong{font-size:20px;line-height:29px;margin-bottom:12px;}
+    .life_slide .swiper .swiper-slide .txt p{line-height:23px;}
+    .life_slide .swiper-button-next, .swiper-button-prev{display:none;}
     .life_list li{width:100%;}
-    .life_list li:first-child{padding-top:0;}
-    .life_list li:nth-child(2), .life_list li:nth-child(3){border-top:1px solid #dbdbdb}
+    .life_list li:first-child{padding-top:8px;}
+    .life_list li:last-child{padding-bottom:0;}
+    .life_list li:not(:last-child){border-bottom:1px solid #dbdbdb}
     .life_list li i{background-size:32px 32px;height: 32px;width: 32px;}
     .life_list li strong{margin-top:20px;font-size: 18px;line-height: 24px;}
     .life_list li p{font-size:16px;line-height:23px;}

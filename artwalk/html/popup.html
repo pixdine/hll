@@ -15,214 +15,221 @@
 	<!-- //css, Jquery -->
 </head>
 <body>
-    <div id="wrap" class="wrap">
-        <!-- header -->
-        <header id="header" class="header">
-            <!-- header_wrap -->
-            <div class="header_wrap">
-                <div class="header_top">
-                    <div class="cont_inner">
-                        <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
-                        <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
-                        <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
-                    </div>
-                </div>
-                <div class="header_bottom">
-                    <div class="cont_inner">
-                        <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
-                        <strong class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
-                        <div class="header_navi">
-                            <ul>
-                                <li><a href="#">전시정보</a></li>
-                                <li><a href="#">산책코스</a></li>
-                                <li><a href="#">아트뉴스</a></li>
-                                <li><a href="#">커뮤니티</a></li>
-                                <li><a href="#">예술백과</a></li>
-                                <li><a href="#">마이페이지</a></li>
-                            </ul>
-                        </div>
-                        <div class="header_util">
-                            <div class="aside">
-                                <a href="#">LOGIN</a><!-- D: LOGOUT -->
-                                <a href="#">SIGNUP</a>
-                            </div>
-                            <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+    <div id="bazaar">
+        <div id="wrap" class="wrap">
+            <!-- header -->
+            <header id="header" class="header">
+                <!-- header_wrap -->
+                <div class="header_wrap">
+                    <div class="header_top">
+                        <div class="cont_inner">
+                            <h1 class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+                            <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
                         </div>
                     </div>
-                </div>
-
-                <!-- D: 플로팅바 영역 -->
-                <div class="floating_bar">
-                    <div class="cont_inner">
-                        <div class="detail_info">
-                            <!-- 브레드크럼 -->
-                            <div class="breadcrumb">
-                                <a href="#" class="home">HOME</a>
-                                <a href="#" class="cate_dep">전시 정보</a>
-                            </div>
-                            <!-- //브레드크럼 -->
-                            <!-- 기사 타이틀 -->
-                            <div class="txtbox">
-                                <p class="tit">이재석 《극단적으로 복잡하나 매우 우아하게 설계된》</p>
-                            </div>
-                            <!-- //기사 타이틀 -->
-                            <!-- 스크랩, 공유하기 -->
-                            <div class="sharebox">
-                                <button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-                                <button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
-                            </div>
-                            <!-- //스크랩, 공유하기 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- //D: 플로팅바 영역 -->
-            </div>
-            <!-- //header_wrap -->
-
-            <!-- 검색 레이어 -->
-            <div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
-                <div class="cont_inner">
-                    <div class="search_box">
-                        <div class="inputbox search">
-                            <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
-                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
-                            <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
-                        </div>
-
-                        <!-- 추천 키워드 -->
-                        <!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
-                        <div class="search_keyword">
-                            <h3 class="search_tit">추천 키워드</h3>
-                            <!-- 키워드 리스트 -->
-                            <!-- D: 최대 10개까지 노출 -->
-                            <ul class="word_list">
-                                <li><a href="#">#어윈올라프</a></li>
-                                <li><a href="#">#불가리</a></li>
-                                <li><a href="#">#블랙핑크하퍼스바자커버</a></li>
-                                <li><a href="#">#갤러리</a></li>
-                                <li><a href="#">#5월전시</a></li>
-                                <li><a href="#">#패션아이템</a></li>
-                                <li><a href="#">#백남준</a></li>
-                                <li><a href="#">#반팔재킷</a></li>
-                                <li><a href="#">#구찌 패션쇼</a></li>
-                                <li><a href="#">#STAR일링</a></li>
-                            </ul>
-                            <!-- //키워드 리스트 -->
-                        </div>
-                        <!-- //추천 키워드 -->
-                    </div>
-                </div>
-            </div>
-            <!-- //검색 레이어 -->
-
-            <!-- D: [팝업] 공유하기 -->
-            <div class="popup_layer pop_share" data-layer="popup_share">
-                <div class="popup_inner">
-                    <div class="popup_head">
-                        <div class="popup_tit">
-                            <h3 class="tit">공유하기</h3>
-                        </div>
-                        <div class="popup_close">
-                            <button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
-                        </div>
-                    </div>
-                    <div class="popup_cont">
-                        <div class="sns_list">
-                            <ul>
-                                <li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
-                                <li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
-                                <li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
-                                <li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //D: [팝업] 공유하기 -->
-        </header>
-        <!-- //header -->
-
-        <!-- 전체메뉴 -->
-        <div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
-            <div class="allmenu_dimmed"></div>
-            <div class="allmenu_area">
-                <div class="allmenu_cont">
-                    <!-- 상단 닫기 영역 -->
-                    <div class="top_area">
-                        <button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
-                    </div>
-                    <!-- //상단 닫기 영역 -->
-
-                    <div class="scroll_custom">
-                        <div class="allmenu_inner">
-                            <!-- 로그인/회원가입 -->
-                            <div class="allmenu_util">
-                                <a href="#">LOGIN</a><!-- D: LOGOUT -->
-                                <a href="#">SIGNUP</a>
-                            </div>
-                            <!-- //로그인/회원가입 -->
-
-                            <!-- 메뉴 -->
-                            <!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
-                            <div class="allmenu_list">
-                                <ul class="depth1">
-                                    <li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
-                                        <a href="#">전시정보<span></a>
+                    <div class="header_bottom">
+                        <div class="cont_inner">
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+                            <strong class="logo"><a href="./index.html"><img src="../resources/images/logo.svg" alt="예술산책"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+                            <div class="header_navi">
+                                <ul>
+                                    <li><a href="#">전시정보</a></li>
+                                    <li><a href="#">산책코스</a></li>
+                                    <li><a href="#">아트뉴스</a></li>
+                                    <li><a href="#">커뮤니티</a></li>
+                                    <li class="has_sub_menu"><a href="#">예술백과</a><!-- D: 하위메뉴가 있을 경우 has_sub_menu클래스추가 -->
+                                        <div class="sub_menu">
+                                            <ul class="sub_menu_list">
+                                                <li class="ssm_item"><a href="#">갤러리 정보</a></li>
+                                                <li class="ssm_item"><a href="#">작가 정보</a></li>
+                                            </ul>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <a href="#">산책코스<span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">아트뉴스<span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">커뮤니티<span></a>
-                                    </li>
-                                    <li class="has_menu">
-                                        <a href="#">예술백과<span><em class="blind">열기</em></span></a>
-                                        <ul class="depth2">
-                                            <li><a href="#">갤러리 정보</a></li>
-                                            <li><a href="#">작가 정보</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">마이페이지 <span></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">산책메이트 혜택 안내<span></span></a>
-                                    </li>
+                                    <li><a href="#">마이페이지</a></li>
                                 </ul>
                             </div>
-                            <!-- //메뉴 -->
-
-                            <div class="allmenu_list">
-                                <ul class="depth1">
-                                    <li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
-                                        <a href="#" class="arrow">하퍼스바자</a>
-                                    </li>
-                                </ul>
+                            <div class="header_util">
+                                <div class="aside">
+                                    <a href="#">LOGIN</a><!-- D: LOGOUT -->
+                                    <a href="#">SIGNUP</a>
+                                </div>
+                                <button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
                             </div>
-                            <!-- sns -->
+                        </div>
+                    </div>
+
+                    <!-- D: 플로팅바 영역 -->
+                    <div class="floating_bar">
+                        <div class="cont_inner">
+                            <div class="detail_info">
+                                <!-- 브레드크럼 -->
+                                <div class="breadcrumb">
+                                    <a href="#" class="home">HOME</a>
+                                    <a href="#" class="cate_dep">전시 정보</a>
+                                </div>
+                                <!-- //브레드크럼 -->
+                                <!-- 기사 타이틀 -->
+                                <div class="txtbox">
+                                    <p class="tit">이재석 《극단적으로 복잡하나 매우 우아하게 설계된》</p>
+                                </div>
+                                <!-- //기사 타이틀 -->
+                                <!-- 스크랩, 공유하기 -->
+                                <div class="sharebox">
+                                    <button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+                                    <button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+                                </div>
+                                <!-- //스크랩, 공유하기 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //D: 플로팅바 영역 -->
+                </div>
+                <!-- //header_wrap -->
+
+                <!-- 검색 레이어 -->
+                <div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+                    <div class="cont_inner">
+                        <div class="search_box">
+                            <div class="inputbox search">
+                                <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+                                <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+                                <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+                            </div>
+
+                            <!-- 추천 키워드 -->
+                            <!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+                            <div class="search_keyword">
+                                <h3 class="search_tit">추천 키워드</h3>
+                                <!-- 키워드 리스트 -->
+                                <!-- D: 최대 10개까지 노출 -->
+                                <ul class="word_list">
+                                    <li><a href="#">#어윈올라프</a></li>
+                                    <li><a href="#">#불가리</a></li>
+                                    <li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+                                    <li><a href="#">#갤러리</a></li>
+                                    <li><a href="#">#5월전시</a></li>
+                                    <li><a href="#">#패션아이템</a></li>
+                                    <li><a href="#">#백남준</a></li>
+                                    <li><a href="#">#반팔재킷</a></li>
+                                    <li><a href="#">#구찌 패션쇼</a></li>
+                                    <li><a href="#">#STAR일링</a></li>
+                                </ul>
+                                <!-- //키워드 리스트 -->
+                            </div>
+                            <!-- //추천 키워드 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //검색 레이어 -->
+
+                <!-- D: [팝업] 공유하기 -->
+                <div class="popup_layer pop_share" data-layer="popup_share">
+                    <div class="popup_inner">
+                        <div class="popup_head">
+                            <div class="popup_tit">
+                                <h3 class="tit">공유하기</h3>
+                            </div>
+                            <div class="popup_close">
+                                <button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+                            </div>
+                        </div>
+                        <div class="popup_cont">
                             <div class="sns_list">
-                                <ul class="jc-fs">
-                                    <li><a href="https://www.instagram.com/p/CmgUDfVusMr/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-                                    <li><a href="https://pf.kakao.com/_xaxmEXb" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오채널</span></a></li>
+                                <ul>
+                                    <li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+                                    <li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+                                    <li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+                                    <li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
                                 </ul>
                             </div>
-                            <!-- //sns -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //D: [팝업] 공유하기 -->
+            </header>
+            <!-- //header -->
+
+            <!-- 전체메뉴 -->
+            <div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+                <div class="allmenu_dimmed"></div>
+                <div class="allmenu_area">
+                    <div class="allmenu_cont">
+                        <!-- 상단 닫기 영역 -->
+                        <div class="top_area">
+                            <button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+                        </div>
+                        <!-- //상단 닫기 영역 -->
+
+                        <div class="scroll_custom">
+                            <div class="allmenu_inner">
+                                <!-- 로그인/회원가입 -->
+                                <div class="allmenu_util">
+                                    <a href="#">LOGIN</a><!-- D: LOGOUT -->
+                                    <a href="#">SIGNUP</a>
+                                </div>
+                                <!-- //로그인/회원가입 -->
+
+                                <!-- 메뉴 -->
+                                <!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+                                <div class="allmenu_list">
+                                    <ul class="depth1">
+                                        <li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+                                            <a href="#">전시정보<span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산책코스<span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">아트뉴스<span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">커뮤니티<span></a>
+                                        </li>
+                                        <li class="has_menu">
+                                            <a href="#">예술백과<span><em class="blind">열기</em></span></a>
+                                            <ul class="depth2">
+                                                <li><a href="#">갤러리 정보</a></li>
+                                                <li><a href="#">작가 정보</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">마이페이지 <span></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">산책메이트 혜택 안내<span></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //메뉴 -->
+
+                                <div class="allmenu_list">
+                                    <ul class="depth1">
+                                        <li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+                                            <a href="#" class="arrow">하퍼스바자</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- sns -->
+                                <div class="sns_list">
+                                    <ul class="jc-fs">
+                                        <li><a href="https://www.instagram.com/p/CmgUDfVusMr/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+                                        <li><a href="https://pf.kakao.com/_xaxmEXb" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오채널</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- //sns -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- //전체메뉴 -->
+            <!-- //전체메뉴 -->
 
-        <!-- container -->
-        <div id="container" class="container" style="display: flex; align-items: center; height: 90vh; overflow-y: auto;">
-            <div id="content" class="content">
-                <div class="cont_inner">
-                   <!-- 팝업버튼 -->
-                    <div class="cont_inner" style="padding-bottom:100px;">
+            <!-- container -->
+            <div id="container" class="container">
+                <div id="content" class="content">
+                    <div class="cont_inner" style="padding-top:100px;">
+                       <!-- 팝업버튼 -->
                         <button type="button" data-popsheet-open="sheet_1"><span>전시 정보 > 전시상세 (지도)</span></button><br>
                         <button type="button" data-popsheet-open="sheet_2"><span>전시 정보 > 필터</span></button><br>
                         <button type="button" data-popup-open="popup_1"><span>전시 정보 > 전시상세 > 운영규정</span></button><br>
@@ -231,6 +238,7 @@
                         <button type="button" data-popup-open="popup_4"><span>전시 정보 > 전시상세 > 리뷰 상세보기</span></button><br>
                         <br>
                         <button type="button" data-popup-open="popup_5"><span>커뮤니티 > 글쓰기</span></button><br>
+                        <button type="button" data-popup-open="popup_7"><span>커뮤니티 > 상세 > 수정</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>갤러리 정보 > 지도 크게보기</span></button><br>
                         <br>
                         <button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
@@ -241,16 +249,14 @@
                         <div class="inputbox calendar">
                             <input type="text" id="datepicker" class="inp" value="" readonly>
                         </div>
-
                     </div>
                 </div>
             </div>
+            <!-- //container -->
         </div>
-        <!-- //container --> 
     </div>
 
     <!--팝업위치-->
-    
     <!--D : PC_예술산책 / 전시정보 > 전시상세 (지도) -->
     <div class="popup_sheet exhibitions_map" data-popsheet="sheet_1">
         <div class="ps_inner map">
@@ -277,8 +283,7 @@
                                     <img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지"><!-- D: 지도 샘플 이미지 -->
                                     <span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)">
                                         <img src="../resources/images/ico_marker.svg" alt="마커"></span><!-- D: 샘플 마커 -->
-                                    <button type="button" class="btn_ico kakao_map"><span class="blind">카카오
-                                            맵</span></button><!-- D: 카카오 맵 -->
+                                    <button type="button" class="btn_ico kakao_map"><span class="blind">카카오 맵</span></button><!-- D: 카카오 맵 -->
                                 </div>
                             </div>
                         </div>
@@ -313,7 +318,7 @@
                                     <span class="fc_tit_txt">전시상태</span>
                                     <span class="fc_cnt"></span>
                                 </div>
-                                <button class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
+                                <button type="button" class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
                             </div>
                         </div>
                     
@@ -346,7 +351,7 @@
                             </ul>
                         </div>
                     
-                        <button class="fc_btn_toggle js-filter-toggle">
+                        <button type="button" class="fc_btn_toggle js-filter-toggle">
                             <span class="blind">열기</span>
                         </button>
                     </div>
@@ -358,7 +363,7 @@
                                     <span class="fc_tit_txt">장르</span>
                                     <span class="fc_cnt"></span>
                                 </div>
-                                <button class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
+                                <button type="button" class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
                             </div>
                         </div>
                     
@@ -421,7 +426,7 @@
                             </ul>
                         </div>
                     
-                        <button class="fc_btn_toggle js-filter-toggle">
+                        <button type="button" class="fc_btn_toggle js-filter-toggle">
                             <span class="blind">열기</span>
                         </button>
                     </div>
@@ -433,7 +438,7 @@
                                     <span class="fc_tit_txt">관람료</span>
                                     <span class="fc_cnt"></span>
                                 </div>
-                                <button class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
+                                <button type="button" class="fc_btn_cancel" title="선택 초기화하기">선택해제</button>
                             </div>
                         </div>
                     
@@ -460,7 +465,7 @@
                             </ul>
                         </div>
                     
-                        <button class="fc_btn_toggle js-filter-toggle">
+                        <button type="button" class="fc_btn_toggle js-filter-toggle">
                             <span class="blind">열기</span>
                         </button>
                     </div>
@@ -534,14 +539,14 @@
                     </div> 
                     
                     <div class="attach_pic">
-                        <button class="btn_attach" title="이미지 첨부하기"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <button type="button" class="btn_attach" title="이미지 첨부하기"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
                             <span class="txt">사진첨부</span>
                         </button>
                         <input type="file" id="image-upload" multiple/>
-                        <!-- <button class="btn_attach disabled"></button> -->
+                        <!-- <button type="button" class="btn_attach disabled"></button> -->
                         <!-- <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div> -->
@@ -591,37 +596,37 @@
                     </div> 
                     
                     <div class="attach_pic">
-                        <button class="btn_attach" disabled="disabled"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <button type="button" class="btn_attach" disabled="disabled"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
                             <span class="txt">사진첨부</span>
                         </button>
                         <input type="file" id="image-upload" multiple/>
                         <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div>
                         <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach02.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div>
                         <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach03.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div>
                         <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach04.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div>
                         <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach05.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div>
@@ -721,7 +726,7 @@
         </div>
     </div>
 
-    <!--D : 예술산책 / 커뮤니티 > 글쓰기 --> 
+    <!--D : 예술산책 / 커뮤니티 > 글쓰기 -->
     <div class="popup_full" data-popup="popup_5">
         <div class="popup_inner review">
             <div class="popup_head">
@@ -767,14 +772,14 @@
                     </div> 
                     
                     <div class="attach_pic">
-                        <button class="btn_attach" title="이미지 첨부하기"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                        <button type="button" class="btn_attach" title="이미지 첨부하기"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
                             <span class="txt">사진첨부</span>
                         </button>
                         <input type="file" id="image-upload" multiple/>
-                        <!-- <button class="btn_attach disabled"></button> -->
+                        <!-- <button type="button" class="btn_attach disabled"></button> -->
                         <!-- <div class="attach_img">
                             <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
-                            <button class="btn_del" title="첨부 이미지 삭제">
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
                                 <span class="blind">첨부 이미지 삭제</span>
                             </button>
                         </div> -->
@@ -785,6 +790,99 @@
                 <div class="btn_wrap">
                     <button type="button" class="btn bctype2"><span>취소</span></button>
                     <button type="button" class="btn bctype1"><span>등록</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--D : 예술산책 / 커뮤니티 > 글수정 -->
+    <div class="popup_full" data-popup="popup_7">
+        <div class="popup_inner review">
+            <div class="popup_head">
+                <h2 class="tit">커뮤니티</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_7"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="select_inp_row">
+                    <select class="select_inp_select">
+                        <option value="">카테고리 선택</option>
+                        <option value="" selected>전시장 주변 정보</option><!-- D: 선택된 카테고리일 때 selected 추가 -->
+                        <option value="">전시 소식</option>
+                        <option value="">전시 질문</option>
+                        <option value="">기타</option>
+                    </select>
+                    <div class="inputbox">
+                        <input type="tel" class="inp" id="subject" placeholder="제목을 입력해 주세요." title="제목을 입력해 주세요." value="미구엘 슈발리에 《디지털 뷰티》 아라아트센터 주변 맛집 소개" autocomplete="off">
+                        <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                    </div>
+                </div>
+                <div class="guide_row">
+                    <span class="guide_txt">내용작성</span>
+                    <span class="guide_txt_sub">* 50자 이상, 1,000자 이내</span>
+                </div> 
+
+                <div class="textarea_wrap">
+                    <textarea class="textarea review_text_area" maxlength="1000" placeholder="내용을 입력해 주세요." title="내용을 입력해 주세요.">우리 문화유산을 사랑하고, 국립중앙박물관에 관심을 가져주시는 여러분, 안녕하십니까? 이번 공모전에는 총 402건이 등록되었고, 217건이 접수되어 치열한 경합을 벌였습니다. 참신하고 재치 있는 아이디어, 성실함이 돋보이는 주제와 내용이 많아 수상작을 선별하기가 매우 어려웠습니다. 그 가운데 최우수상으로 선정된 4작품을 소개하고(접수순) 축하의 말씀을 전합니다. 먼저 최우수상으로 첫 번째로 선정된 “요즘 시대, 5살 건우와 7살 연우의 바람”은 유치원 자녀를 둔 엄마의 마음으로 태어났습니다. 겨울방학과 연이은 코로나19로 집 안에서만 생활하는 엄마는 자녀들과 함께하면서 일상생활에 대한 동경을 우리 옛 놀이 도구로 담아냈습니다. 팽이나 방패연과 같은 추억의 물건에서부터 청자상감주사위, 토우, 은제 소꿉놀이 등 다채로운 20점의 소장품들을 선정하였습니다. 특히 당선자가 꼽은 변상벽의 ‘묘작도’는 쫓아다니는 엄마와 달아나는 아이들을 참새와 고양이에 비유하였는데, 답답할 수 있는 요즘의 일상을 따뜻한 시선으로 그리고 있습니다. 두 번째 수상작인 “금사(金絲), 찬란한 금빛으로 수 놓였다.”는 우리 전통문화에 대한 섬세한 감성과 시각이 돋보이는 작품입니다. 당선자는 금사로 제작한 한국 전통자수의 아름다움과 화려함을 소개하고 있습니다. 자수실 안에 매우 작게 말아진 금박종이를 넣은 금사는 관복의 흉배를 비롯하여 침구인 베개에도 응용되었습니다. 수상자는 금사를 적용한 작품들을 꼼꼼하게 찾아 소개하였는데 금사 자체부터 국가민속문화재로 지정된 흥선대원군 기린문 수흉배에 이르기까지 내용에 있어서도 제목만큼이나 찬란하게 수를 놓고 있습니다. 전통문화에 대한 예리하면서도 아름다운 시선이  녹아있는 작품이었습니다. 세 번째 수상작인 “창궐(猖獗): 역병에 대처하는 우리의 모습”은 코로나19로 일상생활이 어려운 요즘, 우리나라 역사 속에 존재했던 역병들을 소환하여 적극적으로 대처했던 옛 사람들의 슬기를 담아냈습니다. 시의적인 주제선정과 전염병 극복을 위한 결기가 눈에 띄는 작품입니다.</textarea>
+                    <div class="cnt_txt">
+                        <span class="current">0</span>
+                        <span class="total"></span>
+                    </div>
+                </div>
+
+                <div class="attach_pic_comp attached">
+                    <div class="guide_row">
+                        <span class="guide_txt">이미지 등록</span>
+                        <div class="guide_txt attach_cnt">
+                            &nbsp;(<span class="current">5</span>/<span class="total">10</span>)
+                        </div>
+                        <span class="guide_txt_sub">* 10장 이내, 10MB 이하</span>
+                    </div> 
+                    
+                    <div class="attach_pic">
+                        <button type="button" class="btn_attach" disabled="disabled"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                            <span class="txt">사진첨부</span>
+                        </button>
+                        <input type="file" id="image-upload" multiple/>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach02.jpg"></div>
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach03.jpg"></div>
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach04.jpg"></div>
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                        <div class="attach_img">
+                            <div class="att_img"><img src="../resources/images/temp/attach05.jpg"></div>
+                            <button type="button" class="btn_del" title="첨부 이미지 삭제">
+                                <span class="blind">첨부 이미지 삭제</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>등록</span></button>
+                    <button type="button" class="btn bctype2"><span>삭제</span></button>
                 </div>
             </div>
         </div>

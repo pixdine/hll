@@ -98,7 +98,7 @@
 .life_list{display:flex;flex-wrap:wrap;column-gap:40px;}
 .life_list li{width:calc(33.333% - 27px);padding:48px 0;border-bottom:1px solid #DBDBDB;}
 .life_list li:first-child,.life_list li:nth-child(2),.life_list li:nth-child(3){padding-top: 40px;}
-li:nth-last-child(-n+2) {border-bottom:0;}
+.life_list li:nth-last-child(-n+2) {border-bottom:0;}
 .life_list li i{display: block;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px;width: 48px;}
 .life_list li strong{color:var(--point);font-size:22px;font-weight:500;display:block;margin-top:26px;line-height:28px;}
 .life_list li p{font-size:18px;font-weight:500;color:#666;line-height:26px;margin-top:12px;word-break: break-all;}

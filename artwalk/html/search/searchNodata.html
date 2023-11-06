@@ -384,6 +384,14 @@
     <!-- js -->
     <script src="../../resources/js/swiper.min.js"></script>
     <script src="../../resources/js/ui.common.js"></script>
+
+    <script>
+        // 페이지의 모든 리소스가 로드된 후 실행할 코드
+        $(window).on('load', function () {
+            // 스크랩
+            $(".js-btn-scrap").btnScrap();
+        });
+    </script>
     <!-- //js -->
 </body>
 </html>

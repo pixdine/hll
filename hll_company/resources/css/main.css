@@ -23,3 +23,28 @@
 .main_container .btn_more .more_txt:after{content:'';position: absolute;top: 50%;right: 0;width: 20px;height: 20px;background: url(../images/main/ico-more.png)0/100%;transform: translateY(-50%);}
 .main_container .is_inner .btn_more{margin-top: 60px;border-color: rgba(255, 255, 255, 0.6);}
 .main_container .is_inner .btn_more .more_txt{color: #fff;} 
+
+.main_container .main_sub .cont_inner{height: 100%;padding: 212px 0 140px;} 
+.main_container .section_inner{position: relative;height: 100%;margin: 0 40px;} 
+
+.main_container .section01{position: relative;} 
+.main_container .section_img{position: absolute;top: 0;left: 0;width: 100%;} 
+.main_container .section_img .img_inner{position: relative;} 
+.main_container .media_desc{position: absolute;bottom: 0;} 
+.main_container .md_left .media_desc{left: 0;} 
+.main_container .md_right .media_desc{right: 0;} 
+
+.main_container .section_img img{position: absolute;} 
+
+.main_container .section01 .media_logo{height: 94px;} 
+.main_container .section02 .media_logo{height: 84px;} 
+
+.main_container .section_img img{opacity: 0;}
+.main_container .section_img .img01_01{top: 0;left: 0;width: 23.5%;} 
+.main_container .section_img .img01_02{top: 0;left: 25.5%;width: 24.5%;} 
+.main_container .section_img .img01_03{top: 0;right: 0;width: 45.5%;} 
+.main_container .section_img .img02_01{top: 0;left: 0;width: 45.5%;} 
+.main_container .section_img .img02_02{top: 0;right: 0;width: 49%;} 
+
+.main_container .media_txt{margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;} 
+.main_container .section_inner .main_more_wrap{margin-top: 32px;} 

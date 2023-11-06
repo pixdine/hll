@@ -132,14 +132,57 @@
                     </div>
                     <!-- // section -->
 
-                    <!-- section -->
-                    <div class="section">
-
+                    <!-- main_section -->
+                    <div class="section main_sub section01" data-section="1">
+                        <div class="cont_inner">
+                            <div class="section_inner md_left"> 
+                                <div class="section_img img01">
+                                    <div class="img_inner">
+                                        <img src="../resources/images/main/section01-01.jpg" class="img01_01" data-section-img="0">
+                                        <img src="../resources/images/main/section01-02.jpg" class="img01_02" data-section-img="1">
+                                        <img src="../resources/images/main/section01-03.jpg" class="img01_03" data-section-img="2">
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_logo"><img src="../resources/images/main/logo-elle.svg" alt="elle"></div>
+                                    <p class="media_txt">엘르는 전 세계 45개국의 2,100만 독자와 함께하는<br> 세계 최대 네트워크를 자랑하는 NO.1 패션 미디어입니다.</p>
+                                    <div class="main_more_wrap">
+                                        <a href="#" class="btn_more">
+                                            <span class="more_txt">VIEW MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- // section -->
+                    <!-- // main_section -->
+
+                    <!-- main_section -->
+                    <div class="section main_sub section02" data-section="2">
+                        <div class="cont_inner">
+                            <div class="section_inner md_right"> 
+                                <div class="section_img img01">
+                                    <div class="img_inner">
+                                        <img src="../resources/images/main/section02-01.jpg" class="img02_01" data-section-img="0">
+                                        <img src="../resources/images/main/section02-02.jpg" class="img02_02" data-section-img="1">
+                                    </div>
+                                </div>
+                                <div class="media_desc">
+                                    <div class="media_logo"><img src="../resources/images/main/logo-cosmopolitan.svg" alt="cosmopolitan"></div>
+                                    <p class="media_txt">코스모폴리탄은 전 세계 22개국에 에디션을 발간하며<br>글로벌 라이프스타일을 주도하는 미디어 입니다.</p>
+                                    <div class="main_more_wrap">
+                                        <a href="#" class="btn_more">
+                                            <span class="more_txt">VIEW MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // main_section -->
 
                     <!-- footer -->
-                    <footer id="footer" class="section footer fp-auto-height-responsive">
+                    <footer id="footer" class="section footer">
                         <div class="footer_top">
                             <div class="cont_inner">
                                 <div class="footer_link">
@@ -223,6 +266,9 @@
     <!-- //js -->
 
     <script>
+        // 타임라인초기화
+        const defaultAni = gsap.timeline();
+
         //fullpage
         $('.main_container').fullpage({
             //navigation: true,
@@ -241,6 +287,11 @@
                     $('.header').removeClass('scrolled');
                 } else {
                     $('.header').addClass('scrolled');
+                    //gsap ani
+                    let section = $(".section").eq(index);
+                    defaultAni.to(section.find(".img01_01"), {autoAlpha:1,})
+                    defaultAni.to(".img01_02", {autoAlpha:1,})
+                    defaultAni.to(".img01_03", {autoAlpha:1,})
                 }
             },
 
@@ -251,6 +302,7 @@
         });
 
         $(window).on("load",function(){
+            // 로드 후 인트로 인터렉션
             $(".section").addClass("loaded");
             var introVod = document.querySelector(".intro_video");
             setTimeout(()=>{

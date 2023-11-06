@@ -417,7 +417,8 @@ background:#fff;overflow:hidden;z-index:230}
 @media screen and (max-width: 996px) {
 	.header .cont_inner { justify-content: flex-start;}
 	.header .gnb_list { margin-left:80px}
-	.header .gnb_link { white-space:nowrap}
+	.header .gnb_link { white-space:nowrap;font-size: 14px;}
+	.header .gnb_item {margin: 0 24px;}
 }
 
 @media screen and (max-width: 768px) {

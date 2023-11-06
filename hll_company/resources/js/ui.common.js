@@ -292,6 +292,7 @@ function inputBind() {
 function familySite(_target) {
     var el = _target.parent();
     var speed = 300;
+    var chkMainContainer = $("#container").hasClass("main_container");
     if (el.hasClass("open")) {
         //닫힘
         el.removeClass("open");
@@ -300,7 +301,9 @@ function familySite(_target) {
         //열림
         el.addClass("open");
         el.find(".familysite").stop().slideDown(speed);
-        $('html, body').animate({ scrollTop: $(document).height() }, speed);
+        if(!chkMainContainer) {
+            $('html, body').animate({ scrollTop: $(document).height() }, speed);
+        }
     }
 }
 

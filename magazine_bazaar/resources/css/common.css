@@ -91,7 +91,7 @@ a:hover{text-decoration:none;}
 .lockbody { overflow : hidden; height: 100%;}
 .non-oby { overscroll-behavior-y: none }
 
-mark{background-color:rgba(255,0,0,.3);color:inherit;}
+mark{background-color:rgba(255,0,0,.3);color:inherit;word-break:break-all;}
 
 
 /************************* Form *************************/

@@ -48,7 +48,7 @@
 /*career - recruitment */
 .top_sort_wrap + .body_cont01{margin-top:24px;}
 
-.board_st01 .board_list{position: relative;display: flex;align-items:center;}
+.board_st01 .board_list{position: relative;display: flex;}
 .board_st01 .status{width:10%}
 .board_st01 .status .point{color:var(--point);}
 .board_st01 .b_badge{display: inline-block;padding: 5px 8px;font-size:14px;font-weight:500;line-height:1.4;}
@@ -60,7 +60,7 @@
 .board_st01 .b_cate.point{color:var(--point);}
 .board_st01 .b_tit{font-size: 18px;font-weight: 500;line-height: 1.4;padding: 0 2%;}
 .board_st01 .b_tit a{display:block; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
-.board_st01 .b_date{width: 20%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;font-weight:400;}
+.board_st01 .b_date{width:23%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;font-weight:400;}
 
 .board_st01.view_cont .board_detail{border-top: 1px solid #DBDBDB;margin-top: 28px;padding: 40px 134px;margin-left: 0;}
 .board_st01.view_cont .board_detail .view{background: #fff;padding: 0;line-height: 1.8;color:#111;font-weight:400;}

@@ -154,7 +154,7 @@
 .cont_sec{display:flex;flex-wrap:wrap;justify-content: space-between;column-gap: 145px;padding:120px 0;}
 .cont_sec:first-child{padding-top:60px;}
 .cont_sec+.cont_sec{border-top:1px solid #DBDBDB;}
-.cont_sec .txt{margin-top:72px;width:58%;}
+.cont_sec .txt{margin-top:72px;width:55%;}
 .cont_sec .txt p{font-size:16px;font-weight:500;line-height:23px;word-break: break-all;letter-spacing: -0.01em;}
 .sec_area{padding:180px 0;}
 

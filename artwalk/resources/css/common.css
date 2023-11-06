@@ -100,7 +100,7 @@ a:hover{text-decoration:none;}
 .lockbody { overflow : hidden; height: 100%;}
 .non-oby { overscroll-behavior-y: none }
 
-mark{background-color:rgba(255,80,129,.6);color:inherit;}
+mark{background-color:rgba(255,80,129,.6);color:inherit;word-break:break-all;}
 
 
 /************************* Form *************************/
@@ -669,7 +669,6 @@ background:#fff;overflow:hidden;z-index:230}
 .search_top .cont_inner{max-width:872px;}
 .search_atc_wrap{margin:80px 0 180px;}
 .search_atc_wrap .word_box{margin-bottom:40px;}
-.search_atc_wrap mark{display:inline-block;}
 .result_keyword{margin-bottom:40px;font-size:24px;font-weight:400;line-height:35px;}
 .result_keyword .word{font-weight:700;color:#111;}
 .result_keyword .word:before{content:'‘';}
@@ -691,6 +690,9 @@ background:#fff;overflow:hidden;z-index:230}
 .search_detail_area .detail_cont:first-of-type{padding-top:0;}
 .anchor_wrap.search_detail_area .result_sorting{margin-bottom:-60px;}
 .anchor_wrap.search_detail_area .detail_cont{padding-top:120px;}
+.search_detail_area .gallary_list li .item_sbj,
+.search_detail_area .gallary_list li .item_loc span,
+.search_detail_area .board_item .detail_box .tit{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;white-space:normal;}
 
 /* 결과없음 */
 .nodata{max-width:1280px;margin:0 auto;padding:240px 40px;text-align:center;}

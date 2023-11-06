@@ -432,7 +432,7 @@
 .cnt_list .board_item .cate_box .date{margin-left:auto;}
 .board_item.reply .detail_box .tit{color:#666;}
 .board_item .reply_box{position:relative;margin-top:24px;padding-left:20px;font-family:'Noto Sans KR';font-size:16px;font-weight:500;line-height:28px;}
-.board_item .reply_box .ico_reply{position:absolute;left:0;top:5px;}
+.board_item .reply_box .ico_reply{position:absolute;left:0;top:4px;}
 
 /* 게시판 : 커뮤니티 >  커뮤니티  */
 .view_list .board_item:after{content:'';display:block;clear:both;}
@@ -693,6 +693,9 @@
 
     /* 게시판 : 마이페이지 > 내가 참여한 이벤트 */
     .cmm_list .board_item .info_box{margin-top:16px;}
+
+    /* 게시판 : 마이페이지 > 나의 커뮤니티 */
+    .board_item .reply_box{margin-top:20px;font-size:14px;line-height:20px;}
 
     /* 게시판 : 커뮤니티 >  커뮤니티  */
     .view_list .img_box ~ .detail_box{min-height:80px;}

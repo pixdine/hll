@@ -49,7 +49,7 @@
 .top_sort_wrap + .body_cont01{margin-top:24px;}
 
 .board_st01 .board_list{position: relative;display: flex;}
-.board_st01 .status{width:10%}
+.board_st01 .status{width:12%}
 .board_st01 .status .point{color:var(--point);}
 .board_st01 .b_badge{display: inline-block;padding: 5px 8px;font-size:14px;font-weight:500;line-height:1.4;}
 .board_st01 .b_badge.end{color:#666;background-color:#F7F7F7;}
@@ -62,7 +62,7 @@
 .board_st01 .b_tit a{display:block; white-space:nowrap; text-overflow: ellipsis; overflow:hidden }
 .board_st01 .b_date{width:23%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;font-weight:400;}
 
-.board_st01.view_cont .board_detail{border-top: 1px solid #DBDBDB;margin-top: 28px;padding: 40px 134px;margin-left: 0;}
+.board_st01.view_cont .board_detail{border-top: 1px solid #DBDBDB;margin-top: 28px;padding: 40px 11.167%;margin-left: 0;}
 .board_st01.view_cont .board_detail .view{background: #fff;padding: 0;line-height: 1.8;color:#111;font-weight:400;}
 .board_st01.view_cont .board_detail .btn_area{margin-bottom:52px;}
 
@@ -91,7 +91,7 @@
 .life_slide .swiper .swiper-slide .img{overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 29.584%;}
 .life_slide .swiper .swiper-slide .img img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 .life_slide .swiper .swiper-slide .txt strong{display:block;margin-bottom:16px;font-size:28px;line-height:41px;}
-.life_slide .swiper .swiper-slide .txt p{font-size:18px;font-weight:400;line-height:26px;color:#666;}
+.life_slide .swiper .swiper-slide .txt p{font-size:18px;font-weight:400;line-height:26px;color:#666;word-break: break-all;}
 .life_slide .swiper-button-next,.swiper-button-prev { position: absolute; top:50%; transform: translateY(-50%); width:40px; height:40px; background: transparent url('../images/ic_arrow_right_40.svg') center center no-repeat; background-size:100% 100%; margin-top:-20px; cursor:pointer}
 .life_slide .swiper-button-next {right:-80px}
 .life_slide .swiper-button-prev {transform: translateY(-50%) rotate(180deg);left:-80px}

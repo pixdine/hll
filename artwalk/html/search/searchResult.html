@@ -970,6 +970,20 @@
     <script src="../../resources/js/ui.common.js"></script>
 
     <script>
+        // 검색결과에서 해당 카테고리 이동
+        $(".anchor_wrap .result_sorting a").on("click",function(e){
+            e.preventDefault();
+            const clickedIndex = $(this).parent().index();
+            const targetId = $(this).attr('href');
+            const targetElement = document.querySelector(targetId);
+
+            // 해당 요소로 부드럽게 스크롤합니다
+            window.scrollTo({
+                'behavior': 'smooth',
+                'top': targetElement.offsetTop
+            });
+        });
+
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {
             // 스크랩

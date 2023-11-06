@@ -664,13 +664,12 @@ background:#fff;overflow:hidden;z-index:230}
 .is_pc .scroll_custom > *::-webkit-scrollbar-track{background-color:#dbdbdb}
 
 /* 검색결과 */
+.container.search{padding-bottom:0;}
 .search_top{padding:80px 0;background-color:#f7f7f7;}
 .search_top .cont_inner{max-width:872px;}
-.search_top .re_search{margin-top:20px;text-align:right;line-height:1;}
-.search_atc_wrap{margin:80px 0 0;}
+.search_atc_wrap{margin:80px 0 180px;}
 .search_atc_wrap .word_box{margin-bottom:40px;}
-.search_atc_wrap .tab_cont .cont_inner,
-.search_atc_wrap .atc_list_wrap .cont_inner{padding:0;}
+.search_atc_wrap mark{display:inline-block;}
 .result_keyword{margin-bottom:40px;font-size:24px;font-weight:400;line-height:35px;}
 .result_keyword .word{font-weight:700;color:#111;}
 .result_keyword .word:before{content:'‘';}
@@ -688,6 +687,10 @@ background:#fff;overflow:hidden;z-index:230}
 .word_box .tag{min-height:36px;padding:6px 15px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;word-break:break-all;}
 .result_sorting .list_sort{margin-left:auto;}
 .is_pc .result_sorting .list_sort .select_styled{line-height:26px;}
+.search_detail_area .detail_cont{padding-top:120px;}
+.search_detail_area .detail_cont:first-of-type{padding-top:0;}
+.anchor_wrap.search_detail_area .result_sorting{margin-bottom:-60px;}
+.anchor_wrap.search_detail_area .detail_cont{padding-top:120px;}
 
 /* 결과없음 */
 .nodata{max-width:1280px;margin:0 auto;padding:240px 40px;text-align:center;}
@@ -832,10 +835,10 @@ background:#fff;overflow:hidden;z-index:230}
     .cont_inner{padding: 0 20px;}
 
     /* 검색결과 */
-    .search_atc_wrap{margin:40px 0 0;}
+    .search_atc_wrap{margin:40px 0 80px;}
     .search_top{padding:40px 0;}
     .search_top .re_search{margin-top:12px;}
-    .search_atc_wrap .word_box{margin-bottom:32px;}
+    .search_atc_wrap .word_box{margin-bottom:24px;}
     .result_word{margin-bottom:20px;}
     .result_word .txt{font-size:16px;line-height:23px;}
     .result_word .count{font-size:18px;}
@@ -849,6 +852,9 @@ background:#fff;overflow:hidden;z-index:230}
     .result_sorting .tab_menu ~ .list_sort{width:100%;margin:32px 0 0 0;text-align:right;}
     .result_sorting .total{font-size:16px;line-height:23px;}
     .result_sorting .total .count{font-size:18px;line-height:17px;}
+    .search_detail_area .detail_cont{padding-top:80px;}
+    .anchor_wrap.search_detail_area .result_sorting{margin-bottom:-32px;}
+    .anchor_wrap.search_detail_area .detail_cont{padding-top:80px;}
 
     /* 결과없음 */
     .nodata{padding:160px 20px;}

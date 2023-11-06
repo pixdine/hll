@@ -269,6 +269,28 @@
 	<script src="../../resources/js/ui.common.js"></script>
 
 	<script>
+        // HLL life
+        function lifeSlide() {
+            var lifeSlide = $('[data-slide="slider-life"]');
+            if (lifeSlide.length < 1) return false;
+
+            lifeSlide.each(function () {
+                console.log("lifeSlide", lifeSlide)
+                var $this = $(this);
+                var btnNext = $(".swiper-button-next");
+                var btnPrev = $(".swiper-button-prev");
+                var swiper = new Swiper($this, {
+                    autoHeight: true,
+                    observer: true,
+                    observeParents: true,
+                    navigation: {
+                        nextEl: btnNext,
+                        prevEl: btnPrev,
+                    },
+                });
+            });
+        }
+
 		$(document).ready(function () {
 			// "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수
 			$("#checkAll").on("click", function () {
@@ -295,8 +317,6 @@
 			}
 
             lifeSlide() ;
-
-
 		});
 	</script>
 

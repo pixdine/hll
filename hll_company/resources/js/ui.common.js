@@ -366,25 +366,3 @@ $.fn.accordion = function () {
         });
     });
 };
-
-
-// HLL life
-function lifeSlide() {
-    var lifeSlide = $('[data-slide="slider-life"]');
-    if (lifeSlide.length < 1) return false;
-
-    lifeSlide.each(function () {
-        console.log("lifeSlide", lifeSlide)
-        var $this = $(this);
-        var btnNext = $(".swiper-button-next");
-        var btnPrev = $(".swiper-button-prev");
-        var swiper = new Swiper($this, {
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: btnNext,
-                prevEl: btnPrev,
-            },
-        });
-    });
-}

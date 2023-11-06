@@ -73,7 +73,7 @@
 .board_st01.faq_cont li{padding-bottom:0;}
 .board_st01.faq_cont .board_list{position:relative;display:block;}
 .board_st01 .board_list .b_btn{display: block;position: relative;padding-left:20px;}
-.board_st01 .board_list .b_btn:before{content:'Q.';position:absolute;top:0;left:0;color:var(--point);line-height:1.2;font-size:18px;font-weight:400;}
+.board_st01 .board_list .b_btn:before{content:'Q.';position:absolute;top:0;left:0;color:var(--point);line-height:1.2;font-size:18px;font-weight:500;}
 .board_st01 .board_list .b_btn::after{content: '';position: absolute;top:0;right: 0;width:24px;height:24px;background:url('../images/ic_arrow_down_24.png')right center no-repeat;background-size: 24px auto;}
 .board_st01 .board_list .b_btn.is-expanded::after{background-image:url('../images/ic_arrow_up_24.png');}
 .board_st01.faq_cont .board_list .b_tit{font-size: 18px;font-weight: 500;line-height: 1.4;color:var(--point);padding:0;}
@@ -150,6 +150,7 @@
 
 /*RSS*/
 .container.rss{padding-bottom:0}
+.container.rss .tit_wrap .tit{font-family:'Gotham';font-weight: 400;}
 .cont_sec{display:flex;flex-wrap:wrap;justify-content: space-between;column-gap: 145px;padding:120px 0;}
 .cont_sec:first-child{padding-top:60px;}
 .cont_sec+.cont_sec{border-top:1px solid #DBDBDB;}
@@ -161,8 +162,8 @@
 .subscrip_wrap ul li{padding: 28px 0;border-bottom: 1px solid #DBDBDB;}
 .subscrip_wrap dl{position: relative;display:table;table-layout: fixed;width: 100%;}
 .subscrip_wrap dl dt, .subscrip_wrap dl dd{display:table-cell;}
-.subscrip_wrap .s_sort{width:20%;font-size: 16px;font-weight: 700;line-height: 1.4;box-sizing: border-box;white-space: nowrap;}
-.subscrip_wrap .s_link{font-size: 18px;font-weight: 500;line-height: 1.4;padding: 0 3.6%;}
+.subscrip_wrap .s_sort{width:15%;font-size: 16px;font-weight: 700;line-height: 1.4;box-sizing: border-box;white-space: nowrap;}
+.subscrip_wrap .s_link{font-size: 18px;font-weight: 500;line-height: 1.4;padding: 0 2%;}
 .subscrip_wrap .s_share{width: 10%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;}
 .subscrip_wrap .btn{background-color:#FF7C21;color:#fff;font-size: 12px;width:44px;min-width: 44px;height: 20px;padding: 0 4px;}
 .ico_share span{padding-left:12px;background: url('../images/ico_share.png') left center no-repeat; background-size: 8px 8px;}
@@ -177,7 +178,8 @@
 .sec_area .cont_sec{padding:0;}
 .sec_area .cont_sec .txt{margin-top:120px;}
 .sec_area .btn_area{justify-content:flex-start;margin-top:40px;}
-
+.sec_area .btn_area .btn{width:333px;}
+.sec_area .btn_area .btn.ico_plus span{padding-right:20px;background: url('../images/ico_plus.png') right center no-repeat;background-size: 16px 16px;}
 
 /************************* Media Query *************************/
 

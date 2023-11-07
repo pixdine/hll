@@ -373,6 +373,8 @@
 .mypage.main .cnt_list .board_item:not(.reply) .detail_box .tit{white-space:nowrap;text-overflow:ellipsis;}
 .mypage.main .cnt_list .board_item .reply_box .reply_txt{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .mypage .cont_heading_area{margin-bottom:24px;}
+.mypage .tit_wrap{margin-bottom:40px;}
+.mypage .tit_wrap.line{margin-bottom:24px;}
 
 .thumb_list li{padding:24px 0;border-bottom:1px solid #dbdbdb;}
 .thumb_list li:first-child{padding-top:0;}
@@ -486,6 +488,7 @@
     .mypage .sub .heading_wrap h2.tit{color:#111;}
     .mypage .sub .heading_wrap .btn_box{margin-top:24px;}
     .mypage.main .sub .heading_wrap{height:226px;background-image:url('../../resources/images/bg_top_mypage_mo2.png');background-size:375px 226px;}
+    .mypage .tit_wrap{margin-bottom:32px;}
 
     /* 상단 상세 영역 */
     .detail_wrap{margin:40px 0 80px;padding-bottom:80px;border-width:12px;}

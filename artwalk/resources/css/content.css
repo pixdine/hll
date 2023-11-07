@@ -436,21 +436,25 @@
 /* 게시판 상세 : 커뮤니티 > 상세 */
 .view_detail_wrap{margin-top:120px;}
 .view_detail_wrap .btn_wrap .btn{width:180px;}
-.view_detail_header{margin-bottom:40px;padding-bottom:40px;text-align:center;border-bottom:1px solid #dbdbdb;}
+.view_detail_header{position:relative;margin-bottom:40px;padding-bottom:40px;text-align:center;border-bottom:1px solid #dbdbdb;z-index:1;}
 .view_detail_header .cate{display:block;margin-bottom:24px;font-size:16px;font-weight:700;line-height:24px;}
 .view_detail_header .tit{display:block;font-size:36px;font-weight:500;line-height:48px;word-break:break-all;}
-.view_detail_header .profile_area{margin-top:40px;}
-.profile_area{display:flex;align-items:center;}
-.profile_area .profile_img{display:block;overflow:hidden;width:24px;height:24px;margin-right:12px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
+.write_info{position:relative;margin-top:40px;padding:0 30px;}
+.write_info .more_drop{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+.write_info .more_drop .btn_ico.more{background-position:center center;}
+.profile_area{display:flex;align-items:center;justify-content:center;}
+.profile_area .profile_img{flex-shrink:0;display:block;overflow:hidden;width:24px;height:24px;margin-right:12px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .profile_area .profile_img img{display:block;width:100%;height:100%;object-fit:cover;}
-.profile_area  .user_info{display:flex;font-size:14px;font-weight:500;line-height:20px;color:#666;}
-.profile_area  .user_info span{position:relative;}
-.profile_area  .user_info span + span{margin-left:12px;padding-left:12px;}
-.profile_area  .user_info span + span:before{content:'';display:inline-block;position:absolute;left:0;top:4px;width:1px;height:12px;background-color:#dbdbdb;}
-.profile_area  .user_info .date{font-family:Gotham;}
+.profile_area .user_info{display:flex;flex-direction:row;align-items:center;min-width:0;}
+.profile_area .user_info > span{display:block;position:relative;font-size:14px;font-weight:500;line-height:20px;color:#666;}
+.profile_area  .user_info > span ~ span{margin-left:12px;padding-left:12px;}
+.profile_area  .user_info > span ~ span:before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background-color:#dbdbdb;}
+.profile_area .user_info .name{display:block;overflow:hidden;min-width:0;text-overflow:ellipsis;white-space:nowrap;}
+.profile_area .user_info .date{white-space:nowrap;font-family:Gotham;}
 .view_detail_body{position:relative;border-bottom:1px solid #dbdbdb;}
 .view_detail_body_cont{max-width:996px;margin:0 auto;padding-bottom:80px;font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;color:#111;word-break:break-all;}
 .view_detail_body_cont *{word-break:break-all;}
+.view_detail_body_cont .detail_slide{margin-top:24px;}
 .view_detail_body ~ .view_detail_footer{border-top:0;}
 .view_detail_footer{border-top:1px solid #dbdbdb;border-bottom:2px solid #111;}
 .view_detail_footer .board_item{display:flex;align-items:center;overflow:hidden;height:72px;padding:0 24px;}
@@ -729,6 +733,10 @@
     .view_detail_header{margin-bottom:24px;padding-bottom:24px;}
     .view_detail_header .cate{margin-bottom:20px;font-size:14px;line-height:20px;}
     .view_detail_header .tit{font-size:24px;line-height:32px;}
+    .write_info{margin-top:24px;}
+    .profile_area .profile_img{width:20px;height:20px;}
+    .profile_area .user_info > span{font-size:12px;line-height:20px;}
+    .profile_area .user_info > span ~ span:before{height:10px;}
     .view_detail_body_cont{padding-bottom:60px;}
     .view_detail_footer .board_item{height:60px;padding:0 20px;}
     .view_detail_footer .board_item .board_title{font-size:14px;line-height:20px;}

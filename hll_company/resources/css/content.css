@@ -68,7 +68,7 @@
 
 .career .top_sort_wrap{margin-top:40px;}
 .career .top_sort_wrap .btn{min-width:99px}
-.wrap_help .btn_ico{position: relative;display: flex;align-items: center;gap:4px;}
+.wrap_help .btn_ico{position: relative;display: flex;align-items: center;gap:4px;line-height: 1;}
 .wrap_help .btn_ico::after{content:'';width: 16px;height: 16px;background: transparent url(../images/ico_tooltip.svg) no-repeat right center / 100% auto;}
 .wrap_help .btn_ico span{color:var(--point);font-weight:500;}
 
@@ -300,6 +300,7 @@
 
     .help_txt li strong{font-size:16px;line-height:23px;}
     .help_txt li p{font-size:14px;line-height:20px;}
+    .popup_bottom{display:none;}
 
     /*HLL life*/
     .life_slide{padding:0 0 60px;}

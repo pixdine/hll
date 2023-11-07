@@ -7,13 +7,13 @@ body.is_pc .container.etc #content { padding-top:60px}
 .term_type01 dd {color:#666; margin-bottom:40px; line-height:1.6; font-size:16px; font-weight:400;}
 .term_type01 .p_txt  {color:#666; margin-bottom:40px; line-height:1.6; font-size:16px; font-weight:400;}
 .term_type01 .p_tit {font-size:16px; font-weight:500; margin-bottom:20px; color:#111}
-.term_type01 dd li {margin-top:5px; text-indent:-20px; padding-left:22px}
+.term_type01 dd li {margin-top:5px; text-indent:-11px; padding-left:17px}
 .term_type01 dd li.none {text-indent:0; padding-left:0}
 .term_type01 dd li li {text-indent:-18px; padding-left:10px}
 .term_type01 dd li li a { text-indent:0; padding-left:0}
 .term_type01 dd li:first-child {margin-top:0}
 .term_type01 dd ol ,.term_type01 dd ul  {margin-top:10px; margin-bottom:10px}
-.term_type01 dd  li ol, .term_type01 dd li ul { margin-left:10px;}
+.term_type01 dd  li ol, .term_type01 dd li ul { margin-left:15px;}
 .term_type01 dd.additional { margin-top:80px} 
 .term_type01 .term_tbl { border-top:2px solid #111; border-bottom:1px solid #DBDBDB; margin-top:10px}
 .term_type01 .term_tbl table { padding:0;border:0;border-spacing:0px;border-collapse:collapse; width:100%; table-layout:fixed;}

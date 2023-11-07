@@ -291,7 +291,6 @@
     .board_st01.view_cont .b_tit{padding: 0;font-size: 16px;line-height: 1.4;}
     .board_st01.view_cont .board_detail{padding:20px 0;margin-top:20px;}
     
-    .board_st01 .board_detail div.view{font-size:14px;font-weight:400;}
     .board_st01.faq_cont .board_detail{margin-top:20px;}
     .board_st01.faq_cont .board_detail .view{padding:20px 16px 20px 30px;}
     .board_st01.faq_cont .board_detail .view::before{top: 20px;left:16px;}

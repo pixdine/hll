@@ -171,7 +171,7 @@
     .main_wc .active-display .present_txt{margin-left: 6px;font-size: 14px;}
     .main_wc .active-display .wc_img:before {top: 63px;}
     .main_wc .active-display .wc_img img{width: 100%;height: auto;}
-    .main_wc .active-display .wc_img figcaption{bottom: 12px;left: 12px;right: 12px;height: 40px;font-size: 14px;line-height: 20px;}
+    .main_wc .active-display .wc_img figcaption{bottom: 12px;left: 12px;right: 12px;height: 48px;font-size: 18px;line-height: 24px;}
     .main_wc .swiper-slide .wc_img:before {top: 63px;}
     .main_wc .btn_move{display: none;}
 

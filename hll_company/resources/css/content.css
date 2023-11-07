@@ -17,7 +17,7 @@
 
 .tit_wrap{position:relative;margin-bottom: 40px;}
 .tit_area{display:flex;position:relative; flex-direction:row;}
-.tit_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;}
+.tit_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:var(--point);}
 .tit_wrap h3.tit{font-size:28px;line-height:41px;}
 
 
@@ -155,7 +155,7 @@
 .cont_sec:first-child{padding-top:60px;}
 .cont_sec+.cont_sec{border-top:1px solid #DBDBDB;}
 .cont_sec .txt{margin-top:72px;width:50%;}
-.cont_sec .txt p{font-size:16px;font-weight:500;line-height:23px;word-break: break-all;letter-spacing: -0.01em;}
+.cont_sec .txt p{font-size:18px;font-weight:500;line-height:26px;word-break: break-all;letter-spacing: -0.01em;}
 .sec_area{padding:180px 0;}
 
 .subscrip_wrap ul{border-top:1px solid #111 }
@@ -178,8 +178,8 @@
 .sec_area .cont_sec{padding:0;}
 .sec_area .cont_sec .txt{margin-top:120px;}
 .sec_area .btn_area{justify-content:flex-start;margin-top:40px;}
-.sec_area .btn_area .btn{width:333px;}
-.sec_area .btn_area .btn.ico_plus span{padding-right:20px;background: url('../images/ico_plus.png') right center no-repeat;background-size: 16px 16px;}
+.rss .sec_area .btn_area .btn{width:333px;background-color:transparent;justify-content: flex-start;}
+.rss .sec_area .btn_area .btn.ico_plus{background: url('../images/ico_plus_b.png') right 20px center no-repeat;background-size: 16px 16px;}
 
 /************************* Media Query *************************/
 

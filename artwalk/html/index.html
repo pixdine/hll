@@ -103,22 +103,27 @@
 								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
 							</div>
 
-                            <!-- 추천 키워드 -->
-                            <!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
-                            <div class="search_keyword">
-                                <h3 class="search_tit">추천 키워드</h3>
-                                <!-- 키워드 리스트 -->
-                                <!-- D: 최대 5개까지 노출 -->
-                                <ul class="word_list">
-                                    <li><a href="#">#백남준</a></li>
-                                    <li><a href="#">#8월전시</a></li>
-                                    <li><a href="#">#갤러리</a></li>
-                                    <li><a href="#">#산책메이트</a></li>
-                                    <li><a href="#">#앙리 마티스</a></li>
-                                </ul>
-                                <!-- //키워드 리스트 -->
-                            </div>
-                            <!-- //추천 키워드 -->
+							<!-- 추천 키워드 -->
+							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="search_keyword">
+								<h3 class="search_tit">추천 키워드</h3>
+								<!-- 키워드 리스트 -->
+								<!-- D: 최대 10개까지 노출 -->
+								<ul class="word_list">
+									<li><a href="#">#어윈올라프</a></li>
+									<li><a href="#">#불가리</a></li>
+									<li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+									<li><a href="#">#갤러리</a></li>
+									<li><a href="#">#5월전시</a></li>
+									<li><a href="#">#패션아이템</a></li>
+									<li><a href="#">#백남준</a></li>
+									<li><a href="#">#반팔재킷</a></li>
+									<li><a href="#">#구찌 패션쇼</a></li>
+									<li><a href="#">#STAR일링</a></li>
+								</ul>
+								<!-- //키워드 리스트 -->
+							</div>
+							<!-- //추천 키워드 -->
 						</div>
 					</div>
 				</div>
@@ -974,7 +979,7 @@
 
             // 커뮤니티 오토스크롤
             if (windowSize <= 768) {
-                handleMarquee(1, 48);
+                handleMarquee(0);
             } else {
                 handleMarquee(1, 96);
             }
@@ -986,7 +991,7 @@
 
             // 오토스크롤 함수
             if (windowSize <= 768) {
-                handleMarquee(1, 48);
+                handleMarquee(0);
             } else {
                 handleMarquee(1, 96);
             }
@@ -1076,93 +1081,67 @@
 
         // 커뮤니티 자동스크롤
         var scrollAni; // 애니메이션 변수 초기화
-        var mouseEntered = false; // 마우스 상태 초기화
-        var running = false; // 애니메이션 실행 상태 변수 초기화
+        function handleMarquee(setSpeed, marginBottom){
+            // 뷰포트 너비를 확인합니다.
+            const viewportWidth = window.innerWidth;
 
-        function handleMarquee(setSpeed, marginBottom) {
-            const mobileSize = 768; // 모바일 사이즈 정의
+            // 모바일 사이즈를 정의합니다. 이 값은 768px 미만입니다. 
+            // 하지만 프로젝트의 반응형 브레이크포인트에 따라 다를 수 있습니다.
+            const mobileSize = 768;
+
             const marquee = document.querySelector('.c_list');
+            let speed = setSpeed;
+            let lastScrollPos = 0;
+            let timer;
+            var progress = 0;
+
             const container = marquee.querySelector('.c_list_track');
             const content = marquee.querySelector('.c_list_track > *');
-            let speed = setSpeed;
-            let progress = 0;
+
+            //Get total width
             const elHeight = content.offsetHeight;
 
-            // 마우스 이벤트 리스너
-            document.querySelector('.c_list_track').addEventListener('mouseenter', function () {
+            mouseEntered = false;
+            document.querySelector('.c_list_track').addEventListener('mouseenter', function() {
                 mouseEntered = true;
-            });
-            document.querySelector('.c_list_track').addEventListener('mouseleave', function () {
+            })
+            document.querySelector('.c_list_track').addEventListener('mouseleave', function() {
                 mouseEntered = false;
-            });
+                window.cancelAnimationFrame(loop);
+            })
 
-            // 클론 항목 처리
-            handleClones();
-
-            function handleClones() {
-                if (!marquee.classList.contains("has_clone")) {
-                    var items = document.querySelectorAll('.c_list_track .c_list_item');
-                    var clonedItems = [];
-                    items.forEach(function (item) {
-                        var clone = item.cloneNode(true);
-                        clone.classList.add("clone");
-                        clonedItems.push(clone);
-                    });
-                    clonedItems.forEach(function (item) {
-                        container.appendChild(item);
-                    });
-                    marquee.classList.add("has_clone");
-                }
+            if (marquee.classList.contains("has_clone")) {
+                var cloneItems = document.querySelectorAll('.c_list_track .clone');
+            } else {
+                var items = document.querySelectorAll('.c_list_track .c_list_item');
+                var clonedItems = [];
+                items.forEach(function(item) {
+                    var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
+                    clone.classList.add("clone")
+                    clonedItems.push(clone);
+                });
+                clonedItems.forEach(function(item) {
+                    container.appendChild(item);
+                });
+                marquee.classList.add("has_clone");
             }
 
-            // 애니메이션 루프
-            function loop() {
-                if (window.innerWidth > mobileSize && mouseEntered === false && !running) {
-                    running = true;
-                    scrollAni = window.requestAnimationFrame(loop);
-                } else if (window.innerWidth <= mobileSize && running) {
-                    window.cancelAnimationFrame(scrollAni);
-                    running = false;
-                    return;
-                }
-
+            function loop(){
                 var size = marginBottom;
-                progress = progress - speed;
-                if (progress <= elHeight * -4 - size) {
-                    progress = 0;
-                }
+                // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
+                if (mouseEntered === false) {progress = progress-speed;} 
+                if (progress <= elHeight*-4-size) {progress=0;}
                 container.style.transform = 'translateY(' + progress + 'px)';
-
-                if (running) {
-                    scrollAni = window.requestAnimationFrame(loop);
-                }
+                scrollAni = window.requestAnimationFrame(loop);
             }
 
-            function startLoop() {
-                if (window.innerWidth > mobileSize && !running) {
-                    loop();
-                }
+            loop();
+
+            function handleSpeedClear(){
+                speed = setSpeed;
             }
-
-            function stopLoop() {
-                if (running) {
-                    window.cancelAnimationFrame(scrollAni);
-                    running = false;
-                }
-            }
-
-            // 창 크기 변경 이벤트 리스너
-            window.addEventListener('resize', function () {
-                if (window.innerWidth <= mobileSize) {
-                    stopLoop();
-                } else {
-                    startLoop();
-                }
-            });
-
-            startLoop(); // 초기 실행
-        }
-  
+        };
+    
         // 산책코스 스와이퍼
         (function($) {
             $.fn.activeDpSwiper = function (){
@@ -1225,4 +1204,5 @@
         })(jQuery);
     </script>
 </body>
+
 </html>

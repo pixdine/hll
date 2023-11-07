@@ -244,12 +244,30 @@
                             <div class="view_detail_header">
                                 <span class="cate">공지</span>
                                 <h3 class="tit">미구엘 슈발리에 《디지털 뷰티》전시 안내</h3>
-                                <div class="txt_meta">
-                                    <span class="profile_pic">
-                                        <!-- <img src="" alt="프로필"> -->
-                                    </span>
-                                    <span><a href="#">예술산책</a></span>
-                                    <span class="time">2023.07.06</span>
+                                <div class="profile_area">
+                                    <div class="profile_img">
+                                        <img src="../../resources/images/img_profile1.png" alt="프로필 이미지">
+                                    </div>
+
+                                    <div class="user_info">
+                                        <span class="name">예술산책</span>
+                                        <span class="date">2023.07.06</span>
+                                    </div>
+
+                                    <!-- 드롭다운메뉴 -->
+                                    <div class="more_drop">
+                                        <button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
+                                        <!-- 드롭다운 레이어 -->
+                                        <div class="layer_box">
+                                            <ul class="layer_list">
+                                                <li><button type="button" class="btnm modify" onclick="console.log('수정');"><span>수정</span></button></li>
+                                                <li><button type="button" class="btnm del" onclick="console.log('삭제');"><span>삭제</span></button></li>
+                                                <li><button type="button" class="btnm cancel" onclick="console.log('취소');"><span>취소</span></button></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //드롭다운 레이어 -->
+                                    </div>
+                                    <!-- //드롭다운메뉴 -->
                                 </div>
                             </div>
                             <!-- //타이틀 영역 -->
@@ -269,6 +287,30 @@
                                     <p>&nbsp;</p>
                                     <p>천진난만하고 사랑스러운 일상 속의 고양이들이 가득한 공간과 성공이라는 화려한 삶 이면에 사업 실패와 가족의 죽음, 정신장애로 극빈자 병동에 입원하게 되는 웨인의 슬픈 삶을 보여준다. 이 시기의 작품들은 점점 그로테스크하게 변화면서 대칭 구도로 그려진다. 당시 사람들은 정신이상으로 생긴 결과라고 생각했지만 마지막까지 손에서 붓을 놓지 않았다는 웨인에게 고양이 그림은 마음과 정신을 치유해 주는 희망이었다. 후기 작품들은 우리에게 사랑과 위로를 전해주고 있다.<br>
                                     이번 전시에는 미디어아트를 추가하여 더 입체적인 볼거리를 제공한다. 친구와 가족 사이의 대화는 공감력과 상상력을 키울 수 있는 영양분이 될 것이며, 작가 루이스 웨인 작품의 핵심 요소이다.</p>
+
+                                    <!-- 슬라이드 -->
+                                    <div class="detail_slide">
+                                        <div class="swiper viewSwiper" data-slide="slider-type01">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../../resources/images/temp/temp_exhb_detail02.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../../resources/images/temp/temp_exhb_detail03.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../../resources/images/temp/temp_exhb_detail04.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../../resources/images/temp/temp_exhb_detail05.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-scrollbar"></div>
+                                        </div>
+                                    </div>
+                                    <!-- //슬라이드 -->
                                 </div>
 
                                 <!-- 댓글 모듈 -->
@@ -468,9 +510,7 @@
                                                 <li class="reply_area">
                                                     <div class="comment_item">
                                                         <div class="comment_cont">
-                                                            <!-- D: 댓글 수정하기 클릭 시에만 노출 -->
-                                                            <div class="comment_modify" style="display:block">
-                                                                <!-- 댓글수정 -->
+                                                            <div class="comment_reply">
                                                                 <div class="textarea_wrap">
                                                                     <textarea class="textarea review_text_area" maxlength="1000" placeholder="댓글을 남겨주세요." title="댓글을 남겨주세요."></textarea>
                                                                     <div class="cnt_bottom">
@@ -483,9 +523,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <!-- //댓글수정 -->
                                                             </div>
-                                                            <!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
                                                         </div>
                                                     </div>
                                                 </li>
@@ -939,6 +977,9 @@
         $(".textarea_wrap").textareaWithCount({
             maxlength: 1000 // 최대글자 허용 수
         });
+
+        // 상세 슬라이드
+        viewImgSlide();
 
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {

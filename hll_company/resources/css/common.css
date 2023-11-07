@@ -134,7 +134,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 /* icon button */
 .btn_ico{display:inline-flex;}
 .btn_ico.del{width:34px;height:34px;background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.3638 3.63593L3.63585 16.3638' stroke='%23111111' stroke-width='2'/%3E%3Cpath d='M16.3638 16.3643L3.63585 3.6364' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 20px auto;}
-.btn_ico.tooltip {width: 16px;height: 16px;background: transparent url(../images/ico_tooltip.svg) no-repeat center center / 100% auto;}
+
 
 /************************* Form *************************/
 input[type="text"]:disabled,

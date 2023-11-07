@@ -144,18 +144,14 @@
 					<div class="guide_box">
 						<h2 class="h2">더보기</h2>
 						<h3 class="h3">클릭 시 하위로 콘텐츠 추가</h3>
-						<ul class="guide_desc">
-							<li>PC 버튼높이 52px, 폰트크기 16px</li>
-							<li>MO 버튼높이 44px, 폰트크기 14px</li>
-							<li>화면 내 페이지 리스트 추가(무한 스크롤링)를 의미하는 버튼은 라인 형태의 버튼 사용</li>
-						</ul>
-
+						<p class="guide_desc">기본(default)</p>
 						<!-- 더보기 -->
 						<div class="btn_more_wrap type1">
 							<button type="button" class="btn more"><span>더보기</span></button>
 						</div>
 						<!-- //더보기 -->
 
+						<p class="guide_desc">비활성화(disabled)</p>
                         <!-- 더보기 -->
 						<div class="btn_more_wrap type1">
 							<button type="button" class="btn more" disabled><span>더보기</span></button>
@@ -165,8 +161,6 @@
 						<h3 class="h3">타이틀 영역 사이드에 노출</h3>
 						<ul class="guide_desc">
 							<li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
-                            <li>[공통] PC 폰트크기 28px, MO 폰트크기 20px</li>
-                            <li>[메인] PC 폰트크기 48px, MO 폰트크기 22px (main.css에 재정의)</li>
 						</ul>
 
 						<!-- 타이틀영역 -->
@@ -270,12 +264,29 @@
                             <div class="select_styled" data-value></div>
                             <div class="select_options" data-option>
                                 <ul>
-                                    <li class="select_option selected">최신순</li>
-                                    <li class="select_option">인기순</li>
+                                    <li class="select_option selected">인기순</li>
+                                    <li class="select_option">추천순</li>
                                 </ul>
                             </div>
                         </div>
-						<!-- //타이틀영역 -->
+
+                        <div class="selectbox" data-selectbox>
+                            <div class="select_styled" data-value></div>
+                            <div class="select_options" data-option>
+                                <ul>
+                                    <li class="select_option selected">지역</li>
+                                    <li class="select_option">서울/전체</li>
+                                    <li class="select_option">서울/강남구</li>
+                                    <li class="select_option">서울/용산구</li>
+                                    <li class="select_option">서울/중구</li>
+                                    <li class="select_option">서울/종로구</li>
+                                    <li class="select_option">서울/성동구</li>
+                                    <li class="select_option">경기</li>
+                                    <li class="select_option">부산</li>
+                                    <li class="select_option">타지역</li>
+                                </ul>
+                            </div>
+                        </div>
 					</div>
 				</div>
 				<!-- //셀렉트 가이드 -->

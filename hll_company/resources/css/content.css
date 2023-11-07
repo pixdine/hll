@@ -65,11 +65,20 @@
 .board_st01.view_cont .board_detail{border-top: 1px solid #DBDBDB;margin-top: 28px;padding: 40px 11.167%;margin-left: 0;}
 .board_st01.view_cont .board_detail .view{background: #fff;padding: 0;line-height: 1.8;color:#111;font-weight:400;}
 .board_st01.view_cont .board_detail .btn_area{margin-bottom:52px;}
- 
+.board_st01.view_cont .b_tit{word-break:break-all;}
+
 .career .top_sort_wrap{margin-top:40px;}
 .career .top_sort_wrap .btn{min-width:99px}
-.wrap_help{display:flex;align-items: center;gap: 4px;}
-.wrap_help p{color:var(--point);}
+.wrap_help .btn_ico{position: relative;display: flex;align-items: center;gap:4px;line-height: 1;}
+.wrap_help .btn_ico::after{content:'';width: 16px;height: 16px;background: transparent url(../images/ico_tooltip.svg) no-repeat right top / 100% auto;}
+.wrap_help .btn_ico span{color:var(--point);font-weight:500;}
+
+.help_txt li{padding:16px 0;}
+.help_txt li:first-child{padding-top:0;}
+.help_txt li:last-child{padding-bottom:0;}
+.help_txt li:not(:last-child){border-bottom:1px solid #DBDBDB;}
+.help_txt li strong{font-size:18px;line-height:26px;}
+.help_txt li p{line-height: 23px;margin-top:8px;}
 
 /*career - FAQ*/
 [data-accordion-content] { max-height: 0; overflow: hidden; transition: max-height .1s }
@@ -211,7 +220,7 @@
 
     .board_st01.view_cont .board_list{display:block;position:relative;}
     .board_st01 .status{width:auto;position:absolute;bottom:0;right:0;}
-    .board_st01 .status span{font-size:12px;font-weight:500;padding:4px 8px;}
+    .board_st01 .status span{font-size:12px;font-weight:500;}
     
     .step_wrap{padding:0 0 40px;}
     .step_wrap ul{flex-wrap: wrap;}
@@ -275,21 +284,23 @@
     
     .tab_menu.type03{width:100%;}
     .career .top_sort_wrap{margin-top:32px;}
-    .wrap_help p{display:none;}
-    .wrap_help .btn_ico.tooltip{width: 24px;height: 24px;background-size: 16px 16px;}
+    .wrap_help .btn_ico span{color:transparent;font-size: 8px;}
 
     .board_st01.view_cont li{padding: 20px 0;}
     .board_st01.view_cont .b_cate{width:auto;}
     .board_st01.view_cont .b_tit{padding: 0;font-size: 16px;line-height: 1.4;}
     .board_st01.view_cont .board_detail{padding:20px 0;margin-top:20px;}
     
-    .board_st01 .board_detail div.view{font-size:14px;font-weight:400;}
     .board_st01.faq_cont .board_detail{margin-top:20px;}
     .board_st01.faq_cont .board_detail .view{padding:20px 16px 20px 30px;}
     .board_st01.faq_cont .board_detail .view::before{top: 20px;left:16px;}
 
     .board_st01 .board_list .b_btn::after{width:16px;height:16px;background-size:12px auto;}
     .board_st01.view_cont .board_detail .btn_area{margin-bottom:0;}
+
+    .help_txt li strong{font-size:16px;line-height:23px;}
+    .help_txt li p{font-size:14px;line-height:20px;}
+    .popup_bottom{display:none;}
 
     /*HLL life*/
     .life_slide{padding:0 0 60px;}
@@ -308,8 +319,6 @@
     .life_list li p{font-size:16px;line-height:23px;}
 
     /*process*/
-
-
     .process_wrap{padding:0 0 80px;}
     .process_wrap ul{padding:0 20px}
     .process_wrap ul li:first-child{padding-top:40px;}

@@ -80,54 +80,12 @@
                         <div class="tab_menu type03">
                             <ul>
                                 <li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
-                                <li>
-                                    <a href="javascript:;" class="helptip">
-                                        에디터
-                                        <span class="tooltip_layer">
-                                            <p>패션, 뷰티, 라이프스타일의 트렌드를 빠르게 접수해, 가장 근사한 글과 사진, 영상으로 만들어 오디언스에게 전달합니다.</p>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="helptip">
-                                        마케팅 / 디지털 기획
-                                        <span class="tooltip_layer">
-                                            <p>오디언스가 우리의 매체와 콘텐츠를 경험할 수 있도록 마케팅과 디지털 전략을 세우며, 오프라인 캠페인부터 디지털 프로모션까지 다양한 프로젝트를 기획하고, 실행합니다.</p>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="helptip">
-                                        광고/AE
-                                        <span class="tooltip_layer">
-                                            <p>전문적인 디자인 역량을 통해 HLL만의 독보적인 콘텐트 아이덴티티를 보여줍니다.</p>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="helptip">
-                                        영업
-                                        <span class="tooltip_layer">
-                                            <p>온/오프라인 광고에 필요한 프로젝트 제안부터 실행까지 전 영역을 아우르는 IMC 캠페인을 제공합니다."</p>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="helptip">
-                                        디자인
-                                        <span class="tooltip_layer">
-                                            <p>라이프스타일 트렌드를 리드해 온 HLL의 크리에이티브함을 활용하여 is-visible브랜드 사업을 전개합니다.</p>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="helptip">
-                                        경영지원
-                                        <span class="tooltip_layer">
-                                            <p>인사/재무/기획 등 경영지원의 효율적인 관리 및 운영 업무를 수행하며 회사의 전반적인 경영 활동을 지원합니다.</p>
-                                        </span>
-                                    </a>
-                                </li>
+                                <li><a href="javascript:;" class="helptip">에디터</a> </li>
+                                <li><a href="javascript:;" class="helptip">마케팅 / 디지털 기획</a></li>
+                                <li><a href="javascript:;" class="helptip">광고/AE</a></li>
+                                <li><a href="javascript:;" class="helptip">영업</a></li>
+                                <li><a href="javascript:;" class="helptip">디자인</a></li>
+                                <li><a href="javascript:;" class="helptip">경영지원</a></li>
                             </ul>
                         </div>
                         <div class="top_sort_wrap">
@@ -139,9 +97,8 @@
                                 </ul>
                             </div>
                             <div class="wrap_help">
-                                <p>직무소개</p>
-                                <button type="button" class="btn_ico tooltip" id="tooltip">
-                                    <span class="blind">도움말</span>
+                                <button type="button" class="btn_ico tooltip" id="tooltip" data-popup-open="popup_1">
+                                    <span>직무소개</span>
                                 </button>
                             </div>
                         </div>
@@ -262,7 +219,7 @@
                                 <li>
                                     <div class="board_list">
                                         <div class="status">
-                                            <span class="b_badge ing">채용중</span>
+                                            <span class="b_badge ing">채용중</span><!--마감::class end, 채용중::class ing-->
                                         </div>
                                         <dl>
                                             <dt class="b_cate point">
@@ -393,9 +350,49 @@
         </div>
     </div>
 
+
+    <div class="popup_full" data-popup="popup_1">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">HLL JOB INTRODUCTION</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_1"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <ul class="help_txt">
+                    <li>
+                        <strong>에디터</strong>
+                        <p>패션,뷰티, 라이프스타일의 트렌드를 빠르게 접수해, 가장 근사한 글과 사진, 영상으로 만들어 오디언스에게 전달합니다.</p>
+                    </li>
+                    <li>
+                        <strong>마케팅/디지털 기획</strong>
+                        <p>오디언스가 우리의 매체와 콘텐츠를 경험할 수 있도록 마케팅과 디지털 전략을 세우며, 오프라인 캠페인부터 디지털 프로모션까지 다양한 프로젝트를 기획하고, 실행합니다.</p>
+                    </li>
+                    <li>
+                        <strong>광고/AE</strong>
+                        <p>전문적인 디자인 역량을 통해 HLL만의 독보적인 콘텐트 아이덴티티를 보여줍니다.</p>
+                    </li>
+                    <li>
+                        <strong>영업</strong>
+                        <p>온/오프라인 광고에 필요한 프로젝트 제안부터 실행까지 전 영역을 아우르는 IMC 캠페인을 제공합니다.</p>
+                    </li>
+                    <li>
+                        <strong>디자인</strong>
+                        <p>라이프스타일 트렌드를 리드해 온 HLL의 크리에이티브함을 활용하여 브랜드 사업을 전개합니다.</p>
+                    </li>
+                    <li>
+                        <strong>경영지원</strong>
+                        <p>인사/재무/기획 등 경영지원의 효율적인 관리 및 운영 업무를 수행하여 회사의 전반적인 경영 활동을 지원합니다.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup_bottom"></div>
+        </div>
+    </div>
+
 	<!-- js -->
 	<script src="../../resources/js/ui.common.js"></script>
-
 	<script>
 		$(document).ready(function () {
 			// "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수

@@ -51,9 +51,9 @@
 .board_st01 .board_list{position: relative;display: flex;}
 .board_st01 .status{width:12%}
 .board_st01 .status .point{color:var(--point);}
-.board_st01 .b_badge{display: inline-block;padding: 5px 8px;font-size:14px;font-weight:500;line-height:1.4;}
+.board_st01 .b_badge{display: inline-block;padding: 2px 8px;font-size:14px;font-weight:500;line-height:1.4;}
 .board_st01 .b_badge.end{color:#666;background-color:#F7F7F7;}
-.board_st01 .b_badge.ing{color:var(--point);background-color:#F5F5FD;}
+.board_st01 .b_badge.ing{color:#fff;background-color:var(--point);}
 .board_st01 dl{position: relative;display: table;table-layout: fixed;width: 100%;}
 .board_st01 dl dt , .board_st01 dl dd {display:table-cell}
 .board_st01 .b_cate{font-size:16px;font-weight:700;line-height: 1.4;box-sizing: border-box;white-space: nowrap;width:20%;}
@@ -65,6 +65,11 @@
 .board_st01.view_cont .board_detail{border-top: 1px solid #DBDBDB;margin-top: 28px;padding: 40px 11.167%;margin-left: 0;}
 .board_st01.view_cont .board_detail .view{background: #fff;padding: 0;line-height: 1.8;color:#111;font-weight:400;}
 .board_st01.view_cont .board_detail .btn_area{margin-bottom:52px;}
+ 
+.career .top_sort_wrap{margin-top:40px;}
+.career .top_sort_wrap .btn{min-width:99px}
+.wrap_help{display:flex;align-items: center;gap: 4px;}
+.wrap_help p{color:var(--point);}
 
 /*career - FAQ*/
 [data-accordion-content] { max-height: 0; overflow: hidden; transition: max-height .1s }
@@ -150,7 +155,7 @@
 
 /*RSS*/
 .container.rss{padding-bottom:0}
-.container.rss .tit_wrap .tit{font-family:'Gotham';font-weight: 400;}
+.container.rss .tit_wrap .tit{font-family:'Gotham';font-weight: 400;font-size:48px;line-height:52px;}
 .cont_sec{display:flex;flex-wrap:wrap;justify-content: space-between;column-gap: 145px;padding:120px 0;}
 .cont_sec:first-child{padding-top:60px;}
 .cont_sec+.cont_sec{border-top:1px solid #DBDBDB;}
@@ -198,7 +203,7 @@
     .board_st01 dl dt, .board_st01 dl dd{display: flex;flex-direction: column;font-size: 14px;}
     .board_st01 .b_cate, .board_st01 .b_tit, .board_st01 .b_date{width:100%;padding:0;}
     .board_st01 .b_cate{font-size:12px;}
-    .board_st01 .b_tit{margin-top:8px;font-size:14px;}
+    .board_st01 .b_tit{margin-top:8px;font-size:16px;}
     .board_st01 .b_date{flex-direction: row;padding-left: 0px;margin-top: 16px;padding-right: 0;}
 
     .board_st01 .board_list .b_btn:before{font-size:14px;}
@@ -208,9 +213,6 @@
     .board_st01 .status{width:auto;position:absolute;bottom:0;right:0;}
     .board_st01 .status span{font-size:12px;font-weight:500;padding:4px 8px;}
     
-    
-    .top_sort_wrap{flex-direction: column;align-items: flex-start;gap: 32px;}
-
     .step_wrap{padding:0 0 40px;}
     .step_wrap ul{flex-wrap: wrap;}
     .step_wrap ul li{flex:none;width:calc(50% - 20px);}
@@ -227,6 +229,7 @@
     .step_wrap ul li strong{font-size:14px;line-height:20px;}
 
     .subscrip_wrap .s_sort{width:20%;}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -271,10 +274,13 @@
     .btn_area button{width:100%;}
     
     .tab_menu.type03{width:100%;}
+    .career .top_sort_wrap{margin-top:32px;}
+    .wrap_help p{display:none;}
+    .wrap_help .btn_ico.tooltip{width: 24px;height: 24px;background-size: 16px 16px;}
 
     .board_st01.view_cont li{padding: 20px 0;}
     .board_st01.view_cont .b_cate{width:auto;}
-    .board_st01.view_cont .b_tit{padding: 0;font-size: 14px;line-height: 1.4;}
+    .board_st01.view_cont .b_tit{padding: 0;font-size: 16px;line-height: 1.4;}
     .board_st01.view_cont .board_detail{padding:20px 0;margin-top:20px;}
     
     .board_st01 .board_detail div.view{font-size:14px;font-weight:400;}
@@ -319,6 +325,7 @@
     .cont_sec .txt{margin-top:0;width:100%;}
     .cont_sec .tit_wrap{margin-bottom:16px;}
     .cont_sec .tit_wrap .tit{font-size:24px;}
+    .container.rss .tit_wrap .tit{font-size:28px;line-height:32px;;}
 
     .subscrip_wrap dl dt, .subscrip_wrap dl dd{display:flex;flex-direction:column;}
     .subscrip_wrap .s_sort, .subscrip_wrap .s_link, .subscrip_wrap .s_share{padding:0;}
@@ -332,6 +339,7 @@
     .sec_area .tit_wrap .tit{font-size:24px;}
     .sec_area .cont_inner{padding-top:0;}
     .sec_area .cont_sec .txt{margin-top:0;}
+    .rss .sec_area .btn_area .btn{width:100%;}
     
 }
 

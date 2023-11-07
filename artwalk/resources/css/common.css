@@ -266,9 +266,6 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .d_d_flex_row{display: flex;}
 .flex_col.w_full{width: 100%;}
 
-/* 아이콘 */
-.ico_reply{display:inline-block;overflow:hidden;width:8px;height:8px;font-size:0;line-height:0;vertical-align:top;border-left:1px solid #ccc;border-bottom:1px solid #ccc;}
-
 
 /************************* Layout *************************/
 .wrap{position:relative;}

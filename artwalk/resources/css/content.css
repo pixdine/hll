@@ -168,9 +168,6 @@
 .more_drop .btnm.del:before{content:'';display:inline-block;width:16px;height:16px;margin:0 8px 0 0;;background:url("../images/ico_del_16.svg") no-repeat center center;}
 .more_drop .btnm.cancel:before{content:'';display:inline-block;width:16px;height:16px;margin:0 8px 0 0;;background:url("../images/ico_close_16_gray.svg") no-repeat center center;}
 
-/* 전시장 근처 핫플 */
-.ex_hplace{padding:120px 0;background-color:#f7f7f7;}
-
 /* 팝업 : 리뷰 상세보기 */
 .popup_review_detail .popup_inner{height:650px;}
 .popup_review_detail .popup_inner .popup_cont{padding-bottom:0;}
@@ -185,7 +182,6 @@
 /* 리스트 상단 영역 */
 .cont_heading_area {position:relative; margin-bottom:40px}
 .cont_heading_area.type01 { display:flex; flex-direction: row; justify-content: space-between; }
-.cont_heading_area .tab_wrap .tab_menu.type03 { padding-right:0px;}
 .cont_heading_area.type01 .selectbox { margin-top:11px}
 .cont_heading_area.type02{margin-bottom:24px;}
 .cont_heading_area.type02 .tab_wrap ~ .list_top{margin-top:40px;}
@@ -222,7 +218,6 @@
 .bazaarspick .detail_header .tit { text-align:left; font-size:28px; line-height:32px; font-weight:600}
 .bazaarspick .detail_wrap { margin-bottom:0; margin-top:120px}
 .bazaarspick .detail_slide ~ .detail_txt { margin-top:32px}
-
 
 /* 전시장 근처 핫플 */
 .post_ex_item{position:relative;width:100%;border:1px solid #111;}
@@ -412,9 +407,9 @@
 .board_item .info_box .item:last-child{padding-right:0;}
 .board_item .info_box .item:last-child:after{display:none;}
 .board_item .cate_box{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:16px;}
-.board_item .cate_box .cate{display:inline-block;position:relative;font-size:14px;font-weight:700;line-height:20px;}
+.board_item .cate_box .cate{display:inline-block;position:relative;top:2px;font-size:14px;font-weight:700;line-height:20px;}
 .board_item .cate_box .cate.noti{padding-left: 24px;}
-.board_item .cate_box .cate.noti:before{content:'';display:block;position:absolute;left:0;top:2px;width:16px;height:16px;background:url('../../resources/images/ico_pushpin_16.svg') no-repeat center center;}
+.board_item .cate_box .cate.noti:before{content:'';display:block;position:absolute;left:0;top:1px;width:16px;height:16px;background:url('../../resources/images/ico_pushpin_16.svg') no-repeat center center;}
 .board_item .cate_box .date{font-size:14px;font-weight:500;line-height:20px;color:#666;}
 .board_item .cate_box span + span{margin-left:12px;}
 
@@ -579,7 +574,6 @@
     /* 리스트 상단 영역 */
     .cont_heading_area{margin-bottom:24px;}
     .cont_heading_area.type01  {flex-direction:column;}
-    .cont_heading_area .tab_wrap .tab_menu.type03 { padding-right:35px}
     .cont_heading_area.type01 .selectbox { position:relative; right:0; top:0; display:flex; justify-content:flex-end; margin-top:32px}
     .cont_heading_area.type02 .tab_wrap ~ .list_top{margin-top:40px;}
 
@@ -715,6 +709,7 @@
     .board_item .detail_box .tit{font-size:16px;line-height:24px;}
     .board_item .detail_box .txt{margin-top:6px;font-size:14px;line-height:20px;}
     .board_item .info_box{margin-top:20px;}
+    .board_item .info_box .item:after{margin-top:-1px;}
 
     /* 게시판 : 마이페이지 > 내가 참여한 이벤트 */
     .cmm_list .board_item .info_box{margin-top:16px;}
@@ -735,7 +730,7 @@
     .view_detail_header .tit{font-size:24px;line-height:32px;}
     .write_info{margin-top:24px;}
     .profile_area .profile_img{width:20px;height:20px;}
-    .profile_area .user_info > span{font-size:12px;line-height:20px;}
+    .profile_area .user_info > span{padding-top:2px;font-size:12px;line-height:18px;}
     .profile_area .user_info > span ~ span:before{height:10px;}
     .view_detail_body_cont{padding-bottom:60px;}
     .view_detail_footer .board_item{height:60px;padding:0 20px;}

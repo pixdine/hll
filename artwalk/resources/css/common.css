@@ -644,7 +644,6 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type03 > ul > li.on > a{background-color:var(--point);border-color:var(--point);font-weight:500;}
 .tab_menu.type03 > ul > li.disabled > a{color:#ccc;pointer-events:none;}
 
-.tab_wrap .tab_menu.type03 { padding-right:64px; }
 .tab_wrap .tab_menu.type03 ul { display:flex;}
 .tab_wrap .tab_menu.type03 .btnbox{display:block;position:absolute;right:0;top:0;width:64px;height:36px;}
 .tab_wrap .tab_menu.type03 .btnbox .btn_ico{display:block;position:absolute;right:0;top:0;width:64px;height:100%;background:linear-gradient(to left, #fff 65%, #fff 0%, transparent);}
@@ -861,7 +860,8 @@ background:#fff;overflow:hidden;z-index:230}
     .flag.sm{height: 20px;padding: 0 4px;font-size: 10px;line-height: 20px;}
 
     .btn{min-width:auto;}
-    .btn span, .btn_s span{position:relative;top:2px;}
+    .btn span{position:relative;top:2px;}
+    .btn_s span{position:relative;top:1px;}
     .has_plus:after{background-size:12px auto;}
     .has_arr01:after{margin-left:4px;background-size:12px auto;}
     .btn_ico.scrap{background-image:url('../images/ico_scrap_24.svg');background-size:24px auto;}
@@ -979,15 +979,15 @@ background:#fff;overflow:hidden;z-index:230}
     .tab_menu.type02 > ul::-webkit-scrollbar{display:none;}
     .tab_menu.type02 > ul > li{display:inline-block;vertical-align:top;}
     .tab_menu.type02 > ul > li > a{font-size:14px;line-height:20px;}
+    .tab_menu.type02 > ul > li:after{margin-top:-1px;}
 
     .tab_menu.type03 > ul{display:block;position:relative;overflow-x:auto;overflow-y:hidden;white-space:nowrap;margin:0 -20px;padding:0 20px;font-size:0;-webkit-overflow-scrolling:touch;}
     .tab_menu.type03 > ul::-webkit-scrollbar{display:none;}
-    .tab_menu.type03 > ul > li{display:inline-block;vertical-align:top;}
-    .tab_menu.type03 > ul > li ~ li{margin-left:8px;}
+    .tab_menu.type03 > ul > li{display:inline-block;vertical-align:top;padding-right:8px;}
+    .tab_menu.type03 > ul > li:last-child{padding-right:0;}
     .tab_menu.type03 > ul > li > a{height:36px;padding:10.5px 15px 7.5px;white-space:nowrap;}
 
-    .tab_wrap.on .tab_menu.type03 { padding-right:0px; }
-    .tab_wrap .tab_menu.type03 > ul { flex-wrap:nowrap; gap:8px }
+    .tab_wrap .tab_menu.type03 ul{display:block;padding:0 64px 0 20px;}
     .tab_wrap .tab_menu.type03 ul li a{white-space:nowrap;}
     .tab_wrap .tab_menu.type03 > ul > li ~ li { margin-left:0}
     .tab_wrap.on .tab_menu.type03 > ul{white-space:normal; }

@@ -215,7 +215,7 @@
 .bazaarspick_list .ex_top { position:absolute; right:20px; top:20px; z-index:1}
 /* 산책코스 > 상세 */
 .bazaarspick .detail_header { margin-top:60px; margin-bottom:0px}
-.bazaarspick .detail_header .tit { text-align:left; font-size:28px; line-height:32px; font-weight:600}
+.bazaarspick .detail_header .tit { text-align:left; font-size:28px; line-height:32px; font-weight:700}
 .bazaarspick .detail_wrap { margin-bottom:0; margin-top:120px}
 .bazaarspick .detail_slide ~ .detail_txt { margin-top:32px}
 
@@ -312,7 +312,7 @@
 .gallary .dtl_info {display:flex; flex-direction: row; column-gap: 24px; width:calc(50% - 12px); align-items:flex-start}
 .gallary .dtl_info .tit { margin-bottom:0}
 .gallary .dtl_info ~ .dtl_info { margin-top:0; }
-.gallary_link { font-size:28px; font-weight:600; margin-top:60px}
+.gallary_link { font-size:28px; font-weight:700; margin-top:60px}
 .gallary_link .btn_arr:after { width:24px; height:24px; margin:0 0 0 8px; background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 14L29 24L19 34' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A");background-repeat:no-repeat; background-position:center center;}
 .gallary .detail_view_area .info_group { padding:20px 0 32px}
 
@@ -330,7 +330,7 @@
 .list_top .sort_select .selectbox ~ .selectbox{margin-left:32px;}
 .inputbox.calendar{width:206px;background-color:#fff;}
 .inputbox.calendar:after{content:'';display:block;position:absolute;right:16px;top:14px;width:16px;height:16px;background:url('../images/ico_calender_16.svg') no-repeat center center;}
-.inputbox.calendar .inp{width: 206px;height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:200;line-height:46px;cursor:pointer;z-index:1;}
+.inputbox.calendar .inp{width: 206px;height:44px;padding:0 45px 0 16px;font-size:14px;font-weight:400;line-height:46px;cursor:pointer;z-index:1;}
 .inputbox.calendar .inp[readonly]{background-color:transparent;}
 .comm_ex_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -20px 0;}
 .comm_ex_list li{width:33.333%;padding:0 20px;}
@@ -594,7 +594,7 @@
 
     /* 산책코스 > 상세 */
     .bazaarspick .detail_header { margin-top:32px;}
-    .bazaarspick .detail_header .tit { text-align:left; font-size:20px; line-height:28px; font-weight:600}
+    .bazaarspick .detail_header .tit { text-align:left; font-size:20px; line-height:28px; font-weight:700}
     .bazaarspick .detail_slide ~ .detail_txt { margin-top:16px}
 
     /* 전시장 근처 핫플 */

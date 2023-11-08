@@ -420,7 +420,7 @@ function scrollContList() {
         if (!this.swiper) {
           new Swiper(this, {
             slidesPerView: 5,
-            spaceBetween: 24,
+            spaceBetween: 20,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -429,7 +429,7 @@ function scrollContList() {
             breakpoints: {
               1280: {
                 slidesPerView: 5,
-                spaceBetween: 24,
+                spaceBetween: 20,
               },
 
               1023: {

@@ -169,7 +169,7 @@
 
 /*RSS*/
 .container.rss{padding-bottom:0}
-.tit_wrap .tit{font-family:'Gotham';font-weight: 400;font-size:48px;line-height:52px;}
+.tit_wrap .tit{font-size:48px;line-height:52px;}
 .cont_sec{display:flex;flex-wrap:wrap;justify-content: space-between;/*column-gap: 145px;*/padding:120px 0;}
 .cont_sec:first-child{padding-top:60px;}
 .cont_sec+.cont_sec{border-top:1px solid #DBDBDB;}
@@ -199,7 +199,8 @@
 .sec_area .cont_sec .txt{margin-top:120px;}
 .sec_area .btn_area{justify-content:flex-start;margin-top:40px;}
 .rss .sec_area .btn_area .btn{width:333px;background-color:transparent;justify-content: flex-start;}
-.rss .sec_area .btn_area .btn.ico_plus{background: url('../images/ico_plus_b.png') right 20px center no-repeat;background-size: 16px 16px;}
+.rss .sec_area .btn_area .btn.ico_plus{position:relative;}
+.rss .sec_area .btn_area .btn.ico_plus:after{content:'';position:absolute;top:calc(50% - 8px);right:20px;width: 16px;height: 16px;background: transparent url(../images/ico_plus_b.svg) no-repeat center / 32px auto;}
 
 /************************* Media Query *************************/
 

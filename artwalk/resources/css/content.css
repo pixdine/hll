@@ -49,7 +49,7 @@
 .desc_more{margin-top:16px;line-height:1;}
 .desc_more .btn_view{display:inline-flex;align-items:center;position:relative;font-size:14px;font-weight:500;line-height:20px;color:#999;}
 .desc_more .btn_view:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 8px;background:url('../images/ico_arrow_down_16.svg') no-repeat center center / 100% auto;}
-.desc_more .desc{display:none;margin-top:12px;font-size:12px;font-weight:500;line-height:16px;color:#999;word-break:break-all;}
+.desc_more .desc{display:none;margin-top:12px;font-size:12px;font-weight:500;line-height:16px;color:#999;}
 .desc_more .d_list li{list-style:decimal;margin-left:20px;}
 .desc_more .d_list li ~ li{margin-top:8px;}
 .desc_more .btn_view.on:after{background-image:url('../images/ico_arrow_up_16.svg');}
@@ -68,8 +68,7 @@
 .viewSwiper .swiper-slide img { object-fit:contain; height:100%;}
 
 .detail_slide ~ .detail_txt{margin-top:60px;}
-.detail_txt{font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;word-break:break-all;}
-.detail_txt p{word-break:inherit;}
+.detail_txt{font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;}
 
 /* 관련기사 */
 .row_list li ~ li{margin-top:24px;}
@@ -93,11 +92,10 @@
 .editor_comment .editor_inner{display:flex;flex-wrap:wrap;}
 .editor_comment .imgbox{overflow:hidden;position:relative;width:27.963%;height:0;margin-right:40px;padding-top:17.5%;}
 .editor_comment .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
-.editor_comment .txtbox{flex:1;word-break:break-all;}
+.editor_comment .txtbox{flex:1;}
 .editor_comment .txtbox .tit{position:relative;margin-bottom:12px;font-family:Gotham;font-size:24px;font-weight:500;line-height:32px;}
 .editor_comment .txtbox .tit:before{content: '';position:absolute;top:50%;left:0;z-index:1;width:100%;height:1px;background-color:#ccc;}
 .editor_comment .txtbox .tit strong{display:inline-block;position:relative;padding-right:24px;z-index:2;background-color:#f7f7f7;font-weight:500;}
-.editor_comment .txtbox p{word-break:inherit;}
 .editor_comment .editor_by{margin-top:8px;color:#666;}
 .editor_comment .editor_by .name{color:#111;}
 
@@ -150,7 +148,7 @@
 .comment_info .more_drop{margin-left:auto;}
 .comment_box .btn_box{margin-top:12px;}
 .comment_txt{font-family:'Noto Sans KR';}
-.comment_txt .txt{position:relative;max-height:100%;font-size:14px;font-weight:400;line-height:20px;word-break:break-all;}
+.comment_txt .txt{position:relative;max-height:100%;font-size:14px;font-weight:400;line-height:20px;}
 .comment_txt~ .comment_img{margin-top:16px;}
 .comment_img{position:relative;width:80px;height:80px;}
 .comment_img a{display:block;width:100%;height:100%;}
@@ -385,7 +383,7 @@
 .thumb_item .img_box img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .thumb_item .info_box{flex:1;min-width:0;}
 .thumb_item .info_box .tit{display:block;margin-bottom:12px;font-size:18px;font-weight:500;line-height:24px;word-break:break-all;}
-.thumb_item .info_box .txt{display:block;font-family:'Noto Sans KR';font-size:16px;font-weight:500;line-height:28px;color:#666;word-break:break-all;}
+.thumb_item .info_box .txt{display:block;font-family:'Noto Sans KR';font-size:16px;font-weight:500;line-height:28px;color:#666;}
 .thumb_item .info_box .date{display:block;margin-top:24px;font-size:14px;line-height:20px;color:#666;}
 
 /* 게시판 공통 */
@@ -396,7 +394,6 @@
 .tit_wrap.line ~ .board_wrap .board_list{margin-top:-24px;border-top:0;}
 
 .board_item{padding:24px 0;}
-.board_item *{word-break:break-all;}
 .board_item a{display:block;position:relative;width:100%;}
 
 .board_item .detail_box{overflow:hidden;}
@@ -449,8 +446,7 @@
 .profile_area .user_info .name{display:block;overflow:hidden;min-width:0;text-overflow:ellipsis;white-space:nowrap;}
 .profile_area .user_info .date{white-space:nowrap;font-family:Gotham;}
 .view_detail_body{position:relative;border-bottom:1px solid #dbdbdb;}
-.view_detail_body_cont{max-width:996px;margin:0 auto;padding-bottom:80px;font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;color:#111;word-break:break-all;}
-.view_detail_body_cont *{word-break:break-all;}
+.view_detail_body_cont{max-width:996px;margin:0 auto;padding-bottom:80px;font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;color:#111;}
 .view_detail_body_cont .detail_slide{margin-top:24px;}
 .view_detail_body ~ .view_detail_footer{border-top:0;}
 .view_detail_footer{border-top:1px solid #dbdbdb;border-bottom:2px solid #111;}

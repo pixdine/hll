@@ -26,6 +26,11 @@
 
 .point{color:var(--point);}
 
+
+/*business*/
+.sub_container .tab_menu.type03 > ul{justify-content: center;}
+
+
 /*Contact us - 문의하기*/
 .tit_wrap02{position: relative;margin-bottom:46px;}
 .tit_wrap02 p.stit .ess {margin-right:10px;}
@@ -201,6 +206,7 @@
 .rss .sec_area .btn_area .btn{width:333px;background-color:transparent;justify-content: flex-start;}
 .rss .sec_area .btn_area .btn.ico_plus{position:relative;}
 .rss .sec_area .btn_area .btn.ico_plus:after{content:'';position:absolute;top:calc(50% - 8px);right:20px;width: 16px;height: 16px;background: transparent url('../images/ico_plus_b.svg') no-repeat center / 16px auto;}
+
 
 /************************* Media Query *************************/
 

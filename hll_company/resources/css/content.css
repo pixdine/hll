@@ -117,7 +117,10 @@
 .life_list li:first-child,.life_list li:nth-child(2),.life_list li:nth-child(3){padding-top: 40px;}
 .life_list li:nth-last-child(-n+2) {border-bottom:0;}
 .life_list li i{display: block;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px;width: 48px;}
-.life_list li strong{color:var(--point);font-size:22px;font-weight:500;display:block;margin-top:26px;line-height:28px;}
+.life_list li .tit_txt{position: relative;margin-top:20px;color:var(--point);font-size:22px;}
+.life_list li .tit_txt span{display: inline-block;line-height:28px;font-family: 'Gotham';}
+.life_list li .tit_txt strong{position: relative;display: inline-block;font-weight:700;line-height:32px;padding-left:24px;font-family: 'Noto Sans KR';}
+.life_list li .tit_txt strong::before{content: '';display: inline-block;position: absolute;left:11.5px;top:calc(50% - 6px);width:1px;height:16px;background-color:var(--point);}
 .life_list li p{font-size:18px;font-weight:500;color:#666;line-height:26px;margin-top:12px;word-break: break-all;}
 
 .life_list li i.icon1{background-image: url('../images/ico_life01.png');}

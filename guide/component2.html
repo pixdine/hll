@@ -2,263 +2,306 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>예술산책 매체 컴포넌트</title>
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" type="text/css" href="../artwalk/resources/css/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="../artwalk/resources/css/common.css">
-	<link rel="stylesheet" type="text/css" href="./css/guide.css"/><!-- 가이드 CSS -->
-	<script src="../artwalk/resources/js/jquery-3.6.0.min.js"></script>
-	<script src="../artwalk/resources/js/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>예술산책 매체 컴포넌트</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../artwalk/resources/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../artwalk/resources/css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/guide.css"/><!-- 가이드 CSS -->
+    <script src="../artwalk/resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../artwalk/resources/js/jquery-ui.min.js"></script>
 </head>
 <body>
-	<!-- wrap -->
-	<div id="wrap" class="wrap">
-		<!-- container -->
-		<div id="container" class="container">
-			<div id="content" class="content">
-				<!-- 버튼 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">Button</h2>
-						<h3 class="h3">공통</h3>
-						<ul class="guide_desc">
-							<li>주버튼 컬러 : .bctype1 (ex .btn + .bctype1)</li>
-							<li>서브버튼 : .bctype2 (ex .btn + .bctype2)</li>
-						</ul>
+    <!-- wrap -->
+    <div id="wrap" class="wrap">
+        <!-- container -->
+        <div id="container" class="container">
+            <div id="content" class="content">
+                <!-- 폰트 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">Font</h2>
+                        <h3 class="h3">공통</h3>
+                        <ul class="guide_desc">
+                            <li>사용한 폰트 : S-core Dream, Noto Sans KR, Gotham</li>
+                        </ul>
+                        <h3 class="h3">S-core Dream</h3>
+                        <ul class="guide_desc">
+                            <li>Bold, Medium, Regular 사용</li>
+                            <li>퍼블 정의 : Bold (700), Medium (500), Regular (400)</li>
+                            <li>폰트 특성상 line-height가 안맞는 경우가 있어 모바일 모드는 폰 기기를 기준으로 조정함</li>
+                        </ul>
+                        <h3 class="h3">Noto Sans KR</h3>
+                        <ul class="guide_desc">
+                            <li>Medium, Regular 사용</li>
+                            <li>퍼블 정의 : Medium (500), Regular (400)</li>
+                        </ul>
+                        <h3 class="h3">Gotham</h3>
+                        <ul class="guide_desc">
+                            <li>Medium 사용</li>
+                            <li>퍼블 정의 : Medium (500)</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //폰트 가이드 -->
 
-						<h3 class="h3">H52 (.btn + 컬러타입명)</h3>
-						<p class="guide_desc">높이 52px, 폰트크기 16px, 좌우여백 20px, (PC)최소넓이 136px</p>
-						<button type="button" class="btn bctype1"><span>확인</span></button>
-						<button type="button" class="btn bctype2"><span>취소</span></button>
+                <!-- 버튼 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">Button</h2>
+                        <h3 class="h3">공통</h3>
+                        <ul class="guide_desc">
+                            <li>주버튼 컬러 : .bctype1 (ex .btn + .bctype1)</li>
+                            <li>서브버튼 : .bctype2 (ex .btn + .bctype2)</li>
+                        </ul>
 
-						<h3 class="h3">H36 (.btn_s + 컬러타입명)</h3>
-						<p class="guide_desc">높이 36px, 폰트크기 14px, 좌우여백 20px</p>
-						<button type="button" class="btn_s bctype1"><span>확인</span></button>
-						<button type="button" class="btn_s bctype2"><span>취소</span></button>
+                        <h3 class="h3">H52 (.btn + 컬러타입명)</h3>
+                        <p class="guide_desc">높이 52px, 폰트크기 16px, 좌우여백 20px, (PC)최소넓이 136px</p>
+                        <button type="button" class="btn bctype1"><span>확인</span></button>
+                        <button type="button" class="btn bctype2"><span>취소</span></button>
 
-						<h3 class="h3">Disabled (Button태그, a태그)</h3>
-						<p class="guide_desc">button태그에서 disabled인 경우, disabled 속성 추가</p>
-						<button type="button" class="btn bctype1" disabled><span>확인</span></button>
-						<button type="button" class="btn bctype2" disabled><span>취소</span></button>
-						<button type="button" class="btn_s bctype1" disabled><span>확인</span></button>
-						<button type="button" class="btn_s bctype2" disabled><span>취소</span></button>
+                        <h3 class="h3">H36 (.btn_s + 컬러타입명)</h3>
+                        <p class="guide_desc">높이 36px, 폰트크기 14px, 좌우여백 20px</p>
+                        <button type="button" class="btn_s bctype1"><span>확인</span></button>
+                        <button type="button" class="btn_s bctype2"><span>취소</span></button>
 
-						<p class="guide_desc">a태그에서 disabled인 경우, disabled 클래스 추가</p>
-						<a href="#" class="btn bctype1 disabled"><span>확인</span></a>
-						<a href="#" class="btn bctype2 disabled"><span>취소</span></a>
-						<a href="#" class="btn_s bctype1 disabled"><span>확인</span></a>
-						<a href="#" class="btn_s bctype2 disabled"><span>취소</span></a>
-					</div>
+                        <h3 class="h3">Disabled (Button태그, a태그)</h3>
+                        <p class="guide_desc">button태그에서 disabled인 경우, disabled 속성 추가</p>
+                        <button type="button" class="btn bctype1" disabled><span>확인</span></button>
+                        <button type="button" class="btn bctype2" disabled><span>취소</span></button>
+                        <button type="button" class="btn_s bctype1" disabled><span>확인</span></button>
+                        <button type="button" class="btn_s bctype2" disabled><span>취소</span></button>
 
-					<div class="guide_box">
-						<h3 class="h3">SNS버튼 (.btn_sns + 채널명)</h3>
+                        <p class="guide_desc">a태그에서 disabled인 경우, disabled 클래스 추가</p>
+                        <a href="#" class="btn bctype1 disabled"><span>확인</span></a>
+                        <a href="#" class="btn bctype2 disabled"><span>취소</span></a>
+                        <a href="#" class="btn_s bctype1 disabled"><span>확인</span></a>
+                        <a href="#" class="btn_s bctype2 disabled"><span>취소</span></a>
+                    </div>
 
-						<div class="sns_list">
-							<ul>
-								<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
-								<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
-								<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
-								<li><button type="button" class="btn_sns copy"><span class="tit">복사</span></button></li>
-							</ul>
-						</div>
+                    <div class="guide_box">
+                        <h3 class="h3">SNS버튼 (.btn_sns + 채널명)</h3>
 
-						<div class="sns_list">
-							<ul>
-								<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-								<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
-								<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
-							</ul>
-						</div>
-					</div>
+                        <div class="sns_list">
+                            <ul>
+                                <li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+                                <li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+                                <li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+                                <li><button type="button" class="btn_sns copy"><span class="tit">복사</span></button></li>
+                            </ul>
+                        </div>
 
-					<div class="guide_box">
-						<h3 class="h3">아이콘버튼 (.btn_ico + 아이콘명)</h3>
-						<button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button>
-						<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-						<button type="button" class="btn_ico scrap on"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+                        <div class="sns_list">
+                            <ul>
+                                <li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+                                <li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+                                <li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+                                <li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="guide_box">
+                        <h3 class="h3">아이콘버튼 (.btn_ico + 아이콘명)</h3>
+                        <button type="button" class="btn_ico zoom"><span class="blind">크게보기</span></button>
+                        <button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+                        <button type="button" class="btn_ico scrap on"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
                         <button type="button" class="btn_ico scrap sz_28 js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
-						<button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
-					</div>
-				</div>
-				<!-- //버튼 가이드 -->
+                        <button type="button" class="btn_ico share"><span class="blind">공유하기</span></button>
+                    </div>
 
-				<!-- 탭메뉴 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">Tab</h2>
-						<h3 class="h3">탭메뉴1 (.tab_menu + .type01)</h3>
+                    <div class="guide_box">
+                        <h3 class="h3">기타버튼</h3>
+                        <button type="button" class="btn_link" disabled><span>이전글</span></button>
+                        <button type="button" class="btn_link"><span>다음글</span></button>
+                        <button type="button" class="btn_link noti"><span>운영규정</span></button>
+                        <button type="button" class="btn_link write"><span>글쓰기</span></button>
+                        <a href="#" class="btn_arr"><span>국립중앙박물관</span></a>
+                        <button type="button" class="btn_filter"><span>상세 검색 필터</span></button>
+                        <a href="#" class="btn_plus"><span>전시정보 보러가기</span></a>
+                    </div>
+                </div>
+                <!-- //버튼 가이드 -->
 
-						<!-- 탭메뉴 -->
-						<div class="tab_menu type01">
-							<ul>
-								<li class="on"><a href="javascript:;">전체<span>3,091</span></a></li><!-- D: 선택 시 on 클래스 추가 -->
-								<li><a href="javascript:;">전시정보<span>22</span></a></li>
-								<li><a href="javascript:;">아트뉴스<span>0</span></a></li>
-								<li><a href="javascript:;">갤러리<span>1</span></a></li>
-								<li><a href="javascript:;">작가<span>6</span></a></li>
-								<li class="disabled"><a href="javascript:;">이벤트<span>0</span></a></li><!-- D: 해당 내용이 없는 경우 disabled 클래스 추가 -->
-							</ul>
-						</div>
-						<!-- //탭메뉴 -->
+                <!-- 탭메뉴 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">Tab</h2>
+                        <h3 class="h3">탭메뉴1 (.tab_menu + .type01)</h3>
 
-						<h3 class="h3">탭메뉴2 (.tab_menu + .type02)</h3>
+                        <!-- 탭메뉴 -->
+                        <div class="tab_menu type01">
+                            <ul>
+                                <li class="on"><a href="javascript:;">전체<span>3,091</span></a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                <li><a href="javascript:;">전시정보<span>22</span></a></li>
+                                <li><a href="javascript:;">아트뉴스<span>0</span></a></li>
+                                <li><a href="javascript:;">갤러리<span>1</span></a></li>
+                                <li><a href="javascript:;">작가<span>6</span></a></li>
+                                <li class="disabled"><a href="javascript:;">이벤트<span>0</span></a></li><!-- D: 해당 내용이 없는 경우 disabled 클래스 추가 -->
+                            </ul>
+                        </div>
+                        <!-- //탭메뉴 -->
 
-						<!-- 탭메뉴 -->
-						<div class="tab_menu type02">
-							<ul>
-								<li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
-								<li><a href="javascript:;">적립</a></li>
-								<li><a href="javascript:;">소진</a></li>
-							</ul>
-						</div>
-						<!-- //탭메뉴 -->
+                        <h3 class="h3">탭메뉴2 (.tab_menu + .type02)</h3>
 
-						<h3 class="h3">탭메뉴3 (.tab_menu + .type03)</h3>
-						<p class="guide_desc">PC : H44, MO : H36</p>
+                        <!-- 탭메뉴 -->
+                        <div class="tab_menu type02">
+                            <ul>
+                                <li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                <li><a href="javascript:;">적립</a></li>
+                                <li><a href="javascript:;">소진</a></li>
+                            </ul>
+                        </div>
+                        <!-- //탭메뉴 -->
 
-						<!-- 탭메뉴 -->
-						<div class="tab_menu type03">
-							<ul>
-								<li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
-								<li><a href="javascript:;">회화</a></li>
-								<li><a href="javascript:;">사진</a></li>
-								<li><a href="javascript:;">미디어아트</a></li>
-								<li><a href="javascript:;">설치</a></li>
-								<li><a href="javascript:;">조각</a></li>
-								<li><a href="javascript:;">퍼포먼스</a></li>
-								<li><a href="javascript:;">행사</a></li>
-								<li class="disabled"><a href="javascript:;">기타</a></li><!-- D: 해당 내용이 없는 경우 disabled 클래스 추가 -->
-							</ul>
-						</div>
-						<!-- //탭메뉴 -->
-					</div>
-				</div>
-				<!-- //탭메뉴 가이드 -->
+                        <h3 class="h3">탭메뉴3 (.tab_menu + .type03)</h3>
+                        <p class="guide_desc">PC : H44, MO : H36</p>
 
-				<!-- 더보기 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">더보기</h2>
-						<h3 class="h3">클릭 시 하위로 콘텐츠 추가</h3>
-						<p class="guide_desc">기본(default)</p>
-						<!-- 더보기 -->
-						<div class="btn_more_wrap type1">
-							<button type="button" class="btn more"><span>더보기</span></button>
-						</div>
-						<!-- //더보기 -->
+                        <!-- 탭메뉴 -->
+                        <div class="tab_menu type03">
+                            <ul>
+                                <li class="on"><a href="javascript:;">전체</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                <li><a href="javascript:;">회화</a></li>
+                                <li><a href="javascript:;">사진</a></li>
+                                <li><a href="javascript:;">미디어아트</a></li>
+                                <li><a href="javascript:;">설치</a></li>
+                                <li><a href="javascript:;">조각</a></li>
+                                <li><a href="javascript:;">퍼포먼스</a></li>
+                                <li><a href="javascript:;">행사</a></li>
+                                <li class="disabled"><a href="javascript:;">기타</a></li><!-- D: 해당 내용이 없는 경우 disabled 클래스 추가 -->
+                            </ul>
+                        </div>
+                        <!-- //탭메뉴 -->
+                    </div>
+                </div>
+                <!-- //탭메뉴 가이드 -->
 
-						<p class="guide_desc">비활성화(disabled)</p>
+                <!-- 더보기 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">더보기</h2>
+                        <h3 class="h3">클릭 시 하위로 콘텐츠 추가</h3>
+                        <p class="guide_desc">기본(default)</p>
                         <!-- 더보기 -->
-						<div class="btn_more_wrap type1">
-							<button type="button" class="btn more" disabled><span>더보기</span></button>
-						</div>
-						<!-- //더보기 -->
+                        <div class="btn_more_wrap type1">
+                            <button type="button" class="btn more"><span>더보기</span></button>
+                        </div>
+                        <!-- //더보기 -->
 
-						<h3 class="h3">타이틀 영역 사이드에 노출</h3>
-						<ul class="guide_desc">
-							<li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
-						</ul>
+                        <p class="guide_desc">비활성화(disabled)</p>
+                        <!-- 더보기 -->
+                        <div class="btn_more_wrap type1">
+                            <button type="button" class="btn more" disabled><span>더보기</span></button>
+                        </div>
+                        <!-- //더보기 -->
 
-						<!-- 타이틀영역 -->
-						<div class="tit_wrap">
-							<div class="tit_area">
-								<h2 class="tit">전시장 근처 핫플은 어디?</h2>
-								<div class="side"><a href="#" class="btn_more"><span>eee 더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
-							</div>
-						</div>
-						<!-- //타이틀영역 -->
-					</div>
-				</div>
-				<!-- //더보기 가이드 -->
+                        <h3 class="h3">타이틀 영역 사이드에 노출</h3>
+                        <ul class="guide_desc">
+                            <li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
+                        </ul>
 
-				<!-- 페이지네이션 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">Pagination</h2>
-						<ul class="guide_desc">
-							<li>PC 상단여백 120px, MO 상단여백 40px</li>
-							<li><strong class="impt">[개발처리필요]</strong> PC 10개에서는 10개 노출, MO에서는 6개 노출<br>개발에서 원소스로 갈 수 없고 PC, MO 분리해야 한다면 퍼블쪽에 요청주세요</li>
-						</ul>
+                        <!-- 타이틀영역 -->
+                        <div class="tit_wrap">
+                            <div class="tit_area">
+                                <h2 class="tit">전시장 근처 핫플은 어디?</h2>
+                                <div class="side"><a href="#" class="btn_more"><span>eee 더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                            </div>
+                        </div>
+                        <!-- //타이틀영역 -->
+                    </div>
+                </div>
+                <!-- //더보기 가이드 -->
 
-						<!-- pagination -->
-						<!-- D: [개발처리] PC에서는 10개 노출, MO에서는 6개 노출 (개발에서 원소스로 갈 수 없고 PC, MO 분리해야 한다면 퍼블쪽에 요청주세요) -->
-						<div class="pagination">
-							<a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
-							<a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
-							<a href="#">2</a>
-							<a href="#">3</a>
-							<a href="#">4</a>
-							<a href="#">5</a>
-							<a href="#">6</a>
-							<a href="#">7</a>
-							<a href="#">8</a>
-							<a href="#">9</a>
-							<a href="#">10</a>
-							<a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
-						</div>
-						<!-- //pagination -->
-					</div>
-				</div>
-				<!-- //페이지네이션 가이드 -->
+                <!-- 페이지네이션 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">Pagination</h2>
+                        <ul class="guide_desc">
+                            <li>PC 상단여백 120px, MO 상단여백 40px</li>
+                            <li><strong class="impt">[개발처리필요]</strong> PC 10개에서는 10개 노출, MO에서는 6개 노출<br>개발에서 원소스로 갈 수 없고 PC, MO 분리해야 한다면 퍼블쪽에 요청주세요</li>
+                        </ul>
 
-				<!-- 타이틀 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">타이틀</h2>
-						<h3 class="h3">모듈 위 타이틀 영역</h3>
-						<ul class="guide_desc">
-							<li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
+                        <!-- pagination -->
+                        <!-- D: [개발처리] PC에서는 10개 노출, MO에서는 6개 노출 (개발에서 원소스로 갈 수 없고 PC, MO 분리해야 한다면 퍼블쪽에 요청주세요) -->
+                        <div class="pagination">
+                            <a href="#" class="btn_prev disabled"><span class="blind">이전</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+                            <a href="#" class="on">1</a><!-- D: 활성화 시 on 클래스 추가 -->
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#" class="btn_next"><span class="blind">다음</span></a><!-- D: 비활성화 시 disabled 클래스 추가 -->
+                        </div>
+                        <!-- //pagination -->
+                    </div>
+                </div>
+                <!-- //페이지네이션 가이드 -->
+
+                <!-- 타이틀 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">타이틀</h2>
+                        <h3 class="h3">모듈 위 타이틀 영역</h3>
+                        <ul class="guide_desc">
+                            <li>PC에서는 더보기 +, MO에서는 텍스트 없이 + 만 노출</li>
                             <li>[공통] PC 폰트크기 28px, MO 폰트크기 20px</li>
                             <li>[메인] PC 폰트크기 48px, MO 폰트크기 22px (main.css에 재정의)</li>
-						</ul>
-						<!-- 타이틀영역 -->
-						<div class="tit_wrap">
-							<div class="tit_area">
-								<h2 class="tit">전시장 근처 핫플은 어디?</h2>
-								<div class="side"><a href="#" class="btn_more"><span>eee 더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
-							</div>
-						</div>
-						<!-- //타이틀영역 -->
-					</div>
-				</div>
-				<!-- //타이틀 가이드 -->
+                        </ul>
+                        <!-- 타이틀영역 -->
+                        <div class="tit_wrap">
+                            <div class="tit_area">
+                                <h2 class="tit">전시장 근처 핫플은 어디?</h2>
+                                <div class="side"><a href="#" class="btn_more"><span>eee 더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
+                            </div>
+                        </div>
+                        <!-- //타이틀영역 -->
+                    </div>
+                </div>
+                <!-- //타이틀 가이드 -->
 
-				<!-- 플래그 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">플래그</h2>
+                <!-- 플래그 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">플래그</h2>
                         <h3 class="h3">낱개</h3>
                         <span class="flag">플래그</span><!-- D: flag -->
                         <span class="flag type2">플래그</span><!-- D: flag -->
+                        <span class="flag type3">플래그</span><!-- D: flag -->
                         <h3 class="h3">낱개 작은사이즈</h3>
                         <div>
                             <span class="flag sm">오픈예정</span>
                             <span class="flag type2 sm">종료</span>
+                            <span class="flag type3 sm">플래그</span>
                         </div>
 
                         <h3 class="h3">그룹</h3>
                         <div class="flag_area">
                             <span class="flag">플래그</span>
                             <span class="flag type2">플래그</span>
+                            <span class="flag type3">플래그</span>
                         </div>
                         <h3 class="h3">그룹 작은사이즈</h3>
                         <div class="flag_area">
                             <span class="flag sm">오픈예정</span>
                             <span class="flag type2 sm">종료</span>
+                            <span class="flag type3 sm">플래그</span>
                         </div>
-						<!-- //타이틀영역 -->
-					</div>
-				</div>
-				<!-- //플래그 가이드 -->
+                        <!-- //타이틀영역 -->
+                    </div>
+                </div>
+                <!-- //플래그 가이드 -->
 
-				<!-- 셀렉트 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">셀렉트박스</h2>
+                <!-- 셀렉트 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">셀렉트박스</h2>
 
                         <div class="selectbox" data-selectbox>
                             <div class="select_styled" data-value></div>
@@ -287,80 +330,80 @@
                                 </ul>
                             </div>
                         </div>
-					</div>
-				</div>
-				<!-- //셀렉트 가이드 -->
+                    </div>
+                </div>
+                <!-- //셀렉트 가이드 -->
 
-				<!-- 인풋 가이드 -->
-				<div class="guide_sec">
-					<div class="guide_box">
-						<h2 class="h2">Input</h2>
-						<h3 class="h3">Default</h3>
-						<ul class="guide_desc">
-							<li>Focused : 인풋 색상(#f7f7f7), 인풋 보더 컬러(#333)변경</li>
-							<li>Typing : 텍스트를 입력하면 삭제버튼 노출</li>
-						</ul>
-						<div class="inputbox">
-							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off">
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-						</div>
+                <!-- 인풋 가이드 -->
+                <div class="guide_sec">
+                    <div class="guide_box">
+                        <h2 class="h2">Input</h2>
+                        <h3 class="h3">Default</h3>
+                        <ul class="guide_desc">
+                            <li>Focused : 인풋 색상(#f7f7f7), 인풋 보더 컬러(#333)변경</li>
+                            <li>Typing : 텍스트를 입력하면 삭제버튼 노출</li>
+                        </ul>
+                        <div class="inputbox">
+                            <input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off">
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                        </div>
 
-						<h3 class="h3">Disabled</h3>
-						<div class="inputbox">
-							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값" disabled>
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-						</div>
+                        <h3 class="h3">Disabled</h3>
+                        <div class="inputbox">
+                            <input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값" disabled>
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        </div>
 
-						<h3 class="h3">Readonly</h3>
-						<div class="inputbox">
-							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값" readonly>
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-						</div>
+                        <h3 class="h3">Readonly</h3>
+                        <div class="inputbox">
+                            <input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값" readonly>
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        </div>
 
-						<h3 class="h3">Done</h3>
-						<div class="inputbox">
-							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-						</div>
+                        <h3 class="h3">Done</h3>
+                        <div class="inputbox">
+                            <input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                        </div>
 
-						<h3 class="h3">Error (.inputbox + .error)</h3>
-						<div class="inputbox error">
-							<input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
-							<p class="row_err_txt">에러메시지가 노출됩니다.</p>
-						</div>
+                        <h3 class="h3">Error (.inputbox + .error)</h3>
+                        <div class="inputbox error">
+                            <input type="tel" class="inp" id="point" placeholder="Placeholder 문구가 나타납니다." title="Placeholder 문구가 나타납니다." autocomplete="off" value="입력값">
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button>
+                            <p class="row_err_txt">에러메시지가 노출됩니다.</p>
+                        </div>
 
-						<h3 class="h3">Search (.inputbox + .search)</h3>
-						<ul class="guide_desc">
-							<li>[매체] 검색 인풋 사이즈 : PC는 H60, MO는 H52</li>
-							<li>[통합멤버십] 검색 인풋은 사이즈 : PC, MO 모두 H52</li>
-						</ul>
-						<div class="inputbox search">
-							<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-							<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
-						</div>
+                        <h3 class="h3">Search (.inputbox + .search)</h3>
+                        <ul class="guide_desc">
+                            <li>[매체] 검색 인풋 사이즈 : PC는 H60, MO는 H52</li>
+                            <li>[통합멤버십] 검색 인풋은 사이즈 : PC, MO 모두 H52</li>
+                        </ul>
+                        <div class="inputbox search">
+                            <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                            <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+                        </div>
 
-						<br>
+                        <br>
 
-						<div class="inputbox search">
-							<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="입력값">
-							<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-							<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
-						</div>
-					</div>
-				</div>
-				<!-- //인풋 가이드 -->
-			</div>
-		</div>
-		<!-- //container -->
-	</div>
-	<!-- //wrap -->
+                        <div class="inputbox search">
+                            <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="입력값">
+                            <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                            <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //인풋 가이드 -->
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
 
-	<!-- js -->
-	<script src="../artwalk/resources/js/swiper.min.js"></script>
-	<script src="../artwalk/resources/js/ui.common.js"></script>
-	<!-- //js -->
+    <!-- js -->
+    <script src="../artwalk/resources/js/swiper.min.js"></script>
+    <script src="../artwalk/resources/js/ui.common.js"></script>
+    <!-- //js -->
 
     <script>
         // 페이지의 모든 리소스가 로드된 후 실행할 코드

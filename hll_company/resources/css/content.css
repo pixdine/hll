@@ -299,8 +299,8 @@
     .board_st01.view_cont .board_detail{padding:20px 0;margin-top:20px;}
     
     .board_st01.faq_cont .board_detail{margin-top:20px;}
-    .board_st01.faq_cont .board_detail .view{padding:20px 16px 20px 30px;font-size:14px;}
-    .board_st01.faq_cont .board_detail .view::before{top: 20px;left:16px;}
+    .board_st01.faq_cont .board_detail .view{padding:20px 16px 20px 30px;font-size:14px;line-height:20px;}
+    .board_st01.faq_cont .board_detail .view::before{top: 20px;left:16px;line-height:20px;}
 
     .board_st01 .board_list .b_btn::after{width:16px;height:16px;background-size:12px auto;}
     .board_st01.view_cont .board_detail .btn_area{margin-bottom:0;}

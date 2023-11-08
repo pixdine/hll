@@ -200,7 +200,7 @@
 .sec_area .btn_area{justify-content:flex-start;margin-top:40px;}
 .rss .sec_area .btn_area .btn{width:333px;background-color:transparent;justify-content: flex-start;}
 .rss .sec_area .btn_area .btn.ico_plus{position:relative;}
-.rss .sec_area .btn_area .btn.ico_plus:after{content:'';position:absolute;top:calc(50% - 8px);right:20px;width: 16px;height: 16px;background: transparent url(../images/ico_plus_b.svg) no-repeat center / 32px auto;}
+.rss .sec_area .btn_area .btn.ico_plus:after{content:'';position:absolute;top:calc(50% - 8px);right:20px;width: 16px;height: 16px;background: transparent url('../images/ico_plus_b.svg') no-repeat center / 16px auto;}
 
 /************************* Media Query *************************/
 
@@ -299,7 +299,7 @@
     .board_st01.view_cont .board_detail{padding:20px 0;margin-top:20px;}
     
     .board_st01.faq_cont .board_detail{margin-top:20px;}
-    .board_st01.faq_cont .board_detail .view{padding:20px 16px 20px 30px;}
+    .board_st01.faq_cont .board_detail .view{padding:20px 16px 20px 30px;font-size:14px;}
     .board_st01.faq_cont .board_detail .view::before{top: 20px;left:16px;}
 
     .board_st01 .board_list .b_btn::after{width:16px;height:16px;background-size:12px auto;}

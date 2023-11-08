@@ -18,6 +18,7 @@
 .tit_wrap{position:relative;margin-bottom: 40px;}
 .tit_area{display:flex;position:relative; flex-direction:row;}
 .tit_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:var(--point);}
+.tit_wrap .tit.en {font-size:48px; font-weight:500; font-family: 'Gotham';}
 .tit_wrap h3.tit{font-size:28px;line-height:41px;}
 
 
@@ -71,7 +72,7 @@
 .career .top_sort_wrap{margin-top:40px;}
 .career .top_sort_wrap .btn{min-width:99px}
 .wrap_help .btn_ico{position: relative;display: flex;align-items: center;gap:4px;line-height: 1;}
-.wrap_help .btn_ico::after{content:'';width: 16px;height: 16px;background: transparent url(../images/ico_tooltip.svg) no-repeat right top / 100% auto;}
+.wrap_help .btn_ico::after{content:'';width: 16px;height: 16px; top:1px; background: transparent url(../images/ico_tooltip.svg) no-repeat right top / 100% auto;}
 .wrap_help .btn_ico span{color:var(--point);font-weight:500;}
 
 .help_txt li{padding:16px 0;}
@@ -117,7 +118,10 @@
 .life_list li:first-child,.life_list li:nth-child(2),.life_list li:nth-child(3){padding-top: 40px;}
 .life_list li:nth-last-child(-n+2) {border-bottom:0;}
 .life_list li i{display: block;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px;width: 48px;}
-.life_list li strong{color:var(--point);font-size:22px;font-weight:500;display:block;margin-top:26px;line-height:28px;}
+.life_list li .tit_txt{position: relative;margin-top:20px;color:var(--point);font-size:22px;}
+.life_list li .tit_txt span{display: inline-block;line-height:28px;font-family: 'Gotham';}
+.life_list li .tit_txt strong{position: relative;display: inline-block;font-weight:700;line-height:32px;padding-left:24px;font-family: 'Noto Sans KR';}
+.life_list li .tit_txt strong::before{content: '';display: inline-block;position: absolute;left:11.5px;top:calc(50% - 6px);width:1px;height:16px;background-color:var(--point);}
 .life_list li p{font-size:18px;font-weight:500;color:#666;line-height:26px;margin-top:12px;word-break: break-all;}
 
 .life_list li i.icon1{background-image: url('../images/ico_life01.png');}
@@ -165,13 +169,14 @@
 
 /*RSS*/
 .container.rss{padding-bottom:0}
-.container.rss .tit_wrap .tit{font-family:'Gotham';font-weight: 400;font-size:48px;line-height:52px;}
-.cont_sec{display:flex;flex-wrap:wrap;justify-content: space-between;column-gap: 145px;padding:120px 0;}
+https://pixdine.github.io/hll/artwalk/html/community/community.html#.container.rss .tit_wrap .tit{font-family:'Gotham';font-weight: 400;font-size:48px;line-height:52px;}
+.cont_sec{display:flex;flex-wrap:wrap;justify-content: space-between;/*column-gap: 145px;*/padding:120px 0;}
 .cont_sec:first-child{padding-top:60px;}
 .cont_sec+.cont_sec{border-top:1px solid #DBDBDB;}
-.cont_sec .txt{margin-top:72px;width:50%;}
-.cont_sec .txt p{font-size:18px;font-weight:500;line-height:26px;word-break: break-all;letter-spacing: -0.01em;}
+.cont_sec .txt{margin-top:72px;width:57.5%;}
+.cont_sec .txt p{font-size:16px;font-weight:500;line-height:26px;word-break: break-all;letter-spacing: -0.01em;}
 .sec_area{padding:180px 0;}
+.sec_area.bg_sky {padding:60px 0;}
 
 .subscrip_wrap ul{border-top:1px solid #111 }
 .subscrip_wrap ul li{padding: 28px 0;border-bottom: 1px solid #DBDBDB;}
@@ -346,6 +351,7 @@
 
 
     .sec_area{padding:80px 0;}
+    .sec_area.bg_sky { padding:48px 0}
     .sec_area .tit_wrap .tit{font-size:24px;}
     .sec_area .cont_inner{padding-top:0;}
     .sec_area .cont_sec .txt{margin-top:0;}

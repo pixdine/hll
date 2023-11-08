@@ -45,8 +45,7 @@
 
 /* 가이드탭 */
 .guide_tab{margin-bottom:20px;}
-.guide_tab > ul{position:relative;font-size:0;}
-.guide_tab > ul > li{display:inline-block;}
+.guide_tab > ul{display:flex;flex-wrap:wrap;gap:8px;position:relative;}
 .guide_tab > ul > li > a{display:block;height:40px;padding:0 20px;border:1px solid #dbdbdb;font-size:16px;color:#111;line-height:38px;text-align:center;}
 .guide_tab > ul > li.on > a{background-color:#212121;border-color:#212121;color:#fff;}
 

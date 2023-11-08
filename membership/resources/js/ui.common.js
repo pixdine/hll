@@ -425,6 +425,7 @@ function scrollContList() {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             },
+            loop: true,
             breakpoints: {
               1280: {
                 slidesPerView: 5,

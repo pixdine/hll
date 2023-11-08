@@ -248,7 +248,7 @@ https://pixdine.github.io/hll/artwalk/html/community/community.html#.container.r
 }
 
 @media screen and (max-width: 768px) {
-    .no_list{min-height: 300px;}
+    .no_list{min-height: 140px;}
     .no_list p{font-size:14px;}
 
     .container{padding-bottom:80px;}
@@ -321,8 +321,8 @@ https://pixdine.github.io/hll/artwalk/html/community/community.html#.container.r
     .life_list li:last-child{padding-bottom:0;}
     .life_list li:not(:last-child){border-bottom:1px solid #dbdbdb}
     .life_list li i{background-size:32px 32px;height: 32px;width: 32px;}
-    .life_list li strong{margin-top:20px;font-size: 18px;line-height: 24px;}
     .life_list li p{font-size:16px;line-height:23px;}
+    .life_list li .tit_txt{font-size:18px}
 
     /*process*/
     .process_wrap{padding:0 0 80px;}
@@ -331,7 +331,8 @@ https://pixdine.github.io/hll/artwalk/html/community/community.html#.container.r
     .process_wrap ul li .point{font-size:20px;line-height:29px;}
     .process_wrap ul li p{font-size:16px;line-height:23px;margin-top:12px;}
     .info_txt{margin-top:32px;}
-
+    .life_list li .tit_txt span{line-height:24px;}
+    .life_list li .tit_txt strong{line-height:26px;}
 
     /*rss*/
     .cont_sec{padding:40px 0;}

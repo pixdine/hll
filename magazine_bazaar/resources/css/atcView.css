@@ -40,8 +40,7 @@
 .ab_photo_1200 {position:relative;left:50%;transform:translateX(-50%);width:1200px;margin:24px auto;}
 .ab_photo_1200 img {width:100%;}
 
-.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em; word-break:break-all; }
-.atc_body .atc_body_cont p{word-break:break-all;}
+.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em;}
 body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin:24px auto;} /* 기사상세 > 본문 이미지 792 */
 .atc_body .ab_photo img { width: 100%; display:block}
@@ -104,7 +103,6 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .atc_dtline_box h3.title {font-family:'Didot'; font-weight:500; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit {font-size:16px; font-weight: 400; line-height:23px; color:#666; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit li {display:flex; flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;}
-.atc_dtline_box .list_credit li span{word-break:break-all;}
 .atc_dtline_box .list_credit li:not(:first-child){margin-top:5px;}
 .atc_dtline_box .list_credit li em { margin-right:8px}
 .atc_dtline_box .list_tag_type_01 {}
@@ -181,7 +179,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_related_article .text_type li{position:relative;padding-left:17px;}
 .ab_related_article .text_type li:before{content:'';display:block;position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background-color:#999;}
 .ab_related_article .headline{font-size:18px;font-weight:400;line-height:26px;color:#111;}
-.ab_related_article .headline a{display:block;color:#222;}
+.ab_related_article .headline a{display:block;color:#222;word-break:keep-all;}
 .ab_related_article .text_type li strong{font-weight:400;}
 .ab_related_article .text_type li:not(:first-child){margin-top:8px;}
 
@@ -206,7 +204,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .photo_txt div {width:calc(50% - 12px); margin:24px 0 0 0; }
 .photo_txt div img {display:block; object-fit: cover; width:100%;}
 .photo_txt div:nth-child(1), .photo_txt div:nth-child(2) {margin-top:0}
-.photo_txt div.txt { padding-bottom:36px;word-break:break-all;}
+.photo_txt div.txt { padding-bottom:36px;}
 
 .photo_four02 {width: 100%; margin:24px auto; display:flex; align-content:stretch; justify-content:space-between; flex-flow: row wrap; height:auto;}
 .photo_four02 div {margin:24px 0 0 0; }

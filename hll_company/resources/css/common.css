@@ -254,6 +254,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .tab_menu.type03 > ul > li{position:relative;}
 .tab_menu.type03 > ul > li > a{display:inline-flex;align-items:center;height:44px;padding:0 16px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;color:#111;}
 .tab_menu.type03 > ul > li.on > a{background-color:var(--point);border-color:var(--point);color:#fff;font-weight:500;}
+.tab_menu.type03 > ul > li.disabled > a{color:#ccc;pointer-events:none;}
 
 /* btn area */
 .btn_area { margin-top:120px;display:flex; justify-content:center;}

@@ -427,7 +427,7 @@ background:#fff;overflow:hidden;z-index:230}
 .header .sm_item{margin-bottom: 16px;}
 .header .sm_item:last-child{margin-bottom: 0;}
 .header .sm_link{color: #666;font-weight: 500;font-size: 16px;line-height: 24px;white-space: nowrap;}
-/* .header .sm_item.active .sm_link {color:var(--point);} */
+.header .sm_item .sm_link:hover {color:var(--point);}
 .header .btn-open-am,
 .header .btn-close-am{display: none;}
 
@@ -588,6 +588,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.header .sm_item{margin-bottom: 16px;}
 	.header .sm_item:last-child{margin-bottom: 0;}
 	.header .sm_link{line-height: 23px;}
+	.header .sm_item .sm_link:hover{color: #666;}
 	.header .btn-open-am,
 	.header .btn-close-am{display: block;}
 	.header .btn-close-am {position: absolute;top: 12px;right: 20px;width: 24px;}

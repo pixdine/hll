@@ -249,6 +249,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .tab_menu.type02 > ul > li:last-child:after{display:none;}
 .tab_menu.type02 > ul > li > a{display:block;padding:0 16px;font-size:16px;font-weight:500;color:#999;line-height:23px;}
 .tab_menu.type02 > ul > li.on > a{font-weight:700;color:var(--point);}
+.tab_menu.type02 > ul > li.disabled > a{color:#999;pointer-events:none;}
 
 .tab_menu.type03 > ul{display:flex;flex-wrap:wrap;gap:12px;}
 .tab_menu.type03 > ul > li{position:relative;}

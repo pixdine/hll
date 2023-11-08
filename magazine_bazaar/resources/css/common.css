@@ -696,7 +696,7 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_box .profile_img{overflow:hidden;position:absolute;right:32px;bottom:-27px;width:120px;height:120px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .editor_box .profile_img img{width:100%;height:100%;object-fit:cover;}
 .editor_box .editor_body{position:relative;padding:50px 32px 40px;}
-.editor_box .editor_body .txt{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;font-size:16px;font-weight:400;line-height:26px;color:#666;word-break:break-all;}
+.editor_box .editor_body .txt{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;font-size:16px;font-weight:400;line-height:26px;color:#666;}
 .editor_box .editor_body:before{content:'';position:absolute;left:32px;top:32px;display:block;width:32px;height:2px;background-color:#111;}
 
 /* 에디터 상세 */
@@ -711,7 +711,7 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_profile .profile_info .name{display:block;font-size:36px;line-height:52px;}
 .editor_profile .profile_info .desc{display:block;margin-top:4px;font-size:18px;line-height:26px;}
 .editor_profile .profile_info .txt_box{margin-top:20px;}
-.editor_profile .profile_info .txt{min-height:46px;font-size:16px;font-weight:400;line-height:23px;color:#666;word-break:break-all;}
+.editor_profile .profile_info .txt{min-height:46px;font-size:16px;font-weight:400;line-height:23px;color:#666;}
 .is_pc .editor_profile .btn_box{position:absolute;right:60px;top:64px;}
 .editor_profile .btn_box .btn{height:44px;font-size:14px;}
 .editor_profile .btn_box .btn:after{background-size:16px auto;}
@@ -768,7 +768,7 @@ background:#fff;overflow:hidden;z-index:230}
 .ul_tbl .ul_td{display:table-cell;padding:28px 24px;font-size:16px;color:#666;vertical-align:top;}
 .ul_tbl .ul_td.num{width:15%;}
 .ul_tbl .ul_td.tit{width:auto;padding-right:0;font-size:18px;line-height:26px;color:#111;}
-.ul_tbl .ul_td.tit a{display:block;}
+.ul_tbl .ul_td.tit a{display:block;word-break:keep-all;}
 .ul_tbl .ul_td.datebox{width:204px;font-size:0;text-align:right;}
 .ul_tbl .ul_td.datebox > span{position:relative;font-size:16px;font-weight:400;}
 .ul_tbl .ul_td.datebox > span + span{margin-left:12px;padding-left:12px;}

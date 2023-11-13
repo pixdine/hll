@@ -106,7 +106,7 @@ input[type="search"]:disabled{background-color:#f7f7f7;opacity:1;color:#999;curs
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,
-input[type="search"]:focus{background-color:#f7f7f7;border-color:#333;}
+input[type="search"]:focus{border-color:#333;}
 input[type="file"]::-webkit-file-upload-button{cursor:pointer;}
 
 input[disabled],
@@ -114,14 +114,6 @@ input[disabled] + label{cursor:default;pointer-events:none;}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button{height:auto;}
 
-input[type="text"]:focus::placeholder,
-input[type="password"]:focus::placeholder,
-input[type="tel"]:focus::placeholder,
-input[type="search"]:focus::placeholder{color:transparent;}
-input[type="text"]:focus::-ms-input-placeholder,
-input[type="password"]:focus::-ms-input-placeholder,
-input[type="tel"]:focus::-ms-input-placeholder,
-input[type="search"]:focus::-ms-input-placeholder{color:transparent;}
 input[type="text"]::-ms-clear,
 input[type="password"]::-ms-reveal,
 input[type="tel"]::-ms-clear,
@@ -740,7 +732,6 @@ background:#fff;overflow:hidden;z-index:230}
 .textarea_wrap.on{border-color: #111;}
 .textarea{width: 100%;height: 140px;margin: 0;padding-right: 16px;border: 0;resize:none;font-family: Noto Sans KR;font-size: 16px;line-height: 28px;word-break: break-all;}
 .textarea::placeholder{color: #999;font-family: Noto Sans KR;font-weight: 400;font-size: 16px;line-height: 28px;}
-.textarea:focus::placeholder{font-size: 0;}
 .textarea_wrap .cnt_txt{margin-top: 24px;color: #999;font-weight: 400;font-size: 14px;line-height: 20px;}
 .textarea_wrap .current{color: #111;}
 .is_pc .textarea::-webkit-scrollbar{width:4px;height:4px;}

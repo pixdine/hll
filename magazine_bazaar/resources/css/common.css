@@ -103,7 +103,7 @@ input[type="search"]:disabled{background-color:#f7f7f7;opacity:1;color:#999;curs
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,
-input[type="search"]:focus{background-color:#f7f7f7;border-color:#333;}
+input[type="search"]:focus{border-color:#333;}
 input[type="file"]::-webkit-file-upload-button{cursor:pointer;}
 
 input[disabled],
@@ -111,14 +111,6 @@ input[disabled] + label{cursor:default;pointer-events:none;}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button{height:auto;}
 
-input[type="text"]:focus::placeholder,
-input[type="password"]:focus::placeholder,
-input[type="tel"]:focus::placeholder,
-input[type="search"]:focus::placeholder{color:transparent;}
-input[type="text"]:focus::-ms-input-placeholder,
-input[type="password"]:focus::-ms-input-placeholder,
-input[type="tel"]:focus::-ms-input-placeholder,
-input[type="search"]:focus::-ms-input-placeholder{color:transparent;}
 input[type="text"]::-ms-clear,
 input[type="password"]::-ms-reveal,
 input[type="tel"]::-ms-clear,

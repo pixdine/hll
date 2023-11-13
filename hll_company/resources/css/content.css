@@ -49,6 +49,7 @@ body.is_mobile .top_visual img.pc {display:none}
 .section1{padding-top:60px;}
 .section1 .tit_wrap{margin-bottom:24px;}
 .cont_area{display:flex;gap:246px;}
+.sns_list{width:52%;}
 .txt_wrap{width:100%;}
 .txt_wrap strong{font-size: 24px;font-weight: 700;line-height: 35px;}
 .txt_wrap p{margin-top:16px;font-size: 18px;font-weight: 500;line-height: 26px;}
@@ -90,7 +91,7 @@ body.is_mobile .top_visual img.pc {display:none}
 .section5 .btn_area{position: relative;margin-top:40px;gap:24px;flex-wrap:wrap;}
 .section5 .btn_area .btn.ico_down:after{content: '';position: absolute;top: 50%;right:20px;width: 16px;height: 16px;background: url('../images/ico_download.png')0/100%;transform: translateY(-50%);}
 
-.section6{position: relative;height:390px;padding:60px 0;background-image: url('../images/temp/img_elle_contact.png');background-repeat: repeat;background-position: 50% 0%;}
+.section6{position: relative;height:390px;padding:60px 0;background-repeat: repeat;background-position: 50% 0%;}
 .section6::after {content: '';display: block; width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: rgba(17, 17, 17, .6);overflow: hidden;}
 .section6 .cont_inner{display:flex;flex-wrap:wrap;justify-content: space-between;}
 .section6 .tit_wrap{z-index:1;}
@@ -101,6 +102,10 @@ body.is_mobile .top_visual img.pc {display:none}
 .section6 .btn_area .btn{flex:1;background-color: transparent;color: #fff;}
 .section6 .btn_area .btn.btn.ico_plus span{position: relative;padding-right: 20px;}
 .section6 .btn_area .btn.btn.ico_plus span:after{content: '';position: absolute;top: 50%;right: 0;width: 16px;height: 16px;background: url('../images/ico_plus_w.png')0/100%;transform: translateY(-50%);}
+
+.elle .section6{background-image: url('../images/temp/img_elle_contact.png');}
+.cosmopolitan .section6{background-image: url('../images/temp/img_cosmo_contact.png');}
+
 /*Contact us - 문의하기*/
 .tit_wrap02{position: relative;margin-bottom:46px;}
 .tit_wrap02 p.stit .ess {margin-right:10px;}
@@ -460,7 +465,7 @@ body.is_mobile .top_visual img.pc {display:none}
     
     .section1{padding-bottom:0;}
     .cont_area{flex-direction:column-reverse;}
-    .sns_list{margin-top:40px;}
+    .sns_list{margin-top:40px;width:100%;}
     .sns_list ul li{width:calc(20% - 6px);}
     .btn_sns:before{margin:0;}
     .section2 .tit_wrap{margin-bottom:32px;}
@@ -482,10 +487,12 @@ body.is_mobile .top_visual img.pc {display:none}
 
     .section5 .btn_area{gap:16px;}
     .section5 .btn_area .btn{width:100%;}
-    .section6{background-image: url('../images/temp/img_elle_contact_mo.png');height:380px;}
+    .section6{height:380px;}
     .section6 .btn_area{flex-direction:column;gap:16px;}
     .section6 .btn_area .btn{flex:none;}
-    
+
+    .elle .section6{background-image: url('../images/temp/img_elle_contact_mo.png');}
+    .cosmopolitan .section6{background-image: url('../images/temp/img_cosmo_contact_mo.png');}
 }
 
 @media screen and (max-width: 359px) {

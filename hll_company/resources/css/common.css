@@ -411,9 +411,21 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert_bottom .btn_wrap button{width:100%;min-width:auto;margin:0 8px;}
 .popup_alert .popup_close{right:18px;top:14px;}
 
+/*sns*/
+.sns_list ul{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:24px;}
+.sns_list .btn_sns{display:block;}
+.btn_sns:before{content:'';display:block;width:48px;height:48px;margin:0 auto;background-position:center center;background-size:100% auto;background-repeat:no-repeat;}
+.btn_sns.global:before{background-image:url('../images/ico_round_global.svg');}
+.btn_sns.insta:before{background-image:url('../images/ico_round_insta.svg');}
+.btn_sns.youtube:before{background-image:url('../images/ico_round_youtube.svg');}
+.btn_sns.kakaostr:before{background-image:url('../images/ico_round_kakaostr.svg');}
+.btn_sns.naver:before{background-image:url('../images/ico_round_naver.svg');}
+.btn_sns.facebook:before{background-image:url('../images/ico_round_facebook.svg');}
+.btn_sns.twitter:before{background-image:url('../images/ico_round_twitter.svg');}
+.btn_sns.tictok:before{background-image:url('../images/ico_round_tiktok.svg');}
 
 /* header */
-.header{position: sticky;top: 0;left: 0;right: 0;z-index: 1;background: #fff;}
+.header{position: sticky;top: 0;left: 0;right: 0;z-index: 10;background: #fff;}
 .header .cont_inner{display: flex;position: relative;height: 72px;align-items: center;justify-content: center;}
 .header .logo{position: absolute;top: 50%;left: 40px;width: 80px;transform: translateY(-50%);}
 .header .logo a{display: flex;}

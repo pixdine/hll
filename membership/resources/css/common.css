@@ -621,6 +621,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 background:#fff;overflow:hidden;z-index:230}
 .popup_alert_cont{position:relative;max-height:65vh;padding:64px 28px 16px;-webkit-overflow-scrolling:touch;overflow:hidden;overflow-y:auto;font-size:18px;text-align:center;line-height:26px;}
 .popup_alert_cont .alert_txt{display:flex;justify-content:center;align-items:center; flex-direction: column;min-height:52px;font-size:18px;line-height:26px;word-break:break-all;}
+.alert_txt span.stxt { display:block; font-size:14px; color:#999; line-height:20px; margin-top:8px}
 .popup_alert_cont .alert_txt span { display:block}
 .popup_alert_cont .alert_txt span em {color:var(--point)}
 .popup_alert_bottom{padding:16px 28px 28px;}

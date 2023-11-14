@@ -4,7 +4,7 @@
 .container.sub_container{padding-bottom:0}
 
 
-.container .heading_wrap{position:relative;height: 360px;background-repeat: repeat;background-position: 50% 0%;}
+.container .heading_wrap{position:relative;height: 360px;background-repeat: no-repeat;background-position: 50% 0%;}
 .container .heading_wrap .heading_area{display: flex;max-width: 1920px;height: 360px;margin: 0 auto;justify-content: center;align-items: center;flex-direction: column;}
 .container .heading_wrap h2.tit{color:#fff;text-align: center;font-size: 56px;font-weight: 500;line-height: 60px;max-width: 1920px;font-family: 'Gotham';}
 .container .heading_wrap h2.tit em{display:block;font-size:24px;line-height:32px;}
@@ -417,12 +417,12 @@ body.is_mobile  img.pc {display:none}
     .life_slide{padding:0 0 60px;}
     .life_slide .swiper .swiper-slide{flex-direction:column-reverse;gap:16px;}
     .life_slide .swiper .swiper-slide div{flex:none}
-    .life_slide .swiper .swiper-slide .img{padding-top: 51.733%;}
+    .life_slide .swiper .swiper-slide .img{padding-top: 62.39%;}
     .life_slide .swiper .swiper-slide .txt strong{font-size:20px;line-height:29px;margin-bottom:12px;}
     .life_slide .swiper .swiper-slide .txt p{line-height:23px;font-size:16px;}
     .life_slide .swiper-button-prev{left:8px;}
     .life_slide .swiper-button-next{right:8px;}
-    .life_slide .swiper-button-next, .swiper-button-prev{background-image:url('../images/ic_arrow_right_24.svg');top: 26vw;}
+    .life_slide .swiper-button-next, .swiper-button-prev{background-image:url('../images/ic_arrow_right_24.svg');top:33vw;    width: 24px;height: 24px;}
     .life_list li{width:100%;}
     .life_list li:first-child{padding-top:8px;}
     .life_list li:last-child{padding-bottom:0;}
@@ -470,7 +470,6 @@ body.is_mobile  img.pc {display:none}
     [class*="section"] .tit_wrap .tit.en{font-size:32px;line-height:36px;}
     [class*="section"] .tit_wrap{margin-bottom:16px;}
     
-    .section1{padding-bottom:60px;}
     .cont_area{flex-direction:column-reverse;}
     .sns_list{margin-top:40px;width:100%;}
     .sns_list ul li{width:calc(20% - 6px);}

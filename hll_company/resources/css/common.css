@@ -494,6 +494,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert_bottom .btn + .btn{margin-left: 16px;}
 .popup_alert .popup_close{right:18px;top:14px;}
 
+#bMarquee {overflow: hidden;}
 #bMarquee .m_list {display: flex; white-space: nowrap; width: max-content; gap: 0 24px;}
 
 /************************* Media Query *************************/

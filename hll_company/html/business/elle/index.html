@@ -430,15 +430,15 @@
 
         // 오토스크롤 함수
         if (windowSize <= 768) {
-            handleMarquee(0);
+            handleMarquee(1, 12);
         } else {
-            handleMarquee(0);
+            handleMarquee(2, 24);
         }
     })
 
     // 자동스크롤
     var scrollAni; // 애니메이션 변수 초기화
-    function handleMarquee(setSpeed, marginBottom){
+    function handleMarquee(setSpeed, gap){
         // 뷰포트 너비를 확인합니다.
         const viewportWidth = window.innerWidth;
 
@@ -455,10 +455,10 @@
         const container = marquee.querySelector('.m_list');
         const content = marquee.querySelector('.m_list > *');
         const item = marquee.querySelector('.m_list_item');
-        const itemLength = item.length;
+        const itemLength = marquee.querySelectorAll('.m_list_item').length;
 
         //Get total width
-        const elWeight = content.offsetWidth;
+        const elWidth = content.offsetWidth;
 
         mouseEntered = false;
         document.querySelector('.m_list').addEventListener('mouseenter', function() {
@@ -486,12 +486,13 @@
         }
 
         function loop(){
-            var size = marginBottom;
+            var size = gap;
             // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
             if (mouseEntered === false) {progress = progress-speed;} 
-            if (progress <= elWeight*-itemLength-size) {progress=0;}
+            if (progress <= elWidth*-itemLength-(size*itemLength)) {progress=0;}
             container.style.transform = 'translateX(' + progress + 'px)';
             scrollAni = window.requestAnimationFrame(loop);
+            console.log(elWidth*itemLength+size);
         }
 
         loop();
@@ -499,6 +500,8 @@
         function handleSpeedClear(){
             speed = setSpeed;
         }
+
+        console.log('elWidth', elWidth, item, itemLength);
     };
 
 </script>

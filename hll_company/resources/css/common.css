@@ -494,6 +494,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert_bottom .btn + .btn{margin-left: 16px;}
 .popup_alert .popup_close{right:18px;top:14px;}
 
+#bMarquee .m_list {display: flex; white-space: nowrap; width: max-content; gap: 0 24px;}
 
 /************************* Media Query *************************/
 
@@ -639,4 +640,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.comm_error .err_comment01 { font-size:22px; margin:24px 20px 0}
 	.comm_error .err_comment02 { font-size:14px;margin:12px 20px 0}
 	.comm_error .err_comment01 span, .comm_error .err_comment02 span{ display:block}
+
+	#bMarquee .m_list {gap: 0 12px;}
+	#bMarquee .m_list_item {width: 43.2vw;}
 }

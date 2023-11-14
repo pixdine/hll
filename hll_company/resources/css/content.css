@@ -463,7 +463,7 @@ body.is_mobile .top_visual img.pc {display:none}
     [class*="section"] .tit_wrap .tit.en{font-size:32px;line-height:36px;}
     [class*="section"] .tit_wrap{margin-bottom:16px;}
     
-    .section1{padding-bottom:0;}
+    .section1{padding-bottom:60px;}
     .cont_area{flex-direction:column-reverse;}
     .sns_list{margin-top:40px;width:100%;}
     .sns_list ul li{width:calc(20% - 6px);}

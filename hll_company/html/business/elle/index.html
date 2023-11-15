@@ -457,6 +457,7 @@
         let timer;
         var progress = 0;
 
+        // 각각의 요소들 초기화
         const container = marquee.querySelector('.m_list');
         const content = marquee.querySelector('.m_list > *');
         const item = marquee.querySelector('.m_list_item');
@@ -465,6 +466,7 @@
         //Get total width
         const elWidth = content.offsetWidth;
 
+        // 마우스 이벤트
         mouseEntered = false;
         document.querySelector('.m_list').addEventListener('mouseenter', function() {
             mouseEntered = true;

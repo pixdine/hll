@@ -496,6 +496,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 #bMarquee {overflow: hidden;}
 #bMarquee .m_list {display: flex; white-space: nowrap; width: max-content; gap: 0 24px;}
+#bMarquee .m_list_item {width: 384px;}
 
 /************************* Media Query *************************/
 

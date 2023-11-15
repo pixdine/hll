@@ -173,6 +173,7 @@
                         <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
                        <!-- <button type="button" data-popup-open="popup_11"><span>통합로그인 >  iframe</span></button><br>-->
+                        <button type="button" data-popup-open="popup_8"><span>회원가입 불가</span></button><br>
                         <button type="button" data-popup-open="popup_12"><span>통합로그인</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
@@ -745,6 +746,35 @@
         <iframe src="member/login_common02.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
     </div>
 
+    <!--D : 회원가입 불가 -->
+    <div class="popup_full" data-popup="popup_8">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">회원가입 불가</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_8"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <div class="pop_tit_wrap">
+                    <h2 class="tit">
+                        회원가입 불가 사유
+                    </h2>
+                    <p class="info_txt">
+                        허스트중앙 통합멤버십 회원탈퇴 후,<br />
+                        <strong>30일 이후 재가입</strong>이 가능합니다.
+                    </p>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!--D : 포인트 부족 alter -->
     <div class="popup_alert" data-alert="alert_5">
         <div class="popup_alert_inner">
@@ -868,8 +898,8 @@
             </div>
             <div class="popup_alert_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                    <button type="button" class="btn bctype2"><span>닫기</span></button>
+                    <button type="button" class="btn bctype1"><span>1:1 문의</span></button>
                 </div>
             </div>
             <div class="popup_close">

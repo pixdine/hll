@@ -28,6 +28,7 @@ body.is_pc .container.mypage #content { padding-top:60px}
 .mypage_point_info ul li:first-child dl {margin-left:0}
 .mypage_point_info ul li dl dt {position:relative;font-size:16px; font-weight:500; color:#666; }
 .mypage_point_info ul li dl dt::after { content:''; position:absolute; top:5px; width:16px; height:16px; background:transparent url('../images/ico_arrow.svg') no-repeat center center / 100% auto; margin-left:4px}
+.mypage_point_info ul li dl dt.none::after {display:none}
 .mypage_point_info ul li dl dt .tooltip { vertical-align:top; margin:5px 0 0 4px }
 .mypage_point_info ul li dl dd .bctype1 { position:absolute; right:0; top:-5px}
 .mypage_point_info ul li dl dd .bctype1 span { line-height:1.5}

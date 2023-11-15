@@ -28,6 +28,7 @@
 .main_container .is_inner .btn_more{border-color: rgba(255, 255, 255, 0.6);}
 .main_container .main_more_wrap .btn_more + .btn_more{margin-left: 20px;}
 .main_container .is_inner .btn_more .more_txt{color: #fff;} 
+.main_container .intro .btn_more .more_txt:after{background-image: url(../images/main/ico-more-w.png);}
 
 .main_container .main_sub .cont_inner{height: 100%;padding: 212px 0 140px;} 
 .main_container .section_inner{position: relative;height: 100%;margin: 0 40px;} 

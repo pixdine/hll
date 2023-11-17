@@ -415,15 +415,21 @@
             } else {
                 var items = document.querySelectorAll('.m_list .m_list_item');
                 var clonedItems = [];
+                var clonedItems2 = [];
                 items.forEach(function(item) {
                     var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
+                    var clone2 = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
                     clone.classList.add("clone")
+                    clone2.classList.add("clone")
                     clonedItems.push(clone);
+                    clonedItems2.push(clone2);
                 });
                 clonedItems.forEach(function(item) {
                     container.appendChild(item);
                 });
-                marquee.classList.add("has_clone");
+                clonedItems2.forEach(function(item) {
+                    container.appendChild(item);
+                });
             }
     
             function loop(){

@@ -144,7 +144,7 @@ body.is_mobile  img.pc {display:none}
 
 .partner_link{margin-top:60px;border-top:2px solid #111;}
 .partner_link ul{display:flex;align-items:center;flex-wrap:wrap;}
-.partner_link ul li{width: 20%;text-align: center;padding-top:40px}
+.partner_link ul li{width: 20%;text-align: center;padding:40px 23px}
 
 /* .txt_wrap h5{font-weight:500;font-size: 24px;line-height:35px;}
 .txt_wrap h5 strong{font-size:28px;line-height:32px;display: block;} */
@@ -170,10 +170,10 @@ body.is_mobile  img.pc {display:none}
 .sec_yeet .cont_box .txt_wrap dl dd{margin-top:12px;font-size:18px;line-height:26px;font-family: 'Noto Sans KR';color:#666;}
 .sec_yeet .cont_box .txt_wrap dl dd+dt{margin-top:24px;}
 .sec_yeet .cont_box .txt_wrap dl dd a{text-decoration:underline;}
-.sec_yeet .list_sub_img{padding-top: 60px;}
+.sec_yeet .list_sub_img{padding-top: 60px;overflow:hidden;}
 .sec_yeet .list_sub_img .swiper-slide{width: 276px; padding: 0 10px; text-align: center;}
-.sec_yeet .list_sub_img .swiper-slide a{display: block;}
-
+.sec_yeet .list_sub_img .swiper-slide a{display: block;overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 143.75%;}
+.sec_yeet .list_sub_img .swiper-slide a img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 
 /*Contact us - 문의하기*/
 .tit_wrap02{position: relative;margin-bottom:46px;}
@@ -596,7 +596,7 @@ body.is_mobile  img.pc {display:none}
     .partner_list ul li .txt_info p{font-size:16px;line-height:23px;}
 
     .partner_link ul{column-gap:7px;}
-    .partner_link ul li{width:31%;}
+    .partner_link ul li{width:31%;padding:22px 10px}
 
     .txt_wrap h4{font-size:20px;line-height:28px;}
     .txt_wrap h4 span{font-size:18px;line-height:26px;margin-bottom:4px;}

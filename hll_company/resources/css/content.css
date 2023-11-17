@@ -171,9 +171,6 @@ body.is_mobile  img.pc {display:none}
 .sec_yeet .cont_box .txt_wrap dl dd+dt{margin-top:24px;}
 .sec_yeet .cont_box .txt_wrap dl dd a{text-decoration:underline;}
 
-.sec_yeet .introduce{margin-top:60px;}
-.yeet #bMarquee .m_list_item{width:276px;}
-.yeet #bMarquee .m_list{gap:0 20px;}
 
 /*Contact us - 문의하기*/
 .tit_wrap02{position: relative;margin-bottom:46px;}

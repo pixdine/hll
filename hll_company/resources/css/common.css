@@ -254,6 +254,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_area button { width:382px;}
 .btn_area.type02 {justify-content: center;margin-top:120px;}
 .btn_area.type02 button {width:auto}
+.btn_area.full .btn{width:100%;}
+
 
 /* pagination */
 .pagination{display:flex;align-items:center;justify-content:center;column-gap:4px;margin-top:120px;}

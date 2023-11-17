@@ -127,8 +127,8 @@ body.is_mobile  img.pc {display:none}
 .section_contact .cont_wrap p{font-size:18px;font-weight:500;color:#fff;line-height:26px;}
 .section_contact .btn_area{margin-top:40px;gap:24px; justify-content: flex-start;}
 .section_contact .btn_area .btn{flex:1;background-color: transparent;color: #fff;}
-.section_contact .btn_area .btn.btn.ico_plus span{position: relative;padding-right: 20px;}
-.section_contact .btn_area .btn.btn.ico_plus span:after{content: '';position: absolute;top: 50%;right: 0;width: 16px;height: 16px;background: url('../images/ico_plus_w.png')0/100%;transform: translateY(-50%);}
+.section_contact .btn_area .btn.ico_plus span{position: relative;padding-right: 20px;}
+.section_contact .btn_area .btn.ico_plus span:after{content: '';position: absolute;top: 50%;right: 0;width: 16px;height: 16px;background: url('../images/ico_plus_w.png')0/100%;transform: translateY(-50%);}
 .section_contact .btn_area.half .btn{flex:none;width:50%;}
 
 .partner_list ul{display: flex;flex-wrap: wrap;column-gap: 24px;row-gap:48px;justify-content: space-between;}
@@ -145,6 +145,11 @@ body.is_mobile  img.pc {display:none}
 .partner_link{margin-top:60px;border-top:2px solid #111;}
 .partner_link ul{display:flex;align-items:center;flex-wrap:wrap;}
 .partner_link ul li{width: 20%;text-align: center;padding:40px 23px}
+
+.studio .section4 .btn_area{margin-top:40px;}
+.studio .section4 .btn_area .btn.ico_plus span{position: relative;padding-right: 20px;}
+.studio .section4 .btn_area .btn.ico_plus span:after{content: '';position: absolute;top: 50%;right: 0;width: 16px;height: 16px;background: url('../images/ico_plus_g.png')0/100%;transform: translateY(-50%);}
+
 
 /* .txt_wrap h5{font-weight:500;font-size: 24px;line-height:35px;}
 .txt_wrap h5 strong{font-size:28px;line-height:32px;display: block;} */
@@ -579,7 +584,7 @@ body.is_mobile  img.pc {display:none}
     .section5 .btn_area .btn{width:100%;}
 
     .section_contact .cont_inner{padding-top:48px;padding-bottom: 48px;}
-    .section_contact .cont_wrap p{line-height:23px;}
+    .section_contact .cont_wrap p{line-height:23px;font-size:16px;}
     .section_contact .btn_area{flex-direction:column;gap:16px;}   
     .section_contact .btn_area .btn{flex:none;}
 

@@ -44,7 +44,9 @@ body.is_mobile  img.pc {display:none}
 .top_visual .txt_box .txt{font-family: 'Gotham';font-size: 36px;font-weight: 600;line-height: 48px;}
 .top_visual::after{content: '';display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: rgba(25, 25, 25, .2);overflow: hidden;}
 .elle .top_visual .txt_box .txt{font-family:'Elle Gabor Std';}
-
+.cosmopolitan .top_visual .txt_box .txt{font-family:'News Gothic Extra Condensed';}
+.esquire .top_visual .txt_box .txt{font-family: 'TT Norms';}
+.studio .top_visual .txt_box .txt{font-family: 'Noto Sans KR';}
 
 [class*="section"]{padding:120px 0;}
 [class*="section"] .cont_inner{padding-top:0;}

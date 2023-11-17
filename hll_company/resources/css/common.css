@@ -417,6 +417,7 @@ background:#fff;overflow:hidden;z-index:230}
 .btn_sns.facebook:before{background-image:url('../images/ico_round_facebook.svg');}
 .btn_sns.twitter:before{background-image:url('../images/ico_round_twitter.svg');}
 .btn_sns.tictok:before{background-image:url('../images/ico_round_tiktok.svg');}
+.btn_sns.kakaochn:before{background-image:url('../images/ico_round_kakaochn.svg');}
 
 /* header */
 .header{position: sticky;top: 0;left: 0;right: 0;z-index: 10;background: #fff;}

@@ -434,17 +434,21 @@ $.fn.accordion = function () {
 
             // swiperSlides의 총 넓이가 window의 넓이보다 큰 경우에만 Swiper 인스턴스 생성
             if(totalSlidesWidth > windowWidth){
-                imgSwiper = new Swiper(swiperBody, {
+                swiperBody.addClass('oversize');
+                var imgSwiper = new Swiper(swiperBody, {
                     slidesPerView: 'auto',
                 });
+                swiperBody.data('imgSwiper', imgSwiper);
             }
         }
 
         // 스와이퍼 파괴 함수
-        function destroySwiper() {
+        function destroySwiper(swiperBody) {
+            var imgSwiper = swiperBody.data('imgSwiper');
             if(imgSwiper) {
                 imgSwiper.destroy();
-                imgSwiper = null;
+                swiperBody.removeData('imgSwiper');
+                swiperBody.removeClass('oversize');
             }
         }
 
@@ -453,7 +457,7 @@ $.fn.accordion = function () {
 
             // resize 이벤트 핸들러
             $(window).on('resize', function() {
-                destroySwiper();
+                destroySwiper(swiperBody);
                 createSwiper(swiperBody);
             });
 

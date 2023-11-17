@@ -152,7 +152,7 @@ body.is_mobile  img.pc {display:none}
 .txt_wrap h4 span{display:block;font-size:24px;line-height:35px;font-family: 'Noto Sans KR';margin-bottom:8px}
 
 .yeet .cont_area.type2 .txt_wrap{margin-top:75px}
-.sec_yeet{padding:180px 0;}
+.sec_yeet{padding:180px 0; overflow: hidden;}
 .content .sec_yeet .cont_inner{padding-top:0;}
 .sec_yeet .cont_box{display:flex;align-items:flex-start;justify-content:space-between;column-gap: 330px;}
 .sec_yeet .cont_box .box_area i{display: block;background-repeat: no-repeat;background-position: center;background-size: 180px 180px;height: 180px; width: 180px;}

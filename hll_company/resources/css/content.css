@@ -160,7 +160,7 @@ body.is_mobile  img.pc {display:none}
 .sec_yeet .cont_box .box_area i.circle2{background-image: url('../images/temp/img_yeet_circle2.png');}
 .sec_yeet .cont_box .box_area i.circle3{background-image: url('../images/temp/img_yeet_circle3.png');}
 
-.sec_yeet .list{position: relative;}
+.sec_yeet .list .cont_inner{position: relative;}
 .sec_yeet .sns_list {width:auto;margin-top:24px; position: absolute;top: 180px;left:68px;}
 .sec_yeet .list+.list{margin-top:180px;}
 .txt_p p{color:#666}
@@ -170,6 +170,10 @@ body.is_mobile  img.pc {display:none}
 .sec_yeet .cont_box .txt_wrap dl dd{margin-top:12px;font-size:18px;line-height:26px;font-family: 'Noto Sans KR';color:#666;}
 .sec_yeet .cont_box .txt_wrap dl dd+dt{margin-top:24px;}
 .sec_yeet .cont_box .txt_wrap dl dd a{text-decoration:underline;}
+
+.sec_yeet .introduce{margin-top:60px;}
+.yeet #bMarquee .m_list_item{width:276px;}
+.yeet #bMarquee .m_list{gap:0 20px;}
 
 /*Contact us - 문의하기*/
 .tit_wrap02{position: relative;margin-bottom:46px;}

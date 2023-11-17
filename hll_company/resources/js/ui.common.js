@@ -373,8 +373,6 @@ $.fn.accordion = function () {
     });
 };
 
-
-
 // 비즈니스 스와이퍼
 (function($) {
     $.fn.bsnSwiper = function(options) {
@@ -407,6 +405,59 @@ $.fn.accordion = function () {
                     }
                 },  
             });
+        });
+    }
+})(jQuery);
+
+// 이미지 스와이퍼
+(function($) {
+    $.fn.imgSwiper = function(options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options);
+
+        // 스와이퍼 인스턴스 초기화
+        var imgSwiper;
+
+        // 스와이퍼 생성 함수
+        function createSwiper(swiperBody) {
+            var swiperSlides = swiperBody.find(".swiper-slide");
+            var totalSlidesWidth = 0;
+
+            // 모든 swiperSlide의 넓이를 더함
+            swiperSlides.each(function() {
+                totalSlidesWidth += $(this).outerWidth(true);
+            });
+
+            // window의 넓이를 구함
+            var windowWidth = $(window).width();
+
+            // swiperSlides의 총 넓이가 window의 넓이보다 큰 경우에만 Swiper 인스턴스 생성
+            if(totalSlidesWidth > windowWidth){
+                imgSwiper = new Swiper(swiperBody, {
+                    slidesPerView: 'auto',
+                });
+            }
+        }
+
+        // 스와이퍼 파괴 함수
+        function destroySwiper() {
+            if(imgSwiper) {
+                imgSwiper.destroy();
+                imgSwiper = null;
+            }
+        }
+
+        return this.each(function() {
+            var swiperBody = $(this);
+
+            // resize 이벤트 핸들러
+            $(window).on('resize', function() {
+                destroySwiper();
+                createSwiper(swiperBody);
+            });
+
+            createSwiper(swiperBody);
         });
     }
 })(jQuery);

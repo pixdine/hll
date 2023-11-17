@@ -493,13 +493,12 @@
         }
 
         function loop(){
-            var size = gap;
             // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
             if (mouseEntered === false) {progress = progress-speed;} 
-            if (progress <= elWidth*-itemLength-(size*itemLength)) {progress=0;}
+            if (progress <= elWidth*-itemLength-(gap*itemLength)) {progress=0;}
             container.style.transform = 'translateX(' + progress + 'px)';
             scrollAni = window.requestAnimationFrame(loop);
-            console.log(elWidth*itemLength+size);
+            console.log(elWidth*itemLength+gap);
         }
 
         loop();

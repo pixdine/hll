@@ -166,3 +166,8 @@
 
     .main_container .footer{padding-bottom: 270px;}
 }
+
+@media screen and (max-width: 375px) {
+    .main_container .section_img{padding-top: 0;}
+    .main_container .md_left .media_desc{padding: 0 40px 40px;}
+}

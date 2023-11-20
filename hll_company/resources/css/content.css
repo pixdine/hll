@@ -602,7 +602,7 @@ body.is_mobile  img.pc {display:none}
     .row_last .txt strong{font-size:36px;line-height:48px;}
     .row_last .txt strong:after{height:16px;bottom:6px}
     .row_last .txt em{font-size:28px;line-height:32px;margin-top:4px}
-    .row_last .txt p{font-size:16x;line-height:23px;}
+    .row_last .txt p{font-size:16px;line-height:23px;}
     .row_last .txt .txt_cont dl dt{font-size:18px;line-height:26px;}
     .row_last .txt .txt_cont dl dd{font-size:16px;line-height:23px;margin-top:12px;}
     .row_last .txt strong::before{height:16px;bottom: 5px;}

@@ -175,5 +175,9 @@
 @media screen and (max-width: 375px) {
     .main_container .section_img{padding-top: 0;}
     .main_container .media_desc{padding: 0 40px 40px;}
+}
+
+@media screen and (max-height: 750px) {
+    .main_container .section_img{padding-top: 0;}
     .main_container .media_desc{padding: 0 40px 40px;}
 }

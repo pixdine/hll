@@ -579,7 +579,7 @@ body.is_mobile  img.pc {display:none}
 
     .cont_area{flex-direction:column-reverse;}
     .cont_area.type2{flex-direction:row}
-    .sns_list{margin-top:40px;width:100%;}
+    .sns_list{margin-top:40px;width:95%;}
     .sns_list ul{row-gap:16px;column-gap:0;}
     .sns_list ul li{width:40px;margin-right: 24px;}
     .btn_sns:before{margin:0;width:40px;height:40px;}

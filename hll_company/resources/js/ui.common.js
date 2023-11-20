@@ -307,6 +307,8 @@ function familySite(_target) {
         // $('html, body').animate({ scrollTop: $(document).height() }, speed);
         if(!chkMainContainer) {
             $('html, body').animate({ scrollTop: $(document).height() }, speed);
+        } else {
+            $('.foot-inner').animate({ scrollTop: 9999 }, speed);
         }
     }
 }

@@ -124,11 +124,11 @@
                     <div class="introduce"> 
                         <div id="bMarquee" class="marquee_wrap">
                             <ul class="m_list">
-                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide1.png"></a></li>
-                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide2.png"></a></li>
-                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide3.png"></a></li>
-                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide4.png"></a></li>
-                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide5.png"></a></li>
+                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide1.jpg" loading="lazy"></a></li>
+                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide2.jpg" loading="lazy"></a></li>
+                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide3.jpg" loading="lazy"></a></li>
+                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide4.jpg" loading="lazy"></a></li>
+                                <li class="m_list_item"><a href="#" class="m_list_btn"><img src="../../../resources/images/temp/img_elle_slide5.jpg" loading="lazy"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -481,19 +481,12 @@
         } else {
             var items = document.querySelectorAll('.m_list .m_list_item');
             var clonedItems = [];
-            var clonedItems2 = [];
             items.forEach(function(item) {
                 var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
-                var clone2 = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
                 clone.classList.add("clone")
-                clone2.classList.add("clone")
                 clonedItems.push(clone);
-                clonedItems2.push(clone2);
             });
             clonedItems.forEach(function(item) {
-                container.appendChild(item);
-            });
-            clonedItems2.forEach(function(item) {
                 container.appendChild(item);
             });
             marquee.classList.add("has_clone");

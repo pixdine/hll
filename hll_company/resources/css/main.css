@@ -159,7 +159,6 @@
     .main_container .main_sub2 .row_last img {width: 100vw;margin: 0 -40px;}
     .main_container .main_sub2 .ms2_txt{margin-top: 40px;font-size: 16px;}
     .main_container .section10 .main_more_wrap{flex-direction: column;width: fit-content;margin-top: 16px;} 
-    .main_container .section10 .main_more_wrap .btn_more{display: inline-block;} 
     .main_container .section10 .main_more_wrap .btn_more + .btn_more{margin-left: 0;margin-top: 12px;} 
 }
 

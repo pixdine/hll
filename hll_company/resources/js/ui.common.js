@@ -468,3 +468,49 @@ $.fn.accordion = function () {
         });
     }
 })(jQuery);
+
+// 비지니스 자동 스크롤
+(function($) {
+    $.fn.handleMarquee = function(setSpeed, gap) {
+        const marquee = this;
+        let speed = setSpeed;
+        let progress = 0;
+        let mouseEntered = false;
+
+        const container = marquee.find('.m_list');
+        const content = marquee.find('.m_list > *');
+        const itemLength = marquee.find('.m_list_item').length;
+        const elWidth = content.outerWidth();
+
+        marquee.on('mouseenter', '.m_list', function() {
+            mouseEntered = true;
+        }).on('mouseleave', '.m_list', function() {
+            mouseEntered = false;
+            window.cancelAnimationFrame(scrollAni);
+        });
+
+        function loop() {
+            if (!mouseEntered) {
+                progress -= speed;
+            }
+            if (progress <= -elWidth * itemLength - (gap * itemLength)) {
+                progress = 0;
+            }
+            container.css('transform', 'translateX(' + progress + 'px)');
+            scrollAni = window.requestAnimationFrame(loop);
+        }
+
+        function init() {
+            if (!marquee.hasClass("has_clone")) {
+                const items = marquee.find('.m_list_item').clone().addClass("clone");
+                container.append(items);
+                marquee.addClass("has_clone");
+            }
+            loop();
+        }
+
+        init();
+
+        return marquee;
+    };
+})(jQuery);

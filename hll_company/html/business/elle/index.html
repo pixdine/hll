@@ -435,81 +435,11 @@
 
         // 오토스크롤 함수
         if (windowSize <= 768) {
-            handleMarquee(1, 12);
+            $('#bMarquee').handleMarquee(1, 12)
         } else {
-            handleMarquee(2, 24);
+            $('#bMarquee').handleMarquee(2, 24)
         }
     })
-
-    // 자동스크롤
-    var scrollAni; // 애니메이션 변수 초기화
-    function handleMarquee(setSpeed, gap){
-        // 뷰포트 너비를 확인합니다.
-        const viewportWidth = window.innerWidth;
-
-        // 모바일 사이즈를 정의합니다. 이 값은 768px 미만입니다. 
-        // 하지만 프로젝트의 반응형 브레이크포인트에 따라 다를 수 있습니다.
-        const mobileSize = 768;
-
-        const marquee = document.querySelector('#bMarquee');
-        let speed = setSpeed;
-        let lastScrollPos = 0;
-        let timer;
-        var progress = 0;
-
-        // 각각의 요소들 초기화
-        const container = marquee.querySelector('.m_list');
-        const content = marquee.querySelector('.m_list > *');
-        const item = marquee.querySelector('.m_list_item');
-        const itemLength = marquee.querySelectorAll('.m_list_item').length;
-
-        //Get total width
-        const elWidth = content.offsetWidth;
-
-        // 마우스 이벤트
-        mouseEntered = false;
-        document.querySelector('.m_list').addEventListener('mouseenter', function() {
-            mouseEntered = true;
-        })
-        document.querySelector('.m_list').addEventListener('mouseleave', function() {
-            mouseEntered = false;
-            window.cancelAnimationFrame(loop);
-        })
-
-        if (marquee.classList.contains("has_clone")) {
-            var cloneItems = document.querySelectorAll('.m_list .clone');
-        } else {
-            var items = document.querySelectorAll('.m_list .m_list_item');
-            var clonedItems = [];
-            items.forEach(function(item) {
-                var clone = item.cloneNode(true); // 'true'는 내부 요소까지 모두 복제하겠다는 것을 의미합니다.
-                clone.classList.add("clone")
-                clonedItems.push(clone);
-            });
-            clonedItems.forEach(function(item) {
-                container.appendChild(item);
-            });
-            marquee.classList.add("has_clone");
-        }
-
-        function loop(){
-            // 이후 코드는 모바일 사이즈가 아닐 때만 실행됩니다.
-            if (mouseEntered === false) {progress = progress-speed;} 
-            if (progress <= elWidth*-itemLength-(gap*itemLength)) {progress=0;}
-            container.style.transform = 'translateX(' + progress + 'px)';
-            scrollAni = window.requestAnimationFrame(loop);
-            console.log(elWidth*itemLength+gap);
-        }
-
-        loop();
-
-        function handleSpeedClear(){
-            speed = setSpeed;
-        }
-
-        console.log('elWidth', elWidth, item, itemLength);
-    };
-
 </script>
 </body>
 

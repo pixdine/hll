@@ -304,6 +304,7 @@ function familySite(_target) {
         //열림
         el.addClass("open");
         el.find(".familysite").stop().slideDown(speed);
+        // $('html, body').animate({ scrollTop: $(document).height() }, speed);
         if(!chkMainContainer) {
             $('html, body').animate({ scrollTop: $(document).height() }, speed);
         }

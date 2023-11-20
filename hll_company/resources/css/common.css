@@ -504,7 +504,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert .popup_close{right:18px;top:14px;}
 
 #bMarquee {overflow: hidden; max-width: 1920px; margin: 0 auto;}
-#bMarquee .m_list {display: flex; white-space: nowrap; width: max-content; gap: 0 24px;}
+#bMarquee .m_list {display: flex; white-space: nowrap; width: max-content; gap: 0 24px;will-change: transform;}
 #bMarquee .m_list_item {width: 384px;}
 #bMarquee .m_list_item .m_list_btn{overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 133.334%;}
 #bMarquee .m_list_item .m_list_btn img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}

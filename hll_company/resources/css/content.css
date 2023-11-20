@@ -13,7 +13,7 @@
 .container .contactus .heading_wrap{background-image:url('../images/bg_contactus.png');}
 .container .career .heading_wrap{background-image:url('../images/bg_career.png');}
 .container .rss .heading_wrap{background-image:url('../images/bg_rss.png');}
-.container .adinfo .heading_wrap
+.container .adinfo .heading_wrap{background-image:url('../images/bg_adinfo.png');}
 
 
 .content .cont_inner{padding-top:60px;}
@@ -189,8 +189,8 @@ body.is_mobile  img.pc {display:none}
 .txt_wrap dl dd a{text-decoration:underline;}
 .sec_yeet .list_sub_img{padding-top: 60px;overflow:hidden;}
 .sec_yeet .list_sub_img .swiper-slide{width: 276px; padding: 0 10px; text-align: center;}
-.sec_yeet .list_sub_img .swiper-slide a{display: block;overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 143.75%;}
-.sec_yeet .list_sub_img .swiper-slide a img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
+.sec_yeet .list_sub_img .swiper-slide .m_list_btn{display: block;overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 143.75%;}
+.sec_yeet .list_sub_img .swiper-slide .m_list_btn img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 
 /*Contact us - 문의하기*/
 .tit_wrap02{position: relative;margin-bottom:46px;}
@@ -458,6 +458,7 @@ body.is_mobile  img.pc {display:none}
     .container .contactus .heading_wrap{background-image:url('../images/bg_contactus_mo.png');}
     .container .career .heading_wrap{background-image:url('../images/bg_career_mo.png');}
     .container .rss .heading_wrap{background-image:url('../images/bg_rss_mo.png');}
+    .container .adinfo .heading_wrap {background-image:url('../images/bg_adinfo_mo.png');}
     .container .heading_wrap .heading_area{display: flex;max-width: 1920px;height: 180px;margin: 0 auto;justify-content: center;align-items: center;}
     .container .heading_wrap h2.tit{font-size:32px;line-height:32px;}
     .container .heading_wrap h2.tit em{font-size:14px;line-height: 20px;margin-bottom:4px;}

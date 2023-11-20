@@ -482,11 +482,12 @@ $.fn.accordion = function () {
         const itemLength = marquee.find('.m_list_item').length;
         const elWidth = content.outerWidth();
 
-        marquee.on('mouseenter', '.m_list', function() {
+        document.querySelector('.m_list').addEventListener('mouseenter', function() {
             mouseEntered = true;
-        }).on('mouseleave', '.m_list', function() {
+        });
+        document.querySelector('.m_list').addEventListener('mouseleave', function() {
             mouseEntered = false;
-            window.cancelAnimationFrame(scrollAni);
+            window.cancelAnimationFrame(loop);
         });
 
         function loop() {

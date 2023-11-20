@@ -605,6 +605,8 @@ body.is_mobile  img.pc {display:none}
     .row_last .txt p{font-size:16x;line-height:23px;}
     .row_last .txt .txt_cont dl dt{font-size:18px;line-height:26px;}
     .row_last .txt .txt_cont dl dd{font-size:16px;line-height:23px;margin-top:12px;}
+    .row_last .txt strong::before{height:16px;bottom: 5px;}
+
 
     .slide_magazine .item .txt p{font-size:16px;line-height:23px}
 

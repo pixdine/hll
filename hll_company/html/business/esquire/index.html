@@ -396,15 +396,8 @@
     <!-- //js -->
     <script>
         // 페이지의 모든 리소스가 로드되거나 리사이징 된 후 실행할 코드
-        $(window).on('load resize', function () {
-            var windowSize = $(window).width();
-    
-            // 오토스크롤 함수
-            if (windowSize <= 768) {
-                $('#bMarquee').handleMarquee(1, 12)
-            } else {
-                $('#bMarquee').handleMarquee(2, 24)
-            }
+        $(window).on('load', function () {
+            $('#bMarquee').handleMarquee();
         })
     </script>
 

@@ -64,7 +64,7 @@
 .atcbox .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
 .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:all .3s linear;}
 .atcbox a:hover .imgbox img{transform:scale(1.1);}
-.atcbox .cate{display:block;position:relative;margin-bottom:6px;font-family:NewsGothicExtraCondensedBold;font-size:13px;line-height:1;color:var(--point);letter-spacing:0;}
+.atcbox .cate{display:block;position:relative;margin-bottom:6px;font-family:NewsGothicExtraCondensedBold;font-size:14px;line-height:1;color:var(--point);letter-spacing:0;}
 .atcbox .txtbox{margin-top:16px;}
 .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;font-weight:500;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
 
@@ -487,7 +487,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.kv_video .itembox iframe.pc{display:none;}
 	.kv_video .itembox iframe.mo{display:block;}
 
-	.atcbox .cate{font-size:12px;}
+	.atcbox .cate{font-size:13px;}
 	.atcbox .txtbox{margin-top:12px;}
 	.atcbox .txtbox .tit{height:40px;font-size:14px;line-height:20px;}
 

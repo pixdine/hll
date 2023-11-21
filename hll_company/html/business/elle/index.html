@@ -433,12 +433,12 @@
     $(window).on('load resize', function () {
         var windowSize = $(window).width();
 
-        // 이전 윈도우 사이즈를 저장할 변수 (초기값은 null 또는 0으로 설정)
-        var lastWindowSize = lastWindowSize || 0;
+        // 이전 윈도우 사이즈를 저장할 변수 (초기값은 undefined로 설정)
+        var lastWindowSize = typeof lastWindowSize !== 'undefined' ? lastWindowSize : undefined;
 
         // 오토스크롤 함수
-        // 768px를 넘나드는 상황에서만 실행
-        if ((windowSize <= 768 && lastWindowSize > 768) || (windowSize > 768 && lastWindowSize <= 768)) {
+        // 첫 로드 또는 768px를 넘나드는 상황에서만 실행
+        if (typeof lastWindowSize === 'undefined' || (windowSize <= 768 && lastWindowSize > 768) || (windowSize > 768 && lastWindowSize <= 768)) {
             if (windowSize <= 768) {
                 $('#bMarquee').handleMarquee(1, 12);
             } else {

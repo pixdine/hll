@@ -379,7 +379,7 @@ body.is_mobile  img.pc {display:none}
 .adinfo [class*="section"]+[class*="section"]{padding-bottom :0}
 .tit_wrap.type2{margin-bottom:32px;}
 .tit_wrap.type2 .box{display:flex;align-items:center;justify-content:space-between;}
-.tit_wrap.type2 .box p{font-size:22px;line-height:32px;color:#666;}
+.tit_wrap.type2 .box p{font-size:22px;line-height:32px;color:#666;margin-top: 0;padding-bottom: 0;}
 .adinfo .tab_menu > ul{justify-content:center;}
 .adinfo .tab_menu+.tab_menu{margin-top:32px;}
 .adinfo .tit_wrap .tit.en{font-size:36px;color:#111;}
@@ -403,7 +403,7 @@ body.is_mobile  img.pc {display:none}
 .cont_wrap .top_txt h3{font-size:22px;line-height:35px;}
 .cont_wrap .top_txt p{color:#666;font-size:18px;margin-top:8px;}
 .cont_wrap .cont_list{margin-top:40px;}
-.cont_wrap .cont_list ul li{padding:12px 20px;display:flex;align-items:center;justify-content: space-between;width:100%;border-bottom:1px solid #DBDBDB;}
+.cont_wrap .cont_list ul li{padding:12px 20px;display:flex;align-items:center;justify-content: space-between;width:100%;border-bottom:1px solid #DBDBDB;gap: 24px;}
 .cont_wrap .cont_list ul li.head{background-color:var(--point);padding:20px; justify-content: center;}
 .cont_wrap .cont_list ul li.head p{color:#fff;font-size:16px;line-height:23px;font-weight:700;}
 .cont_wrap .cont_list ul li p{color:#666;line-height:23px;}
@@ -710,6 +710,24 @@ body.is_mobile  img.pc {display:none}
     .list_ad ul li .txt_info dl dt{font-size:16px;line-height:23px;}
     .list_ad ul li .txt_info dl dd{font-size:16px;line-height:23px;font-weight:400;}
     .list_ad ul li+li{margin-top:40px;}
+    
+    .tit_wrap.type2{margin-bottom:24px}
+    .tit_wrap.type2 .box p{font-size:14px;line-height:20px;}
+    .cont_wrap > p{font-size:14px;font-weight:400;line-height:20px;}
+    .cont_wrap .cont_list{margin-top:12px;}
+    .cont_wrap .cont_list ul li{align-items: flex-start;}
+    .cont_wrap .cont_list ul li p{flex:1;}
+    .cont_wrap .cont_list ul li p:first-child{text-align:left;}
+    .cont_wrap .cont_list ul li p:last-child{text-align:right;}
+    .cont_wrap .cont_list .box{flex-direction:column;}
+    .cont_wrap .cont_list .box ul li p{text-align:center;}
+    .cont_wrap .cont_list ul li:not(.head) p{font-size:14px;line-height:20px;}
+    .cont_wrap .top_txt h3{font-size:18px;line-height:26px;}
+    .cont_wrap .top_txt p{font-size:14px;font-weight:400;line-height:20px;}
+
+    .adinfo .section05 .box p{font-size:18px;line-height:23px;}
+    .adinfo .section05 .btn_area{}
+
 }
 
 @media screen and (max-width: 359px) {

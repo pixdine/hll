@@ -1,19 +1,19 @@
 
 .atc_wrap { padding-top: 60px; margin-bottom:180px}
-.txt_category {font-family: 'Gotham';color:var(--point);font-size: 16px; text-align: center; margin-bottom:24px;line-height:1;}
+.txt_category {font-family: NewsGothicExtraCondensedBold;color:var(--point);font-size: 18px; text-align: center; margin-bottom:24px;line-height:1;}
 
 /* 기사상세 헤더 */
 .atc_wrap .atc_header {text-align: center; letter-spacing:-0.01em}
 .atc_wrap .atc_header .tit_article {font-weight: 700;font-size: 36px;line-height: 52px;}
 .atc_wrap .atc_header .txt_excerpt {margin-top:16px;font-weight: 400; font-size: 16px;line-height: 23px;}
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; margin-top:40px;}
-.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666; line-height: 1.5;  display:flex; justify-content: center; align-items: center;}
+.atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:NewsGothicExtraCondensedBold, "Noto Sans KR"; font-size:16px; color: #666; line-height: 1.5;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background:url('../images/img_profile.png') center center no-repeat;background-size:100% auto;border-radius:50%;margin-right: 12px;overflow:hidden;}
 .atc_wrap .atc_header .txt_meta .profile_pic img {width:100%; height:100%; object-fit:cover;}
 
 .atc_wrap .atc_header .txt_meta em { margin-right:4px;vertical-align:top; }
 .atc_wrap .atc_header .txt_meta span a { color: #666 ; /*line-height:1.5em; */vertical-align:top; }
-.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; margin-left: 12px;; vertical-align:middle; vertical-align:middle;}
+.atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 16px; padding-left: 12px; margin-left: 12px;; vertical-align:middle; vertical-align:middle;}
 .atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:50%; margin-top:-6px; width:1px; height:12px; background: #ccc; opacity: .6;}
 
 .atc_header_img { margin:0 auto; text-align:center; display:none}
@@ -100,7 +100,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 
 /* 기사상세 > body > 기사작성자 정보 */
 .atc_dtline_box{margin:80px 0;}
-.atc_dtline_box h3.title {font-family:'Didot'; font-weight:500; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
+.atc_dtline_box h3.title {font-family:EloquentJFItalicPro; font-weight:500; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit {font-size:16px; font-weight: 400; line-height:23px; color:#666; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit li {display:flex; flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;}
 .atc_dtline_box .list_credit li:not(:first-child){margin-top:5px;}
@@ -222,7 +222,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .event_detail_wrap .atc_header .txt_date{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:40px;}
 .event_detail_wrap .atc_header .txt_date .item{display:inline-flex;align-items:baseline;font-size:14px;font-weight:500;color:#111;line-height:20px;}
 .event_detail_wrap .atc_header .txt_date .item span{margin-right:8px;}
-.event_detail_wrap .atc_header .txt_date .item em{font-family:Gotham;color:#666;line-height:1;}
+.event_detail_wrap .atc_header .txt_date .item em{font-family:NewsGothicExtraCondensedBold;font-size:16px;color:#666;line-height:1;}
 .event_detail_wrap .atc_header .txt_date .item ~ .item{margin-left:20px;}
 .event_detail_wrap .btn_list_wrap{display:flex;justify-content:center;margin-top:180px;}
 .event_detail_wrap .btn_list_wrap .btn{width:388px;}
@@ -269,7 +269,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_shoppingbox .prd_info dt {font-size:16px; font-weight:500; line-height:1.3; color:#111; margin-top:20px}
 .ab_shoppingbox .prd_info dd {font-size:18px; font-weight:500; line-height:1.5; color:#111; }
 .ab_shoppingbox .prd_info dd.tit {height:52px; text-overflow:ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;overflow:hidden; margin-top:8px; word-break:break-all; }
-.ab_shoppingbox .prd_info dd.price { font-family:'Gotham'; font-weight:500; line-height:1; margin-top:24px; letter-spacing:0;}
+.ab_shoppingbox .prd_info dd.price { font-family:NewsGothicExtraCondensedBold; font-size:20px;font-weight:500; line-height:1; margin-top:24px; letter-spacing:0;}
 .ab_shoppingbox .prd_info dd.store {font-size:16px; color:#666;margin-top:24px;}
 .ab_shoppingbox .bt_area  { position:absolute; left:50%; transform:translateX(-50%); bottom:39px;text-align:center; }
 .ab_shoppingbox .bt_area button { width:180px}
@@ -299,14 +299,14 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .atc_wrap {margin-bottom:80px;padding-top:40px;}
     .atc_wrap.wide .cont_inner {max-width:none; width:100%; padding:0 20px; box-sizing:border-box}
     .atc_wrap .atc_header {text-align: center;}
-    .atc_wrap .atc_header .txt_category {font-size:14px}
+    .atc_wrap .atc_header .txt_category {font-size:16px}
     .atc_wrap .atc_header .tit_article {font-size:24px;line-height:35px;}
     .atc_wrap .atc_header .txt_excerpt {margin-top:12px;font-size: 14px;line-height: 20px;}
     .atc_wrap .atc_body {max-width:none;margin-top:32px;}
 	.atc_wrap.wide .atc_body{margin-top:40px;}
 
     .atc_wrap .atc_header .txt_meta { height:20px; margin-top:24px; }
-    .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:12px; }
+    .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:14px; }
     .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px;}
     .atc_wrap .atc_header .txt_meta .time:after{height:10px;}
     .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
@@ -434,6 +434,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 	.event_detail_wrap .atc_header .txt_date .item{font-size:12px;line-height:17px;}
 	.event_detail_wrap .atc_header .txt_date .item ~ .item{margin-top:6px;margin-left:0;}
 	.event_detail_wrap .atc_header .txt_date .item span{margin-right:6px;}
+	.event_detail_wrap .atc_header .txt_date .item em{font-size:14px;}
 	.event_detail_wrap .btn_list_wrap{margin-top:80px;}
 	.tmp_photo{margin:0 -20px 20px;}
 	.noti_info_box{margin-top:60px;padding-top:60px;}
@@ -460,7 +461,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_shoppingbox .prd_info { margin:0 16px}
     .ab_shoppingbox .prd_info dt {font-size:12px; font-weight:500; line-height:1.3; color:#111; margin-top:12px}
     .ab_shoppingbox .prd_info dd.tit { font-size:14px; height:40px}
-    .ab_shoppingbox .prd_info dd.price { font-size:16px; line-height:1; margin-top:16px}
+    .ab_shoppingbox .prd_info dd.price { font-size:18px; line-height:1; margin-top:16px}
     .ab_shoppingbox .prd_info dd.store {font-size:12px; color:#666;margin-top:16px;}
     .ab_shoppingbox .bt_area button { width:161px}
 }

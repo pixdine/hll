@@ -51,7 +51,7 @@
 .main_container .section7 .media_logo{height: 99px;} 
 .main_container .section8 .media_logo{height: 75px;} 
 
-.main_container .section_img img{opacity: 0;max-height: 100%;}
+.main_container .section_img img{opacity: 0;}
 
 .main_container .section2 .img01{top: 0;left: 0;width: 23.5%;} 
 .main_container .section2 .img02{top: 0;left: 25.5%;width: 24.5%;} 

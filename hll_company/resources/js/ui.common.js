@@ -472,6 +472,7 @@ $.fn.accordion = function () {
 // 비지니스 자동 스크롤
 (function($) {
     var lastWindowWidth; // 이전 가로 크기 저장 (초기값은 undefined)
+    var lastWindowHeight; // 이전 세로 크기 저장 (초기값은 undefined)
 
     $.fn.handleMarquee = function(setSpeed, gap) {
         const marquee = this;
@@ -520,13 +521,15 @@ $.fn.accordion = function () {
     // 마키를 업데이트하는 함수
     function updateMarquee() {
         var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
 
-        // 페이지 로드 시 또는 가로 크기가 변경될 때 실행
-        if (typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) {
+        // 가로 크기에만 변경이 있을 때 실행
+        if ((typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) && (typeof lastWindowWidth === 'undefined' || lastWindowHeight === windowHeight)) {
             $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2, 24);
         }
 
         lastWindowWidth = windowWidth; // 현재 가로 크기 업데이트
+        lastWindowHeight = windowHeight; // 현재 세로 크기 업데이트
     }
 
     // 로드 및 리사이징 이벤트 핸들러

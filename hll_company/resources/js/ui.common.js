@@ -471,6 +471,8 @@ $.fn.accordion = function () {
 
 // 비지니스 자동 스크롤
 (function($) {
+    var lastWindowWidth; // 이전 가로 크기 저장 (초기값은 undefined)
+
     $.fn.handleMarquee = function(setSpeed, gap) {
         const marquee = this;
         let speed = setSpeed;
@@ -494,7 +496,7 @@ $.fn.accordion = function () {
             if (!mouseEntered) {
                 progress -= speed;
             }
-            if (progress <= -elWidth * itemLength - (gap * itemLength)) {
+            if (progress <= -elWidth * itemLength) {
                 progress = 0;
             }
             container.css('transform', 'translateX(' + progress + 'px)');
@@ -514,4 +516,19 @@ $.fn.accordion = function () {
 
         return marquee;
     };
+
+    // 마키를 업데이트하는 함수
+    function updateMarquee() {
+        var windowWidth = $(window).width();
+
+        // 페이지 로드 시 또는 가로 크기가 변경될 때 실행
+        if (typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) {
+            $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2, 24);
+        }
+
+        lastWindowWidth = windowWidth; // 현재 가로 크기 업데이트
+    }
+
+    // 로드 및 리사이징 이벤트 핸들러
+    $(window).on('load resize', updateMarquee);
 })(jQuery);

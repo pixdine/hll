@@ -8,26 +8,12 @@
 	font-style: normal;
 	font-weight: 500;
 	src: url(../font/Didot-HTF-M24-Medium.woff2) format("woff2"), url(../font/Didot-HTF-M24-Medium.woff) format("woff"), url(../font/Didot-HTF-M24-Medium.otf) format("opentype");
-	unicode-range: U+000-5ff,U+06??
 }
 @font-face{
 	font-family: Gotham;
 	font-style: normal;
 	font-weight: 500;
 	src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff");
-	unicode-range: U+000-5ff,U+06??
-}
-@font-face {
-	font-family: Gotham Book;
-	font-style: normal;
-	font-weight: 400;
-	src: url(../font/Gotham-Book.woff) format("woff");
-}
-@font-face {
-	font-family: Gotham-Light;
-	font-style: normal;
-	font-weight: 200;
-	src: url(../font/Gotham-Light.woff) format("woff");
 }
 
 /* reset */

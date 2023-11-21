@@ -581,7 +581,7 @@ body.is_mobile  img.pc {display:none}
     .cont_sec:first-child{padding-top:0;}
     .cont_sec+.cont_sec{border-top:0;}
     .cont_sec .txt{margin-top:0;width:100%;}
-    .cont_sec .txt p{font-size:16px;}
+    .cont_sec .txt p{font-size:16px;line-height:23px;}
     .cont_sec .tit_wrap{margin-bottom:16px;}
     .cont_sec .tit_wrap .tit{font-size:24px;}
     .container.rss .tit_wrap .tit{font-size:28px;line-height:32px;;}

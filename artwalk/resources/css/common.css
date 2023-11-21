@@ -30,7 +30,6 @@
 	font-weight: 500;
 	/* src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff"); */
 	src: url(../font/Gotham-Medium.woff) format("woff");
-	unicode-range: U+000-5ff,U+06??
 }
 
 /* reset */

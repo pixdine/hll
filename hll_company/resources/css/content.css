@@ -378,8 +378,21 @@ body.is_mobile  img.pc {display:none}
 /*AD Info*/
 .adinfo .tab_menu > ul{justify-content:center;}
 .adinfo .tab_menu+.tab_menu{margin-top:32px;}
+.adinfo .tit_wrap .tit.en{font-size:36px;color:#111;}
 .sec_wrap{margin-top:60px;}
 .sec_wrap .section01{padding:60px 0;}
+.sec_wrap .section01 p{font-size:18px;line-height:26px;}
+
+.list_ad ul li{display:flex;flex-wrap:wrap;column-gap:40px;}
+.list_ad ul li .img_info{overflow: hidden;position: relative;width: 49%;height: 0;padding-top: 36.75%;}
+.list_ad ul li .img_info img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
+.list_ad ul li .txt_info strong{font-size:24px;font-weight:700;line-height:35px;}
+.list_ad ul li .txt_info strong span{display:block;font-size:18px;font-weight:500;line-height:24px;color:#666;margin-bottom:8px;}
+.list_ad ul li .txt_info dl{margin-top:24px;}
+.list_ad ul li .txt_info dl dt{font-size:18px;font-weight:500;line-height:26px;color:#000;margin-bottom:8px;}
+.list_ad ul li .txt_info dl dd{font-size:18px;line-height:26px;color:#666}
+.list_ad ul li .txt_info dl dd+dt{margin-top:12px;}
+.list_ad ul li .txt_info dl dd a{color:#000;text-decoration:underline;}
 
 /************************* Media Query *************************/
 @media (max-width:1200px){
@@ -602,7 +615,7 @@ body.is_mobile  img.pc {display:none}
     .row_last .txt strong{font-size:36px;line-height:48px;}
     .row_last .txt strong:after{height:16px;bottom:6px}
     .row_last .txt em{font-size:28px;line-height:32px;margin-top:4px}
-    .row_last .txt p{font-size:16x;line-height:23px;}
+    .row_last .txt p{font-size:16px;line-height:23px;}
     .row_last .txt .txt_cont dl dt{font-size:18px;line-height:26px;}
     .row_last .txt .txt_cont dl dd{font-size:16px;line-height:23px;margin-top:12px;}
     .row_last .txt strong::before{height:16px;bottom: 5px;}

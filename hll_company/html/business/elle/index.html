@@ -429,26 +429,36 @@
     <!-- //js -->
 
 <script>
+    var lastWindowWidth = $(window).width(); // 초기 가로 크기를 저장
+
     // 페이지의 모든 리소스가 로드되거나 리사이징 된 후 실행할 코드
-    $(window).on('load resize', function () {
-        var windowSize = $(window).width();
-
-        // 이전 윈도우 사이즈를 저장할 변수 (초기값은 undefined로 설정)
-        var lastWindowSize = typeof lastWindowSize !== 'undefined' ? lastWindowSize : undefined;
-
+    $(window).on('load', function () {
+        var windowWidth = $(window).width();
+        
         // 오토스크롤 함수
-        // 첫 로드 또는 768px를 넘나드는 상황에서만 실행
-        if (typeof lastWindowSize === 'undefined' || (windowSize <= 768 && lastWindowSize > 768) || (windowSize > 768 && lastWindowSize <= 768)) {
-            if (windowSize <= 768) {
+        if (windowWidth <= 768) {
+            $('#bMarquee').handleMarquee(1, 12);
+        } else {
+            $('#bMarquee').handleMarquee(2, 24);
+        }
+    })
+
+    $(window).on('resize', function () {
+        var windowWidth = $(window).width();
+
+        // 가로 크기에 변화가 있을 경우에만 실행
+        if (windowWidth !== lastWindowWidth) {
+            // 오토스크롤 함수
+            if (windowWidth <= 768) {
                 $('#bMarquee').handleMarquee(1, 12);
             } else {
                 $('#bMarquee').handleMarquee(2, 24);
             }
-        }
 
-        // 현재 윈도우 사이즈를 이전 사이즈로 업데이트
-        lastWindowSize = windowSize;
+            lastWindowWidth = windowWidth; // 가로 크기 업데이트
+        }        
     })
+
 </script>
 </body>
 

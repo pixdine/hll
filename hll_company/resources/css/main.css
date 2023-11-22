@@ -30,7 +30,7 @@
 .main_container .is_inner .btn_more .more_txt{color: #fff;} 
 .main_container .intro .btn_more .more_txt:after{background-image: url(../images/main/ico-more-w.png);}
 
-.main_container .section_inner{position: relative; min-height: 720px;margin: 0 40px; overflow: hidden;} 
+.main_container .section_inner{position: relative; min-height: 720px;overflow: hidden;} 
 
 .main_container .section01{position: relative;} 
 .main_container .section_img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;} 

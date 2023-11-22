@@ -526,7 +526,7 @@ $.fn.accordion = function () {
 
             // 가로 크기에만 변경이 있을 때 실행
             if ((typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) && (typeof lastWindowWidth === 'undefined' || lastWindowHeight === windowHeight)) {
-                $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2, 24);
+                $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2);
             }
 
             lastWindowWidth = windowWidth; // 현재 가로 크기 업데이트

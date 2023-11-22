@@ -418,6 +418,46 @@ body.is_mobile  img.pc {display:none}
 .adinfo .section05 .btn_area .btn.ico_plus:after{background-image: url('../images/ico_plus_b.png');}
 .adinfo .section05 .btn_area .btn.ico_down:after{background-image: url('../images/ico_download_b.png');}
 
+/* company */
+.container .bg_black{ background:#111}
+.company .headline { font-size:48px; line-height:69px; font-weight:700;color:#fff}
+.company .bodycont_section:last-child { padding-bottom:0 }
+.company_info {text-align:left; color:#fff;}
+.company_info .cont_sec ~ .cont_sec { border-top:0}
+.company_info .cont_sec { padding:60px 0 0; display:flex;flex-direction: column; align-items:flex-start; justify-content: space-between;}
+.company_info .cont_sec:nth-child(even) { align-items:flex-end;}
+.company_info .cont_sec:nth-child(even) .cont { width:58.5% }
+.company_info .cont_sec .img { margin-bottom:28px}
+.company_info .cont_sec .expl { display:inline-block; }
+.company_info .cont_sec .expl dt { font-size:24px; font-weight:700; line-height:35px; margin-bottom:16px}
+.company_info .cont_sec .expl dd { font-size:18px; font-weight:500; line-height:26px}
+
+.about .tit_wrap .tit { font-size:36px; }
+.company .about { display:block}
+.company .txt_wrap {padding-left:42.5%; word-wrap:break-word; word-break:keep-all }
+.company .about .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
+
+.logo_area { background:#fff; height:92px; margin-top:80px }
+.logo_area ul { display:flex;align-items: center; height:92px; column-gap:92px; }
+.company #bMarquee { margin-top:80px}
+.company #bMarquee .m_list_item { width:auto; padding:0px}
+
+.about_organization { border-bottom:2px solid #111; padding-bottom:120px }
+.about_organization .tit {font-size:22px; line-height:32px; font-weight:700; color:#666666}
+.about_organization dt { background:#211955; height:116px; display:flex; align-items: center; padding-left:40px}
+.about_organization dd { padding:50px 60px 50px 60px; border-bottom:1px solid #DBDBDB}
+.about_organization dd:last-child { border-bottom:0}
+.about_organization dd ul { display:flex; flex-direction:row;column-gap:101px; align-items:center; margin-top:24px }
+
+.about_organization02 { display:flex; justify-content: space-between; padding:34px 0 0 }
+.about_organization02 dt { padding-left:60px}
+.about_organization02 dt img {zoom:0.6}
+.about_organization02 dd { width:42.17%; flex-grow: 0; }
+.about_organization02 .tit {font-size:16px; line-height:23px; font-weight:500; color:#666666; padding-bottom:8px}
+.about_organization02 dd .tits { display:flex; align-items: center; height:83px; background:#211955; padding-left:20px; margin-bottom:40px}
+.about_organization02 dd li { padding:0 0 40px 20px}
+.about_organization02 dd li img {zoom:0.62}
+
 /************************* Media Query *************************/
 @media (max-width:1200px){
     .sec_cont .img_area{width:100%;}
@@ -727,6 +767,45 @@ body.is_mobile  img.pc {display:none}
 
     .adinfo .section05 .box p{font-size:18px;line-height:23px;}
     .adinfo .section05 .btn_area{}
+
+    /* company */
+    
+    .company .bodycont_section.bg_black .cont_inner { padding:0}
+
+    .company .headline { font-size:24px; line-height:36px; font-weight:700;color:#fff; margin-left:14px}
+    .company_info .cont_sec { padding:32px 0 0;}
+    .company_info .cont_sec .cont { margin-right:34px }
+    .company_info .cont_sec .expl { display:inline-block; }
+    .company_info .cont_sec .expl dt { font-size:20px; font-weight:700; line-height:29px;}
+    .company_info .cont_sec .expl dd { font-size:16px; font-weight:500; line-height:23px}
+    .company_info .cont_sec:nth-child(even) .cont { width:auto; margin-left:61px; margin-right:0}
+    .company_info .cont_sec .expl {width:60%; margin-left:14px}
+    .company_info .cont_sec:nth-child(even) .expl {width:100%; margin-left:0; margin-right:20px}
+
+    .about .tit_wrap .tit { font-size:24px; line-height:36px } 
+    .company .txt_wrap {padding-left:22%;}
+
+    .logo_area {height:52px; margin-top:60px }
+    .logo_area ul {height:52px; column-gap:46px; }
+    .logo_area ul li img { zoom:0.5}
+
+    .about_organization {padding-bottom:60px }
+    .about_organization .tit {font-size:16px; line-height:23px;}
+    .about_organization dt { background:#211955; height:73px; display:flex; align-items: center; padding-left:40px}
+    .about_organization dt img {zoom:0.5}
+    .about_organization dd { padding:20px 28px 20px 28px;}
+    .about_organization dd:last-child { border-bottom:0}
+    .about_organization dd ul { display:flex; flex-direction:row; gap:15px 55px; flex-wrap: wrap; align-items:center; margin-top:16px; margin-right:20px}
+    .about_organization dd ul li img { zoom:0.5}
+
+    .about_organization02 { display:flex; flex-direction: column; justify-content: flex-start; padding:26px 0 0 }
+    .about_organization02 dt { padding-left:8px; margin-bottom:24px}
+    .about_organization02 dt img { zoom:0.5 }
+    .about_organization02 dd { width:auto; flex-grow: 0; }
+    .about_organization02 .tit {font-size:14px; line-height:20px; font-weight:500; color:#666666; padding-bottom:8px}
+    .about_organization02 dd .tits { display:flex; align-items: center; height:100px; background:#211955; padding-left:20px; margin-bottom:24px}
+    .about_organization02 dd li { padding:0 0 24px 20px}
+    .about_organization02 dd li img {zoom:0.5}
 
 }
 

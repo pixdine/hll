@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>회사소개 | HLL중앙 </title>
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.hll.kr/company">
+	<meta property="og:title" content="회사소개 | HLL중앙">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="HLL중앙에 대해 소개합니다" />
+	<meta name="keywords" content="HLL, HLL Joongang, 에이치엘엘, 에이치엘엘중앙, 허스트중앙, 엘르, 코스모폴리탄, 하퍼스바자, 에스콰이어, ELLE, COSMOPOLITAN, BAZAAR, ESQUIRE, 스튜디오닷, STUDIO DOT, 에스투파, 오드삭스, 프로젝트바캉스, 써브라임, SUBLIME">
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/content.css"/>
+
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+	<style>
+		.container .bg_black{ background:#111}
+        
+
+        .company .headline { font-size:48px; line-height:69px; font-weight:700;color:#fff}
+        .company .bodycont_section:last-child { padding-bottom:0 }
+        .company_info {text-align:left; color:#fff;}
+        .company_info .cont_sec ~ .cont_sec { border-top:0}
+        .company_info .cont_sec { padding:60px 0 0; display:flex;flex-direction: column; align-items:flex-start; justify-content: space-between;}
+        .company_info .cont_sec:nth-child(even) { align-items:flex-end;}
+        .company_info .cont_sec:nth-child(even) .cont { width:58.5% }
+        .company_info .cont_sec .img { margin-bottom:28px}
+        .company_info .cont_sec .expl { display:inline-block; }
+        .company_info .cont_sec .expl dt { font-size:24px; font-weight:700; line-height:35px; margin-bottom:16px}
+        .company_info .cont_sec .expl dd { font-size:18px; font-weight:500; line-height:26px}
+        
+
+
+        .about .tit_wrap .tit { font-size:36px; }
+        .company .about { display:block}
+        .company .txt_wrap {padding-left:42.5%; word-wrap:break-word; word-break:keep-all }
+        .company .about .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
+
+        .logo_area { background:#fff; height:92px; margin-top:80px }
+        .logo_area ul { display:flex;align-items: center; height:92px; column-gap:92px; }
+        .company #bMarquee { margin-top:80px}
+        .company #bMarquee .m_list_item { width:auto; padding:0px}
+
+        .about_organization { border-bottom:2px solid #111; padding-bottom:120px }
+        .about_organization .tit {font-size:22px; line-height:32px; font-weight:700; color:#666666}
+        .about_organization dt { background:#211955; height:116px; display:flex; align-items: center; padding-left:40px}
+        .about_organization dd { padding:50px 60px 50px 60px; border-bottom:1px solid #DBDBDB}
+        .about_organization dd:last-child { border-bottom:0}
+        .about_organization dd ul { display:flex; flex-direction:row;column-gap:101px; align-items:center; margin-top:24px }
+
+        .about_organization02 { display:flex; justify-content: space-between; padding:34px 0 0 }
+        .about_organization02 dt { padding-left:60px}
+        .about_organization02 dt img {zoom:0.6}
+        .about_organization02 dd { width:42.17%; flex-grow: 0; }
+        .about_organization02 .tit {font-size:16px; line-height:23px; font-weight:500; color:#666666; padding-bottom:8px}
+        .about_organization02 dd .tits { display:flex; align-items: center; height:83px; background:#211955; padding-left:20px; margin-bottom:40px}
+        .about_organization02 dd li { padding:0 0 40px 20px}
+        .about_organization02 dd li img {zoom:0.62}
+  
+		@media screen and (max-width: 768px) {
+
+            .company .bodycont_section.bg_black .cont_inner { padding:0}
+
+            .company .headline { font-size:24px; line-height:36px; font-weight:700;color:#fff; margin-left:14px}
+            .company_info .cont_sec { padding:32px 0 0;}
+            .company_info .cont_sec .cont { margin-right:34px }
+            .company_info .cont_sec .expl { display:inline-block; }
+            .company_info .cont_sec .expl dt { font-size:20px; font-weight:700; line-height:29px;}
+            .company_info .cont_sec .expl dd { font-size:16px; font-weight:500; line-height:23px}
+            .company_info .cont_sec:nth-child(even) .cont { width:auto; margin-left:61px; margin-right:0}
+            .company_info .cont_sec .expl {width:60%; margin-left:14px}
+            .company_info .cont_sec:nth-child(even) .expl {width:100%; margin-left:0; margin-right:20px}
+
+            .about .tit_wrap .tit { font-size:24px; line-height:36px } 
+            .company .txt_wrap {padding-left:22%;}
+
+            .logo_area {height:52px; margin-top:60px }
+            .logo_area ul {height:52px; column-gap:46px; }
+            .logo_area ul li img { zoom:0.5}
+
+
+            .about_organization {padding-bottom:60px }
+            .about_organization .tit {font-size:16px; line-height:23px;}
+            .about_organization dt { background:#211955; height:73px; display:flex; align-items: center; padding-left:40px}
+            .about_organization dt img {zoom:0.5}
+            .about_organization dd { padding:20px 28px 20px 28px;}
+            .about_organization dd:last-child { border-bottom:0}
+            .about_organization dd ul { display:flex; flex-direction:row; gap:15px 55px; flex-wrap: wrap; align-items:center; margin-top:16px; margin-right:20px}
+            .about_organization dd ul li img { zoom:0.5}
+
+            .about_organization02 { display:flex; flex-direction: column; justify-content: flex-start; padding:26px 0 0 }
+            .about_organization02 dt { padding-left:8px; margin-bottom:24px}
+            .about_organization02 dt img { zoom:0.5 }
+            .about_organization02 dd { width:auto; flex-grow: 0; }
+            .about_organization02 .tit {font-size:14px; line-height:20px; font-weight:500; color:#666666; padding-bottom:8px}
+            .about_organization02 dd .tits { display:flex; align-items: center; height:100px; background:#211955; padding-left:20px; margin-bottom:24px}
+            .about_organization02 dd li { padding:0 0 24px 20px}
+            .about_organization02 dd li img {zoom:0.5}
+			
+		}
+	</style>
+
+	<div id="wrap" class="wrap">
+        <!-- header -->
+        <header id="header" class="header">
+            <div class="cont_inner">
+                <h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_hll.svg" alt="예술산책"></a></h1>
+                <!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+                <nav class="gnb">
+                    <button class="btn-close-am" title="전체 메뉴 닫기"><img src="../../resources/images/ic_close_24.png"></button>
+        
+                    <ul class="gnb_list">
+                        <li class="gnb_item"><a href="#" class="gnb_link">COMPANY</a></li>
+                        <li class="gnb_item has_sm"><a href="#" class="gnb_link">BUSINESS</a>
+                            <ul class="sub_menu">
+                                <li class="sm_item"><a href="#" class="sm_link">ELLE</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">COSMOPOLITAN</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">Harper’s BAZAAR</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">ESQUIRE</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">STUDIO DOT</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">YEET</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_item"><a href="#" class="gnb_link">AD INFO</a></li>
+                        <li class="gnb_item has_sm"><a href="#" class="gnb_link">CAREER</a>
+                            <ul class="sub_menu">
+                                <li class="sm_item"><a href="#" class="sm_link">Recruitment</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">HLL Life</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">Process</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">FAQ</a></li>
+                                <li class="sm_item"><a href="#" class="sm_link">Find Job</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_item"><a href="#" class="gnb_link">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <button class="btn-open-am" title="전체 메뉴 열기"><img src="../../resources/images/ic_menu_24.png"></button>
+        </header>
+        <!-- //header -->
+
+		<!-- container -->
+		<div id="container" class="container">
+			<div id="content" class="content company">
+
+
+                <div class="bodycont_section bg_black">
+                    <div class="cont_inner">
+                        <p class="headline">
+                            우리는 언제나<br />
+                            콘텐츠로 커뮤니케이션합니다.<br />
+                            우리는 늘 크리에이티브하게 일합니다.
+                        </p>
+                        <div class="company_info">
+                            <div class="cont_sec">
+                                <div class="cont">
+                                    <div class="img"><img src="../../resources/images/company_img02.png" alt="" /></div>
+                                    <dl class="expl">
+                                        <dt>새로운 일상을 발견하는 공감형 콘텐츠</dt>
+                                        <dd>우리의 콘텐츠로 #일상의영감 #취향의발견 #트렌드세터로서 당신의 감각을 충전하세요.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="cont_sec">
+                                <div class="cont">
+                                    <div class="img"><img src="../../resources/images/company_img01.png" alt="" /></div>
+                                    <dl class="expl">
+                                        <dt>이상적인 '피지털(Phygital)'<br />콘텐츠 미디어</dt>
+                                        <dd>우리는 프린트와 모바일의 경계를 뛰어넘는 콘텐츠 미디어로, 디지털 콘텐츠 마케팅, 취향 커머스 사업, 엔터테인먼트에 이르기까지
+                                        트렌드의 최전방에서 가장 빠르고, 가장 영민하게 움직입니다.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bodycont_section bg_sky">
+                    <div class="cont_inner">
+                        <div class="cont_area about">
+                            <div class="tit_wrap">
+                                <h2 class="tit">트렌드를 이끌고 있는<br />종합 미디어 & 콘텐츠 기업, HLL</h2>
+                            </div>
+                            <div class="txt_wrap">
+                                <div class="txt_p">
+                                    <strong>House of Luxury & Lifestyle 이라는 뜻을 담은 HLL은 동시대적인 콘텐츠로 트렌드를 이끌고 있습니다.</strong>
+                                    
+                                    <p>HLL은 미국 최대 미디어 그룹 허스트(Hearst) 사와 합작법인인 허스트중앙을 통해 엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어를 발행하고 있습니다. HLL은 다년간의 패션, 뷰티, 라이프스타일 콘텐츠 제작 노하우를 토대로 스튜디오닷을 설립, 고객사 온·오프라인 콘텐츠 제작 및 광고 마케팅 대행 사업을 전개하고 있습니다.</p>
+                                    
+                                    <p>2022년 HLL과 함께하게 된 써브라임(Sublime)은 연예 매니지먼트를 시작으로 광고 제작 및 대행, 포토그래퍼와 모델 에이전시로 영역을 확장하며 종합 엔터테인먼트사로 거듭나고 있습니다. 써브라임의 대표 아티스트로는 배우 송강호와 고소영, 가수 잭슨과 티파니 영 등이 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo_area" id="bMarquee" >
+                        <ul class="m_list">
+                            <li class="m_list_item"><img src="../../resources/images/logo_elle.png" alt="EllE"></li>
+                            <li class="m_list_item"><img src="../../resources/images/logo_cosmopolitan.png" alt="cosmopolitan"></li>
+                            <li class="m_list_item"><img src="../../resources/images/logo_bazaar.png" alt="bazaar"></li>
+                            <li class="m_list_item"><img src="../../resources/images/logo_esquire.png" alt="esquire"></li>
+                            <li class="m_list_item"><img src="../../resources/images/logo_studio.png" alt="studio."></li>
+                            <li class="m_list_item"><img src="../../resources/images/logo_yeet.png" alt="yeet"></li>
+                            <li class="m_list_item"><img src="../../resources/images/logo_sublime.png" alt="sublime"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bodycont_section">
+                    <div class="cont_inner">
+                        <div class="cont_area about">
+                            <div class="tit_wrap">
+                                <h2 class="tit">비즈니스 영역</h2>
+                            </div>
+                            <div>
+                                <dl class="about_organization">
+                                    <dt><img src="../../resources/images/logo_hll.png" alt="HLL"></dt>
+                                    <dd>
+                                        <p class="tit">매거진</p>
+                                        <ul>
+                                            <li><img src="../../resources/images/logo_elle_s.png" alt="ELLE" /></li>
+                                            <li><img src="../../resources/images/logo_bazaar_s.png" alt="BAZAAR" /></li>
+                                            <li><img src="../../resources/images/logo_cosmopolitan_s.png" alt="COSMOPOLITAN" /></li>
+                                            <li><img src="../../resources/images/logo_esquire_s.png" alt="ESQUIRE" /></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <p class="tit">디지털 마케팅</p>
+                                        <ul>
+                                            <li><img src="../../resources/images/logo_studio_s.png" alt="STUDIO닷" /></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <p class="tit">YEET</p>
+                                        <ul>
+                                            <li><img src="../../resources/images/logo_ostufa_s.png" alt="Ostufa" /></li>
+                                            <li><img src="../../resources/images/logo_project_vacance_s.png" alt="Project Vacance" /></li>
+                                            <li><img src="../../resources/images/logo_odd_s.png" alt="ODD sochks" /></li>
+                                        </ul>
+                                    </dd>
+                                    <dd>
+                                        <p class="tit">매니지먼트</p>
+                                        <ul>
+                                            <li><img src="../../resources/images/logo_sublime_s.png" alt="Ostufa" /></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl class="about_organization02">
+                                    <dt><img src="../../resources/images/logo_joongang_group_s2.png" alt="HLL"></dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <p class="tit">Newsbrand</p>
+                                                <img src="../../resources/images/logo_joongang_s.png" alt="중앙일보" />
+                                            </li>
+                                            <li>
+                                                <p class="tit">Station</p>
+                                                <img src="../../resources/images/logo_jtbc_s.png" alt="JTBC" />
+                                            </li>
+                                            <li>
+                                                <p class="tit">Content sutdio</p>
+                                                <img src="../../resources/images/logo_sll_s.png" alt="SLL" />
+                                            </li>
+                                            <li>
+                                                <p class="tit">Lesiure</p>
+                                                <img src="../../resources/images/logo_resort_s.png" alt="휘닉스 호텔앤드리조트" />
+                                            </li>
+                                        </ul>
+
+                                        <p class="tits"><img src="../../resources/images/logo_hll02.png" alt="Luxury & Lifestyle HLL"></p>
+                                        <ul>
+                                            <li>
+                                                <p class="tit">Sports Business</p>
+                                                <img src="../../resources/images/logo_golf_s.png" alt="JTBC골프" />
+                                            </li>
+                                            <li>
+                                                <p class="tit">Space-based Business</p>
+                                                <img src="../../resources/images/logo_megabox_s.png" alt="메가박스중앙" />
+                                            </li>
+                                        </ul>
+
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+			</div>
+		</div>
+		<!-- //container -->
+
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <div class="footer_top">
+                <div class="cont_inner">
+                    <div class="footer_link">
+                        <ul>
+                            <li><a href="#" target="_blank">이용약관</a></li>
+                            <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                            <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                            <li><a href="#" target="_blank">윤리경영</a></li>
+                            <li><a href="#" target="_blank">Contact us</a></li>
+                            <li><a href="#" target="_blank">RSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="cont_inner">
+                    <div class="footer_logo">
+                        <img src="../../resources/images/logo_hll.svg" alt="HLL">
+                    </div>
+                    <div class="footer_info">
+                        <address class="addr_wrap">
+                            <em>에이치엘엘중앙(주)</em>
+                            <div class="addr_txt">
+                                <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                <span class="ceo">대표자 : 강주연</span>
+                                <br class="pc_br">
+                                <span class="num">사업자등록번호 : 887-86-02919</span>
+                                <br class="mo_br">
+                                <span class="report">통신판매업신고 : 제 2022-서울강남-04005호</span>
+                            </div>
+                        </address>
+                        <p class="copyright">© 2023 hLL. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="family_wrap">
+                <button type="button" class="btn_familysite"><span>Family Site</span></button>
+                <div class="familysite">
+                    <div class="cont_inner">
+                        <div class="family_row">
+                            <div class="tab_menu type02">
+                                <ul>
+                                    <li class="on">FAMILY</li>
+                                </ul>
+                            </div>
+        
+                            <div class="tab_cont_wrap">
+                                <ul class="family_list">
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">ELLE</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">COSMOPOLITAN</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">Harper’s BAZAAR</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">ESQUIRE</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">ELLEVOICE</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">CLOSE UP</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">예술산책</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">eee</a></li>
+                                    <li class="list_item"><a href="#" target="_blank" class="list_btn">통합멤버십</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+	</div>
+
+	<!-- js -->
+    <script src="../../resources/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script>
+        // 페이지의 모든 리소스가 로드되거나 리사이징 된 후 실행할 코드
+        $(window).on('load', function () {
+            $('#bMarquee').handleMarquee();
+        })
+    </script>
+
+</body>
+</html>

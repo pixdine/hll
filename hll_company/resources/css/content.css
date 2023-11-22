@@ -850,7 +850,8 @@ body.is_mobile  img.pc {display:none}
     .company .txt_wrap {padding-left:22%;}
 
     .logo_area {height:52px; margin-top:60px }
-    .logo_area ul {height:52px; column-gap:46px; }
+    .logo_area ul {height:52px; }
+    .company #bMarquee .m_list_item { width:auto; padding:0px 23px;}
     .logo_area ul li img { zoom:0.5}
 
     .about_organization {padding-bottom:60px }

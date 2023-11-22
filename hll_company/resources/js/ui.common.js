@@ -482,9 +482,15 @@ $.fn.accordion = function () {
             let mouseEntered = false;
 
             const container = marquee.find('.m_list');
-            const content = marquee.find('.m_list > *');
-            const itemLength = marquee.find('.m_list_item').length;
-            const elWidth = content.outerWidth();
+            const contentItems = marquee.find('.m_list > *');
+            let totalWidth = 0; // 총 너비를 저장할 변수
+            // const itemLength = marquee.find('.m_list_item').length;
+            // const elWidth = content.outerWidth();
+
+            // 각 컨텐츠 항목의 너비를 계산하여 총 너비를 구함
+            contentItems.each(function() {
+                totalWidth += $(this).outerWidth(true); // true를 전달하여 마진 포함
+            });
 
             document.querySelector('.m_list').addEventListener('mouseenter', function() {
                 mouseEntered = true;
@@ -498,7 +504,7 @@ $.fn.accordion = function () {
                 if (!mouseEntered) {
                     progress -= speed;
                 }
-                if (progress <= -elWidth * itemLength) {
+                if (progress <= -totalWidth) {
                     progress = 0;
                 }
                 container.css('transform', 'translateX(' + progress + 'px)');
@@ -526,7 +532,11 @@ $.fn.accordion = function () {
 
             // 가로 크기에만 변경이 있을 때 실행
             if ((typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) && (typeof lastWindowWidth === 'undefined' || lastWindowHeight === windowHeight)) {
-                $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2);
+                if($('#bMarquee').hasClass('logo_area')){
+                    $('#bMarquee').handleMarquee(1);
+                } else {
+                    $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2);
+                }
             }
 
             lastWindowWidth = windowWidth; // 현재 가로 크기 업데이트

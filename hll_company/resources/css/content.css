@@ -438,9 +438,9 @@ body.is_mobile  img.pc {display:none}
 .company .about .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
 
 .logo_area { background:#fff; height:92px; margin-top:80px }
-.logo_area ul { display:flex;align-items: center; height:92px; column-gap:92px; }
+.logo_area ul { display:flex;align-items: center; height:92px;}
 .company #bMarquee { margin-top:80px}
-.company #bMarquee .m_list_item { width:auto; padding:0px}
+.company #bMarquee .m_list_item { width:auto; padding:0px 46px;}
 
 .about_organization { border-bottom:2px solid #111; padding-bottom:120px }
 .about_organization .tit {font-size:22px; line-height:32px; font-weight:700; color:#666666}

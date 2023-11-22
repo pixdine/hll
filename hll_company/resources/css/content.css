@@ -849,7 +849,8 @@ body.is_mobile  img.pc {display:none}
     .about .tit_wrap .tit { font-size:24px; line-height:36px } 
     .company .txt_wrap {padding-left:22%;}
 
-    .logo_area {height:52px; margin-top:60px }
+    .logo_area {height:52px; }
+    .company #bMarquee { margin-top:60px }
     .logo_area ul {height:52px; }
     .company #bMarquee .m_list_item { width:auto; padding:0px 23px;}
     .logo_area ul li img { zoom:0.5}

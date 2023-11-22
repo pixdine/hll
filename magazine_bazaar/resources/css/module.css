@@ -401,7 +401,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img { padding:36px 0}
 body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 
 
-.ticker {position: relative; padding: 100px 0; margin-bottom: 180px; overflow: hidden; background: #F7F7F7;}
+.ticker {display: block; position: relative; padding: 100px 0; margin-bottom: 180px; overflow: hidden; background: #F7F7F7;}
 .marquee {overflow: hidden; height: 349px;}
 .marquee + .marquee {margin-top: 24px;}
 .marquee__track {overflow: hidden;}

@@ -569,7 +569,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* pagination */
 .pagination{display:flex;align-items:center;justify-content:center;column-gap:4px;margin-top:120px;}
-.pagination a{display:inline-block;width:32px;height:32px;font-family:NewsGothicExtraCondensedBold;font-size:18px;color:#999;line-height:32px;text-align:center;vertical-align:top;}
+.pagination a{display:inline-block;width:32px;height:32px;font-size:16px;color:#999;line-height:30px;text-align:center;vertical-align:top;}
 .pagination .on{background-color:#f7f7f7;color:#111;}
 .pagination .btn_prev{width:24px;height:24px;margin-right:12px;background:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 21L7 12L16 3' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 24px auto;}
 .pagination .btn_next{width:24px;height:24px;margin-left:12px;background:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 21L17 12L8 3' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 24px auto;}
@@ -581,7 +581,7 @@ background:#fff;overflow:hidden;z-index:230}
 .tab_menu.type01 > ul > li{position:relative;}
 .tab_menu.type01 > ul > li > a{display:block;padding:0 8px;font-size:18px;font-weight:500;color:#999;line-height:26px;}
 .tab_menu.type01 > ul > li.on > a{font-weight:700;color:#111;}
-.tab_menu.type01 > ul > li > a > span{display:inline-block;margin-left:8px;font-family:NewsGothicExtraCondensedBold;font-size:20px;font-weight:500;line-height:22px;}
+.tab_menu.type01 > ul > li > a > span{display:inline-block;margin-left:8px;line-height:22px;}
 
 .tab_menu.type02 > ul{display:flex;flex-wrap:wrap;gap:8px 0;margin:0 -16px;}
 .tab_menu.type02 > ul > li{position:relative;}
@@ -610,13 +610,13 @@ background:#fff;overflow:hidden;z-index:230}
 .is_pc .scroll_custom > *::-webkit-scrollbar-track{background-color:#dbdbdb}
 
 /* flag */
-.flag{display:inline-block;overflow:hidden;min-width:52px;height:28px;padding:0 4px;background-color:#111;font-family:NewsGothicExtraCondensedBold;font-size:16px;font-weight:500;color:#fff;line-height:28px;text-align:center;}
+.flag{display:inline-block;overflow:hidden;min-width:52px;height:28px;padding:0 4px;background-color:#111;font-size:14px;font-weight:500;color:#fff;line-height:26px;text-align:center;}
 .flag.type2{background-color:var(--point);}
 
 /* 리스트상단 */
 .list_top{display:flex;flex-wrap:wrap;}
 .list_top .total{font-size:16px;line-height:23px;color:#666;}
-.list_top .total .count{font-family:NewsGothicExtraCondensedBold;font-size:20px;color:#111;}
+.list_top .total .count{font-size:18px;color:#111;}
 .list_top .side{display:flex;margin-left:auto;}
 
 /* 서브메인 */
@@ -634,7 +634,7 @@ background:#fff;overflow:hidden;z-index:230}
 .result_keyword .word{font-weight:700;color:#111;}
 .result_keyword .word:before{content:'‘';}
 .result_keyword .word:after{content:'’';}
-.result_keyword .count{font-family:NewsGothicExtraCondensedBold;font-size:26px;font-weight:500;line-height:25px;}
+.result_keyword .count{font-size:24px;font-weight:700;}
 .result_word{margin-bottom:40px;}
 .result_word .txt{font-size:24px;font-weight:400;line-height:35px;}
 .result_word .word{font-weight:700;}
@@ -642,7 +642,7 @@ background:#fff;overflow:hidden;z-index:230}
 .result_word .word:after{content:'’';}
 .result_sorting{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:40px;}
 .result_sorting .total{font-size:24px;font-weight:400;line-height:35px;}
-.result_sorting .total .count{font-family:NewsGothicExtraCondensedBold;font-size:28px;font-weight:500;line-height:34px;}
+.result_sorting .total .count{font-size:26px;font-weight:500;line-height:34px;}
 .word_box{display:flex;flex-wrap:wrap;align-items:center;gap:12px 8px;}
 .word_box .tag{min-height:36px;padding:6px 15px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;word-break:break-all;}
 .result_sorting .list_sort{margin-left:auto;}
@@ -708,7 +708,7 @@ background:#fff;overflow:hidden;z-index:230}
 .event_list li .bnrbox a:hover .imgbox img{transform:scale(1.1);}
 .event_list li .bnrbox .txtbox{margin-top:20px;}
 .event_list li .bnrbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
-.event_list li .bnrbox .date{margin-top:12px;font-family:NewsGothicExtraCondensedBold;font-size:18px;font-weight:500;color:#666;line-height:1;}
+.event_list li .bnrbox .date{margin-top:12px;font-size:16px;font-weight:500;color:#666;line-height:1;}
 .event_list li .bnrbox .flag{position:absolute;left:0;bottom:0;}
 
 .promo_bnr_wrap{margin-bottom:120px;}
@@ -721,11 +721,11 @@ background:#fff;overflow:hidden;z-index:230}
 ;}
 .promo_bnr_list .bnrbox .txtbox{margin-top:32px;text-align:center;}
 .promo_bnr_list .bnrbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:auto;font-size:36px;font-weight:700;line-height:52px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
-.promo_bnr_list .bnrbox .txtbox .datebox{display:flex;justify-content:center;margin-top:16px;font-family:NewsGothicExtraCondensedBold;font-size:18px;line-height:1;color:#666;}
+.promo_bnr_list .bnrbox .txtbox .datebox{display:flex;justify-content:center;margin-top:16px;font-size:16px;line-height:1;color:#666;}
 .promo_bnr_list .bnrbox .txtbox .datebox span{position:relative;}
 .promo_bnr_list .bnrbox .txtbox .dday{color:var(--point);}
 .promo_bnr_list .bnrbox .txtbox .dday ~ .date{margin-left:12px;padding-left:12px;}
-.promo_bnr_list .bnrbox .txtbox .dday ~ .date:before{content:'';display:block;position:absolute;left:0;top:50%;transform:translate(-50%, -50%);width:1px;height:12px;background-color:#dbdbdb;}
+.promo_bnr_list .bnrbox .txtbox .dday ~ .date:before{content:'';display:block;position:absolute;left:0;top:50%;transform:translate(-50%, -50%);width:1px;height:12px;margin-top:1px;background-color:#dbdbdb;}
 .promo_bnr_list .control{position:absolute;left:50%;top:0;transform:translateX(-50%);padding-top:calc(59.334% - 50px);pointer-events:none;}
 .promo_bnr_list .control .swiper-pagination{font-size:0;pointer-events:auto;}
 .promo_bnr_list .control .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:40px;height:2px;margin:0 4px;cursor:pointer;background-color:rgba(255,255,255,.2);}
@@ -767,13 +767,13 @@ background:#fff;overflow:hidden;z-index:230}
 /* 별자리 운세 */
 .horoscope_wrap{margin-bottom:180px;}
 .horoscope_wrap .list_top{align-items:flex-end;margin-bottom:80px;padding-bottom:24px;border-bottom:1px solid #111;}
-.horoscope_wrap .list_top .side .period{font-family:NewsGothicExtraCondensedBold;font-size:16px;color:#666;line-height:1;}
+.horoscope_wrap .list_top .side .period{font-size:14px;color:#666;line-height:1;}
 .horoscope_list ul{display:flex;flex-wrap:wrap;gap:80px 24px;}
 .horoscope_list li{width:calc(16.666% - 20px);text-align:center;}
 .horoscope_list li a{display:block;text-align:center;}
 .horoscope_list li a:before{content:'';display:block;width:120px;height:120px;margin:0 auto;margin-bottom:20px;background-position:center center;background-repeat:no-repeat;border-radius:50%;background-size:100% auto;}
 .horoscope_list li a .tit{display:block;font-size:18px;font-weight:500;line-height:26px;}
-.horoscope_list li a .date{display:block;margin-top:12px;font-family:NewsGothicExtraCondensedBold;font-size:16px;line-height:1;color:#666;}
+.horoscope_list li a .date{display:block;margin-top:12px;font-size:14px;line-height:1;color:#666;}
 .horoscope_list li.on .tit,
 .horoscope_list li a:hover .tit{font-weight:700;}
 .horoscope_list li:nth-child(1) a:before{background-image:url('../images/horoscope01.png');}
@@ -822,10 +822,10 @@ background:#fff;overflow:hidden;z-index:230}
 .horoscope_box .imgbox{width:46.329%;}
 .horoscope_box .txtbox{width:53.671%;padding-left:40px;font-size:16px;font-weight:400;line-height:23px;}
 .horoscope_box .txtbox .info_group{margin-bottom:40px;}
-.horoscope_box .txtbox .period{margin-bottom:24px;font-family:NewsGothicExtraCondensedBold;font-size:16px;font-weight:500;line-height:15px;color:#666;}
-.horoscope_box .txtbox .tit{font-family:NewsGothicExtraCondensedBold;font-size:38px;font-weight:500;line-height:36px;}
+.horoscope_box .txtbox .period{margin-bottom:24px;font-size:14px;font-weight:500;line-height:1;color:#666;}
+.horoscope_box .txtbox .tit{font-size:36px;font-weight:500;line-height:1;}
 .horoscope_box .txtbox .meta{display:flex;align-items:baseline;margin-top:8px;font-size:18px;font-weight:500;line-height:26px;}
-.horoscope_box .txtbox .meta .date{margin-left:12px;font-family:NewsGothicExtraCondensedBold;font-size:20px;line-height:1;}
+.horoscope_box .txtbox .meta .date{margin-left:12px;}
 .horoscope_box .txtbox .txt p ~ p{margin-top:24px;}
 .horoscope_box .fortune_list{margin-top:32px;font-size:16px;line-height:23px;}
 .horoscope_box .fortune_list li{display:flex;flex-direction:row;font-weight:400;}
@@ -1056,7 +1056,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.pop_share .popup_cont{padding:16px 24px 24px;}
 
 	.pagination{margin-top:40px;}
-	.pagination a{width:28px;height:28px;font-size:16px;line-height:28px;}
+	.pagination a{width:28px;height:28px;font-size:14px;line-height:26px;}
 	.pagination .btn_prev{width:20px;height:20px;margin-right:8px;background-size:20px auto;}
 	.pagination .btn_next{width:20px;height:20px;margin-left:8px;background-size:20px auto;}
 
@@ -1067,7 +1067,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.tab_menu.type01 > ul::-webkit-scrollbar{display:none;}
 	.tab_menu.type01 > ul > li{display:inline-block;vertical-align:top;}
 	.tab_menu.type01 > ul > li > a{font-size:14px;line-height:20px;}
-	.tab_menu.type01 > ul > li > a > span{margin-left:4px;font-size:16px;line-height:19px;}
+	.tab_menu.type01 > ul > li > a > span{margin-left:4px;line-height:19px;}
 
 	.tab_menu.type02 > ul{display:block;position:relative;overflow-x:auto;overflow-y:hidden;white-space:nowrap;margin:0 -20px;padding:0 4px;font-size:0;-webkit-overflow-scrolling:touch;}
 	.tab_menu.type02 > ul::-webkit-scrollbar{display:none;}
@@ -1209,9 +1209,9 @@ background:#fff;overflow:hidden;z-index:230}
 	.horoscope_box .imgbox img{width:100%;}
 	.horoscope_box .txtbox{width:100%;margin-top:24px;padding-left:0;font-size:14px;line-height:22px;}
 	.horoscope_box .txtbox .info_group{margin-bottom:24px;}
-	.horoscope_box .txtbox .tit{font-size:26px;line-height:25px;}
+	.horoscope_box .txtbox .tit{font-size:24px;}
 	.horoscope_box .txtbox .meta{font-size:14px;line-height:20px;}
-	.horoscope_box .txtbox .meta .date{margin-left:8px;font-size:16px;}
+	.horoscope_box .txtbox .meta .date{margin-left:8px;}
 	.horoscope_box .txtbox .txt p ~ p{margin-top:10px;}
 	.horoscope_box .fortune_list{margin-top:24px;font-size:14px;line-height:20px;}
 	.horoscope_box .fortune_list li em{font-weight:400;}

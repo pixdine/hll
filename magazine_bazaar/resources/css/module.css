@@ -691,9 +691,9 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
     .marquee .marquee__item .desc_txt {font-size: 14px; line-height: 20px; height: 40px;}
 
 	.bottom-article {display: block; padding: 60px 0; margin-bottom: 80px; background: #F7F7F7;}
-	.bottom-article .article__inner {overflow: hidden; height: 183px; padding: 0 6px;}
+	.bottom-article .article__inner {overflow: hidden; height: 183px;}
 	.bottom-article .article__inner + .article__inner {margin-top: 14px;}
-	.bottom-article .article__track {width: 100%; padding-bottom: 30px; font-size: 0; overflow-x: auto; white-space: nowrap;}
+	.bottom-article .article__track {width: 100%; padding-bottom: 30px; font-size: 0; overflow-x: auto; white-space: nowrap; padding: 0 6px 30px;}
 	.bottom-article .article__item {display: inline-block; float: none;}
 	.bottom-article .article__img {position: relative; padding: 0 6px;}
 	.bottom-article .article__img img {height: 183px;}

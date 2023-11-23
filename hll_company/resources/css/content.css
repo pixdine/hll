@@ -19,6 +19,7 @@
 .content .cont_inner{padding-top:60px;}
 
 .tit_wrap{position:relative;margin-bottom: 40px;}
+.bg_sky .cont_sec .tit_wrap, .bg_sky .cont_inner .tit_wrap  { margin-bottom:24px;}
 .tit_area{display:flex;position:relative; flex-direction:row;}
 .tit_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:var(--point);}
 .tit_wrap .tit.en {font-size:48px; font-weight:500; font-family: 'Gotham';}
@@ -473,12 +474,14 @@ body.is_mobile  img.pc {display:none}
 .slide_adinfo .btn_move{display:none;}
 
 /* company */
-.container .bg_black{ background:#111}
+.container .bg_black{ background:#111;}
+.company .bodycont_section {padding:180px 0}
+.company .bodycont_section:first-child { padding:120px 0 180px }
 .company .headline { font-size:48px; line-height:69px; font-weight:700;color:#fff}
 .company .bodycont_section:last-child { padding-bottom:0 }
 .company_info {text-align:left; color:#fff;}
 .company_info .cont_sec ~ .cont_sec { border-top:0}
-.company_info .cont_sec { padding:60px 0 0; display:flex;flex-direction: column; align-items:flex-start; justify-content: space-between;}
+.company_info .cont_sec { padding:120px 0 0; display:flex;flex-direction: column; align-items:flex-start; justify-content: space-between;}
 .company_info .cont_sec:nth-child(even) { align-items:flex-end;}
 .company_info .cont_sec:nth-child(even) .cont { width:58.5% }
 .company_info .cont_sec .img { margin-bottom:28px}
@@ -487,9 +490,14 @@ body.is_mobile  img.pc {display:none}
 .company_info .cont_sec .expl dd { font-size:18px; font-weight:500; line-height:26px}
 
 .about .tit_wrap .tit { font-size:36px; }
+.business .tit_wrap .tit { font-size:36px; }
 .company .about { display:block}
-.company .txt_wrap {padding-left:42.5%; word-wrap:break-word; word-break:keep-all }
+.company .business { display:block}
+.company .txt_wrap {padding-left:42.5%; word-wrap:break-word; word-break:keep-all; }
+.company .txt_wrap p {color:#111 }
+.company .txt_wrap p + p {margin-top:30px}
 .company .about .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
+.company .business .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
 
 .logo_area { background:#fff; height:92px; margin-top:80px }
 .logo_area ul { display:flex;align-items: center; height:92px;}
@@ -500,17 +508,18 @@ body.is_mobile  img.pc {display:none}
 .about_organization .tit {font-size:22px; line-height:32px; font-weight:700; color:#666666}
 .about_organization dt { background:#211955; height:116px; display:flex; align-items: center; padding-left:40px}
 .about_organization dd { padding:50px 60px 50px 60px; border-bottom:1px solid #DBDBDB}
-.about_organization dd:last-child { border-bottom:0}
+.about_organization dd:last-child { border-bottom:0; padding-bottom:0}
 .about_organization dd ul { display:flex; flex-direction:row;column-gap:101px; align-items:center; margin-top:24px }
 
-.about_organization02 { display:flex; justify-content: space-between; padding:34px 0 0 }
-.about_organization02 dt { padding-left:60px}
+.about_organization02 { display:flex; justify-content: space-between; padding:32px 0 0 }
+.about_organization02 dt { padding-left:58px}
 .about_organization02 dt img {zoom:0.6}
 .about_organization02 dd { width:42.17%; flex-grow: 0; }
 .about_organization02 .tit {font-size:16px; line-height:23px; font-weight:500; color:#666666; padding-bottom:8px}
 .about_organization02 dd .tits { display:flex; align-items: center; height:83px; background:#211955; padding-left:20px; margin-bottom:40px}
 .about_organization02 dd .tits img {zoom:0.56}
 .about_organization02 dd li { padding:0 0 40px 20px}
+.about_organization02 dd li:last-child {/* padding-bottom:0 */}
 .about_organization02 dd li img {zoom:0.62}
 
 /************************* Media Query *************************/
@@ -613,6 +622,7 @@ body.is_mobile  img.pc {display:none}
     .container .heading_wrap h2.tit em{font-size:14px;line-height: 20px;margin-bottom:4px;}
     .container .heading_wrap p{font-size:14px;line-height:20px;margin-top:8px;}
     .tit_wrap{margin-bottom:32px;}
+    .bg_sky .cont_sec .tit_wrap, .bg_sky .cont_inner .tit_wrap { margin-bottom:32px}
     .tit_wrap .tit{font-size: 22px;font-weight: 700;line-height: 32px;}
     .tit_wrap h3.tit{font-size:20px;line-height:29px;;}
     .stit{font-size:14px;line-height:60px;}
@@ -856,19 +866,24 @@ body.is_mobile  img.pc {display:none}
 
     /* company */
     
+    .company .bodycont_section {padding:100px 0}
+    .company .bodycont_section:first-child { padding:100px 0 }
     .company .bodycont_section.bg_black .cont_inner { padding:0}
 
     .company .headline { font-size:24px; line-height:36px; font-weight:700;color:#fff; margin-left:14px}
     .company_info .cont_sec { padding:32px 0 0;}
+    .company_info .cont_sec { padding:60px 0 0;}
     .company_info .cont_sec .cont { margin-right:34px }
     .company_info .cont_sec .expl { display:inline-block; }
     .company_info .cont_sec .expl dt { font-size:20px; font-weight:700; line-height:29px;}
     .company_info .cont_sec .expl dd { font-size:16px; font-weight:500; line-height:23px}
-    .company_info .cont_sec:nth-child(even) .cont { width:auto; margin-left:61px; margin-right:0}
+    .company_info .cont_sec:nth-child(even) .cont { width:auto; margin-left:63px; margin-right:0}
     .company_info .cont_sec .expl {width:60%; margin-left:14px}
     .company_info .cont_sec:nth-child(even) .expl {width:100%; margin-left:0; margin-right:20px}
 
     .about .tit_wrap .tit { font-size:24px; line-height:36px } 
+    .business .tit_wrap { margin-bottom:28px }
+    .business .tit_wrap .tit { font-size:20px; line-height:32px } 
     .company .txt_wrap {padding-left:22%;}
 
     .logo_area {height:52px; }
@@ -879,7 +894,7 @@ body.is_mobile  img.pc {display:none}
 
     .about_organization {padding-bottom:60px }
     .about_organization .tit {font-size:16px; line-height:23px;}
-    .about_organization dt { background:#211955; height:73px; display:flex; align-items: center; padding-left:40px}
+    .about_organization dt { background:#211955; height:73px; display:flex; align-items: center; padding-left:28px}
     .about_organization dt img {zoom:0.5}
     .about_organization dd { padding:20px 28px 20px 28px;}
     .about_organization dd:last-child { border-bottom:0}

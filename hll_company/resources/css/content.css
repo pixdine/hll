@@ -399,8 +399,8 @@ body.is_mobile  img.pc {display:none}
 .list_ad ul li .txt_info dl dt{font-size:18px;font-weight:500;line-height:26px;color:#000;margin-bottom:8px;}
 .list_ad ul li .txt_info dl dd{font-size:18px;line-height:26px;color:#666}
 .list_ad ul li .txt_info dl dd+dt{margin-top:12px;}
-.list_ad ul li .txt_info dl dd a{color:#000;text-decoration:underline;}
-.list_ad ul li .txt_info dl dd p+a{margin-top:12px;}
+.list_ad ul li .txt_info dl dd .btn_view{color:#000;text-decoration:underline;}
+.list_ad ul li .txt_info dl dd p+.btn_view{margin-top:12px;}
 .list_ad.type2 ul li{align-items:center;}
 .list_ad.type3 ul li{align-items:center;}
 .list_ad.type3 ul li .img_info{padding-top:65.25%;}

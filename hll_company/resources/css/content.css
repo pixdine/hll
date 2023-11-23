@@ -496,6 +496,7 @@ body.is_mobile  img.pc {display:none}
 .about_organization02 dd { width:42.17%; flex-grow: 0; }
 .about_organization02 .tit {font-size:16px; line-height:23px; font-weight:500; color:#666666; padding-bottom:8px}
 .about_organization02 dd .tits { display:flex; align-items: center; height:83px; background:#211955; padding-left:20px; margin-bottom:40px}
+.about_organization02 dd .tits img {zoom:0.56}
 .about_organization02 dd li { padding:0 0 40px 20px}
 .about_organization02 dd li img {zoom:0.62}
 
@@ -848,8 +849,10 @@ body.is_mobile  img.pc {display:none}
     .about .tit_wrap .tit { font-size:24px; line-height:36px } 
     .company .txt_wrap {padding-left:22%;}
 
-    .logo_area {height:52px; margin-top:60px }
-    .logo_area ul {height:52px; column-gap:46px; }
+    .logo_area {height:52px; }
+    .company #bMarquee { margin-top:60px }
+    .logo_area ul {height:52px; }
+    .company #bMarquee .m_list_item { width:auto; padding:0px 23px;}
     .logo_area ul li img { zoom:0.5}
 
     .about_organization {padding-bottom:60px }
@@ -867,6 +870,7 @@ body.is_mobile  img.pc {display:none}
     .about_organization02 dd { width:auto; flex-grow: 0; }
     .about_organization02 .tit {font-size:14px; line-height:20px; font-weight:500; color:#666666; padding-bottom:8px}
     .about_organization02 dd .tits { display:flex; align-items: center; height:100px; background:#211955; padding-left:20px; margin-bottom:24px}
+    .about_organization02 dd .tits img {zoom:0.5}
     .about_organization02 dd li { padding:0 0 24px 20px}
     .about_organization02 dd li img {zoom:0.5}
 

@@ -695,11 +695,11 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.bottom-article {display: block;}
 	.bottom-article .article__inner {overflow: hidden; height: 183px;}
 	.bottom-article .article__inner + .article__inner {margin-top: 14px;}
-	.bottom-article .article__track {width: 100%; padding-bottom: 30px; font-size: 0; overflow-x: auto; white-space: nowrap; padding: 0 6px 30px;}
+	.bottom-article .article__track {width: 100%; padding-bottom: 30px; font-size: 0; overflow-x: auto; white-space: nowrap; padding: 0 14px 30px;}
 	.bottom-article .article__item {display: inline-block; float: none;}
 	.bottom-article .article__img {position: relative; padding: 0 6px;}
 	.bottom-article .article__img img {height: 183px;}
-	.bottom-article .article__img .article__info {position: absolute; bottom: 0; left: 6px; right: 6px; height: 92px; padding: 32px 6px 0; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
+	.bottom-article .article__img .article__info {position: absolute; bottom: 0; left: 6px; right: 6px; height: 92px; padding: 32px 12px 0; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
 	.bottom-article .article__img .subject {color: #fff; font-weight: 500; font-family: 'gotham'; font-size: 10px; line-height: 1;}
 	.bottom-article .article__img .desc_txt {color: #fff; font-weight: 500; font-size: 14px; line-height: 20px; text-overflow: ellipsis; overflow: hidden;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; height: 40px;word-break:break-all;}
 

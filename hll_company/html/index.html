@@ -497,13 +497,14 @@
 
                             let imgArr = $(".section" + index + " .first_load");
                             // imgArr 배열의 각 이미지에 대해 반복합니다.
-                            imgArr.each(function(index, element) {
-                                // gsap 애니메이션을 적용합니다.
-                                defaultAni.to(element, { autoAlpha: 1, duration: 0.2 });
-                            });
+                            // imgArr.each(function(index, element) {
+                            //     // gsap 애니메이션을 적용합니다.
+                            //     defaultAni.to(element, { autoAlpha: 1, duration: 0.2 });
+                            // });
+                            defaultAni.to(imgArr, { autoAlpha: 1, duration: 0.5 });
 
                             // 모든 이미지 애니메이션이 추가된 후 마지막으로 '.media_desc' 애니메이션을 추가합니다.
-                            defaultAni.to(".section" + index + " .second_load", { autoAlpha: 1, duration: 0.2 });
+                            defaultAni.to(".section" + index + " .second_load", { autoAlpha: 1, duration: 0.5 });
 
                             // 애니메이션을 실행합니다.
                             defaultAni.play();

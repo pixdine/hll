@@ -36,6 +36,11 @@ $(document).ready(function () {
     // 비즈니스 스와이퍼
     $(".slide_magazine").bsnSwiper();
     
+
+    // AD Info 스와이퍼
+    $(".slide_adinfo").adBsnSwiper();
+    
+    
     // 현재 상태를 추적하기 위한 변수
     var currentDevice = '';
 
@@ -411,6 +416,40 @@ $.fn.accordion = function () {
         });
     }
 })(jQuery);
+
+// AD Info 스와이퍼
+(function($) {
+    $.fn.adBsnSwiper = function(options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+    
+        return this.each(function (i){
+            var swiperBody = $(this);
+            var swiperContainer = $(this).find(".swiper");
+            var swiperSlide = swiperBody.find(".swiper-slide");
+            var btnNext = swiperBody.find(".button_next");
+            var btnPrev = swiperBody.find(".button_prev");
+
+            var exSwiper = new Swiper(swiperContainer, {
+                slidesPerView:1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: btnNext,
+                    prevEl: btnPrev,
+                },
+                breakpoints: {
+                    769: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    }
+                },  
+            });
+        });
+    }
+})(jQuery);
+
+
 
 // 이미지 스와이퍼
 (function($) {

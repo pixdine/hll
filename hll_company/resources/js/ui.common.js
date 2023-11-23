@@ -513,8 +513,14 @@ $.fn.accordion = function () {
 
             function init() {
                 if (!marquee.hasClass("has_clone")) {
-                    const items = marquee.find('.m_list_item').clone().addClass("clone");
-                    container.append(items);
+                    // 첫 번째 클론 생성
+                    const firstClone = marquee.find('.m_list_item').clone().addClass("clone");
+                    container.append(firstClone);
+
+                    // 두 번째 클론 생성
+                    const secondClone = marquee.find('.m_list_item').clone().addClass("clone");
+                    container.append(secondClone);
+                    
                     marquee.addClass("has_clone");
                 }
                 loop();

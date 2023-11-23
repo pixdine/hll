@@ -433,6 +433,7 @@ body.is_mobile  img.pc {display:none}
 .cont_wrap .cont_list .box > ul li > *{flex:1;text-align: center;}
 .cont_wrap .cont_list.type2 ul li:not(.head) p:first-child{text-align:left;}
 .cont_wrap .cont_list.type2 ul li:not(.head) p:last-child{text-align:right;}
+.cont_wrap .cont_list.type2 ul li p, .cont_wrap .cont_list.type3 ul li p{text-transform: none;}
 .cont_wrap .cont_list.type3 ul  li:not(.head, .title) p{flex:1;text-align:center;}
 .cont_wrap .cont_list.type3 ul  li:not(.head, .title) p:first-child{text-align:left;}
 .cont_wrap .cont_list.type3 ul  li:not(.head, .title) p:last-child{text-align:right;}

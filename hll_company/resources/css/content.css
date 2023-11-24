@@ -407,11 +407,12 @@ body.is_mobile  img.pc {display:none}
 .list_ad.type3 ul li .img_info{padding-top:65.25%;}
 .list_ad.type3 ul li .txt_info{width:45%;}
 .list_ad.type3 ul li .txt_info .txt_wrap{margin-top:48px;}
-.list_ad.type3 ul li .txt_info dl{display:flex;align-items:center;gap:20px;margin-top:0;}
+.list_ad.type3 ul li .txt_info dl{display:flex;gap:20px;margin-top:0;}
 .list_ad.type3 ul li .txt_info dl+dl{margin-top:20px}
 .list_ad.type3 ul li .txt_info dl dt{margin-bottom:0;width:210px;font-family:'Noto Sans KR';}
 .list_ad.type3 ul li .txt_info dl dd{margin-top:0;font-weight:400;font-family:'Noto Sans KR';}
 .list_ad.type3 ul li .txt_info dl dd br{display:none;}
+.list_ad.type3 ul li .txt_info dl dd span{display: block;}
 
 
 .head{background-color:var(--point);padding:20px; justify-content: center;}

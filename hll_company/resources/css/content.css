@@ -422,7 +422,7 @@ body.is_mobile  img.pc {display:none}
 .cont_wrap .top_txt p{color:#666;font-size:18px;margin-top:8px;}
 .cont_wrap .cont_list{margin-top:40px;}
 .cont_wrap .cont_list ul li{padding:12px 20px;display:flex;justify-content: space-between;width:100%;border-bottom:1px solid #DBDBDB;gap: 24px;}
-.cont_wrap .cont_list ul li.head{background-color:var(--point);padding:20px; justify-content: center;}
+.cont_wrap .cont_list ul li.head{background-color:var(--point);padding:20px; justify-content: center;align-items:center;}
 .cont_wrap .cont_list ul li.head p{color:#fff;font-size:16px;line-height:23px;font-weight:700;}
 .cont_wrap .cont_list ul li.title{background-color:#F5F5FD;}
 .cont_wrap .cont_list ul li.title p{color:var(--point);text-align:left;}
@@ -522,9 +522,15 @@ body.is_mobile  img.pc {display:none}
 .about_organization02 dd li img {zoom:0.62}
 
 /************************* Media Query *************************/
+@media (max-width:1280px){
+    .list_ad.type3 ul li{column-gap:60px}
+
+}
+
 @media (max-width:1200px){
     .sec_cont .img_area{width:100%;}
     .sec_cont .txt_area{width:100%;}
+    
 }
 
 @media (max-width:1180px){

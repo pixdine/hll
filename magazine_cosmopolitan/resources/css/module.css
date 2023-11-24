@@ -166,8 +166,8 @@
 
 /* 팔로우 배너 */
 .follow_wrap{margin-bottom:180px;}
-.follow_box{display:flex;align-items:center;justify-content:space-between;padding:24px 100px;background:linear-gradient(270deg, #ededed 0%, #f7f7f7 51.56%, #ededed 100%);text-align:center;}
-.follow_box .logo img{display:block;}
+.follow_box{display:flex;align-items:center;justify-content:space-between;min-height:140px;padding:24px 100px;background:linear-gradient(270deg, #ededed 0%, #f7f7f7 51.56%, #ededed 100%);text-align:center;}
+.follow_box .logo img{display:block;width:187px;}
 .follow_box .txt{flex:1;margin:0 20px;font-size:18px;font-weight:400;line-height:27px;}
 .follow_box .txt strong{font-weight:400;}
 .follow_box .txt strong em{font-weight:500;}
@@ -563,7 +563,9 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 
 	.follow_wrap{margin-bottom:80px;}
 	.follow_box{flex-direction:column;align-items:stretch;padding:48px 40px 40px;background:#f6f6f6;}
-	.follow_box .logo{order:2;width:102px;margin:20px auto 0;}
+	.follow_box .logo{display:flex;order:2;position:relative;width:130px;height:80px;margin:20px auto 0;}
+	.follow_box .logo:before{content:'';display:block;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:50px;height:80px;background:url("../images/bg_logo_cosmopolitan.svg") no-repeat center center;}
+	.follow_box .logo img{width:130px;}
 	.follow_box .txt{margin:0;line-height:20px;}
 	.follow_box .txt span{display:block;margin-bottom:3px;font-size:14px;font-weight:400;}
 	.follow_box .txt strong{display:block;font-size:20px;font-weight:500;line-height:30px;}

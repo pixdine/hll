@@ -807,9 +807,9 @@ body.is_mobile  img.pc {display:none}
     .adinfo [class*="section"].pd{padding-bottom:60px;}
     .adinfo [class*="section"] .tit_wrap .tit.en{font-size:24px;line-height:32px;}
     .container .adinfo .heading_wrap h2.tit{line-height:36px;height:36px;}
-    .adinfo .tab_menu+.tab_menu{margin-top:16px;}
+    .adinfo .tab_menu+.tab_menu{margin-top:24px;}
     .sec_wrap .section01{padding:40px 0;}
-    .sec_wrap .section01 p{font-size:16px;line-height:23px;font-weight:400}
+    .sec_wrap .section01 p{font-size:16px;line-height:23px;}
     .list_ad ul li{flex-direction:column; row-gap: 16px;}
     .list_ad ul li .img_info{width:100%;padding-top:74.93%}
     .list_ad ul li .txt_info strong{font-size:20px;line-height:29px;}

@@ -289,6 +289,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .header_bottom{height:72px;padding:17px 0;}
 .header_bottom .cont_inner{display:flex;align-items:center;}
 .header_bottom .logo{width:140px;height:28px;margin-right:24px;}
+.header_bottom .logo a{width:100%;}
 .header_bottom .btn_menu{margin-right:18px;}
 .header_bottom .btn_search{margin-left:20px;}
 .header_navi{position:absolute;left:50%;transform:translateX(-50%);width:700px;text-align:center;}

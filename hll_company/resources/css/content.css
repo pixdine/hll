@@ -883,6 +883,7 @@ body.is_mobile  img.pc {display:none}
     .business .tit_wrap .tit { font-size:20px; line-height:32px } 
     .company .txt_wrap {padding-left:22%;}
     .company .txt_wrap p{margin-top:23px;}
+    .company .about .txt_p strong{font-size:16px;}
 
     .logo_area {height:52px; }
     .company #bMarquee { margin-top:60px }

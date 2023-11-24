@@ -237,7 +237,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 .tab_menu.type04 > ul{display:flex;flex-wrap:wrap;gap:16px;margin: 0 -16px;}
 .tab_menu.type04 > ul > li{position:relative;}
-.tab_menu.type04 > ul > li > a{display:inline-block;font-size:14px;font-weight:500;color:#999;line-height:20px;}
+.tab_menu.type04 > ul > li > a{position:relative;display:inline-block;font-size:14px;font-weight:500;color:#999;line-height:20px;}
 .tab_menu.type04 > ul > li.on > a{font-weight:700;color:var(--point);}
 .tab_menu.type04 > ul > li.on > a::after{content:'';position:absolute;left:0;bottom:-4px;width:100%;height:1px;background-color:var(--point);}
 
@@ -551,6 +551,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.tab_menu.type04 > ul::-webkit-scrollbar{display:none;}
 	.tab_menu.type04 > ul > li{display:inline-block;vertical-align:top;padding:0 12px 0 16px;}
 	.tab_menu.type04 > ul > li > a{font-size:14px;line-height:20px;}
+	.tab_menu.type04 > ul > li.on > a::after{bottom:0;}
 	.tab_menu.type04 > ul > li+li{padding-left:0}
 
 	/* pagination */

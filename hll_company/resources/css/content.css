@@ -460,9 +460,9 @@ body.is_mobile  img.pc {display:none}
 .head > p.insta span::before{content:'';position:absolute;top: 0;left:0;background: url('../images/ico_sns_insta.png')0/100%;width:28px;height:28px;}
 .cont_wrap .cont_list ul+.btn_area{margin-top:80px;}
 .cont_wrap .cont_list ul+.btn_area .btn{justify-content: flex-start;width:384px;}
-.btn_area .btn.ico_plus::after{content: '';position: absolute;top: 50%;right: 20px;width: 16px;height: 16px;transform: translateY(-50%);background: url()0/100%;}
-.btn_area .btn.bctype2.ico_plus::after{background-image:url('../images/ico_plus_b.png');}
-.btn_area .btn.bctype4.ico_plus::after{background-image:url('../images/ico_plus_g.png');}
+.cont_wrap .btn_area .btn.ico_plus::after{content: '';position: absolute;top: 50%;right: 20px;width: 16px;height: 16px;transform: translateY(-50%);background: url()0/100%;}
+.cont_wrap .btn_area .btn.bctype2.ico_plus::after{background-image:url('../images/ico_plus_b.png');}
+.cont_wrap .btn_area .btn.bctype4.ico_plus::after{background-image:url('../images/ico_plus_g.png');}
 
 
 

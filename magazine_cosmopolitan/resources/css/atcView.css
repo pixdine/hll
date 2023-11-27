@@ -308,7 +308,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .atc_wrap .atc_header .txt_meta { height:20px; margin-top:24px; }
     .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:12px; }
     .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px;}
-    .atc_wrap .atc_header .txt_meta .time:after{height:10px;}
+    .atc_wrap .atc_header .txt_meta .time:after{height:10px;margin-top:-5px;}
     .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
     .atc_wrap.wide .atc_header_info {width:calc(100% - 40px); bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}

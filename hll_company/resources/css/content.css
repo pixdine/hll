@@ -488,6 +488,7 @@ body.is_mobile  img.pc {display:none}
 .company_info .cont_sec .expl { display:inline-block; }
 .company_info .cont_sec .expl dt { font-size:24px; font-weight:700; line-height:35px; margin-bottom:16px}
 .company_info .cont_sec .expl dd { font-size:18px; font-weight:500; line-height:26px}
+.company_info .cont_sec .expl dd span { display:block; }
 
 .about .tit_wrap .tit { font-size:36px; }
 .business .tit_wrap .tit { font-size:36px; }

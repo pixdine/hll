@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+    <div id="elle"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
         <!-- google 광고영역 -->
         <div class="ad_google">
             google 광고 배너 영역<br>높이값 가변적
@@ -30,7 +30,7 @@
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
-							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_elle.svg" alt="ELLE"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
 							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
 							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
@@ -38,20 +38,19 @@
 					<div class="header_bottom">
 						<div class="cont_inner">
 							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
-							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_bazaar.svg" alt="BAZAAR"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_elle.svg" alt="ELLE"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
 							<div class="header_navi">
 								<ul>
-									<li><a href="#">LOOK</a></li>
-									<li class="line"><a href="#">예술산책</a></li><!-- D: 메뉴 사이 구분할 경우 line 클래스 추가 -->
 									<li><a href="#">FASHION</a></li>
 									<li><a href="#">BEAUTY</a></li>
-									<li><a href="#">ART</a></li>
-									<li><a href="#">SUSTAINABILITY</a></li>
+									<li><a href="#">STAR</a></li>
+									<li><a href="#">DECOR</a></li>
+									<li><a href="#">HOROSCOPE</a></li>
 								</ul>
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
@@ -166,70 +165,80 @@
 							<div class="allmenu_inner">
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
 								<!-- //로그인/회원가입 -->
-
-								<!-- 단일메뉴 및 버티컬 -->
-								<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
-								<div class="allmenu_single">
-									<li><a href="#">LOOK</a></li>
-									<li><a href="#">예술산책</a></li>
-									<li class="line"><a href="#">SUSTAINABILITY</a></li>
-								</div>
-								<!-- //단일메뉴 및 버티컬 -->
 
 								<!-- 메뉴 -->
 								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
 								<div class="allmenu_list">
 									<ul class="depth1">
+										<li>
+											<a href="#">NEWS<span><em class="blind">열기</em></span></a>
+										</li>
 										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
 											<a href="#">FASHION<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">FASHION NEWS</a></li>
-												<li><a href="#">FASHION TRENDS</a></li>
-												<li><a href="#">CELEBRITY STYLE</a></li>
-												<li><a href="#">WATCH &amp; JEWELRY</a></li>
-												<li><a href="#">SPORTS &amp; OUTDOOR</a></li>
+												<li><a href="#">TRENDS</a></li>
+												<li><a href="#">CELEB STYLE</a></li>
+												<li><a href="#">WATCH&amp;JEWELRY</a></li>
+												<li><a href="#">FASHION WEEK</a></li>
+												<li><a href="#">DESIGNERS</a></li>
+												<li><a href="#">SHOPPING</a></li>
 											</ul>
+										</li>
+										<li>
+											<a href="#">STYLE<span><em class="blind">열기</em></span></a>
 										</li>
 										<li>
 											<a href="#">BEAUTY<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">MAKE-UP</a></li>
+												<li><a href="#">MAKE-UP&amp;NAILS</a></li>
 												<li><a href="#">SKINCARE</a></li>
-												<li><a href="#">BODY &amp; HAIR</a></li>
-												<li><a href="#">DIET &amp; HEALTH</a></li>
-												<li><a href="#">SCENT</a></li>
+												<li><a href="#">HAIR</a></li>
+												<li><a href="#">WELLNESS</a></li>
+												<li><a href="#">DIET</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">ART<span><em class="blind">열기</em></span></a>
+											<a href="#">STAR<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">ART NEWS</a></li>
 												<li><a href="#">INTERVIEW</a></li>
-												<li><a href="#">EXHIBITION</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">CELEB<span><em class="blind">열기</em></span></a>
+											<a href="#">CULTURE<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">CELEB NEWS</a></li>
-												<li><a href="#">CELEB INTERVIEW</a></li>
-												<li><a href="#">CELEBRITY STYLE</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#">LIFESTYLE<span><em class="blind">열기</em></span></a>
-											<ul class="depth2">
-												<li><a href="#">ISSUE</a></li>
 												<li><a href="#">ENTERTAINMENT</a></li>
-												<li><a href="#">FOOD</a></li>
-												<li><a href="#">LIVING</a></li>
-												<li><a href="#">TRAVEL</a></li>
-												<li><a href="#">MUSIC</a></li>
+												<li><a href="#">OTT</a></li>
+												<li><a href="#">BOOKS</a></li>
+												<li><a href="#">ART&amp;DESIGN</a></li>
+												<li><a href="#">SPORTS</a></li>
 											</ul>
+										</li>
+										<li>
+											<a href="#">LIFE&amp;LOVE<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">FOOD</a></li>
+												<li><a href="#">PLACE</a></li>
+												<li><a href="#">TRAVEL</a></li>
+												<li><a href="#">RELATIONSHIP</a></li>
+												<li><a href="#">CAR&amp;TECH</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">ELLE DECOR<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">TRENDS</a></li>
+												<li><a href="#">DESIGN</a></li>
+												<li><a href="#">PEOPLE</a></li>
+												<li><a href="#">HOUSE</a></li>
+												<li><a href="#">SPACE</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">BRILLIANT<span><em class="blind">열기</em></span></a>
 										</li>
 										<li>
 											<a href="#">HOROSCOPE<span><em class="blind">열기</em></span></a>
@@ -240,9 +249,6 @@
 												<li><a href="#">ONGOING EVENT</a></li>
 												<li><a href="#">NOTICE</a></li>
 											</ul>
-										</li>
-										<li>
-											<a href="#">바자커버<span><em class="blind">열기</em></span></a>
 										</li>
 									</ul>
 								</div>
@@ -263,10 +269,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
-										<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-										<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-										<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
-										<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+										<li><a href="https://www.instagram.com/ellekorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/user/ellemagazinekr" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
 								<!-- //sns -->
@@ -646,10 +652,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
-								<li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
-								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
-								<li><a href="https://www.facebook.com/bazaarkorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
-								<li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+								<li><a href="https://www.instagram.com/ellekorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/user/ellemagazinekr" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://twitter.com/elle_korea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -657,7 +663,7 @@
 				<div class="footer_bottom">
 					<div class="cont_inner">
 						<div class="footer_logo">
-							<img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
+							<img src="../resources/images/logo_elle.svg" alt="ELLE">
 						</div>
 						<div class="footer_info">
 							<address class="addr_wrap">
@@ -669,7 +675,7 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
+									<span class="email">이메일 : <a href="mailto:elle.korea@hll.kr">elle.korea@hll.kr</a></span>
 								</div>
 							</address>
 							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
@@ -713,12 +719,33 @@
 										<!-- 리스트 -->
 										<div class="familysite_list global">
 											<ul>
-												<li><a href="#" target="_blank" title="새창열림">USA</a></li>
-												<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+												<li><a href="#" target="_blank" title="새창열림">BELGIUM</a></li>
+												<li><a href="#" target="_blank" title="새창열림">HONG-KONG</a></li>
+												<li><a href="#" target="_blank" title="새창열림">SLOVENIA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">BRAZIL</a></li>
+												<li><a href="#" target="_blank" title="새창열림">HUNGARY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">SOUTH AFRICA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">CANADA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">INDIA</a></li>
 												<li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
-												<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
-												<li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">CHINA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">SWEDEN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">CZECH REPUBLIC </a></li>
 												<li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">DENMARK</a></li>
+												<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+												<li><a href="#" target="_blank" title="새창열림">THAILAND</a></li>
+												<li><a href="#" target="_blank" title="새창열림">FINLAND</a></li>
+												<li><a href="#" target="_blank" title="새창열림">NORWAY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">TURKEY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">FRANCE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">QUEBEC</a></li>
+												<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+												<li><a href="#" target="_blank" title="새창열림">GERMANY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">RUSSIA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">USA</a></li>
 											</ul>
 										</div>
 										<!-- //리스트 -->

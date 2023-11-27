@@ -373,8 +373,8 @@ body.is_mobile  img.pc {display:none}
 .sec_area .btn_area{justify-content:flex-start;margin-top:40px;}
 .rss .sec_area .btn_area .btn{width:333px;background-color:transparent;justify-content: flex-start;}
 .rss .sec_area .btn_area .btn.ico_plus{position:relative;}
-.rss .sec_area .btn_area .btn.ico_plus:after{content:'';position:absolute;top:calc(50% - 8px);right:20px;width: 16px;height: 16px;background: transparent url('../images/ico_plus_b.svg') no-repeat center / 16px auto;}
-
+.rss .sec_area .btn_area .btn.ico_plus:after{content:'';position:absolute;/*top:calc(50% - 8px);*/right:20px;width: 16px;height: 16px;background: transparent url('../images/ico_plus_b.svg') no-repeat center / 16px auto;}
+.rss .sec_area.bg_sky { max-width:1920px; margin:0 auto}
 
 /*AD Info*/
 .adinfo [class*="section"]+[class*="section"]{padding-bottom :0}

@@ -184,7 +184,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_s{display:inline-flex;position:relative;align-items:center;justify-content:center;width:auto;height:36px;padding:0 20px;font-size:14px;font-weight:500;letter-spacing:-0.01em;border:1px solid transparent;text-align:center;}/* h36 */
 
 /* button : bgcolor */
-.bctype1{background-color:#EF88AB;border-color:#EF88AB;color:#fff;}
+.bctype1{background-color:#111;border-color:#111;color:#fff;}
 .bctype2{background-color:#fff;border-color:#111;color:#111;}
 .bctype3{background-color:#fff;border-color:#fff;color:#111;}
 .bctype4{background-color:#fff;border-color:#ccc;color:#111;}

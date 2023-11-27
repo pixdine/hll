@@ -100,7 +100,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 
 /* 기사상세 > body > 기사작성자 정보 */
 .atc_dtline_box{margin:80px 0;}
-.atc_dtline_box h3.title {font-family:TTFirs-ExtraBold; font-weight:500; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
+.atc_dtline_box h3.title {font-family:TTFirs-ExtraBold; font-weight:700; font-size:28px; line-height:1; margin:0px 0 16px; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit {font-size:16px; font-weight: 400; line-height:23px; color:#666; letter-spacing:-0.01em}
 .atc_dtline_box .list_credit li {display:flex; flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;}
 .atc_dtline_box .list_credit li:not(:first-child){margin-top:5px;}

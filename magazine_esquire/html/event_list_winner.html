@@ -13,7 +13,7 @@
 	<!-- //css, Jquery -->
 </head>
 <body>
-	<div id="bazaar"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+	<div id="esquire"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
 		<!-- google 광고영역 -->
 		<div class="ad_google">
 			google 광고 배너 영역<br>높이값 가변적
@@ -38,17 +38,16 @@
 							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_esquire.svg" alt="ESQUIRE"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
 							<div class="header_navi">
 								<ul>
-									<li><a href="#">LOOK</a></li>
-									<li class="line"><a href="#">예술산책</a></li><!-- D: 메뉴 사이 구분할 경우 line 클래스 추가 -->
-									<li><a href="#">FASHION</a></li>
-									<li><a href="#">BEAUTY</a></li>
-									<li><a href="#">ART</a></li>
-									<li><a href="#">SUSTAINABILITY</a></li>
+									<li><a href="#">STYLE</a></li>
+									<li><a href="#">WATCH</a></li>
+									<li><a href="#">FOOD</a></li>
+									<li><a href="#">CAR&amp;TECH</a></li>
+									<li><a href="#">CLUB ESQUIRE</a></li>
 								</ul>
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
@@ -163,73 +162,66 @@
 							<div class="allmenu_inner">
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
 								<!-- //로그인/회원가입 -->
-
-								<!-- 단일메뉴 및 버티컬 -->
-								<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
-								<div class="allmenu_single">
-									<li><a href="#">LOOK</a></li>
-									<li><a href="#">예술산책</a></li>
-									<li class="line"><a href="#">SUSTAINABILITY</a></li>
-								</div>
-								<!-- //단일메뉴 및 버티컬 -->
 
 								<!-- 메뉴 -->
 								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
 								<div class="allmenu_list">
 									<ul class="depth1">
 										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
-											<a href="#">FASHION<span><em class="blind">열기</em></span></a>
+											<a href="#">STYLE<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">FASHION NEWS</a></li>
-												<li><a href="#">FASHION TRENDS</a></li>
-												<li><a href="#">CELEBRITY STYLE</a></li>
-												<li><a href="#">WATCH &amp; JEWELRY</a></li>
-												<li><a href="#">SPORTS &amp; OUTDOOR</a></li>
+												<li><a href="#">FASHION</a></li>
+												<li><a href="#">GROOMING</a></li>
+												<li><a href="#">CELEBRITY</a></li>
+												<li><a href="#">NOW</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">BEAUTY<span><em class="blind">열기</em></span></a>
+											<a href="#">WATCH<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">MAKE-UP</a></li>
-												<li><a href="#">SKINCARE</a></li>
-												<li><a href="#">BODY &amp; HAIR</a></li>
-												<li><a href="#">DIET &amp; HEALTH</a></li>
-												<li><a href="#">SCENT</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#">ART<span><em class="blind">열기</em></span></a>
-											<ul class="depth2">
-												<li><a href="#">ART NEWS</a></li>
+												<li><a href="#">REVIEW</a></li>
+												<li><a href="#">FAIR</a></li>
 												<li><a href="#">INTERVIEW</a></li>
-												<li><a href="#">EXHIBITION</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">CELEB<span><em class="blind">열기</em></span></a>
+											<a href="#">FOOD<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">CELEB NEWS</a></li>
-												<li><a href="#">CELEB INTERVIEW</a></li>
-												<li><a href="#">CELEBRITY STYLE</a></li>
+												<li><a href="#">RESTAURANT</a></li>
+												<li><a href="#">BAR</a></li>
+												<li><a href="#">CAFE</a></li>
+												<li><a href="#">PLACE</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">LIFESTYLE<span><em class="blind">열기</em></span></a>
+											<a href="#">CAR&amp;TECH<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
-												<li><a href="#">ISSUE</a></li>
+												<li><a href="#">CAR</a></li>
+												<li><a href="#">BIKE</a></li>
+												<li><a href="#">TECH</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">LIFE<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">PEOPLE</a></li>
+												<li><a href="#">SPACE</a></li>
+												<li><a href="#">ART&amp;DESIGN</a></li>
 												<li><a href="#">ENTERTAINMENT</a></li>
-												<li><a href="#">FOOD</a></li>
-												<li><a href="#">LIVING</a></li>
 												<li><a href="#">TRAVEL</a></li>
-												<li><a href="#">MUSIC</a></li>
+												<li><a href="#">RELATION</a></li>
+												<li><a href="#">HEALTH</a></li>
 											</ul>
 										</li>
 										<li>
-											<a href="#">HOROSCOPE<span><em class="blind">열기</em></span></a>
+											<a href="#">VIDEO<span><em class="blind">열기</em></span></a>
+										</li>
+										<li>
+											<a href="#">eee<span><em class="blind">열기</em></span></a>
 										</li>
 										<li>
 											<a href="#">EVENT <span><em class="blind">열기</em></span></a>
@@ -237,9 +229,6 @@
 												<li><a href="#">ONGOING EVENT</a></li>
 												<li><a href="#">NOTICE</a></li>
 											</ul>
-										</li>
-										<li>
-											<a href="#">바자커버<span><em class="blind">열기</em></span></a>
 										</li>
 									</ul>
 								</div>
@@ -260,10 +249,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
-										<li><a href="https://www.instagram.com/harpersbazaarkorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-										<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-										<li><a href="https://www.facebook.com/bazaarkorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
-										<li><a href="https://twitter.com/bazaarkorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+										<li><a href="https://www.instagram.com/esquire.korea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/c/ESQUIREKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://www.facebook.com/esquiremagazinekr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://twitter.com/esquirekr" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
 								<!-- //sns -->
@@ -452,10 +441,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
-								<li><a href="https://www.instagram.com/harpersbazaarkorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
-								<li><a href="https://www.youtube.com/c/HarpersBAZAARKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
-								<li><a href="https://www.facebook.com/bazaarkorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
-								<li><a href="https://twitter.com/bazaarkorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+								<li><a href="https://www.instagram.com/esquire.korea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/c/ESQUIREKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://www.facebook.com/esquiremagazinekr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://twitter.com/esquirekr" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -463,7 +452,7 @@
 				<div class="footer_bottom">
 					<div class="cont_inner">
 						<div class="footer_logo">
-							<img src="../resources/images/logo_bazaar.svg" alt="Harper's BAZAAR">
+							<img src="../resources/images/logo_esquire.svg" alt="ESQUIRE">
 						</div>
 						<div class="footer_info">
 							<address class="addr_wrap">
@@ -475,7 +464,7 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:harpersbazaarkr@hll.kr">harpersbazaarkr@hll.kr</a></span>
+									<span class="email">이메일 : <a href="mailto:esquirekr@joins.com">esquirekr@joins.com</a></span>
 								</div>
 							</address>
 							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
@@ -522,9 +511,8 @@
 												<li><a href="#" target="_blank" title="새창열림">USA</a></li>
 												<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
 												<li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
 												<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
-												<li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
-												<li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
 											</ul>
 										</div>
 										<!-- //리스트 -->

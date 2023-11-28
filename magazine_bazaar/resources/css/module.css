@@ -139,9 +139,11 @@
 .mix_atc_wrap{margin-bottom:180px;}
 .mix_atc_wrap .cont_inner{position:relative;}
 .mix_atc_wrap .tit_wrap{margin-bottom:60px;}
-.mix_atc_wrap .tab_cate{position:absolute;right:40px;top:12px;}
-.mix_atc_wrap .tab_cate ul{font-size:0;}
-.mix_atc_wrap .tab_cate li{display:inline-block;position:relative;margin-right:24px;vertical-align:top;}
+.mix_atc_wrap .tit_wrap .tit{flex-shrink:0;}
+.mix_atc_wrap .tit_area{flex-wrap:wrap;justify-content:space-between;gap:0 50px;}
+.mix_atc_wrap .tit_wrap .side{flex-shrink:inherit;margin:18px 0 0;}
+.mix_atc_wrap .tab_cate ul{display:flex;flex-wrap:wrap;gap:12px 24px;}
+.mix_atc_wrap .tab_cate li{display:inline-block;position:relative;vertical-align:top;}
 .mix_atc_wrap .tab_cate li:last-child{margin-right:0;}
 .mix_atc_wrap .tab_cate li a{display:block;position:relative;padding-bottom:6px;font-family:Gotham;font-size:16px;line-height:15px;letter-spacing:0;color:#999;}
 .mix_atc_wrap .tab_cate li.on a{color:#111;border-bottom:2px solid #111;}
@@ -450,11 +452,6 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 }
 
 /************************* Media Query *************************/
-@media (max-width:1080px){
-	.mix_atc_wrap .tit_wrap{margin-bottom:20px;}
-	.mix_atc_wrap .tab_cate{position:relative;right:initial;top:initial;margin-bottom:60px;}
-}
-
 @media (max-width:1024px){
 	.follow_box{padding:24px 50px;}
 }
@@ -537,8 +534,9 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.issue_atc_list .atcbox .txtbox .tit{height:46px;font-size:16px;line-height:23px;color:#fff;}
 
 	.mix_atc_wrap{margin-bottom:80px;}
-	.mix_atc_wrap .tit_wrap{margin-bottom:22px;}
-	.mix_atc_wrap .tab_cate{margin-bottom:18px;}
+	.mix_atc_wrap .tit_wrap{margin-bottom:18px;}
+	.mix_atc_wrap .tit_wrap .tit{flex-shrink:inherit;}
+	.mix_atc_wrap .tit_wrap .side{margin:22px 0 0;}
 	.mix_atc_wrap .tab_cate ul{overflow:hidden;overflow-x:auto;display:block;margin:0 -20px;padding:10px 20px;font-size:0;white-space:nowrap;}
 	.mix_atc_wrap .tab_cate ul::-webkit-scrollbar{display:none;}
 	.mix_atc_wrap .tab_cate li{margin-right:20px;}

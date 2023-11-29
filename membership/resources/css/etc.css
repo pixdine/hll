@@ -1,37 +1,8 @@
 body.is_pc .container.etc { padding:72px 0 180px}
 body.is_pc .container.etc #content { padding-top:60px}
 .privacy_wrap{}                 
-.term_type01 {}
-.term_type01 dt { font-size:18px; font-weight:700; margin-bottom:40px; }
-.term_type01 dt.p_tit {font-size:16px; font-weight:500; margin-bottom:20px; color:#111}
-.term_type01 dd {color:#666; margin-bottom:40px; line-height:1.6; font-size:16px; font-weight:400;}
-.term_type01 .p_txt  {color:#666; margin-bottom:40px; line-height:1.6; font-size:16px; font-weight:400;}
-.term_type01 .p_tit {font-size:16px; font-weight:500; margin-bottom:20px; color:#111}
-.term_type01 dd li {margin-top:5px; text-indent:-11px; padding-left:17px}
-.term_type01 dd li.none {text-indent:0; padding-left:0}
-.term_type01 dd li li {text-indent:-18px; padding-left:10px}
-.term_type01 dd li li a { text-indent:0; padding-left:0}
-.term_type01 dd li:first-child {margin-top:0}
-.term_type01 dd ol ,.term_type01 dd ul  {margin-top:10px; margin-bottom:10px}
-.term_type01 dd  li ol, .term_type01 dd li ul { margin-left:15px;}
-.term_type01 dd.additional { margin-top:80px} 
-.term_type01 .term_tbl { border-top:2px solid #111; border-bottom:1px solid #DBDBDB; margin-top:10px}
-.term_type01 .term_tbl table { padding:0;border:0;border-spacing:0px;border-collapse:collapse; width:100%; table-layout:fixed;}
-.term_type01 .term_tbl table th {font-size:14px; font-weight:500; text-align:center; line-height:1.6; padding:20px 0; color:#111}
-.term_type01 .term_tbl table td {font-size:16px; font-weight:500; text-align:left; line-height:1.6; padding:24px 40px; border-top:1px solid #DBDBDB}
-.term_type01 .term_tbl ~ .p_tit { margin-top:40px}
-.term_type01 dd .term_st01 {margin-top:10px}
-.term_type01 dd .term_st01 dt {font-size:16px; font-weight:400; color:#666; margin-bottom:5px}
-.term_type01 dd .term_st01 dd {font-size:16px; font-weight:400; color:#666;margin:0 0 5px 20px}
+
 
 @media (max-width:768px){
-    .term_type01 .term_tbl table th {font-size:14px;padding:20px 0px}
-    .term_type01 .term_tbl table td {font-size:14px; padding:24px 10px}
-    .term_type01 dd {margin-bottom:16px; line-height:1.6; font-size:14px;}
-    .term_type01 .p_txt {margin-bottom:32px; line-height:1.6; font-size:14px;}
-    .term_type01 dt.p_tit {font-size:18px; font-weight:700; margin-bottom:20px; color:#111}
-    .term_type01 dd .term_st01 dt {font-size:14px; text-indent:-18px; padding-left:18px}
-    .term_type01 dd .term_st01 dd {font-size:14px;}
-    .term_type01 dd li .term_st01 {font-size:14px; margin-left:-20px}
-    .term_type01 dd li .term_st01 dd { margin-left:40px}
+    
 }

@@ -324,6 +324,25 @@
                                             </div>
                                         </div>
                                         <!-- //댓글쓰기 -->
+
+                                        <!-- 사진첨부 영역 -->
+                                        <div class="attach_pic_comp">
+                                            <!-- D: 이미지 등록되었을 때 삭제기능 등 개발처리 -->
+                                            <div class="attach_pic">
+                                                <button type="button" class="btn_attach" title="이미지 첨부하기"><!--D : 갯수나 용량 초과하면 disabled 속성 추가 --> 
+                                                    <span class="txt">사진첨부</span>
+                                                </button>
+                                                <input type="file" id="image-upload" multiple/>
+                                                <!-- <button type="button" class="btn_attach disabled"></button> -->
+                                                <!-- <div class="attach_img">
+                                                    <div class="att_img"><img src="../resources/images/temp/attach01.jpg"></div>
+                                                    <button type="button" class="btn_del" title="첨부 이미지 삭제">
+                                                        <span class="blind">첨부 이미지 삭제</span>
+                                                    </button>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                        <!-- //사진첨부 영역 -->
                                     </div>
                                     <!-- //댓글작성 영역 -->
                                 </div>
@@ -493,6 +512,11 @@
 
         // 상세 슬라이드
         viewImgSlide();
+
+        // 이미지 첨부 옵션값은 ui.common.js 참고
+        $(".attach_pic_comp").attachPicture({
+            defaultMaxFiles : 1
+        });
 
         // 페이지의 모든 리소스가 로드된 후 실행할 코드
         $(window).on('load', function () {

@@ -434,7 +434,7 @@ body.is_mobile  img.pc {display:none}
 .cont_wrap .cont_list ul li p{color:#666;line-height:23px;flex:1;text-align:center;}
 .cont_wrap .cont_list ul li:not(.head, .title) p:first-child{text-align:left;}
 .cont_wrap .cont_list ul li:not(.head, .title) p:last-child{text-align:right;}
-.cont_wrap .cont_list ul li p span{line-height:20px;font-size:14px;}
+.cont_wrap .cont_list ul li p span{line-height:20px;font-size:14px;font-weight:500;}
 .cont_wrap .cont_list .box{display:flex;}
 .cont_wrap .cont_list .box > ul{flex: 1;} 
 .cont_wrap .cont_list .box > ul li > *{flex:1;text-align: center;}
@@ -863,6 +863,7 @@ body.is_mobile  img.pc {display:none}
     .cont_wrap .cont_list{margin-top:12px;}
     .cont_wrap .cont_list ul li{gap:12px;padding:12px;}
     .cont_wrap .cont_list ul li p{flex:1;}
+    .cont_wrap .cont_list ul li p span{font-size:12px;}
     .cont_wrap .cont_list ul li.title span{font-size:12px;line-height:18px;}
     .cont_wrap .cont_list ul li.title .ess{font-size:12px;}
     .cont_wrap .cont_list .box{flex-direction:column;}

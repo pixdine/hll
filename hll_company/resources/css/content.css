@@ -840,6 +840,7 @@ body.is_mobile  img.pc {display:none}
 
     .adinfo [class*="section"]{padding:60px 0;}
     .adinfo [class*="section"].pd{padding-bottom:60px;}
+    .adinfo [class*="section"]+[class*="bg_"]{padding-bottom:60px;}
     .adinfo [class*="section"] .tit_wrap .tit.en{font-size:24px;line-height:32px;}
     .container .adinfo .heading_wrap h2.tit{line-height:36px;height:36px;}
     .adinfo .tab_menu+.tab_menu{margin-top:24px;}

@@ -518,7 +518,7 @@
                     onLeave : function(origin, destination, direction, index){
                         setTimeout(()=>{
                             wheelCount++;
-                        }, 750)
+                        }, 300)
                         console.log('wheelCount ' + wheelCount, origin);
                         if(origin == 1 && wheelCount < 2){
                             $(".intro_first").addClass("hide");

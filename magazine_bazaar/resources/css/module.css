@@ -536,7 +536,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.mix_atc_wrap{margin-bottom:80px;}
 	.mix_atc_wrap .tit_wrap{margin-bottom:18px;}
 	.mix_atc_wrap .tit_wrap .tit{flex-shrink:inherit;}
-	.mix_atc_wrap .tit_wrap .side{margin:22px 0 0;}
+	.mix_atc_wrap .tit_wrap .side{width:100%;margin:22px 0 0;}
 	.mix_atc_wrap .tab_cate ul{overflow:hidden;overflow-x:auto;display:block;margin:0 -20px;padding:10px 20px;font-size:0;white-space:nowrap;}
 	.mix_atc_wrap .tab_cate ul::-webkit-scrollbar{display:none;}
 	.mix_atc_wrap .tab_cate li{margin-right:20px;}

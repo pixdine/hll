@@ -649,10 +649,6 @@ body.is_mobile  img.pc {display:none}
     .container .adinfo .heading_wrap {background-image:url('../images/bg_adinfo_mo.png');}
     .container .heading_wrap .heading_area{display: flex;max-width: 1920px;height: 180px;margin: 0 auto;justify-content: center;align-items: center;}
     .container .heading_wrap h2.tit{font-size:32px;line-height:36px;}
-    .container .elle .heading_wrap h2.tit{height:60px;}
-    .container .bazzar .heading_wrap h2.tit{height:53px;}
-    .container .yeet .heading_wrap h2.tit{height:52px;}
-    .container .heading_wrap h2.tit img{height:100%;}
     .container .heading_wrap h2.tit em{font-size:14px;line-height: 20px;margin-bottom:4px;}
     .container .heading_wrap p{font-size:14px;line-height:20px;margin-top:8px;}
     .tit_wrap{margin-bottom:32px;}

@@ -4,16 +4,16 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean);
 
 @font-face{
-	font-family: NewsGothicExtraCondensedBold;
+	font-family: FoundersGrotesk;
 	font-style: normal;
 	font-weight: 500;
-	src: url(../font/NewsGothicExtraCondensedBold.woff2) format("woff2"), url(../font/NewsGothicExtraCondensedBold.woff) format("woff"), url(../font/NewsGothicExtraCondensedBold.otf) format("opentype");
+	src: url(../font/founders-grotesk-semibold.woff2) format("woff2"), url(../font/founders-grotesk-semibold.ttf) format("truetype");
 }
 @font-face{
-	font-family: EloquentJFItalicPro;
+	font-family: 'Druk Wide Web';
 	font-style: normal;
 	font-weight: 700;
-	src: url(../font/EloquentJFItalicPro.woff2) format("woff2"), url(../font/EloquentJFItalicPro.woff) format("woff");
+	src: url(../font/DrukWide-Heavy-Web.woff2) format("woff2"), url(../font/DrukWide-Heavy-Web.woff) format("woff");
 }
 
 /* reset */
@@ -296,10 +296,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .header_navi ul{font-size:0;}
 .header_navi ul li{position:relative;display:inline-block;}
 .header_navi ul li + li{padding-left:32px;}
-.header_navi ul li a{display:block;padding:7px 0;font-family:NewsGothicExtraCondensedBold, 'Noto Sans KR';font-size:18px;font-weight:500;color:#111;line-height:24px;letter-spacing:0;}
+.header_navi ul li a{display:block;padding:7px 0;font-family:FoundersGrotesk, 'Noto Sans KR';font-size:18px;font-weight:500;color:#111;line-height:24px;letter-spacing:0;}
 .header_util{display:flex;margin-left:auto;margin-right:-5px;}
 .header_util .aside{display:flex;column-gap:24px}
-.header_util .aside a{display:inline-block;padding:9px 0;font-family:NewsGothicExtraCondensedBold, 'Noto Sans KR';font-size:16px;color:#666;line-height:20px;letter-spacing:0;}
+.header_util .aside a{display:inline-block;padding:9px 0;font-family:FoundersGrotesk, 'Noto Sans KR';font-size:16px;color:#666;line-height:20px;letter-spacing:0;}
 .header_util .aside a:first-child{margin-left:0;}
 
 /* pc header gnb 구분선 */
@@ -347,15 +347,15 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .allmenu_wrap .btn_menu_close{position:relative;width:38px;height:38px;margin-left:-5px;}
 .allmenu_wrap .btn_menu_close:before{content:'';display:block;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:28px;height:28px;background:url('../images/ico_close_28.svg') no-repeat center center / 100% auto;}
 .allmenu_util{display:flex;flex-wrap:wrap;margin-bottom:32px;}
-.allmenu_util a{display:block;margin-left:24px;font-family:NewsGothicExtraCondensedBold;font-size:18px;line-height:1;color:#666;}
+.allmenu_util a{display:block;margin-left:24px;font-family:FoundersGrotesk;font-size:18px;line-height:1;color:#666;}
 .allmenu_util a:first-child{margin-left:0;}
 .allmenu_single{margin-bottom:50px;padding-bottom:50px;border-bottom:1px solid #dbdbdb;}
 .allmenu_single li{margin-top:16px;}
 .allmenu_single li:first-of-type{margin-top:0;}
-.allmenu_single li a{display:block;font-family:NewsGothicExtraCondensedBold, 'Noto Sans KR';font-size:30px;line-height:41px;}
+.allmenu_single li a{display:block;font-family:FoundersGrotesk, 'Noto Sans KR';font-size:30px;line-height:41px;}
 .allmenu_list .depth1 > li{position:relative;margin-top:40px;}
 .allmenu_list .depth1 > li:first-of-type{margin-top:0;}
-.allmenu_list .depth1 > li > a{display:block;position:relative;font-family:NewsGothicExtraCondensedBold, 'Noto Sans KR';font-size:30px;line-height:41px;}
+.allmenu_list .depth1 > li > a{display:block;position:relative;font-family:FoundersGrotesk, 'Noto Sans KR';font-size:30px;line-height:41px;}
 .allmenu_list .depth1 > li > a span {display:none;position:absolute;top:0;right:-41px;width:41px;height:41px;}
 .allmenu_list .depth1 > li.has_menu > a{margin-right:41px;}
 .allmenu_list .depth1 > li.has_menu > a span{display:inline-block;}
@@ -415,18 +415,18 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .footer_info .addr_txt .email{display:block;}
 .footer_info .copyright{margin-top:20px;font-size:14px;font-weight:500;color:#666;line-height:20px;}
 .family_wrap{width:100%;background-color:#fff;border-top:1px solid #dbdbdb;text-align:center;}
-.family_wrap .btn_familysite{display:inline-flex;align-items:center;justify-content:center;height:63px;font-family:NewsGothicExtraCondensedBold;font-size:18px;font-weight:500;color:#666;}
+.family_wrap .btn_familysite{display:inline-flex;align-items:center;justify-content:center;height:63px;font-family:FoundersGrotesk;font-size:18px;font-weight:500;color:#666;}
 .family_wrap .btn_familysite:after{content:'';display:block;width:16px;height:16px;margin:0 0 0 8px;background:url('../images/ico_arrow_down_16.svg') no-repeat center center / 100% auto;}
 .family_wrap.open .btn_familysite:after{background-image:url('../images/ico_arrow_up_16.svg');}
 .familysite{display:none;padding:60px 0;background-color:#f7f7f7;text-align:left;}
 .familysite .tab_menu.type02{margin-bottom:40px;}
-.familysite .tab_menu.type02 li a{font-family:NewsGothicExtraCondensedBold;font-weight:500;font-size:22px;line-height:1;}
+.familysite .tab_menu.type02 li a{font-family:FoundersGrotesk;font-weight:500;font-size:22px;line-height:1;}
 .familysite .tab_menu.type02 li.on a{font-weight:500;}
 .familysite_list.family{max-width:79.667%;}
 .familysite_list ul{display:flex;flex-wrap:wrap;gap:24px;}
 .familysite_list li{width:calc(20% - 20px);}
 .familysite_list.family li{width:calc(25% - 18px);}
-.familysite_list li a{display:block;font-family:NewsGothicExtraCondensedBold, 'Noto Sans KR';font-weight:500;font-size:18px;line-height:1;color:#666;}
+.familysite_list li a{display:block;font-family:FoundersGrotesk, 'Noto Sans KR';font-weight:500;font-size:18px;line-height:1;color:#666;}
 
 /* swiper */
 .swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}
@@ -551,18 +551,18 @@ background:#fff;overflow:hidden;z-index:230}
 /* heading */
 .heading_wrap{position:relative;max-width:1280px;margin:60px auto;padding:0 40px;text-align:center;}
 .heading_wrap .tit{font-size:36px;line-height:52px;color:#111;}
-.heading_wrap .cate{display:block;position:relative;margin-bottom:24px;font-family:NewsGothicExtraCondensedBold;font-size:18px;line-height:1;color:var(--point);}
+.heading_wrap .cate{display:block;position:relative;margin-bottom:24px;font-family:FoundersGrotesk;font-size:18px;line-height:1;color:var(--point);}
 .heading_wrap .side{margin-left:auto;flex-shrink:0;}
 .heading_wrap.eng{margin:80px auto 60px;}
 .heading_wrap.eng .heading_area{display:flex;justify-content:center;}
-.heading_wrap.eng .tit{font-family:EloquentJFItalicPro;font-size:60px;font-weight:500;line-height:77px;}
+.heading_wrap.eng .tit{font-family:'Druk Wide Web';font-size:60px;font-weight:700;line-height:88px;color:#EE7BAE;}
 .heading_wrap.tal{margin:80px auto 60px;}
 .heading_wrap .tit .t1{display:block;font-weight:400;}
 .heading_wrap .tit .t2{display:block;font-weight:700;}
 
 /* title */
 .tit_wrap{margin-bottom:48px;}
-.tit_wrap .tit{overflow:hidden;font-size:32px;font-weight:500;line-height:46px;color:#111;letter-spacing:0;}
+.tit_wrap .tit{overflow:hidden;font-size:32px;font-family:FoundersGrotesk, 'Noto Sans KR';font-weight:500;line-height:46px;color:#111;letter-spacing:0;}
 .tit_wrap .side{margin-left:auto;flex-shrink:0;}
 .tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:11.5px 10px;font-size:16px;color:#111;line-height:23px;}
 .tit_wrap .btn_more:after{content:'';display:inline-block;width:16px;height:16px;margin:1px 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23666666'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
@@ -910,7 +910,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.heading_wrap .cate{margin-bottom:20px;font-size:16px;}
 	.heading_wrap .side .btn{min-width:auto;height:36px;font-size:14px;}
 	.heading_wrap.eng{margin:40px auto 24px;}
-	.heading_wrap.eng .tit{font-size:36px;line-height:46px;}
+	.heading_wrap.eng .tit{font-size:28px;line-height:44px;}
 	.heading_wrap.tal{margin:40px auto 24px;}
 
 	/* header */

@@ -40,6 +40,8 @@ body.is_mobile  img.pc {display:none}
 /*business*/
 .container.sub_container .heading_wrap{height:auto;padding: 105px 0 79px;}
 .container.sub_container .heading_wrap .heading_area{height: auto;}
+.container.sub_container .heading_wrap .heading_area .tit_logo{height:80px;}
+.container.sub_container .heading_wrap .heading_area .tit_logo img{max-height:100%;}
 .sub_container .tab_menu.type03 > ul{justify-content: center;}
 .top_visual{position:relative; max-width:1920px;max-height:624px; width:100%; margin:0 auto; height:800px; }
 .top_visual img {position:absolute; top:0; left:0; display:block; height:100%;width: 100%; object-fit:cover; }
@@ -646,11 +648,7 @@ body.is_mobile  img.pc {display:none}
     .container .rss .heading_wrap{background-image:url('../images/bg_rss_mo.png');}
     .container .adinfo .heading_wrap {background-image:url('../images/bg_adinfo_mo.png');}
     .container .heading_wrap .heading_area{display: flex;max-width: 1920px;height: 180px;margin: 0 auto;justify-content: center;align-items: center;}
-    .container .heading_wrap h2.tit{font-size:32px;height:48px;}
-    .container .elle .heading_wrap h2.tit{height:60px;}
-    .container .bazzar .heading_wrap h2.tit{height:53px;}
-    .container .yeet .heading_wrap h2.tit{height:52px;}
-    .container .heading_wrap h2.tit img{height:100%;}
+    .container .heading_wrap h2.tit{font-size:32px;line-height:36px;}
     .container .heading_wrap h2.tit em{font-size:14px;line-height: 20px;margin-bottom:4px;}
     .container .heading_wrap p{font-size:14px;line-height:20px;margin-top:8px;}
     .tit_wrap{margin-bottom:32px;}
@@ -753,6 +751,7 @@ body.is_mobile  img.pc {display:none}
 
     /*business*/
     .container.sub_container .heading_wrap{padding:100px 0 40px;}
+    .container.sub_container .heading_wrap .heading_area .tit_logo{height:52px;}
     .top_visual .txt_box {max-width:100%;width: 100%;}
     .top_visual .txt_box .txt{font-size:24px;font-weight:500;line-height:32px;}
     [class*="section"] .cont_inner{padding-top:0;}
@@ -842,7 +841,6 @@ body.is_mobile  img.pc {display:none}
     .adinfo [class*="section"].pd{padding-bottom:60px;}
     .adinfo [class*="section"]+[class*="bg_"]{padding-bottom:60px;}
     .adinfo [class*="section"] .tit_wrap .tit.en{font-size:24px;line-height:32px;}
-    .container .adinfo .heading_wrap h2.tit{line-height:36px;height:36px;}
     .adinfo .tab_menu+.tab_menu{margin-top:24px;}
     .sec_wrap .section01{padding:40px 0;}
     .sec_wrap .section01 p{font-size:16px;line-height:23px;}

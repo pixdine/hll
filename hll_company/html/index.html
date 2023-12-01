@@ -475,16 +475,10 @@
                 $('.main_container').fullpage({
                     fitToSection: false,
                     autoScrolling: true,
-                    //navigation: true,
                     slidesToSections: true,
-                    //navigationPosition: 'left',
-                    //navigationTooltips: ['01','02','03','04','05','06'],
                     showActiveTooltip:true,
                     scrollingSpeed: 750,
-                    //responsiveWidth: 767,
                     scrollBar: false,
-                    //fixedElements: '#footer',
-                    //css3: true,
 
                     // ** 페이지를 불러온 후
                     afterLoad : function(anchorLink, index, direction){
@@ -501,21 +495,22 @@
                         } else {
                             $('.header').addClass('scrolled');
                             // gsap 애니메이션 인스턴스를 생성합니다.
-                            const defaultAni = gsap.timeline({ paused: true });
+                            // const defaultAni = gsap.timeline({ paused: true });
 
-                            let imgArr = $(".section" + index + " .first_load");
-                            defaultAni.to(imgArr, { autoAlpha: 1, duration: 0.5 });
+                            // let imgArr = $(".section" + index + " .first_load");
+                            // // defaultAni.to(imgArr, { autoAlpha: 1, duration: 0.5 });
 
-                            // 모든 이미지 애니메이션이 추가된 후 마지막으로 '.media_desc' 애니메이션을 추가합니다.
-                            defaultAni.to(".section" + index + " .second_load", { autoAlpha: 1, duration: 0.5 });
+                            // // 모든 이미지 애니메이션이 추가된 후 마지막으로 '.media_desc' 애니메이션을 추가합니다.
+                            // defaultAni.to(".section" + index + " .second_load", { autoAlpha: 1, duration: 0.5 });
 
                             // 애니메이션을 실행합니다.
-                            defaultAni.play();
+                            // defaultAni.play();
                         }
                     },
 
                     // ** 페이지를 떠날때
                     onLeave : function(origin, destination, direction, index){
+                        console.log('destination',destination, direction);
                         setTimeout(()=>{
                             wheelCount++;
                         }, 300)
@@ -532,8 +527,20 @@
                             $(".intro_second").removeClass('active').addClass("hide");
                         }, 750)
 
+                        $(".section" + destination + " .first_load").css('opacity', 0);
+                        $(".section" + destination + " .second_load").css('opacity', 0);
+
+                        let imgArr = $(".section" + destination + " .first_load");
+                        
+                        const defaultAni = gsap.timeline();
+
+                        defaultAni.to(imgArr, {autoAlpha: 1, duration: 0.5, delay: 0.3});
+                        console.log('imgArr', imgArr, defaultAni);
+
+                        // 모든 이미지 애니메이션이 추가된 후 마지막으로 '.media_desc' 애니메이션을 추가합니다.
+                        defaultAni.to(".section" + destination + " .second_load", { autoAlpha: 1, duration: 0.5 });                        
+
                         const sectionLength = document.querySelectorAll('.section').length;
-                        console.log('destination',destination, direction);
                         if (destination == sectionLength - 1 && direction == 'up') {
                             console.log('wheelCount ' + wheelCount);
                             // 마지막 섹션에서 페이지를 떠날 때 실행할 코드를 여기에 추가합니다.

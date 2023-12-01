@@ -76,8 +76,8 @@
 .main_container .media_txt{margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;} 
 .main_container .section_inner .main_more_wrap{margin-top: 32px;} 
 
-.main_container .main_sub2 .row_first {width: 42.5%;opacity: 0;} 
-.main_container .main_sub2 .row_last {margin-top: 40px;padding-left: 42.5%;opacity: 0;}
+.main_container .main_sub2 .row_first {width: 42.5%;} 
+.main_container .main_sub2 .row_last {margin-top: 40px;padding-left: 42.5%;}
 .main_container .main_sub2 .title {height: 57px;}
 .main_container .main_sub2 .title img {height: 100%;}
 .main_container .main_sub2 .row_last img {width: 57vw;max-width: none;}

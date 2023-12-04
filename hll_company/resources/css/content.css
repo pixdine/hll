@@ -821,6 +821,7 @@ body.is_mobile  img.pc {display:none}
     .partner_list ul li .txt_info{padding:20px;}
     .partner_list ul li .txt_info p{font-size:16px;line-height:23px;}
 
+    .partner_link{margin-top:40px}
     .partner_link ul{column-gap:7px;row-gap:8px;}
     .partner_link ul li{width:31%;height:58px;}
     .partner_link ul li img{max-width:80%;max-height:80%;}
@@ -966,6 +967,7 @@ body.is_mobile  img.pc {display:none}
 @media screen and (max-width: 359px) {
     .step_wrap ul li i{width:28px;height:28px;background-size:28px 28px;}
     .step_wrap ul li strong{font-size:12px;line-height:18px;}
+
 }
 
 @media screen and (max-width: 319px) {

@@ -288,7 +288,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 .atc_cont_hidden { position:relative; height:1000px; overflow:hidden;}
 .atc_mask_login { display:none }
 .atc_cont_hidden .atc_mask_login { display:block; position:absolute; z-index:2; bottom:0; left:0; height:368px; width:100%; background: linear-gradient(360deg, #FFFFFF 45%, rgba(255, 255, 255, 0) 100%); }
-.atc_mask_login .mask_cont { position:absolute; bottom:32px; left:50%; transform: translateX(-50%); padding:0 130px; width:100%; box-sizing: border-box; }
+.atc_mask_login .mask_cont { display:flex; flex-direction:column; justify-content:flex-end; height:136px; position:absolute; bottom:32px; left:50%; transform: translateX(-50%); padding:0 130px; width:100%; box-sizing: border-box; }
 .atc_mask_login .login_txt {font-size:18px; line-height:26px; font-weight:500; width:100%; text-align:center; color:#111 }
 .atc_mask_login .mask_cont .btn_wrap { margin-top:16px}
 
@@ -475,7 +475,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_shoppingbox .bt_area button { width:161px}
 
     /* 컨텐츠 > 로그인레이어*/
-    .atc_mask_login .mask_cont { padding:0 20px; }
+    .atc_mask_login .mask_cont { padding:0 0px; height:130px; }
     .atc_mask_login .login_txt {font-size:16px; line-height:23px; }
 }
 

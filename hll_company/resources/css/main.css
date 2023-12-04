@@ -73,6 +73,9 @@
 .main_container .section8 .img03{top: 0;right: 0;width: 45.5%;} 
 .main_container .section9 {background: #000;} 
 .main_container .section9 .cont_inner {height: auto;padding: 0 40px;} 
+.main_container .section9 .btn_more {margin-top: 40px; border-color: #fff;} 
+.main_container .section9 .more_txt {color: #fff;} 
+.main_container .section9 .btn_more .more_txt:after {background-image: url(../images/main/ico-more-w.png);}
 .main_container .media_txt{margin-top: 16px;color: #111;font-weight: 500;font-size: 18px;} 
 .main_container .section_inner .main_more_wrap{margin-top: 32px;} 
 

@@ -471,6 +471,7 @@
 
             // 메인 풀페이지
             var isFullpageInitialized = false;
+            var fullpageApi;
 
             function initializeFullpage() {
                 
@@ -495,41 +496,28 @@
                             setTimeout(()=>{
                                 $(".intro_first").addClass("active");
                                 introVod.play();
-                            }, 1000)                            
-                            console.log('wheelCount ' + wheelCount);
+                            }, 1000);
+                            wheelCount=0;
                         } else {
                             $('.header').addClass('scrolled');
-                            // gsap 애니메이션 인스턴스를 생성합니다.
-                            // const defaultAni = gsap.timeline({ paused: true });
-
-                            // let imgArr = $(".section" + index + " .first_load");
-                            // // defaultAni.to(imgArr, { autoAlpha: 1, duration: 0.5 });
-
-                            // // 모든 이미지 애니메이션이 추가된 후 마지막으로 '.media_desc' 애니메이션을 추가합니다.
-                            // defaultAni.to(".section" + index + " .second_load", { autoAlpha: 1, duration: 0.5 });
-
-                            // 애니메이션을 실행합니다.
-                            // defaultAni.play();
                         }
                     },
 
                     // ** 페이지를 떠날때
                     onLeave : function(origin, destination, direction, index){
                         console.log('destination',destination, direction);
-                        setTimeout(()=>{
-                            wheelCount++;
-                        }, 750)
-                        console.log('wheelCount ' + wheelCount, origin);
-                        if(origin == 1 && wheelCount < 2){
-                            $(".intro_first").addClass("hide");
-                            $(".intro_second").addClass("active");
+
+                        if(origin == 1 && wheelCount < 1){
+                            setTimeout(()=>{
+                                $(".intro_first").addClass("hide");
+                                $(".intro_second").addClass("active");
+                            }, 500)
                             return false;
                         }
-                        wheelCount = 0; // 카운트 초기화
 
                         setTimeout(()=>{
-                            $(".intro_first").removeClass('hide active');
-                            $(".intro_second").removeClass('active').addClass("hide");
+                            // $(".intro_first").removeClass('hide active');
+                            // $(".intro_second").removeClass('active').addClass("hide");
                         }, 750)
 
                         $(".section" + destination + " .first_load").css('opacity', 0);
@@ -556,9 +544,47 @@
                             }, 750)
                         }
                     },
+                    afterRender: function() {
+                        fullpageApi = this; // 이렇게 하면 fullpageApi 변수에 API 객체가 저장됩니다.
+                    }
                 });
 
                 isFullpageInitialized = true;
+
+                document.addEventListener('wheel', function(event) {
+                    var bodyClass = document.body.className;
+                    var time = 500;
+                    if (bodyClass.includes('fp-viewing-0')) {
+                        if (event.deltaY < 0) {
+                            if (wheelCount > 0) {
+                                wheelCount--;
+                            }
+                            else if (wheelCount == 0) {
+                                $('.intro_first').removeClass('hide');
+                                $('.intro_second').removeClass('active');
+                            }
+                        } else if (event.deltaY > 0) {
+                            if (wheelCount < 2) {
+                                if(wheelCount < 1) {
+                                    setTimeout(()=>{
+                                        wheelCount++;
+                                    }, time)
+                                } else {
+                                    wheelCount++;
+                                }
+                            }
+                        }
+
+                        // wheelCount가 2에 도달하면 다음 섹션으로 이동
+                        if (wheelCount === 2) {
+                            //fullpageApi.moveSectionDown(); // Fullpage.js API 사용
+                            wheelCount = 2; // wheelCount 초기화 (선택적)
+                        }
+                    }
+                    setTimeout(()=>{
+                        console.log('wheelCount:', wheelCount);
+                    }, 500)
+                });                
             }            
 
             // Fullpage를 재실행하는 함수

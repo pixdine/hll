@@ -62,7 +62,7 @@ body.is_mobile  img.pc {display:none}
 .cont_area.type2 {flex-wrap: wrap;justify-content: space-between;gap:0;}
 .cont_area+.cont_area{border-top:1px solid #DBDBDB;    margin-top: 120px;padding-top: 120px;}
 .cont_area.type2 .txt_wrap{margin-top:108px;width: 55%;}
-.sns_list{width:52%;}
+.sns_list{width:42%;}
 .txt_wrap{width:100%;}
 .txt_wrap strong{font-size: 24px;font-weight: 700;line-height: 35px;}
 .txt_wrap p{margin-top:16px;font-size: 18px;font-weight: 500;line-height: 26px;color:#666;}

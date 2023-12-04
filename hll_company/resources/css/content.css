@@ -800,7 +800,8 @@ body.is_mobile  img.pc {display:none}
     .section5 .btn_area{gap:16px;}
     .section5 .btn_area .btn{width:100%;}
 
-
+    .section_contact{max-height:390px;}
+    .section_contact .tit_wrap{margin-bottom:16px;}
     .section_contact .cont_inner{padding-top:48px;padding-bottom: 48px;}
     .section_contact .cont_wrap p{line-height:23px;font-size:16px;}
     .section_contact .btn_area{flex-direction:column;gap:16px;}   
@@ -823,7 +824,7 @@ body.is_mobile  img.pc {display:none}
 
     .partner_link{margin-top:40px}
     .partner_link ul{column-gap:7px;row-gap:8px;}
-    .partner_link ul li{width:31%;height:58px;}
+    .partner_link ul li{width:calc(33.333% - 5px);height:58px;}
     .partner_link ul li img{max-width:80%;max-height:80%;}
 
     .txt_wrap h4{font-size:20px;line-height:28px;}

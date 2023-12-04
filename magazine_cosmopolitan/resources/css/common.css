@@ -71,6 +71,8 @@ a:hover{text-decoration:none;}
 :root{
 	/* --vh:100vh; */
 	--point : #ef88ab;
+	--pc-module-gap : 180px;
+	--mo-module-gap : 80px;
 }
 
 /* 반응형 body scoll lock */
@@ -650,7 +652,7 @@ background:#fff;overflow:hidden;z-index:230}
 .is_pc .result_sorting .list_sort .select_styled{line-height:26px;}
 
 /* 3열 리스트 */
-.atc_list_wrap{margin-bottom:180px;}
+.atc_list_wrap{margin-bottom:var(--pc-module-gap);}
 .atc_list .tit_wrap .tit{font-size:28px;line-height:41px;}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
@@ -1123,7 +1125,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.result_sorting .total .count{font-size:18px;line-height:17px;}
 
 	/* 3열 리스트 */
-	.atc_list_wrap{margin-bottom:80px;}
+	.atc_list_wrap{margin-bottom:var(--mo-module-gap);}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
 	

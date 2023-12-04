@@ -109,7 +109,7 @@ body.is_mobile  img.pc {display:none}
 .row_last .img img{width: 57vw;max-width: none;}
 .row_last .txt .txt_cont{margin-top:40px;}
 .row_last .txt .txt_cont dl+dl{margin-top:32px;}
-.row_last .txt .txt_cont dl dt{font-size:22px;line-height:35px;}
+.row_last .txt .txt_cont dl dt{font-size:22px;line-height:35px;font-weight:700;}
 .row_last .txt .txt_cont dl dd{margin-top:8px;font-size:18px;line-height:26px;}
 
 .cosmopolitan .row_last .txt strong:before{background-color:#EF88AB; }

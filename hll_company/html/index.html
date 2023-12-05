@@ -548,17 +548,18 @@
 
                 document.addEventListener('wheel', function(event) {
                     var bodyClass = document.body.className;
-                    var time = 500;
+                    var time = 750;
                     if (bodyClass.includes('fp-viewing-0')) {
                         if (event.deltaY < 0) {
                             if (wheelCount > 0) {
                                 setTimeout(()=>{
                                     wheelCount--;
                                 }, time)
-                            }
-                            else if (wheelCount == 0) {
+                            } 
+                            else if (wheelCount <= 0) {
                                 $('.intro_first').removeClass('hide');
                                 $('.intro_second').removeClass('active');
+                                wheelCount = 0;
                             }
                         } else if (event.deltaY > 0) {
                             if (wheelCount < 2) {
@@ -573,8 +574,7 @@
                         }
 
                         // wheelCount가 2에 도달하면 다음 섹션으로 이동
-                        if (wheelCount === 2) {
-                            //fullpageApi.moveSectionDown(); // Fullpage.js API 사용
+                        if (wheelCount >= 2) {
                             wheelCount = 2; // wheelCount 초기화 (선택적)
                         }
                     }

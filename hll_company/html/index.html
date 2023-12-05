@@ -338,9 +338,9 @@
                                 <div class="row_last">
                                     <div class="image"><a href="#"><img src="../resources/images/main/img-career.jpg"></a></div>
                                     <p class="ms2_txt">
-                                        즐기는 HLLer! <br class="mo-br">유연하고 과감한 시도를 합니다.<br>
-                                        대화하는 HLLer! <br class="mo-br">서로를 존중하며 자유로운 오피스 문화를 만듭니다.<br>
-                                        투명한 HLLer! <br class="mo-br">위,아래,옆 동료와 공유해가며 스마트하게 일합니다.<br><br>
+                                        즐기는 HLLer! 유연하고 과감한 시도를 합니다.<br>
+                                        대화하는 HLLer! 서로를 존중하며 자유로운 오피스 문화를 만듭니다.<br>
+                                        투명한 HLLer! 위,아래,옆 동료와 공유해가며 스마트하게 일합니다.<br><br>
                                         미디어 문화를 이끌어갈 재능 있는 HLLer을 기다립니다.
                                     </p>
                                     <div class="main_more_wrap">
@@ -515,11 +515,6 @@
                             return false;
                         }
 
-                        setTimeout(()=>{
-                            // $(".intro_first").removeClass('hide active');
-                            // $(".intro_second").removeClass('active').addClass("hide");
-                        }, 750)
-
                         $(".section" + destination + " .first_load").css('opacity', 0);
                         $(".section" + destination + " .second_load").css('opacity', 0);
 
@@ -557,7 +552,9 @@
                     if (bodyClass.includes('fp-viewing-0')) {
                         if (event.deltaY < 0) {
                             if (wheelCount > 0) {
-                                wheelCount--;
+                                setTimeout(()=>{
+                                    wheelCount--;
+                                }, time)
                             }
                             else if (wheelCount == 0) {
                                 $('.intro_first').removeClass('hide');

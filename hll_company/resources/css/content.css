@@ -531,6 +531,44 @@ body.is_mobile  img.pc {display:none}
 .about_organization02 dd ul:last-child li:last-child {padding-bottom:0}
 .about_organization02 dd li img {zoom:0.62}
 
+/* 약관 */
+
+.container.etc { padding-bottom:140px}
+.heading_wrap_etc { position:relative; margin:60px auto 0px; padding:0 40px; max-width:1280px; }
+.heading_wrap_etc .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;}
+.heading_wrap_etc .tit em {font-weight:400}
+.heading_wrap_etc .side{margin-left:auto;flex-shrink:0;}
+.heading_wrap_etc .heading_area{display:flex;position:relative; flex-direction:row;}
+.heading_wrap_etc .info_txt { font-size:18px; line-height:26px;  margin-top:16px}
+.heading_wrap_etc .heading_area.blind + .info_txt { margin-top:0 }
+.heading_wrap_etc .heading_area.blind h2 {overflow:hidden;position:absolute;left:-9999em;width:0;height:0;margin:0;padding:0;text-indent:-9999em;}
+.heading_wrap_etc .mb02 { margin-bottom:16px !important }
+
+.term_type01 {}
+.term_type01 dt { font-size:18px; font-weight:700; margin-bottom:40px; }
+.term_type01 dt.p_tit {font-size:16px; font-weight:500; margin-bottom:20px; color:#111}
+.term_type01 dd {color:#666; margin-bottom:40px; line-height:1.6; font-size:16px; font-weight:400;}
+.term_type01 .p_txt  {color:#666; margin-bottom:40px; line-height:1.6; font-size:16px; font-weight:400;}
+.term_type01 .p_tit {font-size:16px; font-weight:500; margin-bottom:20px; color:#111}
+.term_type01 dd li {margin-top:5px; text-indent:-11px; padding-left:17px}
+.term_type01 dd li.none {text-indent:0; padding-left:0}
+.term_type01 dd li li {text-indent:-18px; padding-left:10px}
+.term_type01 dd li li a { text-indent:0; padding-left:0}
+.term_type01 dd li:first-child {margin-top:0}
+.term_type01 dd ol ,.term_type01 dd ul  {margin-top:10px; margin-bottom:10px}
+.term_type01 dd  li ol, .term_type01 dd li ul { margin-left:15px;}
+.term_type01 dd.additional { margin-top:80px} 
+.term_type01 .term_tbl { border-top:2px solid #111; border-bottom:1px solid #DBDBDB; margin-top:10px}
+.term_type01 .term_tbl table { padding:0;border:0;border-spacing:0px;border-collapse:collapse; width:100%; table-layout:fixed;}
+.term_type01 .term_tbl table th {font-size:14px; font-weight:500; text-align:center; line-height:1.6; padding:20px 0; color:#111}
+.term_type01 .term_tbl table td {font-size:16px; font-weight:500; text-align:left; line-height:1.6; padding:24px 40px; border-top:1px solid #DBDBDB}
+.term_type01 .term_tbl ~ .p_tit { margin-top:40px}
+.term_type01 dd .term_st01 {margin-top:10px}
+.term_type01 dd .term_st01 dt {font-size:16px; font-weight:400; color:#666; margin-bottom:5px}
+.term_type01 dd .term_st01 dd {font-size:16px; font-weight:400; color:#666;margin:0 0 5px 20px}
+
+.etc .bc_space01 { margin-top:40px}
+
 /************************* Media Query *************************/
 @media (max-width:1280px){
     .list_ad.type3 ul li{column-gap:60px}
@@ -962,6 +1000,22 @@ body.is_mobile  img.pc {display:none}
     .about_organization02 dd li { padding:0 0 24px 28px}
     .about_organization02 dd ul:last-child li:last-child {padding-bottom:20px}
     .about_organization02 dd li img {zoom:0.5}
+
+     /* 약관  */
+    .heading_wrap_etc .tit{font-size:22px;font-weight:700;line-height:32px;}
+    .heading_wrap_etc .heading_area{display:flex;position:relative;}
+    
+    .term_type01 .term_tbl table th {font-size:14px;padding:20px 0px}
+    .term_type01 .term_tbl table td {font-size:14px; padding:24px 10px}
+    .term_type01 dd {margin-bottom:16px; line-height:1.6; font-size:14px;}
+    .term_type01 .p_txt {margin-bottom:32px; line-height:1.6; font-size:14px;}
+    .term_type01 dt.p_tit {font-size:18px; font-weight:700; margin-bottom:20px; color:#111}
+    .term_type01 dd .term_st01 dt {font-size:14px; text-indent:-18px; padding-left:18px}
+    .term_type01 dd .term_st01 dd {font-size:14px;}
+    .term_type01 dd li .term_st01 {font-size:14px; margin-left:-20px}
+    .term_type01 dd li .term_st01 dd { margin-left:40px}
+
+    .etc .bc_space01 { margin-top:32px}
 
 }
 

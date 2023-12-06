@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .container{padding-bottom:180px;}
-.container.sub_container{padding-bottom:0}
+.container.sub_container{padding-bottom:0;}
 
 
 .container .heading_wrap{position:relative;height: 360px;background-repeat: no-repeat;background-position: 50% 0%;}

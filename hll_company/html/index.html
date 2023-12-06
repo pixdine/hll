@@ -530,7 +530,6 @@
 
                         const sectionLength = document.querySelectorAll('.section').length;
                         if (destination == sectionLength - 1 && direction == 'up') {
-                            console.log('wheelCount ' + wheelCount);
                             // 마지막 섹션에서 페이지를 떠날 때 실행할 코드를 여기에 추가합니다.
                             console.log('Leaving the last section');
                             setTimeout(()=>{
@@ -578,9 +577,6 @@
                             wheelCount = 2; // wheelCount 초기화 (선택적)
                         }
                     }
-                    setTimeout(()=>{
-                        console.log('wheelCount:', wheelCount);
-                    }, 500)
                 });                
             }            
 

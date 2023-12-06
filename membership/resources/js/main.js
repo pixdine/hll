@@ -428,6 +428,10 @@ $.fn.floatingMenu = function () {
             fmSection.stop().slideUp(200);
         }
     });
+
+    setTimeout(()=>{
+        fmBody.addClass('active');
+    }, 2500)
 };
   
 // 헤더 배경색을 위한 섹션별 정의

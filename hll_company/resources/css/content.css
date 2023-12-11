@@ -213,13 +213,25 @@ body.is_mobile  img.pc {display:none}
 .input_type02 li .radio_list li {padding:0; width:auto; border-bottom:0;margin-bottom:14px;}
 .input_type02 li .radio_list li:last-child {margin-right:0}
 .input_type02 li dl { display:flex; align-items: flex-start;}
-.input_type02 li dl dt { width:17%; color:#333; vertical-align:middle; flex-shrink:0;  padding-top:14px; min-width:204px;}
+.input_type02 li dl dt { width:17%; color:#333; vertical-align:middle; flex-shrink:0;  padding-top:14px; min-width:204px;position: relative;}
 .input_type02 li dl dt.non_inp { padding-top:0}
+.input_type02 li dl dt.line2{padding-top:0;}
+.input_type02 li dl dt.line2 .ess{position:absolute;top:4px;left:calc(50% + 10px)}
 .input_type02 li dl dd { flex-grow:1;position:relative;}
 
 .agree_area{margin-top:40px;}
 .agree_area .chk_agree{font-size:16px;font-weight:500;color:#111}
 .agree_area .chk_agree a{font-weight:700;color:var(--point);}
+
+.agree_terms{height:264px;padding: 32px 8px 32px 32px;border:1px solid #DBDBDB;}
+.agree_terms .terms_wrap{height: 100%;padding-right: 20px;font-size: 14px;font-weight: 400;}
+.agree_terms .terms_wrap dl{display: block;}
+.agree_terms .terms_wrap dl+p{padding-top:14px;}
+
+.terms_wrap.scroll{overflow-y:auto;}
+.terms_wrap.scroll::-webkit-scrollbar{width:6px;height:6px;}
+.terms_wrap.scroll::-webkit-scrollbar-thumb{width:6px;height:6px;background-color:#211955;}
+.terms_wrap.scroll::-webkit-scrollbar-track{background-color:#DBDBDB;}
 
 /*career - recruitment */
 .top_sort_wrap + .body_cont01{margin-top:24px;}
@@ -701,6 +713,7 @@ body.is_mobile  img.pc {display:none}
     .input_type02.line > li{padding: 24px 0;margin-top: 0;}
     .input_type02.line > li:first-child{padding-right:0;}
     .input_type02.line > li:nth-child(2){margin-top: 0;}
+    .input_type02.line > li:last-child{border-bottom:0;padding-bottom:0;}
     .input_type02 li dl{flex-direction: column;align-items:flex-start;}
     .input_type02 li dl dt{width: 100%;margin-bottom: 8px;padding-top: 0;}
     .input_type02 li dl dt.non_inp{margin-bottom:19px;}
@@ -711,7 +724,7 @@ body.is_mobile  img.pc {display:none}
     .inquiry_in .flex{gap:8px;}
     .inquiry_in .btn{min-width:99px;padding: 0 16px;}
 
-    .agree_area{margin-top:32px;}
+    .agree_area{margin-top:16px;}
     .btn_area{margin-top:40px;}
     .btn_area button{width:100%;}
     
@@ -1016,6 +1029,13 @@ body.is_mobile  img.pc {display:none}
     .term_type01 dd li .term_st01 dd { margin-left:40px}
 
     .etc .bc_space01 { margin-top:32px}
+
+    .input_type02 li dl dt.line2 br{display:none;}
+    .input_type02 li dl dt.line2 .ess{position: static;}
+    .agree_terms{height:240px;padding:20px 8px 20px 20px}
+
+    /*popup*/
+    .popup_full .popup_bottom{display:block; padding: 16px 20px 32px;}
 
 }
 

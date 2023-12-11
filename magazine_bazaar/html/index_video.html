@@ -54,7 +54,7 @@
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
@@ -169,7 +169,7 @@
 							<div class="allmenu_inner">
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
 									<a href="#">SIGNUP</a>
 								</div>
 								<!-- //로그인/회원가입 -->
@@ -293,7 +293,7 @@
 					</div>
 					<!-- //메인 영상형 배너 모듈 -->
 
-					<!-- 패션 (카테고리별 기사 모듈 타입2) -->
+					<!-- A모듈 -->
 					<!-- D: pc와 mo 분기처리 필요 -->
 					<div class="cate_atc_wrap">
 						<div class="cont_inner">
@@ -515,9 +515,9 @@
 							<!-- //MO버전 -->
 						</div>
 					</div>
-					<!-- //패션 (카테고리별 기사 모듈 타입2) -->
+					<!-- //A모듈 -->
 
-					<!-- 바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- B모듈 -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
@@ -626,9 +626,9 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- //B모듈 -->
 
-					<!-- 금주의 인기 기사 (조회순 기사 모듈) -->
+					<!-- G모듈 -->
 					<div class="top3_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
@@ -692,9 +692,9 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //금주의 인기 기사 (조회순 기사 모듈) -->
+					<!-- //G모듈 -->
 
-					<!-- 뷰티 (카테고리별 기사 모듈 타입2) -->
+					<!-- A모듈 -->
 					<!-- D: pc와 mo 분기처리 필요 -->
 					<div class="cate_atc_wrap">
 						<div class="cont_inner">
@@ -916,9 +916,9 @@
 							<!-- //MO버전 -->
 						</div>
 					</div>
-					<!-- //뷰티 (카테고리별 기사 모듈 타입2) -->
+					<!-- //A모듈 -->
 
-					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
+					<!-- B모듈 -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
@@ -1027,9 +1027,9 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- //B모듈 -->
 
-					<!-- 아트 (카테고리별 기사 모듈 타입1) -->
+					<!-- F모듈 -->
 					<!-- D: PC와 MO 분기처리 필요 -->
 					<div class="cate_atc_wrap">
 						<div class="cont_inner">
@@ -1169,9 +1169,9 @@
 							<!-- //MO버전 -->
 						</div>
 					</div>
-					<!-- //아트 (카테고리별 기사 모듈 타입1) -->
+					<!-- //F모듈 -->
 
-					<!-- 최신 소식 놓치지 마세요 (최신순 기사 모듈) -->
+					<!-- C모듈 -->
 					<div class="issue_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
@@ -1242,9 +1242,9 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //최신 소식 놓치지 마세요 (최신순 기사 모듈) -->
+					<!-- //C모듈 -->
 
-					<!-- 지속가능성 (카테고리별 기사 모듈 타입2) -->
+					<!-- A모듈 -->
 					<!-- D: pc와 mo 분기처리 필요 -->
 					<div class="cate_atc_wrap">
 						<div class="cont_inner">
@@ -1466,9 +1466,9 @@
 							<!-- //MO버전 -->
 						</div>
 					</div>
-					<!-- //지속가능성 (카테고리별 기사 모듈 타입2) -->
+					<!-- //A모듈 -->
 
-					<!-- 가장 좋아하는 기사 (믹스 모듈) -->
+					<!-- M모듈 -->
 					<div class="mix_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
@@ -1567,7 +1567,7 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //가장 좋아하는 기사 (믹스 모듈) -->
+					<!-- //M모듈 -->
 
 					<!-- 팔로우 배너 -->
 					<div class="follow_wrap">
@@ -1717,6 +1717,24 @@
 		</div>
 	</div>
 	<!-- //팝업 : 팔로우하기 -->
+
+	<!-- 팝업 : 로그인팝업 -->
+	<div class="popup_full common_login" data-popup="popup_login" style="">
+		<div class="popup_inner">
+			<div class="popup_head">
+				<h2 class="tit">로그인</h2>
+				<div class="popup_close">
+					<button type="button" class="btn_close" data-popup-close="popup_login"><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="popup_cont">
+				<!-- iframe 영역-->
+				<iframe src="../../membership/html/member/login_common.html" title="로그인" height="100%" width="100%"
+					scrolling="no"></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 로그인팝업 -->
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>

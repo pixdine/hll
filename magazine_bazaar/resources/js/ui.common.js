@@ -31,6 +31,8 @@ $(document).ready(function () {
     tagAtcList();
     evenAtcList();
     shoppingList();
+    rectAtcList();//추가모듈3
+    zigzagAtcList();//추가모듈4
 
     // 지도 상세 설명 더보기 토글
     $(".comment_box").commentToggle();
@@ -145,17 +147,14 @@ $(document).ready(function () {
     });
 });
 
-    //iOS vh 대응
-    function setCSS() {
-        var setVh = () => {
-            document.documentElement.style.setProperty(
-            "--vh",
-            `${window.innerHeight}px`
-            );
-        };
-        window.addEventListener("resize", setVh);
-        setVh();
-    }
+//iOS vh 대응
+function setCSS() {
+    var setVh = () => {
+        document.documentElement.style.setProperty("--vh", `${window.innerHeight}px`);
+    };
+    window.addEventListener("resize", setVh);
+    setVh();
+}
 
 //header sticky
 function headerSticky() {
@@ -170,9 +169,9 @@ function headerSticky() {
         new IntersectionObserver(
         ([e]) => {
             if (e.intersectionRatio < 0.1 && !$("body").hasClass("is_mobile")) {
-            bottomLogo.stop().fadeIn(200);
+                bottomLogo.stop().fadeIn(200);
             } else {
-            bottomLogo.stop().fadeOut(200);
+                bottomLogo.stop().fadeOut(200);
             }
         },
         { threshold: [0.1, 1] }
@@ -276,7 +275,7 @@ function allmenuOpen() {
     function close() {
         $(".allmenu_wrap").stop().fadeOut(100);
         if (popup.stack.length === 0 && !$(".search_layer").hasClass("open")) {
-         enableScroll();
+            enableScroll();
         }
     }
 
@@ -304,10 +303,7 @@ function allmenuOpen() {
 }
 
 function initOnDevice() {
-    $(".has_menu").toggleClass(
-        "open",
-        !document.body.classList.contains("is_mobile")
-    );
+    $(".has_menu").toggleClass("open", !document.body.classList.contains("is_mobile"));
 }
 
 function inputBind() {
@@ -331,11 +327,9 @@ function fullImage(el) {
     var oriHeight = $(el).find(".imgbox img")[0].naturalHeight;
     var ratio = (oriHeight / oriWidth) * 100;
 
-    $(el)
-        .find(".imgbox")
-        .css({
+    $(el).find(".imgbox").css({
         paddingTop: ratio + "%",
-        });
+    });
 }
 
 //메인 슬라이드 배너
@@ -349,49 +343,46 @@ function kv_swiper() {
 
     $(".kv_swiper").each(function (i) {
         if ($(this).find(".swiper-slide").length == 1) {
-        _loop = false;
+            _loop = false;
         } else {
-        _loop = true;
+            _loop = true;
         }
 
         $(this).attr("data-index", i);
         var slideitem = $(".kv_swiper .swiper-slide");
 
         kv_Swipers[i] = new Swiper('.kv_swiper[data-index="' + i + '"]', {
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true,
-        },
-        speed: 500,
-        loop: _loop,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.kv_swiper[data-index="' + i + '"] .swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            prevEl: '.kv_swiper[data-index="' + i + '"] .btn_prev',
-            nextEl: '.kv_swiper[data-index="' + i + '"] .btn_next',
-        },
-        watchSlidesProgress: true,
-        a11y: {
-            prevSlideMessage: "이전 슬라이드",
-            nextSlideMessage: "다음 슬라이드",
-        },
-        observer: true,
-        observeParents: true,
-        watchOverflow: true,
-        on: {
-            slideChange: function () {
-            $(".is_pc .kv_swiper .swiper-slide")
-                .find(".imgbox img")
-                .css("transform", "scale(1.0)")
-                .removeAttr("style");
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true,
             },
-        },
+            speed: 500,
+            loop: _loop,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.kv_swiper[data-index="' + i + '"] .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                prevEl: '.kv_swiper[data-index="' + i + '"] .btn_prev',
+                nextEl: '.kv_swiper[data-index="' + i + '"] .btn_next',
+            },
+            watchSlidesProgress: true,
+            a11y: {
+                prevSlideMessage: "이전 슬라이드",
+                nextSlideMessage: "다음 슬라이드",
+            },
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            on: {
+                slideChange: function () {
+                    $(".is_pc .kv_swiper .swiper-slide").find(".imgbox img").css("transform", "scale(1.0)").removeAttr("style");
+                },
+            },
         });
     });
 }
@@ -876,7 +867,7 @@ const popup = {
     },
 };
 
-//세트 모듈 (추천 인기 기사 모듈
+//세트 모듈 (추천 인기 기사 모듈)
 function setAtcList() {
     var setAtcList = $(".set_atc_list"),
     mySwiper = undefined;
@@ -919,6 +910,99 @@ function setAtcList() {
         initSwiper();
     });
     initSwiper();
+}
+
+//추가모듈3
+function rectAtcList() {
+    var rectAtcList = $(".rect_atc_list"),
+    mySwiper = undefined;
+    if (rectAtcList.length <= 0) return;
+
+    function initSwiper() {
+        ww = window.innerWidth;
+
+        //768px 부터 swiper 실행
+        if (ww <= 768 && mySwiper == undefined) {
+            rectAtcList.each(function () {
+                //각각을 스와이프 적용
+                mySwiper = new Swiper(this, {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    speed: 400,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    observer: true,
+                    observeParents: true,
+                    watchOverflow: true,
+                });
+            });
+        } else if (ww > 768 && mySwiper != undefined) {
+            rectAtcList.each(function () {
+                this.swiper.destroy(); //각각을 파괴함.
+            });
+            mySwiper = undefined;
+        }
+    }
+
+    $(window).on("resize", function () {
+        initSwiper();
+    });
+    initSwiper();
+}
+
+//추가모듈4
+function zigzagAtcList() {
+    var zigzagAtcList = $(".zigzag_atc_list");
+    var ww = window.innerWidth;
+    var mySwiper = undefined;
+    if (zigzagAtcList.length <= 0) return;
+
+    function initSwiper() {
+        var mySwiperArr = [];
+        var slideBody = [];
+        //768px 보다 적을 때 swiper 실행
+        if (ww <= 768 && mySwiper == undefined) {
+            zigzagAtcList.each(function (i) {
+                //각각을 스와이프 적용
+                slideBody[i] = $(this);
+                var slideItem = slideBody[i].find(".swiper-slide");
+                if (slideItem.length > 1) {
+                    mySwiper = new Swiper(this, {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        speed: 500,
+                            pagination: {
+                            el: slideBody[i].find(".swiper-pagination"),
+                        },
+                    });
+                }
+            });
+        } else if (ww > 768 && mySwiper != undefined) {
+            zigzagAtcList.each(function () {
+            this.swiper.destroy(); //각각을 파괴함.
+        });
+            mySwiper = undefined;
+        }
+    }
+
+    initSwiper();
+
+    $(window).on("resize", function () {
+        ww = window.innerWidth;
+        initSwiper();
+    });
 }
 
 //상세페이지 프로그래스바
@@ -1081,7 +1165,7 @@ $(window).on("load resize", function () {
 
     // 상세페이지 댓글 접기
     $(".comment_box").commentToggle();
-});
+}).resize();
 
 // 공통탭 컨텐츠
 $.fn.commonTab = function () {

@@ -563,9 +563,16 @@ background:#fff;overflow:hidden;z-index:230}
 .heading_wrap.tal{margin:80px auto 60px;}
 .heading_wrap .tit .t1{display:block;font-weight:400;}
 .heading_wrap .tit .t2{display:block;font-weight:700;}
-.heading_wrap.visual{max-width:100%;height:360px;margin:0 auto 100px;background-position:center 0;background-repeat:no-repeat;background-size:cover;}
-.heading_wrap.visual:before{content:'';display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(17, 17, 17, 0.2);}
-.heading_wrap.visual .tit{color:#fff;}
+
+/* 서브비주얼 */
+.subvisual{position:relative;width:100%;height:360px;margin-bottom:100px;}
+.subvisual .imgbox{position:absolute;top:0;width:100%;height:100%;}
+.subvisual .imgbox:before{content:'';display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(17, 17, 17, 0.2);}
+.subvisual .imgbox img{width:100%;height:100%;object-fit:cover;}
+.subvisual .imgbox .pc{display:block;}
+.subvisual .imgbox .mo{display:none;}
+.subvisual .heading_area{display:flex;justify-content:center;flex-direction:column;align-items:center;position:absolute;left:50%;top:0;transform:translateX(-50%);max-width:1280px;width:100%;height:100%;margin:0 auto;padding:0 40px;}
+.subvisual .tit{font-family:TTFirs-ExtraBold;font-size:80px;font-weight:500;line-height:106px;color:#fff;}
 
 /* title */
 .tit_wrap{margin-bottom:40px;}
@@ -656,9 +663,10 @@ background:#fff;overflow:hidden;z-index:230}
 .result_sorting .list_sort{margin-left:auto;}
 .is_pc .result_sorting .list_sort .select_styled{line-height:26px;}
 
-/* 3열 리스트 */
+/* 공통 : D모듈 & 3열 리스트 */
 .atc_list_wrap{margin-bottom:180px;}
-.atc_list .tit_wrap .tit{font-size:28px;line-height:41px;}
+.atc_list_wrap .tit_wrap .tit{padding-left:40px;font-family:TTFirs-ExtraBold, 'Noto Sans KR';font-size:44px;line-height:59px;}
+.atc_list_wrap .tit_wrap .tit:before{content:'';display:block;position:absolute;left:0;bottom:10px;width:32px;height:8px;background-color:var(--point);}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
 
@@ -923,8 +931,12 @@ background:#fff;overflow:hidden;z-index:230}
 	.heading_wrap.eng{margin:40px auto 24px;}
 	.heading_wrap.eng .tit{font-size:44px;line-height:59px;}
 	.heading_wrap.tal{margin:40px auto 24px;}
-	.heading_wrap.visual{height:180px;margin:0 auto 60px;}
-	.heading_wrap.visual .tit{color:#fff;}
+
+	.subvisual{height:180px;margin-bottom:60px;padding-top:48%;}
+	.subvisual .imgbox .pc{display:none;}
+	.subvisual .imgbox .mo{display:block;}
+	.subvisual .heading_area{padding:0 20px;}
+	.subvisual .tit{font-size:44px;line-height:59px;}
 
 	/* header */
 	.header .btn_menu{margin-left:-6px;}
@@ -1135,8 +1147,10 @@ background:#fff;overflow:hidden;z-index:230}
 	.result_sorting .total{font-size:16px;line-height:23px;}
 	.result_sorting .total .count{font-size:18px;line-height:17px;}
 
-	/* 3열 리스트 */
+	/* 공통 : D모듈 & 3열 리스트 */
 	.atc_list_wrap{margin-bottom:80px;}
+	.atc_list_wrap .tit_wrap .tit{padding-left:24px;font-size:24px;line-height:32px;}
+	.atc_list_wrap .tit_wrap .tit:before{bottom:8px;width:20px;height:4px;}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
 	

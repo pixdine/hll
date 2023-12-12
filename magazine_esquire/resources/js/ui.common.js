@@ -31,8 +31,8 @@ $(document).ready(function () {
     tagAtcList();
     evenAtcList();
     shoppingList();
-    rectAtcList();//추가모듈3
-    zigzagAtcList();//추가모듈4
+    rectAtcList();//I모듈 추가
+    zigzagAtcList();//K모듈 추가
 
     // 지도 상세 설명 더보기 토글
     $(".comment_box").commentToggle();
@@ -387,7 +387,7 @@ function kv_swiper() {
     });
 }
 
-// 카테고리별 썸네일 슬라이드
+// A모듈, F모듈 (카테고리별 썸네일 슬라이드)
 function cate_swiper() {
     $('[data-slide="sm_thumb_slide"]').each(function (i) {
         if ($('[data-slide="sm_thumb_slide"]').length <= 0) return;
@@ -419,7 +419,7 @@ function cate_swiper() {
     });
 }
 
-//기획 기사, 큐레이션 모듈
+//B모듈 (기획 기사, 큐레이션 모듈)
 function scrollAtcList() {
     var scrollAtcList = $(".scroll_atc_list");
     var ww = window.innerWidth;
@@ -465,7 +465,7 @@ function scrollAtcList() {
     });
 }
 
-//금주의 인기기사(TOP3)
+//G모듈 (금주의 인기기사(TOP3))
 function top3AtcList() {
     var top3AtcList = $(".top3_atc_list");
     var ww = window.innerWidth;
@@ -605,7 +605,7 @@ function colslideAtcList() {
     });
 }
 
-//4단 모듈 (최신 소식)
+//C모듈 (4단 모듈 (최신 소식))
 function issueAtcList() {
     var issueAtcList = $(".issue_atc_list"),
         mySwiper = undefined;
@@ -686,7 +686,7 @@ function tagAtcList() {
     initSwiper();
 }
 
-//서브메인 짝수 리스트 모듈
+//N모듈 (서브메인 짝수 리스트 모듈)
 function evenAtcList() {
     var evenAtcList = $(".even_atc_list"),
         mySwiper = undefined;
@@ -912,7 +912,7 @@ function setAtcList() {
     initSwiper();
 }
 
-//추가모듈3
+//I모듈
 function rectAtcList() {
     var rectAtcList = $(".rect_atc_list"),
     mySwiper = undefined;
@@ -957,7 +957,7 @@ function rectAtcList() {
     initSwiper();
 }
 
-//추가모듈4
+//K모듈
 function zigzagAtcList() {
     var zigzagAtcList = $(".zigzag_atc_list");
     var ww = window.innerWidth;

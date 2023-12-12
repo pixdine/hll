@@ -27,20 +27,24 @@ body.is_pc .about_cont_right .magazine_list .m_img .pc {display:block}
 body.is_pc .about_cont_right .magazine_list .m_img .mo {display:none}
 body.is_mobile .about_cont_right .magazine_list .m_img .mo {display:block}
 body.is_mobile .about_cont_right .magazine_list .m_img .pc {display:none}
-.about_cont_right .magazine_list .txt_box { position:relative; padding:40px 268px 40px 40px; box-sizing:border-box; border-width:0 1px 1px 1px; border-style: solid; border-color:#DBDBDB}
-.about_cont_right .magazine_list .txt_box dt {font-size:24px; line-height:1.2; font-weight:500}
+.about_cont_right .magazine_list .txt_box { position:relative; padding:40px 0px 40px 40px; box-sizing:border-box; border-width:0 1px 1px 1px; border-style: solid; border-color:#DBDBDB}
+.about_cont_right .magazine_list .txt_box dt {font-size:24px; line-height:1.2; font-weight:500; padding-right:180px}
 .about_cont_right .magazine_list.elle .txt_box dt {font-family: 'ElleGaborStd';}
 .about_cont_right .magazine_list.cosmo .txt_box dt {font-family: 'NewsGothicExtraCondensedBold';}
 .about_cont_right .magazine_list.bazaar .txt_box dt {font-family: 'Gotham';}
 .about_cont_right .magazine_list.esquire .txt_box dt {font-family: 'TTNorms-Medium';}
-.about_cont_right .magazine_list .txt_box dd {font-size:16px; font-weight:500; color:#666; line-height:1.5; margin-top:24px}
-.about_cont_right .magazine_list .btn_area { position:absolute; right:40px; top:0 }
+.about_cont_right .magazine_list .txt_box dd {font-size:16px; font-weight:500; color:#666; line-height:1.5; margin-top:24px; padding-right:268px}
+.about_cont_right .magazine_list dd.btn_area { position:absolute; right:40px; top:9px; padding-right:0 }
 .about_cont_right .magazine_list ~ .magazine_list { margin-top:80px }
 .about_cont ~ .about_cont {margin:180px auto 0}
 
 @media (max-width:1200px){
 .top_visual .txt_box .txt { font-size:44px;}
 .top_visual .txt_box .txts { margin-top:28px}
+}
+
+@media (max-width:1023px){
+	.about_cont_right .magazine_list .txt_box dd { padding-right:0 }
 }
 
 @media (max-width:768px){
@@ -59,9 +63,11 @@ body.is_mobile .about_cont_right .magazine_list .m_img .pc {display:none}
 .about_cont_left dd {font-size:14px;margin-top:12px}
 .about_cont_right {width:100%}
 .about_cont_right .magazine_list .txt_box { position:relative; padding:33px 30px 14px; text-align:center; box-sizing:border-box}
-.about_cont_right .magazine_list .txt_box dt {font-size:18px; line-height:1.2;}
-.about_cont_right .magazine_list .txt_box dd {font-size:14px; margin-top:18px}
-.about_cont_right .magazine_list .btn_area { position:static; }
+.about_cont_right .magazine_list .txt_box dt {font-size:18px; line-height:1.5; padding-right:0}
+.about_cont_right .magazine_list .txt_box dt span { display:block }
+.about_cont_right .magazine_list .txt_box dd {font-size:14px; margin-top:12px; padding-right:0 }
+.about_cont_right .magazine_list .txt_box dd span { display:block }
+.about_cont_right .magazine_list dd.btn_area { position:static; padding-right:0; top:auto }
 .about_cont_right .magazine_list .btn_area button { margin:0 auto; width:auto}
 .about_cont_right .magazine_list ~ .magazine_list { margin-top:24px }
 .about_cont ~ .about_cont {margin:80px auto 0}

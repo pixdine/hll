@@ -192,6 +192,11 @@ function headerSticky() {
         if (!$("body").hasClass("lockbody")) {
             if (atTop) lastScroll = 0;
             if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
+            /* 2023-12-13 : 개발에서 수정한 부분 반영 */
+            if (atTop) {
+                header.removeAttr("style");
+            }
+            /* //2023-12-13 : 개발에서 수정한 부분 반영 */
 
             if (Math.abs(lastScroll - scrollTop) > delta) {
                 if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {

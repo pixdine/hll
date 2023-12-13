@@ -192,6 +192,11 @@ function headerSticky() {
         if (!$("body").hasClass("lockbody")) {
             if (atTop) lastScroll = 0;
             if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
+            /* 2023-12-13 : 개발에서 수정한 부분 반영 */
+            if (atTop) {
+                header.removeAttr("style");
+            }
+            /* //2023-12-13 : 개발에서 수정한 부분 반영 */
 
             if (Math.abs(lastScroll - scrollTop) > delta) {
                 if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
@@ -504,18 +509,24 @@ function top3AtcList() {
     });
 }
 
-// 상세 중간에 들어가는 기사 등
+// 상세 중간에 들어가는 기사 등 - 2023-12-12 : 개발에서 수정한 부분 반영(isLoop)
 function articleSlidePc() {
     var swiper = $(".article_slide_pc .article_slide");
     if (swiper.length <= 0) return;
     function initSwiper() {
         swiper.each(function (i) {
             //각각을 스와이프 적용
+            var isLoop = true;
+            var liCount = $(this).find('li').length;
+            if (liCount <= 4) {
+                isLoop = false;
+            }
+
             var slideBody = $(this).parents(".article_slide_pc");
             mySwiper = new Swiper(this, {
                 slidesPerView: 4,
                 spaceBetween: 24,
-                loop: true,
+                loop: isLoop,
                 autoplay: false,
                 speed: 500,
                 pagination: {
@@ -532,7 +543,7 @@ function articleSlidePc() {
     initSwiper();
 }
 
-// 상세 중간에 들어가는 기사 등
+// 상세 중간에 들어가는 기사 등 - 2023-12-12 : 개발에서 수정한 부분 반영(isLoop)
 function articleSlideMo() {
     var swiper = $(".article_slide_mo .article_slide");
     if (swiper.length <= 0) return;
@@ -541,11 +552,17 @@ function articleSlideMo() {
         var slideBody = [];
         swiper.each(function (i) {
             //각각을 스와이프 적용
+            var isLoop = true;
+            var liCount = $(this).find('li').length;
+            if (liCount <= 2) {
+                isLoop = false;
+            }
+
             slideBody[i] = $(this).parents(".article_slide_mo");
             mySwiperArr[i] = new Swiper(this, {
                 slidesPerView: 1,
                 spaceBetween: 24,
-                loop: true,
+                loop: isLoop,
                 autoplay: false,
                 speed: 500,
                 pagination: {

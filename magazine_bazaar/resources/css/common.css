@@ -1264,7 +1264,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.ui-datepicker td span,
 	.ui-datepicker td a{width:auto;}
 	.allmenu_wrap .sns_list ul{column-gap:normal;}
-	.cover_atc_wrap .list_top .selectbox .select_options{max-width:90px;}
+	.cover_atc_wrap .list_top .list_sort:first-child .selectbox .select_options{right:auto;}
 	.pop_share .popup_cont{padding-left:20px;padding-right:20px;}
 	.pop_share .sns_list ul{column-gap:15px;}
 }

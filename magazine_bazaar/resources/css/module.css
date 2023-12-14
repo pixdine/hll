@@ -735,7 +735,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	/* 서브메인 > 기타모듈 (금주의 인기 기사) */
 	.article_slide_pc {height: 0; overflow: hidden; padding: 0; margin: 0;}
 	.article_slide_mo {height: auto; background: #F7F7F7; padding: 60px 0; margin-bottom:var(--module-gap);}
-	.article_slide_mo .date{margin-top: 12px; color: #666; font-weight: 500; font-size: 14px; line-height: 1; font-family:Gotham;}
+	.article_slide_mo .date{margin-top: 6px; color: #666; font-weight: 500; font-size: 14px; line-height: 1; font-family:Gotham;}
 	.article_slide_mo .article_slide{overflow:hidden;position:relative;margin-left:auto;margin-right:auto;padding:0;}
 	.article_slide_mo .article_slide li {display: flex;flex-wrap:wrap; justify-content: space-between;}
 	.article_slide_mo .article_slide li .atcbox{width: calc(50% - 6px); margin-bottom: 24px;}

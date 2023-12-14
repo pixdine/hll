@@ -14,14 +14,14 @@
     <meta name="keywords" content="허스트중앙, 통합멤버십, 엘르, 코스모폴리탄, 하퍼스바자, 에스콰이어, ELLE, COSMOPOLITAN, BAZAAR, ESQUIRE" />
     <meta name="format-detection" content="telephone=no">
     <!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/aos.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/member.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/main2.css" />
     <script src="../resources/js/jquery-3.6.0.min.js"></script>
     <script src="../resources/js/jquery-ui.min.js"></script>
-    <script src="../resources/js/vendor/gsap.min.js"></script>
-    <script src="../resources/js/vendor/ScrollTrigger.js"></script>
+    <script src="../resources/js/aos.js"></script>
     <!-- //css, Jquery -->
 </head>
 
@@ -208,9 +208,7 @@
         <div id="container" class="container mm">
 
             <div id="content" class="content">
-
                 <div class="swiper-container vs">
-
                     <div class="swiper-wrapper">
 
                         <div class="section swiper-slide visual first">
@@ -218,10 +216,10 @@
                                 <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
                             </video>
                             <div class="txt-wrap">
-                                <p class="v-t1">허스트중앙 통합멤버십으로</p>
-                                <p class="v-t2">다채로운 매거진 콘텐츠와<br>취향 맞춤 서비스를 한번에!</p>
-                                <p class="v-t3">엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와 <br>에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지</p>
-                                <div class="link-btn-wrap v-btn">
+                                <p class="v-t1" data-aos="fade-up">허스트중앙 통합멤버십으로</p>
+                                <p class="v-t2" data-aos="fade-up" data-aos-delay="200">다채로운 매거진 콘텐츠와 <br>취향 맞춤 서비스를 한번에!</p>
+                                <p class="v-t3" data-aos="fade-up" data-aos-delay="400">엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와 <br class="pc">에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지</p>
+                                <div class="link-btn-wrap v-btn" data-aos="fade-up" data-aos-delay="600">
                                     <a href="#" class="link-btn btn-v">
                                         <span class="link-btn-txt">멤버쉽 가입하기</span>
                                     </a>
@@ -229,65 +227,84 @@
                             </div>
                         </div>
 
-                        <div class="section swiper-slide visual">
-                            <div class="txt-wrap fade-up">
-                                <p class="v-t1">가입 즉시 축하 포인트 지급</p>
-                                <p class="v-t2">가입 축하 포인트 받고<br>콘텐츠 읽고 포인트도 모아요!</p>
-                                <p class="v-t3">가입 후에는 매일 기사를 읽을 때마다 포인트 적립<br>재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!</p>
-                                <div class="link-btn-wrap v-btn">
+                        <div class="section swiper-slide visual join-point">
+                            <div class="txt-wrap">
+                                <p class="v-t1" data-aos="fade-up">가입 즉시 축하 포인트 지급</p>
+                                <p class="v-t2" data-aos="fade-up" data-aos-delay="200">가입 축하 포인트 받고 <br>콘텐츠 읽고 <br class="mo">포인트도 모아요!</p>
+                                <p class="v-t3" data-aos="fade-up" data-aos-delay="400">가입 후에는 매일 기사를 읽을 때마다 포인트 적립 <br>재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!</p>
+                                <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
                                     <a href="#" class="link-btn btn-v">
                                         <span class="link-btn-txt">매거진 보러가기</span>
                                     </a>
                                 </div>
                             </div>
-                            <div class="v-bg">
-                                <picture>
-                                    <source media="(max-width:768px)" srcset="../resources/images/main/membership02-bg-mo.png">
-                                    <img src="../resources/images/main/membership02-bg.png">
+                            <div class="auto-scrolling-images">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="../resources/images/main/magazine-cover1.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                                <picture class="pc">
+                                    <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-join.png">
+                                    <img src="../resources/images/main/obj-point-join.png">
+                                </picture>
+                                <picture class="mo">
+                                    <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-join-mo.png">
+                                    <img src="../resources/images/main/obj-point-join-mo.png">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="section swiper-slide visual">
-                            <div class="txt-wrap fade-up">
-                                <p class="v-t1">차곡차곡 쌓은 포인트는</p>
-                                <p class="v-t2">포인트 전환하고<br>모바일 상품권으로 바꿔보세요!</p>
-                                <p class="v-t3">마이페이지에서 모은 포인트를 확인하고<br>똑똑하게 사용해보세요</p>
-                                <div class="link-btn-wrap v-btn">
+                        <div class="section swiper-slide visual join-save">
+                            <div class="txt-wrap">
+                                <p class="v-t1" data-aos="fade-up">차곡차곡 쌓은 포인트는</p>
+                                <p class="v-t2" data-aos="fade-up" data-aos-delay="200">포인트 전환하고<br>모바일 상품권으로 바꿔보세요!</p>
+                                <p class="v-t3" data-aos="fade-up" data-aos-delay="400">마이페이지에서 모은 포인트를 확인하고<br>똑똑하게 사용해보세요</p>
+                                <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
                                     <a href="#" class="link-btn btn-v">
                                         <span class="link-btn-txt">포인트 샵 바로가기</span>
                                     </a>
                                 </div>
                             </div> 
-                            <div class="v-bg">
+                            <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
                                 <picture>
-                                    <source media="(max-width:768px)" srcset="../resources/images/main/membership03-bg-mo.png">
-                                    <img src="../resources/images/main/membership03-bg.png">
+                                    <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-save.png">
+                                    <img src="../resources/images/main/obj-point-save.png">
                                 </picture>
                             </div>
                         </div>
 
-                        <div class="section swiper-slide w-bo">
-                            <div class="txt-wrap fade-up">
-                                <p class="w-t1">지금 바로 만나보세요!</p>
-                                <p class="w-t2">허스트중앙의 다양한 미디어 서비스</p>
+                        <div class="section swiper-slide w-bo head-mode-dark">
+                            <div class="txt-wrap">
+                                <p class="w-t1" data-aos="fade-up">지금 바로 만나보세요!</p>
+                                <p class="w-t2" data-aos="fade-up" data-aos-delay="200">허스트중앙의 다양한 미디어 서비스</p>
                             </div> 
                         </div>
 
-                        <div class="section swiper-slide media m1">
+                        <div class="section swiper-slide media m1 head-mode-dark">
                             <div class="m-in">
-                                <div class="txt-wrap fade-up">
-                                    <h3 class="m-logo">
+                                <div class="txt-wrap">
+                                    <h3 class="m-logo" data-aos="fade-up">
                                         <img src="../resources/images/main/media-service_elle.svg" alt="ELLE">
                                     </h3>
-                                    <div class="m-t1">NO.1 FASHION &amp; LIFESTYLE MEDIA</div>
-                                    <div class="m-t2">트렌디한 라이프스타일을 추구하는 <br>2535 여성들을 위한 국내 최고의 패션 미디어</div>
-                                    <div class="link-btn-wrap v-btn">
+                                    <div class="m-t1" data-aos="fade-up" data-aos-delay="200">NO.1 FASHION &amp; LIFESTYLE MEDIA</div>
+                                    <div class="m-t2" data-aos="fade-up" data-aos-delay="400">트렌디한 라이프스타일을 추구하는 <br>2535 여성들을 위한 국내 최고의 패션 미디어</div>
+                                    <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
                                         <a href="#" class="link-btn btn-v gray">
                                             <span class="link-btn-txt">바로가기</span>
                                         </a>
                                     </div>
-                                </div>    
+                                </div>
+                                <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                                    <picture>
+                                        <source media="(max-width:768px)" srcset="../resources/images/main/m-bg1.png">
+                                        <img src="../resources/images/main/m-bg1.png">
+                                    </picture>
+                                </div>
                                 <div class="m-img">
                                     <div class="m-img-list">
                                         <div class="m-img-item"><img src="../resources/images/main/media-service_elle-02.jpg"></div>
@@ -300,18 +317,24 @@
 
                         <div class="section swiper-slide media m2">
                             <div class="m-in">
-                                <div class="txt-wrap fade-up">
-                                    <h3 class="m-logo">
+                                <div class="txt-wrap">
+                                    <h3 class="m-logo" data-aos="fade-up">
                                         <img src="../resources/images/main/media-service_cosmopolitan.svg" alt="cosmopolitan">
                                     </h3>
-                                    <div class="m-t1">FUN, FEARLESS, FEMALE</div>
-                                    <div class="m-t2">국내 최대 판매 부수와 높은 정기구독률을 자랑하는<br>글로벌 라이프스타일 미디어</div>
-                                    <div class="link-btn-wrap v-btn">
+                                    <div class="m-t1" data-aos="fade-up" data-aos-delay="200">FUN, FEARLESS, FEMALE</div>
+                                    <div class="m-t2" data-aos="fade-up" data-aos-delay="400">국내 최대 판매 부수와 높은 정기구독률을 자랑하는<br>글로벌 라이프스타일 미디어</div>
+                                    <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
                                         <a href="#" class="link-btn btn-v">
                                             <span class="link-btn-txt">바로가기</span>
                                         </a>
                                     </div>
-                                </div>    
+                                </div>
+                                <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                                    <picture>
+                                        <source media="(max-width:768px)" srcset="../resources/images/main/m-bg2.png">
+                                        <img src="../resources/images/main/m-bg2.png">
+                                    </picture>
+                                </div>
                                 <div class="m-img">
                                     <div class="m-img-list">
                                         <div class="m-img-item"><img src="../resources/images/main/media-service_cosmopolitan-02.jpg"></div>
@@ -324,18 +347,24 @@
 
                         <div class="section swiper-slide media m3">
                             <div class="m-in">
-                                <div class="txt-wrap fade-up">
-                                    <h3 class="m-logo">
+                                <div class="txt-wrap">
+                                    <h3 class="m-logo" data-aos="fade-up">
                                         <img src="../resources/images/main/media-service_bazaar.svg" alt="bazaar">
                                     </h3>
-                                    <div class="m-t1">FIRST IN FASHION</div>
-                                    <div class="m-t2">현대 여성의 문화와 라이프스타일에<br>통찰력과 영감을 제공하는 전문 매거진</div>
-                                    <div class="link-btn-wrap v-btn">
+                                    <div class="m-t1" data-aos="fade-up" data-aos-delay="200">FIRST IN FASHION</div>
+                                    <div class="m-t2" data-aos="fade-up" data-aos-delay="400">현대 여성의 문화와 라이프스타일에<br>통찰력과 영감을 제공하는 전문 매거진</div>
+                                    <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
                                         <a href="#" class="link-btn btn-v">
                                             <span class="link-btn-txt">바로가기</span>
                                         </a>
                                     </div>
-                                </div>    
+                                </div>
+                                <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                                    <picture>
+                                        <source media="(max-width:768px)" srcset="../resources/images/main/m-bg3.png">
+                                        <img src="../resources/images/main/m-bg3.png">
+                                    </picture>
+                                </div>
                                 <div class="m-img">
                                     <div class="m-img-list">
                                         <div class="m-img-item"><img src="../resources/images/main/media-service_bazaar-02.jpg"></div>
@@ -349,17 +378,23 @@
                         <div class="section swiper-slide media m4">
                             <div class="m-in">
                                 <div class="txt-wrap fade-up">
-                                    <h3 class="m-logo">
+                                    <h3 class="m-logo" data-aos="fade-up">
                                         <img src="../resources/images/main/media-service_esquire.svg" alt="esquire">
                                     </h3>
-                                    <div class="m-t1">MAN AT HIS BEST</div>
-                                    <div class="m-t2">취향이 남다른 남자들을 위한<br>지적인 바이블</div>
-                                    <div class="link-btn-wrap v-btn">
+                                    <div class="m-t1" data-aos="fade-up" data-aos-delay="200">MAN AT HIS BEST</div>
+                                    <div class="m-t2" data-aos="fade-up" data-aos-delay="400">취향이 남다른 남자들을 위한<br>지적인 바이블</div>
+                                    <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
                                         <a href="#" class="link-btn btn-v">
                                             <span class="link-btn-txt">바로가기</span>
                                         </a>
                                     </div>
-                                </div>    
+                                </div>
+                                <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                                    <picture>
+                                        <source media="(max-width:768px)" srcset="../resources/images/main/m-bg4.png">
+                                        <img src="../resources/images/main/m-bg4.png">
+                                    </picture>
+                                </div>
                                 <div class="m-img">
                                     <div class="m-img-list">
                                         <div class="m-img-item"><img src="../resources/images/main/media-service_esquire-02.jpg"></div>
@@ -370,16 +405,16 @@
                             </div>                      
                         </div>
 
-                        <div class="section swiper-slide w-bo">
-                            <div class="txt-wrap fade-up">
-                                <p class="w-t1">다채롭게 경험해보세요</p>
-                                <p class="w-t2">개인 취향에 맞춘 테마별 서비스</p>
+                        <div class="section swiper-slide w-bo head-mode-dark">
+                            <div class="txt-wrap">
+                                <p class="w-t1" data-aos="fade-up">다채롭게 경험해보세요</p>
+                                <p class="w-t2" data-aos="fade-up" data-aos-delay="200">개인 취향에 맞춘 테마별 서비스</p>
                             </div> 
                         </div>
 
-                        <div class="section swiper-slide vertical elle">
-                            <div class="vt-in cont_inner fade-up">
-                                <div class="col-txt dark">
+                        <div class="section swiper-slide vertical elle head-mode-dark">
+                            <div class="vt-in cont_inner">
+                                <div class="col-txt dark" data-aos="fade-up">
                                     <div class="text-wrap">
                                         <span class="vt-t1">엘르보이스</span>
                                         <span class="vt-t2">여성의 삶,<br>레퍼런스가 필요할 때</span>
@@ -392,7 +427,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-img fade-up">
+                                <div class="col-img" data-aos="fade-up" data-aos-delay="200">
                                     <picture>
                                         <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_ellevoice-mo.png">
                                         <img src="../resources/images/main/theme-service_ellevoice.png">
@@ -402,8 +437,8 @@
                         </div>
 
                         <div class="section swiper-slide vertical close-up">
-                            <div class="vt-in cont_inner fade-up">
-                                <div class="col-txt light">
+                            <div class="vt-in cont_inner">
+                                <div class="col-txt light" data-aos="fade-up">
                                     <div class="text-wrap">
                                         <span class="vt-t1">클로즈업</span>
                                         <span class="vt-t2">내가 궁금해하는<br>요즘 직업</span>
@@ -416,7 +451,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-img fade-up">
+                                <div class="col-img" data-aos="fade-up" data-aos-delay="200">
                                     <picture>
                                         <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_closeup-mo.png">
                                         <img src="../resources/images/main/theme-service_closeup.png">
@@ -426,8 +461,8 @@
                         </div>
 
                         <div class="section swiper-slide vertical artwalk">
-                            <div class="vt-in cont_inner fade-up">
-                                <div class="col-txt light">
+                            <div class="vt-in cont_inner">
+                                <div class="col-txt light" data-aos="fade-up">
                                     <div class="text-wrap">
                                         <span class="vt-t1">예술산책</span>
                                         <span class="vt-t2">‘예술'을 ‘산책'하듯 가볍게 즐기는<br>아트 큐레이션 서비스</span>
@@ -440,7 +475,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-img fade-up">
+                                <div class="col-img" data-aos="fade-up" data-aos-delay="200">
                                     <picture>
                                         <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_artwalk-mo.png">
                                         <img src="../resources/images/main/theme-service_artwalk.png">
@@ -449,9 +484,9 @@
                             </div>
                         </div>
 
-                        <div class="section swiper-slide vertical eee">
-                            <div class="vt-in cont_inner fade-up">
-                                <div class="col-txt dark">
+                        <div class="section swiper-slide vertical eee head-mode-dark">
+                            <div class="vt-in cont_inner">
+                                <div class="col-txt dark" data-aos="fade-up">
                                     <div class="text-wrap">
                                         <span class="vt-t1">eee</span>
                                         <span class="vt-t2">에스콰이어 에디터가<br>기록하는 핫플 수첩</span>
@@ -464,7 +499,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-img fade-up">
+                                <div class="col-img" data-aos="fade-up" data-aos-delay="200">
                                     <picture>
                                         <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_eee-mo.png">
                                         <img src="../resources/images/main/theme-service_eee.png">
@@ -543,84 +578,109 @@
     <script src="../resources/js/ui.common.js"></script>
 
     <script>
-        // 플로팅메뉴 프로토타입
-        $.fn.floatingMenu = function () {
-            var fmBody = this;
-            var fmSection = fmBody.find(".fm-section");
-            var fmBtn = fmBody.find(".btn-f");
-            fmBtn.on("click", function () {
-                var chkCondition = $(this).hasClass("active");
-                if (!chkCondition) {
-                    $(this).addClass("active").attr("title", "플로팅메뉴 닫기").children().text("닫기");
-                    fmSection.stop().slideDown(200);
-                } else {
-                    $(this).removeClass("active").attr("title", "플로팅메뉴 열기").children().text("열기");
-                    fmSection.stop().slideUp(200);
+        $(() => {
+            // 플로팅메뉴 프로토타입
+            $.fn.floatingMenu = function () {
+                var fmBody = this;
+                var fmSection = fmBody.find(".fm-section");
+                var fmBtn = fmBody.find(".btn-f");
+                fmBtn.on("click", function () {
+                    var chkCondition = $(this).hasClass("active");
+                    if (!chkCondition) {
+                        $(this).addClass("active").attr("title", "플로팅메뉴 닫기").children().text("닫기");
+                        fmSection.stop().slideDown(200);
+                    } else {
+                        $(this).removeClass("active").attr("title", "플로팅메뉴 열기").children().text("열기");
+                        fmSection.stop().slideUp(200);
+                    }
+                });
+
+                // 오프닝 텍스트 모션 사라지고 보이게
+                setTimeout(()=>{
+                    fmBody.addClass('active');
+                }, 2500)
+            };        
+
+
+            $('.floating-menu').floatingMenu();
+
+            // 섹션 vertical 
+            var ms = new Swiper('.vs', {
+                direction: 'vertical',
+                slidesPerView: 1,
+                spaceBetween: 0,
+                mousewheel: true,
+                speed: 700,
+                // watchOverflow : true,
+                on: {
+                    init: function() {
+                        setTimeout(()=>{
+                            $('.visual.first').addClass('active');
+                            AOS.init({
+                                once: true,
+                            });
+                        }, 2000);
+                    },
+                    slideChange: function() {
+                        var currentIndex = this.activeIndex;
+                        var totalSlides = this.slides.length-1;
+                        var nextIndex = currentIndex+1;
+                        // console.log("전체 슬라이드:", totalSlides);
+                        // console.log("현재 슬라이드 인덱스:", currentIndex);
+                        // console.log("다음 슬라이드 인덱스:", nextIndex);
+                        
+
+                        $('.section').removeClass('active');
+                        $('.section').eq(0).find('[data-aos]').removeClass("aos-animate");
+                        $('.section').eq(currentIndex-1).find('[data-aos]').removeClass("aos-animate");
+                        
+                        // 마지막 슬라이드에서 aos reset 방지
+                        if(currentIndex !== totalSlides) {
+                            $('.section').eq(nextIndex).find('[data-aos]').removeClass("aos-animate");
+                        }
+
+                        setTimeout(()=>{
+                            if($('.section').eq(currentIndex).hasClass('head-mode-dark')) {
+                                $('.header').addClass('dark');
+                            } else {
+                                $('.header').removeClass('dark');
+                            }    
+                            $('.section').eq(currentIndex).addClass('active');
+                            $('.section').eq(currentIndex).find('[data-aos]').addClass("aos-animate");
+                            
+                        }, 300);
+
+                        ms.params.touchReleaseOnEdges = false;  
+                        ms.params.mousewheel.releaseOnEdges = false;
+                    },
+                    reachEnd: function() {
+                        setTimeout(function () {
+                            ms.params.touchReleaseOnEdges = true;
+                            ms.params.mousewheel.releaseOnEdges = true;
+                        }, 1000);
+                    },
+                    reachBeginning: function() {
+                        setTimeout(function () {
+                            ms.params.touchReleaseOnEdges = true;
+                            ms.params.mousewheel.releaseOnEdges = true;
+                        }, 500);
+                    }
                 }
             });
 
-            // 오프닝 텍스트 모션 사라지고 보이게
-            setTimeout(()=>{
-                fmBody.addClass('active');
-            }, 2500)
-        };        
+            // 스크롤 이벤트
+            $(window).on('scroll', function(){
+                var scrollTop = 0;
+                scrollTop = $(this).scrollTop();
 
-        const openingMotion = function(){
-            setTimeout(()=>{
-                $('.visual.first').addClass('active');
-            }, 2500);
-        }();
-
-        $('.floating-menu').floatingMenu();
-
-        // 섹션 vertical 
-        var ms = new Swiper('.vs', {
-            direction: 'vertical',
-            slidesPerView: 1,
-            spaceBetween: 0,
-            mousewheel: true,
-            speed: 700,
-            watchOverflow : true,
-            on: {
-                slideChange: function() {
-                    var currentIndex = this.activeIndex;
-                    console.log("현재 슬라이드 인덱스:", currentIndex);
-                    $('.section .fade-up').removeClass('active');
-                    setTimeout(()=>{
-                        $('.section').eq(currentIndex).find('.fade-up').addClass('active');
-
-                    }, 300)
-
-                    ms.params.touchReleaseOnEdges = false;  
-                    ms.params.mousewheel.releaseOnEdges = false;
-                },
-                reachEnd: function() {
-                    setTimeout(function () {
-                        ms.params.touchReleaseOnEdges = true;
-                        ms.params.mousewheel.releaseOnEdges = true;
-                    }, 500);
-                },
-                reachBeginning: function() {
-                    setTimeout(function () {
-                        ms.params.touchReleaseOnEdges = true;
-                        ms.params.mousewheel.releaseOnEdges = true;
-                    }, 500);
+                if(scrollTop > 0){
+                    // 나중에 마우스 휠 스크롤 이벤트를 비활성화
+                    ms.mousewheel.disable();
+                } else {
+                    // 필요에 따라 다시 활성화
+                    ms.mousewheel.enable();
                 }
-            }
-        });
-
-        // 스크롤 이벤트
-        $(window).on('scroll', function(){
-            var scrollTop = 0;
-            scrollTop = $(this).scrollTop();
-
-            if(scrollTop > 0){
-                // 나중에 마우스 휠 스크롤 이벤트를 비활성화
-                ms.mousewheel.disable();
-            } else {
-                // 필요에 따라 다시 활성화
-                ms.mousewheel.enable();
-            }
+            });
         });
     </script>
 </body>

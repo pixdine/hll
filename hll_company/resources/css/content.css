@@ -1028,6 +1028,7 @@ body.is_mobile  img.pc {display:none}
     .about_organization02 dd li img {zoom:0.5}
 
      /* 약관  */
+    .heading_wrap_etc {padding:0 20px; margin:40px auto 0px}
     .heading_wrap_etc .tit{font-size:22px;font-weight:700;line-height:32px;}
     .heading_wrap_etc .heading_area{display:flex;position:relative;}
     

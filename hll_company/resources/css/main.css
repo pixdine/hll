@@ -103,6 +103,10 @@
     .main_container .intro_first .if_slogan,
     .main_container .intro_first .hll_logo{display: none;}
     .main_container .intro_first .text_mo{display: block;}
+    .main_container .intro_first .text_mo .txt-group{text-align: right;}
+    .main_container .intro_first .text_mo .txt-wrap{margin-top: 40px;}
+    .main_container .intro_first .text_mo .txt-wrap p + p{margin-top: 8px;}
+    .main_container .intro_first .text_mo .logo{margin-top: 80px;}
     .main_container .intro_second .cont_inner{padding: 0;}
     .main_container .is_inner .is_title{display: block;width: 156px;margin-left: 20px;font-size: 0;}
     .main_container .is_inner .is_bottom{margin-top: 32px;padding: 0 40px 0 87px;}

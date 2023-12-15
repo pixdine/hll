@@ -35,7 +35,8 @@
 .main_container .section01{position: relative;} 
 .main_container .section_img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;} 
 .main_container .section_img .img_inner{position: relative;height: 100%;} 
-.main_container .media_desc{position: absolute;bottom: 0;opacity: 0;} 
+/* .main_container .media_desc{position: absolute;bottom: 0;opacity: 0;}  */
+.main_container .media_desc{position: absolute;bottom: 0;} 
 .main_container .md_left .media_desc{left: 0;} 
 .main_container .md_right .media_desc{left: calc(50% + 12px);} 
 

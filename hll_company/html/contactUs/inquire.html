@@ -190,13 +190,17 @@
                                         </dd>
                                     </dl>
                                 </li>
+                                <!--2023-12-14 > error 스타일 추가 -->
                                 <li>
                                     <dl>
                                         <dt>
                                             문의내용<em class="ess">*</em>
                                         </dt>
                                         <dd>
-                                            <textarea class="tarea htype02" placeholder="문의하실 내용을 입력해 주세요."></textarea>
+                                            <div class="inputbox error"><!--D : Error 시 error class 추가 -->
+                                                <textarea class="tarea htype02" placeholder="문의내용을 입력해 주세요."></textarea>
+                                                <p class="row_err_txt">문의하실 내용을 입력해 주세요.</p>
+                                            </div>
                                         </dd>
                                     </dl>
                                 </li>

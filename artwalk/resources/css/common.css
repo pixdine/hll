@@ -512,8 +512,12 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_full .popup_cont{padding:32px 20px 0 28px;}
 .popup_full .popup_cont.non{padding:32px 20px 32px 28px;}
 .popup_full .popup_inner.agree{max-width: 588px;}
-.popup_full .p_agree .agree_sbj{color: #111;font-family: 'Noto Sans KR';font-weight: 500;font-size: 16px;line-height: 28px;}
-.popup_full .p_agree .agree_cont{margin-top: 16px;color: #111;font-family: 'Noto Sans KR';font-size: 16px;line-height: 28px;}
+.popup_full .p_agree .agree_cont{color: #111;font-family: 'Noto Sans KR';font-size: 16px;font-weight:400;line-height: 28px;}
+.popup_full .p_agree .agree_txt{margin-bottom: 24px;color: #111;font-family: 'Noto Sans KR';font-size: 16px;font-weight: 500;line-height: 28px;}
+.popup_full .p_agree .agree_list > li{position:relative;padding-left:18px;}
+.popup_full .p_agree .agree_list > li > em{position:absolute;left:0;top:0;}
+.popup_full .p_agree .agree_list .txt_list01 > li{position:relative;padding-left:10px;text-indent:0;}
+.popup_full .p_agree .agree_list .txt_list01 > li:before{content:'-';position:absolute;left:0;top:0;}
 .popup_full .popup_cont .subject{color: #111;font-weight: 700;font-size: 20px;line-height: 28px;}
 .popup_full .popup_cont .guide_row{display: flex;align-items: center;margin-top: 40px;}
 .popup_full .popup_cont .subject + .guide_row{margin-top: 32px;}

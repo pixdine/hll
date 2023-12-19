@@ -7,6 +7,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 .main_header.scrolled {background-color: #fff;}
 .main_header.mode-white .logo path{fill: #fff;}
 .main_header.mode-white .gnb_link{color: #fff;}
+.main_header.mode-white .gnb_link:before{background-color: #fff;}
 .main_header.mode-white .btn-open-am rect{fill: #fff;}
 .main_container .section{position: relative;overflow: hidden;}
 .main_container .ms_inner{position: relative;height: 100vh;padding-top: 72px;}
@@ -108,6 +109,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 @media screen and (max-width: 768px) {
+    .main_header.mode-white .gnb_link{color: #111;}
     .main_container .section{height: calc(var(--var, 1vh) * 100);}
     .main_container .ms_inner{padding-top: 0;}
     .main_container .intro_first .if_slogan,

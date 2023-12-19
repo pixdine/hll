@@ -80,14 +80,15 @@
 .mm .vertical .light .vt-t2 {color: #fff;}
 .mm .vertical .light .vt-t3 {color: #fff;}
 .mm .vertical .link-btn-wrap {justify-content: flex-start; margin-top: 60px;}
+.mm .vertical .col-img {max-width: 830px;}
 .mm .vertical.elle {background-color: #F2EFE8;}
-.mm .vertical.elle .col-img {max-width: 782px; margin-left: 110px;}
+.mm .vertical.elle .col-img {margin-left: 60px;}
 .mm .vertical.close-up {background-color: #6930E6;}
-.mm .vertical.close-up .col-img {max-width: 818px; margin-left: 70px;}
+.mm .vertical.close-up .col-img {margin-left: 60px;}
 .mm .vertical.artwalk {background-color: #111;}
-.mm .vertical.artwalk .col-img {max-width: 627px; margin-left: 90px;}
+.mm .vertical.artwalk .col-img {margin-left: 15px;}
 .mm .vertical.eee {background-color: #F7F7F7;}
-.mm .vertical.eee .col-img {max-width: 704px; margin-left: 240px;}
+.mm .vertical.eee .col-img {margin-left: 207px;}
  
 .floating-menu {position: fixed; bottom: 80px; right: 80px; z-index: 50; transition: 0.5s; opacity: 0;}
 .floating-menu.active {opacity: 1;}
@@ -165,10 +166,6 @@
     .mm .vertical .vt-t3 {margin-top: 10px; font-size: 14px; line-height: 1.5;}
     .mm .vertical .col-img {margin: 30px 0 0 !important;}
     .mm .vertical .col-img img {width: 100%;}
-    .mm .vertical.elle .col-img {max-width: 325px;}
-    .mm .vertical.close-up .col-img {max-width: 325px;}
-    .mm .vertical.artwalk .col-img {max-width: 297px;}
-    .mm .vertical.eee .col-img {max-width: 335px;}
 
     .floating-menu {bottom: 20px; right: 20px;}
     .floating-menu .fm-inner {position: relative;}

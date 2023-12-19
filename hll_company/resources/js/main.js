@@ -20,6 +20,7 @@ $(document).ready(function () {
       afterLoad: function (anchorLink, index, direction) {
         console.log("index", index, direction);
         AOS.init();
+        AOS.refresh();
         if (index === 1) {
           var introVod = document.querySelector(".intro_video");
           setTimeout(() => {
@@ -29,7 +30,7 @@ $(document).ready(function () {
               .eq(index - 1)
               .addClass("after-load");
             if (!$(".section").eq(index).hasClass("after-load")) {
-              //   console.log("START!!");
+              console.log("START!!");
               $(".header").addClass("mode-white");
             }
             $(".intro_second").find("[data-aos]").removeClass("aos-animate");
@@ -146,6 +147,10 @@ $(document).ready(function () {
 
   // 리사이징 이벤트 핸들러
   $(window).on("resize", function () {
+    $(".header").removeClass("scrolled");
+    $(".header").addClass("mode-white");
+    $(".intro_first").removeClass("hide");
+    $(".intro_first").find("[data-aos]").addClass("aos-animate");
     reinitializeFullpage();
   });
 });

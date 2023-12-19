@@ -1,5 +1,6 @@
 :root {--vh: 100%}
-html, body {height: 100vh; height: var(--vh);}
+html, body {height: calc(var(--vh, 1vh) * 100);}
+/* html, body {height: 100vh; height: var(--vh);} */
 
 .main_header{position: fixed;top: 0;left: 0;right: 0;background-color: transparent;}
 .main_header.scrolled {background-color: #fff;}
@@ -121,7 +122,7 @@ html, body {height: 100vh; height: var(--vh);}
     .main_container .btn_more .more_txt{padding-right: 20px;font-size: 12px;}
     .main_container .btn_more .more_txt:after{width: 16px;height: 16px;}
 
-    .main_container .main_sub .cont_inner{padding: 0;height: 100vh;} 
+    .main_container .main_sub .cont_inner{padding: 48px 0 0;height: 100vh;}
     .main_container .section_inner{margin: 0;min-height: auto;height: 100%;} 
 
     .main_container .section_img .img_inner{position: relative;height: 100%;} 

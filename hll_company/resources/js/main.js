@@ -18,13 +18,20 @@ $(document).ready(function () {
 
       // ** 페이지를 불러온 후
       afterLoad: function (anchorLink, index, direction) {
-        console.log("index", index);
+        console.log("index", index, direction);
+        AOS.init();
         if (index === 1) {
-          AOS.init();
           var introVod = document.querySelector(".intro_video");
           setTimeout(() => {
             $(".intro_first").addClass("active");
             introVod.play();
+            $(".section")
+              .eq(index - 1)
+              .addClass("after-load");
+            if (!$(".section").eq(index).hasClass("after-load")) {
+              //   console.log("START!!");
+              $(".header").addClass("mode-white");
+            }
             $(".intro_second").find("[data-aos]").removeClass("aos-animate");
           }, 1300);
           wheelCount = 0;
@@ -39,15 +46,17 @@ $(document).ready(function () {
             .addClass("aos-animate");
         }
 
-        index >= 3
-          ? $(".header").addClass("scrolled")
-          : $(".header").removeClass("scrolled");
+        // if (index >= 3) {
+        //   $(".header").addClass("scrolled");
+        // } else {
+        //   $(".header").removeClass("scrolled");
+        // }
       },
 
       // ** 페이지를 떠날때
       onLeave: function (origin, destination, direction, index) {
         var prevIndex = destination - 1;
-        // console.log('destination',destination, direction, origin);
+        console.log("destination", destination, direction, origin);
 
         // AOS.refresh();
         if (origin == 1 && wheelCount < 1) {
@@ -60,6 +69,14 @@ $(document).ready(function () {
         }
 
         $(".section").eq(origin).find("[data-aos]").removeClass("aos-animate");
+
+        if (destination < 3) {
+          $(".header").removeClass("scrolled");
+          $(".header").addClass("mode-white");
+        } else {
+          $(".header").addClass("scrolled");
+          $(".header").removeClass("mode-white");
+        }
 
         const sectionLength = document.querySelectorAll(".section").length;
         if (destination == sectionLength - 1 && direction == "up") {

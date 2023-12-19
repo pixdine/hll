@@ -5,6 +5,9 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 
 .main_header{position: fixed;top: 0;left: 0;right: 0;background-color: transparent;}
 .main_header.scrolled {background-color: #fff;}
+.main_header.mode-white .logo path{fill: #fff;}
+.main_header.mode-white .gnb_link{color: #fff;}
+.main_header.mode-white .btn-open-am rect{fill: #fff;}
 .main_container .section{position: relative;overflow: hidden;}
 .main_container .ms_inner{position: relative;height: 100vh;padding-top: 72px;}
 .main_container .intro_video{position: absolute;bottom: 0;left: 50%;min-width: 100%;min-height:100%;transform: translateX(-50%);}

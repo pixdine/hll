@@ -94,7 +94,7 @@
 											</svg>
 										</p>
 									</div>
-									<div class="hll_logo" data-aos="fade-in" data-aos-delay="600"  data-aos-duration="1000">
+									<div class="hll_logo" data-aos="fade-in" data-aos-delay="600"  data-aos-duration="3000">
 										<svg width="1200" height="378" viewBox="0 0 1200 378" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g clip-path="url(#clip0_7170_15212)" filter="url(#filter0_b_7170_15212)">
 											<path d="M307.558 156.625H75.2791V0.320312H0.691406V391.204H75.2791V229.073H306.688V391.204H381.275V0.320312H307.558V156.625Z" fill="black"/>
@@ -531,6 +531,7 @@
 							}, 1300);
 							wheelCount=0;
 						} else {
+							$('.section').eq(index-2).find('[data-aos]').removeClass("aos-animate");
 							$('.section').eq(index-1).find('[data-aos]').addClass("aos-animate");
 						}
 
@@ -544,6 +545,7 @@
 
 						// AOS.refresh();
 						if(origin == 1 && wheelCount < 1){
+							AOS.refresh();
 						    setTimeout(()=>{
 						        $(".intro_first").addClass("hide");
 						        $(".intro_first").find('[data-aos]').removeClass("aos-animate");
@@ -551,7 +553,7 @@
 						    // return false;
 						}
 						
-						$(".section").eq(prevIndex).find('[data-aos]').removeClass("aos-animate");
+						$(".section").eq(origin).find('[data-aos]').removeClass("aos-animate");
 
 						const sectionLength = document.querySelectorAll('.section').length;
 						if (destination == sectionLength - 1 && direction == 'up') {

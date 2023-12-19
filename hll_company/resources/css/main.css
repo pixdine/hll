@@ -1,6 +1,8 @@
 :root {--vh: 100%}
 html, body {height: 100vh; height: var(--vh);}
 
+body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duration='5000'] {transition-duration: 5000ms;}
+
 .main_header{position: fixed;top: 0;left: 0;right: 0;background-color: transparent;}
 .main_header.scrolled {background-color: #fff;}
 .main_container .section{position: relative;overflow: hidden;}

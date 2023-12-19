@@ -17,7 +17,8 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 .main_container .intro_first .if_top{position: relative;}
 .main_container .intro_first .if_slogan{display: flex;}
 .main_container .intro_first .if_slogan .txt-wrap p + p{margin-top: 44px}
-.main_container .hll_logo{display: flex;}
+.main_container .intro_first .hll_logo {display: flex;}
+.main_container .intro_first .hll_logo path{ transition-duration: 5s;transition-delay: 1s;}
 .main_container .intro_first .text_mo{display: none;}
 .main_container .intro_second{display: flex;align-items: center;position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 1;opacity: 0;transition: 0.75s;}
 .main_container .intro_second.active{opacity: 1;z-index: 2;}

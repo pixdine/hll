@@ -14,28 +14,33 @@ $(document).ready(function () {
       showActiveTooltip: true,
       scrollingSpeed: 750,
       scrollBar: false,
-      // bigSectionsDestination: top,
+      bigSectionsDestination: top,
 
       // ** 페이지를 불러온 후
       afterLoad: function (anchorLink, index, direction) {
         console.log("index", index, direction);
-        AOS.init();
-        AOS.refresh();
+
         if (index === 1) {
           var introVod = document.querySelector(".intro_video");
+
+          $(".section")
+            .eq(index - 1)
+            .addClass("after-load");
+          if (!$(".section").eq(index).hasClass("after-load")) {
+            AOS.init();
+          }
+
+          $(".intro_second").find("[data-aos]").removeClass("aos-animate");
+
           setTimeout(() => {
             $(".intro_first").addClass("active");
             introVod.play();
-            $(".section")
-              .eq(index - 1)
-              .addClass("after-load");
             if (!$(".section").eq(index).hasClass("after-load")) {
               console.log("START!!");
               $(".header").addClass("mode-white");
             }
-            $(".intro_second").find("[data-aos]").removeClass("aos-animate");
           }, 1300);
-          wheelCount = 0;
+          //   wheelCount = 0;
         } else {
           $(".section")
             .eq(index - 2)
@@ -61,12 +66,14 @@ $(document).ready(function () {
 
         // AOS.refresh();
         if (origin == 1 && wheelCount < 1) {
-          AOS.refresh();
+          //   AOS.refresh();
           setTimeout(() => {
             $(".intro_first").addClass("hide");
             $(".intro_first").find("[data-aos]").removeClass("aos-animate");
           }, 750);
           // return false;
+        } else {
+          $(".intro_first").removeClass("hide");
         }
 
         $(".section").eq(origin).find("[data-aos]").removeClass("aos-animate");

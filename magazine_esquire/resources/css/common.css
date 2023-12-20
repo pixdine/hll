@@ -685,8 +685,9 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_box{height:319px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
 .editor_box > a{display:block;width:100%;height:100%;}
 .editor_box .editor_head{position:relative;padding:32px;background-color:#111;}
-.editor_box .editor_head .name{display:block;font-size:24px;line-height:35px;color:#fff;}
-.editor_box .editor_head .desc{display:block;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;}
+.editor_box .editor_head .editor_info{width:calc(100% - 130px);}
+.editor_box .editor_head .name{display:block;font-size:24px;line-height:35px;color:#fff;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
+.editor_box .editor_head .desc{display:block;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
 .editor_box .profile_img{overflow:hidden;position:absolute;right:32px;bottom:-27px;width:120px;height:120px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .editor_box .profile_img img{width:100%;height:100%;object-fit:cover;}
 .editor_box .editor_body{position:relative;padding:50px 32px 40px;}
@@ -702,7 +703,8 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_profile .profile_img{overflow:hidden;width:88px;height:88px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .editor_profile .profile_img img{width:100%;height:100%;object-fit:cover;}
 .editor_profile .profile_info{flex:1;padding-left:40px;}
-.editor_profile .profile_info .name{display:block;font-size:36px;line-height:52px;}
+.editor_profile .profile_info .info_box{padding-right:180px;}
+.editor_profile .profile_info .name{display:block;font-size:36px;line-height:52px;word-break:break-all;}
 .editor_profile .profile_info .desc{display:block;margin-top:4px;font-size:18px;line-height:26px;}
 .editor_profile .profile_info .txt_box{margin-top:20px;}
 .editor_profile .profile_info .txt{min-height:46px;font-size:16px;font-weight:400;line-height:23px;color:#666;}
@@ -880,6 +882,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.header_navi{position:relative;left:0;transform:none;width:auto;text-align:left;}
 	.header_util .aside{display:none;}
 	.editor_list li{width:calc(50% - 12px);}
+	.editor_box .editor_head .editor_info{width:calc(100% - 120px);}
 	.editor_box .profile_img{bottom:-25px;right:28px;width:110px;height:110px;}
 	.horoscope_list li{width:calc(25% - 18px);}
 }
@@ -1177,6 +1180,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.editor_profile .profile_area{flex-direction:column;padding:0 20px 40px;text-align:center;}
 	.editor_profile .profile_img{width:80px;height:80px;margin:-40px auto 12px;}
 	.editor_profile .profile_info{padding-left:0;}
+	.editor_profile .profile_info .info_box{padding-right:0;}
 	.editor_profile .profile_info .name{font-size:24px;line-height:35px;}
 	.editor_profile .profile_info .desc{margin-top:2px;font-size:16px;line-height:23px;}
 	.editor_profile .profile_info .txt_box{margin-top:16px;}

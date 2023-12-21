@@ -127,7 +127,7 @@
     .mm .link-btn-txt:after {background-image: url(../images/main/link-btn-arrow-mo.svg); background-size: 16px;}
     .mm .link-btn.gray .link-btn-txt:after {background-image: url(../images/main/link-btn-arrow-dark-mo.svg);}
 
-    .mm .txt-wrap {padding: 0 30px; z-index: 1;}
+    .mm .txt-wrap {padding: 0 30px; z-index: 2;}
 
     .mm .m-img {display: block;}
     .mm .m-img .swiper-slide {width: auto;}

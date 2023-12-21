@@ -709,15 +709,19 @@
                             //     console.log('동영상 재생');
                             //     visualVod.load(); 
                             // }
-
+                            
                             visualVod.load(); 
-                            initVideo();
-                            setInterval(function(){
-                                if($('.visual-video').prop('ended')) {
-                                    console.log('영상 종료');
-                                    initVideo();
-                                }
-                            }, 200);
+                            $('.visual-video').on('loadeddata', function() {
+                                console.log('로드완료');
+                                
+                                initVideo();
+                                setInterval(function(){
+                                    if($('.visual-video').prop('ended')) {
+                                        console.log('영상 종료');
+                                        initVideo();
+                                    }
+                                }, 200);
+                            });
                             
                         } else {
                             $section.eq(realIndex).find('[data-aos]').addClass("aos-animate");

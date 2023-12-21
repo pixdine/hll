@@ -237,6 +237,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_wrap .btn{width:100%;min-width:auto;}
 .btn_wrap .btn ~ .btn{margin-left:16px;}
 
+.btn_wrap.type2{max-width:792px;margin:180px auto 0;}
+
 /* sns button */
 .btn_sns{display:inline-flex;flex-direction:column;position:relative;}
 .btn_sns .tit{display:block;width:100%;margin-top:10px;font-size:14px;font-weight:500;color:#666;text-align:center;line-height:20px;}
@@ -917,6 +919,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 	.btn_wrap{margin-top:60px;}
 	.btn_wrap .btn ~ .btn{margin-left:12px;}
+
+	.btn_wrap.type2{margin-top:60px;}
 
 	.tit_wrap{margin-bottom:32px;}
 	.tit_wrap .tit{font-size:22px;line-height:32px;}

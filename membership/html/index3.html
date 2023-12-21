@@ -304,7 +304,7 @@
                                 <img src="../resources/images/main/m-bg1.png">
                             </picture>
                         </div>
-                        <div class="m-img">
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -342,7 +342,7 @@
                                 <img src="../resources/images/main/m-bg2.png">
                             </picture>
                         </div>
-                        <div class="m-img">
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -380,7 +380,7 @@
                                 <img src="../resources/images/main/m-bg3.png">
                             </picture>
                         </div>
-                        <div class="m-img">
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -418,7 +418,7 @@
                                 <img src="../resources/images/main/m-bg4.png">
                             </picture>
                         </div>
-                        <div class="m-img">
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -458,7 +458,7 @@
                             </div>
                         </div>
 
-                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                             <picture>
                                 <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_ellevoice-mo.png">
                                 <img src="../resources/images/main/theme-service_ellevoice.png">
@@ -482,7 +482,7 @@
                             </div>
                         </div>
 
-                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                             <picture>
                                 <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_closeup-mo.png">
                                 <img src="../resources/images/main/theme-service_closeup.png">
@@ -506,7 +506,7 @@
                             </div>
                         </div>
 
-                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                             <picture>
                                 <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_artwalk-mo.png">
                                 <img src="../resources/images/main/theme-service_artwalk.png">
@@ -530,7 +530,7 @@
                             </div>
                         </div>
 
-                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
                             <picture>
                                 <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_eee-mo.png">
                                 <img src="../resources/images/main/theme-service_eee.png">
@@ -644,13 +644,15 @@
             $('.floating-menu').floatingMenu();
 
             function init() {
-                AOS.init();  // AOS initiation
+                AOS.init({
+                    once: true
+                });  // AOS initiation
                 $('.aos-init').removeClass('aos-animate'); // remove ALL classes which triggers animation in document
             }
             init();
 
             // fullpage
-            let isFullpageInitialized = false;
+            // let isFullpageInitialized = false;
             let visualVod = $('.visual-video').get(0);
             let sectionIndex = 0;
             const $section = $('.section');
@@ -753,35 +755,10 @@
                     }
                 });
 
-                isFullpageInitialized = true;
-            }
-
-            // Fullpage를 재실행하는 함수
-            function reinitializeFullpage() {
-                if (isFullpageInitialized) {
-                    // Fullpage 플러그인을 destroy합니다.
-                    $.fn.fullpage.destroy("all");
-                }
-                // Fullpage를 다시 초기화합니다.
-                $section.eq(0).removeClass('start');
-                $('.aos-init').removeClass('aos-animate');
-                initializeFullpage();
             }
 
             // 최초 실행
             initializeFullpage();
-
-            $(window).on('resize', () => {
-                reinitializeFullpage();
-                // $.fn.fullpage.destroy("all");
-                // console.log('resize');
-                // AOS.refresh();
-                // console.log('.sectionIndex', sectionIndex);
-                // setTimeout(() => {
-                //     AOS.refresh();
-                //     $section.eq(sectionIndex).find('[data-aos]').addClass("aos-animate");
-                // }, 500);
-            });
 
             // mobile media images swiper
             var magazine = new Swiper('.join-point .m-img .swiper-container', {

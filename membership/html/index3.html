@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>허스트중앙 통합멤버십 | Hearst Joongang membership</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trend.jtbcplus.kr/">
+    <meta property="og:title" content="허스트중앙 통합멤버십 | Hearst Joongang membership" .>
+    <meta property="og:image" content="">
+    <meta property="og:description" content="엘르, 코스모폴리탄, 하퍼스바자, 에스콰이어의 다채로운 콘텐츠를 즐길 수 있는 통합멤버십 사이트입니다" />
+    <meta name="keywords" content="허스트중앙, 통합멤버십, 엘르, 코스모폴리탄, 하퍼스바자, 에스콰이어, ELLE, COSMOPOLITAN, BAZAAR, ESQUIRE" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/member.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/main2.css" />
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../resources/js/jquery-ui.min.js"></script>
+    <!-- //css, Jquery -->
+</head>
+
+<body>
+
+    <div id="wrap" class="wrap main-page">
+        <script>
+            function login() {
+                console.log('login');
+                $(".login_info_box").css("display", "block");
+                $(".info_box").css("display", "none");
+            }
+
+            function logout() {
+                console.log('logout');
+                $(".info_box").css("display", "block");
+                $(".login_info_box").css("display", "none");
+            }
+        </script>
+        <!--전체메뉴-->
+        <div class="allmenu_wrap">
+            <div class="cont_inner">
+                <style>
+                    .active {
+                        display: block
+                    }
+                </style>
+                <script>
+                    function login() {
+                        console.log('login');
+                        $(".login_info_box").css("display", "block");
+                        $(".info_box").css("display", "none");
+
+                    }
+
+                    function logout() {
+                        console.log('logout');
+                        $(".info_box").css("display", "block");
+                        $(".login_info_box").css("display", "none");
+
+                    }
+                </script>
+                <!-- login 전 > 모바일에서만 노출됨 -->
+                <div class="info_box">
+                    <p class="info_txt">
+                        로그인 후 허스트중앙 멤버십의
+                        <strong>특별한 혜택을 확인하세요.</strong>
+                    </p>
+                    <button type="button" onclick="login();" class="btn_b bctype1">LOGIN</button>
+                    <div class="info_txt_btm">
+                        <p>아직 허스트 중앙 회원이 아니신가요?</p>
+                        <a href="#" class="btn_txt has_arr2">회원가입</a>
+                    </div>
+                </div>
+                <!--// login 전-->
+                <!-- login 후 > 모바일에서만 노출됨 -->
+                <div class="login_info_box" style="display:none">
+                    <div class="info_txt">
+                        <p><strong>김중앙</strong>님,<br />안녕하세요!</p>
+                    </div>
+
+                    <div class="info_txt02 box_type01">
+                        허스트중앙 통합멤버십을 통해 보다 많은
+                        혜택을 누려보세요!
+                    </div>
+                    <a href="#" onclick="logout(); return false;" class="btn_txt has_arr2">로그아웃</a><!--D : logout -->
+                </div>
+
+                <ul class="allmenu_list depth1">
+                    <li class="">
+                        <a href="#" class="tit">서비스 소개<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">멤버십<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">포인트 안내</a></li>
+                            <li><a href="#">포인트 관리</a></li>
+                            <li><a href="#">포인트 샵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">고객센터<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="tit">마이페이지<span><em class="blind">열기</em></span></a>
+                        <ul class="depth2">
+                            <li><a href="#">마이홈</a></li>
+                            <li><a href="#">회원정보 수정</a></li>
+                            <li><a href="#">포인트 관리</a></li>
+                            <li><a href="#">포인트 샵</a></li>
+                            <li><a href="#">1:1 문의 내역</a></li>
+                            <li><a href="#">나의 스크랩</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--// login 전-->
+        </div>
+        <!--// 전체메뉴-->
+
+        <!-- header -->
+        <header id="header" class="header"><!-- D: 메인일 때 main 클래스 추가 -->
+            <div class="header_wrap">
+                <div class="header_top">
+                    <div class="cont_inner">
+                        <h1 class="logo">
+                            <a href="./index.html"><span class="blind">hearst joongang</span></a>
+                        </h1><!-- D: 로고 (PC 메인, MO 메인과 MO 서브에서 노출) -->
+                        <div class="header_util_area">
+                            <button type="button"
+                                class="btn_txt02 ctype2 signup"><span>SIGNUP</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                            <button type="button"
+                                class="btn_txt02 ctype2"><span>LOGIN</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                            <button type="button" class="btn_menu"><span class="blind">전체 메뉴
+                                    열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, MO에서 노출) -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_gnb">
+                    <div class="cont_inner">
+                        <ul class="gnb_menu">
+                            <li><!-- D: 선택시 on class 추가 -->
+                                <a href="#">서비스 소개</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li><a href="#">ELLE</a></li>
+                                        <li><a href="#">Cosmopolitan</a></li>
+                                        <li><a href="#">Harper's BAZZAR</a></li>
+                                        <li><a href="#">Esquire</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">멤버십</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li><a href="#">포인트 안내</a></li>
+                                        <li><a href="#">포인트 관리</a></li>
+                                        <li><a href="#">포인트 샵</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">고객센터</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">1:1 문의</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="">
+                                <a href="#">마이페이지</a>
+                                <div class="sub_menu">
+                                    <ul>
+                                        <li class="on"><a href="#">마이홈</a></li>
+                                        <li><a href="#">회원정보 수정</a></li>
+                                        <li><a href="#">포인트 관리</a></li>
+                                        <li><a href="#">포인트 샵</a></li>
+                                        <li><a href="#">1:1 문의 내역</a></li>
+                                        <li><a href="#">나의 스크랩</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="container mm">
+            <div id="fullpage" class="fullpage">
+                <div class="section visual">
+                    <video class="visual-video" muted playsinline>
+                        <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
+                    </video>
+                    <div class="txt-wrap">
+                        <p class="v-t1" data-aos="fade-up">허스트중앙 통합멤버십으로</p>
+                        <p class="v-t2" data-aos="fade-up" data-aos-delay="200">다채로운 매거진 콘텐츠와 <br>취향 맞춤 서비스를 한번에!</p>
+                        <p class="v-t3" data-aos="fade-up" data-aos-delay="400">엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와 <br class="pc">에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지</p>
+                        <div class="link-btn-wrap v-btn" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#" class="link-btn btn-v">
+                                <span class="link-btn-txt">멤버십 가입하기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section visual join-point">
+                    <div class="txt-wrap">
+                        <p class="v-t1" data-aos="fade-up">가입 즉시 축하 포인트 지급</p>
+                        <p class="v-t2" data-aos="fade-up" data-aos-delay="200">가입 축하 포인트 받고 <br>콘텐츠 읽고 <br class="mo">포인트도 모아요!</p>
+                        <p class="v-t3" data-aos="fade-up" data-aos-delay="400">가입 후에는 매일 기사를 읽을 때마다 포인트 적립 <br>재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!</p>
+                        <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                            <a href="#" class="link-btn btn-v">
+                                <span class="link-btn-txt">매거진 보러가기</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-img">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img01.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img02.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img03.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img04.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-join.png">
+                            <img src="../resources/images/main/obj-point-join.png">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="section visual join-save">
+                    <div class="txt-wrap">
+                        <p class="v-t1" data-aos="fade-up">차곡차곡 쌓은 포인트는</p>
+                        <p class="v-t2" data-aos="fade-up" data-aos-delay="200">포인트 전환하고<br>모바일 상품권으로 바꿔보세요!</p>
+                        <p class="v-t3" data-aos="fade-up" data-aos-delay="400">마이페이지에서 모은 포인트를 확인하고<br>똑똑하게 사용해보세요</p>
+                        <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                            <a href="#" class="link-btn btn-v">
+                                <span class="link-btn-txt">포인트 샵 바로가기</span>
+                            </a>
+                        </div>
+                    </div> 
+                    <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-save.png">
+                            <img src="../resources/images/main/obj-point-save.png">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="section w-bo head-mode-dark">
+                    <div class="txt-wrap">
+                        <p class="w-t1" data-aos="fade-up">지금 바로 만나보세요!</p>
+                        <p class="w-t2" data-aos="fade-up" data-aos-delay="200">허스트중앙의 다양한 미디어 서비스</p>
+                    </div> 
+                </div>
+
+                <div class="section media m1 head-mode-dark">
+                    <div class="m-in">
+                        <div class="txt-wrap">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_elle.svg" alt="ELLE">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">NO.1 FASHION &amp; LIFESTYLE MEDIA</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">글로벌 2,100만 독자와 함께 <br>세계 최대 네트워크를 자랑하는 No.1 패션 미디어</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v gray">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg1.png">
+                                <img src="../resources/images/main/m-bg1.png">
+                            </picture>
+                        </div>
+                        <div class="m-img">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_elle-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_elle-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_elle-03.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                </div>
+
+                <div class="section media m2">
+                    <div class="m-in">
+                        <div class="txt-wrap">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_cosmopolitan.svg" alt="cosmopolitan">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">FUN, FEARLESS, FEMALE</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">국내 최대 판매 부수와 높은 정기구독률을 자랑하는<br>글로벌 라이프스타일 미디어</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg2.png">
+                                <img src="../resources/images/main/m-bg2.png">
+                            </picture>
+                        </div>
+                        <div class="m-img">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_cosmopolitan-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_cosmopolitan-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_cosmopolitan-03.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section media m3">
+                    <div class="m-in">
+                        <div class="txt-wrap">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_bazaar.svg" alt="bazaar">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">FIRST IN FASHION</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">현대 여성의 문화와 라이프스타일에<br>통찰력과 영감을 제공하는 전문 매거진</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg3.png">
+                                <img src="../resources/images/main/m-bg3.png">
+                            </picture>
+                        </div>
+                        <div class="m-img">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_bazaar-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_bazaar-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_bazaar-03.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                      
+                </div>
+
+                <div class="section media m4">
+                    <div class="m-in">
+                        <div class="txt-wrap fade-up">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_esquire.svg" alt="esquire">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">MAN AT HIS BEST</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">취향이 남다른 남자들을 위한<br>지적인 바이블</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg4.png">
+                                <img src="../resources/images/main/m-bg4.png">
+                            </picture>
+                        </div>
+                        <div class="m-img">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_esquire-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_esquire-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_esquire-03.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section w-bo head-mode-dark">
+                    <div class="txt-wrap">
+                        <p class="w-t1" data-aos="fade-up">다채롭게 경험해보세요</p>
+                        <p class="w-t2" data-aos="fade-up" data-aos-delay="200">개인 취향에 맞춘 테마별 서비스</p>
+                    </div> 
+                </div>
+
+                <div class="section vertical elle head-mode-dark">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt dark" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">엘르보이스</span>
+                                <span class="vt-t2">여성의 삶,<br>레퍼런스가 필요할 때</span>
+                                <span class="vt-t3">작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<br>동시대를 살아가는 여성들의 에세이 <br class="mo">뉴스레터를 구독해보세요.</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v gray">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_ellevoice-mo.png">
+                                <img src="../resources/images/main/theme-service_ellevoice.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section vertical close-up">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt light" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">클로즈업</span>
+                                <span class="vt-t2">내가 궁금해하는<br>요즘 직업</span>
+                                <span class="vt-t3">인터뷰, 칼럼, 줌 라이브를 통해 다양한 직업에 대해 이야기하고<br class="pc"> 유저의 커리어 성장을 돕는 <br class="mo">웹 서비스를 경험해보세요!</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_closeup-mo.png">
+                                <img src="../resources/images/main/theme-service_closeup.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section vertical artwalk">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt light" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">예술산책</span>
+                                <span class="vt-t2">‘예술'을 ‘산책'하듯 가볍게 즐기는<br>아트 큐레이션 서비스</span>
+                                <span class="vt-t3">지금 국내의 아트신에서 펼쳐지고 있는<br>주요 전시와 이슈들을 확인해보세요!</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_artwalk-mo.png">
+                                <img src="../resources/images/main/theme-service_artwalk.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section vertical eee head-mode-dark">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt dark" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">eee</span>
+                                <span class="vt-t2">에스콰이어 에디터가<br>기록하는 핫플 수첩</span>
+                                <span class="vt-t3">맛집부터 카페, 여행, 노포까지<br>에디터의 시각으로 수집한 공간에서<br>나만의 취향을 발견해보세요.</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v gray">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_eee-mo.png">
+                                <img src="../resources/images/main/theme-service_eee.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="section fp-auto-height head-mode-dark" data-anchor="FOOT">
+                    <footer id="footer" class="footer">
+                        <div class="footer_top">
+                            <div class="cont_inner">
+                                <div class="footer_link">
+                                    <ul>
+                                        <li><a href="#" target="_blank">이용약관</a></li>
+                                        <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                                        <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                                        <li><a href="#" target="_blank">윤리경영</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="footer_bottom">
+                            <div class="cont_inner">
+                                <div class="footer_info">
+                                    <address class="addr_wrap">
+
+                                        <div class="addr_txt">
+                                            <em>허스트중앙(유)</em>
+                                            <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                            <span class="ceo">대표자 : 강주연</span>
+                                            <br class="pc_br">
+                                            <span class="num">사업자등록번호 : 104-81-55280</span>
+                                            <br class="mo_br">
+                                            <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+                                        </div>
+                                    </address>
+                                    <p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- //footer -->
+            </div>
+
+            <div class="floating-menu">
+                <div class="fm-inner">
+                    <div class="fm-section">
+                        <ul class="fm-list">
+                            <li class="fm-item"><a href="#" class="fm-link">회사소개</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">ELLE</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">Cosmopolitan</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">Harper's BAZAAR</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">Esquire</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">엘르보이스</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">클로즈업</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">예술산책</a></li>
+                            <li class="fm-item"><a href="#" class="fm-link">eee</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn-f" title="플로팅메뉴 열기">
+                        <span class="blind">열기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+
+    <!-- fullpage.js -->
+	<link rel="stylesheet" href="../resources/css/fullpage.min.css">
+	<script src="../resources/js/fullpage.min.js"></script>
+	<!-- //fullpage.js -->
+
+    <!-- aos.js -->
+	<link rel="stylesheet" href="../resources/css/aos.css">
+	<script src="../resources/js/aos.js"></script>
+	<!-- //aos.js -->
+
+    <!-- js -->
+    <script src="../resources/js/swiper.min.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+
+    <script>
+        $(() => {
+            // 플로팅메뉴 프로토타입
+            $.fn.floatingMenu = function () {
+                var fmBody = this;
+                var fmSection = fmBody.find(".fm-section");
+                var fmBtn = fmBody.find(".btn-f");
+                fmBtn.on("click", function () {
+                    var chkCondition = $(this).hasClass("active");
+                    if (!chkCondition) {
+                        $(this).addClass("active").attr("title", "플로팅메뉴 닫기").children().text("닫기");
+                        fmSection.stop().slideDown(200);
+                    } else {
+                        $(this).removeClass("active").attr("title", "플로팅메뉴 열기").children().text("열기");
+                        fmSection.stop().slideUp(200);
+                    }
+                });
+
+                // 오프닝 텍스트 모션 사라지고 보이게
+                setTimeout(()=>{
+                    fmBody.addClass('active');
+                }, 2500)
+            };
+
+            $('.floating-menu').floatingMenu();
+
+            function init() {
+                AOS.init();  // AOS initiation
+                $('.aos-init').removeClass('aos-animate'); // remove ALL classes which triggers animation in document
+            }
+            init();
+
+            // fullpage
+            let isFullpageInitialized = false;
+            let visualVod = $('.visual-video').get(0);
+            let sectionIndex = 0;
+            const $section = $('.section');
+            const sectionLength = $section.length;
+
+            function initVideo() {
+                $section.eq(0).find('[data-aos]').removeClass("aos-animate");
+                visualVod.play();
+                setTimeout(()=>{
+                    $section.eq(0).addClass('start');
+                    $section.eq(0).find('[data-aos]').addClass("aos-animate");
+                }, 2200);
+            }
+            
+            function initializeFullpage() {
+                $('#fullpage').fullpage({
+                    anchors: ['MAIN', 'JOIN-POINT', 'JOIN-SAVE', 'FOOT'],
+                    sectionsColor: ['#fff', '#111', '', ''],
+                    scrollingSpeed: 900,
+                    easingcss3: 'cubic-bezier(0.4, 0.12, 0.21, 1)',
+                    lockAnchors: true,
+                    recordHistory: false,
+                    verticalCentered: false,
+                    bigSectionsDestination: top,
+                    // disableMutationObserver: false,
+
+                    // ** 페이지를 불러온 후
+                    afterLoad: function(anchorLink, index) {
+                        const realIndex = index - 1;
+                        const prevIndex = realIndex - 1;
+
+                        sectionIndex = realIndex;
+
+                        // 스크롤 다운 시, head mode check
+                        if($section.eq(realIndex).hasClass('head-mode-dark')) {
+                            $('.header').addClass('dark');
+                        } else {
+                            $('.header').removeClass('dark');
+                        }
+
+                        
+
+                        // visualVod.load();
+
+                        // footer 바로 위 section을 제외한 sections에서 aos-animate remove
+                        if(index !== sectionLength) {
+                            $section.find('[data-aos]').removeClass("aos-animate");
+                        }
+
+                        if(realIndex === 0) {
+                            // video 로드가 완룐 된 후에 재생시키기
+                            // visualVod.oncanplaythrough = function() {
+                            //     visualVod.play();
+                            // }
+                            // if(visualVod.paused) {
+                            //     console.log('동영상 재생');
+                            //     visualVod.load(); 
+                            // }
+
+                            visualVod.load(); 
+                            initVideo();
+                            setInterval(function(){
+                                if($('.visual-video').prop('ended')) {
+                                    console.log('영상 종료');
+                                    initVideo();
+                                }
+                            }, 200);
+                            
+                        } else {
+                            $section.eq(realIndex).find('[data-aos]').addClass("aos-animate");
+
+                            // 동영상 정지 시키고, 처음으로 돌리기
+                            visualVod.pause();
+                            visualVod.currentTime = 0;;
+                        }
+                    },
+
+                    // ** 페이지를 떠날때
+                    onLeave: (index, nextIndex, direction) => {
+                        // console.log("index", index, nextIndex, direction);
+
+                        // 스크롤 업할때, head mode check
+                        if(direction === 'up') {
+                            if($section.eq(nextIndex-1).hasClass('head-mode-dark')) {
+                                $('.header').addClass('dark');
+                            } else {
+                                $('.header').removeClass('dark');
+                            }
+                        }
+                    },
+
+                    afterResize: () => {
+                        // setTimeout(() => {
+                        //     visualVod.play();
+                        // }, 100);
+                    }
+                });
+
+                isFullpageInitialized = true;
+            }
+
+            // Fullpage를 재실행하는 함수
+            function reinitializeFullpage() {
+                if (isFullpageInitialized) {
+                    // Fullpage 플러그인을 destroy합니다.
+                    $.fn.fullpage.destroy("all");
+                }
+                // Fullpage를 다시 초기화합니다.
+                $section.eq(0).removeClass('start');
+                $('.aos-init').removeClass('aos-animate');
+                initializeFullpage();
+            }
+
+            // 최초 실행
+            initializeFullpage();
+
+            $(window).on('resize', () => {
+                reinitializeFullpage();
+                // $.fn.fullpage.destroy("all");
+                // console.log('resize');
+                // AOS.refresh();
+                // console.log('.sectionIndex', sectionIndex);
+                // setTimeout(() => {
+                //     AOS.refresh();
+                //     $section.eq(sectionIndex).find('[data-aos]').addClass("aos-animate");
+                // }, 500);
+            });
+
+            // mobile media images swiper
+            var magazine = new Swiper('.join-point .m-img .swiper-container', {
+                slidesPerView: "auto",
+                spaceBetween: 12,
+                freeMode: true,
+                loop: true,
+                speed: 5000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                },
+            });
+
+            var mediaOptions = {
+                slidesPerView: "auto",
+                spaceBetween: 11,
+                freeMode: true,
+            };
+
+            var mediaElle = new Swiper('.media.m1 .m-img .swiper-container', mediaOptions);
+            var mediaCosmopolitan = new Swiper('.media.m2 .m-img .swiper-container', mediaOptions);
+            var mediaBazaar = new Swiper('.media.m3 .m-img .swiper-container', mediaOptions);
+            var mediaEsquire = new Swiper('.media.m4 .m-img .swiper-container', mediaOptions);
+        });
+    </script>
+</body>
+
+</html>

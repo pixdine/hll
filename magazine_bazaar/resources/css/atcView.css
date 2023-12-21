@@ -445,6 +445,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 	.event_detail_wrap .atc_header .txt_date .item ~ .item{margin-top:6px;margin-left:0;}
 	.event_detail_wrap .atc_header .txt_date .item span{margin-right:6px;}
 	.event_detail_wrap .btn_list_wrap{margin-top:80px;}
+	.event_detail_wrap .btn_list_wrap .btn{width:100%;}
 	.tmp_photo{margin:0 -20px 20px;}
 	.noti_info_box{margin-top:60px;padding-top:60px;}
 	.noti_info_box .box_inner{padding:20px;}

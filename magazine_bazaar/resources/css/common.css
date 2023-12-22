@@ -940,7 +940,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.subvisual .imgbox .pc{display:none;}
 	.subvisual .imgbox .mo{display:block;}
 	.subvisual .heading_area{padding:0 20px;}
-	.subvisual .tit{font-size:44px;line-height:59px;}
+	.subvisual .cate{font-size:14px;}
+	.subvisual .tit{font-size:36px;line-height:46px;}
 
 	/* header */
 	.header .btn_menu{margin-left:-6px;}

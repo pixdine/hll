@@ -640,6 +640,9 @@ function lockScrollHandle(event) {
   if (e.target.classList.contains("popup_cont")) {
     return true;
   }
+  if (e.target.closest(".popup_cont")) {
+    return true;
+  }
 
   // 멀티 터치는 터치 되게 한다
   if (e.touches.length > 1) return true;

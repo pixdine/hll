@@ -179,7 +179,8 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .wrap{position:relative;width:100%;height:100%;margin-left:auto;margin-right:auto;font-size:16px;}
 
 /* 반응형 body scoll lock */
-.lockbody { overflow : hidden; }
+.lockbody { overflow : hidden; height: 100%;}
+.non-oby { overscroll-behavior-y: none }
 
 /* header 공통스타일 */
 .header {position: fixed; top: 0; left: 0; width: 100%; background-color:#fff;z-index:100; transition: height 0.5s ease; box-sizing:border-box; /*padding-bottom:8px;*/}

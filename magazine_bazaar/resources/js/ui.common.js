@@ -791,9 +791,6 @@ const popup = {
     open: function (_target, _type, _hasDimmed = true) {
         this.clientWidth = document.documentElement.clientWidth;
         var targetEl = $(`[data-${_type}="${_target}"]`);
-        document.ontouchmove = function (event) {
-            event.preventDefault();
-        };
         switch (_type) {
             case "popup":
                 var popupCount = $(`.open[data-${_type}`).length || 0;
@@ -801,16 +798,16 @@ const popup = {
                     targetEl.fadeIn(100, function () {
                     $(this).addClass("open");
                 });
-                // disableScroll();
+                disableScroll();
 
                 $(".popup_inner", targetEl).click(function (e) {
                     e.stopPropagation();
                 });
 
-                $("html").css({
-                    height: "100%",
-                    overflow: "hidden",
-                });
+                // $("html").css({
+                //     height: "100%",
+                //     overflow: "hidden",
+                // });
 
                 break;
             case "alert":
@@ -1068,21 +1065,26 @@ function lockScrollHandle(event) {
     // body lock 에서 제외시킬 요소 정의
     // 전체 메뉴
     if (e.target.closest(".allmenu_wrap")) {
-        return true;
+        return;
     }
 
     // 팝업 공통
     if (e.target.classList.contains("popup_cont")) {
-        return true;
+        return;
     }
+    if (e.target.closest(".popup_cont")) {
+        return;
+    }
+    
 
     // 멀티 터치는 터치 되게 한다
-    if (e.touches.length > 1) return true;
+    if (e.touches.length > 1) return;
 
     // event 초기화 속성이 있음 초기화
-    if (e.preventDefault) e.preventDefault();
+    // if (e.preventDefault) e.preventDefault();
+    e.preventDefault();
 
-    return false;
+    // return false;
 }
 
 // 스크롤 잠금
@@ -1094,7 +1096,6 @@ function disableScroll() {
         body.setAttribute("scrollY", String(pageY));
         $(body).addClass("lockbody");
     }
-
     body.addEventListener("touchmove", lockScrollHandle, { passive: false });
 }
 

@@ -255,13 +255,13 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 .cont_inner.pictorial .photo_dual {column-gap:24px; margin:40px auto}
 .cont_inner.pictorial .photo_dual div { width:50%; max-width:none}
-.cont_inner.pictorial .photo_dual img {width:100%; height:100%}
+.cont_inner.pictorial .photo_dual img {width:100%; height:100%; object-fit:cover}
 .cont_inner.pictorial .photo_dual div:first-child {margin-right:0}
 .cont_inner.pictorial .photo_dual div a { display:block; width:100%; height:100%}
 
 .cont_inner.pictorial .photo_third { height:auto; column-gap:24px; flex-flow:row nowrap}
 .cont_inner.pictorial .photo_third div { width:50%; max-width:none; margin-right:0}
-.cont_inner.pictorial .photo_third img {width:100%;} 
+.cont_inner.pictorial .photo_third img {width:100%;  object-fit:cover} 
 .cont_inner.pictorial .photo_third div a { display:block; width:100%}
 
 .cont_inner.pictorial ~ .cont_inner .atc_body { margin-top:60px}

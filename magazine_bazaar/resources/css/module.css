@@ -235,13 +235,15 @@
 .pic_atc_list .atcbox .txtbox{position:absolute;left:0;right:0;bottom:0;margin-top:0;padding:0 32px 32px;}
 .pic_atc_list .atcbox .txtbox:before{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:160px;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.6) 100%);}
 .pic_atc_list .atcbox .txtbox .tit{color:#fff;}
-
-.pic_atc_list .grid {margin-left: -24px;margin-bottom:-24px;}
-.pic_atc_list .grid li{width: 50%;padding: 0 0 24px 24px;}
-.pic_atc_list .grid .atcbox .imgbox{height:100%;padding-top:0;}
-.pic_atc_list .grid .atcbox .imgbox img{position:relative;}
+/* 바자화보 목록 */
+.pic_atc_list .grid{font-size:0;margin:-12px;}
+.pic_atc_list .grid:after{content:'';display:block;clear:both;}
+.pic_atc_list .grid li{display:inline-block;vertical-align:top;width:50%;padding:12px;float:left;}
+.pic_atc_list .grid li:nth-child(3n+1) .atcbox .imgbox{padding-top:133.333%;}
+.pic_atc_list .grid li:nth-child(6n-2){float:right;}
+.pic_atc_list .grid .atcbox .imgbox{padding-top:62.585%;}
 .pic_atc_list .grid .atcbox .txtbox .tit{height:auto;max-height:52px;}
-
+/* 검색결과 > 바자화보 목록 */
 .pic_atc_list ul:not(.grid){display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px;}
 .pic_atc_list ul:not(.grid) li{width:33.333%;padding:0 12px;}
 .pic_atc_list ul:not(.grid) .atcbox .imgbox{padding-top:62.5%;}
@@ -659,13 +661,17 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.pic_atc_wrap{margin-bottom:80px;}
 	.pic_atc_list .atcbox .txtbox:before{height:120px;}
 	.pic_atc_list .atcbox .txtbox .tit{font-size:18px;line-height:26px;}
+	/* 바자화보 목록 */
+	.pic_atc_list .grid{display:block;margin:0;}
+	.pic_atc_list .grid li{width:100%;margin-bottom:12px;padding:0;float:none;}
+	.pic_atc_list .grid li:last-child{margin-bottom:0;}
+	.pic_atc_list .grid li:nth-child(6n-2){float:none;}
 	.pic_atc_list .grid .atcbox .txtbox{padding:0 24px 24px;}
+
+	/* 검색결과 > 바자화보 목록 */
 	.pic_atc_list ul:not(.grid){gap:12px 0;margin:0;}
 	.pic_atc_list ul:not(.grid) li{width:100%;padding:0;}
 	.pic_atc_list ul:not(.grid) .atcbox .txtbox .tit{height:52px;}
-	.pic_atc_list .grid{margin-left: 0;margin-bottom:0;}
-	.pic_atc_list .grid li{width: 100%; padding: 0; margin-bottom: 12px;}
-	.pic_atc_list .grid li:last-child{margin-bottom: 0;}
 
 	/* 댓글 모듈 */
 	.comment_wrap{margin-top:60px;padding-top:60px;}

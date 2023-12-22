@@ -74,7 +74,6 @@
 .row_list li ~ li{margin-top:24px;}
 .row_list .atcbox a{display:flex;width:100%;height:100%;}
 .row_list .atcbox .imgbox{width:32%;padding-top:20%;}
-.row_list .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .row_list .atcbox .txtbox{display:flex;flex:1;justify-content:center;flex-direction:column;margin-top:0;padding:0 5%;border:1px solid #111;border-left:0;}
 .row_list .atcbox .txtbox .cate{margin-bottom:12px;color:#111;}
 .row_list .atcbox .txtbox .tit{height:auto;font-size:20px;line-height:28px;}
@@ -206,9 +205,10 @@
 .bazaarspick_list li {position:relative; width:32%; margin-left:2%}
 .bazaarspick_list li:first-child { margin-left:0 }
 .bazaarspick_list li:nth-child(3n+1) { margin-left:0}
-/*.bazaarspick_list li .atcbox a .imgbox img{ filter: brightness(70%)}*/
 .bazaarspick_list li .txtbox { position:absolute; z-index:1; bottom:32px; padding:0 24px; width:100%}
 .bazaarspick_list li .txtbox .tit { position:relative; z-index:2; color:#fff; font-size:28px; line-height:36px}
+.bazaarspick_list li .atcbox .wc_img{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
+.bazaarspick_list li .atcbox .wc_img img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .bazaarspick_list li .atcbox .btn_wish { position:absolute; top:20px; right:24px; z-index:1}
 .bazaarspick_list li .txtbox::after {content:''; position:absolute; bottom:-32px; left:0; z-index:1; width:100%; height:100%; padding-top:60%; background: rgb(17,17,17); background: linear-gradient(0deg, rgba(17,17,17,0.8) 0%, rgba(255,255,255,0) 100%);}
 .bazaarspick_list .ex_top { position:absolute; right:20px; top:20px; z-index:1}
@@ -272,7 +272,7 @@
 .sub .masonry_list li .item_info.type2{height: 106px;}
 .sub .masonry_list li .item_info.type2 .item_desc{height: auto;-webkit-line-clamp: 1;}
 .sub .masonry_list li .item_img{overflow: hidden;position: relative;height: 0;padding-top: 100%;}
-.sub .masonry_list li .item_img img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: fill;}
+.sub .masonry_list li .item_img img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 .artist_top{position:relative;height:300px; background-image:url('../../resources/images/bg_top_view.png'); background-repeat:repeat; background-position:50% 0%;}
 .artist_wrap{position:relative;}
 .artist_wrap .cont_inner{margin-top:-300px;}
@@ -293,7 +293,8 @@
 .gallary_list { }
 .gallary_list ul {display:flex; flex-wrap:wrap; column-gap:24px; row-gap:50px; justify-content:space-between; }
 .gallary_list li { width:calc(50% - 12px); margin-left:0}
-.gallary_list li .item_img img {width:100%}
+.gallary_list li .item_img{overflow:hidden;position:relative;width:100%;height:0;padding-top:62.585%;}
+.gallary_list li .item_img img {position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .gallary_list li .item_info {height:108px; border:1px solid #111; padding:24px}
 .gallary_list li .item_sbj {color: #111; font-weight: 500;font-size:18px;line-height:24px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; max-width:100%}
 .gallary_list li .item_loc { display:flex; flex-wrap: nowrap; white-space:nowrap; margin-top: 16px;color: #111;font-weight: 500;font-size:14px;line-height:20px; max-width:100%; }	
@@ -334,8 +335,6 @@
 .comm_ex_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -20px 0;}
 .comm_ex_list li{width:33.333%;padding:0 20px;}
 .comm_ex_list .comm_ex_item a{display:block;}
-.comm_ex_list .comm_ex_item .ex_img_fig{overflow:hidden;position:relative;width:100%;height:0;padding-top:133.333%;}
-.comm_ex_list .comm_ex_item .ex_img_fig img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 
 /* 전시리뷰 */
 .review_item{display:flex;flex-wrap:wrap;position:relative;background-color:#fff;}

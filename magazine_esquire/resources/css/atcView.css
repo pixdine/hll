@@ -232,7 +232,7 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .event_detail_wrap .atc_header .txt_date{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:40px;}
 .event_detail_wrap .atc_header .txt_date .item{display:inline-flex;align-items:baseline;font-size:14px;font-weight:500;color:#111;line-height:20px;}
 .event_detail_wrap .atc_header .txt_date .item span{margin-right:8px;}
-.event_detail_wrap .atc_header .txt_date .item em{font-family:TTNorms-Medium;color:#666;line-height:1;}
+.event_detail_wrap .atc_header .txt_date .item em{color:#666;line-height:1;}
 .event_detail_wrap .atc_header .txt_date .item ~ .item{margin-left:20px;}
 .event_detail_wrap .btn_list_wrap{display:flex;justify-content:center;margin-top:180px;}
 .event_detail_wrap .btn_list_wrap .btn{width:388px;}

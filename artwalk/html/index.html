@@ -1164,12 +1164,14 @@
                                 prevEl: prevBtn
                             },
                             loop: true,
+                            shortSwipes: false,
                         });
                         adSwiper.on("slideChangeTransitionStart", function(){
-                            var activeDpBox = $(".active _dp_swiper .active-display");
+                            var activeDpBox = $(".active_dp_swiper .active-display");
                             activeDpBox.addClass("after");
                         });
                         adSwiper.on('slideChangeTransitionEnd', function () {
+                            // console.log("swiper", this.realIndex);
                             var activeDpBox = $(".active_dp_swiper .active-display");
                             var currentImg = $(".active_dp_swiper .active-display .wc_img img");
                             var currentCaption = $(".active_dp_swiper .active-display figcaption");

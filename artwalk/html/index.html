@@ -1149,6 +1149,7 @@
                     var adBody = $(this);
                     var nextBtn = adBody.find(".button_next");
                     var prevBtn = adBody.find(".button_prev");
+                    var flag = false; // 2023-12-27 추가
                     // 산책코스 스와이퍼 고정사이즈가 아닐 때 리사이징 할 때는 재실행을 하지 않으면 이동간격이 맞지 않음.
                     var adSwiper;
                     function makeSwiper() {
@@ -1164,9 +1165,10 @@
                                 prevEl: prevBtn
                             },
                             loop: true,
-                            shortSwipes: false, // 2023-12-27 추가
+                            threshold: 5 // 2023-12-27 추가
                         });
                         adSwiper.on("slideChangeTransitionStart", function(){
+                            flag = true; // 2023-12-27 추가
                             var activeDpBox = $(".active_dp_swiper .active-display");
                             activeDpBox.addClass("after");
                         });
@@ -1177,22 +1179,25 @@
                             var currentCaption = $(".active_dp_swiper .active-display figcaption");
                             var imgSrc = $(".active_dp_swiper .swiper-slide-active img").attr("src");
                             var caption = $(".active_dp_swiper .swiper-slide-active .figcaption").text();
-                            activeDpBox.addClass("hidden");
-                            activeDpBox.on('transitionend', function handler() {
-                                // 중복 실행을 방지하기 위해 이벤트 리스너를 제거합니다.
-                                activeDpBox.off('transitionend', handler);
-                                activeDpBox.removeClass('after');
+                            if(flag) {// 2023-12-27 추가
+                                activeDpBox.addClass("hidden");
+                                activeDpBox.on('transitionend', function handler(e) {
+                                    // 중복 실행을 방지하기 위해 이벤트 리스너를 제거합니다.
+                                    activeDpBox.off('transitionend', handler);
+                                    activeDpBox.removeClass('after');
 
-                                // 이미지 소스를 변경합니다. 여기서 'new-image-source.jpg'는 새 이미지 경로로 변경해야 합니다.
-                                currentImg.attr("src", imgSrc);
-                                currentCaption.text(caption);
+                                    // 이미지 소스를 변경합니다. 여기서 'new-image-source.jpg'는 새 이미지 경로로 변경해야 합니다.
+                                    currentImg.attr("src", imgSrc);
+                                    currentCaption.text(caption);
 
-                                // 이미지 로딩이 끝나면 페이드 인하고 데이터가 들어갑니다.
-                                $(currentImg).on("load", function(){
-                                    // adBody.find("figcaption").text(data[adSwiper.realIndex].figureCaption);
-                                    activeDpBox.removeClass('hidden');
+                                    // 이미지 로딩이 끝나면 페이드 인하고 데이터가 들어갑니다.
+                                    $(currentImg).on("load", function(){
+                                        // adBody.find("figcaption").text(data[adSwiper.realIndex].figureCaption);
+                                        activeDpBox.removeClass('hidden');
+                                    });
                                 });
-                            });
+                            }
+                            flag = false; // 2023-12-27 추가
                         });
                     }
                     makeSwiper(); // 초기 스와이퍼 생성

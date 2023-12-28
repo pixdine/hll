@@ -17,11 +17,9 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/member.css" />
-    <link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/main2.css" />
     <script src="../resources/js/jquery-3.6.0.min.js"></script>
     <script src="../resources/js/jquery-ui.min.js"></script>
-    <script src="../resources/js/vendor/gsap.min.js"></script>
-    <script src="../resources/js/vendor/ScrollTrigger.js"></script>
     <!-- //css, Jquery -->
 </head>
 
@@ -205,379 +203,387 @@
         <!-- //header -->
 
         <!-- container -->
-        <div id="container" class="container member main">
-            <div id="content" class="content">
-                <section class="key-visual">
-                    <article class="key-visual__content key-visual__content--01">
-                        <div class="key-visual__media">
-                            <video class="key-visual__video" autoplay loop muted playsinline
-                                ontimeupdate="beginMotion()">
-                                <!-- <video class="key-visual__video" autoplay muted> -->
-                                <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                        <div class="key-visual__container">
-                            <h2 class="key-visual__title">
-                                <span class="motion-wrap direction-down"><span>허스트중앙 통합멤버십으로</span></span>
-                                <span class="motion-wrap direction-down"><strong>다채로운 매거진 콘텐츠와<br> 취향 맞춤 서비스를
-                                        한번에!</strong></span>
-                            </h2>
-                            <p class="key-visual__description">
-                                <span>
-                                    엘르, 코스모폴리탄, 하퍼스바자, 에스콰이어의 다채로운 콘텐츠와<br>
-                                    에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지
-                                </span>
-                            </p>
-                            <a href="#" class="key-visual__link section-link">멤버십 가입하기</a>
-                        </div>
-                    </article>
-                    <article class="key-visual__content key-visual__content--02">
-                        <div class="key-visual__media"></div>
-                        <div class="key-visual__decorators">
-                            <img src="../resources/images/main/keyvisual-deco-01.png" />
-                            <img src="../resources/images/main/keyvisual-deco-02.png" />
-                            <img src="../resources/images/main/keyvisual-deco-03.png" />
-                            <img src="../resources/images/main/keyvisual-deco-04.png" />
-                            <img src="../resources/images/main/keyvisual-deco-05.png" />
-                            <img src="../resources/images/main/keyvisual-deco-06.png" />
-                        </div>
-                        <div class="key-visual__container">
-                            <h2 class="key-visual__title">
-                                <span class="motion-wrap direction-down"><span>가입 즉시 축하 포인트 지급</span></span>
-                                <span class="motion-wrap direction-down"><strong>가입 축하 포인트 받고<br> 콘텐츠 읽고 포인트도
-                                        모아요!</strong>
-                            </h2>
-                            <p class="key-visual__description">
-                                <span>
-                                    가입 후에는 매일 기사를 읽을 때마다 포인트 적립<br>
-                                    재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!
-                                </span>
-                            </p>
-                            <a href="#" class="key-visual__link section-link">매거진 보러가기</a>
-                        </div>
-                    </article>
-                    <article class="key-visual__content key-visual__content--03">
-                        <div class="key-visual__media">
-                            <img src="../resources/images/main/key-visual_03.jpg" alt="" />
-                        </div>
-                        <div class="key-visual__decorators">
-                            <img src="../resources/images/main/keyvisual-deco-07.png" alt=""
-                                style="width: 286px; bottom: 50%; right: 70%;" />
-                            <img src="../resources/images/main/keyvisual-deco-08.png" alt=""
-                                style="width: 398px; top: 35%; left: 64%;" />
-                        </div>
-                        <div class="key-visual__container">
-                            <h2 class="key-visual__title">
-                                <span class="motion-wrap direction-down"><span>차곡차곡 쌓은 포인트는</span></span>
-                                <span class="motion-wrap direction-down"><strong>포인트 전환하고<br> 모바일 교환권으로
-                                        바꿔보세요!</strong></span>
-                            </h2>
-                            <p class="key-visual__description">
-                                <span>
-                                    마이페이지에서 모은 포인트를 확인하고<br>
-                                    똑똑하게 사용해보세요
-                                </span>
-                            </p>
-                            <a href="#" class="key-visual__link section-link">포인트샵 바로가기</a>
-                        </div>
-                    </article>
-                </section>
+        <div id="container" class="container mm">
+            <div id="fullpage" class="fullpage">
+                <div class="section visual">
+                    <!-- 2023-12-29 -->
+                    <video class="visual-video pc_br" muted playsinline id="visualVideoPc">
+                        <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
+                    </video>
 
-                <div class="key-mobile">
-                    <div class="km-section km-section01">
-                        <video class="km-video" autoplay loop muted playsinline ontimeupdate="beginMotion()">
-                            <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
-                        </video>
-                        <div class="km-txt-wrap">
-                            <p class="km-txt1">허스트중앙 통합멤버십으로</p>
-                            <p class="km-txt2">다채로운 매거진 콘텐츠와<br>취향 맞춤 서비스를<br>한번에!</p>
-                            <p class="km-txt3">엘르, 코스모폴리탄, 하퍼스바자, 에스콰이어의<br>다채로운 콘텐츠와 에세이, 직업 정보, 아트 정보 등<br>취향 맞춤형
-                                서비스까지</p>
-                            <a href="#" class="km-link">멤버십 가입하기</a>
-                        </div>
-                    </div>
-                    <div class="km-section km-section02">
-                        <div class="km-txt-wrap">
-                            <p class="km-txt1">가입 즉시 축하 포인트 지급</p>
-                            <p class="km-txt2">가입 축하 포인트 받고<br>콘텐츠 읽고<br>포인트도 모아요!</p>
-                            <p class="km-txt3">가입 후에는 매일 기사를 읽을 때마다 포인트 적립<br>재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!</p>
-                            <a href="#" class="km-link">매거진 보러가기</a>
-                        </div>
+                    <!-- 2023-12-29 -->
+                    <video class="visual-video mo_br" muted playsinline id="visualVideoMo">
+                        <source src="../resources/videos/main/key-visual-mo.mp4" type="video/mp4" />
+                    </video>
 
-                        <div class="slide-img">
-                            <img src="../resources/images/main/key-visual-mo-scroll-img01.png" />
-                            <img src="../resources/images/main/key-visual-mo-scroll-img02.png" />
-                            <img src="../resources/images/main/key-visual-mo-scroll-img03.png" />
-                            <img src="../resources/images/main/key-visual-mo-scroll-img04.png" />
-                        </div>
-
-                        <div class="img-deco">
-                            <img src="../resources/images/main/keyvisual-deco-mo01.png">
-                            <img src="../resources/images/main/keyvisual-deco-mo03.png">
-                            <img src="../resources/images/main/keyvisual-deco-mo02.png">
-                        </div>
-                    </div>
-                    <div class="km-section km-section03">
-                        <div class="km-txt-wrap">
-                            <p class="km-txt1">차곡차곡 쌓은 포인트는</p>
-                            <p class="km-txt2">포인트 전환하고<br>모바일 교환권으로<br>바꿔보세요!</p>
-                            <p class="km-txt3">마이페이지에서 모은 포인트를 확인하고<br>똑똑하게 사용해보세요</p>
-                            <a href="#" class="km-link">포인트샵 바로가기</a>
-                        </div>
-
-                        <div class="img-deco">
-                            <img src="../resources/images/main/keyvisual-deco-mo04.png">
+                    <div class="txt-wrap">
+                        <p class="v-t1" data-aos="fade-up">허스트중앙 통합멤버십으로</p>
+                        <p class="v-t2" data-aos="fade-up" data-aos-delay="200">다채로운 매거진 콘텐츠와 <br>취향 맞춤 서비스를 한번에!</p>
+                        <p class="v-t3" data-aos="fade-up" data-aos-delay="400">엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와 <br class="pc">에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지</p>
+                        <div class="link-btn-wrap v-btn" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#" class="link-btn btn-v">
+                                <span class="link-btn-txt">멤버십 가입하기</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="scene-cover header-chg-bg">
-                    <div class="scene-cover__container">
-                        <div class="scene-cover__title"><span class="motion-wrap direction-up"><span>지금 바로
-                                    만나보세요!</span></span></div>
-                        <h2 class="scene-cover__subtitle"><span class="motion-wrap direction-up"><span>허스트중앙의 다양한 미디어
-                                    서비스</span></span></h2>
+                <div class="section visual join-point">
+                    <div class="txt-wrap">
+                        <p class="v-t1" data-aos="fade-up">가입 즉시 축하 포인트 지급</p>
+                        <p class="v-t2" data-aos="fade-up" data-aos-delay="200">가입 축하 포인트 받고 <br>콘텐츠 읽고 <br class="mo">포인트도 모아요!</p>
+                        <p class="v-t3" data-aos="fade-up" data-aos-delay="400">가입 후에는 매일 기사를 읽을 때마다 포인트 적립 <br>재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!</p>
+                        <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                            <a href="#" class="link-btn btn-v">
+                                <span class="link-btn-txt">매거진 보러가기</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-img">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img01.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img02.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img03.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../resources/images/main/key-visual-mo-scroll-img04.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-join.png">
+                            <img src="../resources/images/main/obj-point-join.png">
+                        </picture>
                     </div>
                 </div>
 
-                <section class="media-service">
-                    <div class="media-service__container">
-                        <article class="media-service__content media-service__content--elle header-chg-bg">
-                            <div class="media-service__text-wrap">
-                                <div class="media-service__text">
-                                    <h3 class="media-service__logo">
-                                        <img src="../resources/images/main/media-service_elle.svg" width="167"
-                                            height="56" alt="ELLE" />
-                                    </h3>
-                                    <div class="media-service__subtitle">NO.1 FASHION & LIFESTYLE MEDIA</div>
-                                    <div class="media-service__phrase">트렌디한 라이프스타일을 추구하는 <br>2535 여성들을 위한 국내 최고의 패션 미디어
+                <div class="section visual join-save">
+                    <div class="txt-wrap">
+                        <p class="v-t1" data-aos="fade-up">차곡차곡 쌓은 포인트는</p>
+                        <p class="v-t2" data-aos="fade-up" data-aos-delay="200">포인트 전환하고<br>모바일 상품권으로 바꿔보세요!</p>
+                        <p class="v-t3" data-aos="fade-up" data-aos-delay="400">마이페이지에서 모은 포인트를 확인하고<br>똑똑하게 사용해보세요</p>
+                        <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                            <a href="#" class="link-btn btn-v">
+                                <span class="link-btn-txt">포인트 샵 바로가기</span>
+                            </a>
+                        </div>
+                    </div> 
+                    <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="../resources/images/main/obj-point-save.png">
+                            <img src="../resources/images/main/obj-point-save.png">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="section w-bo head-mode-dark">
+                    <div class="txt-wrap">
+                        <p class="w-t1" data-aos="fade-up">지금 바로 만나보세요!</p>
+                        <p class="w-t2" data-aos="fade-up" data-aos-delay="200">허스트중앙의 다양한 미디어 서비스</p>
+                    </div> 
+                </div>
+
+                <div class="section media m1 head-mode-dark">
+                    <div class="m-in">
+                        <div class="txt-wrap">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_elle.svg" alt="ELLE">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">NO.1 FASHION &amp; LIFESTYLE MEDIA</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">글로벌 2,100만 독자와 함께 <br>세계 최대 네트워크를 자랑하는 No.1 패션 미디어</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v gray">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg1.png">
+                                <img src="../resources/images/main/m-bg1.png">
+                            </picture>
+                        </div>
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_elle-01.jpg">
                                     </div>
-                                    <a href="#" class="media-service__link section-link section-link--dark">바로가기</a>
-                                </div>
-                            </div>
-
-                            <div class="ms-img-wrap">
-                                <div class="ms-img ms-img1">
-                                    <img src="../resources/images/main/media-service_elle-01.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img2">
-                                    <img src="../resources/images/main/media-service_elle-02.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_elle-02.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img3">
-                                    <img src="../resources/images/main/media-service_elle-03.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img4">
-                                    <img src="../resources/images/main/media-service_elle-04.png" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img5">
-                                    <img src="../resources/images/main/media-service_elle-05.png" alt="" />
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="media-service__content media-service__content--cosmopolitan header-chg-bg">
-                            <div class="media-service__text-wrap">
-                                <div class="media-service__text">
-                                    <h3 class="media-service__logo">
-                                        <img src="../resources/images/main/media-service_cosmopolitan.svg" width="281"
-                                            height="56" alt="COSMOPOLITAN" />
-                                    </h3>
-                                    <div class="media-service__subtitle">FUN, FEARLESS, FEMALE</div>
-                                    <div class="media-service__phrase">건강하고, 당당한 라이프스타일을 추구하는<br> 밀레니얼 여성들을 위한 친절한 가이드
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_elle-02.jpg">
                                     </div>
-                                    <a href="#" class="media-service__link section-link">바로가기</a>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_elle-03.jpg">
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>                      
+                </div>
 
-                            <div class="ms-img-wrap">
-                                <div class="ms-img ms-img1">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-01.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img2">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-02.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_cosmopolitan-02.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img3">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-03.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_cosmopolitan-03.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_bazaar-03.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img4">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-04.png" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img5">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-05.png" alt="" />
-                                    <img src="../resources/images/main/media-service_cosmopolitan-05.png" alt="" />
-                                    <img src="../resources/images/main/media-service_bazaar-05.png" alt="" />
+                <div class="section media m2">
+                    <div class="m-in">
+                        <div class="txt-wrap">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_cosmopolitan.svg" alt="cosmopolitan">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">FUN, FEARLESS, FEMALE</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">국내 최대 판매 부수와 높은 정기구독률을 자랑하는<br>글로벌 라이프스타일 미디어</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg2.png">
+                                <img src="../resources/images/main/m-bg2.png">
+                            </picture>
+                        </div>
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_cosmopolitan-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_cosmopolitan-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_cosmopolitan-03.jpg">
+                                    </div>
                                 </div>
                             </div>
-                        </article>
-
-                        <article class="media-service__content media-service__content--bazaar header-chg-bg">
-                            <div class="media-service__text-wrap">
-                                <div class="media-service__text">
-                                    <h3 class="media-service__logo">
-                                        <img src="../resources/images/main/media-service_bazaar.svg" width="218"
-                                            height="56" alt="BAZAAR" />
-                                    </h3>
-                                    <div class="media-service__subtitle">FIRST IN FASHION</div>
-                                    <div class="media-service__phrase">하이 패션에 관심이 많은 커리어우먼을 위한<br> 프리미엄 패션 전문 매거진</div>
-                                    <a href="#" class="media-service__link section-link">바로가기</a>
-                                </div>
-                            </div>
-                            <div class="ms-img-wrap">
-                                <div class="ms-img ms-img1">
-                                    <img src="../resources/images/main/media-service_bazaar-01.jpg" alt="" />
-                                </div>
-                                <div class="ms-img ms-img2">
-                                    <img src="../resources/images/main/media-service_bazaar-02.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_bazaar-02.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img3">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-03.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_bazaar-03.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_esquire-03.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img4">
-                                    <img src="../resources/images/main/media-service_bazaar-04.png" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img5">
-                                    <img src="../resources/images/main/media-service_cosmopolitan-05.png" alt="" />
-                                    <img src="../resources/images/main/media-service_bazaar-05.png" alt="" />
-                                    <img src="../resources/images/main/media-service_esquire-05.png" alt="" />
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="media-service__content media-service__content--esquire header-chg-bg">
-                            <div class="media-service__text-wrap">
-                                <div class="media-service__text">
-                                    <h3 class="media-service__logo">
-                                        <img src="../resources/images/main/media-service_esquire.svg" width="293"
-                                            height="56" alt="Esquire" />
-                                    </h3>
-                                    <div class="media-service__subtitle">MAN AT HIS BEST</div>
-                                    <div class="media-service__phrase">취향이 남다른 남자들을 위한<br> 지적인 바이블</div>
-                                    <a href="#" class="media-service__link section-link">바로가기</a>
-                                </div>
-                            </div>
-                            <div class="ms-img-wrap">
-                                <div class="ms-img ms-img1">
-                                    <img src="../resources/images/main/media-service_esquire-01.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img2">
-                                    <img src="../resources/images/main/media-service_esquire-02.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_esquire-02.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img3">
-                                    <img src="../resources/images/main/media-service_bazaar-03.jpg" alt="" />
-                                    <img src="../resources/images/main/media-service_esquire-03.jpg" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img4">
-                                    <img src="../resources/images/main/media-service_esquire-04.png" alt="" />
-                                </div>
-
-                                <div class="ms-img ms-img5">
-                                    <img src="../resources/images/main/media-service_bazaar-05.png" alt="" />
-                                    <img src="../resources/images/main/media-service_esquire-05.png" alt="" />
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <div class="scene-cover header-chg-bg">
-                    <div class="scene-cover__container">
-                        <div class="scene-cover__title"><span class="motion-wrap direction-up"><span>다채롭게
-                                    경험해보세요</span></span></div>
-                        <h2 class="scene-cover__subtitle"><span class="motion-wrap direction-up"><span>개인 취향에 맞춘 테마별
-                                    서비스</span></span></h2>
+                        </div>
                     </div>
                 </div>
 
-                <section class="theme-service">
-                    <div class="theme-service__container">
-                        <article class="theme-service__content theme-service__content--elle-voice header-chg-bg">
-                            <div class="theme-service__text">
-                                <h3 class="theme-service__title">
-                                    <span class="motion-wrap direction-up"><strong>엘르보이스</strong></span>
-                                    <span class="motion-wrap direction-down"><span>이 시대 여성들의 <br>가장 반짝이는
-                                            목소리</span></span>
-                                </h3>
-                                <p class="theme-service__description"><span>작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<br>
-                                        동시대를 살아가는 여성들의 반짝이는 목소리</span></p>
-                                <a href="#" class="theme-service__link section-link section-link--dark">바로가기</a>
+                <div class="section media m3">
+                    <div class="m-in">
+                        <div class="txt-wrap">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_bazaar.svg" alt="bazaar">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">FIRST IN FASHION</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">현대 여성의 문화와 라이프스타일에<br>통찰력과 영감을 제공하는 전문 매거진</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
                             </div>
-                            <div class="theme-service__image">
-                                <img src="../resources/images/main/theme-service_ellevoice.png" width="849" height="729"
-                                    alt="">
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg3.png">
+                                <img src="../resources/images/main/m-bg3.png">
+                            </picture>
+                        </div>
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_bazaar-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_bazaar-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_bazaar-03.jpg">
+                                    </div>
+                                </div>
                             </div>
-                        </article>
-                        <article class="theme-service__content theme-service__content--close-up header-chg-bg">
-                            <div class="theme-service__text">
-                                <h3 class="theme-service__title">
-                                    <span class="motion-wrap direction-up"><strong>클로즈업</strong></span>
-                                    <span class="motion-wrap direction-down"><span>진솔하게 이야기하는 <br>직장이 아닌 ‘직업'
-                                            이야기</span></span>
-                                </h3>
-                                <p class="theme-service__description"><span>직장이 아닌 직업에 대한 이야기,<br>
-                                        궁금하지만 누구도 말해주지 않았던 숨겨진 직업까지</span></p>
-                                <a href="#" class="theme-service__link section-link">바로가기</a>
+                        </div>
+                    </div>                      
+                </div>
+
+                <div class="section media m4">
+                    <div class="m-in">
+                        <div class="txt-wrap fade-up">
+                            <h3 class="m-logo" data-aos="fade-up">
+                                <img src="../resources/images/main/media-service_esquire.svg" alt="esquire">
+                            </h3>
+                            <p class="m-t1" data-aos="fade-up" data-aos-delay="200">MAN AT HIS BEST</p>
+                            <p class="m-t2" data-aos="fade-up" data-aos-delay="400">취향이 남다른 남자들을 위한<br>지적인 바이블</p>
+                            <div class="link-btn-wrap v-btn" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
                             </div>
-                            <div class="theme-service__image">
-                                <img src="../resources/images/main/theme-service_closeup.png" width="849" height="729"
-                                    alt="">
+                        </div>
+                        <div class="v-bg" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/m-bg4.png">
+                                <img src="../resources/images/main/m-bg4.png">
+                            </picture>
+                        </div>
+                        <div class="m-img" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_esquire-02.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_esquire-01.jpg">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../resources/images/main/media-service_esquire-03.jpg">
+                                    </div>
+                                </div>
                             </div>
-                        </article>
-                        <article class="theme-service__content theme-service__content--art-walk header-chg-bg">
-                            <div class="theme-service__text">
-                                <h3 class="theme-service__title">
-                                    <span class="motion-wrap direction-up"><strong>예술산책</strong></span>
-                                    <span class="motion-wrap direction-down"><span>다양한 소식을 발빠르게 <br>하퍼스바자 ‘산책
-                                            메이트'</span></span>
-                                </h3>
-                                <p class="theme-service__description"><span>작품과 작가를 가장 가까이에서 만날 수 있는<br>
-                                        스페셜 세션까지 아우르는 서비스</span></p>
-                                <a href="#" class="theme-service__link section-link">바로가기</a>
-                            </div>
-                            <div class="theme-service__image">
-                                <img src="../resources/images/main/theme-service_artwalk.png" width="849" height="729"
-                                    alt="">
-                            </div>
-                        </article>
-                        <article class="theme-service__content theme-service__content--eee header-chg-bg">
-                            <div class="theme-service__text">
-                                <h3 class="theme-service__title">
-                                    <span class="motion-wrap direction-up"><strong>eee</strong></span>
-                                    <span class="motion-wrap direction-down"><span>에디터가 선정한 <br>‘나만의 핫플'
-                                            찾기</span></span>
-                                </h3>
-                                <p class="theme-service__description"><span>에스콰이어 에디터들의 에센셜한 장소 정보 서비스<br>
-                                        특별한 장소를 지금 찾아보세요!</span></p>
-                                <a href="#" class="theme-service__link section-link section-link--dark">바로가기</a>
-                            </div>
-                            <div class="theme-service__image">
-                                <img src="../resources/images/main/theme-service_eee.png" width="849" height="729"
-                                    alt="">
-                            </div>
-                        </article>
+                        </div>
                     </div>
-                </section>
+                </div>
+
+                <div class="section w-bo head-mode-dark">
+                    <div class="txt-wrap">
+                        <p class="w-t1" data-aos="fade-up">다채롭게 경험해보세요</p>
+                        <p class="w-t2" data-aos="fade-up" data-aos-delay="200">개인 취향에 맞춘 테마별 서비스</p>
+                    </div> 
+                </div>
+
+                <div class="section vertical elle head-mode-dark">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt dark" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">엘르보이스</span>
+                                <span class="vt-t2">여성의 삶,<br>레퍼런스가 필요할 때</span>
+                                <span class="vt-t3">작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<br>동시대를 살아가는 여성들의 에세이 <br class="mo">뉴스레터를 구독해보세요.</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v gray">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_ellevoice-mo.png">
+                                <img src="../resources/images/main/theme-service_ellevoice.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section vertical close-up">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt light" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">클로즈업</span>
+                                <span class="vt-t2">내가 궁금해하는<br>요즘 직업</span>
+                                <span class="vt-t3">인터뷰, 칼럼, 줌 라이브를 통해 다양한 직업에 대해 이야기하고<br class="pc"> 유저의 커리어 성장을 돕는 <br class="mo">웹 서비스를 경험해보세요!</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_closeup-mo.png">
+                                <img src="../resources/images/main/theme-service_closeup.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section vertical artwalk">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt light" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">예술산책</span>
+                                <span class="vt-t2">‘예술'을 ‘산책'하듯 가볍게 즐기는<br>아트 큐레이션 서비스</span>
+                                <span class="vt-t3">지금 국내의 아트신에서 펼쳐지고 있는<br>주요 전시와 이슈들을 확인해보세요!</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_artwalk-mo.png">
+                                <img src="../resources/images/main/theme-service_artwalk.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section vertical eee head-mode-dark">
+                    <div class="vt-in cont_inner">
+                        <div class="col-txt dark" data-aos="fade-up">
+                            <div class="text-wrap">
+                                <span class="vt-t1">eee</span>
+                                <span class="vt-t2">에스콰이어 에디터가<br>기록하는 핫플 수첩</span>
+                                <span class="vt-t3">맛집부터 카페, 여행, 노포까지<br>에디터의 시각으로 수집한 공간에서<br>나만의 취향을 발견해보세요.</span>
+                            </div>
+                            <div class="link-btn-wrap v-btn">
+                                <a href="#" class="link-btn btn-v gray">
+                                    <span class="link-btn-txt">바로가기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-img" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500">
+                            <picture>
+                                <source media="(max-width:768px)" srcset="../resources/images/main/theme-service_eee-mo.png">
+                                <img src="../resources/images/main/theme-service_eee.png">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="section fp-auto-height head-mode-dark" data-anchor="FOOT">
+                    <footer id="footer" class="footer">
+                        <div class="footer_top">
+                            <div class="cont_inner">
+                                <div class="footer_link">
+                                    <ul>
+                                        <li><a href="#" target="_blank">이용약관</a></li>
+                                        <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+                                        <li><a href="#" target="_blank">이메일무단수집금지</a></li>
+                                        <li><a href="#" target="_blank">윤리경영</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="footer_bottom">
+                            <div class="cont_inner">
+                                <div class="footer_info">
+                                    <address class="addr_wrap">
+
+                                        <div class="addr_txt">
+                                            <em>허스트중앙(유)</em>
+                                            <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+                                            <span class="ceo">대표자 : 강주연</span>
+                                            <br class="pc_br">
+                                            <span class="num">사업자등록번호 : 104-81-55280</span>
+                                            <br class="mo_br">
+                                            <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+                                        </div>
+                                    </address>
+                                    <p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- //footer -->
             </div>
 
             <div class="floating-menu">
@@ -602,50 +608,23 @@
             </div>
         </div>
         <!-- //container -->
-
-        <!-- footer -->
-        <footer id="footer" class="footer">
-            <div class="footer_top">
-                <div class="cont_inner">
-                    <div class="footer_link">
-                        <ul>
-                            <li><a href="#" target="_blank">이용약관</a></li>
-                            <li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
-                            <li><a href="#" target="_blank">이메일무단수집금지</a></li>
-                            <li><a href="#" target="_blank">윤리경영</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <div class="footer_bottom">
-                <div class="cont_inner">
-                    <div class="footer_info">
-                        <address class="addr_wrap">
-
-                            <div class="addr_txt">
-                                <em>허스트중앙(유)</em>
-                                <span class="addr">서울시 강남구 도산대로 156(논현동)</span>
-                                <span class="ceo">대표자 : 강주연</span>
-                                <br class="pc_br">
-                                <span class="num">사업자등록번호 : 104-81-55280</span>
-                                <br class="mo_br">
-                                <span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-                            </div>
-                        </address>
-                        <p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- //footer -->
     </div>
+
+    <!-- fullpage.js -->
+	<link rel="stylesheet" href="../resources/css/fullpage.min.css">
+	<script src="../resources/js/fullpage.min.js"></script>
+	<!-- //fullpage.js -->
+
+    <!-- aos.js -->
+	<link rel="stylesheet" href="../resources/css/aos.css">
+	<script src="../resources/js/aos.js"></script>
+	<!-- //aos.js -->
 
     <!-- js -->
     <script src="../resources/js/swiper.min.js"></script>
     <script src="../resources/js/ui.common.js"></script>
-    <script src="../resources/js/jquery.nicescroll.min.js"></script>
-    <script src="../resources/js/main.js" async></script>
+    <script src="../resources/js/main.js"></script>
+
 </body>
 
 </html>

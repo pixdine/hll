@@ -206,9 +206,16 @@
         <div id="container" class="container mm">
             <div id="fullpage" class="fullpage">
                 <div class="section visual">
-                    <video class="visual-video" muted playsinline>
+                    <!-- 2023-12-29 -->
+                    <video class="visual-video pc_br" muted playsinline id="visualVideoPc">
                         <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
                     </video>
+
+                    <!-- 2023-12-29 -->
+                    <video class="visual-video mo_br" muted playsinline id="visualVideoMo">
+                        <source src="../resources/videos/main/key-visual-mo.mp4" type="video/mp4" />
+                    </video>
+
                     <div class="txt-wrap">
                         <p class="v-t1" data-aos="fade-up">허스트중앙 통합멤버십으로</p>
                         <p class="v-t2" data-aos="fade-up" data-aos-delay="200">다채로운 매거진 콘텐츠와 <br>취향 맞춤 서비스를 한번에!</p>
@@ -616,175 +623,8 @@
     <!-- js -->
     <script src="../resources/js/swiper.min.js"></script>
     <script src="../resources/js/ui.common.js"></script>
+    <script src="../resources/js/main.js"></script>
 
-    <script>
-        $(() => {
-            // 플로팅메뉴 프로토타입
-            $.fn.floatingMenu = function () {
-                var fmBody = this;
-                var fmSection = fmBody.find(".fm-section");
-                var fmBtn = fmBody.find(".btn-f");
-                fmBtn.on("click", function () {
-                    var chkCondition = $(this).hasClass("active");
-                    if (!chkCondition) {
-                        $(this).addClass("active").attr("title", "플로팅메뉴 닫기").children().text("닫기");
-                        fmSection.stop().slideDown(200);
-                    } else {
-                        $(this).removeClass("active").attr("title", "플로팅메뉴 열기").children().text("열기");
-                        fmSection.stop().slideUp(200);
-                    }
-                });
-
-                // 오프닝 텍스트 모션 사라지고 보이게
-                setTimeout(()=>{
-                    fmBody.addClass('active');
-                }, 2500)
-            };
-
-            $('.floating-menu').floatingMenu();
-
-            function init() {
-                AOS.init({
-                    once: true
-                });  // AOS initiation
-                $('.aos-init').removeClass('aos-animate'); // remove ALL classes which triggers animation in document
-            }
-            init();
-
-            // fullpage
-            // let isFullpageInitialized = false;
-            let visualVod = $('.visual-video').get(0);
-            let sectionIndex = 0;
-            const $section = $('.section');
-            const sectionLength = $section.length;
-
-            function initVideo() {
-                $section.eq(0).find('[data-aos]').removeClass("aos-animate");
-                visualVod.play();
-                setTimeout(()=>{
-                    $section.eq(0).addClass('start');
-                    $section.eq(0).find('[data-aos]').addClass("aos-animate");
-                }, 2200);
-            }
-            
-            function initializeFullpage() {
-                $('#fullpage').fullpage({
-                    anchors: ['MAIN', 'JOIN-POINT', 'JOIN-SAVE', 'BO1', 'ELLE', 'COSMOPOLITAN', 'BAZAAR', 'ESQUIRE', 'BO2', 'ELLEVOICE', 'CLOSEUP', 'ARTWALK', 'EEE', 'FOOT'],
-                    // sectionsColor: ['#fff', '#111', '', ''],
-                    scrollingSpeed: 900,
-                    easingcss3: 'cubic-bezier(0.4, 0.12, 0.21, 1)',
-                    lockAnchors: true,
-                    recordHistory: false,
-                    verticalCentered: false,
-                    bigSectionsDestination: top,
-                    // disableMutationObserver: false,
-
-                    // ** 페이지를 불러온 후
-                    afterLoad: function(anchorLink, index) {
-                        const realIndex = index - 1;
-                        const prevIndex = realIndex - 1;
-
-                        sectionIndex = realIndex;
-
-                        // 스크롤 다운 시, head mode check
-                        if($section.eq(realIndex).hasClass('head-mode-dark')) {
-                            $('.header').addClass('dark');
-                        } else {
-                            $('.header').removeClass('dark');
-                        }
-
-                        
-
-                        // visualVod.load();
-
-                        // footer 바로 위 section을 제외한 sections에서 aos-animate remove
-                        if(index !== sectionLength) {
-                            $section.find('[data-aos]').removeClass("aos-animate");
-                        }
-
-                        if(realIndex === 0) {
-                            // video 로드가 완룐 된 후에 재생시키기
-                            // visualVod.oncanplaythrough = function() {
-                            //     visualVod.play();
-                            // }
-                            // if(visualVod.paused) {
-                            //     console.log('동영상 재생');
-                            //     visualVod.load(); 
-                            // }
-                            
-                            visualVod.load(); 
-                            $('.visual-video').on('loadeddata', function() {
-                                console.log('로드완료');
-                                
-                                initVideo();
-                                setInterval(function(){
-                                    if($('.visual-video').prop('ended')) {
-                                        console.log('영상 종료');
-                                        initVideo();
-                                    }
-                                }, 200);
-                            });
-                            
-                        } else {
-                            $section.eq(realIndex).find('[data-aos]').addClass("aos-animate");
-
-                            // 동영상 정지 시키고, 처음으로 돌리기
-                            visualVod.pause();
-                            visualVod.currentTime = 0;;
-                        }
-                    },
-
-                    // ** 페이지를 떠날때
-                    onLeave: (index, nextIndex, direction) => {
-                        // console.log("index", index, nextIndex, direction);
-
-                        // 스크롤 업할때, head mode check
-                        if(direction === 'up') {
-                            if($section.eq(nextIndex-1).hasClass('head-mode-dark')) {
-                                $('.header').addClass('dark');
-                            } else {
-                                $('.header').removeClass('dark');
-                            }
-                        }
-                    },
-
-                    afterResize: () => {
-                        // setTimeout(() => {
-                        //     visualVod.play();
-                        // }, 100);
-                    }
-                });
-
-            }
-
-            // 최초 실행
-            initializeFullpage();
-
-            // mobile media images swiper
-            var magazine = new Swiper('.join-point .m-img .swiper-container', {
-                slidesPerView: "auto",
-                spaceBetween: 12,
-                freeMode: true,
-                loop: true,
-                speed: 5000,
-                autoplay: {
-                    delay: 0,
-                    disableOnInteraction: false,
-                },
-            });
-
-            var mediaOptions = {
-                slidesPerView: "auto",
-                spaceBetween: 11,
-                freeMode: true,
-            };
-
-            var mediaElle = new Swiper('.media.m1 .m-img .swiper-container', mediaOptions);
-            var mediaCosmopolitan = new Swiper('.media.m2 .m-img .swiper-container', mediaOptions);
-            var mediaBazaar = new Swiper('.media.m3 .m-img .swiper-container', mediaOptions);
-            var mediaEsquire = new Swiper('.media.m4 .m-img .swiper-container', mediaOptions);
-        });
-    </script>
 </body>
 
 </html>

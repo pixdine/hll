@@ -100,6 +100,7 @@ a:hover{text-decoration:none;}
 .tal{text-align:left !important;}
 .tar{text-align:right !important;}
 .tac{text-align:center !important;}
+.pc_br{display: block !important;}
 .mo_br{display:none;}
 .font_type01 { font-family:'Gotham'}
 
@@ -899,6 +900,8 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 }
 
 @media (max-width:767px){
+	.pc_br {display: none !important;}
+	.mo_br {display: block !important;}
 
 	.container { padding:84px 0 80px;}
 	.tooltip_layer p {max-width:250px; }

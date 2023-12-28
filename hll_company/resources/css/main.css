@@ -10,7 +10,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 .main_header.mode-white .gnb_link:before{background-color: #fff;}
 .main_header.mode-white .btn-open-am rect{fill: #fff;}
 .main_container .section{position: relative;overflow: hidden;}
-.main_container .section:not(.footer){max-width: 1920px;margin: 0 auto;}
+/* .main_container .section:not(.footer){max-width: 1920px;margin: 0 auto;} */
 .main_container .ms_inner{position: relative;height: 100vh;padding-top: 72px;}
 .main_container .intro_video{position: absolute;bottom: 0;left: 50%;min-width: 100%;min-height:100%;transform: translateX(-50%);}
 .main_container .intro_first{position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 2;background: #fff;transition: 0.5s;}

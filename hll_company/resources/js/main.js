@@ -2,6 +2,8 @@ $(document).ready(function () {
   // 메인 풀페이지
   var isFullpageInitialized = false;
   var fullpageApi;
+  var introVideoPc = document.querySelector("#introVideoPc");
+  var introVideoMo = document.querySelector("#introVideoMo");
 
   function initializeFullpage() {
     var wheelCount = 0;
@@ -18,10 +20,11 @@ $(document).ready(function () {
 
       // ** 페이지를 불러온 후
       afterLoad: function (anchorLink, index, direction) {
-        console.log("index", index, direction);
+        let width = this.width();
+        // console.log("index", index, direction);
 
         if (index === 1) {
-          var introVod = document.querySelector(".intro_video");
+          // var introVod = document.querySelector(".intro_video");
 
           $(".section")
             .eq(index - 1)
@@ -34,9 +37,10 @@ $(document).ready(function () {
 
           setTimeout(() => {
             $(".intro_first").addClass("active");
-            introVod.play();
+            // introVod.play();
+            handleVideo(width);
             if (!$(".section").eq(index).hasClass("after-load")) {
-              console.log("START!!");
+              // console.log("START!!");
               $(".header").addClass("mode-white");
             }
           }, 1300);
@@ -62,7 +66,7 @@ $(document).ready(function () {
       // ** 페이지를 떠날때
       onLeave: function (origin, destination, direction, index) {
         var prevIndex = destination - 1;
-        console.log("destination", destination, direction, origin);
+        // console.log("destination", destination, direction, origin);
 
         // AOS.refresh();
         if (origin == 1 && wheelCount < 1) {
@@ -99,6 +103,10 @@ $(document).ready(function () {
       afterRender: function () {
         fullpageApi = this; // 이렇게 하면 fullpageApi 변수에 API 객체가 저장됩니다.
       },
+      afterResize: function() {
+        let width = this.width();
+        handleVideo(width);
+      }
     });
 
     isFullpageInitialized = true;
@@ -147,6 +155,20 @@ $(document).ready(function () {
     }
     // Fullpage를 다시 초기화합니다.
     initializeFullpage();
+  }
+
+  // 디바이스에 따라 영상 실행 핸들러
+  function handleVideo(width) {
+    if(width <= 768) {
+      console.log("mobile");
+      introVideoMo.play();
+      //  introVideoPc.pause();
+      introVideoPc.currentTime = 0;
+    } else {
+      introVideoPc.play();
+      // introVideoMo.pause();
+      introVideoMo.currentTime = 0;
+    }
   }
 
   // 최초 실행

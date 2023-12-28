@@ -157,6 +157,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 :-moz-placeholder{color:#999;font-size:16px;font-weight:500;}
 
 .pc-br {display: block !important;}
+.mo-br {display: none !important;}
 
 /* checkbox */
 .chk_in{display:inline-block;position:relative;}
@@ -509,6 +510,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 @media screen and (max-width: 768px) {
 	.pc-br {display: none !important;}
+	.mo-br {display: block !important;}
 
     .cont_inner {padding: 0 20px;}
 

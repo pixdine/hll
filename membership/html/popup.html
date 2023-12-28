@@ -169,7 +169,7 @@
 						<button type="button" data-popup-open="popup_1"><span>이용약관</span></button><br>
                         <button type="button" data-popup-open="popup_13"><span>허스트중앙(유) 온라인 서비스 이용 약관(필수)</span></button><br>
                         <button type="button" data-popup-open="popup_14"><span>개인정보 수집 및 이용에 대한 안내(필수)</span></button><br>
-                       <!-- <button type="button" data-popup-open="popup_15"><span>개인정보 취급위탁에 대한 안내 (필수)</span></button><br>-->
+                        <!-- <button type="button" data-popup-open="popup_15"><span>개인정보 취급위탁에 대한 안내 (필수)</span></button><br>-->
                         <button type="button" data-popup-open="popup_16"><span>마케팅 목적의 활용 동의 (선택)</span></button><br>
                         <button type="button" data-popup-open="popup_2"><span>허스트중앙 회원탈퇴</span></button><br>
 						<button type="button" data-popup-open="popup_3"><span>아이디 찾기</span></button><br>
@@ -177,7 +177,7 @@
                         <button type="button" data-popup-open="popup_7"><span>비밀번호 변경</span></button><br>
                         <button type="button" data-popup-open="popup_5"><span>오늘 획득 포인트</span></button><br>
                         <button type="button" data-popup-open="popup_6"><span>전체 누적 포인트</span></button><br>
-                       <!-- <button type="button" data-popup-open="popup_11"><span>통합로그인 >  iframe</span></button><br>-->
+                        <!-- <button type="button" data-popup-open="popup_11"><span>통합로그인 >  iframe</span></button><br>-->
                         <button type="button" data-popup-open="popup_8"><span>회원가입 불가</span></button><br>
                         <button type="button" data-popup-open="popup_12"><span>통합로그인</span></button><br>
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
@@ -191,6 +191,10 @@
                         <button type="button" data-alert-open="alert_9"><span>얼럿9_비밀번호변경</span></button><br>
                         <button type="button" data-alert-open="alert_10"><span>얼럿10_포인트 전환</span></button><br>
                         <button type="button" data-alert-open="alert_12"><span>얼럿12_오류발생</span></button><br>
+                        <!--S: 2023-12-28 : 로그인 실패 팝업 추가 -->
+                        <button type="button" data-alert-open="login_al1"><span>얼럿1_로그인실패</span></button><br>
+                        <button type="button" data-alert-open="login_al2"><span>얼럿2_로그인실패_비밀번호재설정</span></button><br>
+                        <!--E: 2023-12-28 : 로그인 실패 팝업 추가 -->
 					</div>
                 </div>
             </div>
@@ -851,7 +855,7 @@
                 </div>
             </div>
             <div class="popup_cont">
-               <div class="gray_box">
+                <div class="gray_box">
                     <div class="box_inner">
                         <p class="txt">
                             김중앙님,<br>
@@ -862,7 +866,7 @@
                             복구가 불가능하니 이 점 참고하시기 바랍니다
                         </p>
                     </div>
-               </div>
+                </div>
 
 
                 <dl class="input_type01">
@@ -1494,6 +1498,52 @@
         </div>
     </div>
 
+    <!--S: 2023-12-28 : 로그인 실패 팝업 추가 --> 
+    <!--D : 로그인실패 alter -->
+    <div class="popup_alert" data-alert="login_al1">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    아이디와 비밀번호를 확인해 주세요.
+                </p>
+                <p class="alert_num">(<span>N</span>/ 10)</p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="login_al1"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--D : 로그인실패 비밀번호 재설정 alter -->
+    <div class="popup_alert" data-alert="login_al2">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    아이디와 비밀번호를 확인해 주세요.
+                </p>
+                <p class="alert_num">(<span>N</span>/ 10)</p>
+                <p class="alert_subtxt">
+                    로그인 오류가 10회를 초과하여 로그인이 제한됩니다.<br/>
+                    비밀번호 재설정 후 로그인을 진행해 주세요.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>비밀번호 재설정</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="login_al2"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!--E: 2023-12-28 : 로그인 실패 팝업 추가 --> 
 
 
 	<!-- js -->

@@ -629,6 +629,7 @@ background:#fff;overflow:hidden;z-index:230}
 .popup_alert_cont .alert_subtxt{margin-bottom:-16px;font-size:12px;font-weight:400;line-height:17px;}
 .popup_alert_cont .alert_num +.alert_subtxt{margin-top:24px;}
 .popup_alert_cont .alert_num{font-size:12px;font-weight:400;line-height:17px;}
+.popup_alert_cont .alert_num span{color:#FF0000;}
 .popup_alert_bottom{padding:16px 28px 28px;}
 .popup_alert_bottom .btn_wrap{display:flex;justify-content:space-between;margin:0 -8px;}
 .popup_alert_bottom .btn_wrap button{width:100%;min-width:auto;margin:0 8px;}

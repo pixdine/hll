@@ -626,10 +626,14 @@ background:#fff;overflow:hidden;z-index:230}
 .alert_txt span.stxt { display:block; font-size:14px; color:#999; line-height:20px; margin-top:8px}
 .popup_alert_cont .alert_txt span { display:block}
 .popup_alert_cont .alert_txt span em {color:var(--point)}
+.popup_alert_cont .alert_subtxt{margin-bottom:-16px;font-size:12px;font-weight:400;line-height:17px;}
+.popup_alert_cont .alert_num +.alert_subtxt{margin-top:24px;}
+.popup_alert_cont .alert_num{font-size:12px;font-weight:400;line-height:17px;}
 .popup_alert_bottom{padding:16px 28px 28px;}
 .popup_alert_bottom .btn_wrap{display:flex;justify-content:space-between;margin:0 -8px;}
 .popup_alert_bottom .btn_wrap button{width:100%;min-width:auto;margin:0 8px;}
 .popup_alert .popup_close{right:18px;top:14px;}
+
 
 /* 통합로그인 */
 .popup_full.common_login .popup_cont .cont_inner { padding:0 0 30px 0}

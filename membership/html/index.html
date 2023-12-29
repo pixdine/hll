@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/member.css" />
-    <link rel="stylesheet" type="text/css" href="../resources/css/main2.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css" /><!-- 2023-12-29 : 메인css 정리 및 통합하여 main2.css를 main.css로 변경 -->
     <script src="../resources/js/jquery-3.6.0.min.js"></script>
     <script src="../resources/js/jquery-ui.min.js"></script>
     <!-- //css, Jquery -->
@@ -206,15 +206,14 @@
         <div id="container" class="container mm">
             <div id="fullpage" class="fullpage">
                 <div class="section visual">
-                    <!-- 2023-12-29 -->
+                    <!-- 2023-12-29 : 동영상 분기처리 -->
                     <video class="visual-video pc_br" muted playsinline id="visualVideoPc">
                         <source src="../resources/videos/main/key-visual.mp4" type="video/mp4" />
                     </video>
-
-                    <!-- 2023-12-29 -->
                     <video class="visual-video mo_br" muted playsinline id="visualVideoMo">
                         <source src="../resources/videos/main/key-visual-mo.mp4" type="video/mp4" />
                     </video>
+                    <!-- //2023-12-29 : 동영상 분기처리 -->
 
                     <div class="txt-wrap">
                         <p class="v-t1" data-aos="fade-up">허스트중앙 통합멤버십으로</p>
@@ -623,7 +622,7 @@
     <!-- js -->
     <script src="../resources/js/swiper.min.js"></script>
     <script src="../resources/js/ui.common.js"></script>
-    <script src="../resources/js/main.js"></script>
+    <script src="../resources/js/main.js"></script><!-- 2023-12-29 : 메인js 파일 분리 -->
 
 </body>
 

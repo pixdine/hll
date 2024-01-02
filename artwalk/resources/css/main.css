@@ -40,7 +40,8 @@
 .art_main_visual .mv_slide_item:nth-of-type(2n+2) .art_v_guide_sub{padding-right: 100px;}
 .art_main_visual .mv_slide_item:nth-of-type(2n+1).active-before .art_v_img{width: 100%;height: 0;animation: heightTo100 1s;}
 .art_main_visual .mv_slide_item:nth-of-type(2n+2).active-before .art_v_img{width: 0;height: 100%;animation: widthTo100 1s;}
-.art_main_visual .btn_move{position: absolute;top: 50%;z-index: 10;width: 48px;transform: translateY(-50%);cursor: pointer;opacity: 0.6;}
+.art_main_visual .btn_move{position: absolute;top: 50%;z-index: 10;width: 60px;transform: translateY(-50%);cursor: pointer;opacity: 0.6;}
+.art_main_visual .btn_move:hover{opacity:1;}
 .art_main_visual .btn_next{right: 80px;}
 .art_main_visual .btn_prev{left: 80px;}
 .art_main_visual .rotate_txt{position: absolute;top: 15%;left: calc(50% + 40px);z-index: 10;width: 8.333%;max-width: 160px;animation: rotate360 20s linear infinite;}

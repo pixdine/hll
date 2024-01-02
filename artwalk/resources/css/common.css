@@ -725,7 +725,7 @@ background:#fff;overflow:hidden;z-index:230}
 .ex_info .button_next{right: -88px;}
 .ex_info .mo_br{display: none;}
 .ex_info .cont_inner{position: relative;}
-.ex_info .swiper_pc_3_mo_auto{position:relative;}
+.ex_info .swiper_pc_3_mo_auto{position:relative;max-width:1199px;margin:0 auto;}
 .ex_info .swiper_pc_3_mo_auto .swiper{overflow:hidden;}
 .ex_info .swiper_pc_3_mo_auto .swiper-slide{position: relative;}
 .ex_info .swiper_pc_3_mo_auto .swiper-slide a{display: block;}

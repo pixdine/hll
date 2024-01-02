@@ -18,11 +18,11 @@
 .kv_swiper .swiper-pagination-bullet:before{content:'';display:block;position:absolute;top:0;right:0;bottom:0;left:0;}
 .kv_swiper .swiper-pagination-bullet-active:before{background-color:#fff;animation:slideProgress 5s linear forwards;}
 .kv_swiper .btn_prev,
-.kv_swiper .btn_next{position:absolute;top:50%;transform:translateY(-50%);width:22px;height:44px;font-size:0;cursor:pointer;background:url('../images/ico_arrow02.svg') no-repeat 0 0 / 22px auto;z-index:2;opacity:.6;}
+.kv_swiper .btn_next{position:absolute;top:50%;transform:translateY(-50%);width:60px;height:60px;font-size:0;cursor:pointer;background:url('../images/ico_arrow02.svg') no-repeat center center / 100% auto;z-index:2;opacity:.6;}
 .kv_swiper .btn_prev:hover,
 .kv_swiper .btn_next:hover{opacity:1;}
-.kv_swiper .btn_prev{left:56px;transform:translateY(-50%) rotate(-180deg);}
-.kv_swiper .btn_next{right:56px;}
+.kv_swiper .btn_prev{left:48px;transform:translateY(-50%) rotate(-180deg);}
+.kv_swiper .btn_next{right:48px;}
 .is_pc .kv_swiper .txtbox .tit,
 .is_pc .kv_swiper .txtbox .txt{opacity:0;}
 .is_pc .kv_swiper .swiper-slide-active .txtbox .tit{opacity:1;animation:fadeIn 2s .2s both;}
@@ -783,8 +783,12 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.photoViewer .pv_cont .swiper-slide{display: block; width: 100vw !important; height: 100%;}
 	.photoViewer .pv_cont .swiper-slide img{width: 100%; height: auto;}
 	.photoViewer .pv_cont .swiper-slide .caption{margin: 8px 0 0 20px; font-size: 14px; line-height: 24px; text-align: left;}
-	.photoViewer .pv_next {right: 20px; margin-right: 0;}
-	.photoViewer .pv_prev {left: 20px; margin-left: 0;}
+	.photoViewer .pv_next,
+	.photoViewer .pv_prev{height:28px;background-position:center center;background-repeat:no-repeat;background-size:100% auto;}
+	.photoViewer .pv_next img,
+	.photoViewer .pv_prev img{display:none;}
+	.photoViewer .pv_next {right: 20px; margin-right: 0; background-image:url('../images/photo_viewer_next_mo.png');}
+	.photoViewer .pv_prev {left: 20px; margin-left: 0; background-image:url('../images/photo_viewer_prev_mo.png');}
 	.photoViewer .pvSwiper ~ button[role="button"] {width: 24px; opacity: 0.6; transform: translateY(calc(-50% - 16px));}
 	.photoViewer .pv_close {top: 68px; right: 20px; width: 20px; height:20px;}
 	.photoViewer .pv_close img{width:100%;height:100%;}

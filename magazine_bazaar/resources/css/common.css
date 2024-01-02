@@ -747,10 +747,10 @@ background:#fff;overflow:hidden;z-index:230}
 .promo_bnr_list .control .swiper-pagination{font-size:0;pointer-events:auto;}
 .promo_bnr_list .control .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:40px;height:2px;margin:0 4px;cursor:pointer;background-color:rgba(255,255,255,.2);}
 .promo_bnr_list .control .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(255,255,255,1);}
-.promo_bnr_list .btnbox{display:none;justify-content:space-between;position:absolute;left:40px;right:40px;top:0;padding-top:calc(29.667% - 28px);pointer-events:none;}
+.promo_bnr_list .btnbox{display:none;justify-content:space-between;position:absolute;left:48px;right:48px;top:0;padding-top:calc(29.667% - 28px);pointer-events:none;}
 .promo_bnr_list.swiper-container-initialized .btnbox{display:flex;}
 .promo_bnr_list .btn_prev,
-.promo_bnr_list .btn_next{width:48px;height:48px;font-size:0;cursor:pointer;pointer-events:auto;background:url('../images/ico_arrow02.svg') no-repeat center center / 22px auto;z-index:2;opacity:.6;}
+.promo_bnr_list .btn_next{width:60px;height:60px;font-size:0;cursor:pointer;pointer-events:auto;background:url('../images/ico_arrow02.svg') no-repeat center center / 100% auto;z-index:2;opacity:.6;}
 .promo_bnr_list .btn_prev:hover,
 .promo_bnr_list .btn_next:hover{opacity:1;}
 .promo_bnr_list .btn_prev{transform:rotate(-180deg);}

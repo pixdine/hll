@@ -147,7 +147,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
     .main_container .section8 .media_logo{height: 44px;} 
     .main_container .section9 .media_logo{height: 32px;} 
 
-    .main_container .section_img{padding-top: 40px;}
+    /* .main_container .section_img{padding-top: 40px;} */
     .main_container .section_img img{max-height: none;}
     /* .main_container .section_img img{opacity: 0;max-height: none;} */
 
@@ -189,7 +189,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
     .main_container .media_desc{padding: 0 40px 40px;}
 } */
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
     .main_container .section_img{padding-top: 0;}
     .main_container .media_desc{padding: 0 40px 90px;}
-}
+} */

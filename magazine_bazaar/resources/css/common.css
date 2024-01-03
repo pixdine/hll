@@ -266,9 +266,9 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* 구글광고배너 */
 .ad_google{text-align:center;}
-.ad_top{position:relative;margin:50px auto;text-align:center;z-index:2;}
-.ad_inread{width:100%;margin:50px auto;text-align:center;}
-li.ad_inread{width:100% !important;margin:0 auto;padding:0 !important;}
+.ad_top{position:relative;margin:20px auto;text-align:center;z-index:2;}
+.ad_inread{width:100%;margin:180px auto;text-align:center;}
+.atc_list li.ad_inread{width:100%;margin:0 auto;padding:0;}
 
 /* header 공통스타일 */
 .header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}
@@ -910,9 +910,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.cont_inner{padding:0 20px;}
 
 	/* 구글광고배너 */
-	.ad_top{margin:30px auto;}
-	.ad_inread{margin:30px auto;}
-	li.ad_inread{margin:6px auto;}
+	.ad_inread{margin:80px auto;}
 
 	.btn{min-width:auto;}
 	.has_plus:after{background-size:12px auto;}

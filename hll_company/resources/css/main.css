@@ -113,6 +113,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
     .main_header.mode-white .gnb_link{color: #111;}
     .main_container .section{height: calc(var(--var, 1vh) * 100);}
     .main_container .ms_inner{padding-top: 0;}
+    .main_container .intro_video{left: 0;transform: translateX(0);}
     .main_container .intro_first .if_slogan,
     .main_container .intro_first .hll_logo{display: none;}
     .main_container .intro_first .text_mo{display: block;}

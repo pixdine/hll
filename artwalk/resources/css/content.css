@@ -60,9 +60,9 @@
 .viewSwiper .swiper-scrollbar-drag { position: relative; left: 0;top: 0; width: 100%; height: 100%; border-radius: 0; background-color: #111}
 .viewSwiper .swiper-scrollbar {position: relative; -ms-touch-action: none; left:inherit; bottom: inherit; width:100%; height:2px; margin-top:16px; border-radius: 0; background-color: #DBDBDB; }
 .viewSwiper .swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled {display: none!important}
-.viewSwiper .swiper-button-next,.swiper-button-prev { position: absolute; top:50%; transform: translateY(-50%); width:40px; height:40px; background:url('../images/ic_arrow_right_40.svg') center center no-repeat; background-size:100% 100%; margin-top:-20px; cursor:pointer}
-.viewSwiper .swiper-button-next {right:20px}
-.viewSwiper .swiper-button-prev {transform: translateY(-50%) rotate(180deg);  left:20px}
+.viewSwiper .swiper-button-next,.swiper-button-prev { position: absolute; top:50%; transform: translateY(-50%); width:40px; height:40px; background-position:center center; background-repeat:no-repeat; background-size:100% auto; margin-top:-20px; cursor:pointer}
+.viewSwiper .swiper-button-next {right:20px; background-image:url('../images/ic_arrow_right_40_w.svg');}
+.viewSwiper .swiper-button-prev {left:20px; background-image:url('../images/ic_arrow_left_40_w.svg');}
 .viewSwiper .swiper-button-disabled { opacity:0.4; cursor:default;}
 .viewSwiper .swiper-slide  { height:623px; overflow:visible; }
 .viewSwiper .swiper-slide img { object-fit:contain; height:100%;}
@@ -518,9 +518,9 @@
     /* 전시상세 : 슬라이드 */
     .viewSwiper .swiper-slide  { width:100%; height:auto; max-height:447px; }
     .viewSwiper .swiper-slide img {width:100%; height:100%; display:block}
-    .viewSwiper .swiper-button-next, .swiper-button-prev{width:24px;height:28px;margin-top:-14px;background-image:url('../images/ic_arrow_right_24.svg');}
-    .viewSwiper .swiper-button-prev{left:8px;}
-    .viewSwiper .swiper-button-next{right:8px;}
+    .viewSwiper .swiper-button-next, .swiper-button-prev{width:24px;height:28px;margin-top:-14px;}
+    .viewSwiper .swiper-button-prev{left:8px;background-image:url('../images/ic_arrow_left_24.svg');}
+    .viewSwiper .swiper-button-next{right:8px;background-image:url('../images/ic_arrow_right_24.svg');}
 
     /* 관련기사 */
     .row_list li ~ li{margin-top:12px;}

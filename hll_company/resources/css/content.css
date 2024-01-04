@@ -183,9 +183,9 @@ body.is_mobile  img.pc {display:none}
 .content .sec_yeet .cont_inner{padding-top:0;}
 .sec_yeet .cont_box{display:flex;align-items:flex-start;justify-content:space-between;column-gap: 330px;}
 .sec_yeet .cont_box .box_area i{display: block;background-repeat: no-repeat;background-position: center;background-size: 180px 180px;height: 180px; width: 180px;}
-.sec_yeet .cont_box .box_area i.circle1{background-image: url('../images/temp/img_yeet_circle1.png');}
-.sec_yeet .cont_box .box_area i.circle2{background-image: url('../images/temp/img_yeet_circle2.png');}
-.sec_yeet .cont_box .box_area i.circle3{background-image: url('../images/temp/img_yeet_circle3.png');}
+.sec_yeet .cont_box .box_area i.circle1{background-image: url('../images/img_yeet_circle1.png');}
+.sec_yeet .cont_box .box_area i.circle2{background-image: url('../images/img_yeet_circle2.png');}
+.sec_yeet .cont_box .box_area i.circle3{background-image: url('../images/img_yeet_circle3.png');}
 
 .sec_yeet .list .cont_inner{position: relative;}
 .sec_yeet .sns_list {width:auto;margin-top:24px; position: absolute;top: 180px;left:106px;}

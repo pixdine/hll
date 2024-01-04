@@ -85,9 +85,9 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .viewSwiper .swiper-scrollbar-drag { height: 100%; width: 100%; position: relative; left: 0;top: 0}
 .viewSwiper .swiper-scrollbar {position: relative; -ms-touch-action: none;}
 .viewSwiper .swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled {display: none!important}
-.viewSwiper .swiper-button-next,.swiper-button-prev { position: absolute; top:50%; transform: translateY(-50%); width:48px; height:48px; background:url('../images/ico_arrow03.svg') center center no-repeat; background-size:24px auto; margin-top:-29px; cursor:pointer}
-.viewSwiper .swiper-button-next {right:24px}
-.viewSwiper .swiper-button-prev {transform: translateY(-50%) rotate(180deg);  left:24px}
+.viewSwiper .swiper-button-next,.swiper-button-prev { position: absolute; top:50%; transform: translateY(-50%); width:48px; height:48px; background-position:center center;background-repeat:no-repeat; background-size:24px auto; margin-top:-29px; cursor:pointer}
+.viewSwiper .swiper-button-next {right:24px;background-image:url('../images/ico_arrow03.svg');}
+.viewSwiper .swiper-button-prev {left:24px; background-image:url('../images/ico_arrow04.svg');}
 .viewSwiper .swiper-button-disabled { opacity:0.3; cursor:default;}
 
 /* 기사상세 > body > vod */

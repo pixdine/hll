@@ -267,7 +267,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 /* 구글광고배너 */
 .ad_google{text-align:center;}
 .ad_top{position:relative;margin:20px auto;text-align:center;z-index:2;}
-.ad_inread{width:100%;margin:180px auto;text-align:center;}
+.ad_inread{position:relative;width:100%;margin:180px auto;text-align:center;z-index:2;}
 .atc_list li.ad_inread{width:100%;margin:0 auto;padding:0;}
 
 /* header 공통스타일 */

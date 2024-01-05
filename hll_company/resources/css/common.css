@@ -531,6 +531,8 @@ background:#fff;overflow:hidden;z-index:230}
 .marquee_swiper .swiper-wrapper {transition-timing-function: linear;}
 .marquee_swiper .swiper-wrapper .swiper-slide {width: 384px;}
 
+.marquee_wrap .simply-scroll-clip {position: relative;overflow: hidden;max-width: 1920px;margin: 0 auto;}
+
 /************************* Media Query *************************/
 
 @media screen and (max-width: 996px) {

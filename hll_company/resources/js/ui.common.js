@@ -511,81 +511,96 @@ $.fn.accordion = function () {
 // 비지니스 자동 스크롤
 (function($) {
     if($('#bMarquee').length > 0){
-        var lastWindowWidth; // 이전 가로 크기 저장 (초기값은 undefined)
-        var lastWindowHeight; // 이전 세로 크기 저장 (초기값은 undefined)
+        if(window.innerWidth > 768) {
+            // pc
+            var lastWindowWidth; // 이전 가로 크기 저장 (초기값은 undefined)
+            var lastWindowHeight; // 이전 세로 크기 저장 (초기값은 undefined)
 
-        $.fn.handleMarquee = function(setSpeed, gap) {
-            const marquee = this;
-            let speed = setSpeed;
-            let progress = 0;
-            let mouseEntered = false;
-
-            const container = marquee.find('.m_list');
-            const contentItems = marquee.find('.m_list > *');
-            let totalWidth = 0; // 총 너비를 저장할 변수
-            // const itemLength = marquee.find('.m_list_item').length;
-            // const elWidth = content.outerWidth();
-
-            // 각 컨텐츠 항목의 너비를 계산하여 총 너비를 구함
-            contentItems.each(function() {
-                totalWidth += $(this).outerWidth(true); // true를 전달하여 마진 포함
-            });
-
-            document.querySelector('.m_list').addEventListener('mouseenter', function() {
-                mouseEntered = true;
-            });
-            document.querySelector('.m_list').addEventListener('mouseleave', function() {
-                mouseEntered = false;
-                window.cancelAnimationFrame(loop);
-            });
-
-            function loop() {
-                if (!mouseEntered) {
-                    progress -= speed;
+            $.fn.handleMarquee = function(setSpeed, gap) {
+                const marquee = this;
+                let speed = setSpeed;
+                let progress = 0;
+                let mouseEntered = false;
+    
+                const container = marquee.find('.m_list');
+                const contentItems = marquee.find('.m_list > *');
+                let totalWidth = 0; // 총 너비를 저장할 변수
+                // const itemLength = marquee.find('.m_list_item').length;
+                // const elWidth = content.outerWidth();
+    
+                // 각 컨텐츠 항목의 너비를 계산하여 총 너비를 구함
+                contentItems.each(function() {
+                    totalWidth += $(this).outerWidth(true); // true를 전달하여 마진 포함
+                });
+    
+                document.querySelector('.m_list').addEventListener('mouseenter', function() {
+                    mouseEntered = true;
+                });
+                document.querySelector('.m_list').addEventListener('mouseleave', function() {
+                    mouseEntered = false;
+                    window.cancelAnimationFrame(loop);
+                });
+    
+                function loop() {
+                    if (!mouseEntered) {
+                        progress -= speed;
+                    }
+                    if (progress <= -totalWidth) {
+                        progress = 0;
+                    }
+                    container.css('transform', 'translateX(' + progress + 'px)');
+                    scrollAni = window.requestAnimationFrame(loop);
                 }
-                if (progress <= -totalWidth) {
-                    progress = 0;
+    
+                function init() {
+                    if (!marquee.hasClass("has_clone")) {
+                        // 첫 번째 클론 생성
+                        const firstClone = marquee.find('.m_list_item').clone().addClass("clone");
+                        container.append(firstClone);
+    
+                        // 두 번째 클론 생성
+                        const secondClone = marquee.find('.m_list_item').clone().addClass("clone");
+                        container.append(secondClone);
+                        
+                        marquee.addClass("has_clone");
+                    }
+                    loop();
                 }
-                container.css('transform', 'translateX(' + progress + 'px)');
-                scrollAni = window.requestAnimationFrame(loop);
+    
+                init();
+    
+                return marquee;
+            };
+    
+            // 마키를 업데이트하는 함수
+            function updateMarquee() {
+                var windowWidth = $(window).width();
+                var windowHeight = $(window).height();
+    
+                // 가로 크기에만 변경이 있을 때 실행
+                if ((typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) && (typeof lastWindowWidth === 'undefined' || lastWindowHeight === windowHeight)) {
+                    if($('#bMarquee').hasClass('logo_area')){
+                        $('#bMarquee').handleMarquee(1);
+                    } else {
+                        $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2);
+                    }
+                }
+    
+                lastWindowWidth = windowWidth; // 현재 가로 크기 업데이트
+                lastWindowHeight = windowHeight; // 현재 세로 크기 업데이트
             }
-
-            function init() {
-                if (!marquee.hasClass("has_clone")) {
-                    // 첫 번째 클론 생성
-                    const firstClone = marquee.find('.m_list_item').clone().addClass("clone");
-                    container.append(firstClone);
-
-                    // 두 번째 클론 생성
-                    const secondClone = marquee.find('.m_list_item').clone().addClass("clone");
-                    container.append(secondClone);
-                    
-                    marquee.addClass("has_clone");
-                }
-                loop();
-            }
-
-            init();
-
-            return marquee;
-        };
-
-        // 마키를 업데이트하는 함수
-        function updateMarquee() {
-            var windowWidth = $(window).width();
-            var windowHeight = $(window).height();
-
-            // 가로 크기에만 변경이 있을 때 실행
-            if ((typeof lastWindowWidth === 'undefined' || lastWindowWidth !== windowWidth) && (typeof lastWindowWidth === 'undefined' || lastWindowHeight === windowHeight)) {
-                if($('#bMarquee').hasClass('logo_area')){
-                    $('#bMarquee').handleMarquee(1);
-                } else {
-                    $('#bMarquee').handleMarquee(windowWidth <= 768 ? 1 : 2);
-                }
-            }
-
-            lastWindowWidth = windowWidth; // 현재 가로 크기 업데이트
-            lastWindowHeight = windowHeight; // 현재 세로 크기 업데이트
+        } else {
+            // mo
+            $('#bMarquee').marquee({
+                speed: 60,
+                gap: 0,
+                // duration: 15000,
+                delayBeforeStart: 0,
+                direction: 'left',
+                duplicated: true,
+                pauseOnHover: true,
+                startVisible: true
+            });
         }
 
         // 로드 및 리사이징 이벤트 핸들러

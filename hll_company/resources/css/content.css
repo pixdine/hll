@@ -437,7 +437,7 @@ body.is_mobile  img.pc {display:none}
 
 .head{background-color:var(--point);padding:20px; justify-content: center;}
 .head > p{color:#fff;font-size:16px;line-height:23px;font-weight:700;text-align:center;}
-.cont_wrap > p{font-size:18px;font-weight:400;color:#666;line-height:26px;}
+.cont_wrap > p{font-size:18px;font-weight:500;color:#666;line-height:26px;}
 .cont_wrap .top_txt h3{font-size:22px;line-height:35px;}
 .cont_wrap .top_txt p{color:#666;font-size:18px;margin-top:8px;}
 .cont_wrap .cont_list{margin-top:16px;}
@@ -932,7 +932,7 @@ body.is_mobile  img.pc {display:none}
     
     .tit_wrap.type2{margin-bottom:24px}
     .tit_wrap.type2 .box p{font-size:14px;line-height:20px;}
-    .cont_wrap > p{font-size:14px;font-weight:400;line-height:20px;}
+    .cont_wrap > p{font-size:14px;line-height:20px;}
     .cont_wrap .cont_list{margin-top:12px;}
     .cont_wrap .cont_list ul li{gap:12px;padding:12px;}
     .cont_wrap .cont_list ul li p{flex:1;}

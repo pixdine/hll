@@ -532,7 +532,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_alert_inner{position:absolute;top:50%;left:50%;width:384px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);
 background:#fff;overflow:hidden;z-index:230}
 .popup_alert_cont{position:relative;max-height:65vh;padding:64px 28px 16px;-webkit-overflow-scrolling:touch;overflow:hidden;overflow-y:auto;font-size:18px;text-align:center;line-height:26px;}
-.popup_alert_cont .alert_txt{display:flex;justify-content:center;align-items:center;min-height:52px;font-size:18px;line-height:26px;word-break:break-all;}
+.popup_alert_cont .alert_txt{display:flex;justify-content:center;align-items:center;min-height:52px;font-size:18px;line-height:26px;}
 .popup_alert_bottom{padding:16px 28px 28px;}
 .popup_alert_bottom .btn_wrap{margin-top:0;}
 .popup_alert .popup_close{right:18px;top:14px;}

@@ -592,7 +592,7 @@ $.fn.accordion = function () {
         } else {
             // mo
             $('#bMarquee').marquee({
-                speed: 60,
+                speed: 50,
                 gap: 0,
                 // duration: 15000,
                 delayBeforeStart: 0,

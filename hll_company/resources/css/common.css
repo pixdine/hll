@@ -692,4 +692,7 @@ background:#fff;overflow:hidden;z-index:230}
 	#bMarquee .m_list_item {width: 43.2vw; padding: 0 6px;}
 	.marquee_wrap_test .m_list_item { padding: 0 6px;}
 	.marquee_wrap_jquery .m_list_item {width: 43.2vw; padding: 0 6px;}
+
+	
+	.marquee_swiper .swiper-wrapper .swiper-slide {width: 43.2vw;}
 }

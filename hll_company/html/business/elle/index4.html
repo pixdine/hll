@@ -444,11 +444,11 @@
             // marquee swiper
             var marquee = new Swiper('.marquee_swiper .swiper-container', {
                 slidesPerView: "auto",
-                spaceBetween: 24,
+                spaceBetween: 12,
                 freeMode: true,
                 loop: true,
                 loopAdditionalSlides: 1,
-                speed: 5000,
+                speed: 4000,
                 // centeredSlides: true,
                 autoplay: {
                     delay: 0,
@@ -457,6 +457,12 @@
                 },
                 observer: true,
                 observeParents: true,
+                breakpoints: {
+                    768: {
+                        spaceBetween: 24,
+                        speed: 5000,
+                    }
+                }
             });
 
             // $('.swiper-container .swiper-slide a').on('mouseenter', function(e){

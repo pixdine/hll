@@ -136,7 +136,7 @@ body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duratio
     .main_container .section_inner{margin: 0;min-height: auto;height: 100%;} 
 
     .main_container .section_img .img_inner{position: relative;height: 100%;} 
-    .main_container .media_desc{z-index: 1;right: 0;padding: 0 40px 90px;} 
+    .main_container .media_desc{z-index: 1;right: 0;padding: 0 40px 120px;} 
     .main_container .md_left .media_desc{left: 0;} 
     .main_container .md_right .media_desc{left: 0;} 
 

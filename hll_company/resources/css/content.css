@@ -526,7 +526,7 @@ body.is_mobile  img.pc {display:none}
 .company .about .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
 .company .business .txt_p strong {font-size:18px; font-weight:700; line-height:26px} 
 
-.logo_area { background:#fff; height:92px; margin-top:80px }
+.logo_area { background:#fff; height:92px; margin-top:80px; overflow:hidden } /* 2024-01-08 > overflow:hidden 추가  */
 .logo_area ul { display:flex;align-items: center; height:92px;}
 .logo_area .m_list .m_list_item img {max-width:none} /* 2024-01-08 > 로고 안보이는 현상 수정 */
 .company #bMarquee { margin-top:80px}

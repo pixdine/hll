@@ -433,6 +433,7 @@ body.is_mobile  img.pc {display:none}
 .list_ad.type3 ul li .txt_info dl dd{margin-top:0;font-weight:400;font-family:'Noto Sans KR';}
 .list_ad.type3 ul li .txt_info dl dd br{display:none;}
 .list_ad.type3 ul li .txt_info dl dd span{display: block;}
+.list_ad .txt_info .bt_area {display:flex; column-gap:12px} /* 2024-01-08  >  미리보기 버튼 2개로 변경 */
 
 
 .head{background-color:var(--point);padding:20px; justify-content: center;}
@@ -921,7 +922,7 @@ body.is_mobile  img.pc {display:none}
     .list_ad ul li .txt_info dl dt{font-size:16px;line-height:23px;}
     .list_ad ul li .txt_info dl dd{font-size:16px;line-height:23px;}
     .list_ad ul li .txt_info dl dd .btn_view{width:60px;font-size:12px;line-height:18px;letter-spacing: -0.045em;}
-    .list_ad ul li+li{margin-top:80px;}
+    .list_ad ul li+li{margin-top:80px;}  
 
     .box_flex{align-items: start;flex-direction: column;row-gap:8px;}
     .box_flex p{font-size:14px;line-height:20px;}

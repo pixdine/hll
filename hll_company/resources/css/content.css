@@ -528,6 +528,7 @@ body.is_mobile  img.pc {display:none}
 
 .logo_area { background:#fff; height:92px; margin-top:80px }
 .logo_area ul { display:flex;align-items: center; height:92px;}
+.logo_area .m_list .m_list_item img {max-width:none} /* 2024-01-08 > 로고 안보이는 현상 수정 */
 .company #bMarquee { margin-top:80px}
 .company #bMarquee .m_list_item { width:auto; padding:0px 46px;}
 

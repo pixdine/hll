@@ -493,12 +493,12 @@ background:#fff;overflow:hidden;z-index:230}
 
 
 .introduce {overflow: hidden;}
-.marquee_wrap {overflow: hidden;max-width: 1920px; margin: 0 auto;}
-.marquee_wrap .m_list {display: flex; width: max-content; will-change: transform;transition-timing-function: linear;}
+#bMarquee {overflow: hidden;max-width: 1920px; margin: 0 auto;}
+#bMarquee .m_list {display: flex; width: max-content; will-change: transform;transition-timing-function: linear;}
 /* #bMarquee .m_list {display: flex; white-space: nowrap; width: max-content; will-change: transform;} */
-.marquee_wrap .m_list_item {width: 408px; padding: 0 12px;}
-.marquee_wrap .m_list_item .m_list_btn{overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 133.334%;}
-.marquee_wrap .m_list_item .m_list_btn img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
+#bMarquee .m_list_item {width: 408px; padding: 0 12px;}
+#bMarquee .m_list_item .m_list_btn{overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 133.334%;}
+#bMarquee .m_list_item .m_list_btn img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 
 
 .imgSwiper .swiper-wrapper {justify-content: center;}
@@ -657,5 +657,5 @@ background:#fff;overflow:hidden;z-index:230}
 	.comm_error .err_comment02 { font-size:14px;margin:12px 20px 0}
 	.comm_error .err_comment01 span, .comm_error .err_comment02 span{ display:block}
 
-	.marquee_wrap .m_list_item {width: 43.2vw; padding: 0 6px;}
+	#bMarquee .m_list_item {width: 43.2vw; padding: 0 6px;}
 }

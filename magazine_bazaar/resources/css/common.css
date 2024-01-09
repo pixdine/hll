@@ -266,8 +266,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* 구글광고배너 */
 .ad_google{text-align:center;}
-.ad_top{position:relative;margin:20px auto;text-align:center;z-index:2;}
-.ad_inread{position:relative;width:100%;margin:180px auto;text-align:center;z-index:2;}
+.ad_top{position:relative;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
+.ad_top .ad_google div {margin:20px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
+.ad_inread{position:relative;width:100%;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
+.ad_inread .ad_google div {margin:180px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .atc_list li.ad_inread{width:100%;margin:0 auto;padding:0;}
 
 /* header 공통스타일 */

@@ -60,6 +60,7 @@ $(() => {
             recordHistory: false,
             verticalCentered: false,
             bigSectionsDestination: top,
+            normalScrollElements: '.m-img',
             // disableMutationObserver: false,
 
             // ** 페이지를 불러온 후

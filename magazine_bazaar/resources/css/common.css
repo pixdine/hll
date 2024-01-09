@@ -691,7 +691,7 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_box .editor_head .name{display:block;font-size:24px;line-height:35px;color:#fff;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
 .editor_box .editor_head .desc{display:block;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
 .editor_box .profile_img{overflow:hidden;position:absolute;right:32px;bottom:-27px;width:120px;height:120px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
-.editor_box .profile_img img{width:100%;height:100%;object-fit:cover;}
+.editor_box .profile_img img{width:100%;height:100%;object-fit:cover;background-color:#D9D9D9;}
 .editor_box .editor_body{position:relative;padding:50px 32px 40px;}
 .editor_box .editor_body .txt{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;font-size:16px;font-weight:400;line-height:26px;color:#666;}
 .editor_box .editor_body:before{content:'';position:absolute;left:32px;top:32px;display:block;width:32px;height:2px;background-color:#111;}
@@ -703,7 +703,7 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_profile{max-width:1280px;margin:-124px auto 0;padding:0 40px;}
 .editor_profile .profile_area{display:flex;position:relative;padding:48px 60px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
 .editor_profile .profile_img{overflow:hidden;width:88px;height:88px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
-.editor_profile .profile_img img{width:100%;height:100%;object-fit:cover;}
+.editor_profile .profile_img img{width:100%;height:100%;object-fit:cover;background-color:#D9D9D9;}
 .editor_profile .profile_info{flex:1;padding-left:40px;}
 .editor_profile .profile_info .info_box{padding-right:180px;}
 .editor_profile .profile_info .name{display:block;font-size:36px;line-height:52px;word-break:break-all;}
@@ -886,7 +886,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.header_util .aside{display:none;}
 	.editor_list li{width:calc(50% - 12px);}
 	.editor_box .editor_head .editor_info{width:calc(100% - 120px);}
-	.editor_box .profile_img{bottom:-25px;right:28px;width:110px;height:110px;}
+	.editor_box .profile_img{bottom:-24px;right:28px;width:110px;height:110px;}
 	.horoscope_list li{width:calc(25% - 18px);}
 }
 @media (max-width:1023px){

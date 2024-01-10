@@ -270,7 +270,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .ad_top .ad_google div {margin:20px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread{position:relative;width:100%;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread .ad_google div {margin:180px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
-.atc_list li.ad_inread{width:100%;margin:0 auto;padding:0;}
+.atc_list li.ad_inread{width:100%;padding:0;}
+.atc_list li.ad_inread div{margin:0 auto;}
 
 /* header 공통스타일 */
 .header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}
@@ -913,7 +914,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.cont_inner{padding:0 20px;}
 
 	/* 구글광고배너 */
-	.ad_inread{margin:80px auto;}
+	.ad_inread .ad_google div{margin:80px auto;}
 
 	.btn{min-width:auto;}
 	.has_plus:after{background-size:12px auto;}

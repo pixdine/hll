@@ -1,5 +1,5 @@
 
-.atc_wrap { padding-top: 60px; margin-bottom:180px}
+.atc_wrap { padding-top: 60px; margin-bottom:var(--pc-module-gap)}
 .txt_category {font-family: FoundersGrotesk;color:var(--point);font-size: 18px; text-align: center; margin-bottom:24px;line-height:1;}
 
 /* 기사상세 헤더 */
@@ -134,12 +134,12 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 .ab_sub_headingline02.type02 .ab_h_txt:first-child { font-size:18px; font-weight:500; line-height:26px; }
 
 /* 가로선 파티클 > 기존 파티클 */
-hr { border-top:1px solid #EF88AB; margin:42px 0 18px}
+hr { border-top:1px solid var(--point); margin:42px 0 18px}
 
 /* 가로선 파티클 > 신규 파티클 */
 hr.ab_h_line01 { position:relative; border:0; height:6px;}
-hr.ab_h_line01::before { content:''; position:relative;display:block; height:2px; width:100%; background:#EF88AB}
-hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; width:100%; background:#EF88AB; margin-top:3px}
+hr.ab_h_line01::before { content:''; position:relative;display:block; height:2px; width:100%; background:var(--point)}
+hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; width:100%; background:var(--point); margin-top:3px}
 
 /* 가로선 파티클 > 신규 파티클 */
 .ab_h_line02 { margin:48px 0 12px}
@@ -148,10 +148,10 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 /* 인터뷰 질문/답변 파티클 */
 .tag_interview {}
-.tag_interview .tag_question {position:relative; font-size:16px; line-height:32px; font-weight:700; letter-spacing: 0.08em; color:#111; padding:20px 0 0px 57px;}
-.tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:40px; font-family:Druk Wide Web;line-height:1; font-weight: 800; color:#EF88AB}
-.tag_interview .tag_answer {position:relative; position:relative; font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em; color:#111; padding:12px 0 24px 57px;}
-.tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:40px; font-family:Druk Wide Web;line-height:1; font-weight: 800; color:#EF88AB}
+.tag_interview .tag_question {position:relative; font-weight:700; color:#111; padding:20px 0 0px 57px;}
+.tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:40px; font-family:Druk Wide Web;line-height:1; font-weight: 800; color:var(--point)}
+.tag_interview .tag_answer {position:relative; font-weight:400; color:#111; padding:12px 0 24px 57px;}
+.tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:40px; font-family:Druk Wide Web;line-height:1; font-weight: 800; color:var(--point)}
 
 /*인용구 파티클 > 기존 파티클*/
 .tag_quotation { position:relative; width:652px; margin:24px auto; padding:69px 32px 68px; font-size:20px; font-weight:400; line-height:36px; letter-spacing:-0.03em; text-align:center }
@@ -165,12 +165,12 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 /* 강조문 파티클 > 기존 파티클 */
 .ab_emphasis {position:relative; padding:0; margin-bottom:8px}
-.ab_emphasis .ab_emphasis_dim_lt {display:block; position:absolute; top:7px; left:0; width:2px; height:20px; background:#EF88AB; font-size:0; line-height:0}
-.ab_emphasis .ab_emphasis_content  {padding-left:12px; font-size:16px; line-height:32px; letter-spacing:0.08em; font-weight:700;}
+.ab_emphasis .ab_emphasis_dim_lt {display:block; position:absolute; top:7px; left:0; width:2px; height:20px; background:var(--point); font-size:0; line-height:0}
+.ab_emphasis .ab_emphasis_content  {padding-left:12px;font-weight:700;}
 .ab_emphasis .ab_emphasis_dim_rt {display:none}
 
 /* 강조문 파티클 > 신규 파티클 */
-.ab_emphasis.type02 .ab_emphasis_dim_lt {display:block; position:absolute; top:0%; left:0; width:84px; height:2px; background:#EF88AB; font-size:0; line-height:0}
+.ab_emphasis.type02 .ab_emphasis_dim_lt {display:block; position:absolute; top:0%; left:0; width:84px; height:2px; background:var(--point); font-size:0; line-height:0}
 .ab_emphasis.type02 .ab_emphasis_content  { padding-left:0; padding-top:4px}
 
 /* 버튼 파티클 */

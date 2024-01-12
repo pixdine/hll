@@ -125,7 +125,9 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 .bnaver{background-color:#03C75A;border-color:#03C75A; color:#fff} 
 /*.bnaver[disabled], .bnaver:disabled {}
 .bkakao[disabled], .bkakao:disabled { border-color:#ccc; background-color:##ccc; color:#fff;}*/
-.bkakao[disabled] .btn_ico.kakao, .bkakao:disabled .btn_ico.kakao {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='white'%3E%3Cg clip-path='url(%23a)'%3E%3Cmask id='b' width='114' height='79' x='-49' y='-48' maskUnits='userSpaceOnUse' style='mask-type:luminance'%3E%3Cpath fill='%23fff' d='M-48.154-47.038H64.528v77.522H-48.154v-77.522Z'/%3E%3C/mask%3E%3Cg mask='url(%23b)'%3E%3Cpath fill='%23fff' d='M7 .13C3.391.13.466 2.379.466 5.152c0 1.782 1.211 3.346 3.03 4.24l-.615 2.235a.181.181 0 0 0 .047.19.188.188 0 0 0 .134.054.19.19 0 0 0 .113-.042l2.647-1.74c.385.054.777.084 1.176.084 3.608 0 6.533-2.247 6.533-5.02C13.532 2.377 10.607.13 7 .13Z'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M.332 0h13.333v12H.332z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")}
+.bkakao[disabled] .btn_ico.kakao,
+.bkakao:disabled .btn_ico.kakao,
+.bkakao.disabled .btn_ico.kakao {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' fill='white'%3E%3Cg clip-path='url(%23a)'%3E%3Cmask id='b' width='114' height='79' x='-49' y='-48' maskUnits='userSpaceOnUse' style='mask-type:luminance'%3E%3Cpath fill='%23fff' d='M-48.154-47.038H64.528v77.522H-48.154v-77.522Z'/%3E%3C/mask%3E%3Cg mask='url(%23b)'%3E%3Cpath fill='%23fff' d='M7 .13C3.391.13.466 2.379.466 5.152c0 1.782 1.211 3.346 3.03 4.24l-.615 2.235a.181.181 0 0 0 .047.19.188.188 0 0 0 .134.054.19.19 0 0 0 .113-.042l2.647-1.74c.385.054.777.084 1.176.084 3.608 0 6.533-2.247 6.533-5.02C13.532 2.377 10.607.13 7 .13Z'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M.332 0h13.333v12H.332z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")}
 .bnaver .btn_ico, .bkakao .btn_ico  { margin-right:4px}
 
 /* button : disabled */

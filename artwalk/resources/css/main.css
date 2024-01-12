@@ -75,7 +75,7 @@
 .main_cmnt .c_list_item .c_list_date{color: #999;font-family: "gotham";font-weight: 500;font-size: 18px;line-height: 24px;}
 
 /* 산책코스 */
-.main_wc .active_dp_swiper{position: relative;margin-left: -102px;padding: 56px 0 90px;}
+.main_wc .active_dp_swiper{position: relative;margin-left: -102px;padding: 56px 0 0;}
 .main_wc .active-display{position: absolute;top: 0;left: 102px;z-index: 10;width: 384px;}
 .main_wc .wc_header{display: flex;align-items: center;justify-content: space-between;height: 56px;padding: 0 15px;border: 1px solid #111;border-bottom:0;}
 .main_wc .active-display .present{display: flex;align-items: center;}
@@ -173,7 +173,7 @@
     .main_cmnt .c_list_item .c_list_date{font-size: 12px;line-height: 16px;}
 
     /* 산책코스 */
-    .main_wc .active_dp_swiper{margin-left: 0;padding: 44px 0 56px;}
+    .main_wc .active_dp_swiper{margin-left: 0;padding: 44px 0 0;}
     .main_wc .active-display{position: absolute;top: 0;left: 0;z-index: 10;width: 248px;}
     .main_wc .swiper-slide{width: 248px;height:248px;padding: 0; margin-right: 12px;}
     .main_wc .wc_header{height: 44px;padding: 0 12px;}

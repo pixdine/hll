@@ -6,21 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>에스콰이어 코리아 | Esquire Korea</title>
 	<meta name="format-detection" content="telephone=no">
-	<!-- css, Jquery -->
-	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
-	<script src="../resources/js/jquery-3.6.0.min.js"></script>
-	<!-- //css, Jquery -->
+    <!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <!-- //css, Jquery -->
 </head>
 <body>
-	<div id="esquire"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역 -->
-		<div class="ad_google">
-			google 광고 배너 영역<br>높이값 가변적
-		</div>
-		<!--// google 광고영역 -->
-
-		<div id="wrap" class="wrap">
+    <div id="esquire"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+        <div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header">
 				<!-- header_wrap -->
@@ -48,7 +42,7 @@
 							<div class="header_util">
 								<div class="aside">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
@@ -163,7 +157,7 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
 
@@ -198,7 +192,7 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#">CAR&amp;TECH<span><em class="blind">열기</em></span></a>
+											<a href="#">CAR &amp; TECH<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
 												<li><a href="#">CAR</a></li>
 												<li><a href="#">BIKE</a></li>
@@ -267,46 +261,51 @@
 			</div>
 			<!-- //전체메뉴 -->
 
-			<!-- container -->
-			<div id="container" class="container">
-				<div id="content" class="content" style="min-height:600px;padding:100px 0;">
-					<!-- 팝업버튼 -->
-					<div class="cont_inner">
-						<style>
-							.g_list li{position:relative;padding-left:10px;}
-							.g_list li:before{content:'';display:block;position:absolute;left:0;top:11px;width:3px;height:3px;background-color:#ccc;}
-							.g_list li ~ li{margin-top:10px;}
-							.g_list li button{text-align:left;}
-						</style>
-						<ul class="g_list">
-							<li>
-								<button type="button" data-popup-open="popup_sns"><span>팝업_메인 > 팔로우하기</span></button>
-							</li>
-							<li>
-								<button type="button" data-popup-open="popup_register"><span>팝업_이벤트 > 이벤트 상세 > 개인정보 수집 및 이용에 대한 동의 > 동의함</span></button>
-							</li>
-							<li>
-								<button type="button" onclick="openPhotoViewer();"><span>팝업_바자화보 > 화보 슬라이드 팝업<br>(기사상세 > 사진묶음 슬라이드 > 크게보기, 커버 > 커버 이미지 팝업과 동일)</span></button>
-							</li>
-							<li>
-								<button type="button" data-popup-open="popup_login"><span>통합로그인</span></button>
-							</li>
-							<li>
-								<button type="button" data-popup-open="popup_sample"><span>기본 풀팝업 샘플</span></button>
-							</li>
-							<li>
-								<button type="button" data-alert-open="quiz_alert"><span>얼럿1_텍스트2줄이상_버튼2개</span></button>
-							</li>
-							<li>
-								<button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button>
-							</li>
-						</ul>
-					</div>
-					<!-- //팝업버튼 -->
+            <!-- container -->
+            <div id="container" class="container">
+                <div id="content" class="content" style="min-height:600px;padding:100px 0;">
+                    <!-- 팝업버튼 -->
+                    <div class="cont_inner">
+                        <style>
+                            .g_list li{position:relative;padding-left:10px;}
+                            .g_list li:before{content:'';display:block;position:absolute;left:0;top:11px;width:3px;height:3px;background-color:#ccc;}
+                            .g_list li ~ li{margin-top:10px;}
+                            .g_list li button{text-align:left;}
+                        </style>
+                        <ul class="g_list">
+                            <li>
+                                <button type="button" data-popup-open="popup_sns"><span>팝업_메인 > 팔로우하기</span></button>
+                            </li>
+                            <li>
+                                <button type="button" data-popup-open="popup_register"><span>팝업_이벤트 > 이벤트 상세 > 개인정보 수집 및 이용에 대한 동의 > 동의함</span></button>
+                            </li>
+                            <!-- 삭제 : 에스콰이어는 별자리운세 없음
+                            <li>
+                                <button type="button" data-popup-open="popup_horoscope"><span>팝업_별자리 > 별자리 상세</span></button>
+                            </li>
+                            -->
+                            <li>
+                                <button type="button" onclick="openPhotoViewer();"><span>팝업_바자화보 > 화보 슬라이드 팝업<br>(기사상세 > 사진묶음 슬라이드 > 크게보기, 커버 > 커버 이미지 팝업과 동일)</span></button>
+                            </li>
+                            <li>
+                                <button type="button" data-popup-open="popup_login"><span>통합로그인</span></button>
+                            </li>
+                            <li>
+                                <button type="button" data-popup-open="popup_sample"><span>기본 풀팝업 샘플</span></button>
+                            </li>
+                            <li>
+                                <button type="button" data-alert-open="quiz_alert"><span>얼럿1_텍스트2줄이상_버튼2개</span></button>
+                            </li>
+                            <li>
+                                <button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //팝업버튼 -->
 
-				</div>
-			</div>
-			<!-- //container -->
+                </div>
+            </div>
+            <!-- //container -->
 
 			<!-- footer -->
 			<footer id="footer" class="footer">
@@ -353,7 +352,7 @@
 									<span class="email">이메일 : <a href="mailto:esquirekr@hll.kr">esquirekr@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
@@ -411,8 +410,8 @@
 				</div>
 			</footer>
 			<!-- //footer -->
-		</div>
-	</div>
+        </div>
+    </div>
 
 	<!-- 팝업 : 팔로우하기 -->
 	<div class="popup_wrap popup_sns" data-popup="popup_sns">
@@ -438,247 +437,247 @@
 	</div>
 	<!-- //팝업 : 팔로우하기 -->
 
-	<!-- 팝업 : 개인정보 수집 및 이용동의 내 동의하기 클릭 시 -->
-	<div class="popup_full popup_register" data-popup="popup_register">
-		<div class="popup_inner">
-			<div class="popup_head">
-				<h2 class="tit blind">개인정보 입력</h2>
-				<div class="popup_close">
-					<button type="button" class="btn_close" data-popup-close="popup_register"><span class="blind">닫기</span></button>
-				</div>
-			</div>
-			<div class="popup_cont">
-				<h3 class="stit">업사이클링 신진 아티스트 발굴 <br>프로젝트 &lt;Re, Think&gt;</h3>
+    <!-- 팝업 : 개인정보 수집 및 이용동의 내 동의하기 클릭 시 -->
+    <div class="popup_full popup_register" data-popup="popup_register">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit blind">개인정보 입력</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_register"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                <h3 class="stit">업사이클링 신진 아티스트 발굴 <br>프로젝트 &lt;Re, Think&gt;</h3>
 
-				<div class="bx_type01">
-					<dl class="txt_def01">
-						<dt>[이벤트에 참여하는 방법]</dt>
-						<dd>이벤트 참여자 정보 및 이벤트에 참여하고 싶은 이유를 적어주세요.</dd>
-					</dl>
-				</div>
+                <div class="bx_type01">
+                    <dl class="txt_def01">
+                        <dt>[이벤트에 참여하는 방법]</dt>
+                        <dd>이벤트 참여자 정보 및 이벤트에 참여하고 싶은 이유를 적어주세요.</dd>
+                    </dl>
+                </div>
 
-				<div class="form_wrap">
-					<div class="form_row">
-						<div class="form_tit">
-							<label for="u_name">이름<em class="ess">*</em></label><!-- D: 필수항목인 경우 ess 영역 추가 -->
-						</div>
-						<div class="form_box">
-							<div class="form_item">
-								<div class="inputbox error"><!-- D: 에러 시 error 클래스 추가 -->
-									<input type="text" class="inp" id="u_name" placeholder="이름 입력" title="이름 입력" autocomplete="off">
-									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-									<p class="row_err_txt">이름을 입력해 주세요.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form_row">
-						<div class="form_tit">
-							<label for="u_tel">휴대폰 번호<em class="ess">*</em></label>
-						</div>
-						<div class="form_box">
-							<div class="form_item">
-								<div class="inputbox error">
-									<input type="tel" class="inp" id="u_tel" placeholder="휴대폰 번호 입력" title="휴대폰 번호 입력" autocomplete="off">
-									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-									<p class="row_err_txt">휴대폰 번호를 입력해 주세요.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form_row">
-						<div class="form_tit">
-							<label for="u_email">이메일 주소<em class="ess">*</em></label>
-						</div>
-						<div class="form_box">
-							<div class="form_item">
-								<div class="inputbox error">
-									<input type="text" class="inp" id="u_email" placeholder="이메일 주소 입력" title="이메일 주소 입력" autocomplete="off">
-									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-									<p class="row_err_txt">이메일 주소를 입력해 주세요.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form_row">
-						<div class="form_tit">
-							<label for="u_reason">참여 이유<em class="ess">*</em></label>
-						</div>
-						<div class="form_box">
-							<div class="form_item">
-								<div class="inputbox error">
-									<input type="text" class="inp" id="u_reason" placeholder="이벤트 참여하고 싶은 이유 입력" title="이벤트 참여하고 싶은 이유 입력" autocomplete="off">
-									<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-									<p class="row_err_txt">이벤트에 참여하고 싶은 이유를 입력해 주세요.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="popup_bottom">
-				<div class="btn_wrap">
-					<button type="button" class="btn bctype2"><span>취소</span></button>
-					<button type="button" class="btn bctype1"><span>제출</span></button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //팝업 : 개인정보 수집 및 이용동의 내 동의하기 클릭 시 -->
+                <div class="form_wrap">
+                    <div class="form_row">
+                        <div class="form_tit">
+                            <label for="u_name">이름<em class="ess">*</em></label><!-- D: 필수항목인 경우 ess 영역 추가 -->
+                        </div>
+                        <div class="form_box">
+                            <div class="form_item">
+                                <div class="inputbox error"><!-- D: 에러 시 error 클래스 추가 -->
+                                    <input type="text" class="inp" id="u_name" placeholder="이름 입력" title="이름 입력" autocomplete="off">
+                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                                    <p class="row_err_txt">이름을 입력해 주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="form_tit">
+                            <label for="u_tel">휴대폰 번호<em class="ess">*</em></label>
+                        </div>
+                        <div class="form_box">
+                            <div class="form_item">
+                                <div class="inputbox error">
+                                    <input type="tel" class="inp" id="u_tel" placeholder="휴대폰 번호 입력" title="휴대폰 번호 입력" autocomplete="off">
+                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                                    <p class="row_err_txt">휴대폰 번호를 입력해 주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="form_tit">
+                            <label for="u_email">이메일 주소<em class="ess">*</em></label>
+                        </div>
+                        <div class="form_box">
+                            <div class="form_item">
+                                <div class="inputbox error">
+                                    <input type="text" class="inp" id="u_email" placeholder="이메일 주소 입력" title="이메일 주소 입력" autocomplete="off">
+                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                                    <p class="row_err_txt">이메일 주소를 입력해 주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="form_tit">
+                            <label for="u_reason">참여 이유<em class="ess">*</em></label>
+                        </div>
+                        <div class="form_box">
+                            <div class="form_item">
+                                <div class="inputbox error">
+                                    <input type="text" class="inp" id="u_reason" placeholder="이벤트 참여하고 싶은 이유 입력" title="이벤트 참여하고 싶은 이유 입력" autocomplete="off">
+                                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                                    <p class="row_err_txt">이벤트에 참여하고 싶은 이유를 입력해 주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>제출</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 : 개인정보 수집 및 이용동의 내 동의하기 클릭 시 -->
 
-	<!-- 화보 슬라이드 -->
-	<div class="photoViewer">
-		<div class="pv_container">
-			<div class="pv_cont">
-				<div class="swiper pvSwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="pv_img">
-								<img src="../resources/images/temp/temp_view10.png" />
-								<p class="caption">사진1 / Gucci</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="pv_img">
-								<img src="../resources/images/temp/temp_view09.png" />
-								<p class="caption">사진1 / Gucci</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="pv_img">
-								<img src="../resources/images/temp/temp_view08.png" />
-								<p class="caption">사진2 / Gucci</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="pv_img">
-								<img src="../resources/images/temp/temp_view07.png" />
-								<p class="caption">사진3 / Gucci</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="pv_img">
-								<img src="../resources/images/temp/temp_view06.png" />
-								<p class="caption">사진4 / Gucci</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="pv_img">
-								<img
-									src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" />
-								<p class="caption">사51 / Gucci</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button class="pv_next"><img src="../resources/images/photo_viewer_next.png" alt="다음"></button>
-				<button class="pv_prev"><img src="../resources/images/photo_viewer_prev.png" alt="이전"></button>
-			</div>
+    <!-- 화보 슬라이드 -->
+    <div class="photoViewer">
+        <div class="pv_container">
+            <div class="pv_cont">
+                <div class="swiper pvSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view10.png" />
+                                <p class="caption">사진1 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view09.png" />
+                                <p class="caption">사진1 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view08.png" />
+                                <p class="caption">사진2 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view07.png" />
+                                <p class="caption">사진3 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view06.png" />
+                                <p class="caption">사진4 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img
+                                    src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" />
+                                <p class="caption">사51 / Gucci</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pv_next"><img src="../resources/images/photo_viewer_next.png" alt="다음"></button>
+                <button class="pv_prev"><img src="../resources/images/photo_viewer_prev.png" alt="이전"></button>
+            </div>
 
-			<button class="pv_close" title="닫기"><img src="../resources/images/close_photoviewer.png" alt="닫기"></button>
-		</div>
-	</div>
-	<!-- // 화보 슬라이드 -->
+            <button class="pv_close" title="닫기"><img src="../resources/images/close_photoviewer.png" alt="닫기"></button>
+        </div>
+    </div>
+    <!-- // 화보 슬라이드 -->
 
-	<!-- 팝업 : 샘플 -->
-	<div class="popup_full" data-popup="popup_sample">
-		<div class="popup_inner">
-			<div class="popup_head">
-				<h2 class="tit">팝업 타이틀</h2>
-				<div class="popup_close">
-					<button type="button" class="btn_close" data-popup-close="popup_sample"><span class="blind">닫기</span></button>
-				</div>
-			</div>
-			<div class="popup_cont">
-				내용넣는곳<br><br><br><br><br>내용넣는곳내용넣는곳<br><br><br><br><br>내용넣는곳내용넣는곳<br><br><br><br><br>내용넣는곳내용넣는곳<br><br><br><br><br>내용넣는곳
-			</div>
-			<div class="popup_bottom">
-				<div class="btn_wrap">
-					<button type="button" class="btn bctype2"><span>취소</span></button>
-					<button type="button" class="btn bctype1"><span>확인</span></button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //팝업 : 샘플 -->
+    <!-- 팝업 : 샘플 -->
+    <div class="popup_full" data-popup="popup_sample">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">팝업 타이틀</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_sample"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+                내용넣는곳<br><br><br><br><br>내용넣는곳내용넣는곳<br><br><br><br><br>내용넣는곳내용넣는곳<br><br><br><br><br>내용넣는곳내용넣는곳<br><br><br><br><br>내용넣는곳
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 : 샘플 -->
 
-	<!-- 팝업 : 로그인팝업 -->
-	<div class="popup_full" data-popup="popup_login" style="">
-		<!-- iframe 영역-->
-		<iframe src="../../membership/html/member/login_common02.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
-	</div>
-	<!-- //팝업 : 로그인팝업 -->
+    <!-- 팝업 : 로그인팝업 -->
+    <div class="popup_full" data-popup="popup_login" style="">
+        <!-- iframe 영역-->
+        <iframe src="../../membership/html/member/login_common02.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
+    </div>
+    <!-- //팝업 : 로그인팝업 -->
 
-	<!-- 팝업 : 복사하기 알럿 -->
-	<div class="popup_alert" data-alert="alert_1">
-		<div class="popup_alert_inner">
-			<div class="popup_alert_cont">
-				<p class="alert_txt">클립보드에 복사되었습니다.</p>
-			</div>
-			<div class="popup_alert_bottom">
-				<div class="btn_wrap">
-					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
-				</div>
-			</div>
-			<div class="popup_close">
-				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
-			</div>
-		</div>
-	</div>
-	<!-- //팝업 : 복사하기 알럿 -->
+    <!-- 팝업 : 복사하기 알럿 -->
+    <div class="popup_alert" data-alert="alert_1">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">클립보드에 복사되었습니다.</p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 : 복사하기 알럿 -->
 
-	<!-- 팝업 : 퀴즈 정답제출 알럿 -->
-	<div class="popup_alert" data-alert="quiz_alert">
-		<div class="popup_alert_inner">
-			<div class="popup_alert_cont">
-				<p class="alert_txt">정답 제출이 완료되었습니다.<br>정답을 확인하시겠어요?</p>
-			</div>
-			<div class="popup_alert_bottom">
-				<div class="btn_wrap">
-					<button type="button" class="btn bctype2" data-alert-close="quiz_alert"><span>취소</span></button>
-					<button type="button" class="btn bctype1"><span>확인</span></button>
-				</div>
-			</div>
-			<div class="popup_close">
-				<button type="button" class="btn_close" data-alert-close="quiz_alert"><span class="blind">닫기</span></button>
-			</div>
-		</div>
-	</div>
-	<!-- //팝업 : 퀴즈 정답제출 알럿 -->
+    <!-- 팝업 : 퀴즈 정답제출 알럿 -->
+    <div class="popup_alert" data-alert="quiz_alert">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">정답 제출이 완료되었습니다.<br>정답을 확인하시겠어요?</p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2" data-alert-close="quiz_alert"><span>취소</span></button>
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="quiz_alert"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 : 퀴즈 정답제출 알럿 -->
 
-	<!--D : 얼럿2 -->
-	<div class="popup_alert" data-alert="alert_2">
-		<div class="popup_alert_inner">
-			<div class="popup_alert_cont">
-				<p class="alert_txt">
-					로그인 후 이용 가능한 서비스 입니다. 
-				</p>
-			</div>
-			<div class="popup_alert_bottom">
-				<div class="btn_wrap">
-					<button type="button" class="btn bctype1"><span>확인</span></button>
-				</div>
-			</div>
-			<div class="popup_close">
-				<button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
-			</div>
-		</div>
-	</div>
-	<!--//D : 얼럿2 -->
+    <!--D : 얼럿2 -->
+    <div class="popup_alert" data-alert="alert_2">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    로그인 후 이용 가능한 서비스 입니다. 
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!--//D : 얼럿2 -->
 
-	<!-- js -->
-	<script src="../resources/js/swiper.min.js"></script>
-	<script src="../resources/js/ui.common.js"></script>
+    <!-- js -->
+    <script src="../resources/js/swiper.min.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
 
-	<script>
-		currentPage = 'view';
+    <script>
+        currentPage = 'view';
 
-		viewImgSlide();
+        viewImgSlide();
 
-		$(document).ready(function () {
-			$('.photoViewer').photoViewerSwiper();
-		});
-	</script>
-	<!-- //js -->
+        $(document).ready(function () {
+            $('.photoViewer').photoViewerSwiper();
+        });
+    </script>
+    <!-- //js -->
 </body>
 </html>

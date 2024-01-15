@@ -963,7 +963,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.btn_wrap.type2{margin-top:60px;}
 
 	.tit_wrap{margin-bottom:24px;}
-	.tit_wrap .tit{font-size:24px;line-height:32px;}
+	.tit_wrap .tit{font-size:22px;line-height:32px;}
 	.tit_wrap .btn_more{display:block;width:32px;height:32px;margin-right:-5px;padding:0;}
 	.tit_wrap .btn_more span{display:none;}
 	.tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23666666' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23666666' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
@@ -1194,13 +1194,13 @@ background:#fff;overflow:hidden;z-index:230}
 
 	/* 공통 : D모듈 & 3열 리스트 */
 	.atc_list_wrap{margin-bottom:80px;}
-	.atc_list_wrap .tit_wrap .tit{padding-left:20px;font-size:24px;line-height:32px;}
+	.atc_list_wrap .tit_wrap .tit{padding-left:20px;font-size:24px;line-height:29px;}
 	.atc_list_wrap .tit_wrap .tit:before{top:20px;width:16px;height:4px;}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
 
 	/* 비디오 추가모듈 */
-	.vdo_atc_wrap .tit_wrap .tit{padding-left:20px;font-size:24px;line-height:32px;}
+	.vdo_atc_wrap .tit_wrap .tit{padding-left:20px;font-size:24px;line-height:29px;}
 	.vdo_atc_wrap .tit_wrap .tit:before{top:20px;width:16px;height:4px;}
 	.vdo_atc_list ul{gap:24px 0;margin:0;}
 	.vdo_atc_list li{width:100%;padding:0;}

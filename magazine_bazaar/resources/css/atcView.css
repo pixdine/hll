@@ -9,7 +9,7 @@
 .atc_wrap .atc_header .txt_meta {text-align: center; display: flex; justify-content: center;align-items: center; margin-top:40px;}
 .atc_wrap .atc_header .txt_meta em, .atc_wrap .atc_header .txt_meta  span {font-family:Gotham, "Noto Sans KR"; font-size:14px; color: #666; line-height: 1.5;  display:flex; justify-content: center; align-items: center;}
 .atc_wrap .atc_header .txt_meta .profile_pic {width: 24px;height: 24px;background:url('../images/img_profile.png') center center no-repeat;background-size:100% auto;border-radius:50%;margin-right: 12px;overflow:hidden;}
-.atc_wrap .atc_header .txt_meta .profile_pic img {width:100%; height:100%; object-fit:cover;}
+.atc_wrap .atc_header .txt_meta .profile_pic img {width:100%; height:100%; object-fit:cover; background-color:#fff;}
 
 .atc_wrap .atc_header .txt_meta em { margin-right:4px;vertical-align:top; }
 .atc_wrap .atc_header .txt_meta span a { color: #666 ; /*line-height:1.5em; */vertical-align:top; }

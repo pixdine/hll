@@ -279,11 +279,9 @@
                             <li>
                                 <button type="button" data-popup-open="popup_register"><span>팝업_이벤트 > 이벤트 상세 > 개인정보 수집 및 이용에 대한 동의 > 동의함</span></button>
                             </li>
-                            <!-- 삭제 : 에스콰이어는 별자리운세 없음
                             <li>
                                 <button type="button" data-popup-open="popup_horoscope"><span>팝업_별자리 > 별자리 상세</span></button>
                             </li>
-                            -->
                             <li>
                                 <button type="button" onclick="openPhotoViewer();"><span>팝업_바자화보 > 화보 슬라이드 팝업<br>(기사상세 > 사진묶음 슬라이드 > 크게보기, 커버 > 커버 이미지 팝업과 동일)</span></button>
                             </li>
@@ -526,6 +524,62 @@
         </div>
     </div>
     <!-- //팝업 : 개인정보 수집 및 이용동의 내 동의하기 클릭 시 -->
+
+    <!-- 팝업 : 별자리상세보기 -->
+    <div class="popup_full popup_horoscope" data-popup="popup_horoscope">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit blind">별자리 운세</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_horoscope"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont non">
+                <div class="horoscope_box">
+                    <div class="imgbox">
+                        <!-- D: 별자리별 이미지
+                            <img src="../resources/images/img_horoscope01.png" alt="물병자리">
+                            <img src="../resources/images/img_horoscope02.png" alt="믈고기자리">
+                            <img src="../resources/images/img_horoscope03.png" alt="양자리">
+                            <img src="../resources/images/img_horoscope04.png" alt="황소자리">
+                            <img src="../resources/images/img_horoscope05.png" alt="쌍둥이자리">
+                            <img src="../resources/images/img_horoscope06.png" alt="게자리">
+                            <img src="../resources/images/img_horoscope07.png" alt="사자자리">
+                            <img src="../resources/images/img_horoscope08.png" alt="처녀자리">
+                            <img src="../resources/images/img_horoscope09.png" alt="천칭자리">
+                            <img src="../resources/images/img_horoscope10.png" alt="전갈자리">
+                            <img src="../resources/images/img_horoscope11.png" alt="사수자리">
+                            <img src="../resources/images/img_horoscope12.png" alt="염소자리">
+                        -->
+                        <img src="../resources/images/img_horoscope01.png" alt="물병자리">
+                    </div>
+                    <div class="txtbox">
+                        <div class="info_group">
+                            <!-- D: 기간별 표기 (TODAY, WEEKLY, MONTHLY)
+                                <p class="period">2023.07.20 (Thu)</p>
+                                <p class="period">2023.07.17 (Mon) - 2023.07.23 (Sun)</p>
+                                <p class="period">2023.07.01 (Sat) - 2023.07.31 (Mon)</p>
+                            -->
+                            <p class="period">2023.07.17 (Mon) - 2023.07.23 (Sun)</p>
+                            <p class="tit">AQUARIUS</p>
+                            <p class="meta">물병자리 <span class="date">01.20 - 02.18</span></p>
+                        </div>
+                        <div class="txt">
+                            <p>대인관계에 에너지를 쏟을수록 행운이 찾아온다. 다만 적당한 거리를 유지하는 것이 관건. 연인운이 높아 결혼하기 좋은 시기다. 상대의 좋은 면만 보고 판단하면 손해를 볼 수 있으니 주의하자. 당신에게 유익한 사람인지 깐깐하게 따져봐야 한다. LUCKY ACTION 스트라이프 패턴의 옷을 입자.</p>
+                            <p>대인관계에 에너지를 쏟을수록 행운이 찾아온다. 다만 적당한 거리를 유지하는 것이 관건. 연인운이 높아 결혼하기 좋은 시기다. 상대의 좋은 면만 보고 판단하면 손해를 볼 수 있으니 주의하자. 당신에게 유익한 사람인지 깐깐하게 따져봐야 한다. LUCKY ACTION 스트라이프 패턴의 옷을 입자.</p>
+                        </div>
+                        <ul class="fortune_list">
+                            <li><em>행운의 시간</em><span>저녁 11시</span></li>
+                            <li><em>행운의 물건</em><span>SNS</span></li>
+                            <li><em>행운의 장소</em><span>피트니스 센터</span></li>
+                            <li><em>행운의 색상</em><span>브라운</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 : 별자리상세보기 -->
 
     <!-- 화보 슬라이드 -->
     <div class="photoViewer">

@@ -27,6 +27,12 @@
 	font-weight: 700;
 	src: url(../font/TTFirs-ExtraBold.woff2) format("woff2"), url(../font/TTFirs-ExtraBold.woff) format("woff"), url(../font/TTFirs-ExtraBold.otf) format("opentype");
 }
+@font-face{
+	font-family: Gotham;
+	font-style: normal;
+	font-weight: 500;
+	src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff");
+}
 
 /* reset */
 html, body {font-size:10px;}
@@ -438,18 +444,18 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .footer_info .addr_txt .email{display:block;}
 .footer_info .copyright{margin-top:20px;font-size:14px;font-weight:500;color:#666;line-height:20px;}
 .family_wrap{width:100%;background-color:#fff;border-top:1px solid #dbdbdb;text-align:center;}
-.family_wrap .btn_familysite{display:inline-flex;align-items:center;justify-content:center;height:63px;font-family:'Pretendard';font-size:16px;font-weight:500;color:#666;}
+.family_wrap .btn_familysite{display:inline-flex;align-items:center;justify-content:center;height:63px;font-family:Gotham;font-size:16px;font-weight:500;color:#666;}
 .family_wrap .btn_familysite:after{content:'';display:block;width:16px;height:16px;margin:0 0 0 8px;background:url('../images/ico_arrow_down_16.svg') no-repeat center center / 100% auto;}
 .family_wrap.open .btn_familysite:after{background-image:url('../images/ico_arrow_up_16.svg');}
 .familysite{display:none;padding:60px 0;background-color:#f7f7f7;text-align:left;}
 .familysite .tab_menu.type02{margin-bottom:40px;}
-.familysite .tab_menu.type02 li a{font-family:'Pretendard';font-weight:500;font-size:20px;line-height:1;}
+.familysite .tab_menu.type02 li a{font-family:Gotham, 'Noto Sans KR';font-weight:500;font-size:20px;line-height:1;}
 .familysite .tab_menu.type02 li.on a{font-weight:500;}
 .familysite_list.family{max-width:79.667%;}
 .familysite_list ul{display:flex;flex-wrap:wrap;gap:24px;}
 .familysite_list li{width:calc(20% - 20px);}
 .familysite_list.family li{width:calc(25% - 18px);}
-.familysite_list li a{display:block;font-family:'Pretendard', 'Noto Sans KR';font-weight:500;font-size:16px;line-height:1;color:#666;}
+.familysite_list li a{display:block;font-family:Gotham, 'Noto Sans KR';font-weight:500;font-size:16px;line-height:1;color:#666;}
 
 /* swiper */
 .swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}

@@ -14,12 +14,6 @@
 </head>
 <body>
 	<div id="cosmo"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역 -->
-		<div class="ad_google">
-			google 광고 배너 영역<br>높이값 가변적
-		</div>
-		<!--// google 광고영역 -->
-
 		<div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header">
@@ -47,8 +41,8 @@
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
@@ -63,7 +57,7 @@
 								<div class="breadcrumb">
 									<a href="#" class="home">HOME</a>
 									<a href="#" class="cate_dep">FASHION</a>
-									<a href="#" class="cate_dep">트렌드</a>
+									<a href="#" class="cate_dep">패션 뉴스</a>
 								</div>
 								<!-- //브레드크럼 -->
 								<!-- 기사 타이틀 -->
@@ -163,7 +157,7 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
 
@@ -252,9 +246,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
-										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-										<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
 										<li><a href="https://www.facebook.com/cosmokorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/CosmopolitanKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://story.kakao.com/ch/cosmopolitan" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
 										<li><a href="https://twitter.com/cosmokorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
@@ -335,10 +330,10 @@
 											<div class="tab_menu type01">
 												<ul>
 													<li class="on"><a href="javascript:;">기사<span>3,091</span></a></li><!-- D: 선택 시 on 클래스 추가 -->
-													<li><a href="javascript:;">바자 화보<span>22</span></a></li>
+													<li><a href="javascript:;">에스콰이어 화보<span>22</span></a></li>
 													<li><a href="javascript:;">에디터<span>18</span></a></li>
 													<li><a href="javascript:;">이벤트<span>10</span></a></li>
-													<li><a href="javascript:;">예술산책<span>0</span></a></li>
+													<li><a href="javascript:;">클로즈업<span>10</span></a></li>
 												</ul>
 											</div>
 
@@ -875,15 +870,15 @@
 																		<a href="#">
 																			<div class="editor_head">
 																				<div class="editor_info">
-																					<span class="name">BAZAAR</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="name">COSMOPOLITAN</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/UPLOAD/user/IMG_2022_02_14/036943143001.jpg" alt="프로필 이미지"><!-- D: 이미지 등록한 경우 -->
 																				</div>
 																			</div>
 																			<div class="editor_body">
-																				<p class="txt"><mark>하퍼스바자</mark>의 최신 소식을 전하는 에디터 바자 입니다. 패션 기사를 주로 기고합니다. 다양한 소식을 기대해주세요!</p>
+																				<p class="txt"><mark>코스모폴리탄</mark>의 최신 소식을 전하는 에디터 바자 입니다. 패션 기사를 주로 기고합니다. 다양한 소식을 기대해주세요!</p>
 																			</div>
 																		</a>
 																	</div>
@@ -894,7 +889,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">정소희</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img"></div><!-- D: 이미지 등록하지 않은 경우 -->
 																			</div>
@@ -913,7 +908,7 @@
 																					<span class="desc">프리랜서</span>
 																				</div>
 																				<div class="profile_img">
-																					<img src="../resources/images/temp/temp_profile03.jpg" alt="프로필 이미지">
+																					<img src="https://prd.harpersbazaar.co.kr/resources/online/attach/avatar/2995.png" alt="프로필 이미지">
 																				</div>
 																			</div>
 																			<div class="editor_body">
@@ -944,7 +939,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">김장군</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="../resources/images/temp/temp_profile02.jpg" alt="프로필 이미지">
@@ -980,14 +975,14 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">임윤아</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202208/02/10d9f6e7-5c7b-4d44-8cd7-ac4824e4e5ac.jpg" alt="프로필 이미지">
 																				</div>
 																			</div>
 																			<div class="editor_body">
-																				<p class="txt">안녕하세요. <mark>하퍼스바자</mark> 에디터 임윤아입니다.</p>
+																				<p class="txt">안녕하세요. <mark>코스모폴리탄</mark> 에디터 임윤아입니다.</p>
 																			</div>
 																		</a>
 																	</div>
@@ -1016,7 +1011,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">정윤지</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img"></div>
 																			</div>
@@ -1032,7 +1027,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">이경진</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/UPLOAD/user/IMG_2022_02_14/036943137001.jpg" alt="프로필 이미지">
@@ -1050,7 +1045,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">김초혜</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/UPLOAD/user/IMG_2022_02_14/036943117001.jpg" alt="프로필 이미지">
@@ -1068,7 +1063,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">이인혜</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/UPLOAD/user/IMG_2022_02_14/036943119001.jpg" alt="프로필 이미지">
@@ -1086,14 +1081,14 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">전혜진</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/UPLOAD/user/IMG_2022_02_14/036943142001.jpg" alt="프로필 이미지">
 																				</div>
 																			</div>
 																			<div class="editor_body">
-																				<p class="txt">안녕하세요. <mark>하퍼스바자</mark> 에디터 전혜진입니다.</p>
+																				<p class="txt">안녕하세요. <mark>코스모폴리탄</mark> 에디터 전혜진입니다.</p>
 																			</div>
 																		</a>
 																	</div>
@@ -1104,7 +1099,7 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">강도현</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="../resources/images/img_profile.png" alt="프로필 이미지">
@@ -1138,12 +1133,12 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">홍서영</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img"></div>
 																			</div>
 																			<div class="editor_body">
-																				<p class="txt">안녕하세요. <mark>하퍼스바자</mark> 에디터 홍서영입니다.</p>
+																				<p class="txt">안녕하세요. <mark>코스모폴리탄</mark> 에디터 홍서영입니다.</p>
 																			</div>
 																		</a>
 																	</div>
@@ -1154,14 +1149,14 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">강다니엘</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202205/25/449b6123-748e-4b03-9830-1ab64f0e747c.jpg" alt="프로필 이미지">
 																				</div>
 																			</div>
 																			<div class="editor_body">
-																				<p class="txt">안녕하세요. <mark>하퍼스바자</mark> 에디터 강다니엘입니다.</p>
+																				<p class="txt">안녕하세요. <mark>코스모폴리탄</mark> 에디터 강다니엘입니다.</p>
 																			</div>
 																		</a>
 																	</div>
@@ -1172,14 +1167,14 @@
 																			<div class="editor_head">
 																				<div class="editor_info">
 																					<span class="name">차은우</span>
-																					<span class="desc"><mark>하퍼스바자</mark> 에디터</span>
+																					<span class="desc"><mark>코스모폴리탄</mark> 에디터</span>
 																				</div>
 																				<div class="profile_img">
 																					<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202205/25/470f3a06-e93c-4e88-9f5f-11415d9f781a.jpg" alt="프로필 이미지">
 																				</div>
 																			</div>
 																			<div class="editor_body">
-																				<p class="txt">안녕하세요. <mark>하퍼스바자</mark> 에디터 차은우입니다.</p>
+																				<p class="txt">안녕하세요. <mark>코스모폴리탄</mark> 에디터 차은우입니다.</p>
 																			</div>
 																		</a>
 																	</div>
@@ -1323,11 +1318,11 @@
 											</div>
 											<!-- //이벤트 탭 내용 -->
 
-											<!-- 예술산책 탭 내용 -->
+											<!-- 클로즈업 탭 내용 -->
 											<div class="tab_cont">
-												<div style="padding:160px 0;">바자예술산책 기획/디자인 확정되면 추후 작업 예정</div>
+												<div style="margin:150px 0;text-align:center;">클로즈업 나오면 작업 예정</div>
 											</div>
-											<!-- 예술산책 탭 내용 -->
+											<!-- //클로즈업 탭 내용 -->
 										</div>
 									</div>
 								</div>
@@ -1358,9 +1353,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
-								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
-								<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
 								<li><a href="https://www.facebook.com/cosmokorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/CosmopolitanKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/cosmopolitan" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
 								<li><a href="https://twitter.com/cosmokorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
@@ -1381,10 +1377,10 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:cosmopolitan@joins.com">cosmopolitan@joins.com</a></span>
+									<span class="email">이메일 : <a href="mailto:cosmopolitan@hll.kr">cosmopolitan@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>

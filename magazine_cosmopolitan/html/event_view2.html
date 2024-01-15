@@ -15,22 +15,15 @@
 </head>
 <body>
 	<div id="cosmo"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역 -->
-		<div class="ad_google">
-			google 광고 배너 영역<br>높이값 가변적
-		</div>
-		<!--// google 광고영역 -->
-
 		<div id="wrap" class="wrap">
 			<!-- header -->
-			<header id="header" class="header"><!-- D: 기사상세, 이벤트 상세일 경우 view 클래스 추가 -->
+			<header id="header" class="header">
 				<!-- header_wrap -->
 				<div class="header_wrap">
 					<div class="header_top">
 						<div class="cont_inner">
-							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN"></a></h1>
-							<!-- D: 로고 (PC 메인, 모바일에서 노출) -->
-							<button type="button" class="btn_menu"><span class="blind">전체 메뉴열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
 							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 						</div>
 					</div>
@@ -49,10 +42,10 @@
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
-								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
 						</div>
 					</div>
@@ -69,7 +62,7 @@
 								<!-- //브레드크럼 -->
 								<!-- 기사 타이틀 -->
 								<div class="txtbox">
-									<p class="tit"> 업사이클링 신진 아티스트 발굴 프로젝트 &lt;Re, Think&gt;</p>
+									<p class="tit">업사이클링 신진 아티스트 발굴 프로젝트 &lt;Re, Think&gt;</p>
 								</div>
 								<!-- //기사 타이틀 -->
 								<!-- 스크랩, 공유하기 -->
@@ -164,7 +157,7 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
 
@@ -253,9 +246,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
-										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-										<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
 										<li><a href="https://www.facebook.com/cosmokorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/CosmopolitanKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://story.kakao.com/ch/cosmopolitan" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
 										<li><a href="https://twitter.com/cosmokorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
@@ -487,7 +481,7 @@
 											<img src="https://image.jtbcplus.kr/data/elle_linkcont/event/20220610_baza_art/images/2206_barzar_03.jpg" alt="상시 모집" />
 										</section>
 										<section class="section-04">
-											<a href="https://www.cosmopolitan.co.kr/art?link=apply" target="_blank">
+											<a href="https://www.harpersbazaar.co.kr/art?link=apply" target="_blank">
 												<img class="click" src="https://image.jtbcplus.kr/data/elle_linkcont/event/20220610_baza_art/images/2206_barzar_04.jpg"/>
 											</a>
 										</section>
@@ -499,6 +493,12 @@
 									</div>
 									<!-- //기존 as-is 소스 테스트 -->
 								</div>
+
+								<!-- 2023-12-22 : 응모하기 버튼 추가 -->
+								<div class="btn_wrap type2">
+									<button type="button" class="btn bctype2"><span>응모하기</span></button>
+								</div>
+								<!-- //2023-12-22 : 응모하기 버튼 추가 -->
 							</div>
 							<!--// 상세 > body -->
 
@@ -647,9 +647,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
-								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
-								<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
 								<li><a href="https://www.facebook.com/cosmokorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/CosmopolitanKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/cosmopolitan" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
 								<li><a href="https://twitter.com/cosmokorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
@@ -670,10 +671,10 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:cosmopolitan@joins.com">cosmopolitan@joins.com</a></span>
+									<span class="email">이메일 : <a href="mailto:cosmopolitan@hll.kr">cosmopolitan@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>

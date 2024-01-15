@@ -14,12 +14,6 @@
 </head>
 <body>
 	<div id="cosmo"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역 -->
-		<div class="ad_google">
-			google 광고 배너 영역<br>높이값 가변적
-		</div>
-		<!--// google 광고영역 -->
-
 		<div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header">
@@ -47,8 +41,8 @@
 							</div>
 							<div class="header_util">
 								<div class="aside">
-									<a href="#">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
@@ -63,7 +57,7 @@
 								<div class="breadcrumb">
 									<a href="#" class="home">HOME</a>
 									<a href="#" class="cate_dep">FASHION</a>
-									<a href="#" class="cate_dep">트렌드</a>
+									<a href="#" class="cate_dep">패션 뉴스</a>
 								</div>
 								<!-- //브레드크럼 -->
 								<!-- 기사 타이틀 -->
@@ -163,7 +157,7 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
 
@@ -252,9 +246,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
-										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-										<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
 										<li><a href="https://www.facebook.com/cosmokorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/CosmopolitanKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://story.kakao.com/ch/cosmopolitan" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
 										<li><a href="https://twitter.com/cosmokorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
@@ -265,6 +260,16 @@
 				</div>
 			</div>
 			<!-- //전체메뉴 -->
+
+			<!-- 2024-01-03 : 광고배너영역(탑배너) -->
+			<div class="ad_top"> 
+				<div class="ad_google">
+					<div><!-- 2024-01-09 > google 광고구좌 div 추가 --> 
+						<img src="../resources/images/temp/temp_ad_top.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!--//2024-01-03 : 광고배너영역(탑배너) -->
 
 			<!-- container -->
 			<div id="container" class="container">
@@ -279,237 +284,111 @@
 					</div>
 					<!-- //메인 영상형 배너 모듈 -->
 
-					<!-- 패션 (카테고리별 기사 모듈 타입2) -->
-					<!-- D: pc와 mo 분기처리 필요 -->
-					<div class="cate_atc_wrap">
+					<!-- E모듈 -->
+					<div class="center_atc_wrap">
 						<div class="cont_inner">
-							<!-- PC버전 -->
-							<div class="cate_atc_list pc">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_fashion01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">FASHION</span>
-												<p class="tit">한소희의 로맨틱한 시간들</p>
-											</div>
-										</a>
-									</div>
+							<!-- 타이틀영역 -->
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">Fashion</h2>
 								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type2"><!-- D: 2개씩 작은 썸네일 노출 시 type2 클래스 추가 -->
-									<ul>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion02.jpg" alt=""></div><!-- D: PC 2번, 5번만 세로로 긴 직사각형 이미지고 나머지는 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">시선 강탈 헤드 스카프</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁 보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁 보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">우주와 SF를 담고 새로이 등장한 샤넬 워치 컬렉션!</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">매혹적인 문가영이 선사하는 중독적인 머스크향의 매력</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion06.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">이번엔 누구와? 협업 장인 반스와 컨버스의 파트너는?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion07.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">컬러풀한 봄을 닮은 이번 시즌의 백과 슈즈!</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion08.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">향잘알이 되고 싶은 사람에게 추천하는 입문템</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion09.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">제니부터 트래비스 스캇까지, 칸 애프터 파티 스타일</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<!-- //sm_thumb -->
 							</div>
-							<!-- //PC버전 -->
+							<!-- //타이틀영역 -->
 
-							<!-- MO버전 -->
-							<div class="cate_atc_list mo">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_fashion01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">FASHION</span>
-												<p class="tit">한소희의 로맨틱한 시간들</p>
-											</div>
-										</a>
-									</div>
-								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type2" data-slide="sm_thumb_slide"><!-- D: 2개씩 작은 썸네일 노출 시 type2 클래스 추가 -->
-									<ul class="swiper-wrapper">
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">시선 강탈 헤드 스카프</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁 보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁 보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">우주와 SF를 담고 새로이 등장한 샤넬 워치 컬렉션!</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">매혹적인 문가영이 선사하는 중독적인 머스크향의 매력</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion06.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">이번엔 누구와? 협업 장인 반스와 컨버스의 파트너는?</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion07.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">컬러풀한 봄을 닮은 이번 시즌의 백과 슈즈!</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion08.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">향잘알이 되고 싶은 사람에게 추천하는 입문템</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_fashion09.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">FASHION</span>
-														<p class="tit">제니부터 트래비스 스캇까지, 칸 애프터 파티 스타일</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-									<div class="control">
-										<div class="swiper-pagination"></div>
-									</div>
-								</div>
-								<!-- //sm_thumb -->
+							<!-- 리스트 -->
+							<div class="center_atc_list">
+								<ul>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center01.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center01_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">보송한 것이 좋아! 보기만 해도 따뜻한 퍼 부츠</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center02.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center02_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 세로로 긴 직사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">올 시즌 키 컬러 '레드'로 완성한 룩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- //D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center03.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center03_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">일상 속 사물과 주얼리의 특별한 만남 7</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center04.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center04_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">탄생 10주년을 맞은 막스마라의 아이콘, 테디베어 코트</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center05.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center05_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">Ever After 배우 김영대와 표예진이 다시 쓰는 &lt;낮에 뜨는 달&gt;의 엔딩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
 							</div>
-							<!-- //MO버전 -->
+							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //패션 (카테고리별 기사 모듈 타입2) -->
+					<!-- //E모듈 -->
 
-					<!-- 바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- 2024-01-03 : 광고배너영역(인리드) -->
+					<div class="ad_inread">
+						<div class="ad_google">
+							<div> <!-- 2024-01-09 > google 광고구좌 div 추가 -->
+								<img src="https://pixdine.github.io/hll/magazine_bazaar/resources/images/temp/temp_ad_inread.png" alt="">
+							</div>
+						</div>
+					</div>
+					<!--//2024-01-03 : 광고배너영역(인리드) -->
+
+					<!-- B모듈 -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
 								<div class="tit_area">
-									<h2 class="tit">바자 아트</h2>
+									<h2 class="tit">기획기사</h2>
 									<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
 								</div>
 								<p class="hashtag">#바자아트위크, #전시추천, #바자아트</p>
@@ -527,7 +406,7 @@
 													<img src="../resources/images/temp/temp_curation01.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
 												</div>
 												<div class="txtbox">
-													<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
+													<p class="tit">캔들 덕후 주목! 홀리데이 신상 캔들 4</p>
 												</div>
 											</a>
 										</div>
@@ -539,7 +418,7 @@
 													<img src="../resources/images/temp/temp_curation02.jpg" alt="">
 												</div>
 												<div class="txtbox">
-													<p class="tit">#바자아트위크 흘러가는 시간을 소장할 수 있을까?</p>
+													<p class="tit">ITZY 예지의 선명한 자부심</p>
 												</div>
 											</a>
 										</div>
@@ -551,7 +430,7 @@
 													<img src="../resources/images/temp/temp_curation03.jpg" alt="">
 												</div>
 												<div class="txtbox">
-													<p class="tit">#바자아트위크 한국 근현대미술사를 이끈 작가들의 클래스는 영원하다 - 격동의 시대에서 꽃피운 한국 미술의 정수</p>
+													<p class="tit">인증샷 성지 예감! 크리스마스 트리뷰 카페 4</p>
 												</div>
 											</a>
 										</div>
@@ -575,7 +454,7 @@
 													<img src="../resources/images/temp/temp_curation07.jpg" alt="">
 												</div>
 												<div class="txtbox">
-													<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+													<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&amp;A</p>
 												</div>
 											</a>
 										</div>
@@ -612,15 +491,15 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- //B모듈 -->
 
-					<!-- 금주의 인기 기사 (조회순 기사 모듈) -->
+					<!-- G모듈 -->
 					<div class="top3_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
 								<div class="tit_area">
-									<h2 class="tit">금주의 인기 기사</h2>
+									<h2 class="tit">Weekly Hot Issue</h2>
 								</div>
 							</div>
 							<!-- //타이틀영역 -->
@@ -637,7 +516,7 @@
 													<img src="../resources/images/temp/temp_popular01_b.jpg" class="mo" alt=""><!-- MO에서 노출 - 정사각형 이미지 -->
 												</div>
 												<div class="txtbox">
-													<span class="cate">CELEB</span>
+													<span class="cate">CELEBS</span>
 													<p class="tit">러블리 그 자체! 장원영부터 전소미까지, 핑크를 입는 법</p>
 												</div>
 											</a>
@@ -667,7 +546,7 @@
 													<img src="../resources/images/temp/temp_popular03_b.jpg" class="mo" alt="">
 												</div>
 												<div class="txtbox">
-													<span class="cate">FASHION</span>
+													<span class="cate">STYLE</span>
 													<p class="tit">봄바람을 타고 춤추는 구찌</p>
 												</div>
 											</a>
@@ -678,242 +557,106 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //금주의 인기 기사 (조회순 기사 모듈) -->
+					<!-- //G모듈 -->
 
-					<!-- 뷰티 (카테고리별 기사 모듈 타입2) -->
-					<!-- D: pc와 mo 분기처리 필요 -->
-					<div class="cate_atc_wrap">
+					<!-- E모듈 -->
+					<div class="center_atc_wrap">
 						<div class="cont_inner">
-							<!-- PC버전 -->
-							<div class="cate_atc_list pc">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_beauty01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">BEAUTY</span>
-												<p class="tit">리본 없이 못살아! 블랙핑크 제니의 리본 헤어 스타일 모음.zip</p>
-											</div>
-										</a>
-									</div>
+							<!-- 타이틀영역 -->
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">Beauty</h2>
 								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type2"><!-- D: 2개씩 작은 썸네일 노출 시 type2 클래스 추가 -->
-									<ul>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty02.jpg" alt=""></div><!-- D: PC 2번, 5번만 세로로 긴 직사각형 이미지고 나머지는 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">전종서와 다미아니가 만난 나른한 무드의 주얼리 화보는?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">신상 선케어 제품의 특징은?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">23년 뷰티 트렌드를 알고 싶다면? 90년대로 되돌아가야 한다</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty06.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">여름 네일 시안 찾고 있다면 클릭!</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty07.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">실패 없이 다이어트하기. 하루에 당 20g</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty08.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">여름 필수템! 지성피부가 진짜로 사용하는 인생 파우더 모음집</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty09.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">폼 미쳤다! 선물로 제격인 명품 캔들 찾는다면?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<!-- //sm_thumb -->
 							</div>
-							<!-- //PC버전 -->
+							<!-- //타이틀영역 -->
 
-							<!-- MO버전 -->
-							<div class="cate_atc_list mo">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_beauty01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">BEAUTY</span>
-												<p class="tit">리본 없이 못살아! 블랙핑크 제니의 리본 헤어 스타일 모음.zip</p>
-											</div>
-										</a>
-									</div>
-								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type2" data-slide="sm_thumb_slide"><!-- D: 2개씩 작은 썸네일 노출 시 type2 클래스 추가 -->
-									<ul class="swiper-wrapper">
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">전종서와 다미아니가 만난 나른한 무드의 주얼리 화보는?</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">신상 선케어 제품의 특징은?</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">23년 뷰티 트렌드를 알고 싶다면? 90년대로 되돌아가야 한다</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty06.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">여름 네일 시안 찾고 있다면 클릭!</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty07.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">실패 없이 다이어트하기. 하루에 당 20g</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty08.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">여름 필수템! 지성피부가 진짜로 사용하는 인생 파우더 모음집</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_beauty09.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">BEAUTY</span>
-														<p class="tit">폼 미쳤다! 선물로 제격인 명품 캔들 찾는다면?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-									<div class="control">
-										<div class="swiper-pagination"></div>
-									</div>
-								</div>
-								<!-- //sm_thumb -->
+							<!-- 리스트 -->
+							<div class="center_atc_list">
+								<ul>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center01.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center01_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">보송한 것이 좋아! 보기만 해도 따뜻한 퍼 부츠</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center02.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center02_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 세로로 긴 직사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">올 시즌 키 컬러 '레드'로 완성한 룩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- //D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center03.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center03_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">일상 속 사물과 주얼리의 특별한 만남 7</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center04.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center04_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">탄생 10주년을 맞은 막스마라의 아이콘, 테디베어 코트</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center05.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center05_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">Ever After 배우 김영대와 표예진이 다시 쓰는 &lt;낮에 뜨는 달&gt;의 엔딩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
 							</div>
-							<!-- //MO버전 -->
+							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //뷰티 (카테고리별 기사 모듈 타입2) -->
+					<!-- //E모듈 -->
 
-					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
+					<!-- B모듈 -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
 								<div class="tit_area">
-									<h2 class="tit">바자의 픽 실패 없이 다이어트하기. 텍스트 길어질 경우 말줄임 처리 텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리텍스트 길어질 경우 말줄임 처리</h2>
+									<h2 class="tit">기획기사</h2>
 									<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
 								</div>
-								<p class="hashtag">#다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트</p>
+								<p class="hashtag">#바자아트위크, #전시추천, #바자아트</p>
 							</div>
 							<!-- //타이틀영역 -->
 
@@ -925,10 +668,58 @@
 										<div class="atcbox">
 											<a href="#">
 												<div class="imgbox">
-													<img src="../resources/images/temp/temp_curation07.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_curation01.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
 												</div>
 												<div class="txtbox">
-													<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+													<p class="tit">캔들 덕후 주목! 홀리데이 신상 캔들 4</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation02.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">ITZY 예지의 선명한 자부심</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation03.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">인증샷 성지 예감! 크리스마스 트리뷰 카페 4</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation04.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">바자아트위크 행복가득한 연못으로 오세요. 도나 후앙카, 블리스 풀</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_curation07.jpg" alt="">
+												</div>
+												<div class="txtbox">
+													<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&amp;A</p>
 												</div>
 											</a>
 										</div>
@@ -957,54 +748,6 @@
 											</a>
 										</div>
 									</li>
-									<li class="swiper-slide">
-										<div class="atcbox">
-											<a href="#">
-												<div class="imgbox">
-													<img src="../resources/images/temp/temp_curation01.jpg" alt="">
-												</div>
-												<div class="txtbox">
-													<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
-												</div>
-											</a>
-										</div>
-									</li>
-									<li class="swiper-slide">
-										<div class="atcbox">
-											<a href="#">
-												<div class="imgbox">
-													<img src="../resources/images/temp/temp_curation02.jpg" alt="">
-												</div>
-												<div class="txtbox">
-													<p class="tit">#바자아트위크 흘러가는 시간을 소장할 수 있을까?</p>
-												</div>
-											</a>
-										</div>
-									</li>
-									<li class="swiper-slide">
-										<div class="atcbox">
-											<a href="#">
-												<div class="imgbox">
-													<img src="../resources/images/temp/temp_curation03.jpg" alt="">
-												</div>
-												<div class="txtbox">
-													<p class="tit">#바자아트위크 한국 근현대미술사를 이끈 작가들의 클래스는 영원하다 - 격동의 시대에서 꽃피운 한국 미술의 정수</p>
-												</div>
-											</a>
-										</div>
-									</li>
-									<li class="swiper-slide">
-										<div class="atcbox">
-											<a href="#">
-												<div class="imgbox">
-													<img src="../resources/images/temp/temp_curation04.jpg" alt="">
-												</div>
-												<div class="txtbox">
-													<p class="tit">바자아트위크 행복가득한 연못으로 오세요. 도나 후앙카, 블리스 풀</p>
-												</div>
-											</a>
-										</div>
-									</li>
 								</ul>
 								<div class="control">
 									<div class="swiper-scrollbar"></div>
@@ -1013,157 +756,103 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- //B모듈 -->
 
-					<!-- 아트 (카테고리별 기사 모듈 타입1) -->
-					<!-- D: PC와 MO 분기처리 필요 -->
-					<div class="cate_atc_wrap">
+					<!-- E모듈 -->
+					<div class="center_atc_wrap">
 						<div class="cont_inner">
-							<!-- PC버전 -->
-							<div class="cate_atc_list pc">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_art01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">ART</span>
-												<p class="tit">박민하가 감각한 도시의 풍경</p>
-											</div>
-										</a>
-									</div>
+							<!-- 타이틀영역 -->
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">Celebs</h2>
 								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type1"><!-- D: 작은 썸네일 노출 시 type1 클래스 추가 -->
-									<ul>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art02.jpg" alt=""></div><!-- D: PC 가로로 긴 직사각형 이미지고 -->
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">요즘 아트 컬렉터들이 주목하는 작가, 원계홍은 누구인가.</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">전 세계 9인의 여성 예술가를 조명하는, 미스 디올 전시</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">우주와 SF를 담고 새로이 등장한 샤넬 워치 컬렉션!</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">에르빈 부름의 움직이는 조각</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<!-- //sm_thumb -->
 							</div>
-							<!-- //PC버전 -->
+							<!-- //타이틀영역 -->
 
-							<!-- MO버전 -->
-							<div class="cate_atc_list mo">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_art01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">ART</span>
-												<p class="tit">한소희의 로맨틱한 시간들</p>
-											</div>
-										</a>
-									</div>
-								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type1" data-slide="sm_thumb_slide"><!-- D: 작은 썸네일 노출 시 type1 클래스 추가 -->
-									<ul class="swiper-wrapper">
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">박민하가 감각한 도시의 풍경</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁 보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁 보부상들은 주목! 빅 백을 든 여인과 파파라치의 전쟁</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">우주와 SF를 담고 새로이 등장한 샤넬 워치 컬렉션!</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_art05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">ART</span>
-														<p class="tit">매혹적인 문가영이 선사하는 중독적인 머스크향의 매력</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-									<div class="control">
-										<div class="swiper-pagination"></div>
-									</div>
-								</div>
-								<!-- //sm_thumb -->
+							<!-- 리스트 -->
+							<div class="center_atc_list">
+								<ul>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center01.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center01_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">보송한 것이 좋아! 보기만 해도 따뜻한 퍼 부츠</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center02.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center02_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 세로로 긴 직사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">올 시즌 키 컬러 '레드'로 완성한 룩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- //D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center03.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center03_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">일상 속 사물과 주얼리의 특별한 만남 7</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center04.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center04_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">탄생 10주년을 맞은 막스마라의 아이콘, 테디베어 코트</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center05.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center05_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">Ever After 배우 김영대와 표예진이 다시 쓰는 &lt;낮에 뜨는 달&gt;의 엔딩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
 							</div>
-							<!-- //MO버전 -->
+							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //아트 (카테고리별 기사 모듈 타입1) -->
+					<!-- //E모듈 -->
 
-					<!-- 최신 소식 놓치지 마세요 (최신순 기사 모듈) -->
+					<!-- C모듈 -->
 					<div class="issue_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
 								<div class="tit_area">
-									<h2 class="tit">최신 소식 놓치지 마세요!</h2>
+									<h2 class="tit">Latest Articles</h2>
 								</div>
 							</div>
 							<!-- //타이틀영역 -->
@@ -1175,11 +864,11 @@
 										<div class="atcbox">
 											<a href="#">
 												<div class="imgbox">
-													<img src="../resources/images/temp/temp_latest01.jpg" alt="">
+													<img src="../resources/images/temp/temp_latest01.jpg" alt=""><!-- D: PC/MO 세로로 긴 직사각형 이미지 -->
 												</div>
 												<div class="txtbox">
-													<span class="cate">CELEB</span>
-													<p class="tit">이 조합 찬성. 뷔, 리사, 박보검의 셀린느 파티룩</p>
+													<span class="cate">CELEBS</span>
+													<p class="tit">연예인 중의 연예인, 장원영 평판 모음zip</p>
 												</div>
 											</a>
 										</div>
@@ -1228,239 +917,103 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //최신 소식 놓치지 마세요 (최신순 기사 모듈) -->
+					<!-- //C모듈 -->
 
-					<!-- 지속가능성 (카테고리별 기사 모듈 타입2) -->
-					<!-- D: pc와 mo 분기처리 필요 -->
-					<div class="cate_atc_wrap">
+					<!-- E모듈 -->
+					<div class="center_atc_wrap">
 						<div class="cont_inner">
-							<!-- PC버전 -->
-							<div class="cate_atc_list pc">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">SUSTAINABILITY</span>
-												<p class="tit">업계 최초! 친환경 식물성 소재로 만든 나일론 티셔츠</p>
-											</div>
-										</a>
-									</div>
+							<!-- 타이틀영역 -->
+							<div class="tit_wrap">
+								<div class="tit_area">
+									<h2 class="tit">Life</h2>
 								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type2"><!-- D: 2개씩 작은 썸네일 노출 시 type2 클래스 추가 -->
-									<ul>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility02.jpg" alt=""></div><!-- D: PC 2번, 5번만 세로로 긴 직사각형 이미지고 나머지는 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">다시 만난 세계</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">입소문 내고 싶은 비건 에센스</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 유랑, 나랑, 우리랑 함께 환경을 생각해볼래?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 지구와 반려동물 사이의 역할</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility06.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 환경부가 선택한 화장품 회사는?</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility07.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 우리가 비누를 사용해야 하는 이유</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility08.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">이솝이 환경을 위해 노력하고 있는 것들</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility09.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">반려 동물을 위한 샴푸바가 등장했다!</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<!-- //sm_thumb -->
 							</div>
-							<!-- //PC버전 -->
+							<!-- //타이틀영역 -->
 
-							<!-- MO버전 -->
-							<div class="cate_atc_list mo">
-								<!-- big_thumb -->
-								<div class="big_thumb">
-									<div class="atcbox">
-										<a href="#">
-											<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
-											<div class="txtbox">
-												<span class="cate">SUSTAINABILITY</span>
-												<p class="tit">업계 최초! 친환경 식물성 소재로 만든 나일론 티셔츠</p>
-											</div>
-										</a>
-									</div>
-								</div>
-								<!-- //big_thumb -->
-
-								<!-- sm_thumb -->
-								<div class="sm_thumb type2" data-slide="sm_thumb_slide"><!-- D: 2개씩 작은 썸네일 노출 시 type2 클래스 추가 -->
-									<ul class="swiper-wrapper">
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">다시 만난 세계</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility03.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">입소문 내고 싶은 비건 에센스</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility04.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 유랑, 나랑, 우리랑 함께 환경을 생각해볼래?</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility05.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 지구와 반려동물 사이의 역할</p>
-													</div>
-												</a>
-											</div>
-										</li>
-										<li class="swiper-slide">
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility06.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 환경부가 선택한 화장품 회사는?</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility07.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">#BBB 우리가 비누를 사용해야 하는 이유</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility08.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">이솝이 환경을 위해 노력하고 있는 것들</p>
-													</div>
-												</a>
-											</div>
-											<div class="atcbox">
-												<a href="#">
-													<div class="imgbox"><img src="../resources/images/temp/temp_sustainbility09.jpg" alt=""></div>
-													<div class="txtbox">
-														<span class="cate">SUSTAINABILITY</span>
-														<p class="tit">반려 동물을 위한 샴푸바가 등장했다!</p>
-													</div>
-												</a>
-											</div>
-										</li>
-									</ul>
-									<div class="control">
-										<div class="swiper-pagination"></div>
-									</div>
-								</div>
-								<!-- //sm_thumb -->
+							<!-- 리스트 -->
+							<div class="center_atc_list">
+								<ul>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center01.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center01_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">보송한 것이 좋아! 보기만 해도 따뜻한 퍼 부츠</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center02.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center02_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 세로로 긴 직사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">올 시즌 키 컬러 '레드'로 완성한 룩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- //D: 중간에 크게 들어가는 부분 -->
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center03.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center03_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">일상 속 사물과 주얼리의 특별한 만남 7</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center04.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center04_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">탄생 10주년을 맞은 막스마라의 아이콘, 테디베어 코트</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="atcbox">
+											<a href="#">
+												<div class="imgbox">
+													<img src="../resources/images/temp/temp_center05.jpg" alt="" class="pc"><!-- D: PC에서 노출 - 세로로 긴 직사각형 이미지 -->
+													<img src="../resources/images/temp/temp_center05_b.jpg" alt="" class="mo"><!-- MO에서 노출 - 정사각형 이미지 -->
+												</div>
+												<div class="txtbox">
+													<p class="tit">Ever After 배우 김영대와 표예진이 다시 쓰는 &lt;낮에 뜨는 달&gt;의 엔딩</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
 							</div>
-							<!-- //MO버전 -->
+							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //지속가능성 (카테고리별 기사 모듈 타입2) -->
+					<!-- //E모듈 -->
 
-					<!-- 가장 좋아하는 기사 (믹스 모듈) -->
+					<!-- M모듈 -->
 					<div class="mix_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
 								<div class="tit_area">
-									<h2 class="tit">MOST LIKED ARTICLES</h2>
+									<h2 class="tit">Most Liked Articles</h2>
 									<!-- D: 2023-11-29 - <div class="side"> 추가 및 위치변경 -->
 									<div class="side">
 										<!-- 탭 카테고리 -->
@@ -1553,16 +1106,16 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //가장 좋아하는 기사 (믹스 모듈) -->
+					<!-- //M모듈 -->
 
 					<!-- 팔로우 배너 -->
 					<div class="follow_wrap">
 						<div class="cont_inner">
 							<div class="follow_box">
-								<div class="logo"><img src="../resources/images/logo_bazaar02.svg" alt="BAZAAR"></div>
+								<div class="logo"><img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN"></div>
 								<div class="txt">
 									<span>실시간으로 업데이트 되는</span>
-									<strong><em>하퍼스 바자</em>의 최신소식</strong>
+									<strong><em>코스모폴리탄</em>의 최신소식</strong>
 								</div>
 								<div class="btnbox">
 									<button type="button" class="btn bctype3 has_plus" data-popup-open="popup_sns"><span>팔로우하기</span></button><!-- D: 팔로우하기 팝업 오픈 -->
@@ -1593,9 +1146,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
-								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
-								<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
 								<li><a href="https://www.facebook.com/cosmokorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/CosmopolitanKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/cosmopolitan" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
 								<li><a href="https://twitter.com/cosmokorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
@@ -1616,10 +1170,10 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:cosmopolitan@joins.com">cosmopolitan@joins.com</a></span>
+									<span class="email">이메일 : <a href="mailto:cosmopolitan@hll.kr">cosmopolitan@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
@@ -1694,9 +1248,10 @@
 				<p class="stxt">최신소식을 전하는 코스모폴리탄의 <br>다양한 채널을 팔로우, 구독해보세요!</p>
 				<div class="sns_list follow">
 					<ul>
-						<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="tit">인스타그램</span></a></li>
-						<li><a href="https://www.youtube.com/CosmopolitanKorea?sub_confirmation=1" class="btn_sns youtube" target="_blank" title="새창열림"><span class="tit">유튜브</span></a></li>
 						<li><a href="https://www.facebook.com/cosmokorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="tit">페이스북</span></a></li>
+						<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="tit">인스타그램</span></a></li>
+						<li><a href="https://www.youtube.com/CosmopolitanKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="tit">유튜브</span></a></li>
+						<li><a href="https://story.kakao.com/ch/cosmopolitan" class="btn_sns kakao" target="_blank" title="새창열림"><span class="tit">카카오스토리</span></a></li>
 						<li><a href="https://twitter.com/cosmokorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="tit">X</span></a></li>
 					</ul>
 				</div>
@@ -1704,6 +1259,23 @@
 		</div>
 	</div>
 	<!-- //팝업 : 팔로우하기 -->
+
+	<!-- 팝업 : 로그인팝업 -->
+	<div class="popup_full common_login" data-popup="popup_login" style="">
+		<div class="popup_inner">
+			<div class="popup_head">
+				<h2 class="tit">로그인</h2>
+				<div class="popup_close">
+					<button type="button" class="btn_close" data-popup-close="popup_login"><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="popup_cont">
+				<!-- iframe 영역-->
+				<iframe src="../../membership/html/member/login_common.html" title="로그인" height="100%" width="100%" scrolling="no"></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 로그인팝업 -->
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>

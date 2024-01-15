@@ -611,7 +611,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* pagination */
 .pagination{display:flex;align-items:center;justify-content:center;column-gap:4px;margin-top:120px;}
-.pagination a{display:inline-block;width:32px;height:32px;font-family:'Pretendard';font-size:16px;color:#999;line-height:32px;text-align:center;vertical-align:top;}
+.pagination a{display:inline-block;width:32px;height:32px;font-family:Gotham;font-size:16px;color:#999;line-height:32px;text-align:center;vertical-align:top;}
 .pagination .on{background-color:#f7f7f7;color:#111;}
 .pagination .btn_prev{width:24px;height:24px;margin-right:12px;background:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 21L7 12L16 3' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 24px auto;}
 .pagination .btn_next{width:24px;height:24px;margin-left:12px;background:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 21L17 12L8 3' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 24px auto;}
@@ -652,7 +652,7 @@ background:#fff;overflow:hidden;z-index:230}
 .is_pc .scroll_custom > *::-webkit-scrollbar-track{background-color:#dbdbdb}
 
 /* flag */
-.flag{display:inline-block;overflow:hidden;min-width:52px;height:28px;padding:0 4px;background-color:#111;font-family:'Pretendard';font-size:14px;font-weight:500;color:#fff;line-height:28px;text-align:center;}
+.flag{display:inline-block;overflow:hidden;min-width:52px;height:28px;padding:0 4px;background-color:#111;font-size:14px;font-weight:500;color:#fff;line-height:28px;text-align:center;}
 .flag.type2{background-color:var(--point);}
 
 /* 리스트상단 */

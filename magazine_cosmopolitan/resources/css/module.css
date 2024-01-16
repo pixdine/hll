@@ -298,6 +298,11 @@
 .comment_img img{display:block;}
 .comment_modify{display:none;}
 
+.comment_util_box{margin-top:12px;}
+.comment_util_box .btn_s{border-color:#ccc;color:#666;}
+.comment_wrap .reply_area{position:relative;padding-left:88px;}
+.comment_wrap .reply_area .comment_item:before{content:'';display:block;overflow:hidden;position:absolute;left:-32px;top:0;width:15px;height:15px;font-size:0;line-height:0;border-left:1px solid #ccc;border-bottom:1px solid #ccc;}
+
 .photo_upload{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;}
 .photo_upload .btn_addfile{display:block;position:relative;width:80px;height:80px;background-color:#fff;border:1px dashed #dbdbdb;font-size:14px;line-height:20px;color:#111;}
 .photo_upload .btn_addfile:before{content:'';display:block;width:24px;height:24px;margin:0 auto 4px;background:url("../images/ico_camera_24.svg") no-repeat center center;}
@@ -696,9 +701,10 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.comment_wrap .tit_wrap{margin-bottom:16px;}
 	.comment_wrap .btn_more_wrap{margin-top:32px;}
 	.comment_write_area ~ .comment_list_area{margin-top:32px;}
-	.comment_write{padding:15px 0 15px 15px;}
-	.comment_write textarea{height:60px;padding:0 15px 0 0;}
-	.comment_write .comment_bottom{margin:24px 15px 0 0;}
+	.comment_write{padding:15px 5px 15px 15px;}
+	.comment_write textarea{height:60px;padding:0 10px 0 0;}
+	.comment_write .comment_bottom{margin:24px 10px 0 0;}
+	.comment_write .comment_bottom .comment_btn .btn_s{padding:0 18px;}
 	.comment_thumb .profile_img{width:28px;height:28px;margin-right:12px;background-size:28px auto;}
 	.comment_info{margin-bottom:5px;}
 	.comment_cont .comment_info .user_info > span{font-size:12px;}
@@ -707,6 +713,9 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.photo_upload .btn_addfile{width:74px;height:74px;font-size:12px;line-height:17px;}
 	.photo_upload .btn_addfile:before{margin-bottom:2px;}
 	.photo_upload .thumb{width:74px;height:74px;}
+	.comment_wrap .reply_area{padding-left:40px;}
+	.comment_wrap .reply_area .comment_item:before{left:-40px;}
+	.comment_wrap.reply{margin-bottom:40px;}
 
 	/* 개인정보 수집 및 이용동의 */
 	.terms_wrap{margin-top:60px;padding-top:60px;}
@@ -812,7 +821,16 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.bnr_slide_list .bnrbox .imgbox .mo{display:block;}
 }
 
+@media (max-width:360px){
+	/* 댓글 모듈 */
+	.comment_wrap .comment_write .comment_btn{gap:10px;}
+	.comment_wrap .comment_write .comment_btn .btn_s{padding:0 15px;}
+	.comment_util_box .btn_s{padding:0 15px;}
+}
+
 @media (max-width:320px){
-	.comment_write .comment_bottom .comment_btn{gap:10px;}
-	.comment_write .comment_bottom .comment_btn .btn_s{padding:0 10px;}
+	/* 댓글 모듈 */
+	.comment_write .comment_bottom{flex-wrap:wrap;gap:5px 5px;}
+	.comment_wrap .comment_write .comment_btn{width:100%;}
+	.comment_wrap .comment_write .comment_btn .btn_s{width:100%;padding:0 10px;}
 }

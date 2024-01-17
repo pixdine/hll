@@ -608,7 +608,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.top3_atc_list li .txtbox .tit{height:46px;font-size:16px;line-height:23px;}
 
 	/* I모듈 */
-	.rect_atc_wrap .tit_wrap .tit{flex-shrink:inherit;padding-left:20px;font-size:24px;line-height:29px;}
+	.rect_atc_wrap .tit_wrap .tit{padding-left:20px;font-size:24px;line-height:29px;}
 	.rect_atc_wrap .tit_wrap .tit:before{top:20px;width:16px;height:4px;}
 	.rect_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.rect_atc_list ul{column-gap:0;}

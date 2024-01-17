@@ -256,6 +256,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .btn_wrap .btn ~ .btn{margin-left:16px;}
 
 .btn_wrap.type2{max-width:792px;margin:180px auto 0;}
+.btn_list_wrap{display:flex;justify-content:center;margin-top:180px;}
+.btn_list_wrap .btn{width:388px;}
 
 /* sns button */
 .btn_sns{display:inline-flex;flex-direction:column;position:relative;}
@@ -924,7 +926,6 @@ background:#fff;overflow:hidden;z-index:230}
 }
 @media (max-width:1023px){
 	.header_navi ul li + li{padding-left:24px;}
-	.header_navi ul li a{padding:8px 0;font-size:15px;line-height:22px;}
 	.is_pc .header_navi ul li.line{padding-right:0;}
 	.is_pc .header_navi ul li.line:after{display:none;}
 	.horoscope_list li{width:calc(33.333% - 16px);}
@@ -961,6 +962,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.btn_wrap .btn ~ .btn{margin-left:12px;}
 
 	.btn_wrap.type2{margin-top:60px;}
+	.btn_list_wrap{margin-top:80px;}
+	.btn_list_wrap .btn{width:100%;}
 
 	.tit_wrap{margin-bottom:24px;}
 	.tit_wrap .tit{font-size:22px;line-height:32px;}

@@ -31,6 +31,8 @@ $(document).ready(function () {
     tagAtcList();
     evenAtcList();
     shoppingList();
+    rectAtcList();//I모듈 추가
+    zigzagAtcList();//K모듈 추가
 
     // 지도 상세 설명 더보기 토글
     $(".comment_box").commentToggle();
@@ -145,17 +147,14 @@ $(document).ready(function () {
     });
 });
 
-    //iOS vh 대응
-    function setCSS() {
-        var setVh = () => {
-            document.documentElement.style.setProperty(
-            "--vh",
-            `${window.innerHeight}px`
-            );
-        };
-        window.addEventListener("resize", setVh);
-        setVh();
-    }
+//iOS vh 대응
+function setCSS() {
+    var setVh = () => {
+        document.documentElement.style.setProperty("--vh", `${window.innerHeight}px`);
+    };
+    window.addEventListener("resize", setVh);
+    setVh();
+}
 
 //header sticky
 function headerSticky() {
@@ -170,9 +169,9 @@ function headerSticky() {
         new IntersectionObserver(
         ([e]) => {
             if (e.intersectionRatio < 0.1 && !$("body").hasClass("is_mobile")) {
-            bottomLogo.stop().fadeIn(200);
+                bottomLogo.stop().fadeIn(200);
             } else {
-            bottomLogo.stop().fadeOut(200);
+                bottomLogo.stop().fadeOut(200);
             }
         },
         { threshold: [0.1, 1] }
@@ -193,6 +192,11 @@ function headerSticky() {
         if (!$("body").hasClass("lockbody")) {
             if (atTop) lastScroll = 0;
             if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
+            /* 2023-12-13 : 개발에서 수정한 부분 반영 */
+            if (atTop) {
+                header.removeAttr("style");
+            }
+            /* //2023-12-13 : 개발에서 수정한 부분 반영 */
 
             if (Math.abs(lastScroll - scrollTop) > delta) {
                 if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
@@ -276,7 +280,7 @@ function allmenuOpen() {
     function close() {
         $(".allmenu_wrap").stop().fadeOut(100);
         if (popup.stack.length === 0 && !$(".search_layer").hasClass("open")) {
-         enableScroll();
+            enableScroll();
         }
     }
 
@@ -304,10 +308,7 @@ function allmenuOpen() {
 }
 
 function initOnDevice() {
-    $(".has_menu").toggleClass(
-        "open",
-        !document.body.classList.contains("is_mobile")
-    );
+    $(".has_menu").toggleClass("open", !document.body.classList.contains("is_mobile"));
 }
 
 function inputBind() {
@@ -331,11 +332,9 @@ function fullImage(el) {
     var oriHeight = $(el).find(".imgbox img")[0].naturalHeight;
     var ratio = (oriHeight / oriWidth) * 100;
 
-    $(el)
-        .find(".imgbox")
-        .css({
+    $(el).find(".imgbox").css({
         paddingTop: ratio + "%",
-        });
+    });
 }
 
 //메인 슬라이드 배너
@@ -349,54 +348,51 @@ function kv_swiper() {
 
     $(".kv_swiper").each(function (i) {
         if ($(this).find(".swiper-slide").length == 1) {
-        _loop = false;
+            _loop = false;
         } else {
-        _loop = true;
+            _loop = true;
         }
 
         $(this).attr("data-index", i);
         var slideitem = $(".kv_swiper .swiper-slide");
 
         kv_Swipers[i] = new Swiper('.kv_swiper[data-index="' + i + '"]', {
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true,
-        },
-        speed: 500,
-        loop: _loop,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.kv_swiper[data-index="' + i + '"] .swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            prevEl: '.kv_swiper[data-index="' + i + '"] .btn_prev',
-            nextEl: '.kv_swiper[data-index="' + i + '"] .btn_next',
-        },
-        watchSlidesProgress: true,
-        a11y: {
-            prevSlideMessage: "이전 슬라이드",
-            nextSlideMessage: "다음 슬라이드",
-        },
-        observer: true,
-        observeParents: true,
-        watchOverflow: true,
-        on: {
-            slideChange: function () {
-            $(".is_pc .kv_swiper .swiper-slide")
-                .find(".imgbox img")
-                .css("transform", "scale(1.0)")
-                .removeAttr("style");
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true,
             },
-        },
+            speed: 500,
+            loop: _loop,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.kv_swiper[data-index="' + i + '"] .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                prevEl: '.kv_swiper[data-index="' + i + '"] .btn_prev',
+                nextEl: '.kv_swiper[data-index="' + i + '"] .btn_next',
+            },
+            watchSlidesProgress: true,
+            a11y: {
+                prevSlideMessage: "이전 슬라이드",
+                nextSlideMessage: "다음 슬라이드",
+            },
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            on: {
+                slideChange: function () {
+                    $(".is_pc .kv_swiper .swiper-slide").find(".imgbox img").css("transform", "scale(1.0)").removeAttr("style");
+                },
+            },
         });
     });
 }
 
-// 카테고리별 썸네일 슬라이드
+// A모듈, F모듈 (카테고리별 썸네일 슬라이드)
 function cate_swiper() {
     $('[data-slide="sm_thumb_slide"]').each(function (i) {
         if ($('[data-slide="sm_thumb_slide"]').length <= 0) return;
@@ -428,7 +424,7 @@ function cate_swiper() {
     });
 }
 
-//기획 기사, 큐레이션 모듈
+//B모듈 (기획 기사, 큐레이션 모듈)
 function scrollAtcList() {
     var scrollAtcList = $(".scroll_atc_list");
     var ww = window.innerWidth;
@@ -474,7 +470,7 @@ function scrollAtcList() {
     });
 }
 
-//금주의 인기기사(TOP3)
+//G모듈 (금주의 인기기사(TOP3))
 function top3AtcList() {
     var top3AtcList = $(".top3_atc_list");
     var ww = window.innerWidth;
@@ -513,18 +509,24 @@ function top3AtcList() {
     });
 }
 
-// 상세 중간에 들어가는 기사 등
+// 상세 중간에 들어가는 기사 등 - 2023-12-12 : 개발에서 수정한 부분 반영(isLoop)
 function articleSlidePc() {
     var swiper = $(".article_slide_pc .article_slide");
     if (swiper.length <= 0) return;
     function initSwiper() {
         swiper.each(function (i) {
             //각각을 스와이프 적용
+            var isLoop = true;
+            var liCount = $(this).find('li').length;
+            if (liCount <= 4) {
+                isLoop = false;
+            }
+
             var slideBody = $(this).parents(".article_slide_pc");
             mySwiper = new Swiper(this, {
                 slidesPerView: 4,
                 spaceBetween: 24,
-                loop: true,
+                loop: isLoop,
                 autoplay: false,
                 speed: 500,
                 pagination: {
@@ -541,7 +543,7 @@ function articleSlidePc() {
     initSwiper();
 }
 
-// 상세 중간에 들어가는 기사 등
+// 상세 중간에 들어가는 기사 등 - 2023-12-12 : 개발에서 수정한 부분 반영(isLoop)
 function articleSlideMo() {
     var swiper = $(".article_slide_mo .article_slide");
     if (swiper.length <= 0) return;
@@ -550,11 +552,17 @@ function articleSlideMo() {
         var slideBody = [];
         swiper.each(function (i) {
             //각각을 스와이프 적용
+            var isLoop = true;
+            var liCount = $(this).find('li').length;
+            if (liCount <= 2) {
+                isLoop = false;
+            }
+
             slideBody[i] = $(this).parents(".article_slide_mo");
             mySwiperArr[i] = new Swiper(this, {
                 slidesPerView: 1,
                 spaceBetween: 24,
-                loop: true,
+                loop: isLoop,
                 autoplay: false,
                 speed: 500,
                 pagination: {
@@ -614,7 +622,7 @@ function colslideAtcList() {
     });
 }
 
-//4단 모듈 (최신 소식)
+//C모듈 (4단 모듈 (최신 소식))
 function issueAtcList() {
     var issueAtcList = $(".issue_atc_list"),
         mySwiper = undefined;
@@ -695,7 +703,7 @@ function tagAtcList() {
     initSwiper();
 }
 
-//서브메인 짝수 리스트 모듈
+//N모듈 (서브메인 짝수 리스트 모듈)
 function evenAtcList() {
     var evenAtcList = $(".even_atc_list"),
         mySwiper = undefined;
@@ -783,9 +791,6 @@ const popup = {
     open: function (_target, _type, _hasDimmed = true) {
         this.clientWidth = document.documentElement.clientWidth;
         var targetEl = $(`[data-${_type}="${_target}"]`);
-        document.ontouchmove = function (event) {
-            event.preventDefault();
-        };
         switch (_type) {
             case "popup":
                 var popupCount = $(`.open[data-${_type}`).length || 0;
@@ -793,16 +798,16 @@ const popup = {
                     targetEl.fadeIn(100, function () {
                     $(this).addClass("open");
                 });
-                // disableScroll();
+                disableScroll();
 
                 $(".popup_inner", targetEl).click(function (e) {
                     e.stopPropagation();
                 });
 
-                $("html").css({
-                    height: "100%",
-                    overflow: "hidden",
-                });
+                // $("html").css({
+                //     height: "100%",
+                //     overflow: "hidden",
+                // });
 
                 break;
             case "alert":
@@ -876,7 +881,7 @@ const popup = {
     },
 };
 
-//세트 모듈 (추천 인기 기사 모듈
+//세트 모듈 (추천 인기 기사 모듈)
 function setAtcList() {
     var setAtcList = $(".set_atc_list"),
     mySwiper = undefined;
@@ -919,6 +924,99 @@ function setAtcList() {
         initSwiper();
     });
     initSwiper();
+}
+
+//I모듈
+function rectAtcList() {
+    var rectAtcList = $(".rect_atc_list"),
+    mySwiper = undefined;
+    if (rectAtcList.length <= 0) return;
+
+    function initSwiper() {
+        ww = window.innerWidth;
+
+        //768px 부터 swiper 실행
+        if (ww <= 768 && mySwiper == undefined) {
+            rectAtcList.each(function () {
+                //각각을 스와이프 적용
+                mySwiper = new Swiper(this, {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    speed: 400,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    observer: true,
+                    observeParents: true,
+                    watchOverflow: true,
+                });
+            });
+        } else if (ww > 768 && mySwiper != undefined) {
+            rectAtcList.each(function () {
+                this.swiper.destroy(); //각각을 파괴함.
+            });
+            mySwiper = undefined;
+        }
+    }
+
+    $(window).on("resize", function () {
+        initSwiper();
+    });
+    initSwiper();
+}
+
+//K모듈
+function zigzagAtcList() {
+    var zigzagAtcList = $(".zigzag_atc_list");
+    var ww = window.innerWidth;
+    var mySwiper = undefined;
+    if (zigzagAtcList.length <= 0) return;
+
+    function initSwiper() {
+        var mySwiperArr = [];
+        var slideBody = [];
+        //768px 보다 적을 때 swiper 실행
+        if (ww <= 768 && mySwiper == undefined) {
+            zigzagAtcList.each(function (i) {
+                //각각을 스와이프 적용
+                slideBody[i] = $(this);
+                var slideItem = slideBody[i].find(".swiper-slide");
+                if (slideItem.length > 1) {
+                    mySwiper = new Swiper(this, {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        speed: 500,
+                            pagination: {
+                            el: slideBody[i].find(".swiper-pagination"),
+                        },
+                    });
+                }
+            });
+        } else if (ww > 768 && mySwiper != undefined) {
+            zigzagAtcList.each(function () {
+            this.swiper.destroy(); //각각을 파괴함.
+        });
+            mySwiper = undefined;
+        }
+    }
+
+    initSwiper();
+
+    $(window).on("resize", function () {
+        ww = window.innerWidth;
+        initSwiper();
+    });
 }
 
 //상세페이지 프로그래스바
@@ -967,21 +1065,26 @@ function lockScrollHandle(event) {
     // body lock 에서 제외시킬 요소 정의
     // 전체 메뉴
     if (e.target.closest(".allmenu_wrap")) {
-        return true;
+        return;
     }
 
     // 팝업 공통
     if (e.target.classList.contains("popup_cont")) {
-        return true;
+        return;
     }
+    if (e.target.closest(".popup_cont")) {
+        return;
+    }
+    
 
     // 멀티 터치는 터치 되게 한다
-    if (e.touches.length > 1) return true;
+    if (e.touches.length > 1) return;
 
     // event 초기화 속성이 있음 초기화
-    if (e.preventDefault) e.preventDefault();
+    // if (e.preventDefault) e.preventDefault();
+    e.preventDefault();
 
-    return false;
+    // return false;
 }
 
 // 스크롤 잠금
@@ -993,7 +1096,6 @@ function disableScroll() {
         body.setAttribute("scrollY", String(pageY));
         $(body).addClass("lockbody");
     }
-
     body.addEventListener("touchmove", lockScrollHandle, { passive: false });
 }
 
@@ -1081,7 +1183,7 @@ $(window).on("load resize", function () {
 
     // 상세페이지 댓글 접기
     $(".comment_box").commentToggle();
-});
+}).resize();
 
 // 공통탭 컨텐츠
 $.fn.commonTab = function () {

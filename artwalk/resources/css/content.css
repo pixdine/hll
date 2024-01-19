@@ -335,7 +335,7 @@
 .comm_ex_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -20px 0;}
 .comm_ex_list li{width:33.333%;padding:0 20px;}
 .comm_ex_list .comm_ex_item a{display:block;}
-.bodycont_section .nodata{padding:200px 40px 120px;}
+.bodycont_section .nodata{padding:200px 0 120px;}
 
 /* 전시리뷰 */
 .review_item{display:flex;flex-wrap:wrap;position:relative;background-color:#fff;}
@@ -670,7 +670,7 @@
     .inputbox.calendar:after{top:10px;}
     .comm_ex_list ul{gap:24px 0;margin:0 -6px;}
     .comm_ex_list li{width:50%;padding:0 6px;}
-    .bodycont_section .nodata{padding:136px 20px 80px;}
+    .bodycont_section .nodata{padding:136px 0 80px;}
 
     /* 전시리뷰 */
     .review_item a{flex-direction:column;}

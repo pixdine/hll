@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>엘르 코리아 (ELLE KOREA) | No.1 Fashion Media</title>
-    <meta name="format-detection" content="telephone=no">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>엘르 코리아 (ELLE KOREA) | No.1 Fashion Media</title>
+	<meta name="format-detection" content="telephone=no">
     <!-- css, Jquery -->
     <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/module.css" />
@@ -17,12 +16,6 @@
 
 <body>
     <div id="elle"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-        <!-- google 광고영역 -->
-        <div class="ad_google">
-            google 광고 배너 영역<br>높이값 가변적
-        </div>
-        <!--// google 광고영역 -->
-
         <div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header">
@@ -51,7 +44,7 @@
 							<div class="header_util">
 								<div class="aside">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
@@ -71,7 +64,7 @@
 								<!-- //브레드크럼 -->
 								<!-- 기사 타이틀 -->
 								<div class="txtbox">
-									<p class="tit">18K 화이트골드에 라운드 브릴리언트 컷 아이아몬드를 세팅한 그래픽적 디자인의 '트루 파베 와이드 링'</p>
+									<p class="tit"> 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션</p>
 								</div>
 								<!-- //기사 타이틀 -->
 								<!-- 스크랩, 공유하기 -->
@@ -166,9 +159,17 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
+
+								<!-- 단일메뉴 및 버티컬 -->
+								<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
+								<div class="allmenu_single">
+									<li><a href="#">LOOK</a></li>
+									<li><a href="#">ELLEVOICE</a></li>
+								</div>
+								<!-- //단일메뉴 및 버티컬 -->
 
 								<!-- 메뉴 -->
 								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
@@ -228,6 +229,15 @@
 											</ul>
 										</li>
 										<li>
+											<a href="#">SOCIETY<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">WOMEN</a></li>
+												<li><a href="#">SOCIETY</a></li>
+												<li><a href="#">GREEN</a></li>
+												<li><a href="#">MONEY</a></li>
+											</ul>
+										</li>
+										<li>
 											<a href="#">ELLE DECOR<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
 												<li><a href="#">TRENDS</a></li>
@@ -250,6 +260,9 @@
 												<li><a href="#">NOTICE</a></li>
 											</ul>
 										</li>
+										<li>
+											<a href="#">COVER<span><em class="blind">열기</em></span></a>
+										</li>
 									</ul>
 								</div>
 								<!-- //메뉴 -->
@@ -269,9 +282,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
+										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
 										<li><a href="https://www.instagram.com/ellekorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
 										<li><a href="https://www.youtube.com/user/ellemagazinekr" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://story.kakao.com/ch/ellekorea" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
 										<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
@@ -333,8 +347,7 @@
                                     <div class="photo_dual">
                                         <div class="photo_box01">
                                             <a href="javascript: openPhotoViewer();" class="btn_open_slide">
-                                                <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202109/29/064a8ca4-d1a2-44a9-b7e8-870846496f3e.jpg"
-                                                    alt="" />
+                                                <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202109/29/064a8ca4-d1a2-44a9-b7e8-870846496f3e.jpg" alt="" />
                                             </a>
                                         </div>
                                         <div class="photo_box02">
@@ -376,8 +389,7 @@
                                         <h3 class="title">Credit</h3>
                                         <ul class="list_credit">
                                             <li><em>에디터</em><span>홍길동</span></li>
-                                            <li><em>포토그래퍼</em><span>유튜브 &lt;뱀집&gt;/원더케이 &lt;아이돌 등판&gt;/트와이스 공식
-                                                    인스타그램</span>
+                                            <li><em>포토그래퍼</em><span>유튜브 &lt;뱀집&gt;/원더케이 &lt;아이돌 등판&gt;/트와이스 공식 인스타그램</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -432,8 +444,7 @@
                                                         <div class="atcbox">
                                                             <a href="#">
                                                                 <div class="imgbox">
-                                                                    <img src="../resources/images/temp/temp_reco01.png"
-                                                                        alt=""><!-- D: PC/MO 정사각형 이미지 -->
+                                                                    <img src="../resources/images/temp/temp_reco01.png" alt=""><!-- D: PC/MO 정사각형 이미지 -->
                                                                 </div>
                                                                 <div class="txtbox">
                                                                     <span class="cate">FASHION</span>
@@ -446,8 +457,7 @@
                                                         <div class="atcbox">
                                                             <a href="#">
                                                                 <div class="imgbox">
-                                                                    <img src="../resources/images/temp/temp_reco02.png"
-                                                                        alt="">
+                                                                    <img src="../resources/images/temp/temp_reco02.png" alt="">
                                                                 </div>
                                                                 <div class="txtbox">
                                                                     <span class="cate">FASHION</span>
@@ -460,8 +470,7 @@
                                                         <div class="atcbox">
                                                             <a href="#">
                                                                 <div class="imgbox">
-                                                                    <img src="../resources/images/temp/temp_reco03.png"
-                                                                        alt="">
+                                                                    <img src="../resources/images/temp/temp_reco03.png" alt="">
                                                                 </div>
                                                                 <div class="txtbox">
                                                                     <span class="cate">FASHION</span>
@@ -476,8 +485,7 @@
 
                                             <!-- 더보기 -->
                                             <div class="btn_more_wrap type2">
-                                                <a href="#" class="btn more noline" target="_blank" title="새창열림"><span>이
-                                                        키워드의 기사 더보기</span></a>
+                                                <a href="#" class="btn more noline" target="_blank" title="새창열림"><span>이 키워드의 기사 더보기</span></a>
                                             </div>
                                             <!-- //더보기 -->
                                         </div>
@@ -489,7 +497,6 @@
                     </div>
                     <!--// 상세 > body -->
 
-
                     <!-- ticker D: PC에서만-->
                     <div class="ticker">
                         <div class="cont_inner">
@@ -497,7 +504,7 @@
                                 <div class="tit_area">
                                     <h2 class="tit">더 많은 화보를 확인해보세요!</h2>
                                 </div>
-                            </div>           
+                            </div>
                         </div>
 
                         <div class="continuous">
@@ -742,9 +749,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
+								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
 								<li><a href="https://www.instagram.com/ellekorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
 								<li><a href="https://www.youtube.com/user/ellemagazinekr" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
-								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://story.kakao.com/ch/ellekorea" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
 								<li><a href="https://twitter.com/elle_korea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
@@ -765,10 +773,10 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:elle.korea@hll.kr">elle.korea@hll.kr</a></span>
+									<span class="email">이메일 : <a href="mailto:elle@hll.kr">elle@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>

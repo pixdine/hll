@@ -14,12 +14,6 @@
 </head>
 <body>
 	<div id="elle"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역 -->
-		<div class="ad_google">
-			google 광고 배너 영역<br>높이값 가변적
-		</div>
-		<!--// google 광고영역 -->
-
 		<div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header">
@@ -48,7 +42,7 @@
 							<div class="header_util">
 								<div class="aside">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
@@ -163,9 +157,17 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
+
+								<!-- 단일메뉴 및 버티컬 -->
+								<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
+								<div class="allmenu_single">
+									<li><a href="#">LOOK</a></li>
+									<li><a href="#">ELLEVOICE</a></li>
+								</div>
+								<!-- //단일메뉴 및 버티컬 -->
 
 								<!-- 메뉴 -->
 								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
@@ -225,6 +227,15 @@
 											</ul>
 										</li>
 										<li>
+											<a href="#">SOCIETY<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">WOMEN</a></li>
+												<li><a href="#">SOCIETY</a></li>
+												<li><a href="#">GREEN</a></li>
+												<li><a href="#">MONEY</a></li>
+											</ul>
+										</li>
+										<li>
 											<a href="#">ELLE DECOR<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
 												<li><a href="#">TRENDS</a></li>
@@ -247,6 +258,9 @@
 												<li><a href="#">NOTICE</a></li>
 											</ul>
 										</li>
+										<li>
+											<a href="#">COVER<span><em class="blind">열기</em></span></a>
+										</li>
 									</ul>
 								</div>
 								<!-- //메뉴 -->
@@ -266,9 +280,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
+										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
 										<li><a href="https://www.instagram.com/ellekorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
 										<li><a href="https://www.youtube.com/user/ellemagazinekr" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://story.kakao.com/ch/ellekorea" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
 										<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
@@ -280,27 +295,41 @@
 			</div>
 			<!-- //전체메뉴 -->
 
+			<!-- 2024-01-03 : 광고배너영역(탑배너) -->
+			<div class="ad_top">
+				<div class="ad_google">
+					<div><!-- 2024-01-09 > google 광고구좌 div 추가 --> 
+						<img src="../resources/images/temp/temp_ad_top.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!--//2024-01-03 : 광고배너영역(탑배너) -->
+
 			<!-- container -->
 			<div id="container" class="container">
 				<div id="content" class="content sub">
 					<!-- 서브메인 -->
 					<div class="sub_main">
-						<!-- 페이지 타이틀 -->
-						<div class="heading_wrap eng">
+						<!-- 2023-12-12 : 서브 비주얼 케이스 추가 -->
+						<div class="subvisual">
+							<div class="imgbox">
+								<img src="../resources/images/bg_subvisual01.jpg" class="pc" alt=""><!-- D: PC에서 노출 -->
+								<img src="../resources/images/bg_subvisual01_mo.jpg" class="mo" alt=""><!-- MO에서 노출 -->
+							</div>
 							<div class="heading_area">
-								<h2 class="tit">FASHION</h2>
+								<h2 class="tit">BEAUTY</h2>
 							</div>
 						</div>
-						<!-- //페이지 타이틀 -->
+						<!-- //2023-12-12 : 서브 비주얼 케이스 추가 -->
 
-						<!-- 패션뉴스 (카테고리별 기사 모듈 타입1) -->
+						<!-- F모듈 -->
 						<!-- D: PC와 MO 분기처리 필요 -->
 						<div class="cate_atc_wrap">
 							<div class="cont_inner">
 								<!-- 타이틀영역 -->
 								<div class="tit_wrap">
 									<div class="tit_area">
-										<h3 class="tit">FASHION NEWS</h3>
+										<h2 class="tit">FASHION NEWS</h2>
 									</div>
 								</div>
 								<!-- //타이틀영역 -->
@@ -311,9 +340,9 @@
 									<div class="big_thumb">
 										<div class="atcbox">
 											<a href="#">
-												<div class="imgbox"><img src="../resources/images/temp/temp_pic01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
+												<div class="imgbox"><img src="../resources/images/temp/temp_art01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
 												<div class="txtbox">
-													<p class="tit">프린세스 미연의 핑크 유니버스</p>
+													<p class="tit">씩씩한 미노이의 두 번째 챕터</p>
 												</div>
 											</a>
 										</div>
@@ -326,9 +355,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic02.jpg" alt=""></div><!-- D: PC 가로로 긴 직사각형 이미지고 -->
+														<div class="imgbox"><img src="../resources/images/temp/temp_art02.jpg" alt=""></div><!-- D: PC 가로로 긴 직사각형 이미지고 -->
 														<div class="txtbox">
-															<p class="tit">프리미엄 쇼핑의 중심, 스페인으로 떠날 시간!</p>
+															<p class="tit">이효리의 걸음이 완성한 궤도</p>
 														</div>
 													</a>
 												</div>
@@ -336,9 +365,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic03.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art03.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어</p>
+															<p class="tit">마에스트라가 된 이영애가 지휘봉을 높게 들었다</p>
 														</div>
 													</a>
 												</div>
@@ -346,9 +375,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic05.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art04.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">신혜선의 아우라</p>
+															<p class="tit">03:00PM 박지현의 나른한 휴일 오후</p>
 														</div>
 													</a>
 												</div>
@@ -356,9 +385,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic06.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art05.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">블랙 타이를 한 발렌티노의 디바(DI.VAs) 손예진</p>
+															<p class="tit">에르빈 부름의 움직이는 조각</p>
 														</div>
 													</a>
 												</div>
@@ -375,9 +404,9 @@
 									<div class="big_thumb">
 										<div class="atcbox">
 											<a href="#">
-												<div class="imgbox"><img src="../resources/images/temp/temp_pic01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
+												<div class="imgbox"><img src="../resources/images/temp/temp_art01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
 												<div class="txtbox">
-													<p class="tit">프린세스 미연의 핑크 유니버스</p>
+													<p class="tit">씩씩한 미노이의 두 번째 챕터</p>
 												</div>
 											</a>
 										</div>
@@ -390,33 +419,33 @@
 											<li class="swiper-slide">
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
+														<div class="imgbox"><img src="../resources/images/temp/temp_art02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
 														<div class="txtbox">
-															<p class="tit">프리미엄 쇼핑의 중심, 스페인으로 떠날 시간!</p>
+															<p class="tit">이효리의 걸음이 완성한 궤도</p>
 														</div>
 													</a>
 												</div>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic03.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art03.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어발렉스트라와 정윤기의 만남, 'YK 에디션' 팝업 스토어</p>
+															<p class="tit">마에스트라가 된 이영애가 지휘봉을 높게 들었다</p>
 														</div>
 													</a>
 												</div>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic05.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art04.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">신혜선의 아우라</p>
+															<p class="tit">03:00PM 박지현의 나른한 휴일 오후</p>
 														</div>
 													</a>
 												</div>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic06.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art05.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">블랙 타이를 한 발렌티노의 디바(DI.VAs) 손예진</p>
+															<p class="tit">에르빈 부름의 움직이는 조각</p>
 														</div>
 													</a>
 												</div>
@@ -431,9 +460,9 @@
 								<!-- //MO버전 -->
 							</div>
 						</div>
-						<!-- //패션뉴스 (카테고리별 기사 모듈 타입1) -->
+						<!-- //F모듈 -->
 
-						<!-- 셀러브리티 스타일 -->
+						<!-- N모듈 -->
 						<div class="even_atc_wrap">
 							<div class="cont_inner">
 								<!-- 타이틀영역 -->
@@ -476,229 +505,229 @@
 								<!-- //리스트 -->
 							</div>
 						</div>
-						<!-- //셀러브리티 스타일 -->
+						<!-- //N모듈 -->
 
-                        <!-- 금주의 인기 기사(PC) -->
-                        <div class="article_slide_pc">
-                            <div class="cont_inner">
-                                <!-- 타이틀영역 -->
-                                <div class="tit_wrap">
-                                    <div class="tit_area">
-                                        <h2 class="tit">금주의 인기 기사</h2>
-                                    </div>
-                                    <p class="date">2023.05.01 - 2023.05.08</p>
-                                </div>
-                                <!-- //타이틀영역 -->
+						<!-- 금주의 인기 기사(PC) -->
+						<div class="article_slide_pc">
+							<div class="cont_inner">
+								<!-- 타이틀영역 -->
+								<div class="tit_wrap">
+									<div class="tit_area">
+										<h2 class="tit">금주의 인기 기사</h2>
+									</div>
+									<p class="date">2023.05.01 - 2023.05.08</p>
+								</div>
+								<!-- //타이틀영역 -->
 
-                                <!-- 리스트 -->
-                                <div class="article_slide">
-                                    <ul class="swiper-wrapper">
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'154만 유튜버' 수스는 누구?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //리스트 -->
-                                <!-- 이동버튼 -->
-                                <div class="p_btn">
-                                    <button class="article_slide_prev" title="이전으로 이동"><span class="p_txt blind">이전</span></button>
-                                    <button class="article_slide_next" title="다음으로 이동"><span class="p_txt blind">다음</span></button>
-                                </div>
-                                <!-- //이동버튼 -->
-                                <!-- 프로그레스바 -->
-                                <div class="article_slide_pagination"></div>
-                                <!-- //프로그레스바 -->
-                            </div>
-                        </div>
-                        <!-- //금주의 인기 기사(PC)-->
+								<!-- 리스트 -->
+								<div class="article_slide">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'154만 유튜버' 수스는 누구?</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
+													</div>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //리스트 -->
+								<!-- 이동버튼 -->
+								<div class="p_btn">
+									<button class="article_slide_prev" title="이전으로 이동"><span class="p_txt blind">이전</span></button>
+									<button class="article_slide_next" title="다음으로 이동"><span class="p_txt blind">다음</span></button>
+								</div>
+								<!-- //이동버튼 -->
+								<!-- 프로그레스바 -->
+								<div class="article_slide_pagination"></div>
+								<!-- //프로그레스바 -->
+							</div>
+						</div>
+						<!-- //금주의 인기 기사(PC)-->
 
-                        <!-- 금주의 인기 기사(MO)-->
-                        <div class="article_slide_mo">
-                            <div class="cont_inner">
-                                <!-- 타이틀영역 -->
-                                <div class="tit_wrap">
-                                    <div class="tit_area">
-                                        <h2 class="tit">금주의 인기 기사</h2>
-                                    </div>
-                                    <p class="date">2023.05.01 - 2023.05.08</p>
-                                </div>
-                                <!-- //타이틀영역 -->
+						<!-- 금주의 인기 기사(MO)-->
+						<div class="article_slide_mo">
+							<div class="cont_inner">
+								<!-- 타이틀영역 -->
+								<div class="tit_wrap">
+									<div class="tit_area">
+										<h2 class="tit">금주의 인기 기사</h2>
+									</div>
+									<p class="date">2023.05.01 - 2023.05.08</p>
+								</div>
+								<!-- //타이틀영역 -->
 
-                                <!-- 리스트 -->
-                                <div class="article_slide">
-                                    <ul class="swiper-wrapper">
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'154만 유튜버' 수스는 누구?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //리스트 -->
-                                <!-- 페이지네이션 -->
-                                <div class="pagination"></div>
-                                <!-- //페이지네이션 -->
-                            </div>
-                        </div>
-                        <!-- //금주의 인기 기사(MO)-->
- 
-						<!-- 패션 트렌드 -->
+								<!-- 리스트 -->
+								<div class="article_slide">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'154만 유튜버' 수스는 누구?</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
+													</div>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //리스트 -->
+								<!-- 페이지네이션 -->
+								<div class="pagination"></div>
+								<!-- //페이지네이션 -->
+							</div>
+						</div>
+						<!-- //금주의 인기 기사(MO)-->
+
+						<!-- N모듈 -->
 						<div class="even_atc_wrap">
 							<div class="cont_inner">
 								<!-- 타이틀영역 -->
 								<div class="tit_wrap">
 									<div class="tit_area">
-										<h3 class="tit">FASHION TREND</h3>
+										<h3 class="tit">FASHION TRENDS</h3>
 									</div>
 								</div>
 								<!-- //타이틀영역 -->
@@ -710,7 +739,7 @@
 											<div class="atcbox">
 												<a href="#">
 													<div class="imgbox">
-														<img src="../resources/images/temp/temp_even03.jpg" alt="">
+														<img src="../resources/images/temp/temp_even03.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
 													</div>
 													<div class="txtbox">
 														<p class="tit">파리지엔의 자화상, 샤넬 2023/24 가을-겨울 오트 쿠튀르 쇼</p>
@@ -737,7 +766,7 @@
 														<img src="../resources/images/temp/temp_even05.jpg" alt="">
 													</div>
 													<div class="txtbox">
-														<p class="tit">모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다 모두가 기다리던 SNKRS 앱이 출시됐다</p>
+														<p class="tit">모두가 기다리던 SNKRS 앱이 출시됐다</p>
 													</div>
 												</a>
 											</div>
@@ -759,16 +788,16 @@
 								<!-- //리스트 -->
 							</div>
 						</div>
-						<!-- //패션 트렌드 -->
+						<!-- //N모듈 -->
 
-						<!-- 워치&주얼리 (카테고리별 기사 모듈 타입1) -->
+						<!-- F모듈 -->
 						<!-- D: PC와 MO 분기처리 필요 -->
 						<div class="cate_atc_wrap">
 							<div class="cont_inner">
 								<!-- 타이틀영역 -->
 								<div class="tit_wrap">
 									<div class="tit_area">
-										<h3 class="tit">WATCH &amp; JEWELRY</h3>
+										<h2 class="tit">WATCH &amp; JEWELRY</h2>
 									</div>
 								</div>
 								<!-- //타이틀영역 -->
@@ -779,9 +808,9 @@
 									<div class="big_thumb">
 										<div class="atcbox">
 											<a href="#">
-												<div class="imgbox"><img src="../resources/images/temp/temp_pic07.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
+												<div class="imgbox"><img src="../resources/images/temp/temp_art01.jpg" alt=""></div><!-- D: PC 큰 썸네일은 세로로 긴 직사각형 이미지 -->
 												<div class="txtbox">
-													<p class="tit">박희정의 새로운 첫걸음</p>
+													<p class="tit">씩씩한 미노이의 두 번째 챕터</p>
 												</div>
 											</a>
 										</div>
@@ -794,9 +823,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic08.jpg" alt=""></div><!-- D: PC 가로로 긴 직사각형 이미지고 -->
+														<div class="imgbox"><img src="../resources/images/temp/temp_art02.jpg" alt=""></div><!-- D: PC 가로로 긴 직사각형 이미지고 -->
 														<div class="txtbox">
-															<p class="tit">신예은이 이룬 필연적 순간</p>
+															<p class="tit">이효리의 걸음이 완성한 궤도</p>
 														</div>
 													</a>
 												</div>
@@ -804,9 +833,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic09.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art03.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">티파니와 함께</p>
+															<p class="tit">마에스트라가 된 이영애가 지휘봉을 높게 들었다</p>
 														</div>
 													</a>
 												</div>
@@ -814,9 +843,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic10.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art04.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">봄바람을 타고 춤추는 구찌</p>
+															<p class="tit">03:00PM 박지현의 나른한 휴일 오후</p>
 														</div>
 													</a>
 												</div>
@@ -824,9 +853,9 @@
 											<li>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic11.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art05.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">매혹적인 문가영이 선사하는 중독적인 머스크향의 매력</p>
+															<p class="tit">에르빈 부름의 움직이는 조각</p>
 														</div>
 													</a>
 												</div>
@@ -843,9 +872,9 @@
 									<div class="big_thumb">
 										<div class="atcbox">
 											<a href="#">
-												<div class="imgbox"><img src="../resources/images/temp/temp_pic07.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
+												<div class="imgbox"><img src="../resources/images/temp/temp_art01.jpg" alt=""></div><!-- D: MO 큰 썸네일은 세로로 긴 직사각형 이미지 -->
 												<div class="txtbox">
-													<p class="tit">박희정의 새로운 첫걸음</p>
+													<p class="tit">씩씩한 미노이의 두 번째 챕터</p>
 												</div>
 											</a>
 										</div>
@@ -858,33 +887,33 @@
 											<li class="swiper-slide">
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic08.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
+														<div class="imgbox"><img src="../resources/images/temp/temp_art02.jpg" alt=""></div><!-- D: MO 작은 썸네일은 정사각형 이미지 -->
 														<div class="txtbox">
-															<p class="tit">신예은이 이룬 필연적 순간</p>
+															<p class="tit">이효리의 걸음이 완성한 궤도</p>
 														</div>
 													</a>
 												</div>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic09.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art03.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">티파니와 함께</p>
+															<p class="tit">마에스트라가 된 이영애가 지휘봉을 높게 들었다</p>
 														</div>
 													</a>
 												</div>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic10.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art04.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">봄바람을 타고 춤추는 구찌</p>
+															<p class="tit">03:00PM 박지현의 나른한 휴일 오후</p>
 														</div>
 													</a>
 												</div>
 												<div class="atcbox">
 													<a href="#">
-														<div class="imgbox"><img src="../resources/images/temp/temp_pic11.jpg" alt=""></div>
+														<div class="imgbox"><img src="../resources/images/temp/temp_art05.jpg" alt=""></div>
 														<div class="txtbox">
-															<p class="tit">매혹적인 문가영이 선사하는 중독적인 머스크향의 매력</p>
+															<p class="tit">에르빈 부름의 움직이는 조각</p>
 														</div>
 													</a>
 												</div>
@@ -899,221 +928,221 @@
 								<!-- //MO버전 -->
 							</div>
 						</div>
-						<!-- //워치&주얼리 (카테고리별 기사 모듈 타입1) -->
+						<!-- //F모듈 -->
 
-                        <!-- 연령별 추천 기사 (PC) -->
-                        <div class="article_slide_pc">
-                            <div class="cont_inner">
-                                <!-- 타이틀영역 -->
-                                <div class="tit_wrap">
-                                    <div class="tit_area">
-                                        <h2 class="tit">연령별 추천 기사에요!</h2>
-                                    </div>
-                                </div>
-                                <!-- //타이틀영역 -->
+						<!-- 연령별 추천 기사에요!(PC) -->
+						<div class="article_slide_pc">
+							<div class="cont_inner">
+								<!-- 타이틀영역 -->
+								<div class="tit_wrap">
+									<div class="tit_area">
+										<h2 class="tit">연령별 추천 기사에요!</h2>
+									</div>
+								</div>
+								<!-- //타이틀영역 -->
 
-                                <!-- 리스트 -->
-                                <div class="article_slide">
-                                    <ul class="swiper-wrapper">
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'154만 유튜버' 수스는 누구?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //리스트 -->
-                                <!-- 이동버튼 -->
-                                <div class="p_btn">
-                                    <button class="article_slide_prev" title="이전으로 이동"><span class="p_txt blind">이전</span></button>
-                                    <button class="article_slide_next" title="다음으로 이동"><span class="p_txt blind">다음</span></button>
-                                </div>
-                                <!-- //이동버튼 -->
-                                <!-- 프로그레스바 -->
-                                <div class="article_slide_pagination"></div>
-                                <!-- //프로그레스바 -->
-                            </div>
-                        </div>
-                        <!-- //연령별 추천 기사 (PC)-->
+								<!-- 리스트 -->
+								<div class="article_slide">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'154만 유튜버' 수스는 누구?</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
+													</div>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //리스트 -->
+								<!-- 이동버튼 -->
+								<div class="p_btn">
+									<button class="article_slide_prev" title="이전으로 이동"><span class="p_txt blind">이전</span></button>
+									<button class="article_slide_next" title="다음으로 이동"><span class="p_txt blind">다음</span></button>
+								</div>
+								<!-- //이동버튼 -->
+								<!-- 프로그레스바 -->
+								<div class="article_slide_pagination"></div>
+								<!-- //프로그레스바 -->
+							</div>
+						</div>
+						<!-- //연령별 추천 기사에요!(PC)-->
 
-                        <!-- 연령별 추천 기사 (MO)-->
-                        <div class="article_slide_mo">
-                            <div class="cont_inner">
-                                <!-- 타이틀영역 -->
-                                <div class="tit_wrap">
-                                    <div class="tit_area">
-                                        <h2 class="tit">연령별 추천 기사에요!</h2>
-                                    </div>
-                                </div>
-                                <!-- //타이틀영역 -->
+						<!-- 연령별 추천 기사에요!(MO)-->
+						<div class="article_slide_mo">
+							<div class="cont_inner">
+								<!-- 타이틀영역 -->
+								<div class="tit_wrap">
+									<div class="tit_area">
+										<h2 class="tit">연령별 추천 기사에요!</h2>
+									</div>
+								</div>
+								<!-- //타이틀영역 -->
 
-                                <!-- 리스트 -->
-                                <div class="article_slide">
-                                    <ul class="swiper-wrapper">
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">'154만 유튜버' 수스는 누구?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="swiper-slide">
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="atcbox">
-                                                <a href="#">
-                                                    <div class="imgbox">
-                                                        <img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
-                                                    </div>
-                                                    <div class="txtbox">
-                                                        <p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- //리스트 -->
-                                <!-- 페이지네이션 -->
-                                <div class="pagination"></div>
-                                <!-- //페이지네이션 -->
-                            </div>
-                        </div>
-                        <!-- //연령별 추천 기사 (MO)-->
+								<!-- 리스트 -->
+								<div class="article_slide">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample01.jpg" alt=""><!-- D: PC/MO 정 직사각형 이미지 -->
+													</div>
+													<div class="txtbox">
+														<p class="tit">#바자아트위크 피카소부터 앤디 워홀까지, 20세기 거장들을 만나다</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample02.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'웬즈데이' 크리스티나 리치가 <바자>에게 쏟아낸 이야기</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample03.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">'154만 유튜버' 수스는 누구?</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">여행지에서 하루 종일 예쁜 피부를 연출하고 싶다면?</p>
+													</div>
+												</a>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">다이어트 전문가 제이제이의 살 빠지는 Q&A</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">제발 밥 먹고 바로 운동하지 마세요!!!</p>
+													</div>
+												</a>
+											</div>
+											<div class="atcbox">
+												<a href="#">
+													<div class="imgbox">
+														<img src="../resources/images/temp/temp_progress_swiper_sample04.jpg" alt="">
+													</div>
+													<div class="txtbox">
+														<p class="tit">컴백 준비 시기에 활용한 카드 소민의 다이어트 레시피</p>
+													</div>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //리스트 -->
+								<!-- 페이지네이션 -->
+								<div class="pagination"></div>
+								<!-- //페이지네이션 -->
+							</div>
+						</div>
+						<!-- //연령별 추천 기사에요!(MO)-->
 
-						<!-- 스포츠 & 아웃도어 -->
+						<!-- N모듈 -->
 						<div class="even_atc_wrap">
 							<div class="cont_inner">
 								<!-- 타이틀영역 -->
@@ -1131,7 +1160,7 @@
 											<div class="atcbox">
 												<a href="#">
 													<div class="imgbox">
-														<img src="../resources/images/temp/temp_even07.jpg" alt=""><!-- D: PC/MO 정사각형 이미지 -->
+														<img src="../resources/images/temp/temp_even07.jpg" alt=""><!-- D: PC/MO 가로로 긴 직사각형 이미지 -->
 													</div>
 													<div class="txtbox">
 														<p class="tit">지방시와 조우한 매혹적인 고민시의 색채</p>
@@ -1156,9 +1185,9 @@
 								<!-- //리스트 -->
 							</div>
 						</div>
-						<!-- //스포츠 & 아웃도어 -->
+						<!-- //N모듈 -->
 
-						<!-- 3열 리스트 영역 -->
+						<!-- D모듈 -->
 						<div class="atc_list_wrap">
 							<div class="cont_inner">
 								<!-- 타이틀영역 -->
@@ -1358,7 +1387,7 @@
 								<!-- //3열 리스트 -->
 							</div>
 						</div>
-						<!-- //3열 리스트 영역 -->
+						<!-- //D모듈 -->
 					</div>
 					<!-- //서브메인 -->
 				</div>
@@ -1383,9 +1412,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
+								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
 								<li><a href="https://www.instagram.com/ellekorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
 								<li><a href="https://www.youtube.com/user/ellemagazinekr" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
-								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://story.kakao.com/ch/ellekorea" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
 								<li><a href="https://twitter.com/elle_korea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
@@ -1406,10 +1436,10 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:elle.korea@hll.kr">elle.korea@hll.kr</a></span>
+									<span class="email">이메일 : <a href="mailto:elle@hll.kr">elle@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>

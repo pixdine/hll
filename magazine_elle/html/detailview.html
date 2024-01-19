@@ -13,15 +13,8 @@
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
-
 <body>
 	<div id="elle"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
-		<!-- google 광고영역 -->
-		<div class="ad_google">
-			google 광고 배너 영역<br>높이값 가변적
-		</div>
-		<!--// google 광고영역 -->
-
 		<div id="wrap" class="wrap">
 			<!-- header -->
 			<header id="header" class="header">
@@ -50,7 +43,7 @@
 							<div class="header_util">
 								<div class="aside">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
 							</div>
@@ -65,7 +58,7 @@
 								<div class="breadcrumb">
 									<a href="#" class="home">HOME</a>
 									<a href="#" class="cate_dep">FASHION</a>
-									<a href="#" class="cate_dep">패션 뉴스</a>
+									<a href="#" class="cate_dep">트렌드</a>
 								</div>
 								<!-- //브레드크럼 -->
 								<!-- 기사 타이틀 -->
@@ -165,9 +158,17 @@
 								<!-- 로그인/회원가입 -->
 								<div class="allmenu_util">
 									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-									<a href="#">SIGNUP</a>
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
 								</div>
 								<!-- //로그인/회원가입 -->
+
+								<!-- 단일메뉴 및 버티컬 -->
+								<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
+								<div class="allmenu_single">
+									<li><a href="#">LOOK</a></li>
+									<li><a href="#">ELLEVOICE</a></li>
+								</div>
+								<!-- //단일메뉴 및 버티컬 -->
 
 								<!-- 메뉴 -->
 								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
@@ -227,6 +228,15 @@
 											</ul>
 										</li>
 										<li>
+											<a href="#">SOCIETY<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">WOMEN</a></li>
+												<li><a href="#">SOCIETY</a></li>
+												<li><a href="#">GREEN</a></li>
+												<li><a href="#">MONEY</a></li>
+											</ul>
+										</li>
+										<li>
 											<a href="#">ELLE DECOR<span><em class="blind">열기</em></span></a>
 											<ul class="depth2">
 												<li><a href="#">TRENDS</a></li>
@@ -249,6 +259,9 @@
 												<li><a href="#">NOTICE</a></li>
 											</ul>
 										</li>
+										<li>
+											<a href="#">COVER<span><em class="blind">열기</em></span></a>
+										</li>
 									</ul>
 								</div>
 								<!-- //메뉴 -->
@@ -268,9 +281,10 @@
 								<!-- sns -->
 								<div class="sns_list">
 									<ul>
+										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
 										<li><a href="https://www.instagram.com/ellekorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
 										<li><a href="https://www.youtube.com/user/ellemagazinekr" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-										<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://story.kakao.com/ch/ellekorea" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
 										<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 									</ul>
 								</div>
@@ -281,6 +295,16 @@
 				</div>
 			</div>
 			<!-- //전체메뉴 -->
+
+			<!-- 2024-01-03 : 광고배너영역(탑배너) -->
+			<div class="ad_top">
+				<div class="ad_google">
+					<div><!-- 2024-01-09 > google 광고구좌 div 추가 --> 
+						<img src="https://pixdine.github.io/hll/magazine_bazaar/resources/images/temp/temp_ad_top.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!--//2024-01-03 : 광고배너영역(탑배너) -->
 
 			<!-- container -->
 			<div id="container" class="container">
@@ -297,7 +321,7 @@
 										<span class="profile_pic">
 											<img alt="프로필" src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
 										</span>
-										<em>by</em> <span><a href="#">BAZAAR</a></span>
+										<em>by</em> <span><a href="#">ELLE</a></span>
 										<span class="time">2023.05.08</span>
 									</div>
 								</div>
@@ -346,6 +370,16 @@
 										</div>
 										<p class="caption">사진 / Gucci</p>
 									</div>
+
+									<!-- 2024-01-03 : 광고배너영역(인리드) -->
+									<div class="ad_inread">
+										<div class="ad_google">
+											<div><!-- 2024-01-09 > google 광고구좌 div 추가 --> 
+												<img src="https://pixdine.github.io/hll/magazine_bazaar/resources/images/temp/temp_ad_inread.png" alt="">
+											</div>
+										</div>
+									</div>
+									<!--//2024-01-03 : 광고배너영역(인리드) -->
 
 									<div class="photo_dual">
 										<div class="photo_box01">
@@ -1345,16 +1379,26 @@
 								<!-- //이 기사엔 이런 키워드 -->
 							</div>
 							<!--// 상세 > body -->
+
+							<!-- 2024-01-03 : 광고배너영역(인리드) -->
+							<div class="ad_inread">
+								<div class="ad_google">
+									<div><!-- 2024-01-09 > google 광고구좌 div 추가 --> 
+										<img src="https://pixdine.github.io/hll/magazine_bazaar/resources/images/temp/temp_ad_inread.png" alt="">
+									</div>
+								</div>
+							</div>
+							<!--//2024-01-03 : 광고배너영역(인리드) -->
 						</div>
 					</div>
 
-					<!-- 바자의 픽 (기획 기사, 큐레이션 모듈) -->
+					<!-- B모듈 -->
 					<div class="scroll_atc_wrap">
 						<div class="cont_inner">
 							<!-- 타이틀영역 -->
 							<div class="tit_wrap">
 								<div class="tit_area">
-									<h2 class="tit">바자의 픽</h2>
+									<h2 class="tit">기획기사</h2>
 									<div class="side"><a href="#" class="btn_more"><span>더보기</span></a></div><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
 								</div>
 								<p class="hashtag">#다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트, #식단, #운동, #다이어트</p>
@@ -1457,7 +1501,7 @@
 							<!-- //리스트 -->
 						</div>
 					</div>
-					<!-- //바자 아트 (기획 기사, 큐레이션 모듈) -->
+					<!-- //B모듈 -->
 
 					<!-- 추천 인기 기사 (세트 모듈) -->
 					<div class="set_atc_wrap">
@@ -1579,9 +1623,10 @@
 						</div>
 						<div class="footer_sns">
 							<ul>
+								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
 								<li><a href="https://www.instagram.com/ellekorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
 								<li><a href="https://www.youtube.com/user/ellemagazinekr" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
-								<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://story.kakao.com/ch/ellekorea" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
 								<li><a href="https://twitter.com/elle_korea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
 							</ul>
 						</div>
@@ -1602,10 +1647,10 @@
 									<span class="num">사업자등록번호 : 104-81-55280</span>
 									<br class="mo_br">
 									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
-									<span class="email">이메일 : <a href="mailto:elle.korea@hll.kr">elle.korea@hll.kr</a></span>
+									<span class="email">이메일 : <a href="mailto:elle@hll.kr">elle@hll.kr</a></span>
 								</div>
 							</address>
-							<p class="copyright">© 2023 Hearst Joongang. All Rights Reserved.</p>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>

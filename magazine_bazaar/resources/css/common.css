@@ -270,8 +270,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .ad_top .ad_google div {margin:20px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread{position:relative;width:100%;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread .ad_google div {margin:180px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
-.atc_list li.ad_inread{width:100%;padding:0;}
-.atc_list li.ad_inread div{margin:0 auto;}
+.atc_list li.ad_inread,
+.vdo_atc_list li.ad_inread{width:100%;padding:0;}
+.atc_list li.ad_inread div,
+.vdo_atc_list li.ad_inread div{margin:0 auto;}
 
 /* header 공통스타일 */
 .header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}
@@ -674,6 +676,12 @@ background:#fff;overflow:hidden;z-index:230}
 .atc_list_wrap{margin-bottom:var(--module-gap);}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
+
+/* 비디오모듈 */
+.vdo_atc_wrap{margin-bottom:var(--module-gap);}
+.vdo_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
+.vdo_atc_list li{width:50%;padding:0 12px;}
+.vdo_atc_list .atcbox .imgbox{padding-top:62.585%;}
 
 /* 결과없음 */
 .nodata{max-width:1280px;margin:0 auto;padding:240px 40px;text-align:center;}
@@ -1165,7 +1173,13 @@ background:#fff;overflow:hidden;z-index:230}
 	/* 공통 : D모듈 & 3열 리스트 */
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
-	
+
+	/* 비디오모듈 */
+	.vdo_atc_list ul{gap:24px 0;margin:0;}
+	.vdo_atc_list li{width:100%;padding:0;}
+	.vdo_atc_list .atcbox .txtbox{margin-top:16px;}
+	.vdo_atc_list .atcbox .txtbox .tit{height:52px;font-size:18px;line-height:26px;}
+
 	/* 결과없음 */
 	.nodata{padding:160px 20px;}
 	.nodata .txt{font-size:14px;line-height:20px;}

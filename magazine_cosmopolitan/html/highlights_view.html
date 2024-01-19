@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>코스모폴리탄 코리아 | COSMOPOLITAN KOREA</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/module.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /><!-- D: 상세에서만 해당 css 로드합니다. -->
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+
+<body>
+	<div id="cosmo"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+		<div id="wrap" class="wrap">
+			<!-- header -->
+			<header id="header" class="header">
+				<!-- header_wrap -->
+				<div class="header_wrap">
+					<div class="header_top">
+						<div class="cont_inner">
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+						</div>
+					</div>
+					<div class="header_bottom">
+						<div class="cont_inner">
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+							<div class="header_navi">
+								<ul>
+									<li><a href="#">FASHION</a></li>
+									<li><a href="#">BEAUTY</a></li>
+									<li><a href="#">LIFE</a></li>
+									<li><a href="#">CELEBS</a></li>
+									<li><a href="#">CLOSE UP</a></li>
+								</ul>
+							</div>
+							<div class="header_util">
+								<div class="aside">
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
+								</div>
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+							</div>
+						</div>
+					</div>
+
+					<!-- D: 플로팅바 영역 -->
+					<div class="floating_bar">
+						<div class="cont_inner">
+							<div class="detail_info">
+								<!-- 브레드크럼 -->
+								<div class="breadcrumb">
+									<a href="#" class="home">HOME</a>
+									<a href="#" class="cate_dep">HIGHLIGHTS</a>
+								</div>
+								<!-- //브레드크럼 -->
+								<!-- 기사 타이틀 -->
+								<div class="txtbox">
+									<p class="tit"> 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션 구찌, 경복궁에서 펼쳐진 2024 크루즈 컬렉션</p>
+								</div>
+								<!-- //기사 타이틀 -->
+								<!-- 스크랩, 공유하기 -->
+								<div class="sharebox">
+									<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+									<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+								</div>
+								<!-- //스크랩, 공유하기 -->
+							</div>
+						</div>
+					</div>
+					<!-- //D: 플로팅바 영역 -->
+				</div>
+				<!-- //header_wrap -->
+
+				<!-- 검색 레이어 -->
+				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+					<div class="cont_inner">
+						<div class="search_box">
+							<div class="inputbox search">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+							</div>
+
+							<!-- 추천 키워드 -->
+							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="search_keyword">
+								<h3 class="search_tit">추천 키워드</h3>
+								<!-- 키워드 리스트 -->
+								<!-- D: 최대 10개까지 노출 -->
+								<ul class="word_list">
+									<li><a href="#">#어윈올라프</a></li>
+									<li><a href="#">#불가리</a></li>
+									<li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+									<li><a href="#">#갤러리</a></li>
+									<li><a href="#">#5월전시</a></li>
+									<li><a href="#">#패션아이템</a></li>
+									<li><a href="#">#백남준</a></li>
+									<li><a href="#">#반팔재킷</a></li>
+									<li><a href="#">#구찌 패션쇼</a></li>
+									<li><a href="#">#STAR일링</a></li>
+								</ul>
+								<!-- //키워드 리스트 -->
+							</div>
+							<!-- //추천 키워드 -->
+						</div>
+					</div>
+				</div>
+				<!-- //검색 레이어 -->
+
+				<!-- D: [팝업] 공유하기 -->
+				<div class="popup_layer pop_share" data-layer="popup_share">
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_tit">
+								<h3 class="tit">공유하기</h3>
+							</div>
+							<div class="popup_close">
+								<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+						<div class="popup_cont">
+							<div class="sns_list">
+								<ul>
+									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //D: [팝업] 공유하기 -->
+			</header>
+			<!-- //header -->
+
+			<!-- 전체메뉴 -->
+			<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="allmenu_dimmed"></div>
+				<div class="allmenu_area">
+					<div class="allmenu_cont">
+						<!-- 상단 닫기 영역 -->
+						<div class="top_area">
+							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+						</div>
+						<!-- //상단 닫기 영역 -->
+
+						<div class="scroll_custom">
+							<div class="allmenu_inner">
+								<!-- 로그인/회원가입 -->
+								<div class="allmenu_util">
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
+								</div>
+								<!-- //로그인/회원가입 -->
+
+								<!-- 메뉴 -->
+								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+								<div class="allmenu_list">
+									<ul class="depth1">
+										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+											<a href="#">FASHION<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">TRENDS</a></li>
+												<li><a href="#">HOW TO</a></li>
+												<li><a href="#">SHOPPING</a></li>
+												<li><a href="#">WATCH &amp; JEWELRY</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">BEAUTY<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">MAKE-UP</a></li>
+												<li><a href="#">SKINCARE</a></li>
+												<li><a href="#">HAIR &amp; BODY</a></li>
+												<li><a href="#">HEALTH &amp; FITNESS</a></li>
+												<li><a href="#">TIPS</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">CELEBS<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">INTERVIEW</a></li>
+												<li><a href="#">CELEB STYLE</a></li>
+												<li><a href="#">CELEB NEWS</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">LIFE<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">ENTERTAINMENT</a></li>
+												<li><a href="#">PLACE</a></li>
+												<li><a href="#">FOOD</a></li>
+												<li><a href="#">LOVE</a></li>
+												<li><a href="#">TRAVEL</a></li>
+												<li><a href="#">CAR &amp; TECH</a></li>
+												<li><a href="#">SOCIETY</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">CAREER<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">CAREER TIPS</a></li>
+												<li><a href="#">MENTOR</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">CLOSE UP<span><em class="blind">열기</em></span></a>
+										</li>
+										<li>
+											<a href="#">HOROSCOPE<span><em class="blind">열기</em></span></a>
+										</li>
+										<li>
+											<a href="#">EVENT <span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">ONGOING EVENT</a></li>
+												<li><a href="#">NOTICE</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">HIGHLIGHTS<span><em class="blind">열기</em></span></a>
+										</li>
+									</ul>
+								</div>
+								<!-- //메뉴 -->
+
+								<!-- 외부링크 -->
+								<div class="etc_link">
+									<ul>
+										<li><a href="#" target="_blank" title="새창열림">광고&middot;제휴문의</a></li>
+										<li><a href="#" target="_blank" title="새창열림">미디어킷</a></li>
+										<li><a href="#" target="_blank" title="새창열림">RSSFEED</a></li>
+										<li><a href="#" target="_blank" title="새창열림">포인트제도 안내</a></li>
+										<li><a href="#" target="_blank" title="새창열림">고객센터</a></li>
+									</ul>
+								</div>
+								<!-- //외부링크 -->
+
+								<!-- sns -->
+								<div class="sns_list">
+									<ul>
+										<li><a href="https://www.facebook.com/cosmokorea/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://www.instagram.com/cosmopolitankorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/CosmopolitanKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://story.kakao.com/ch/cosmopolitan" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
+										<li><a href="https://twitter.com/cosmokorea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+									</ul>
+								</div>
+								<!-- //sns -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //전체메뉴 -->
+
+			<!-- 2024-01-03 : 광고배너영역(탑배너) -->
+			<div class="ad_top">
+				<div class="ad_google">
+					<div><!-- 2024-01-09 > google 광고구좌 div 추가 --> 
+						<img src="../resources/images/temp/temp_ad_top.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!--//2024-01-03 : 광고배너영역(탑배너) -->
+
+			<!-- container -->
+			<div id="container" class="container">
+				<div id="content" class="content">
+					<div class="atc_wrap">
+						<div class="cont_inner">
+							<!-- 상세 > header -->
+							<div class="atc_header">
+								<div class="atc_header_info">
+									<div class="txt_category">HIGHLIGHTS</div>
+									<h2 class="tit_article">18K 화이트골드에 라운드 브릴리언트 컷 아이아몬드를 세팅한 그래픽적 디자인의 '트루 파베 와이드 링'</h2>
+									<p class="txt_excerpt">하우스의 헤리티지와 한국 전통 의상 스타일의 조화를 이룬 '구찌 2024 크루즈 컬렉션'</p>
+									<div class="txt_meta">
+										<span class="profile_pic">
+											<img alt="프로필" src="https://image.jtbcplus.kr/data/contents/jam_photo/202306/22/cb47de09-b748-4017-8522-bc43b8e8be49.jpg">
+										</span>
+										<em>by</em> <span><a href="#">COSMOPOLITAN</a></span>
+										<span class="time">2023.05.08</span>
+									</div>
+								</div>
+							</div>
+							<!--// 상세 > header -->
+
+							<!-- 상세 > body -->
+							<div class="atc_body">
+								<div class="atc_body_cont"> <!-- 파티클 본문 -->
+									<!-- 사진묶음 슬라이드 컨텐츠 -->
+									<div class="tag_photobundle">
+										<div class="swiper viewSwiper" data-slide="slider-type01">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view10.png" />
+													<p class="caption">사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view09.png" />
+													<p class="caption">사진2 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view08.png" />
+													<p class="caption">사진3 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view07.png" />
+													<p class="caption">사진4 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view06.png" />
+													<p class="caption">사진5 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" alt="">
+													<p class="caption">사진6 / Gucci</p>
+												</div>
+											</div>
+
+											<button type="button" class="btn_ico zoom" onclick="openPhotoViewer();"><span class="blind">크게보기</span></button>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<!--// 사진묶음 슬라이드 컨텐츠 -->
+
+									<p>
+										코스모 트레일러 허쉬와 연세대 찍고,  성신여대 찍고, 쎈느까지! 4일 동안 달달함을 전파하다<br>
+										‘코스모 트레일러 x 허쉬 팝업 이벤트’ 공개! 지난여름, 숙명여대와 뮤직 페스티벌에서 큰 사랑을 받았던 코스모 트레일러. 올가을엔 허쉬 초코바이츠와 함께 한층 더 귀여워진 모습으로 캠퍼스와 성수동을 찾았다.
+									</p>
+
+									<br>
+
+									<p>
+										현장 이벤트는 쉬운 게 최고야! 팔로우와 댓글 이벤트 그리고 꽝 없는 럭키드로우 캡슐 뽑기로 누구나 쉽게 참여할 수 있는 이벤트가 열렸다.특히 선물 중 가장 인기가 많았던 아이템은 한 손에 쏙 들어오는 NEW 구디백. 심지어 달달한 허쉬 초콜릿이 가득 담겨있다. 평소 허쉬를 좋아하는 학생이라면 꼭 소장하고 싶은 굿즈일 듯!
+									</p>
+
+									<!-- 사진묶음 슬라이드 컨텐츠 -->
+									<div class="tag_photobundle">
+										<div class="swiper viewSwiper" data-slide="slider-type01">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view10.png" />
+													<p class="caption">사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci 사진1 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view09.png" />
+													<p class="caption">사진2 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view08.png" />
+													<p class="caption">사진3 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view07.png" />
+													<p class="caption">사진4 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="../resources/images/temp/temp_view06.png" />
+													<p class="caption">사진5 / Gucci</p>
+												</div>
+												<div class="swiper-slide">
+													<img src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" alt="">
+													<p class="caption">사진6 / Gucci</p>
+												</div>
+											</div>
+
+											<button type="button" class="btn_ico zoom" onclick="openPhotoViewer();"><span class="blind">크게보기</span></button>
+											<div class="swiper-button-next"></div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+									<!--// 사진묶음 슬라이드 컨텐츠 -->
+
+									<p>
+										코스모 트레일러 허쉬와 연세대 찍고,  성신여대 찍고, 쎈느까지! 4일 동안 달달함을 전파하다<br>
+										‘코스모 트레일러 x 허쉬 팝업 이벤트’ 공개! 지난여름, 숙명여대와 뮤직 페스티벌에서 큰 사랑을 받았던 코스모 트레일러. 올가을엔 허쉬 초코바이츠와 함께 한층 더 귀여워진 모습으로 캠퍼스와 성수동을 찾았다.
+									</p>
+
+									<br>
+
+									<p>
+										현장 이벤트는 쉬운 게 최고야! 팔로우와 댓글 이벤트 그리고 꽝 없는 럭키드로우 캡슐 뽑기로 누구나 쉽게 참여할 수 있는 이벤트가 열렸다.특히 선물 중 가장 인기가 많았던 아이템은 한 손에 쏙 들어오는 NEW 구디백. 심지어 달달한 허쉬 초콜릿이 가득 담겨있다. 평소 허쉬를 좋아하는 학생이라면 꼭 소장하고 싶은 굿즈일 듯!
+									</p>
+								</div>
+							</div>
+							<!--// 상세 > body -->
+
+							<!-- 하단 이전글/다음글 영역 -->
+							<div class="view_detail_footer">
+								<!-- D: 이전글이 없는 경우 해당영역 미노출 -->
+								<div class="board_item">
+									<div class="prev_board">이전글</div>
+									<a href="#" class="board_title">[바자전 : HOLI _ DAY, 세개의 렌즈] 에 초대합니다!</a>
+								</div>
+								<!-- //D: 이전글이 없는 경우 해당영역 미노출 -->
+								<!-- D: 다음글이 없는 경우 해당영역 미노출 -->
+								<div class="board_item">
+									<div class="next_board">다음글</div>
+									<a href="#" class="board_title">8월 바자전 궁금하신점 댓글로 올려주시는 분들 중 추첨을 통해 선물을 드려요!</a>
+								</div>
+								<!-- //D: 다음글이 없는 경우 해당영역 미노출 -->
+							</div>
+							<!-- //하단 이전글/다음글 영역 -->
+
+							<!-- 목록 버튼영역 -->
+							<div class="btn_list_wrap">
+								<a href="#" class="btn bctype1"><span>목록</span></a>
+							</div>
+							<!-- //목록 버튼영역 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<footer id="footer" class="footer">
+				<div class="footer_top">
+					<div class="cont_inner">
+						<div class="footer_link">
+							<ul>
+								<li><a href="#" target="_blank">매체소개</a></li>
+								<li><a href="#" target="_blank">고객센터</a></li>
+								<li><a href="#" target="_blank">포인트정책</a></li>
+								<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+								<li><a href="#" target="_blank">이용약관</a></li>
+								<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+								<li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+								<li><a href="#" target="_blank">윤리경영</a></li>
+							</ul>
+						</div>
+						<div class="footer_sns">
+							<ul>
+								<li><a href="https://www.facebook.com/cosmokorea/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/cosmopolitankorea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/CosmopolitanKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/cosmopolitan" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
+								<li><a href="https://twitter.com/cosmokorea" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="cont_inner">
+						<div class="footer_logo">
+							<img src="../resources/images/logo_cosmopolitan.svg" alt="COSMOPOLITAN">
+						</div>
+						<div class="footer_info">
+							<address class="addr_wrap">
+								<em>허스트중앙(유)</em>
+								<div class="addr_txt">
+									<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+									<span class="ceo">대표자 : 강주연</span>
+									<br class="pc_br">
+									<span class="num">사업자등록번호 : 104-81-55280</span>
+									<br class="mo_br">
+									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+									<span class="email">이메일 : <a href="mailto:cosmopolitan@hll.kr">cosmopolitan@hll.kr</a></span>
+								</div>
+							</address>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+				<div class="family_wrap">
+					<button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+					<div class="familysite">
+						<div class="cont_inner">
+							<div class="tab_wrap">
+								<div class="tab_menu type02">
+									<ul>
+										<li class="on"><a href="javascript:;">FAMILY</a></li><!-- D: 선택 시 on 클래스 추가 -->
+										<li><a href="javascript:;">GLOBAL</span></a></li>
+									</ul>
+								</div>
+
+								<div class="tab_cont_wrap">
+									<!-- Family 탭 내용 -->
+									<div class="tab_cont active">
+										<!-- 리스트 -->
+										<div class="familysite_list family">
+											<ul>
+												<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">Harper’s  BAZAAR</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">CLOSE UP</a></li>
+												<li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
+												<li><a href="#" target="_blank" title="새창열림">eee</a></li>
+											</ul>
+										</div>
+										<!-- //리스트 -->
+									</div>
+									<!-- //Family 탭 내용 -->
+
+									<!-- Global 탭 내용 -->
+									<div class="tab_cont">
+										<!-- 리스트 -->
+										<div class="familysite_list global">
+											<ul>
+												<li><a href="#" target="_blank" title="새창열림">USA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+												<li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+												<li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
+											</ul>
+										</div>
+										<!-- //리스트 -->
+									</div>
+									<!-- //Global 탭 내용 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+	</div>
+
+	<!-- 팝업 : 복사하기 알럿 -->
+	<div class="popup_alert" data-alert="alert_1">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">클립보드에 복사되었습니다.</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 복사하기 알럿 -->
+
+	<!-- 팝업 : 퀴즈 정답제출 알럿 -->
+	<div class="popup_alert" data-alert="quiz_alert">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">정답 제출이 완료되었습니다.<br>정답을 확인하시겠어요?</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype2" data-alert-close="quiz_alert"><span>취소</span></button>
+					<button type="button" class="btn bctype1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="quiz_alert"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 퀴즈 정답제출 알럿 -->
+
+    <!-- 화보 슬라이드 -->
+    <div class="photoViewer">
+        <div class="pv_container">
+            <div class="pv_cont">
+                <div class="swiper pvSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view10.png" />
+                                <p class="caption">사진1 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view09.png" />
+                                <p class="caption">사진1 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view08.png" />
+                                <p class="caption">사진2 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view07.png" />
+                                <p class="caption">사진3 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view06.png" />
+                                <p class="caption">사진4 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" />
+                                <p class="caption">사51 / Gucci</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pv_next"><img src="../resources/images/photo_viewer_next.png" alt="다음"></button>
+                <button class="pv_prev"><img src="../resources/images/photo_viewer_prev.png" alt="이전"></button>
+            </div>
+
+            <button class="pv_close" title="닫기"><img src="../resources/images/close_photoviewer.png" alt="닫기"></button>
+        </div>
+    </div>
+    <!-- // 화보 슬라이드 -->
+
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
+	<script>
+		currentPage = 'view';
+
+		viewImgSlide()
+
+		//키워드 태그영역 더보기
+		function tagOpen() {
+			if ($(this).hasClass('on')) {
+				//닫힘
+				$(this).removeClass('on');
+				$('.tag_wrap').removeClass('on');
+			} else {
+				//열림
+				$(this).addClass('on');
+				$('.tag_wrap').addClass('on');
+			}
+		}
+
+		//키워드 태그영역 가로 스크롤 체크 후 더보기 버튼 노출여부
+		function showTagBtn() {
+			var totalWidth = 84;
+			$('.tag_list li').each(function () {
+				var liWidth = parseInt($(this).css('width'));
+				totalWidth += liWidth;
+			});
+
+			if (window.innerWidth > totalWidth || window.innerWidth > 768) {
+				$('.tag_wrap .btnbox').hide();
+			} else {
+				$('.tag_wrap .btnbox').show();
+			}
+		}
+
+		$(document).ready(function () {
+			// viewImgSlide();
+			progress_bar(); //D: 상세페이지 프로그래스바
+
+			//키워드 태그
+			$('.tag_wrap .btnbox .btn_ico').on("click", tagOpen);
+			showTagBtn();
+
+            $('.photoViewer').photoViewerSwiper();
+		});
+
+		$(window).resize(function () {
+			showTagBtn();
+		});
+	</script>
+	<!-- //js -->
+
+</body>
+
+</html>

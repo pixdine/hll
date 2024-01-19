@@ -133,8 +133,7 @@
 /* G모듈 */
 .top3_atc_wrap{margin-bottom:var(--module-gap);}
 .top3_atc_wrap .tit_wrap{margin-bottom:40px;}
-.top3_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);
--webkit-background-clip:text;background-clip:text;color:transparent;}
+.top3_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .top3_atc_list{margin:0 -12px;}
 .top3_atc_list li{width:33.333%;padding:0 12px;}
 .top3_atc_list li .num{margin-bottom:16px;font-family:'Druk Wide Web';font-size:40px;line-height:48px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
@@ -145,8 +144,7 @@
 
 /* I모듈 */
 .rect_atc_wrap{margin-bottom:var(--module-gap);}
-.rect_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);
--webkit-background-clip:text;background-clip:text;color:transparent;}
+.rect_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .rect_atc_list ul{column-gap:24px;}
 .rect_atc_list li{width:calc(50% - 12px);}
 .rect_atc_area{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:50px;}
@@ -159,8 +157,7 @@
 
 /* K모듈 */
 .zigzag_atc_wrap{margin-bottom:var(--module-gap);}
-.zigzag_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);
--webkit-background-clip:text;background-clip:text;color:transparent;}
+.zigzag_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .zigzag_atc_list .atcbox_set{display:flex;margin:0 -12px;}
 .zigzag_atc_list .atcbox_set .atcbox{width:25%;padding:0 12px;}
 .zigzag_atc_list .atcbox_set .atcbox:nth-child(even){margin-top:25px;}
@@ -190,8 +187,7 @@
 
 /* N모듈 */
 .even_atc_wrap{margin-bottom:var(--module-gap);}
-.even_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);
--webkit-background-clip:text;background-clip:text;color:transparent;}
+.even_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .even_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 24px;}
 .even_atc_list li{width:calc(50% - 12px)}
 .even_atc_list .atcbox .imgbox{padding-top:62.5851%;}
@@ -265,7 +261,7 @@
 .comment_wrap{width:100%;max-width:792px;margin:80px auto 0;padding-top:80px;border-top:1px solid #dbdbdb;}
 .comment_wrap .tit_wrap{margin-bottom:24px;}
 .comment_wrap .tit_wrap .tit{font-size:16px;line-height:23px;}
-.comment_wrap .tit_wrap .tit .num{font-weight:500;color:var(--point);line-height:22px;}
+.comment_wrap .tit_wrap .tit .num{font-weight:500;color:var(--point);}
 .comment_wrap .btn_more_wrap{margin-top:80px;}
 .comment_write_area ~ .comment_list_area{margin-top:40px;}
 .comment_write{position:relative;padding:19px 8px 19px 0;background-color:#fff;border:1px solid #dbdbdb;}
@@ -608,7 +604,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.top3_atc_list li .txtbox .tit{height:46px;font-size:16px;line-height:23px;}
 
 	/* I모듈 */
-	.rect_atc_wrap .tit_wrap .tit{flex-shrink:inherit;font-size:24px;line-height:29px;}
+	.rect_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
 	.rect_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.rect_atc_list ul{column-gap:0;}
 	.rect_atc_list li{width:100%;margin-right:20px;}

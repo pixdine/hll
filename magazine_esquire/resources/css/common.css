@@ -8,18 +8,21 @@
 	font-style: normal;
 	font-weight: 700;
 	src: url(../font/Pretendard-ExtraBold.woff2) format("woff2"), url(../font/Pretendard-ExtraBold.woff) format("woff"), url(../font/Pretendard-ExtraBold.otf) format("opentype");
+	unicode-range: U+0020-007E; /*영문, 숫자, 특수문자를 포함 한 유니코드 범위*/
 }
 @font-face {
 	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 500;
 	src: url(../font/Pretendard-Medium.woff2) format("woff2"), url(../font/Pretendard-Medium.woff) format("woff"), url(../font/Pretendard-Medium.otf) format("opentype");
+	unicode-range: U+0020-007E; /*영문, 숫자, 특수문자를 포함 한 유니코드 범위*/
 }
 @font-face {
 	font-family: 'Pretendard';
 	font-style: normal;
 	font-weight: 400;
 	src: url(../font/Pretendard-Regular.woff2) format("woff2"), url(../font/Pretendard-Regular.woff) format("woff"), url(../font/Pretendard-Regular.otf) format("opentype");
+	unicode-range: U+0020-007E; /*영문, 숫자, 특수문자를 포함 한 유니코드 범위*/
 }
 @font-face {
 	font-family: TTFirs-ExtraBold;

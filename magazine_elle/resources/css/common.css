@@ -710,8 +710,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* 비디오 추가모듈 */
 .vdo_atc_wrap{margin-bottom:var(--module-gap);}
-.vdo_atc_wrap .tit_wrap .tit{padding-left:40px;font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;font-weight:700;line-height:53px;}
-.vdo_atc_wrap .tit_wrap .tit:before{content:'';display:block;position:absolute;left:0;top:35px;width:32px;height:8px;background-color:var(--point);}
+.vdo_atc_wrap .tit_wrap .tit_area{border-bottom:1px solid #111;}
+.vdo_atc_wrap .tit_wrap .tit{margin-bottom:8px;font-family:SaolDisplay, 'Noto Sans KR';font-size:48px;line-height:60px;}
 .vdo_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .vdo_atc_list li{width:50%;padding:0 12px;}
 .vdo_atc_list .atcbox .imgbox{padding-top:62.585%;}
@@ -887,7 +887,7 @@ background:#fff;overflow:hidden;z-index:230}
 .horoscope_box .txtbox{width:53.671%;padding-left:40px;font-size:16px;font-weight:400;line-height:23px;}
 .horoscope_box .txtbox .info_group{margin-bottom:40px;}
 .horoscope_box .txtbox .period{margin-bottom:24px;font-size:14px;font-weight:500;line-height:13px;color:#666;}
-.horoscope_box .txtbox .tit{font-family:FoundersGrotesk;font-size:38px;font-weight:500;line-height:1;}
+.horoscope_box .txtbox .tit{font-family:'Pretendard';font-size:36px;font-weight:500;line-height:1;}
 .horoscope_box .txtbox .meta{display:flex;align-items:baseline;margin-top:8px;font-size:18px;font-weight:500;line-height:26px;}
 .horoscope_box .txtbox .meta .date{margin-left:12px;line-height:1;}
 .horoscope_box .txtbox .txt p ~ p{margin-top:24px;}
@@ -1332,7 +1332,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.horoscope_box .imgbox img{width:100%;}
 	.horoscope_box .txtbox{width:100%;margin-top:24px;padding-left:0;font-size:14px;line-height:22px;}
 	.horoscope_box .txtbox .info_group{margin-bottom:24px;}
-	.horoscope_box .txtbox .tit{font-size:26px;}
+	.horoscope_box .txtbox .tit{font-size:24px;}
 	.horoscope_box .txtbox .meta{font-size:14px;line-height:20px;}
 	.horoscope_box .txtbox .meta .date{margin-left:8px;}
 	.horoscope_box .txtbox .txt p ~ p{margin-top:10px;}

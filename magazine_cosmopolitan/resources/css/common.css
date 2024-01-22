@@ -913,7 +913,7 @@ background:#fff;overflow:hidden;z-index:230}
 .hover_atc_list .atcbox .subtxt span:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:12px;margin-top:1px;background-color:#fff;opacity:0.2;}
 .hover_atc_list .atcbox .subtxt span:first-of-type:before{display:none;}
 .hover_atc_list .atcbox .subtxt .date{font-family:FoundersGrotesk;font-size:16px;line-height:20px;}
-.hover_atc_list .atcbox .subtxt .sort{font-size:14px;line-height:20px;}
+.hover_atc_list .atcbox .subtxt .sort{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;font-size:14px;line-height:20px;}
 .hover_atc_list .atcbox a:hover .hover_layer{opacity:1;}
 .hover_atc_list .atcbox a:hover .txtbox:before{display:none;}
 .hover_atc_list .atcbox a:hover .txtbox .tit,

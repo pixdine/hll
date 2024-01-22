@@ -15,14 +15,15 @@
 .pub_list thead tr:nth-child(2) th:last-child{border-right:1px #999 solid;}
 .pub_list tbody tr:hover{background-color:#f7f7f7;}
 .pub_list tr.comon > td{background:#fff5da;color:#212121;}
-.pub_list tr.comon > td:nth-child(9){color:#f78e16}
 .pub_list tr.complete > td{background:#def7ff;color:#212121;}
-.pub_list tr.complete > td:nth-child(9){color:#1683ff;}
 .pub_list tr.hold > td{background:#f6f6f6;color:#ccc;}
 .pub_list tr.del > td{background:#f6f6f6;opacity:0.5;text-decoration:line-through;}
 .pub_list tr.del a,
 .pub_list tr.hold a{pointer-events:none;color:#ccc;text-decoration:none;}
-.pub_list tr.modify > td{background:#ffe3f1;color:#80001c;}
+.pub_list tr.modify > td{background:#def7ff;}
+.pub_list tr.cosmo > td{background-color:#fff3f4;}
+.pub_list tr.esquire > td{background-color:#f5f6f8;}
+.pub_list tr.elle > td{background-color:#edebe2;}
 .pub_list .tal{text-align:left;}
 .pub_list a{color:#222;text-decoration:underline;}
 .txt_sm{display:block;position:relative;padding-left:8px;font-size:13px;line-height:20px;}

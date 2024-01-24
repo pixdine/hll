@@ -1217,12 +1217,12 @@ background:#fff;overflow:hidden;z-index:230}
 	.result_sorting .total .count{font-size:18px;line-height:17px;}
 
 	/* 공통 : D모듈 & 3열 리스트 */
-	.atc_list_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.atc_list_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
 
 	/* O모듈 (비디오모듈) */
-	.vdo_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.vdo_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.vdo_atc_list ul{gap:24px 0;margin:0;}
 	.vdo_atc_list li{width:100%;padding:0;}
 	.vdo_atc_list .atcbox .txtbox{margin-top:16px;}

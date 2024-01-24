@@ -537,7 +537,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	/* A모듈, F모듈 공통 */
 	.cate_atc_list.pc{display:none;}
 	.cate_atc_list.mo{display:block;}
-	.cate_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.cate_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.cate_atc_list.mo .itembox .cate{font-size:10px;}
 	.cate_atc_list.mo .big_thumb{margin-bottom:24px;}
 	.cate_atc_list.mo .big_thumb .imgbox{padding-top:133.334%;}
@@ -566,7 +566,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 
 	/* C모듈 */
 	.issue_atc_wrap .tit_wrap .tit_area{justify-content:center;text-align:center;}
-	.issue_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.issue_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.issue_atc_list{position:relative;margin:0;}
 	.issue_atc_list .atcbox .imgbox{padding-top:133.565%;}
 	.issue_atc_list ul{align-items:center;}
@@ -580,7 +580,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.issue_atc_list .atcbox .txtbox .tit{height:auto;max-height:46px;font-size:16px;line-height:23px;color:#fff;}
 
 	/* E모듈 */
-	.center_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.center_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.center_atc_list ul{grid-template-columns:calc(50% - 6px);grid-gap:24px 12px;}
 	.center_atc_list .atcbox .imgbox{padding-top:100%;}
 	.center_atc_list li:nth-child(2){order:3;}
@@ -594,7 +594,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 
 	/* G모듈 */
 	.top3_atc_wrap .tit_wrap{margin-bottom:24px;}
-	.top3_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.top3_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.top3_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.top3_atc_list li{overflow:hidden;width:87.165%;padding:0;}
 	.top3_atc_list li .num{margin-bottom:12px;font-size:24px;line-height:29px;}
@@ -604,7 +604,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.top3_atc_list li .txtbox .tit{height:46px;font-size:16px;line-height:23px;}
 
 	/* I모듈 */
-	.rect_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.rect_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.rect_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.rect_atc_list ul{column-gap:0;}
 	.rect_atc_list li{width:100%;margin-right:20px;}
@@ -616,7 +616,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.rect_atc_area .atcbox .imgbox img.mo{display:block;}
 
 	/* K모듈 */
-	.zigzag_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.zigzag_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.zigzag_atc_list{margin:0 -20px;padding:0 20px;overflow:hidden;}
 	.zigzag_atc_list ul {flex-direction: row;}
 	.zigzag_atc_list li{margin-right:20px;}
@@ -626,7 +626,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 
 	/* M모듈 */
 	.mix_atc_wrap .tit_wrap{margin-bottom:14px;}
-	.mix_atc_wrap .tit_wrap .tit{flex-shrink:inherit;font-size:24px;line-height:29px;}
+	.mix_atc_wrap .tit_wrap .tit{flex-shrink:inherit;font-size:20px;line-height:24px;}
 	.mix_atc_wrap .tit_wrap .side{width:100%;margin:14px 0 0;}
 	.mix_atc_wrap .tab_cate ul{overflow:hidden;overflow-x:auto;display:block;margin:0 -20px;padding:10px 20px;font-size:0;white-space:nowrap;}
 	.mix_atc_wrap .tab_cate ul::-webkit-scrollbar{display:none;}
@@ -644,7 +644,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.mix_atc_list li:nth-child(1) .txtbox .tit{height:52px;font-size:18px;line-height:26px;}
 
 	/* N모듈 */
-	.even_atc_wrap .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.even_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.even_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.even_atc_list ul{flex-wrap:nowrap;gap:0;}
 	.even_atc_list li{width:87.165%;margin-right:12px;}

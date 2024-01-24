@@ -40,7 +40,7 @@
 .ab_photo_1200 {position:relative;left:50%;transform:translateX(-50%);width:1200px;margin:24px auto;}
 .ab_photo_1200 img {width:100%;}
 
-.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.08em;}
+.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0.04em;}
 body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin:24px auto;} /* 기사상세 > 본문 이미지 792 */
 .atc_body .ab_photo img { width: 100%; display:block}
@@ -148,7 +148,7 @@ hr.ab_h_line01 { position:relative; border:0; height:6px;background:#111}
 
 /* 인터뷰 질문/답변 파티클 */
 .tag_interview {}
-.tag_interview .tag_question {font-weight:700; letter-spacing: 0.08em; color:#111; padding-bottom:12px}
+.tag_interview .tag_question {font-weight:700; letter-spacing: 0.04em; color:#111; padding-bottom:12px}
 .tag_interview .tag_answer {color:#111; padding-bottom:24px}
 
 /*인용구 파티클 > 기존 파티클*/

@@ -708,8 +708,10 @@ background:#fff;overflow:hidden;z-index:230}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
 
-/* 비디오모듈 */
+/* O모듈 (비디오모듈) */
 .vdo_atc_wrap{margin-bottom:var(--module-gap);}
+.vdo_atc_wrap .tit_wrap .tit_area{border-bottom:1px solid #111;}
+.vdo_atc_wrap .tit_wrap .tit{margin-bottom:8px;font-family:SaolDisplay, 'Noto Sans KR';font-size:48px;line-height:60px;}
 .vdo_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .vdo_atc_list li{width:50%;padding:0 12px;}
 .vdo_atc_list .atcbox .imgbox{padding-top:62.585%;}
@@ -1234,12 +1236,12 @@ background:#fff;overflow:hidden;z-index:230}
 	.result_sorting .total .count{font-size:18px;line-height:17px;}
 
 	/* 공통 : D모듈 & 3열 리스트 */
-	.atc_list_wrap{margin-bottom:80px;}
 	.atc_list_wrap .tit_wrap .tit{font-size:28px;line-height:32px;}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
 
-	/* 비디오모듈 */
+	/* O모듈 (비디오모듈) */
+	.vdo_atc_wrap .tit_wrap .tit{font-size:28px;line-height:32px;}
 	.vdo_atc_list ul{gap:24px 0;margin:0;}
 	.vdo_atc_list li{width:100%;padding:0;}
 	.vdo_atc_list .atcbox .txtbox{margin-top:16px;}

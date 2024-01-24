@@ -677,7 +677,7 @@ background:#fff;overflow:hidden;z-index:230}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
 
-/* 비디오모듈 */
+/* O모듈 (비디오모듈) */
 .vdo_atc_wrap{margin-bottom:var(--module-gap);}
 .vdo_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .vdo_atc_list li{width:50%;padding:0 12px;}
@@ -1174,7 +1174,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
 
-	/* 비디오모듈 */
+	/* O모듈 (비디오모듈) */
 	.vdo_atc_list ul{gap:24px 0;margin:0;}
 	.vdo_atc_list li{width:100%;padding:0;}
 	.vdo_atc_list .atcbox .txtbox{margin-top:16px;}

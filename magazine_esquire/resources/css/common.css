@@ -605,6 +605,11 @@ background:#fff;overflow:hidden;z-index:230}
 .subvisual .heading_area{display:flex;justify-content:center;flex-direction:column;align-items:center;position:absolute;left:50%;top:0;transform:translateX(-50%);max-width:1280px;width:100%;height:100%;margin:0 auto;padding:0 40px;text-align:center;}
 .subvisual .cate{display:block;position:relative;margin-bottom:16px;font-family:'Pretendard';font-size:16px;line-height:1;color:#fff;}
 .subvisual .tit{font-family:'Pretendard';font-size:80px;font-weight:700;line-height:95px;color:#fff;}
+/* 서브비주얼 - 브랜딩 */
+.subvisual.branding{height:350px;}
+.subvisual.branding .imgbox:before{display:none;}
+.subvisual.branding .tit{font-size:48px;line-height:64px;color:#fff;}
+.subvisual.branding .txt{margin-top:16px;font-size:18px;line-height:26px;}
 
 /* title */
 .tit_wrap{margin-bottom:40px;}
@@ -981,15 +986,15 @@ background:#fff;overflow:hidden;z-index:230}
 	.tit_wrap .btn_more span{display:none;}
 	.tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23666666' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23666666' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
 
-	.heading_wrap{margin:40px auto 28px;padding:0 20px;}
+	.heading_wrap{margin:40px auto 24px;padding:0 20px;}
 	.heading_wrap .tit{font-size:24px;line-height:35px;}
 	.heading_wrap .cate{margin-bottom:20px;font-size:14px;}
 	.heading_wrap .side .btn{min-width:auto;height:36px;font-size:14px;}
-	.heading_wrap.eng{margin:40px auto 24px;}
+	.heading_wrap.eng{margin:40px auto;}
 	.heading_wrap.eng .tit{font-size:44px;line-height:53px;}
-	.heading_wrap.tal{margin:40px auto 24px;}
+	.heading_wrap.tal{margin:40px auto;}
 
-	.subvisual{height:180px;margin-bottom:60px;padding-top:48%;}
+	.subvisual{height:180px;margin-bottom:40px;padding-top:48%;}
 	.subvisual .imgbox .pc{display:none;}
 	.subvisual .imgbox .mo{display:block;}
 	.subvisual .heading_area{padding:0 20px;}

@@ -59,7 +59,7 @@ body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03
 /*.photo_third div:nth-child(3) {margin-top: 7.2%;}*/  /*  2023-12-01  margin값 삭제 */
 .photo_third div:first-child  img { height:100%; object-fit: cover; } /*  2023-12-01  큰사진에 css 설정 */
 /* 기사상세 > body > 사진 3장씩 (우=>좌) */
-.photo_third02 {width: 100%; height: 684px; margin:24px auto;display: flex; flex-direction: row-reverse; flex-wrap: wrap;flex-flow:column wrap-reverse; }
+.photo_third02 {width: 100%; height: 684px; margin:24px auto;display: flex; flex-direction: row-reverse; flex-wrap: wrap;flex-flow:column wrap-reverse;  justify-content: space-between; }
 .photo_third02 div { display: flex;flex-direction: column;align-items: flex-start; width:35%;  }
 .photo_third02 div img {width: 100%; overflow:hidden}
 .photo_third02 div:first-child {align-items: stretch; width:61.96%; margin-left:3.03%; height: 100%; overflow:visible }
@@ -149,18 +149,18 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 
 /* 인터뷰 질문/답변 파티클 */
 .tag_interview {}
-.tag_interview .tag_question {position:relative; font-weight:700;  color:#111; padding:20px 0 0px 64px;}
+.tag_interview .tag_question {position:relative; font-weight:700; padding:20px 0 0px 64px;}
 .tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1; font-weight: 400;}
-.tag_interview .tag_answer {position:relative; color:#111; padding:12px 0 24px 64px;}
+.tag_interview .tag_answer {position:relative; padding:12px 0 24px 64px;}
 .tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1;}
 
 /*인용구 파티클 > 기존 파티클*/
-.tag_quotation { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px; font-weight:400; line-height:36px; letter-spacing:-0.03em; text-align:center }
+.tag_quotation { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px; line-height:36px; letter-spacing:-0.03em; text-align:center }
 .tag_quotation::before {content:''; width:32px; height:32px; position:absolute; left:0; top:0; background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5' y='8' width='8' height='16' fill='%23FF3A30'/%3E%3Crect x='19' y='8' width='8' height='16' fill='%23FF3A30'/%3E%3C/svg%3E%0A");background-size: 100% 100%; }
 .tag_quotation::after {content:''; width:32px; height:32px; position:absolute; right:0; top:0; background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5' y='8' width='8' height='16' fill='%23FF3A30'/%3E%3Crect x='19' y='8' width='8' height='16' fill='%23FF3A30'/%3E%3C/svg%3E%0A");background-size: 100% 100%; }
 
 /*인용구 파티클 > 신규 파티클*/
-.tag_quotation02 { position:relative; width:652px; margin:24px auto; padding:32px 32px 29px; font-size:20px; font-weight:400; line-height:36px; letter-spacing:-0.03em; font-style:italic; text-align:center; background-color: #FFF;  text-decoration: underline; text-decoration-style:solid; text-decoration-thickness: 1px; text-decoration-color:var(--point); text-underline-offset:9px}
+.tag_quotation02 { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px;line-height:36px; letter-spacing:-0.03em; font-style:italic; text-align:center; background-color: #FFF;  text-decoration: underline; text-decoration-style:solid; text-decoration-thickness: 1px; text-decoration-color:var(--point); text-underline-offset:9px}
 
 /* 강조문 파티클 > 기존 파티클 */
 .ab_emphasis {position:relative; padding:0; margin-bottom:8px}
@@ -396,19 +396,19 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_h_line02 .ab_sub_headingline02 {margin:14px 0 16px}
 
     .tag_interview {}
-    .tag_interview .tag_question {position:relative; line-height:28px; letter-spacing: -0.03em; color:#111; padding:12px 0 0px 45px;}
-    .tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:44px; font-family: TTFirs-ExtraBold;line-height:1; font-weight: 400;}
-    .tag_interview .tag_answer {position:relative; line-height:28px; letter-spacing: -0.03em; color:#111; padding:12px 0 20px 45px;}
-    .tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:44px; font-family: TTFirs-ExtraBold;line-height:1; font-weight: 400;}
+    .tag_interview .tag_question {line-height:28px; padding:12px 0 0px 45px;}
+    .tag_interview .tag_question:before {font-size:44px; line-height:46px;}
+    .tag_interview .tag_answer { line-height:28px;  padding:12px 0 20px 45px;}
+    .tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:44px;line-height:1;}
 
-    .tag_quotation { position:relative; width:auto; padding:32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
+    .tag_quotation { width:auto; margin:20px auto; font-size:18px; line-height:32px; }
     .tag_quotation::after {content:''; width:24px; height:24px; }
     .tag_quotation::before {content:'';  width:24px; height:24px;}
 
-    .tag_quotation02 { position:relative; width:auto; padding:29px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
+    .tag_quotation02 { width:auto;  margin:20px auto; font-size:18px; line-height:32px; }
 
 	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
-    .ab_emphasis .ab_emphasis_content  {line-height:28px; letter-spacing:-0.03em; }
+    .ab_emphasis .ab_emphasis_content  {}
 	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;} 
 
     /* 버튼 파티클 */

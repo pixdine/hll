@@ -889,7 +889,7 @@ background:#fff;overflow:hidden;z-index:230}
 .horoscope_box .txtbox .period{margin-bottom:24px;font-size:14px;font-weight:500;line-height:13px;color:#666;}
 .horoscope_box .txtbox .tit{font-family:'Pretendard';font-size:36px;font-weight:500;line-height:1;}
 .horoscope_box .txtbox .meta{display:flex;align-items:baseline;margin-top:8px;font-size:18px;font-weight:500;line-height:26px;}
-.horoscope_box .txtbox .meta .date{margin-left:12px;line-height:1;}
+.horoscope_box .txtbox .meta .date{margin-left:12px;}
 .horoscope_box .txtbox .txt p ~ p{margin-top:24px;}
 .horoscope_box .fortune_list{margin-top:32px;font-size:16px;line-height:23px;}
 .horoscope_box .fortune_list li{display:flex;flex-direction:row;font-weight:400;}
@@ -1002,18 +1002,18 @@ background:#fff;overflow:hidden;z-index:230}
 	.tit_wrap .btn_more span{display:none;}
 	.tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23666666' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23666666' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
 
-	.heading_wrap{margin:40px auto 28px;padding:0 20px;}
+	.heading_wrap{margin:40px auto;padding:0 20px;}
 	.heading_wrap .tit{font-size:44px;line-height:58px;}
 	.heading_wrap .cate{font-size:14px;}
 	.heading_wrap .side .btn{min-width:auto;height:36px;font-size:14px;}
-	.heading_wrap.eng{margin:40px auto 24px;}
+	.heading_wrap.eng{margin:40px auto;}
 	.heading_wrap.eng .tit{font-size:44px;line-height:58px;}
-	.heading_wrap.tal{margin:40px auto 24px;}
+	.heading_wrap.tal{margin:40px auto;}
 	.heading_wrap .tit .t1{font-size:24px;line-height:35px;}
 	.heading_wrap .tit .t2{font-size:24px;line-height:35px;}
 
 	/* 서브비주얼 */
-	.subvisual{height:180px;margin-bottom:60px;padding-top:48%;}
+	.subvisual{height:180px;margin-bottom:40px;padding-top:48%;}
 	.subvisual .imgbox .pc{display:none;}
 	.subvisual .imgbox .mo{display:block;}
 	.subvisual .heading_area{padding:0 20px;}
@@ -1214,7 +1214,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.selectbox .select_options li:last-child{padding-bottom:11px;}
 
 	/* 서브메인 */
-	.sub_main .heading_wrap.eng{margin-bottom:60px;}
+	.sub_main .heading_wrap.eng{margin-bottom:40px;}
 
 	/* 검색결과 */
 	.search_atc_wrap{margin:40px 0 0;}

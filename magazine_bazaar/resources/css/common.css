@@ -946,7 +946,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.tit_wrap .btn_more span{display:none;}
 	.tit_wrap .btn_more:after{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);margin:0;width:24px;height:24px;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23666666' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23666666' stroke-width='2'/%3E%3C/svg%3E%0A");background-size:24px auto;}
 
-	.heading_wrap{margin:40px auto 28px;padding:0 20px;}
+	.heading_wrap{margin:40px auto 24px;padding:0 20px;}
 	.heading_wrap .tit{font-size:24px;line-height:35px;}
 	.heading_wrap .cate{margin-bottom:20px;font-size:14px;}
 	.heading_wrap .side .btn{min-width:auto;height:36px;font-size:14px;}
@@ -954,7 +954,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.heading_wrap.eng .tit{font-size:36px;line-height:46px;}
 	.heading_wrap.tal{margin:40px auto 24px;}
 
-	.subvisual{height:180px;margin-bottom:60px;padding-top:48%;}
+	.subvisual{height:180px;margin-bottom:40px;padding-top:48%;}
 	.subvisual .imgbox .pc{display:none;}
 	.subvisual .imgbox .mo{display:block;}
 	.subvisual .heading_area{padding:0 20px;}

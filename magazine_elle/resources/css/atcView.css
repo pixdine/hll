@@ -169,7 +169,7 @@ hr.ab_h_line01 { position:relative; border:0; height:6px;background:#111}
 
 /* 강조문 파티클 > 신규 파티클 */
 .ab_emphasis.type02 .ab_emphasis_dim_lt {display:block; position:absolute; top:0%; left:0; width:84px; height:2px; background:#111; font-size:0; line-height:0}
-.ab_emphasis.type02 .ab_emphasis_content  { padding-left:0}
+.ab_emphasis.type02 .ab_emphasis_content  { padding-left:0; padding:6px 0 8px; letter-spacing:0.08em}
 
 /* 버튼 파티클 */
 .ab_btn {display:flex;justify-content:space-between;margin-top:48px;}
@@ -398,6 +398,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 
     .ab_sub_headingline h2 { font-size:20px;line-height:29px}
     .ab_sub_headingline02 .ab_h_txt {font-size:20px;line-height:29px; }
+    .ab_sub_headingline02 .ab_h_txt + .ab_h_txt { margin-top:2px}
     .ab_sub_headingline02 { padding:32px 0 10px 0} 
     .ab_sub_headingline02.type02 .ab_h_txt:first-child { font-size:16px; line-height:23px; }
 
@@ -406,7 +407,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 
     .tag_interview {}
     .tag_interview .tag_question {line-height:28px; letter-spacing: -0.03em; padding-bottom:10px}
-    .tag_interview .tag_answer {line-height:28px; letter-spacing: -0.03em; padding-bottom:10px}
+    .tag_interview .tag_answer {line-height:28px; letter-spacing: -0.03em; padding-bottom:20px}
 
     .tag_quotation { width:auto; margin:20px;  font-size:18px; line-height:32px;}
     .tag_quotation::after {content:''; width:24px; height:24px; }
@@ -419,6 +420,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
     .ab_emphasis .ab_emphasis_content  {line-height:28px; letter-spacing:-0.03em; }
 	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;}
+    .ab_emphasis.type02 .ab_emphasis_content  {padding:6px 0 10px 0; letter-spacing:-0.03em;}
 
     /* 버튼 파티클 */
     .ab_btn {margin-top:32px;}

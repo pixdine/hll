@@ -595,7 +595,7 @@ background:#fff;overflow:hidden;z-index:230}
 /* 서브비주얼 - 브랜딩 */
 .subvisual.branding{height:350px;}
 .subvisual.branding .imgbox:before{display:none;}
-.subvisual.branding .tit{color:var(--point);}
+.subvisual.branding .tit{color:var(--point);letter-spacing:0;}
 .subvisual.branding .txt{margin-top:16px;font-size:18px;line-height:26px;}
 
 /* title */
@@ -692,6 +692,11 @@ background:#fff;overflow:hidden;z-index:230}
 .atc_list_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
+.atc_list .atcbox .unitbox{display:flex;align-items:center;position:relative;margin-top:16px;}
+.atc_list .atcbox .unitbox > span{position:relative;font-size:14px;font-weight:500;line-height:20px;}
+.atc_list .atcbox .unitbox > span ~ span{margin-left:12px;padding-left:13px;}
+.atc_list .atcbox .unitbox span:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:12px;margin-top:1px;background-color:#111;opacity:0.2;}
+.atc_list .atcbox .unitbox span:first-of-type:before{display:none;}
 
 /* O모듈 (비디오모듈) */
 .vdo_atc_wrap{margin-bottom:var(--module-gap);}
@@ -908,18 +913,18 @@ background:#fff;overflow:hidden;z-index:230}
 .hover_atc_list .atcbox .txtbox{position:absolute;left:0;bottom:0;right:0;margin-top:0;padding:0 8.333% 8.333%;}
 .hover_atc_list .atcbox .txtbox:before{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:160px;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17,17,17,0.6) 100%);}
 .hover_atc_list .atcbox .txtbox .tit{height:auto;max-height:52px;color:#fff;}
-.hover_atc_list .atcbox .subtxt{display:flex;align-items:center;position:relative;margin-top:12px;color:#fff;}
-.hover_atc_list .atcbox .subtxt > span{position:relative;}
-.hover_atc_list .atcbox .subtxt > span ~ span{margin-left:12px;padding-left:13px;}
-.hover_atc_list .atcbox .subtxt span:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:12px;margin-top:1px;background-color:#fff;opacity:0.2;}
-.hover_atc_list .atcbox .subtxt span:first-of-type:before{display:none;}
-.hover_atc_list .atcbox .subtxt .date{font-family:FoundersGrotesk;font-size:16px;line-height:20px;}
-.hover_atc_list .atcbox .subtxt .sort{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;font-size:14px;line-height:20px;}
+.hover_atc_list .atcbox .unitbox{display:flex;align-items:center;position:relative;margin-top:12px;color:#fff;}
+.hover_atc_list .atcbox .unitbox > span{position:relative;}
+.hover_atc_list .atcbox .unitbox > span ~ span{margin-left:12px;padding-left:13px;}
+.hover_atc_list .atcbox .unitbox span:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:12px;margin-top:1px;background-color:#fff;opacity:0.2;}
+.hover_atc_list .atcbox .unitbox span:first-of-type:before{display:none;}
+.hover_atc_list .atcbox .unitbox .date{font-family:FoundersGrotesk;font-size:16px;line-height:20px;}
+.hover_atc_list .atcbox .unitbox .sort{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;font-size:14px;line-height:20px;}
 .hover_atc_list .atcbox a:hover .hover_layer{opacity:1;}
 .hover_atc_list .atcbox a:hover .txtbox:before{display:none;}
 .hover_atc_list .atcbox a:hover .txtbox .tit,
-.hover_atc_list .atcbox a:hover .subtxt{color:#111;}
-.hover_atc_list .atcbox a:hover .subtxt span:before{background-color:#111;}
+.hover_atc_list .atcbox a:hover .unitbox{color:#111;}
+.hover_atc_list .atcbox a:hover .unitbox span:before{background-color:#111;}
 
 
 
@@ -1220,6 +1225,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.atc_list_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
+	.atc_list .atcbox .unitbox{margin-top:10px;}
+	.atc_list .atcbox .unitbox > span{font-size:12px;line-height:18px;}
 
 	/* O모듈 (비디오모듈) */
 	.vdo_atc_wrap .tit_wrap .tit{font-size:20px;line-height:24px;}
@@ -1341,9 +1348,9 @@ background:#fff;overflow:hidden;z-index:230}
 	.hover_atc_list li{width:100%;padding:0;}
 	.hover_atc_list .atcbox .txtbox{padding:0 28px 28px;}
 	.hover_atc_list .atcbox .txtbox .tit{max-height:46px;font-size:16px;line-height:23px;}
-	.hover_atc_list .atcbox .subtxt{margin-top:8px;}
-	.hover_atc_list .atcbox .subtxt > span ~ span{margin-left:10px;padding-left:11px;}
-	.hover_atc_list .atcbox .subtxt span:before{width:1px;height:10px;}
+	.hover_atc_list .atcbox .unitbox{margin-top:8px;}
+	.hover_atc_list .atcbox .unitbox > span ~ span{margin-left:10px;padding-left:11px;}
+	.hover_atc_list .atcbox .unitbox span:before{width:1px;height:10px;}
 }
 
 @media (max-width:425px){

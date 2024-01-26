@@ -704,8 +704,8 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_box > a{display:block;width:100%;height:100%;}
 .editor_box .editor_head{position:relative;padding:32px;background-color:#111;}
 .editor_box .editor_head .editor_info{width:calc(100% - 130px);}
-.editor_box .editor_head .name{display:block;font-size:24px;line-height:35px;color:#fff;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
-.editor_box .editor_head .desc{display:block;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
+.editor_box .editor_head .name{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:24px;line-height:35px;color:#fff;}
+.editor_box .editor_head .desc{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;}
 .editor_box .profile_img{overflow:hidden;position:absolute;right:32px;bottom:-27px;width:120px;height:120px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .editor_box .profile_img img{width:100%;height:100%;object-fit:cover;background-color:#fff;}
 .editor_box .editor_body{position:relative;padding:50px 32px 40px;}

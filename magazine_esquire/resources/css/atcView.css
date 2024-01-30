@@ -148,9 +148,8 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_h_line02 .ab_sub_headingline02 { padding:0; margin:18px 0 20px}
 
 /* 인터뷰 질문/답변 파티클 */
-.tag_interview {}
 .tag_interview .tag_question {position:relative; font-weight:700; padding:20px 0 0px 64px;}
-.tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1; font-weight: 400;}
+.tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1;}
 .tag_interview .tag_answer {position:relative; padding:12px 0 24px 64px;}
 .tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1;}
 
@@ -163,13 +162,13 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .tag_quotation02 { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px;line-height:36px; letter-spacing:-0.03em; font-style:italic; text-align:center; background-color: #FFF;  text-decoration: underline; text-decoration-style:solid; text-decoration-thickness: 1px; text-decoration-color:var(--point); text-underline-offset:9px}
 
 /* 강조문 파티클 > 기존 파티클 */
-.ab_emphasis {position:relative; padding:0; margin-bottom:8px}
+.ab_emphasis {position:relative; margin-bottom:8px}
 .ab_emphasis .ab_emphasis_dim_lt {display:block; position:absolute; top:7px; left:0; width:4px; height:20px; background:var(--point); font-size:0; line-height:0}
-.ab_emphasis .ab_emphasis_content  {padding-left:12px;font-weight:700;}
+.ab_emphasis .ab_emphasis_content  {padding-left:16px;font-weight:700;}
 .ab_emphasis .ab_emphasis_dim_rt {display:none}
 
 /* 강조문 파티클 > 신규 파티클 */
-.ab_emphasis.type02 { padding-top:11px}
+.ab_emphasis.type02 {padding-top:8px;}
 .ab_emphasis.type02 .ab_emphasis_dim_lt {top:0; left:0; width:84px; height:4px;}
 .ab_emphasis.type02 .ab_emphasis_content  { padding-left:0}
 
@@ -395,11 +394,10 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_h_line02 { margin:32px 0 10px}
     .ab_h_line02 .ab_sub_headingline02 {margin:14px 0 16px}
 
-    .tag_interview {}
-    .tag_interview .tag_question {line-height:28px; padding:12px 0 0px 45px;}
-    .tag_interview .tag_question:before {font-size:44px; line-height:46px;}
-    .tag_interview .tag_answer { line-height:28px;  padding:12px 0 20px 45px;}
-    .tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:44px;line-height:1;}
+    .tag_interview .tag_question {padding:12px 0 0px 45px;}
+    .tag_interview .tag_question:before {font-size:44px;}
+    .tag_interview .tag_answer {padding:10px 0 20px 45px;}
+    .tag_interview .tag_answer:before {font-size:44px;}
 
     .tag_quotation { width:auto; margin:20px auto; font-size:18px; line-height:32px; }
     .tag_quotation::after {content:''; width:24px; height:24px; }
@@ -407,8 +405,9 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 
     .tag_quotation02 { width:auto;  margin:20px auto; font-size:18px; line-height:32px; }
 
+    .ab_emphasis{margin-bottom:10px;}
 	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
-    .ab_emphasis .ab_emphasis_content  {}
+    .ab_emphasis .ab_emphasis_content {padding-left:12px;}
 	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;} 
 
     /* 버튼 파티클 */

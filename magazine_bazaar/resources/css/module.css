@@ -362,7 +362,7 @@
 .pick_result_list .info{display:flex;flex:1;position:relative;min-height:80px;padding:17px 24px;text-align:left;background-color:#f7f7f7;}
 .pick_result_list .bar_rate{overflow:hidden;position:absolute;left:0;top:0;bottom:0;height:100%;background-color:rgba(219,219,219,.8);}
 .pick_result_list .txt{display:flex;position:relative;align-items:center;font-size:16px;line-height:23px;}
-.pick_result_list .txt_result{flex-shrink:0;position:relative;width:70px;margin-top:3px;margin-left:auto;text-align:right;font-family:Gotham;font-weight:500;}
+.pick_result_list .txt_result{flex-shrink:0;position:relative;width:70px;margin-top:3px;margin-left:auto;text-align:right;font-family:Gotham, 'Noto Sans KR';font-weight:500;}
 .pick_result_list .txt_result .percent{display:block;font-size:18px;line-height:17px;}
 .pick_result_list .txt_result .count{display:block;margin-top:8px;font-size:14px;color:#666;line-height:13px;}
 .pick_result_list .pick_item.on .bar_rate{background-color:rgba(255,0,0,.12);}

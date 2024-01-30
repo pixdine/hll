@@ -147,29 +147,28 @@ hr.ab_h_line01 { position:relative; border:0; height:6px;background:#111}
 .ab_h_line02 .ab_sub_headingline02 { padding:0; margin:18px 0 20px}
 
 /* 인터뷰 질문/답변 파티클 */
-.tag_interview {}
 .tag_interview .tag_question {font-weight:700; padding-bottom:12px}
 .tag_interview .tag_answer { padding-bottom:24px}
 
 /*인용구 파티클 > 기존 파티클*/
-.tag_quotation { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px;line-height:36px; letter-spacing:-0.03em; text-align:center }
+.tag_quotation {position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px;line-height:36px; letter-spacing:-0.03em; text-align:center }
 .tag_quotation::after {content:''; width:32px; height:32px; position:absolute; left:0; top:0; background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.4 12.6103C7.40355 12.6103 6.44763 12.7866 5.56079 13.1101L13.0659 2.82525L11.935 2L1.98989 15.6285C0.74863 17.1159 0 19.041 0 21.1436C0 25.8564 3.76081 29.6769 8.4 29.6769C11.7577 29.6769 14.6553 27.6756 15.9999 24.7831C17.3444 27.6758 20.2421 29.6774 23.6 29.6774C28.2392 29.6774 32 25.8569 32 21.1441C32 16.4312 28.2392 12.6108 23.6 12.6108C22.6035 12.6108 21.6476 12.787 20.7607 13.1105L28.2659 2.82567L27.1349 2.00042L17.1899 15.629C16.7171 16.1955 16.3158 16.8255 16.0001 17.5046C14.6556 14.6119 11.7579 12.6103 8.4 12.6103Z' fill='%23111111'/%3E%3C/svg%3E%0A"); background-size: 100% 100%; }
 .tag_quotation::before {content:''; width:32px; height:32px; position:absolute; left:auto; right:0; top:0; transform: rotate(180deg); background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.4 12.6103C7.40355 12.6103 6.44763 12.7866 5.56079 13.1101L13.0659 2.82525L11.935 2L1.98989 15.6285C0.74863 17.1159 0 19.041 0 21.1436C0 25.8564 3.76081 29.6769 8.4 29.6769C11.7577 29.6769 14.6553 27.6756 15.9999 24.7831C17.3444 27.6758 20.2421 29.6774 23.6 29.6774C28.2392 29.6774 32 25.8569 32 21.1441C32 16.4312 28.2392 12.6108 23.6 12.6108C22.6035 12.6108 21.6476 12.787 20.7607 13.1105L28.2659 2.82567L27.1349 2.00042L17.1899 15.629C16.7171 16.1955 16.3158 16.8255 16.0001 17.5046C14.6556 14.6119 11.7579 12.6103 8.4 12.6103Z' fill='%23111111'/%3E%3C/svg%3E%0A");background-size: 100% 100%; }
 
 /*인용구 파티클 > 신규 파티클*/
-.tag_quotation02 { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px; line-height:36px; letter-spacing:-0.03em; text-align:center }
+.tag_quotation02 {position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px; line-height:36px; letter-spacing:-0.03em; text-align:center }
 .tag_quotation02:after {content:''; width:70px; height:1px; position:absolute; left:50%; top:0; transform: translateX(-50%); background-color: #111;}
 .tag_quotation02::before {content:''; width:70px; height:1px; position:absolute; left:50%; bottom:0; transform: translateX(-50%); background-color: #111;}
 
 /* 강조문 파티클 > 기존 파티클 */
-.ab_emphasis {position:relative; padding:0; margin-bottom:8px}
+.ab_emphasis {position:relative;margin-bottom:8px}
 .ab_emphasis .ab_emphasis_dim_lt {display:block; position:absolute; top:7px; left:0; width:2px; height:20px; background:#111; font-size:0; line-height:0}
-.ab_emphasis .ab_emphasis_content  {padding-left:12px; font-weight:700;}
+.ab_emphasis .ab_emphasis_content {padding-left:14px; font-weight:700;}
 .ab_emphasis .ab_emphasis_dim_rt {display:none}
 
 /* 강조문 파티클 > 신규 파티클 */
 .ab_emphasis.type02 .ab_emphasis_dim_lt {display:block; position:absolute; top:0%; left:0; width:84px; height:2px; background:#111; font-size:0; line-height:0}
-.ab_emphasis.type02 .ab_emphasis_content  { padding-left:0; padding:6px 0 8px; letter-spacing:0.08em}
+.ab_emphasis.type02 .ab_emphasis_content {padding:6px 0 0; letter-spacing:0.08em}
 
 /* 버튼 파티클 */
 .ab_btn {display:flex;justify-content:space-between;margin-top:48px;}
@@ -402,30 +401,28 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_sub_headingline02 { padding:32px 0 10px 0} 
     .ab_sub_headingline02.type02 .ab_h_txt:first-child { font-size:16px; line-height:23px; }
 
-    .ab_h_line02 { margin:32px 0 10px}
+    .ab_h_line02 {margin:32px 0 10px}
     .ab_h_line02 .ab_sub_headingline02 {margin:14px 0 16px}
 
-    .tag_interview {}
     .tag_interview .tag_question {line-height:28px; letter-spacing: -0.03em; padding-bottom:10px}
     .tag_interview .tag_answer {line-height:28px; letter-spacing: -0.03em; padding-bottom:20px}
 
-    .tag_quotation { width:auto; margin:20px;  font-size:18px; line-height:32px;}
-    .tag_quotation::after {content:''; width:24px; height:24px; }
-    .tag_quotation::before {content:'';  width:24px; height:24px;}
+    .tag_quotation { width:auto; margin:20px 0;  font-size:18px; line-height:32px;}
+    .tag_quotation::after {width:24px; height:24px; }
+    .tag_quotation::before {width:24px; height:24px;}
 
-    .tag_quotation02 { width:auto; margin:20px; font-size:18px; line-height:32px; }
-    .tag_quotation02:after {content:''; width:70px; height:1px; }
-    .tag_quotation02::before {content:''; width:70px; height:1px; }
+    .tag_quotation02 { width:auto; margin:20px 0; font-size:18px; line-height:32px;}
 
+    .ab_emphasis{margin-bottom:10px;}
 	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
-    .ab_emphasis .ab_emphasis_content  {line-height:28px; letter-spacing:-0.03em; }
+    .ab_emphasis .ab_emphasis_content {padding-left:10px; line-height:28px; letter-spacing:-0.03em;}
 	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;}
-    .ab_emphasis.type02 .ab_emphasis_content  {padding:6px 0 10px 0; letter-spacing:-0.03em;}
+    .ab_emphasis.type02 .ab_emphasis_content {letter-spacing:-0.03em;}
 
     /* 버튼 파티클 */
     .ab_btn {margin-top:32px;}
 
-    .ab_recommend_list dt {font-size:20px;line-height:28px; margin-bottom:16px; }
+    .ab_recommend_list dt {font-size:20px;line-height:28px; margin-bottom:16px;}
     .ab_recommend_list dd {font-size:16px; line-height:28px; margin-top:4px; padding-left:12px; letter-spacing:-0.03em}
 
 	.ab_related_article{margin:60px 0;}

@@ -388,22 +388,22 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .tag_atc_list ul{flex-wrap:nowrap;gap:0;}
     .tag_atc_list li{width:65.377%;margin-right:12px;}
 
-    .ab_sub_headingline h2 { font-size:20px;line-height:29px}
-    .ab_sub_headingline02 .ab_h_txt {font-size:20px;line-height:28px; }
-    .ab_sub_headingline02 { padding:32px 0 10px 0} 
+    .ab_sub_headingline h2 {font-size:20px;line-height:29px}
+    .ab_sub_headingline02 .ab_h_txt {font-size:20px;line-height:28px;}
+    .ab_sub_headingline02 {padding:32px 0 10px 0} 
     .ab_sub_headingline02.type02 .ab_h_txt:first-child { font-size:16px; line-height:23px; }
 
     .ab_h_line02 {margin:32px 0 10px}
     .ab_h_line02 .ab_sub_headingline02 {margin:14px 0 16px}
 
     .tag_interview .tag_question {letter-spacing: -0.03em; padding-bottom:10px}
-    .tag_interview .tag_answer {line-height:28px; font-weight:400; letter-spacing: -0.03em; color:#111; padding-bottom:10px}
+    .tag_interview .tag_answer {letter-spacing: -0.03em; padding-bottom:20px}
 
     .tag_quotation {position:relative; width:auto; padding:53px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
     .tag_quotation::after {content:''; width:24px; height:17px; }
     .tag_quotation::before {content:'';  width:24px; height:17px;}
 
-    .tag_quotation02 {position:relative; width:auto;  font-size:18px; line-height:32px; }
+    .tag_quotation02 {position:relative; width:auto;  font-size:18px; line-height:32px;}
     .tag_quotation02:after {content:''; width:20px; height:20px; }
     .tag_quotation02::before {content:''; width:20px; height:20px; }
 

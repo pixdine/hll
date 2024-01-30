@@ -147,7 +147,6 @@ hr.ab_h_line01 { position:relative; border:0; height:6px;background:#111}
 .ab_h_line02 .ab_sub_headingline02 { padding:0; margin:18px 0 20px}
 
 /* 인터뷰 질문/답변 파티클 */
-.tag_interview {}
 .tag_interview .tag_question {font-weight:700; padding-bottom:12px}
 .tag_interview .tag_answer { padding-bottom:24px}
 
@@ -402,30 +401,27 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_sub_headingline02 { padding:32px 0 10px 0} 
     .ab_sub_headingline02.type02 .ab_h_txt:first-child { font-size:16px; line-height:23px; }
 
-    .ab_h_line02 { margin:32px 0 10px}
+    .ab_h_line02 {margin:32px 0 10px}
     .ab_h_line02 .ab_sub_headingline02 {margin:14px 0 16px}
 
-    .tag_interview {}
     .tag_interview .tag_question {line-height:28px; letter-spacing: -0.03em; padding-bottom:10px}
     .tag_interview .tag_answer {line-height:28px; letter-spacing: -0.03em; padding-bottom:20px}
 
-    .tag_quotation { width:auto; margin:20px;  font-size:18px; line-height:32px;}
-    .tag_quotation::after {content:''; width:24px; height:24px; }
-    .tag_quotation::before {content:'';  width:24px; height:24px;}
+    .tag_quotation { width:auto; margin:20px 0;  font-size:18px; line-height:32px;}
+    .tag_quotation::after {width:24px; height:24px; }
+    .tag_quotation::before {width:24px; height:24px;}
 
-    .tag_quotation02 { width:auto; margin:20px; font-size:18px; line-height:32px; }
-    .tag_quotation02:after {content:''; width:70px; height:1px; }
-    .tag_quotation02::before {content:''; width:70px; height:1px; }
+    .tag_quotation02 { width:auto; margin:20px 0; font-size:18px; line-height:32px;}
 
 	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
-    .ab_emphasis .ab_emphasis_content  {line-height:28px; letter-spacing:-0.03em; }
+    .ab_emphasis .ab_emphasis_content {padding-left:10px; line-height:28px; letter-spacing:-0.03em;}
 	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;}
     .ab_emphasis.type02 .ab_emphasis_content  {padding:6px 0 10px 0; letter-spacing:-0.03em;}
 
     /* 버튼 파티클 */
     .ab_btn {margin-top:32px;}
 
-    .ab_recommend_list dt {font-size:20px;line-height:28px; margin-bottom:16px; }
+    .ab_recommend_list dt {font-size:20px;line-height:28px; margin-bottom:16px;}
     .ab_recommend_list dd {font-size:16px; line-height:28px; margin-top:4px; padding-left:12px; letter-spacing:-0.03em}
 
 	.ab_related_article{margin:60px 0;}

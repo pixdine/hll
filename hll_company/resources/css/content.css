@@ -207,14 +207,15 @@ body.is_mobile  img.pc {display:none}
 .stit {display:block; font-size:18px; line-height:68px; font-weight:500;border-top:2px solid #111; border-bottom: 1px solid #DBDBDB;}
 
 .input_type02 {display:flex; flex-direction: column;}
-.input_type02.line > li{border-bottom:1px solid #DBDBDB; padding:32px 17% 32px 0}
+.input_type02.line > li{border-bottom:1px solid #DBDBDB; padding:32px 15% 32px 0}
 .input_type02.line > li:first-child{border-top:0; padding-top:0;padding-right:6%;}
-.input_type02.line > li:nth-child(2){margin-top:14px;}
 .input_type02 li .radio_list li {padding:0; width:auto; border-bottom:0;margin-bottom:14px;}
 .input_type02 li .radio_list li:last-child {margin-right:0}
 .input_type02 li dl { display:flex; align-items: flex-start;}
+.input_type02 li dl.non_inp{margin-top:14px;}
+.input_type02 li:first-child dl.non_inp{margin-top:0;}
 .input_type02 li dl dt { width:17%; color:#333; vertical-align:middle; flex-shrink:0;  padding-top:14px; min-width:204px;position: relative;}
-.input_type02 li dl dt.non_inp { padding-top:0}
+.input_type02 li dl.non_inp dt{ padding-top:0}
 .input_type02 li dl dt.line2{padding-top:0;}
 .input_type02 li dl dt.line2 .ess{position:absolute;top:4px;left:calc(50% + 10px)}
 .input_type02 li dl dd { flex-grow:1;position:relative;}
@@ -719,11 +720,11 @@ body.is_mobile  img.pc {display:none}
 
     .input_type02.line > li{padding: 24px 0;margin-top: 0;}
     .input_type02.line > li:first-child{padding-right:0;}
-    .input_type02.line > li:nth-child(2){margin-top: 0;}
     .input_type02.line > li:last-child{border-bottom:0;padding-bottom:0;}
     .input_type02 li dl{flex-direction: column;align-items:flex-start;}
+    .input_type02 li dl.non_inp{margin-top:0;}
     .input_type02 li dl dt{width: 100%;margin-bottom: 8px;padding-top: 0;}
-    .input_type02 li dl dt.non_inp{margin-bottom:19px;}
+    .input_type02 li dl.non_inp dt{margin-bottom:19px;}
     .input_type02 li dd{width:100%;}
     .input_type02 li dd .inp{width:100%;}
 

@@ -85,41 +85,70 @@
                             <div class="tit_wrap02">
                                 <p class="stit"><span class="ess">*</span>표기된 항목은 필수 입력 사항입니다.</p>
                             </div>
-
                             <ul class="input_type02 line inquiry_in">
+                                <!--S: 2024-01-30 사업부, 매거진, 문의유형 폼 변경-->
                                 <li>
-                                    <dl>
-                                        <dt class="non_inp">
+                                    <dl class="non_inp">
+                                        <dt>
                                             사업부<em class="ess">*</em>
                                         </dt>
                                         <dd>
-                                            <ul class="chk_list">
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check1"><label for="check1"><span>ELLE</span></label></span></li>
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check2"><label for="check2"><span>COSMOPOLITAN</span></label></span></li>
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check3"><label for="check3"><span>Harper’s BAZAAR</span></label></span></li>
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check4"><label for="check4"><span>ESQUIRE</span></label></span></li>
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check5"><label for="check5"><span>STUDIO DOT</span></label></span></li>
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check6"><label for="check6"><span>YEET</span></label></span></li>
-                                                <li><span class="chk_in"><input type="checkbox" name="division" id="check7"><label for="check7"><span>기타</span></label></span></li>
+                                            <ul class="radio_list">
+                                                <li><span class="radio_in"><input type="radio" name="division" id="division1"><label for="division1"><span>매거진</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="division" id="division2"><label for="division2"><span>STUDIO DOT</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="division" id="division3"><label for="division3"><span>YEET</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="division" id="division4"><label for="division4"><span>기타</span></label></span></li>
                                             </ul>
                                         </dd>
                                     </dl>
                                 </li>
+                                <!--S: 매거진 선택시 -->
                                 <li>
-                                    <dl>
-                                        <dt class="non_inp">
+                                    <dl class="non_inp">
+                                        <dt>
+                                            매거진 <em class="ess">*</em>
+                                        </dt>
+                                        <dd>
+                                            <ul class="chk_list normal">
+                                                <li><span class="chk_in"><input type="checkbox" name="magazine" id="magazine1"><label for="magazine1"><span>ELLE</span></label></span></li>
+                                                <li><span class="chk_in"><input type="checkbox" name="magazine" id="magazine2"><label for="magazine2"><span>COSMOPOLITAN</span></label></span></li>
+                                                <li><span class="chk_in"><input type="checkbox" name="magazine" id="magazine3"><label for="magazine3"><span>Harper’s BAZAAR</span></label></span></li>
+                                                <li><span class="chk_in"><input type="checkbox" name="magazine" id="magazine4"><label for="magazine4"><span>ESQUIRE</span></label></span></li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <!--E: 매거진 선택시 -->
+                                <li>
+                                    <dl class="non_inp">
+                                        <dt>
                                             문의유형<em class="ess">*</em>
                                         </dt>
                                         <dd>
-                                            <ul class="radio_list normal">
+                                            <ul class="radio_list">
+                                                <!--S: 매거진 선택시 -->
                                                 <li><span class="radio_in"><input type="radio" name="category" id="category1"><label for="category1"><span>광고 문의</span></label></span></li>
                                                 <li><span class="radio_in"><input type="radio" name="category" id="category2"><label for="category2"><span>마케팅/제휴 문의</span></label></span></li>
                                                 <li><span class="radio_in"><input type="radio" name="category" id="category3"><label for="category3"><span>콘텐츠 문의</span></label></span></li>
                                                 <li><span class="radio_in"><input type="radio" name="category" id="category4"><label for="category4"><span>일반 문의</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="category" id="category4"><label for="category5"><span>정기구독 문의</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="category" id="category4"><label for="category6"><span>부록 문의</span></label></span></li>
+                                                <!--E: 매거진 선택시 -->
+                                                
+                                                <!--S: 스튜디오닷 선택시 -->
+                                                <!-- <li><span class="radio_in"><input type="radio" name="category" id="category1"><label for="category1"><span>광고대행 문의</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="category" id="category2"><label for="category2"><span>기타문의</span></label></span></li> -->
+                                                <!--E: 스튜디오닷 선택시 -->
+
+                                                <!--S: 브랜드 사업 선택시 -->
+                                                <!-- <li><span class="radio_in"><input type="radio" name="category" id="category1"><label for="category1"><span>광고대행 문의</span></label></span></li>
+                                                <li><span class="radio_in"><input type="radio" name="category" id="category2"><label for="category2"><span>기타문의</span></label></span></li> -->
+                                                <!--E: 브랜드 사업 선택시 -->
                                             </ul>
                                         </dd>
                                     </dl>
                                 </li>
+                                <!--E: 2024-01-30 사업부, 매거진, 문의유형 폼 변경-->
                                 <li>
                                     <dl>
                                         <dt>

@@ -148,7 +148,6 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_h_line02 .ab_sub_headingline02 { padding:0; margin:18px 0 20px}
 
 /* 인터뷰 질문/답변 파티클 */
-.tag_interview {}
 .tag_interview .tag_question {font-weight:700; letter-spacing: 0.08em; color:#111; padding-bottom:12px}
 .tag_interview .tag_answer {color:#111; padding-bottom:24px}
 
@@ -165,10 +164,11 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 /* 강조문 파티클 > 기존 파티클 */
 .ab_emphasis {position:relative; padding:0; margin-bottom:8px}
 .ab_emphasis .ab_emphasis_dim_lt {display:block; position:absolute; top:7px; left:0; width:2px; height:20px; background:#111; font-size:0; line-height:0}
-.ab_emphasis .ab_emphasis_content  {padding-left:12px; font-weight:700;}
+.ab_emphasis .ab_emphasis_content {padding-left:14px; font-weight:700;}
 .ab_emphasis .ab_emphasis_dim_rt {display:none}
 
 /* 강조문 파티클 > 신규 파티클 */
+.ab_emphasis.type02{padding-top:6px;}
 .ab_emphasis.type02 .ab_emphasis_dim_lt {display:block; position:absolute; top:0%; left:0; width:84px; height:2px; background:#111; font-size:0; line-height:0}
 .ab_emphasis.type02 .ab_emphasis_content  { padding-left:0}
 
@@ -393,23 +393,23 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .ab_sub_headingline02 { padding:32px 0 10px 0} 
     .ab_sub_headingline02.type02 .ab_h_txt:first-child { font-size:16px; line-height:23px; }
 
-    .ab_h_line02 { margin:32px 0 10px}
+    .ab_h_line02 {margin:32px 0 10px}
     .ab_h_line02 .ab_sub_headingline02 {margin:14px 0 16px}
 
-    .tag_interview {}
-    .tag_interview .tag_question {line-height:28px; letter-spacing: -0.03em; color:#111; padding-bottom:10px}
+    .tag_interview .tag_question {letter-spacing: -0.03em; padding-bottom:10px}
     .tag_interview .tag_answer {line-height:28px; font-weight:400; letter-spacing: -0.03em; color:#111; padding-bottom:10px}
 
-    .tag_quotation { position:relative; width:auto; padding:53px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
+    .tag_quotation {position:relative; width:auto; padding:53px 32px; font-size:18px; line-height:32px; letter-spacing:-0.03em; }
     .tag_quotation::after {content:''; width:24px; height:17px; }
     .tag_quotation::before {content:'';  width:24px; height:17px;}
 
-    .tag_quotation02 { position:relative; width:auto;  font-size:18px; line-height:32px; }
+    .tag_quotation02 {position:relative; width:auto;  font-size:18px; line-height:32px; }
     .tag_quotation02:after {content:''; width:20px; height:20px; }
     .tag_quotation02::before {content:''; width:20px; height:20px; }
 
+    .ab_emphasis{margin-bottom:10px;}
 	.ab_emphasis .ab_emphasis_dim_lt{height:16px;}
-    .ab_emphasis .ab_emphasis_content  {line-height:28px; letter-spacing:-0.03em; }
+    .ab_emphasis .ab_emphasis_content {padding-left:10px;}
 	.ab_emphasis.type02 .ab_emphasis_dim_lt{width:75px;}
 
     .ab_recommend_list dt {font-size:20px;line-height:28px; margin-bottom:16px; }

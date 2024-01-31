@@ -409,8 +409,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .word_list li a{display:block;min-height:36px;padding:6px 15px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;}
 
 /* container */
-.sample_banner{position:relative;z-index:60;background-color:#dbdbdb;padding:30px;text-align:center;}
 .cont_inner{max-width:1280px;margin:0 auto;padding:0 40px;}
+.cont_inner .cont_inner{padding:0;}
 
 /* footer */
 .footer{position:relative;background-color:#fff;}

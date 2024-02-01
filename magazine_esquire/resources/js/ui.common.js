@@ -33,6 +33,7 @@ $(document).ready(function () {
     shoppingList();
     rectAtcList();//I모듈 추가
     zigzagAtcList();//K모듈 추가
+    squareAtcList();//클럽 에스콰이어 메인 > 하이라이츠 추가
 
     // 지도 상세 설명 더보기 토글
     $(".comment_box").commentToggle();
@@ -732,6 +733,44 @@ function evenAtcList() {
             this.swiper.destroy(); //각각을 파괴함.
         });
         mySwiper = undefined;
+        }
+    }
+
+    $(window).on("resize", function () {
+        initSwiper();
+    });
+    initSwiper();
+}
+
+//클럽 에스콰이어 메인 > 하이라이츠 추가
+function squareAtcList() {
+    var squareAtcList = $(".square_atc_list"),
+        mySwiper = undefined;
+    if (squareAtcList.length <= 0) return;
+
+    function initSwiper() {
+        ww = window.innerWidth;
+
+        //768px 부터 swiper 실행
+        if (ww <= 768 && mySwiper == undefined) {
+            squareAtcList.each(function () {
+                //각각을 스와이프 적용
+                mySwiper = new Swiper(this, {
+                    slidesPerView: 1.5,
+                    spaceBetween: 12,
+                    loop: false,
+                    autoplay: false,
+                    speed: 1000,
+                    observer: true,
+                    observeParents: true,
+                    watchOverflow: true,
+                });
+            });
+        } else if (ww > 768 && mySwiper != undefined) {
+            squareAtcList.each(function () {
+                this.swiper.destroy(); //각각을 파괴함.
+            });
+            mySwiper = undefined;
         }
     }
 

@@ -223,12 +223,14 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 /* txt button + icon */
 .btn_txt{display:inline-flex;position:relative;font-size:14px;font-weight:400;line-height:20px;align-items:center;}
 .has_plus:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23666666'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
+.has_plus2:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='white'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='white'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
 .has_toggle:after{content:'';display:inline-block;width:12px;height:12px;margin:2px 0 0 4px;background:url('../images/ico_arrow_down_16.svg') no-repeat center center / 100% auto;}
 .has_toggle .txt1{display:block;}
 .has_toggle .txt2{display:none;}
 .has_toggle.on:after{background-image:url('../images/ico_arrow_up_16.svg');}
 .has_toggle.on .txt1{display:none;}
 .has_toggle.on .txt2{display:block;}
+.has_download:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 4px;background:url('../images/ico_download_16.svg') no-repeat center center / 100% auto;}
 
 /* icon button */
 .btn_ico{display:inline-flex;}
@@ -422,8 +424,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .word_list li a{display:block;min-height:36px;padding:6px 15px;background-color:#fff;border:1px solid #ccc;font-size:14px;font-weight:400;line-height:20px;}
 
 /* container */
-.sample_banner{position:relative;z-index:60;background-color:#dbdbdb;padding:30px;text-align:center;}
 .cont_inner{max-width:1280px;margin:0 auto;padding:0 40px;}
+.cont_inner .cont_inner{padding:0;}
 
 /* footer */
 .footer{position:relative;background-color:#fff;}
@@ -608,8 +610,8 @@ background:#fff;overflow:hidden;z-index:230}
 /* 서브비주얼 - 브랜딩 */
 .subvisual.branding{height:350px;}
 .subvisual.branding .imgbox:before{display:none;}
-.subvisual.branding .tit{font-size:48px;line-height:64px;color:#fff;}
-.subvisual.branding .txt{margin-top:16px;font-size:18px;line-height:26px;}
+.subvisual.branding .tit{font-size:48px;line-height:57px;color:#fff;letter-spacing:0;}
+.subvisual.branding .txt{margin-top:16px;font-size:18px;line-height:26px;color:#fff;}
 
 /* title */
 .tit_wrap{margin-bottom:40px;}
@@ -706,13 +708,11 @@ background:#fff;overflow:hidden;z-index:230}
 .atc_list_wrap .tit_wrap .tit:before{content:'';display:block;position:absolute;left:0;top:35px;width:32px;height:8px;background-color:var(--point);}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
-.atc_list .atcbox .subtxt{display:flex;align-items:center;position:relative;margin-top:12px;}
-.atc_list .atcbox .subtxt > span{position:relative;font-size:14px;font-weight:500;line-height:20px;}
-.atc_list .atcbox .subtxt > span ~ span{margin-left:12px;padding-left:13px;}
-.atc_list .atcbox .subtxt span:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:12px;margin-top:1px;background-color:#111;opacity:0.2;}
-.atc_list .atcbox .subtxt span:first-of-type:before{display:none;}
-.atc_list .atcbox .subtxt .date{font-family:'Pretendard';}
-.atc_list .atcbox .subtxt .sort{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
+.atc_list .atcbox .unitbox{display:flex;align-items:center;position:relative;margin-top:16px;}
+.atc_list .atcbox .unitbox > span{position:relative;font-size:14px;font-weight:500;line-height:20px;}
+.atc_list .atcbox .unitbox > span ~ span{margin-left:12px;padding-left:13px;}
+.atc_list .atcbox .unitbox span:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:12px;margin-top:1px;background-color:#111;opacity:0.2;}
+.atc_list .atcbox .unitbox span:first-of-type:before{display:none;}
 
 /* O모듈 (비디오모듈) */
 .vdo_atc_wrap{margin-bottom:var(--module-gap);}
@@ -738,8 +738,8 @@ background:#fff;overflow:hidden;z-index:230}
 .editor_box > a{display:block;width:100%;height:100%;}
 .editor_box .editor_head{position:relative;padding:32px;background-color:#111;}
 .editor_box .editor_head .editor_info{width:calc(100% - 130px);}
-.editor_box .editor_head .name{display:block;font-size:24px;line-height:35px;color:#fff;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
-.editor_box .editor_head .desc{display:block;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
+.editor_box .editor_head .name{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:24px;line-height:35px;color:#fff;}
+.editor_box .editor_head .desc{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-top:3px;font-size:16px;line-height:23px;color:#ccc;}
 .editor_box .profile_img{overflow:hidden;position:absolute;right:32px;bottom:-27px;width:120px;height:120px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
 .editor_box .profile_img img{width:100%;height:100%;object-fit:cover;background-color:#fff;}
 .editor_box .editor_body{position:relative;padding:50px 32px 40px;}
@@ -921,6 +921,64 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_error .err_comment01 { font-size:36px; font-weight:700; line-height:1.45; letter-spacing:-0.01em; margin:0 20px;}
 .comm_error .err_comment02 { font-size:18px; font-weight:500; line-height:1.45; color:#666; margin:16px 20px 0 }
 
+/* 브랜딩 페이지 - 클럽 에스콰이어 > 메인 */
+.branding_wrap.main .tit_wrap{margin-bottom:48px;}
+.branding_wrap.main .tit_wrap .tit{font-family:'Pretendard', 'Noto Sans KR';font-size:44px;font-weight:700;line-height:53px;}
+.branding_wrap.main .tit_wrap .txt{margin-top:16px;font-size:16px;line-height:26px;color:#666;}
+.branding_wrap.main .mem_wrap{margin:0;padding:120px 0;background-color:#F5F6F8;}
+.intro_wrap{padding:100px 0 120px;background:url('../images/bg_club_esquire.jpg') no-repeat 0 0 / cover;font-size:18px;line-height:26px;color:#fff;}
+.intro_wrap .intro_bnr{text-align:center;}
+.intro_wrap .intro_bnr .logo{padding:30px 35px 36px 45px;background:url('../images/bg_logo_club_esquire.png') no-repeat center center / 100% auto;background-size:contain;}
+.intro_wrap .intro_bnr .word{display:block;margin-top:-30px;}
+.intro_wrap .intro_bnr .word img{max-width:480px;width:100%;margin:0 auto;}
+.intro_wrap .intro_bnr .txt{margin-top:32px;font-weight:400;}
+.intro_wrap .intro_bnr ~ .intro_info{margin-top:100px;padding-top:80px;border-top:1px solid #666;}
+.intro_wrap .intro_info .tit_wrap .tit,
+.intro_wrap .intro_info .tit_wrap .txt{color:#fff;}
+.exp_box{position:relative;padding:55px 60px 40px 40px;border:1px solid #fff;}
+.exp_box ~ .exp_box{margin-top:40px;}
+.exp_box:before{content:'';display:block;position:absolute;left:40px;top:40px;width:28px;height:4px;background-color:#fff;}
+.exp_box .num{display:block;margin-bottom:8px;font-family:'Pretendard';font-size:20px;font-weight:500;line-height:1;}
+.exp_box .tit{font-family:'Pretendard';font-size:36px;font-weight:700;line-height:43px;}
+.exp_box .txtbox{display:flex;justify-content:space-between;margin-top:24px;font-size:16px;line-height:26px;}
+.exp_box .txtbox .txt1{flex-shrink:0;max-width:168px;padding-right:40px;}
+.exp_box .txtbox .txt2{display:flex;flex:1;}
+.exp_box .txtbox .txt1 ~ .txt2:before{content:'';display:block;flex-shrink:0;width:50.8%;height:1px;margin:13px 24px 13px 0;background-color:#fff;}
+.square_atc_wrap{padding:120px 0;}
+.square_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 24px;}
+.square_atc_list li{width:calc(33.333% - 16px);}
+.square_atc_list .atcbox .imgbox:after{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:160px;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.6) 100%);}
+.contact_wrap{padding:63px 0 60px;background:url('../images/bg_club_esquire_contact.jpg') no-repeat 0 0 / cover;}
+.contact_wrap .tit_wrap .tit,
+.contact_wrap .tit_wrap .txt{color:#fff !important;}
+.contact_wrap .tit_wrap .tit .addtxt{display:inline-block;vertical-align:top;font-size:36px;font-weight:500;}
+.contact_wrap .btn_wrap{margin-top:0;}
+.contact_wrap .btn_wrap .btn{background-color:transparent;color:#fff;}
+
+/* 브랜딩 페이지 - 클럽 에스콰이어 > 멤버 */
+.search_sec{max-width:872px;margin:0 auto;}
+.search_sec ~ .mem_wrap{margin-top:80px;}
+.mem_wrap{margin-bottom:180px;}
+.mem_list ul{display:flex;flex-wrap:wrap;gap:40px 24px;}
+.mem_list li{width:calc(33.333% - 16px);}
+.mem_box{height:352px;background-color:#fff;box-shadow:0 0 32px 0 rgba(0,0,0,0.08);}
+.mem_box .mem_head{display:flex;justify-content:space-between;position:relative;padding:32px;background-color:#111;}
+.mem_box .mem_info{display:flex;flex-direction:column;justify-content:space-between;width:52%;font-size:14px;line-height:20px;color:#fff;}
+.mem_box .mem_info .pers{display:flex;align-items:baseline;}
+.mem_box .mem_info .name{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:24px;line-height:35px;}
+.mem_box .mem_info .age{margin-left:12px;}
+.mem_box .mem_info .instagram{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom:6px;font-family:'Pretendard';font-weight:500;color:#999;}
+.mem_box .mem_info .job{display:flex;}
+.mem_box .mem_info .job span{display:block;position:relative;margin-right:8px;padding-right:9px;white-space:nowrap;}
+.mem_box .mem_info .job span:after{content:'';display:block;position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:12px;margin-top:1px;background-color:rgba(255,255,255,0.2);}
+.mem_box .mem_info .job span:last-of-type{margin-right:0;padding-right:0;overflow:hidden;text-overflow:ellipsis;}
+.mem_box .mem_info .job span:last-of-type:after{display:none;}
+.mem_box .profile_img{overflow:hidden;width:120px;height:120px;border-radius:50%;background:url('../images/img_profile.png') no-repeat center center / 100% auto;}
+.mem_box .profile_img img{width:100%;height:100%;object-fit:cover;background-color:#fff;}
+.mem_box .mem_body{position:relative;padding:50px 32px 40px;}
+.mem_box .mem_body .txt{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;font-size:16px;font-weight:400;line-height:26px;color:#666;}
+.mem_box .mem_body:before{content:'';position:absolute;left:32px;top:32px;display:block;width:32px;height:2px;background-color:#111;}
+
 
 
 /************************* Media Query *************************/
@@ -938,6 +996,9 @@ background:#fff;overflow:hidden;z-index:230}
 	.editor_box .editor_head .editor_info{width:calc(100% - 120px);}
 	.editor_box .profile_img{bottom:-24px;right:28px;width:110px;height:110px;}
 	.horoscope_list li{width:calc(25% - 18px);}
+
+	.mem_list li{width:calc(50% - 12px);}
+	.mem_box .profile_img{width:110px;height:110px;}
 }
 @media (max-width:1023px){
 	.header_navi ul li + li{padding-left:24px;}
@@ -994,12 +1055,18 @@ background:#fff;overflow:hidden;z-index:230}
 	.heading_wrap.eng .tit{font-size:44px;line-height:53px;}
 	.heading_wrap.tal{margin:40px auto;}
 
+	/* 서브비주얼 */
 	.subvisual{height:180px;margin-bottom:40px;padding-top:48%;}
 	.subvisual .imgbox .pc{display:none;}
 	.subvisual .imgbox .mo{display:block;}
 	.subvisual .heading_area{padding:0 20px;}
 	.subvisual .cate{font-size:14px;}
 	.subvisual .tit{font-size:44px;line-height:59px;}
+	/* 서브비주얼 - 브랜딩 */
+	.subvisual.branding{height:270px;margin-bottom:40px;}
+	.subvisual.branding .heading_area{padding:0 30px;}
+	.subvisual.branding .tit{font-size:32px;line-height:38px;}
+	.subvisual.branding .txt{margin-top:12px;font-size:14px;line-height:20px;}
 
 	/* header */
 	.header .btn_menu{margin-left:-6px;}
@@ -1215,8 +1282,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.atc_list_wrap .tit_wrap .tit:before{top:20px;width:16px;height:4px;}
 	.atc_list ul{gap:24px 0;margin:0 -6px;}
 	.atc_list li{width:50%;padding:0 6px;}
-	.atc_list .atcbox .subtxt{margin-top:10px;}
-	.atc_list .atcbox .subtxt > span{font-size:12px;line-height:18px;}
+	.atc_list .atcbox .unitbox{margin-top:10px;}
+	.atc_list .atcbox .unitbox > span{font-size:12px;line-height:18px;}
 
 	/* O모듈 (비디오모듈) */
 	.vdo_atc_wrap .tit_wrap .tit{padding-left:20px;font-size:24px;line-height:29px;}
@@ -1332,6 +1399,52 @@ background:#fff;overflow:hidden;z-index:230}
 	.comm_error .err_comment01 { font-size:22px;}
 	.comm_error .err_comment02 { font-size:14px;margin:12px 20px 0}
 	.comm_error .err_comment01 span, .comm_error .err_comment02 span{ display:block}
+
+	/* 브랜딩 페이지 - 클럽 에스콰이어 > 메인 */
+	.branding_wrap.main .tit_wrap{margin-bottom:32px;}
+	.branding_wrap.main .tit_wrap .tit{font-size:24px;line-height:29px;}
+	.branding_wrap.main .tit_wrap .txt{font-size:14px;line-height:20px;}
+	.branding_wrap.main .tit_wrap .btn_more{height:28px;}
+	.branding_wrap.main .mem_wrap{padding:100px 0;}
+	.intro_wrap{padding:100px 0;background-image:url('../images/bg_club_esquire_mo.jpg');font-size:14px;line-height:20px;}
+	.intro_wrap .intro_bnr{max-width:520px;margin:0 auto;}
+	.intro_wrap .intro_bnr .logo{padding:6.5% 8.2% 6.5% 8.1%;background-image:url('../images/bg_logo_club_esquire_mo.png');}
+	.intro_wrap .intro_bnr .word{margin-top:-2.933%;}
+	.intro_wrap .intro_bnr .word img{max-width:100%;width:90.15%;}
+	.intro_wrap .intro_bnr .txt{margin-top:28px;}
+	.exp_box{padding:36px 24px 24px;}
+	.exp_box ~ .exp_box{margin-top:24px;}
+	.exp_box:before{left:24px;top:24px;width:22px;}
+	.exp_box .num{font-size:16px;}
+	.exp_box .tit{font-size:24px;line-height:29px;}
+	.exp_box .txtbox{flex-direction:column;margin-top:16px;font-size:14px;font-weight:400;line-height:22px;}
+	.exp_box .txtbox .txt1{max-width:none;padding-right:0;}
+	.exp_box .txtbox .txt2{flex-direction:column;}
+	.exp_box .txtbox .txt1 ~ .txt2:before{width:100%;margin:12px 0;}
+	.square_atc_wrap{padding:100px 0;}
+	.square_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
+	.square_atc_list ul{flex-wrap:nowrap;gap:0;}
+	.square_atc_list li{width:65.48%;margin-right:12px;}
+	.contact_wrap{padding:50px 0 48px;background-image:url('../images/bg_club_esquire_contact_mo.jpg');}
+	.contact_wrap .tit_wrap .tit .addtxt{font-size:22px;line-height:32px;}
+	.contact_wrap .btn_wrap{flex-direction:column;}
+	.contact_wrap .btn_wrap .btn ~ .btn{margin:16px 0 0;}
+
+	/* 브랜딩 페이지 - 클럽 에스콰이어 > 멤버 */
+	.search_sec ~ .mem_wrap{margin-top:40px;}
+	.mem_wrap{margin-bottom:80px;}
+	.mem_list ul{gap:24px 0;}
+	.mem_list li{width:100%;}
+	.mem_box{height:308px;box-shadow: 0 0 32px 0 rgba(0,0,0,0.1);}
+	.mem_box .mem_head{padding:28px;}
+	.mem_box .mem_info{width:54%;font-size:12px;line-height:16px;}
+	.mem_box .mem_info .name{font-size:20px;line-height:29px;}
+	.mem_box .mem_info .age{margin-left:8px;}
+	.mem_box .mem_info .job span{margin-right:6px;padding-right:7px;}
+	.mem_box .profile_img{width:104px;height:104px;}
+	.mem_box .mem_body{padding:44px 28px 32px;}
+	.mem_box .mem_body:before{left:28px;top:28px;width:24px;}
+	.mem_box .mem_body .txt{font-size:14px;line-height:24px;}
 }
 
 @media (max-width:425px){
@@ -1352,4 +1465,12 @@ background:#fff;overflow:hidden;z-index:230}
 	.cover_atc_wrap .list_top .list_sort:first-child .selectbox .select_options{right:auto;}
 	.pop_share .popup_cont{padding-left:20px;padding-right:20px;}
 	.pop_share .sns_list ul{column-gap:15px;}
+	.mem_box{height:256px;}
+	.mem_box .mem_head{padding:20px;}
+	.mem_box .mem_info{width:60%;}
+	.mem_box .mem_info .instagram{margin-bottom:3px;}
+	.mem_box .profile_img{width:64px;height:64px;}
+	.mem_box .mem_body{padding:44px 20px 32px;}
+	.mem_box .mem_body:before{left:20px;}
+	.intro_wrap .intro_bnr .txt .mo_br{display:none;}
 }

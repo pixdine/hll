@@ -454,7 +454,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 .marquee .marquee__img {position: relative; padding: 0 12px;}
 .marquee .marquee__img img {height: 349px;}
 .marquee .marquee__img .marquee__info {position: absolute; bottom: 0; left: 12px; right: 12px; height: 160px; padding: 76px 32px 0; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
-.marquee .marquee__img .subject {color: #fff; font-weight: 500; font-family:FoundersGrotesk; font-size: 13px; line-height: 1;}
+.marquee .marquee__img .subject {color: #fff; font-weight: 500; font-family:'Pretendard'; font-size: 11px; line-height: 1;}
 .marquee .marquee__img .desc_txt {color: #fff; font-weight: 500; font-size: 18px; line-height: 26px; text-overflow: ellipsis; overflow: hidden;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; height: 52px;word-break:break-all;}
 .bottom-article {display: none;}
 
@@ -809,7 +809,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.bottom-article .article__img {position: relative; padding: 0 6px;}
 	.bottom-article .article__img img {height: 183px;}
 	.bottom-article .article__img .article__info {position: absolute; bottom: 0; left: 6px; right: 6px; height: 92px; padding: 32px 12px 0; text-align: left; background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, rgba(17, 17, 17, 0.60) 100%);}
-	.bottom-article .article__img .subject {color: #fff; font-weight: 500; font-family:FoundersGrotesk ; font-size: 12px; line-height: 1;}
+	.bottom-article .article__img .subject {color: #fff; font-weight: 500; font-family:'Pretendard' ; font-size: 10px; line-height: 1;}
 	.bottom-article .article__img .desc_txt {color: #fff; font-weight: 500; font-size: 14px; line-height: 20px; text-overflow: ellipsis; overflow: hidden;display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; height: 40px;word-break:break-all;}
 
 	/* 리스트 > 가로로 긴 이벤트 배너 모듈 */

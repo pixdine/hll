@@ -589,9 +589,4 @@ function onScrollUp() {
     // console.log("스크롤 업됨!");
     $("body").addClass("scroll_up");
     $("body").removeClass("scroll_down");
-    if ($("body").hasClass("is_mobile")) {
-        if (currentPage == "main" || currentPage == "sub") {
-            $(".header").css("transform", "translate(0, 0)");
-        }
-    }
 }

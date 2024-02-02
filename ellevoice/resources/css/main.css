@@ -9,16 +9,54 @@ h2 + .desc {margin-top: 20px;}
 
 .section .cont_inner {position: relative;padding-top: 120px;padding-bottom: 120px;}
 
+@media (max-width:768px){
+	.main_container {padding-bottom: 0;}
+	.desc {font-size: 14px;}
+	h2 {font-size: 22px;}
+	.tit_wrap {margin-bottom: 32px;}
+	.section .cont_inner {padding-top: 80px;padding-bottom: 80px;}
+}
+
 /* banner */
 .main-banner .cont_inner{display: flex;justify-content: center;align-items: center;height: 800px;}
-.main-banner .banner {position: relative;top: -70px;}
+.main-banner .banner {position: relative;top: -70px;display: flex;flex-wrap: wrap;gap: 34px;align-items: flex-end;}
+/* .main-banner .banner > span + span {margin-left: 34px;} */
 .main-banner .banner .txt {display: inline-block;font-size: 64px;font-weight: 700;letter-spacing: -4px;}
-.main-banner .banner .slogan {display: inline-flex;justify-content: center;align-items: center;width: 362px;height: 300px; margin:0 34px;background: no-repeat center center / contain;vertical-align: bottom;}
+.main-banner .banner .txt:nth-of-type(2) {order: 3;}
+/* .main-banner .banner .txt + .txt {margin-left: 432px;} */
+.main-banner .banner .slogan {order: 1;display: inline-flex;justify-content: center;align-items: center;width: 362px;height: 300px;background: no-repeat center center / contain;vertical-align: bottom;}
 .main-banner .banner .slogan em {position: relative;top: 20px;font-size: 40px;font-weight: 500;font-family: ElleGaborStd;color: #fff;}
 .main-banner .banner .slogan.relationship {background-image: url("../images/main/slogan_relationship.svg");}
 .main-banner .banner .slogan.career {background-image: url("../images/main/slogan_career.svg");}
 .main-banner .banner .slogan.green {background-image: url("../images/main/slogan_green.svg");}
 .main-banner .banner .slogan.love {background-image: url("../images/main/slogan_love.svg");}
+@media (max-width:1280px){
+	.main-banner .banner {top: 0;flex-direction: column;gap: 0;align-items: flex-start;}
+	.main-banner .banner .txt:nth-of-type(2) {order: 2;}
+	.main-banner .banner .slogan {order: 3;margin: 40px auto 0;}
+}
+@media (max-width:768px){
+	.main-banner .cont_inner {height: auto;}
+	.main-banner .banner .txt {font-size: 36px;letter-spacing: -1px;}
+	.main-banner .banner .slogan {width: 335px;height: 260px;}
+}
 
 /* newsletter */
 .newsletter {background-color: rgba(0,160,94,0.1);}
+.newsletter .subscription_apply {position: relative;margin-top: 40px;}
+.newsletter .subscription_apply::after {content: "";display: block;position: absolute;top: 50%;right: 0;transform: translateY(-50%);width: 407px;height: 407px;margin-top: -100px;background: url("../images/main/obj_newsletter.svg") no-repeat 0 0 / contain;}
+.newsletter .subscription_apply .input {display: flex;align-items: center;height: 52px;width: 486px;padding: 0 16px;background-color: #fff;font-weight: 500;}
+.newsletter .subscription_apply .input label {flex-shrink: 0;color: var(--point);}
+.newsletter .subscription_apply .input input {flex: 1;height: 100%;text-indent: 10px;border: none;font-weight: 500;}
+.newsletter .subscription_apply .input + .input {margin-top: 16px;}
+.newsletter .check_group {margin-top: 32px;display: flex;flex-wrap: wrap;gap: 20px;}
+.newsletter .btn_subscription {margin-top: 40px;height: 52px;padding: 0 35px;font-weight: 500;color: #fff;background-color: var(--point);}
+@media (max-width:1100px){
+	.newsletter .subscription_apply {margin-top: 20px;padding-top: 375px;}
+	.newsletter .subscription_apply::after {top: 0;right: auto;left: 50%;transform: translate(-50%, 0);width: 335px;height: 335px;margin-top: 0;}
+	.newsletter .subscription_apply .input {width: 100%;}
+}
+@media (max-width:768px){
+	.newsletter .btn_subscription {margin-top: 24px;}
+	.newsletter .check_group {gap: 16px;}
+}

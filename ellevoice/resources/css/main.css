@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* common */
+.main_container {padding-bottom: 180px;}
+.desc {font-size: 18px;font-weight: 500;line-height: 1.8;}
+h2 {font-size: 40px;font-weight: 700;}
+h2 + .desc {margin-top: 20px;}
+.tit_wrap {margin-bottom: 40px;}
+
+.section .cont_inner {position: relative;padding-top: 120px;padding-bottom: 120px;}
+
+/* banner */
+.main-banner .cont_inner{display: flex;justify-content: center;align-items: center;height: 800px;}
+.main-banner .banner {position: relative;top: -70px;}
+.main-banner .banner .txt {display: inline-block;font-size: 64px;font-weight: 700;letter-spacing: -4px;}
+.main-banner .banner .slogan {display: inline-flex;justify-content: center;align-items: center;width: 362px;height: 300px; margin:0 34px;background: no-repeat center center / contain;vertical-align: bottom;}
+.main-banner .banner .slogan em {position: relative;top: 20px;font-size: 40px;font-weight: 500;font-family: ElleGaborStd;color: #fff;}
+.main-banner .banner .slogan.relationship {background-image: url("../images/main/slogan_relationship.svg");}
+.main-banner .banner .slogan.career {background-image: url("../images/main/slogan_career.svg");}
+.main-banner .banner .slogan.green {background-image: url("../images/main/slogan_green.svg");}
+.main-banner .banner .slogan.love {background-image: url("../images/main/slogan_love.svg");}
+
+/* newsletter */
+.newsletter {background-color: rgba(0,160,94,0.1);}

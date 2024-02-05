@@ -5,6 +5,11 @@
 .guide_head .guide_tit{font-size:24px;font-weight:700;color:#fff;margin-left:40px;}
 .guide_cont{padding:40px;}
 
+/* 공지 */
+.noti{margin-bottom:20px;padding:18px;border:2px solid #f7f7f7;}
+.noti li{position:relative;padding-left:10px;font-size:14px;font-weight:400;color:#666;line-height:20px;}
+.noti li:before{content:'';display:block;position:absolute;left:0;top:10px;width:3px;height:3px;background-color:#ccc;}
+
 /* 코딩리스트 테이블 */
 .pub_list{overflow-x:auto;}
 .pub_list table{table-layout:fixed;width:100%;}

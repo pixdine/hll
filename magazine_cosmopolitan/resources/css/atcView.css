@@ -343,7 +343,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .atc_wrap.wide .atc_header_info {width:calc(100% - 40px); bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}
 
-    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;padding-right:20px;}
+    .atc_body .caption { margin-top: 8px; letter-spacing: 0.02em;padding-left:20px;padding-right:20px; word-break:break-all;}
 
     .atc_body .ab_photo {margin:20px -20px; width:auto} /* 기사상세 > 본문 이미지 792 */
     .ab_photo_1200{left:0;transform:translateX(0);width:auto;margin:20px -20px;}

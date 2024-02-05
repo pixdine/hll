@@ -1010,6 +1010,7 @@ background:#fff;overflow:hidden;z-index:230}
 }
 @media (max-width:899px){
 	.header_navi{display:none;}
+	.branding_wrap.main .tit_wrap .txt .pc_br{display:none;}
 }
 @media (max-width:768px){
 	:root{

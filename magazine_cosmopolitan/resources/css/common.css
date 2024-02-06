@@ -909,8 +909,8 @@ background:#fff;overflow:hidden;z-index:230}
 .hover_atc_wrap{margin-bottom:var(--module-gap);}
 .hover_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .hover_atc_list li{width:33.333%;padding:0 12px;}
-.hover_atc_list .hover_layer{position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(255,255,255, 0.9);opacity:0;transition:all .4s cubic-bezier(.215,.61,.355,1);}
-.hover_atc_list .atcbox .txtbox{position:absolute;left:0;bottom:0;right:0;margin-top:0;padding:0 8.333% 8.333%;}
+.hover_atc_list .atcbox a:before{content:'';display:block;position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(255,255,255, 0.9);opacity:0;transition:all .4s cubic-bezier(.215,.61,.355,1);z-index:1;}
+.hover_atc_list .atcbox .txtbox{position:absolute;left:0;bottom:0;right:0;margin-top:0;padding:0 8.333% 8.333%;z-index:1;}
 .hover_atc_list .atcbox .txtbox:before{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:160px;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17,17,17,0.6) 100%);}
 .hover_atc_list .atcbox .txtbox .tit{height:auto;max-height:52px;color:#fff;}
 .hover_atc_list .atcbox .unitbox{display:flex;align-items:center;position:relative;margin-top:12px;color:#fff;}
@@ -920,7 +920,7 @@ background:#fff;overflow:hidden;z-index:230}
 .hover_atc_list .atcbox .unitbox span:first-of-type:before{display:none;}
 .hover_atc_list .atcbox .unitbox .date{font-family:FoundersGrotesk;font-size:16px;line-height:20px;}
 .hover_atc_list .atcbox .unitbox .sort{overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;font-size:14px;line-height:20px;}
-.hover_atc_list .atcbox a:hover .hover_layer{opacity:1;}
+.hover_atc_list .atcbox a:hover:before{opacity:1;}
 .hover_atc_list .atcbox a:hover .txtbox:before{display:none;}
 .hover_atc_list .atcbox a:hover .txtbox .tit,
 .hover_atc_list .atcbox a:hover .unitbox{color:#111;}

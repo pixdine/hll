@@ -1426,7 +1426,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.square_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.square_atc_list ul{flex-wrap:nowrap;gap:0;}
 	.square_atc_list li{width:65.48%;margin-right:12px;}
-	.contact_wrap{padding:50px 0 48px;background-image:url('../images/bg_club_esquire_contact_mo.jpg');}
+	.contact_wrap{padding:51px 0 48px;background-image:url('../images/bg_club_esquire_contact_mo.jpg');}
 	.contact_wrap .tit_wrap .tit .addtxt{font-size:22px;line-height:32px;}
 	.contact_wrap .btn_wrap{flex-direction:column;}
 	.contact_wrap .btn_wrap .btn ~ .btn{margin:16px 0 0;}

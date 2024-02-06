@@ -792,7 +792,7 @@ background:#fff;overflow:hidden;z-index:230}
 .promo_bnr_list .bnrbox .txtbox .datebox span{position:relative;}
 .promo_bnr_list .bnrbox .txtbox .dday{color:var(--point);}
 .promo_bnr_list .bnrbox .txtbox .dday ~ .date{margin-left:12px;padding-left:12px;}
-.promo_bnr_list .bnrbox .txtbox .dday ~ .date:before{content:'';display:block;position:absolute;left:0;top:50%;transform:translate(-50%, -50%);width:1px;height:12px;background-color:#dbdbdb;}
+.promo_bnr_list .bnrbox .txtbox .dday ~ .date:before{content:'';display:block;position:absolute;left:0;top:50%;transform:translate(-50%, -50%);width:1px;height:12px;margin-top:1px;background-color:#dbdbdb;}
 .promo_bnr_list .control{position:absolute;left:50%;top:0;transform:translateX(-50%);padding-top:calc(59.334% - 50px);pointer-events:none;}
 .promo_bnr_list .control .swiper-pagination{font-size:0;pointer-events:auto;}
 .promo_bnr_list .control .swiper-pagination .swiper-pagination-bullet{display:inline-block;position:relative;width:40px;height:2px;margin:0 4px;cursor:pointer;background-color:rgba(255,255,255,.2);}

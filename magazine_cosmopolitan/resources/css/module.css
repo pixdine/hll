@@ -324,7 +324,7 @@
 .pick_wrap .pick_head span{display:inline-block;position:relative;font-size:14px;font-weight:500;line-height:20px;color:#111;}
 .pick_wrap .pick_head .date{color:#666;letter-spacing:0;line-height:1;}
 .pick_wrap .pick_head .cate ~ .date{margin-left:12px;padding-left:12px;}
-.pick_wrap .pick_head .cate ~ .date:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background-color:#dbdbdb;}
+.pick_wrap .pick_head .cate ~ .date:before{content:'';display:inline-block;position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;margin-top:1px;background-color:#dbdbdb;}
 .pick_wrap .pick_head .total{margin-left:8px;font-size:14px;line-height:1;}
 .pick_wrap .pick_head .total .count{font-weight:500;letter-spacing:0;}
 .pick_wrap .pick_tit{max-width:588px;margin:0 auto 40px;}

@@ -947,13 +947,13 @@ background:#fff;overflow:hidden;z-index:230}
 .square_atc_wrap{padding:120px 0;}
 .square_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 24px;}
 .square_atc_list li{width:calc(33.333% - 16px);}
-.square_atc_list .atcbox .imgbox:after{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:160px;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.6) 100%);}
+.square_atc_list .atcbox .imgbox:after{content:'';display:block;position:absolute;left:0;bottom:0;width:100%;height:41.666%;background:linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.6) 100%);}
 .contact_wrap{padding:63px 0 60px;background:url('../images/bg_club_esquire_contact.jpg') no-repeat 0 0 / cover;}
 .contact_wrap .tit_wrap .tit,
 .contact_wrap .tit_wrap .txt{color:#fff !important;}
 .contact_wrap .tit_wrap .tit .addtxt{display:inline-block;vertical-align:top;font-size:36px;font-weight:500;}
-.contact_wrap .btn_wrap{margin-top:0;}
-.contact_wrap .btn_wrap .btn{background-color:transparent;color:#fff;}
+.contact_wrap .btn_wrap{justify-content:flex-start;margin-top:0;}
+.contact_wrap .btn_wrap .btn{width:333px;background-color:transparent;color:#fff;}
 
 /* 브랜딩 페이지 - 클럽 에스콰이어 > 멤버 */
 .search_sec{max-width:872px;margin:0 auto;}
@@ -1426,9 +1426,11 @@ background:#fff;overflow:hidden;z-index:230}
 	.square_atc_list{overflow:hidden;margin:0 -20px;padding:0 20px;}
 	.square_atc_list ul{flex-wrap:nowrap;gap:0;}
 	.square_atc_list li{width:65.48%;margin-right:12px;}
+	.square_atc_list .atcbox .imgbox:after{height:73.059%;}
 	.contact_wrap{padding:51px 0 48px;background-image:url('../images/bg_club_esquire_contact_mo.jpg');}
 	.contact_wrap .tit_wrap .tit .addtxt{font-size:22px;line-height:32px;}
 	.contact_wrap .btn_wrap{flex-direction:column;}
+	.contact_wrap .btn_wrap .btn{width:100%;}
 	.contact_wrap .btn_wrap .btn ~ .btn{margin:16px 0 0;}
 
 	/* 브랜딩 페이지 - 클럽 에스콰이어 > 멤버 */

@@ -14,7 +14,7 @@
 .atc_wrap .atc_header .txt_meta em { margin-right:4px;vertical-align:top; }
 .atc_wrap .atc_header .txt_meta span a { color: #666 ; /*line-height:1.5em; */vertical-align:top; }
 .atc_wrap .atc_header .txt_meta .time { position:relative; font-size: 14px; padding-left: 12px; margin-left: 12px;; vertical-align:middle;}
-.atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:50%; margin-top:-6px; width:1px; height:12px; background: #ccc; opacity: .6;}
+.atc_wrap .atc_header .txt_meta .time:after { content: '';position: absolute;left: -1px; top:50%; margin-top:-5px; width:1px; height:12px; background: #ccc; opacity: .6;}
 
 .atc_header_img { margin:0 auto; text-align:center; display:none}
 /* 기사상세 > 헤더 > 프로필 기본사진 */
@@ -329,7 +329,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
     .atc_wrap .atc_header .txt_meta { height:20px; margin-top:24px; }
     .atc_wrap .atc_header .txt_meta em, .atc_header .txt_meta span, .atc_wrap .atc_header .txt_meta .time, .atc_header .txt_meta span a { font-size:12px; }
     .atc_wrap .atc_header .txt_meta .profile_pic { width:20px; height:20px;}
-    .atc_wrap .atc_header .txt_meta .time:after{height:10px;}
+    .atc_wrap .atc_header .txt_meta .time:after{height:10px;margin-top:-4px;}
     .atc_wrap.wide .atc_header {margin:0 -20px; overflow:hidden}
     .atc_wrap.wide .atc_header_info {width:calc(100% - 40px); bottom:8%;}
     .atc_wrap.wide .atc_header_info .txt_excerpt {}

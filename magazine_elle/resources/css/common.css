@@ -295,7 +295,6 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .atc_list li.ad_inread,
 .vdo_atc_list li.ad_inread{width:100%;padding:0;}
 .atc_list li.ad_inread div,
-.hover_atc_list li.ad_inread div,
 .vdo_atc_list li.ad_inread div{margin:0 auto;}
 
 /* header 공통스타일 */

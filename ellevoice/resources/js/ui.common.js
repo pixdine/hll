@@ -98,6 +98,28 @@ $(() => {
     }
 });
 
+// 좋아요 버튼
+(function($) {
+    $.fn.btnScrap = function (options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+
+        return this.each(function (i){
+            var scrapBtn = $(this);
+            scrapBtn.on("click", function () {
+                if(!$(this).hasClass("on")){
+                    $(this).addClass("on");
+                    // console.log(i+1 + "번째 좋아요 버튼")
+                } else {
+                    $(this).removeClass("on");
+                    // console.log(i+1 + "번째 좋아요 버튼 취소")
+                }
+            })
+        });
+    }
+})(jQuery);
+
 //iOS vh 대응
 function setCSS() {
     var setVh = () => {

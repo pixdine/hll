@@ -148,6 +148,7 @@
 .btn_plus{display:inline-flex;align-items:center;position:relative;font-size:16px;font-weight:500;line-height:28px;}
 .btn_plus:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23111111'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23111111'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
 
+/*COLLABORATION*/
 .gallary_list{margin-top:80px;padding-top:32px;border-top:1px solid #666;}
 .gallary_list ul{display: flex;flex-wrap: wrap;column-gap: 24px;row-gap: 50px;justify-content: space-between;}
 .gallary_list li{width: calc(50% - 12px);margin-left: 0;}
@@ -159,21 +160,41 @@
 .gallary_list li .item_sbj{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height:52px;color: #111;font-weight: 500;font-size: 18px;line-height: 26px;word-break: break-all;}
 .gallary_list li .item_txt{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;margin-top:16px;text-overflow: ellipsis;overflow: hidden;height:40px;color: #666;font-weight: 500;font-size: 14px;line-height: 20px;word-break: break-all;}
 
+.set_wrap{margin-top: 120px;display: flex;align-items: center;justify-content: space-between;flex-wrap: wrap;}
+.set_wrap .box{width: calc(50% - 12px);padding:60px 24px;text-align: center;max-height:342px;}
+.set_wrap .box.bg_beg{background-color:#FAF7EF}
+.set_wrap .box.bg_grn{background-color:#EFFAF6}
+.set_wrap .box .txt strong{font-size:16px;line-height:16px;color:#00A05E;letter-spacing:-0.01em;font-family:'Elle Gabor Std';}
+.set_wrap .box .txt h4{font-size:28px;line-height:41px;margin-top:12px;}
+.set_wrap .box .txt p{margin-top:24px;font-size:18px;color:#000;font-weight:500;line-height:26px;letter-spacing:-0.01em;}
+.set_wrap .box .btn_area{margin-top:24px;}
+.set_wrap .box .btn_area .btn{background-color:transparent;width:282px;}
+.btn_area .btn span{position:relative;padding-right:20px}
+.btn_area .btn span:after{content: '';position: absolute;top: 50%;right:0;transform: translateY(-50%);background: url()0/100%;    width: 16px;height: 16px;}
+.btn_area .btn.ico_down span::after{background-image: url('../images/ico_download_b.png');width: 15px;height: 16px;}
+.btn_area .btn.ico_plus span::after{background-image: url('../images/ico_plus_b.png');}
+
 @media screen and (max-width: 899px) {
     
     /*board*/
     .board_list .board_st01 li{padding:24px 0}
     .board_list .board_st01 li .list_item > div{display: flex;flex-direction: column;}
     .board_list .board_st01 li .b_num,.board_list .board_st01 li .b_tit{width:100%;padding:0}
+    .board_list .board_st01 li .b_num{font-size:14px;line-height: 20px;}
     .board_list .board_st01 li .b_tit{margin-top:8px}
     .board_list .board_st01 li .b_tit a{display:block;}
     .board_list .board_st01 li .b_tit strong{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 46px;font-weight: 500;font-size: 16px;line-height: 23px;word-break: break-all;white-space: normal;}
+    .board_list .board_st01 li .b_tit .comment{font-size:16px;line-height:23px;}
     .board_list .board_st01 li .b_date{width:100%;text-align:left;margin-top: 16px;}
 }
 
 @media screen and (max-width: 768px) {
     .cont_inner{padding:0 20px;}
+    .container{padding-bottom:80px}
     .container .bodycont_section{margin-top:40px;}
+
+    /*고정영역 배너 영역*/
+    .banner_wrap{margin-top:60px;}
 
     /* 서브 상단 페이지 타이틀 영역 */
     .container .sub .heading_wrap { margin:0; height:150px; background-image:url('../../resources/images/bg_top_tit_mo.png'); background-size:375px 150px;}
@@ -188,4 +209,56 @@
     .btn_link{font-size:14px;line-height:20px;}
 
     .board_top{margin-top:40px;}
+
+
+    .view_detail_wrap{margin-top:40px;}
+    .view_detail_wrap .btn_wrap{margin-top:32px;}
+    .view_detail_wrap .btn_wrap .btn{width: 100%;}
+    .view_detail_header .cate{font-size:14px;line-height:20px;}
+    .view_detail_header .tit{font-size:24px;line-height:32px;}
+    .write_info{margin-top:24px;}
+    .profile_area .profile_img{width:20px;height:20px;}
+    .profile_area .user_info > span{padding-top:2px;font-size:12px;line-height:18px;}
+    .profile_area .user_info > span ~ span:before{height:10px;}
+    .view_detail_body_cont{padding-bottom:60px;}
+    .view_detail_footer .board_item{height:60px;padding:0 20px;}
+    .view_detail_footer .board_item .board_title{font-size:14px;line-height:20px;}
+    .view_detail_footer .board_item .prev_board,
+    .view_detail_footer .board_item .next_board{padding-right:20px;}
+    .view_detail_footer .board_item .prev_board:before,
+    .view_detail_footer .board_item .next_board:before{width:20px;height:20px;}
+
+
+    /* 리뷰 & 댓글 모듈 */
+    .comment_wrap.review{margin-top:32px;}
+    .comment_wrap.review .comment_list_area{padding-top:32px;}
+
+    .comment_wrap .reply_area{padding-left:40px;}
+    .comment_wrap .reply_area .comment_item:before{left:-40px;}
+    .comment_wrap.reply{margin-bottom:40px;}
+
+    .comment_wrap{margin-top:60px;padding-top:60px;}
+    .comment_wrap .tit_wrap{margin-bottom:16px;}
+    .comment_wrap .btn_more_wrap{margin-top:32px;}
+    .comment_list_area ~ .comment_write_area{margin-top:32px;}
+    .comment_thumb .profile_img{width:28px;height:28px;margin-right:12px;background-size:28px auto;}
+    .comment_info{margin-bottom:5px;}
+    .comment_cont .comment_info .user_info > span{font-size:12px;}
+    .comment_cont .comment_info .user_info > span ~ span{margin-left:8px;padding-left:8px;}
+    .comment_info .user_info > span ~ span:before{margin-top:-1px;}
+    .comment_list > ul > li{padding:24px 0 20px;}
+
+    .box_wrap{margin-top:12px;}
+
+    /*COLLABORATION*/
+    .gallary_list{padding-top:24px;margin-top:40px;}
+    .gallary_list ul{row-gap:24px;}
+    .gallary_list li{width: 100%;}
+    .gallary_list li .item_sbj{font-size: 16px;line-height: 20px;height: 40px;}
+    .gallary_list li .item_txt{margin-top:8px;font-size: 12px;height: 34px;line-height: 17px;}
+    .set_wrap{margin: 60px -20px 0;gap: 24px;}
+    .set_wrap .box{width:100%;padding:48px 20px;}
+    .set_wrap .box .txt strong{font-size:14px;line-height:13px;}
+    .set_wrap .box .txt h4{font-size:20px;line-height:29px;margin-top:8px;}
+    .set_wrap .box .txt p{margin-top: 16px;font-size: 16px;line-height:23px;}
 }

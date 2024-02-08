@@ -8,18 +8,12 @@
 	<meta name="format-detection" content="telephone=no">
 	<!-- css, Jquery -->
 	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../resources/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css"/>
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
 <body>
 	<div id="wrap" class="wrap">
-		<!-- 광고배너영역(탑배너) -->
-		<div class="ad_top"> 
-			<div>광고배너</div>
-		</div>
-		<!--//광고배너영역(탑배너) -->
-
 		<!-- header -->
 		<header id="header" class="header">
 			<div class="cont_inner">
@@ -133,306 +127,152 @@
 		<!-- //전체메뉴 -->
 
 		<!-- container -->
-		<main id="container" class="container main_container">
-			<!-- banner -->
-			<div class="section main_banner">
-				<div class="cont_inner">
-					<div class="banner">
-						<span class="txt">여성의 삶,</span>
-						<span class="txt">레퍼런스가 필요할 때</span>
-						<span class="slogan relationship"><em>Relationship</em></span><!-- D: 슬로건 클래스 relationship, career, green, love -->
-					</div>
+		<main id="container" class="container container_essay">
+			<div class="heading_wrap">
+				<div class="heading_inner">
+					<h2 class="tit">ESSAY</h2>
 				</div>
 			</div>
-			<!-- //banner -->
 
-			<!-- 뉴스레터 -->
-			<section class="section section_newsletter">
-				<div class="cont_inner">
-					<h2>엘르보이스 뉴스레터</h2>
-					<p class="desc">
-						작가, 팟캐스터, 아나운서, 싱어송라이터까지! 100% 여성들이 전하는 삶의 레퍼런스.<br>
-						매주 화요일 오전 1편의 에세이와 함께 세상을 바꾸는 다정한 목소리를 보내드립니다
-					</p>
+			<div class="cont_inner">
+				<div class="page_head">
+					<h3 class="tit">엘르보이스 에세이</h3>
+					<p class="sub_txt">관계, 커리어, 문화, 일상 등<br>매월 <엘르>를 통해 공개되는 4편의 에세이를 모아 볼 수 있습니다.</p>
+				</div>
 
-					<div class="subscription_apply">
-						<form>
-							<div class="input">
-								<label for="email">이메일 주소</label>
-								<input type="text" id="email" title="이메일 주소 입력">
-							</div>
-							<div class="input">
-								<label for="name">이름</label>
-								<input type="text" id="name" title="이름 입력">
-							</div>
-							<div class="input">
-								<label for="tel">연락처</label>
-								<input type="tel" id="tel" title="연락처 입력">
-							</div>
+				<div class="inputbox search">
+					<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">
+					<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+					<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+				</div>
 
-							<div class="check_group">
-								<span class="chk_in">
-									<input type="checkbox" id="check01" name="agree" title="개인정보 수집·이용에 동의 선택">
-									<label for="check01"><span>(필수) 개인정보 수집·이용에 동의합니다.</span></label>
-								</span>
-								<span class="chk_in">
-									<input type="checkbox" id="check02" name="agree" title="광고성 정보 수신에 동의 선택">
-									<label for="check02"><span>(필수) 광고성 정보 수신에 동의합니다.</span></label>
-								</span>
-							</div>
-
-							<button type="submit" class="btn_subscription">뉴스레터 무료 구독</button>
-						</form>
+				<div class="cate_wrap">
+					<div class="cate_inner">
+						<span class="cate_item">
+							<input type="checkbox" id="cate_culture" name="category">
+							<label for="cate_culture" class="essay_cate culture"><span class="txt">CULTURE</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_career" name="category">
+							<label for="cate_career" class="essay_cate career"><span class="txt">CAREER</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_love" name="category">
+							<label for="cate_love" class="essay_cate love"><span class="txt">LOVE</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_body" name="category">
+							<label for="cate_body" class="essay_cate body"><span class="txt">BODY</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_society" name="category">
+							<label for="cate_society" class="essay_cate society"><span class="txt">SOCIETY</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_advice" name="category">
+							<label for="cate_advice" class="essay_cate advice"><span class="txt">ADVICE</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_travel" name="category">
+							<label for="cate_travel" class="essay_cate travel"><span class="txt">TRAVEL</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_money" name="category">
+							<label for="cate_money" class="essay_cate money"><span class="txt">MONEY</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_green" name="category">
+							<label for="cate_green" class="essay_cate green"><span class="txt">GREEN</span></label>
+						</span>
+						<span class="cate_item">
+							<input type="checkbox" id="cate_relationship" name="category">
+							<label for="cate_relationship" class="essay_cate relationship"><span class="txt">RELATIONSHIP</span></label>
+						</span>
+					</div>
+					<div class="btnbox">
+						<button type="button" class="btn_ico fold"><span class="blind">펼치기/닫기</span></button>
 					</div>
 				</div>
-			</section>
-			<!-- //뉴스레터 -->
 
-			<!-- 뉴스레터 미리보기 -->
-			<section class="section section_newsletter_preview">
-				<div class="cont_inner">
-					<div class="tit_wrap">
-						<div class="tit_area">
-							<h2>뉴스레터 미리보기</h2>
-						</div>
-					</div>
-
-					<div class="swiper-newsletter_preview wide_m">
-						<div class="swiper">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<figure>
-										<img src="../resources/images/temp/newsletter01.png">
-										<figcaption>Newsletter Summary</figcaption>
-									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure>
-										<img src="../resources/images/temp/newsletter02.png">
-										<figcaption>Celeb Voice</figcaption>
-									</figure>
-								</li>
-								<li class="swiper-slide">
-									<figure>
-										<img src="../resources/images/temp/newsletter03.png">
-										<figcaption>Today’s Essay</figcaption>
-									</figure>
-								</li>
-							</ul>
-						</div>
-
-						<div class="swiper-button-next"></div>
-    					<div class="swiper-button-prev"></div>
-					</div>
-				</div>
-			</section>
-			<!-- //뉴스레터 미리보기 -->
-
-			<!-- 최신 뉴스레터 -->
-			<section class="section section_latest_newsletter">
-				<div class="cont_inner">
-					<div class="tit_wrap">
-						<div class="tit_area">
-							<h2>최신 뉴스레터</h2>
-							<div class="side"><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
-								<a href="https://www.elle.co.kr/ellevoice/NEWSLETTER" class="btn_more"><span>더보기</span></a>
+				<ul class="essay_list">
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="../resources/images/temp/essay01.png" alt="">
 							</div>
-						</div>
-					</div>
 
-					<ul class="newsletter-list">
-						<li class="row">
-							<span class="col times">엘르보이스 #79</span>
-							<div class="col tit"><p class="ellipsis">틀림없는 내 편 만들기</p></div>
-							<span class="col date">2023.10.17</span>
-						</li>
-						<li class="row">
-							<span class="col times">엘르보이스 #78</span>
-							<div class="col tit"><p class="ellipsis">비비안 웨스트우드의 가장 반항적인 순간들 비비안 웨스트우드의 가장 반항적인 순간들 비비안 웨스트우드의 가장 반항적인 순간들</p></div>
-							<span class="col date">2023.10.17</span>
-						</li>
-						<li class="row">
-							<span class="col times">엘르보이스 #77</span>
-							<div class="col tit"><p class="ellipsis">안녕, 작은 인간</p></div>
-							<span class="col date">2023.10.17</span>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<!-- //최신 뉴스레터 -->
-
-			<!-- 엘르보이스 에세이 -->
-			<section class="section section_essay">
-				<div class="cont_inner">
-					<h2>엘르보이스 에세이</h2>
-					<p class="desc">관계, 커리어, 문화, 일상 등<br>매월 <엘르> 를 통해 공개되는 4편의 에세이를 모아 볼 수 있습니다.</p>
-				</div>
-			</section>
-			<!-- //엘르보이스 에세이 -->
-
-			<!-- 최신 에세이 -->
-			<section class="section">
-				<div class="cont_inner">
-					<div class="tit_wrap">
-						<div class="tit_area">
-							<h2>최신 에세이</h2>
-							<div class="side"><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
-								<a href="https://www.elle.co.kr/ellevoice/essay" class="btn_more"><span>더보기</span></a>
+							<div class="cont">
+								<span class="essay_cate advice">ADVICE</span>
+								<p class="tit ellipsis">IT회사에 취업한 문과생, 아마존 본사에서 일하게 됐다?</p>
+								<span class="writer">BY 염지원 작가</span>
 							</div>
+						</a>
+						<div class="util">
+							<i class="new"><span class="blind">신규</span></i>
+							<button class="btn_ico dibs js-btn-scrap">
+								<span class="blind">찜하기</span>
+							</button>
 						</div>
-					</div>
-
-					<div class="swiper-essay">
-						<div class="swiper">
-							<ul class="swiper-wrapper essay_list">
-								<li class="swiper-slide">
-									<a href="#">
-										<div class="thumb">
-											<img src="../resources/images/temp/essay01.png" alt="">
-										</div>
-
-										<div class="cont">
-											<span class="essay_cate advice">ADVICE</span>
-											<p class="tit ellipsis">IT회사에 취업한 문과생, 아마존 본사에서 일하게 됐다?</p>
-											<span class="writer">BY 염지원 작가</span>
-										</div>
-									</a>
-									<div class="util">
-										<i class="new"><span class="blind">신규</span></i>
-										<button class="btn_ico dibs js-btn-scrap">
-											<span class="blind">찜하기</span>
-										</button>
-									</div>
-								</li>
-								<li class="swiper-slide">
-									<a href="#">
-										<div class="thumb">
-											<img src="../resources/images/temp/essay02.png" alt="">
-										</div>
-
-										<div class="cont">
-											<span class="essay_cate society">SOCIETY</span>
-											<p class="tit ellipsis">질식하는 청년들의 사회, 심수미 기자가 현장에서 본 것</p>
-											<span class="writer">BY 심수미 작가</span>
-										</div>
-									</a>
-									<div class="util">
-										<i class="new"><span class="blind">신규</span></i>
-										<button class="btn_ico dibs js-btn-scrap">
-											<span class="blind">찜하기</span>
-										</button>
-									</div>
-								</li>
-								<li class="swiper-slide">
-									<a href="#">
-										<div class="thumb">
-											<img src="../resources/images/temp/essay03.png" alt="">
-										</div>
-
-										<div class="cont">
-											<span class="essay_cate travel">TRAVEL</span>
-											<p class="tit ellipsis">엔데믹 시대, 파워유성애자는 다시 예전처럼 뜨거운 밤을 꿈꿀 수 있을까?</p>
-											<span class="writer">BY 곽민지 작가</span>
-										</div>
-									</a>
-									<div class="util">
-										<i class="new"><span class="blind">신규</span></i>
-										<button class="btn_ico dibs js-btn-scrap">
-											<span class="blind">찜하기</span>
-										</button>
-									</div>
-								</li>
-								<li class="swiper-slide">
-									<a href="#">
-										<div class="thumb">
-											<img src="../resources/images/temp/essay04.png" alt="">
-										</div>
-
-										<div class="cont">
-											<span class="essay_cate relationship">RELATIONSHIP</span>
-											<p class="tit ellipsis">서울을 떠도는 사람의 희한한 집 취향</p>
-											<span class="writer">BY 이두루 작가</span>
-										</div>
-									</a>
-									<div class="util">
-										<i class="new"><span class="blind">신규</span></i>
-										<button class="btn_ico dibs js-btn-scrap">
-											<span class="blind">찜하기</span>
-										</button>
-									</div>
-								</li>
-							</ul>
-							<div class="swiper-pagination"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- //최신 에세이 -->
-
-			<!-- 엘르보이스 작가 -->
-			<section class="section section_writer">
-				<div class="cont_inner">
-					<div class="tit_wrap">
-						<div class="tit_area">
-							<h2>엘르보이스 작가</h2>
-							<div class="side"><!-- D: 우측에 버튼이 없는 경우 해당 영역 전체삭제 -->
-								<a href="#" class="btn_more"><span>더보기</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="../resources/images/temp/essay02.png" alt="">
 							</div>
-						</div>
-					</div>
 
-					<div class="writer_list_wrap wide_m">
-						<ul class="writer_list">
-							<li>
-								<div class="img"><img src="../resources/images/temp/writer01.png" alt="황선우 작가"></div>
-								<div class="cont">
-									<span class="nm">황선우 작가</span>
-									<button class="btn_ico dibs js-btn-scrap">
-										<span class="blind">찜하기</span>
-									</button>
-								</div>
-							</li>
-							<li>
-								<div class="img"><img src="../resources/images/temp/writer02.png" alt="심수미 작가"></div>
-								<div class="cont">
-									<span class="nm">심수미 작가</span>
-									<button class="btn_ico dibs js-btn-scrap">
-										<span class="blind">찜하기</span>
-									</button>
-								</div>
-							</li>
-							<li>
-								<div class="img"><img src="../resources/images/temp/writer03.png" alt="임현주 작가"></div>
-								<div class="cont">
-									<span class="nm">임현주 작가</span>
-									<button class="btn_ico dibs js-btn-scrap">
-										<span class="blind">찜하기</span>
-									</button>
-								</div>
-							</li>
-							<li>
-								<div class="img"><img src="../resources/images/temp/writer04.png" alt="김사월 작가"></div>
-								<div class="cont">
-									<span class="nm">김사월 작가</span>
-									<button class="btn_ico dibs js-btn-scrap">
-										<span class="blind">찜하기</span>
-									</button>
-								</div>
-							</li>
-							<li>
-								<div class="img"></div>
-								<div class="cont">
-									<span class="nm">엘르보이스 작가</span>
-									<button class="btn_ico dibs js-btn-scrap">
-										<span class="blind">찜하기</span>
-									</button>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<!-- //엘르보이스 작가 -->
+							<div class="cont">
+								<span class="essay_cate society">SOCIETY</span>
+								<p class="tit ellipsis">질식하는 청년들의 사회, 심수미 기자가 현장에서 본 것</p>
+								<span class="writer">BY 심수미 작가</span>
+							</div>
+						</a>
+						<div class="util">
+							<i class="new"><span class="blind">신규</span></i>
+							<button class="btn_ico dibs js-btn-scrap">
+								<span class="blind">찜하기</span>
+							</button>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="../resources/images/temp/essay03.png" alt="">
+							</div>
+
+							<div class="cont">
+								<span class="essay_cate travel">TRAVEL</span>
+								<p class="tit ellipsis">엔데믹 시대, 파워유성애자는 다시 예전처럼 뜨거운 밤을 꿈꿀 수 있을까?</p>
+								<span class="writer">BY 곽민지 작가</span>
+							</div>
+						</a>
+						<div class="util">
+							<i class="new"><span class="blind">신규</span></i>
+							<button class="btn_ico dibs js-btn-scrap">
+								<span class="blind">찜하기</span>
+							</button>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<div class="thumb">
+								<img src="../resources/images/temp/essay04.png" alt="">
+							</div>
+
+							<div class="cont">
+								<span class="essay_cate relationship">RELATIONSHIP</span>
+								<p class="tit ellipsis">서울을 떠도는 사람의 희한한 집 취향</p>
+								<span class="writer">BY 이두루 작가</span>
+							</div>
+						</a>
+						<div class="util">
+							<i class="new"><span class="blind">신규</span></i>
+							<button class="btn_ico dibs js-btn-scrap">
+								<span class="blind">찜하기</span>
+							</button>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</main>
 		<!-- //container -->
 
@@ -566,7 +406,6 @@
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
-	<script src="../resources/js/main.js"></script>
 	<!-- //js -->
 
 <script>

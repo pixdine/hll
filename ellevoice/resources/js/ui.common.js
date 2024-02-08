@@ -541,7 +541,7 @@ $.fn.moreDrop = function () {
         toggleBtn.on("blur", function () {
             setTimeout(function () {
                 moreDropBody.removeClass("on");
-            }, 100);
+            }, 200);
         });
     });
 };

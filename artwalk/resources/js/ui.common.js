@@ -617,7 +617,7 @@ $.fn.moreDrop = function () {
         var moreDropBody = $(this);
         var toggleBtn = moreDropBody.find(".btn_ico");
         var layerBox = moreDropBody.find(".layer_box");
-        toggleBtn.on("click", function () {
+        toggleBtn.on("click", function (e) {
             if (moreDropBody.hasClass("on")) {
                 moreDropBody.removeClass("on");
             } else {
@@ -625,10 +625,11 @@ $.fn.moreDrop = function () {
                 $(this).focus();
             }
         });
+
         toggleBtn.on("blur", function () {
             setTimeout(function () {
                 moreDropBody.removeClass("on");
-            }, 100);
+            }, 200);
         });
     });
 };

@@ -14,6 +14,7 @@ $(() => {
     allmenuOpen();
     initOnDevice();
     inputBind();
+    moveTop();
 
     
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
@@ -586,6 +587,13 @@ $(window).on("scroll", function () {
         onScrollUp();
     }
 
+    toggleBtnGoToTop(currentScrollTop);
+    // if(currentScrollTop > 200) {
+    //     $(".btn_gotop").fadeIn();
+    // } else {
+    //     $(".btn_gotop").fadeOut();
+    // }
+
     // 현재 스크롤 위치를 lastScrollTop에 저장
     lastScrollTop = currentScrollTop;
 });
@@ -602,4 +610,28 @@ function onScrollUp() {
     // console.log("스크롤 업됨!");
     $("body").addClass("scroll_up");
     $("body").removeClass("scroll_down");
+}
+
+function toggleBtnGoToTop(currentScrollTop){
+    const $btnTop = $(".btn_top");
+    let footPosTop = $("#footer").offset().top;
+    let anchor = currentScrollTop + $(window).height();
+
+    if(anchor > footPosTop) {
+        $btnTop.removeClass("fixed");
+    } else {
+        $btnTop.addClass("fixed");
+    }
+
+    if(currentScrollTop > 200) {
+        $btnTop.fadeIn();
+    } else {
+        $btnTop.fadeOut();
+    }
+}
+
+function moveTop() {
+    $(".btn_top").on("click", function(){
+        $("html, body").animate({scrollTop: 0}, 400);
+    });
 }

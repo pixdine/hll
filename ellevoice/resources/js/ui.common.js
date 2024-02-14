@@ -1,9 +1,21 @@
+let currentPage;
+
 $(() => {
+    // 멀티헤더를 위한 현재페이지 표시
+    if (currentPage == undefined) {
+        currentPage = "sub";
+    }
+    console.log(currentPage);
+    $(".header").addClass(currentPage);
+
+    $("header").length && headerSticky(); // 헤더 스티키
+
     setCSS();
     allmenuOpen();
     initOnDevice();
     inputBind();
 
+    
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 
     $("[data-popup-toggle]").on("click", function (e) {
@@ -136,22 +148,8 @@ function headerSticky() {
     var delta = 100; // ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
     var header = $(".header");
     var container = $(".container");
-    var bottomLogo = $(".header_bottom .logo a");
 
-    if (currentPage === "main") {
-        new IntersectionObserver(
-        ([e]) => {
-            if (e.intersectionRatio < 0.1 && !$("body").hasClass("is_mobile")) {
-                bottomLogo.stop().fadeIn(200);
-            } else {
-                bottomLogo.stop().fadeOut(200);
-            }
-        },
-        { threshold: [0.1, 1] }
-        ).observe($(".header_top")[0]);
-    }
-
-    var headerTop = $(".header_top").offset().top;
+    // var headerTop = $(".header_top").offset().top;
     var headerHeight = $(".header").outerHeight();
     var headerTopHeight = $(".header_top").outerHeight();
     var headerBottomHeight = $(".header_bottom").outerHeight();
@@ -232,13 +230,6 @@ function headerSticky() {
 
         window.requestAnimationFrame(function () {
             scrollCallback(scrollTop);
-        });
-    });
-
-    // resize 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
-    $(window).on("resize", function () {
-        window.requestAnimationFrame(function () {
-            headerTopHeight = $(".header_top").outerHeight();
         });
     });
 }

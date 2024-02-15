@@ -11,6 +11,13 @@
 .container .sub .heading_wrap h2.tit{color: #fff;text-align: center;font-size:64px;font-weight: 500;line-height: 64px;max-width: 1920px;}
 .container .sub .heading_wrap h2.tit span{display:block;}
 
+/* 마이페이지 상단 페이지 타이틀 영역 */
+.mypage .sub .heading_wrap{background-image:url('../../resources/images/bg_top_mypage.png');}
+.mypage .sub .heading_wrap h2.tit{color:#111;font-size:48px;}
+.mypage .sub .heading_wrap h2.tit img{margin-bottom:20px;}
+.mypage .sub .heading_wrap .btn_box{margin-top:20px;line-height: 0;}
+.mypage .sub .heading_wrap .btn_box .btn{min-width:180px;}
+
 .subtit_wrap{position: relative;}
 .subtit_wrap .subtit_area{text-align:center;}
 .subtit_wrap .subtit_area .tit{color:#111;font-size:40px;font-weight:700;line-height:50px;letter-spacing:-0.01em;}
@@ -203,6 +210,12 @@
     .subtit_wrap .subtit_area .tit{font-size:22px;line-height:32px;}
     .subtit_wrap .subtit_area p{font-size:14px;font-weight:400;line-height:22px;}
 
+    /* 마이페이지 상단 페이지 타이틀 영역 */
+    .mypage .sub .heading_wrap{height:150px;background-image:url('../../resources/images/bg_top_mypage_mo.png');}
+    .mypage .sub .heading_wrap h2.tit{color:#111;}
+    .mypage .sub .heading_wrap .btn_box{margin-top:24px;}
+    .mypage.main .sub .heading_wrap{height:226px;background-image:url('../../resources/images/bg_top_mypage_mo2.png');background-size:375px 226px;}
+    .mypage .tit_wrap{margin-bottom:32px;}
 
     .one_ban_swiper .pc_img{display:none;}
     .one_ban_swiper .mo_img{display:block;}

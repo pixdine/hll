@@ -13,6 +13,7 @@
 .container .sub .heading_wrap h2.tit span{display:block;}
 .container .sub .heading_wrap h2.tit img{display:block;margin: 0 auto 32px;}
 
+
 /* 마이페이지 상단 페이지 타이틀 영역 */
 .mypage .sub .heading_wrap{height:360px;background-image:url('../../resources/images/bg_top_mypage.png');}
 .mypage .sub .heading_wrap h2.tit{color:#111;}

@@ -16,6 +16,23 @@ layout
 /* container */
 .container .cont_inner {padding-top: 80px;padding-bottom: 180px;}
 
+
+/***********************************************************************
+contents
+***********************************************************************/
+/* 에세이 목록 */
+.essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
+.essay_list > li {width: calc(100% / 3 - 16px);}
+
+
+/***********************************************************************
+essay
+***********************************************************************/
+.essay .essay_list {margin-top: 80px;}
+
+
+
+/************************* Media Query *************************/
 @media (max-width:768px){
 	/* heading_wrap */
 	.heading_wrap {height: 150px;background-image: url("../images/bg_heading_mo.png");background-size: 100% auto;}
@@ -28,28 +45,11 @@ layout
 
 	/* container */
 	.container .cont_inner {padding-top: 40px;padding-bottom: 80px;}
-}
 
-
-/***********************************************************************
-contents
-***********************************************************************/
-/* 에세이 목록 */
-.essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
-.essay_list > li {width: calc(100% / 3 - 16px);}
-
-@media (max-width:768px){
+	/* 에세이 목록 */
 	.essay_list {gap: 24px 12px;}
 	.essay_list > li {width: calc(100% / 2 - 6px);}
+
+	/* essay */
+	.essay .essay_list {margin-top: 40px;}
 }
-
-
-/***********************************************************************
-essay
-***********************************************************************/
-.container_essay .essay_list {margin-top: 80px;}
-
-@media (max-width:768px){
-	.container_essay .essay_list {margin-top: 40px;}
-}
-

@@ -60,7 +60,8 @@
 .view_detail_body{position: relative;border-bottom: 1px solid #dbdbdb;}
 .view_detail_body_cont{max-width: 996px;margin: 0 auto;padding-bottom: 80px;font-family: 'Noto Sans KR';font-size: 16px;font-weight: 400;line-height: 28px;color: #111;}
 .view_detail_body_cont .detail_slide{margin-top:24px;}
-.view_detail_body_cont .caption{font-size:14px;font-weight:400;line-height:24px;color:#666;}
+.view_detail_body_cont .caption{font-size:14px;font-weight:400;line-height:24px;color:#666;margin-top:12px;letter-spacing: 0.08em;}
+.view_detail_body_cont .h_txt{font-size:16px;font-weight:700;line-height:28px;}
 .view_detail_body ~ .view_detail_footer{border-top:0;}
 .view_detail_footer{border-top:1px solid #dbdbdb;border-bottom:2px solid #111;}
 .view_detail_footer .board_item{display:flex;align-items:center;overflow:hidden;height:72px;padding:0 24px;}
@@ -103,7 +104,6 @@
 .comment_info .user_info > span ~ span:before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background-color:#dbdbdb;}
 .comment_info .user_info .name{display:block;overflow:hidden;min-width:0;text-overflow:ellipsis;white-space:nowrap;}
 .comment_info .user_info .date{display:block;white-space:nowrap;font-weight:400;color:#999;}
-.comment_txt{}
 .comment_txt .txt {position: relative;max-height: 100%;font-size: 14px;font-weight: 400;line-height: 20px;}
 .comment_util_box{margin-top: 12px;}
 
@@ -155,6 +155,27 @@
 .btn_filter:after{content:'';display:inline-block;width:16px;height:16px;margin-left:8px;background:url('../images/ico_filter_16.svg') no-repeat center center;}
 .btn_plus{display:inline-flex;align-items:center;position:relative;font-size:16px;font-weight:500;line-height:28px;}
 .btn_plus:after{content:'';display:inline-block;width:16px;height:16px;margin:0 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23111111'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23111111'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
+
+.dtline_wrap{margin-top:80px;}
+.dtline_wrap .dtline_box+.dtline_box{margin-top:80px;}
+.dtline_wrap .dtline_box .title{font-size:28px;font-weight:500;line-height:36px;font-family:'Elle Gabor Std';letter-spacing: -0.01em;margin-bottom:24px;}
+.dtline_wrap .dtline_box.credit .title{margin-bottom:16px;}
+.dtline_wrap .dtline_box.writer{border-bottom:1px solid #DBDBDB;padding-bottom:80px;}
+.wirter_info{position: relative;display: flex;flex-direction: row;}
+.dtline_wrap .dtline_box .cate_wrap{margin-top:0;}
+.dtline_wrap .dtline_box .cate_wrap .cate_inner{justify-content:left}
+.dtline_wrap .dtline_box .cate_wrap .essay_cate::before{background-color:#fff;}
+.dtline_wrap .dtline_box .cate_wrap .cate_item input + label{color:#fff;}
+.dtline_wrap .dtline_box .cate_wrap .cate_item input + .essay_cate.relationship{background-color:#00A05E;border-color:#00A05E;}
+.dtline_wrap .dtline_box .cate_wrap .cate_item input + .essay_cate.career{background-color:#8274BD;border-color:#8274BD;}
+.dtline_wrap .dtline_box .cate_wrap .cate_item input + .essay_cate.culture{background-color:#FF7A30;border-color:#FF7A30;}
+.dtline_wrap .dtline_box.credit .list_credit{color:#666;}
+.wirter_info .profile_img{display: block;overflow: hidden;width:100px;height: 100px;margin-right:24px;border-radius: 50%;background: url('../images/temp/temp_writer01.png') no-repeat center center / 40px auto;}
+.wirter_info .profile_img img{display: block;width: 100%;height: 100%;object-fit: cover;}
+.wirter_info .wirter_txt{min-width: 0;flex: 1;display: flex;flex-direction: column;}
+.wirter_info .wirter_txt .name{font-size:16px;font-weight:500;line-height:20px;color:#111}
+.wirter_info .wirter_txt .txt{margin-top:6px;color:#666;}
+
 
 /*COLLABORATION*/
 .gallary_list{margin-top:80px;padding-top:32px;border-top:1px solid #666;}
@@ -275,4 +296,15 @@
     .set_wrap .box .txt strong{font-size:14px;line-height:13px;}
     .set_wrap .box .txt h4{font-size:20px;line-height:29px;margin-top:8px;}
     .set_wrap .box .txt p{margin-top: 16px;font-size: 16px;line-height:23px;}
+
+    /*ESSAYS*/
+    .dtline_wrap{margin-top:40px;}
+    .dtline_wrap .dtline_box+.dtline_box{margin-top:60px;}
+    .dtline_wrap .dtline_box.writer{padding-bottom:60px;}
+    .dtline_wrap .dtline_box .title{margin-bottom:20px;font-size:24px;line-height:31px;}
+    .wirter_info .profile_img{width:70px;height:70px;margin-right:23px;}
+    .wirter_info .wirter_txt .name{font-size:14px;line-height:18px;}
+    .wirter_info .wirter_txt .txt{font-size:14px;}
+    .dtline_wrap .dtline_box .cate_wrap .cate_inner{flex-wrap:wrap;row-gap: 8px;}
+    
 }

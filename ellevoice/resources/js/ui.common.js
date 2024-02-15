@@ -635,3 +635,37 @@ function moveTop() {
         $("html, body").animate({scrollTop: 0}, 400);
     });
 }
+
+
+// 텍스트 에어리어
+(function($) {
+    $.fn.textareaWithCount = function (options) {
+        // 기본 옵션값
+        defaults = {
+            delay: 4000,
+            maxlength: 0,
+        }
+
+        var settings = $.extend({}, defaults, options);
+        return this.each(function (i) {
+            var taBody = $(this);
+            var textarea = taBody.find(".textarea");
+            taBody.attr("maxlength", settings.maxlength);
+            var currentCnt = taBody.find('.current');
+            var totalCnt = taBody.find('.total');
+            totalCnt.text("/"+settings.maxlength);
+            taBody.on('input', function() {
+                var maxlength = textarea.val().length;
+                currentCnt.text(maxlength);
+            });
+            taBody.on('focusin', function(){
+                $(".is_mobile .popup_bottom").hide();
+                taBody.addClass('on');
+            });
+            taBody.on('focusout', function(){
+                $(".popup_bottom").show();
+                taBody.removeClass('on');
+            });
+        });
+    }
+})(jQuery);

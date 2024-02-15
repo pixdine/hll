@@ -32,8 +32,8 @@
 .board_list .board_st01 li .b_date{width:11%;white-space: nowrap;box-sizing: border-box;text-align: right;color: #666;}
 .board_list .board_st01 li .b_tit{font-size:18px;padding: 0 2%;}
 .board_list .board_st01 li .b_tit a{display: flex;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;gap:8px;align-items: center;}
-.board_list .board_st01 li .b_tit strong{overflow: hidden;display: block;white-space: nowrap;text-overflow: ellipsis;font-weight: 500;line-height: 26px;}
-.board_list .board_st01 li .b_tit .bdg_new{display: inline-block;font-size: 16px;font-weight:600;line-height:16px;text-align: center;vertical-align: middle;padding:8px 10px;border-radius:50%;background-color:#ECAC96;color:#fff;}
+.board_list .board_st01 li .b_tit strong{overflow: hidden;display:inline-block;white-space: nowrap;text-overflow: ellipsis;font-weight: 500;line-height: 26px;}
+.board_list .board_st01 li .b_tit .bdg_new{display: inline-block;font-size: 16px;font-weight:600;line-height:16px;text-align: center;vertical-align: middle;padding:8px 10px;border-radius:50%;background-color:#FF9546;color:#fff;}
 
 
 .view_detail_wrap{margin-top:80px;}
@@ -183,10 +183,10 @@
     .board_list .board_st01 li .b_num,.board_list .board_st01 li .b_tit{width:100%;padding:0}
     .board_list .board_st01 li .b_num{font-size:14px;line-height: 20px;}
     .board_list .board_st01 li .b_tit{margin-top:8px}
-    .board_list .board_st01 li .b_tit a{display:block;}
-    .board_list .board_st01 li .b_tit strong{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 46px;font-weight: 500;font-size: 16px;line-height: 23px;word-break: break-all;white-space: normal;}
+    .board_list .board_st01 li .b_tit strong{font-size:16px;}
     .board_list .board_st01 li .b_tit .comment{font-size:16px;line-height:23px;}
     .board_list .board_st01 li .b_date{width:100%;text-align:left;margin-top: 16px;}
+    .board_list .board_st01 li .b_tit .bdg_new{padding:6px 8px;}
 }
 
 @media screen and (max-width: 768px) {

@@ -133,6 +133,31 @@ $(() => {
     }
 })(jQuery);
 
+// 카테고리 펼치기/닫기
+(function($) {
+    $.fn.toggleBtnCate = function (options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+
+        return this.each(function (i){
+            var $cateWrap = $(this);
+            var $btn = $cateWrap.find(".btnbox .fold");
+            $btn.on("click", function () {
+                if(!$(this).hasClass("on")){
+                    //열림
+                    $(this).addClass("on");
+                    $cateWrap.addClass("on");
+                } else {
+                    //닫힘
+                    $(this).removeClass("on");
+                    $cateWrap.removeClass("on");
+                }
+            })
+        });
+    }
+})(jQuery);
+
 //iOS vh 대응
 function setCSS() {
     var setVh = () => {
@@ -508,7 +533,9 @@ $.fn.moreDrop = function () {
 };
 
 //디바이스 체크
+let cachedWidth = $(window).width();
 $(window).on("load resize", function () {
+    let newWidth = $(window).width();
     if (window.innerWidth > 768) {
         //PC
         $("body").removeClass("is_mobile").addClass("is_pc");
@@ -518,8 +545,10 @@ $(window).on("load resize", function () {
     }
     initOnDevice();
 
-    // 상세페이지 댓글 접기
-    $(".comment_box").commentToggle();
+    if(newWidth !== cachedWidth) {
+        // 상세페이지 댓글 접기
+        $(".comment_box").commentToggle();
+    }
 }).resize();
 
 // 공통탭 컨텐츠
@@ -633,3 +662,45 @@ function moveTop() {
         });
     }
 })(jQuery);
+
+
+// 작가 swiper
+function swiperWriter() {
+    const $swiperNewEssay = $('.swiper_new_essay .swiper');
+    if ($swiperNewEssay.length === 0) return false;
+
+    $swiperNewEssay.each(function () {
+        if (!this.swiper) {
+            const $btnNext = $(this).find(".swiper-button-next");
+            const $btnPrev = $(this).find(".swiper-button-prev");
+            new Swiper(this, {
+                observer: true,
+                observeParents: true,
+                slidesPerView: 2.65,
+                spaceBetween: 12,
+                navigation: {
+                    nextEl: $btnNext,
+                    prevEl: $btnPrev,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3.5,
+                    },
+                    1024: {
+                        slidesPerView: 4.5,
+                    },
+                    1140: {
+                        slidesPerView: 4,
+                        spaceBetween: 75,
+                    },
+                    1370: {
+                        slidesPerView: 5,
+                        spaceBetween: 75,
+                    }
+                }
+            });
+        }
+        
+    });
+}
+

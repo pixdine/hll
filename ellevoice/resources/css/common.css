@@ -225,6 +225,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .bctype2{background-color:#fff;border-color:#111;color:#111;}
 .bctype3{background-color:#fff;border-color:#fff;color:#111;}
 .bctype4{background-color:#fff;border-color:#ccc;color:#111;}
+.bctype5{background-color:#111;border-color:#111;color:#fff;}
 
 /* button : disabled */
 .btn:disabled, .btn.disabled,

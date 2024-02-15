@@ -145,15 +145,13 @@ function setCSS() {
 //header sticky
 function headerSticky() {
     var lastScroll = 0;
-    var headerTop = $(".header").offset().top;
-    var delta = 100; // ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
     var header = $(".header");
     var container = $(".container");
+    var containerTop = container.offset().top;
+    // var delta = 100; // ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
 
-    // var headerTop = $(".header_top").offset().top;
-    var headerHeight = $(".header").outerHeight();
-    var headerTopHeight = $(".header_top").outerHeight();
-    var headerBottomHeight = $(".header_bottom").outerHeight();
+    var headerHeight = header.outerHeight();
+    var delta = headerHeight;
 
     function scrollCallback(scrollTop) {
         // ios 15 이하 및 공통 처리
@@ -162,56 +160,27 @@ function headerSticky() {
 
         // body lock scroll 상태 계산 안함
         if (!$("body").hasClass("lockbody")) {
-            if (atTop) lastScroll = 0;
-            if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
+            // if (atTop) lastScroll = 0;
+            // if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
             /* 2023-12-13 : 개발에서 수정한 부분 반영 */
-            if (atTop) {
-                header.removeAttr("style");
-            }
+            // if (atTop) {
+            //     header.removeAttr("style");
+            // }
             /* //2023-12-13 : 개발에서 수정한 부분 반영 */
 
-            if (Math.abs(lastScroll - scrollTop) > delta) {
-                if (scrollTop > lastScroll && lastScroll > headerHeight + headerBottomHeight) {
-                //down
-                if (header.hasClass("view")) {
-                    //기사상세 헤더
-                    console.log("down > 11 ");
-                    if (headerTop < scrollTop) {
+            if (scrollTop > containerTop - headerHeight) {
+                if ($("body").hasClass("scroll_down")) {
+                    //down
+                    if (header.hasClass("view")) {
                         header.addClass("active");
                     }
-                } else {
-                    // header.addClass('down');
-                    if ($("body").hasClass("is_pc")) {
-                        if (header.hasClass("main")) {
-                            header.css("transform", `translate(0, ${-headerTopHeight}px)`);
-                            // header.css('top', -($('.header_top').outerHeight()));
-                        }
-                    } else {
-                        if (header.hasClass("main") || header.hasClass("sub")) {
-                            //header.css('transform', `translate(0, ${-(headerTopHeight)}px)`)
-                            header.css("transform", `translate(0, ${-headerTopHeight}px)`);
-                            // header.css('top', -($('.header_top').outerHeight()));
-                        }
-                    }
-                }
-                } else {
+                } else if ($("body").hasClass("scroll_up")) {
                     // up
                     if (header.hasClass("view")) {
-                        //기사상세 헤더
-                        $(".popup_layer", header).fadeOut(100);
                         header.removeClass("active");
-                        /* 상세페이지 공유하기 레이어 관련 */
-
-                        /* //상세페이지 공유하기 레이어 관련 */
-                } else {
-                        // header.removeClass('down')
-                        //header.css('transform', ``)
-                        container.removeAttr("style");
+                        $(".popup_layer", header).fadeOut(100);
                     }
                 }
-                lastScroll = scrollTop;
-            } else if (scrollTop < headerHeight + delta + $(".ad_google").height()) {
-                header.css("transform", "translate(0, 0)");
             }
         }
 
@@ -588,11 +557,6 @@ $(window).on("scroll", function () {
     }
 
     toggleBtnGoToTop(currentScrollTop);
-    // if(currentScrollTop > 200) {
-    //     $(".btn_gotop").fadeIn();
-    // } else {
-    //     $(".btn_gotop").fadeOut();
-    // }
 
     // 현재 스크롤 위치를 lastScrollTop에 저장
     lastScrollTop = currentScrollTop;

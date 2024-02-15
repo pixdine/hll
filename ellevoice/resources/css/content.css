@@ -2,6 +2,8 @@
 
 .container{padding-bottom:180px}
 .container .bodycont_section{margin-top:80px;overflow:hidden;}
+.bodycont_section .btn_area{margin-top:120px;text-align:center;}
+.bodycont_section .btn_area .btn{width:384px;}
 .cont_inner{max-width: 1280px;margin: 0 auto;padding: 0 40px;}
 
 
@@ -50,6 +52,7 @@
 .write_info{position:relative;margin-top:40px;}
 .profile_area{display:flex;align-items: center;justify-content: center;}
 .profile_area .profile_img{flex-shrink: 0;display: block;overflow: hidden;width: 24px;height: 24px;margin-right: 12px;border-radius: 50%;background: url('../images/img_profile.png') no-repeat center center / 100% auto;}
+.profile_area .profile_img img{display: block;width: 100%;height: 100%;object-fit: cover;background-color:#fff;}
 .profile_area .user_info{display: flex;flex-direction: row;align-items: center;min-width: 0;}
 .profile_area .user_info > span{display:block;position:relative;font-size:14px;font-weight:500;line-height:20px;color:#666;}
 .profile_area  .user_info > span ~ span{margin-left:12px;padding-left:12px;}
@@ -202,6 +205,17 @@
 .btn_area .btn span:after{content: '';position: absolute;top: 50%;right:0;transform: translateY(-50%);background: url()0/100%;    width: 16px;height: 16px;}
 .btn_area .btn.ico_down span::after{background-image: url('../images/ico_download_b.png');width: 15px;height: 16px;}
 .btn_area .btn.ico_plus span::after{background-image: url('../images/ico_plus_b.png');}
+
+
+/*에세이*/
+.essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
+.essay_list > li {width: calc(100% / 3 - 16px);}
+
+/*mypage*/
+.mytit_wrap{margin-bottom:24px;}
+.mytit_wrap .mytit_area{display:flex;position: relative;background-color:#00A05E;padding:20px 23px;}
+.mytit_wrap .mytit_area .tit{overflow: hidden;font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
+.mytit_wrap .mytit_area .tit .num{font-family:'Elle Gabor Std';font-size: 26px;font-weight:600;line-height:25px;}
 
 @media screen and (max-width: 899px) {
     

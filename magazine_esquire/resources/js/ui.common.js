@@ -1210,7 +1210,9 @@ $.fn.moreDrop = function () {
 };
 
 //디바이스 체크
+let cachedWidth = $(window).width();
 $(window).on("load resize", function () {
+    let newWidth = $(window).width();
     if (window.innerWidth > 768) {
         //PC
         $("body").removeClass("is_mobile").addClass("is_pc");
@@ -1220,8 +1222,10 @@ $(window).on("load resize", function () {
     }
     initOnDevice();
 
-    // 상세페이지 댓글 접기
-    $(".comment_box").commentToggle();
+    if(newWidth !== cachedWidth) {
+        // 상세페이지 댓글 접기
+        $(".comment_box").commentToggle();
+    }
 }).resize();
 
 // 공통탭 컨텐츠

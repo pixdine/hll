@@ -405,8 +405,8 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .allmenu_wrap .allmenu_dimmed{display:block;content:'';position:absolute;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,0.7)}
 .allmenu_area{position:relative;width:480px;height:100%;background-color:#fff;}
 .allmenu_cont{display:flex;flex-direction:column;width:100%;height:100%;}
-.allmenu_cont .scroll_custom{height:calc(100% - 72px);padding:0 8px 8px 8px;}
-.allmenu_inner{overflow-y:auto;height:100%;padding:8px 88px 83px 100px;}
+.allmenu_cont .scroll_custom{height:calc(100% - 92px);padding:0 8px 8px 8px;}
+.allmenu_inner{overflow-y:auto;height:100%;padding:8px 88px 75px 100px;}
 .allmenu_wrap .top_area{padding:32px 24px;}
 .allmenu_wrap .btn_menu_close{position:relative;width:28px;height:28px;}
 .allmenu_wrap .btn_menu_close:before{content:'';display:block;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:28px;height:28px;background:url('../images/ico_close_28.svg') no-repeat center center / 100% auto;}
@@ -469,13 +469,19 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .family_wrap.open .btn_familysite:after{background-image:url('../images/ico_arrow_up_16.svg');}
 .familysite{display:none;padding:60px 0;background-color:#f7f7f7;text-align:left;}
 .familysite .tab_menu.type02{margin-bottom:40px;}
-.familysite .tab_menu.type02 li a{font-family:'SpoqaHanSansNeo';font-weight:500;font-size:20px;line-height:1;}
+.familysite .tab_menu.type02 li a{font-family: Gotham;font-weight:500;font-size:20px;line-height:1;}
 .familysite .tab_menu.type02 li.on a{font-weight:500;}
 .familysite_list.family{max-width:79.667%;}
 .familysite_list ul{display:flex;flex-wrap:wrap;gap:24px;}
 .familysite_list li{width:calc(20% - 20px);}
 .familysite_list.family li{width:calc(25% - 18px);}
 .familysite_list li a{display:block;font-family: Gotham, 'Noto Sans KR';font-weight:500;font-size:16px;line-height:1;color:#666;}
+
+/* go to top */
+.btn_top {display: none;position: absolute;bottom: calc(100% + 80px);right: 80px;width: 68px;height: 68px;border-radius: 50%;background-color: var(--point);box-shadow: 2px 7px 10px 0px rgba(0, 0, 0, 0.16);}
+.btn_top::after {content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 24px;height: 24px;background: url("../images/ico_arrow_top_24.svg") no-repeat center center / contain;}
+.btn_top.fixed {position: fixed;bottom: 80px;}
+.btn_top.show {display: block;}
 
 /* swiper */
 .swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}
@@ -742,7 +748,7 @@ background:#fff;overflow:hidden;z-index:230}
 @media (max-width:768px){
 	.header .cont_inner{justify-content: space-between;}
 	.header .logo{margin-left:0;}
-	.header .btn_menu{position:relative;left:0;}
+	.header .btn_menu{position:relative;left:0;margin-right:-7px;}
 
 	.pc_br{display:none;}
 	.mo_br{display:block;}
@@ -766,6 +772,10 @@ background:#fff;overflow:hidden;z-index:230}
 	.btn_wrap.type2{margin-top:60px;}
 	.btn_list_wrap{margin-top:80px;}
 	.btn_list_wrap .btn{width:100%;}
+
+	/* go to top */
+	.btn_top {bottom: calc(100% + 20px);right: 20px;width: 52px;height: 52px;box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);}
+	.btn_top.fixed {bottom: 20px}
 
 	.tit_wrap{margin-bottom:24px;}
 	.tit_wrap .tit{font-size:22px;line-height:32px;}
@@ -799,11 +809,11 @@ background:#fff;overflow:hidden;z-index:230}
 	.allmenu_list .depth1 > li > a span{right:-40px;width:35px;height:35px;}
 	.allmenu_list .depth1 > li.has_menu > a span:before{top:9px;right:0;width:16px;height:16px;}
 	.allmenu_list .depth2 > li{margin-top:16px;}
-	.allmenu_list .depth2 > li > a{font-size:16px;line-height:19px;}
+	.allmenu_list .depth2 > li > a{font-size:16px;line-height:23px;}
 	.allmenu_wrap .etc_link li a{font-size:24px;line-height:35px;}
 	.allmenu_wrap .etc_link li a::after{width: 20px;height: 20px;background-image: url("../images/ico_arrow_right_20.svg");}
 	.allmenu_wrap .banner{margin-left: -48px;margin-right: -48px;}
-	.allmenu_wrap .sns_list{margin-top:40px;}
+	.allmenu_wrap .sns_list{margin-top:60px;}
 
 	.inputbox .inp{padding:0 16px;}
 	.btn_ico.search{background-image:url('../images/ico_search_20.svg');background-size:20px auto;}

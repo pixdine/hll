@@ -390,7 +390,7 @@ contents
 	/* WRITER */
 	.writer_list .btn_ico.dibs {top:134px;margin-left: 56px;}
 	.writer_list .img_area {width: 140px;height: 140px;}
-	.writer_list .cont .nm {font-size: 16px;line-height: 22px;}
+	.writer_list .cont .nm {font-size: 16px;line-height: 22px;font-weight: 500;}
 	.writer_list .cont .desc {overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-top: 8px;font-size: 14px;line-height: 24px;}
 
 	.new_essay .cont_inner {padding-top: 40px;padding-bottom: 40px;}
@@ -406,7 +406,8 @@ contents
 	.writer_list_wrap .writer_list > li {width: 100%;}
 	.writer_list_wrap .writer_list > li > a {padding: 28px 28px 6px;}
 
-	.writer_view .page_head .tit {margin-top: 16px;font-size: 22px;line-height: 32px;}
-	.writer_view .page_head .writer_img {width: 180px;height: 180px;}
-	.writer_view .page_head .writer_img .btn_ico.dibs {width: 32px;height: 32px;}
+	.writer_view .subtit_wrap .tit {margin-top: 16px;font-size: 22px;line-height: 32px;}
+    .writer_view .subtit_wrap .txt {margin-top: 8px;}
+	.writer_view .subtit_wrap .writer_img {width: 180px;height: 180px;}
+	.writer_view .subtit_wrap .writer_img .btn_ico.dibs {width: 32px;height: 32px;}
 }   

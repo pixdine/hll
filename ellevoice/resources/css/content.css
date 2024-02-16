@@ -66,7 +66,6 @@ contents
 .view_detail_body{position: relative;border-bottom: 1px solid #dbdbdb;}
 .view_detail_body_cont{max-width: 996px;margin: 0 auto;padding-bottom: 80px;font-family: 'Noto Sans KR';font-size: 16px;font-weight: 400;line-height: 28px;color: #111;}
 .view_detail_body_cont .detail_slide{margin-top:24px;}
-.view_detail_body_cont .caption{font-size:14px;font-weight:400;line-height:24px;color:#666;margin-top:12px;letter-spacing: 0.08em;}
 .view_detail_body_cont .h_txt{font-size:16px;font-weight:700;line-height:28px;}
 .view_detail_body ~ .view_detail_footer{border-top:0;}
 .view_detail_footer{border-top:1px solid #dbdbdb;border-bottom:2px solid #111;}
@@ -327,6 +326,8 @@ contents
     .view_detail_footer .board_item .prev_board:before,
     .view_detail_footer .board_item .next_board:before{width:20px;height:20px;}
 
+    .view_detail_body_cont.atc_body .ab_photo{margin:20px auto;}
+    .view_detail_body_cont.atc_body .caption{padding:0}
 
     /* 리뷰 & 댓글 모듈 */
     .comment_wrap.review{margin-top:32px;}
@@ -379,7 +380,8 @@ contents
     .wirter_info .profile_img{width:70px;height:70px;margin-right:23px;}
     .wirter_info .wirter_txt .name{font-size:14px;line-height:18px;}
     .wirter_info .wirter_txt .txt{font-size:14px;}
-    .dtline_wrap .dtline_box .cate_wrap .cate_inner{flex-wrap:wrap;row-gap: 8px;}
+    .dtline_wrap .dtline_box .cate_wrap .cate_inner{display:flex;white-space:normal;row-gap:8px;}
+    .dtline_wrap .dtline_box .cate_wrap .cate_inner .cate_item+.cate_item{margin-left:0;}
 
 	/* WRITER */
 	.writer_list .btn_ico.dibs {top:134px;margin-left: 56px;}

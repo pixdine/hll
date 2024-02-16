@@ -293,7 +293,7 @@ body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transfor
 .atc_mask_login .mask_cont .btn_wrap { margin-top:16px}
 
 /* 하이라이츠 상세 */
-.view_detail_footer{margin-top:120px;border-top:1px solid #dbdbdb;border-bottom:2px solid #111;}
+/* .view_detail_footer{margin-top:120px;border-top:1px solid #dbdbdb;border-bottom:2px solid #111;} */
 .view_detail_footer .board_item{display:flex;align-items:center;overflow:hidden;height:72px;padding:0 24px;}
 .view_detail_footer .board_item ~ .board_item{border-top:1px solid #dbdbdb;}
 .view_detail_footer .board_item .board_title{flex:1 1 auto;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;font-size:18px;font-weight:500;line-height:24px;}

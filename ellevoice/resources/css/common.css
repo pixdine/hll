@@ -928,7 +928,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.essay_list .cont .essay_cate {font-size: 11px;}
 	.essay_list .cont .essay_cate::before {top: -2px;}
 	.essay_list .cont .tit {height: 39px;margin-top: 4px;font-size: 14px;}
-	.essay_list .cont .writer {margin-top: 12px;font-size: 12px;}
+	.essay_list .cont .writer {margin-top:16px;font-size: 12px;}
 	.essay_list .util {top: 8px;right: 8px;gap: 4px;}
 	.essay_list .util .new {width: 28px;height: 28px;}
 

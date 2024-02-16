@@ -816,5 +816,3 @@ function swiperWriter() {
         
     });
 }
-
->>>>>>> 3b3c3d3a96d5bb0a9c43606feee4f8a17781c4b3

@@ -163,7 +163,7 @@
 								<a href="#">
 									<picture>
 										<source media="(max-width:768px)" srcset="../resources/images/img_subscription_allmenu_mo.png">
-										<img src="../resources/images/img_subscription_allmenu.png" alt="뉴스레터 구독하기">
+										<img src="../../resources/images/img_subscription_allmenu.png" alt="뉴스레터 구독하기">
 									</picture>
 								</a>
 							</div>
@@ -459,6 +459,73 @@
 													</div>
 												</div>
 											</li>
+
+											<li class="reply_area">
+												<div class="comment_item">
+													<!-- 프로필 이미지 영역-->
+													<div class="comment_thumb">
+														<div class="profile_img">
+															<img src="../../resources/images/img_profile1.png" alt="프로필 이미지">
+														</div>
+													</div>
+													<!-- //프로필 이미지 영역-->
+
+													<div class="comment_cont">
+														<!-- 상단 정보영역 -->
+														<div class="comment_info">
+															<div class="user_info">
+																<span class="name">ellevoice_02</span>
+																<span class="date">댓글 수정</span><!-- D: 내 댓글수정 시 "댓글 수정"으로 텍스트 변경 -->
+															</div>
+															<!-- 드롭다운메뉴 -->
+															<!-- D: 내 댓글수정 시 드롭다운 레이어가 닫히면서 드롭다운메뉴 영역 미노출 -->
+															<div class="more_drop" style="display:none">
+																<button type="button" class="btn_ico more"><span class="blind">메뉴 더보기</span></button>
+																<!-- 드롭다운 레이어 -->
+																<div class="layer_box">
+																	<ul class="layer_list">
+																		<li><button type="button" class="btnm modify" onclick="console.log('수정');"><span>수정</span></button></li>
+																		<li><button type="button" class="btnm del" onclick="console.log('삭제');"><span>삭제</span></button></li>
+																		<li><button type="button" class="btnm cancel" onclick="console.log('취소');"><span>취소</span></button></li>
+																	</ul>
+																</div>
+																<!-- //드롭다운 레이어 -->
+															</div>
+															<!-- //드롭다운메뉴 -->
+														</div>
+														<!-- //상단 정보영역 -->
+
+														<!-- 댓글내용 -->
+														<div class="comment_box" style="display:none">
+															<div class="comment_txt">
+																<p class="txt">최근들어 환경의 중요성을 많이 생각하게 되는데 내가 좋아하는 록시땅 에서 환경 친화적인 리싸이클링 작품을 보게되어 너무나 뜻깊네요. 앞으로도 환경을 생각하는 록시땅을 응원할께요. </p>
+															</div>
+														</div>
+														<!-- //댓글내용 -->
+
+														<!-- D: 댓글 수정하기 클릭 시에만 노출 -->
+														<div class="comment_modify" style="display:block">
+															<!-- 댓글수정 -->
+															<div class="textarea_wrap" maxlength="1000">
+																<textarea class="textarea review_text_area" maxlength="1000" placeholder="댓글을 남겨주세요." title="댓글을 남겨주세요.">최근들어 환경의 중요성을 많이 생각하게 되는데 내가 좋아하는 록시땅 에서 환경 친화적인 리싸이클링 작품을 보게되어 너무나 뜻깊네요. 앞으로도 환경을 생각하는 록시땅을 응원할께요.</textarea>
+																<div class="cnt_bottom">
+																	<div class="cnt_txt">
+																		<span class="current">0</span>
+																		<span class="total">/1000</span>
+																	</div>
+																	<div class="comment_btn">
+																		<button type="button" class="btn_s bctype2"><span>취소</span></button>
+																		<button type="button" class="btn_s bctype5"><span>등록</span></button>
+																	</div>
+																</div>
+															</div>
+															<!-- //댓글수정 -->
+														</div>
+														<!-- //D: 댓글 수정하기 클릭 시에만 노출 -->
+													</div>
+												</div>
+											</li>
+
 											<li>
 												<div class="comment_item">
 													<!-- 프로필 이미지 영역-->

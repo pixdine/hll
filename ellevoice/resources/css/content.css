@@ -171,7 +171,7 @@ contents
 .dtline_wrap .dtline_box .cate_wrap .cate_item input + .essay_cate.career{background-color:#8274BD;border-color:#8274BD;}
 .dtline_wrap .dtline_box .cate_wrap .cate_item input + .essay_cate.culture{background-color:#FF7A30;border-color:#FF7A30;}
 .dtline_wrap .dtline_box.credit .list_credit{color:#666;}
-.wirter_info .profile_img{display: block;overflow: hidden;width:100px;height: 100px;margin-right:24px;border-radius: 50%;background: url('../images/img_writer_default.png') no-repeat center center / 100% auto;}
+.wirter_info .profile_img{display: block;overflow: hidden;width:100px;height: 100px;margin-right:24px;border-radius: 50%;background: url('../images/img_writer_default.png') no-repeat center center / 100% auto;} 
 .wirter_info .profile_img img{display: block;width: 100%;height: 100%;object-fit: cover;}
 .wirter_info .wirter_txt{min-width: 0;flex: 1;display: flex;flex-direction: column;}
 .wirter_info .wirter_txt .name{font-size:16px;font-weight:500;line-height:20px;color:#111}

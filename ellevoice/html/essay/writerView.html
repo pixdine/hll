@@ -184,28 +184,31 @@
 		<!-- //전체메뉴 -->
 
 		<!-- container -->
-		<div id="container" class="container essay">
+		<div id="container" class="container writer_view">
 			<div class="heading_wrap">
 				<div class="heading_inner">
-					<h2 class="tit">ESSAY</h2>
+					<h2 class="tit">WRITER</h2>
 				</div>
 			</div>
 
 			<div class="contents">
 				<div class="page_head">
 					<div class="cont_inner">
-						<h3 class="tit">엘르보이스 에세이</h3>
-						<p class="sub_txt">관계, 커리어, 문화, 일상 등<br>매월 <엘르>를 통해 공개되는 4편의 에세이를 모아 볼 수 있습니다.</p>
+						<div class="writer_img">
+							<div class="img"></div>
+							<button type="button" class="btn_ico dibs js-btn-scrap">
+								<span class="blind">찜하기</span>
+							</button>
+						</div>
+						<h3 class="tit">황선우 작가</h3>
+						<p class="sub_txt">
+							주식회사 틴트레이닝 대표.<br>
+							14년간 매일 100명 이상의 아이에게 운동을 가르친 아동 운동 전문가로서 &lt;공부 잘하는 아이는 체력이 다르다<br class="pc_br">&gt;를 펴냈다. 10대 소녀들의 지속 가능한 운동 콘텐츠를 제작하며 커뮤니티를 운영하고 있다.
+						</p>
 					</div>
 				</div>
 
 				<div class="cont_inner">
-					<div class="inputbox search">
-						<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">
-						<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
-						<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
-					</div>
-
 					<div class="cate_wrap">
 						<div class="cate_inner">
 							<span class="cate_item">
@@ -255,6 +258,10 @@
 					</div>
 
 					<div class="essay_list_wrap">
+						<div class="total_cont">
+							<span class="txt">총<em class="cnt">457</em>건<span class="pc_br">의 에세이</span></span>
+						</div>
+
 						<ul class="essay_list">
 							<li>
 								<a href="#">
@@ -508,7 +515,7 @@
 				</div>
 				<!--//구독신청 고정 배너영역-->
 			</div>
-		</main>
+		</div>
 		<!-- //container -->
 
 		<!-- footer -->
@@ -641,7 +648,6 @@
 	</div>
 
 	<!-- js -->
-	<script src="../../resources/js/swiper.min.js"></script>
 	<script src="../../resources/js/ui.common.js"></script>
 	<!-- //js -->
 

@@ -211,6 +211,9 @@
 .essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
 .essay_list > li {width: calc(100% / 3 - 16px);}
 
+/* writer */
+.writer .new_essay {background-color: #F7F1E5;}
+
 /*mypage*/
 .mytit_wrap{margin-bottom:24px;}
 .mytit_wrap .mytit_area{display:flex;position: relative;background-color:#00A05E;padding:20px 23px;}

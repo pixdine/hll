@@ -208,11 +208,45 @@
 
 
 /*에세이*/
+.essay_list_wrap {margin-top: 80px;}
+.essay_list_wrap .total_cont {margin-bottom: 40px;}
+.essay_list_wrap .total_cont .txt {font-size: 24px;line-height: 35px;font-weight: 400;}
+.essay_list_wrap .total_cont .cnt {display: inline-block;margin: 0 8px;color: var(--point);font-family: ElleGaborStd;font-size: 26px;font-weight: 600;}
 .essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
 .essay_list > li {width: calc(100% / 3 - 16px);}
 
-/* writer */
-.writer .new_essay {background-color: #F7F1E5;}
+/*writer*/
+.writer_list > li {position: relative;}
+.writer_list > li > a {display: flex;flex-direction: column;align-items: center;}
+.writer_list .btn_ico.dibs {position: absolute;top: 188px;left: 50%;transform: translateX(-50%);margin-left: 74px;}
+.writer_list .img_area {position: relative;width: 180px;height: 180px;}
+.writer_list .img {overflow: hidden;position: relative;width: 100%;padding-top: 100%;background: url("../images/img_writer_default.png") no-repeat center center / contain;border-radius: 50%;}
+.writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;}
+.writer_list .cont {margin-top: 16px;text-align: center;}
+.writer_list .cont .nm {font-size: 20px;line-height: 28px;}
+.writer_list .cont .desc {margin-top: 12px;line-height: 26px;font-weight: 400;}
+
+.new_essay {background-color: #F7F1E5;}
+.new_essay .cont_inner {padding-top: 60px;padding-bottom: 60px;}
+.new_essay .tit {margin-bottom: 34px;font-size: 28px;font-weight: 700;line-height: 41px;}
+
+.swiper_new_essay {overflow: hidden;position: relative;padding: 0 75px;margin: 0 -75px;}
+.swiper_new_essay .swiper-button-next,
+.swiper_new_essay .swiper-button-prev {top: 50%;transform: translateY(-50%);width: 48px;height: 48px;background: no-repeat center center / contain;cursor: pointer;}
+.swiper_new_essay .swiper-button-next {right: 0;background-image: url("../images/ico_arrow_right_48_on.svg");}
+.swiper_new_essay .swiper-button-prev {left: 0;background-image: url("../images/ico_arrow_left_48_off.svg");}
+.swiper_new_essay .writer_list .btn_ico.dibs {top: calc(180px - 32px);}
+
+.writer_list_wrap {padding-top: 80px;}
+.writer_list_wrap .writer_list {display: flex;flex-wrap: wrap;gap: 48px 24px;}
+.writer_list_wrap .writer_list > li {flex-shrink: 0;width: calc(100% / 2 - 12px);}
+.writer_list_wrap .writer_list > li > a{padding: 40px 30px;}
+
+.writer_view .subtit_wrap .tit {margin-top: 32px;font-size: 28px;line-height: 41px;}
+.writer_view .subtit_wrap .writer_img {position: relative;width: 220px;height: 220px;margin: 0 auto;}
+.writer_view .subtit_wrap .writer_img .img {overflow: hidden;position: relative;width: 100%;padding-top: 100%;background: url("../images/img_writer_default.png") no-repeat center center / contain;border-radius: 50%;}
+.writer_view .subtit_wrap .writer_img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;}
+.writer_view .subtit_wrap .writer_img .btn_ico.dibs {position: absolute;bottom: 0;right: 0;width: 40px;height: 40px;}
 
 /*mypage*/
 .mytit_wrap{margin-bottom:24px;}
@@ -220,8 +254,19 @@
 .mytit_wrap .mytit_area .tit{overflow: hidden;font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
 .mytit_wrap .mytit_area .tit .num{font-family:'Elle Gabor Std';font-size: 26px;font-weight:600;line-height:25px;}
 
+
+/************************* Media Query *************************/
+@media (max-width:1370px){
+	.swiper_new_essay {padding: 0;margin: 0;}
+	.swiper_new_essay .swiper {padding: 0 70px;}
+}
+@media (max-width:1140px){
+	.swiper_new_essay {padding: 0 40px;margin: 0 -40px;}
+	.swiper_new_essay .swiper {padding: 0;}
+	.swiper_new_essay .swiper-button-next,
+	.swiper_new_essay .swiper-button-prev {display: none;}
+}
 @media screen and (max-width: 899px) {
-    
     /*board*/
     .board_list .board_st01 li{padding:24px 0}
     .board_list .board_st01 li .list_item > div{display: flex;flex-direction: column;}
@@ -313,8 +358,17 @@
     .set_wrap .box .txt strong{font-size:14px;line-height:13px;}
     .set_wrap .box .txt h4{font-size:20px;line-height:29px;margin-top:8px;}
     .set_wrap .box .txt p{margin-top: 16px;font-size: 16px;line-height:23px;}
+    
+    /* 에세이 목록 */
+	.essay_list {gap: 24px 12px;}
+	.essay_list > li {width: calc(100% / 2 - 6px);}
 
-    /*ESSAYS*/
+	/* ESSAYS */
+	.essay_list_wrap {margin-top: 40px;}
+	.essay_list_wrap .total_cont {margin-bottom: 24px;}
+	.essay_list_wrap .total_cont .txt {font-size: 16px;line-height: 23px;}
+	.essay_list_wrap .total_cont .cnt {font-size: 18px;font-weight: 500;}
+
     .dtline_wrap{margin-top:40px;}
     .dtline_wrap .dtline_box+.dtline_box{margin-top:60px;}
     .dtline_wrap .dtline_box.writer{padding-bottom:60px;}
@@ -323,5 +377,27 @@
     .wirter_info .wirter_txt .name{font-size:14px;line-height:18px;}
     .wirter_info .wirter_txt .txt{font-size:14px;}
     .dtline_wrap .dtline_box .cate_wrap .cate_inner{flex-wrap:wrap;row-gap: 8px;}
-    
-}
+
+	/* WRITER */
+	.writer_list .btn_ico.dibs {top:134px;margin-left: 56px;}
+	.writer_list .img_area {width: 140px;height: 140px;}
+	.writer_list .cont .nm {font-size: 16px;line-height: 22px;}
+	.writer_list .cont .desc {overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-top: 8px;font-size: 14px;line-height: 24px;}
+
+	.new_essay .cont_inner {padding-top: 40px;padding-bottom: 40px;}
+	.new_essay .tit {margin-bottom: 32px;font-size: 20px;line-height: 29px;}
+
+	.swiper_new_essay {padding: 0 20px;margin: 0 -20px;}
+	.swiper_new_essay .writer_list .btn_ico.dibs {top: calc(118px - 28px);left: auto;right: 0;transform: inherit; margin-left: 0;}
+	.swiper_new_essay .writer_list .img_area {width: 118px;height: 118px;}
+	.swiper_new_essay .writer_list .cont .nm {font-size: 14px;}
+
+	.writer_list_wrap {padding-top: 40px;}
+	.writer_list_wrap .writer_list {gap: 20px;}
+	.writer_list_wrap .writer_list > li {width: 100%;}
+	.writer_list_wrap .writer_list > li > a {padding: 28px 28px 6px;}
+
+	.writer_view .page_head .tit {margin-top: 16px;font-size: 22px;line-height: 32px;}
+	.writer_view .page_head .writer_img {width: 180px;height: 180px;}
+	.writer_view .page_head .writer_img .btn_ico.dibs {width: 32px;height: 32px;}
+}   

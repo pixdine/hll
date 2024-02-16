@@ -633,3 +633,115 @@ function moveTop() {
         });
     }
 })(jQuery);
+
+// 이미지 첨부
+(function($) {
+    $.fn.attachPicture = function (options) {
+        // 기본 옵션값
+        defaults = {
+            defaultMaxFiles: 10,
+            defaultMaxSizeMB: 10,
+            defaultCurrentFiles: 0
+        }
+
+        var settings = $.extend({}, defaults, options);
+        return this.each(function (i) {
+            if (!$(this).hasClass("attached")) {
+                var apBody = $(this);
+                var currentCnt = apBody.find(".attach_cnt .current");
+                var totalCnt = apBody.find('.attach_cnt .total');
+                var maxFiles = settings.defaultMaxFiles;
+                var maxSizeMB = settings.defaultMaxSizeMB;
+                var currentFiles = settings.defaultCurrentFiles;
+                var totalSizeMB = 0;
+                var attachPic = apBody.find(".attach_pic");
+                var inpFile = apBody.find("#image-upload");
+                var btnAttach = apBody.find(".btn_attach");
+                totalCnt.text(settings.maxFiles);
+    
+                // 파일 선택 창을 열기 위한 버튼 핸들러
+                btnAttach.click(function () {
+                    if (currentFiles < maxFiles) {
+                        inpFile.click();
+                    } else {
+                        alert("첨부파일은 " + maxFiles + "개 까지 등록 가능합니다.");
+                    }
+                });
+    
+                // 파일이 선택되면 실행
+                inpFile.change(function () {
+                    var files = $(this)[0].files;
+                    var newSizeMB = Array.from(files).reduce((total, file) => total + file.size, 0) / 1024 / 1024; // Size in MB of the new files
+    
+                    // 파일의 수가 최대 허용 수를 초과하거나 파일 크기가 최대 허용 크기를 초과하는 경우 검사
+                    if (files.length + currentFiles > maxFiles) {
+                        // 파일 수 제한 초과 경고
+                        alert("최대 " + maxFiles + "개의 파일만 업로드할 수 있습니다.");
+                    } else if (totalSizeMB + newSizeMB > maxSizeMB) {
+                        // 파일 크기 제한 초과 경고
+                        alert("이미지 등록 용량을 초과했습니다. 다시 확인해 주세요!");
+                    } else {
+                        currentFiles += files.length;
+                        totalSizeMB += newSizeMB;
+                        updateCounter();
+    
+                        // 선택된 각 파일에 대한 처리
+                        Array.from(files).forEach(file => {
+                            var fileSizeMB = file.size / 1024 / 1024; // Size in MB of the current file
+    
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                // 첨부 이미지 및 삭제 버튼을 포함한 컨테이너 생성
+                                var imgContainer = $('<div class="attach_img"></div>');
+                                var img = $('<div class="att_img"><img src="' + e.target.result + '"></div>');
+                                var btnDel = $('<button class="btn_del" title="첨부 이미지 삭제"><span class="blind">첨부 이미지 삭제</span></button>');
+    
+                                // 데이터에 파일 크기 저장
+                                imgContainer.data('size', fileSizeMB);
+    
+                                btnDel.click(function () {
+                                    // 파일 크기 줄이기
+                                    totalSizeMB -= imgContainer.data('size');
+    
+                                    // 이미지 컨테이너 제거
+                                    imgContainer.remove();
+    
+                                    currentFiles--;
+                                    updateCounter();
+                                    console.log(totalSizeMB);
+                                });
+    
+                                imgContainer.append(img).append(btnDel);
+                                attachPic.append(imgContainer);
+                            };
+                            reader.readAsDataURL(file);
+                            console.log(totalSizeMB);
+                        });
+                        // 파일 처리가 완료된 후 input 필드 초기화
+                        $(this).val(null);  // 현재 input의 값을 null로 설정하여 초기화
+                    } 
+                });                    
+    
+                // 현재 파일 수 업데이트
+                function updateCounter() {
+                    currentCnt.text(currentFiles);
+                    totalCnt.text(settings.defaultMaxFiles);
+    
+                    // 이미지개수에 따른 버튼 활성화 조절
+                    updateUploadButtonState();
+                }
+    
+                // 버튼의 활성화 또는 비활성화 상태를 설정합니다.
+                function updateUploadButtonState() {
+                    if (currentFiles >= maxFiles) {
+                        btnAttach.prop('disabled', true); // 파일이 maxFiles 이상이면 버튼을 비활성화합니다.
+                    } else {
+                        btnAttach.prop('disabled', false); // 그렇지 않으면 버튼을 활성화합니다.
+                    }
+                }
+    
+                updateCounter();  // 초기 카운터 설정
+            }
+        });
+    }
+})(jQuery);

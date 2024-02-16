@@ -776,7 +776,7 @@ function moveTop() {
 })(jQuery);
 
 // 작가 swiper
-function swiperWriter() {
+function swiperWriter() { 
     const $swiperNewEssay = $('.swiper_new_essay .swiper');
     if ($swiperNewEssay.length === 0) return false;
 

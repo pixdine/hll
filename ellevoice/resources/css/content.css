@@ -51,7 +51,7 @@ contents
 .view_detail_wrap{margin-top:80px;}
 .view_detail_header{position: relative;margin-bottom: 40px;padding-bottom: 40px;text-align: center;border-bottom: 1px solid #dbdbdb;z-index: 1;}
 .view_detail_header .cate{display: block;margin-bottom: 24px;font-size: 16px;font-weight:500;line-height: 23px;}
-.view_detail_header .tit{font-size: 36px;font-weight: 500;line-height: 48px;letter-spacing: -0.01em;}
+.view_detail_header .tit{font-size: 36px;font-weight: 700;line-height: 48px;letter-spacing: -0.01em;}
 .write_info{position:relative;margin-top:40px;}
 .profile_area{display:flex;align-items: center;justify-content: center;}
 .profile_area .profile_img{flex-shrink: 0;display: block;overflow: hidden;width: 24px;height: 24px;margin-right: 12px;border-radius: 50%;background: url('../images/img_profile.png') no-repeat center center / 100% auto;}
@@ -160,7 +160,7 @@ contents
 
 .dtline_wrap{margin-top:80px;}
 .dtline_wrap .dtline_box+.dtline_box{margin-top:80px;}
-.dtline_wrap .dtline_box .title{font-size:28px;font-weight:500;line-height:36px;font-family:'Elle Gabor Std';letter-spacing: -0.01em;margin-bottom:24px;}
+.dtline_wrap .dtline_box .title{font-size:28px;font-weight:500;line-height:36px;font-family: ElleGaborStd;letter-spacing: -0.01em;margin-bottom:24px;}
 .dtline_wrap .dtline_box.credit .title{margin-bottom:16px;}
 .dtline_wrap .dtline_box.writer{border-bottom:1px solid #DBDBDB;padding-bottom:80px;}
 .wirter_info{position: relative;display: flex;flex-direction: row;}
@@ -194,7 +194,7 @@ contents
 .set_wrap .box{width: calc(50% - 12px);padding:60px 24px;text-align: center;max-height:342px;}
 .set_wrap .box.bg_beg{background-color:#FAF7EF}
 .set_wrap .box.bg_grn{background-color:#EFFAF6}
-.set_wrap .box .txt strong{font-size:16px;line-height:16px;color:#00A05E;letter-spacing:-0.01em;font-family:'Elle Gabor Std';}
+.set_wrap .box .txt strong{font-size:16px;line-height:16px;color:#00A05E;letter-spacing:-0.01em;font-family:ElleGaborStd;}
 .set_wrap .box .txt h4{font-size:28px;line-height:41px;margin-top:12px;}
 .set_wrap .box .txt p{margin-top:24px;font-size:18px;color:#000;font-weight:500;line-height:26px;letter-spacing:-0.01em;}
 .set_wrap .box .btn_area{margin-top:24px;}
@@ -221,7 +221,7 @@ contents
 .writer_list .img {overflow: hidden;position: relative;width: 100%;padding-top: 100%;background: url("../images/img_writer_default.png") no-repeat center center / contain;border-radius: 50%;}
 .writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;}
 .writer_list .cont {margin-top: 16px;text-align: center;}
-.writer_list .cont .nm {font-size: 20px;line-height: 28px;}
+.writer_list .cont .nm {font-size: 20px;line-height: 28px;font-weight:700;}
 .writer_list .cont .desc {margin-top: 12px;line-height: 26px;font-weight: 400;}
 
 .new_essay {background-color: #F7F1E5;}
@@ -257,7 +257,7 @@ contents
 .mytit_wrap{margin-bottom:24px;}
 .mytit_wrap .mytit_area{display:flex;position: relative;background-color:#00A05E;padding:20px 23px;}
 .mytit_wrap .mytit_area .tit{overflow: hidden;font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
-.mytit_wrap .mytit_area .tit .num{font-family:'Elle Gabor Std';font-size: 26px;font-weight:600;line-height:25px;}
+.mytit_wrap .mytit_area .tit .num{font-family:ElleGaborStd;font-size: 26px;font-weight:600;line-height:25px;}
 
 /************************* Media Query *************************/
 @media (max-width:1370px){

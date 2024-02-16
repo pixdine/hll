@@ -143,7 +143,9 @@ $(() => {
         return this.each(function (i){
             var $cateWrap = $(this);
             var $btn = $cateWrap.find(".btnbox .fold");
+            
             $btn.on("click", function () {
+                $(".cate_inner").css("transform", "translate3d(0px, 0px, 0px)");
                 if(!$(this).hasClass("on")){
                     //열림
                     $(this).addClass("on");
@@ -775,10 +777,47 @@ function moveTop() {
     }
 })(jQuery);
 
+// 카테고리
+function swiperCategory() { 
+    const $swiperCate = $('.cate_swiper');
+    let ww = window.innerWidth;
+    let swiper = undefined;
+    if ($swiperCate.length === 0) return;
+
+    function init() {
+        // 모바일사이즈(768px)에서만 실행
+        console.log(ww);
+        if(ww <= 768 && swiper === undefined) {
+            console.log("dd");
+            $swiperCate.each(function () {
+                swiper = new Swiper(this, {
+                    observer: true,
+                    observeParents: true,
+                    watchOverflow: true,
+                    slidesPerView: "auto",
+                    spaceBetween: 12,
+                });
+            });
+        } else if (ww > 768 && swiper != undefined) {
+            $swiperCate.each(function () {
+                this.swiper.destroy();
+            });
+            swiper = undefined;
+        }
+    }
+
+    init();
+
+    $(window).on("resize", function () {
+        ww = window.innerWidth;
+        init();
+    });
+}
+
 // 작가 swiper
 function swiperWriter() { 
     const $swiperNewEssay = $('.swiper_new_essay .swiper');
-    if ($swiperNewEssay.length === 0) return false;
+    if ($swiperNewEssay.length === 0) return;
 
     $swiperNewEssay.each(function () {
         if (!this.swiper) {

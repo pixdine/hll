@@ -46,7 +46,7 @@ contents
 .board_list .board_st01 li .b_tit{font-size:18px;padding: 0 2%;}
 .board_list .board_st01 li .b_tit a{display: flex;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;gap:8px;align-items: center;}
 .board_list .board_st01 li .b_tit strong{overflow: hidden;display:inline-block;white-space: nowrap;text-overflow: ellipsis;font-weight: 500;line-height: 26px;}
-.board_list .board_st01 li .b_tit .new{display: inline-block;width: 32px;height: 32px;background: url('../images/ico_new.svg') no-repeat 0 0 / contain;}
+.board_list .board_st01 li .b_tit .new{display: inline-block;width: 32px;height: 32px;background-repeat:no-repeat;background-image:  url('../images/ico_new.svg');background-position:0;background-size: contain;}
 
 .view_detail_wrap{margin-top:80px;}
 .view_detail_header{position: relative;margin-bottom: 40px;padding-bottom: 40px;text-align: center;border-bottom: 1px solid #dbdbdb;z-index: 1;}
@@ -279,7 +279,6 @@ contents
     .board_list .board_st01 li .b_tit{margin-top:8px}
     .board_list .board_st01 li .b_tit strong{font-size:16px;}
     .board_list .board_st01 li .b_tit .comment{font-size:16px;line-height:23px;}
-    .board_list .board_st01 li .b_tit .new{width:28px;height:28px;}
     .board_list .board_st01 li .b_date{width:100%;text-align:left;margin-top: 16px;font-size:14px;}
 }
 
@@ -310,6 +309,8 @@ contents
     
     .btn_link{font-size:14px;line-height:20px;}
 
+    .board_list .board_st01 li .b_tit .new{width:28px;height:28px;}
+
     .view_detail_wrap{margin-top:40px;}
     .view_detail_wrap .btn_wrap{margin-top:32px;}
     .view_detail_wrap .btn_wrap .btn{width: 100%;}
@@ -329,6 +330,7 @@ contents
 
     .view_detail_body_cont.atc_body .ab_photo{margin:20px auto;}
     .view_detail_body_cont.atc_body .caption{padding:0}
+    
 
     /* 리뷰 & 댓글 모듈 */
     .comment_wrap.review{margin-top:32px;}

@@ -269,6 +269,41 @@ contents
 .mytit_wrap .mytit_area .tit{overflow: hidden;font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
 .mytit_wrap .mytit_area .tit .num{font-family:ElleGaborStd;font-size: 26px;font-weight:600;line-height:25px;}
 
+/*newsletter*/
+.newsletter .newsletter_head {position: relative;display: flex;align-items: center;min-height: 83px;justify-content: center; margin-bottom: 50px;border-top: 1px solid #999;border-bottom: 1px solid #999;}
+.newsletter .newsletter_head h4 {font-size: 28px;font-weight: 700;line-height: 41px;}
+.newsletter .newsletter_head .to,
+.newsletter .newsletter_head .from {position: absolute;font-family: NotoSans;font-size: 18px;}
+.newsletter .newsletter_head .to em,
+.newsletter .newsletter_head .from em {font-family: SaolDisplay;}
+.newsletter .newsletter_head .to {left: 160px;}
+.newsletter .newsletter_head .from {right: 135px;}
+.newsletter .newsletter_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
+.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);height: 279px; background: no-repeat 0 0 / 100% 100%;}
+.newsletter .newsletter_list > li > a {position: relative;display: flex;flex-direction: column;padding: 52px 32px 32px;height: 100%;}
+.newsletter .newsletter_list > li > a::after {content: "";position: absolute;bottom: 32px;right: 32px;width: 24px;height: 24px;background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 3L17 12L8 21' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat 0 0 / contain;}
+.newsletter .newsletter_list > li .times {margin-bottom: 16px;font-family: ElleGaborStd;font-weight: 500;font-size: 24px;line-height: 25px;}
+.newsletter .newsletter_list > li .tit {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;word-break: break-all;font-weight: 700;font-size: 24px;line-height: 32px;}
+.newsletter .newsletter_list > li .date {margin-top: auto;font-family: ElleGaborStd;font-weight: 500;font-size: 18px;line-height: 19px;}
+.newsletter .newsletter_list > li:nth-of-type(6n),
+.newsletter .newsletter_list > li:nth-of-type(6n + 1) {background-image: url("../images/newsletter_bg1.png");}
+.newsletter .newsletter_list > li:nth-of-type(6n - 2),
+.newsletter .newsletter_list > li:nth-of-type(6n + 2) {background-image: url("../images/newsletter_bg2.png");}
+.newsletter .newsletter_list > li:nth-of-type(6n - 1),
+.newsletter .newsletter_list > li:nth-of-type(6n + 3) {background-image: url("../images/newsletter_bg3.png");}
+.newsletter .newsletter_section + .newsletter_section {margin-top: 120px;}
+@media (max-width:1024px){
+    .newsletter .newsletter_list > li {width: calc(100% / 2 - 16px);}
+}
+@media (max-width:768px){
+    .newsletter .newsletter_list > li {width: 100%;}
+}
+
+.faq_wrap {margin-top: 120px;}
+.faq_wrap .faq_head {margin-bottom: 40px;text-align: center;}
+.faq_wrap .faq_head h4 {font-size: 40px;font-weight: 700;line-height: 50px;}
+
+
 /************************* Media Query *************************/
 @media (max-width:1370px){
 	.swiper_new_essay {padding: 0;margin: 0;}

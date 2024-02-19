@@ -65,6 +65,7 @@ contents
 .view_detail_header{position: relative;margin-bottom: 40px;padding-bottom: 40px;text-align: center;border-bottom: 1px solid #dbdbdb;z-index: 1;}
 .view_detail_header .cate{display: block;margin-bottom: 24px;font-size: 16px;font-weight:500;line-height: 23px;}
 .view_detail_header .tit{font-size: 36px;font-weight: 700;line-height: 48px;letter-spacing: -0.01em;}
+.view_detail_header .txt{margin-top:16px;font-family:'Noto Sans KR';font-size: 16px;font-weight: 400;line-height: 23px;letter-spacing: -0.01em;}
 .write_info{position:relative;margin-top:40px;}
 .profile_area{display:flex;align-items: center;justify-content: center;}
 .profile_area .profile_img{flex-shrink: 0;display: block;overflow: hidden;width: 24px;height: 24px;margin-right: 12px;border-radius: 50%;background: url('../images/img_profile.png') no-repeat center center / 100% auto;}
@@ -286,6 +287,8 @@ contents
 .mytit_wrap .mytit_area .side .btn_more::after{content:'';display:inline-block;width:16px;height:16px;margin:-4px 0 0 4px;background:url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3' y='8' width='11' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='14' width='11' height='1' transform='rotate(-90 8 14)' fill='%23ffffff'/%3E%3C/svg%3E%0A") no-repeat center center / 16px auto;}
 .mypage .writer_list_wrap{padding-top:0;}
 .mypage .board_list{border-top:0}
+.mypage .nodata{padding: 170px 40px;background-color: #f7f7f7;text-align:center;}
+.mypage .nodata .txt{font-size: 24px;line-height: 32px;color: #666;}
 
 /************************* Media Query *************************/
 @media (max-width:1370px){
@@ -357,7 +360,7 @@ contents
     .view_detail_footer .board_item .next_board:before{width:20px;height:20px;}
 
     .view_detail_body_cont.atc_body .ab_photo{margin:20px auto;}
-    .view_detail_body_cont.atc_body .caption{padding:0}
+    .view_detail_body_cont.atc_body .ab_photo .caption{padding:0}
     
 
     /* 리뷰 & 댓글 모듈 */
@@ -453,5 +456,33 @@ contents
     .mytit_wrap .mytit_area .tit{font-size:16px;font-weight:400;line-height:23px;}
     .mytit_wrap .mytit_area .tit .num{font-size: 18px;font-weight: 600;line-height: 17px;}
     .mytit_wrap .mytit_area{padding:13px 16px;}
-
+    .mytit_wrap .mytit_area .side .btn_more{display: block;width: 28px;height: 28px;margin-right: -4px;padding: 0;}
+    .mytit_wrap .mytit_area .side .btn_more::after{position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);margin: -1px 0 0 0;width: 24px;height: 24px;background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23ffffff' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");background-size: 24px auto;}
+    .mytit_wrap .mytit_area .side .btn_more span{display:none;}
+    .mypage .nodata{padding: 80px 20px;}
+    .mypage .nodata .txt{font-size:14px;line-height:20px;}
+    .mypage .nodata .btn_box{margin-top: 8px;}
+    .btn_plus{font-size:14px;line-height:20px;}
+    .btn_plus:after{margin-top:-3px}
 }   
+
+@media screen and (max-width: 359px) {
+    /* 게시판 상세 : 커뮤니티 > 상세 */
+    .comment_util_box .btn_s{padding:0 10px;}
+    .comment_wrap .textarea_wrap .comment_btn{gap:10px;}
+    .comment_wrap .textarea_wrap .comment_btn .btn_s{padding:0 10px;}
+}
+@media screen and (max-width: 320px) {
+    .dtl_info .date_box{flex-direction:column;}
+    .dtl_info .date_box .flag_area{margin:4px 0 0 0;}
+
+    /* 리뷰 등록배너 */
+    .review_box .box_inner{padding:0 16px;}
+    .review_box .txt_box{width:100%;margin-bottom:12px;padding-right:0;}
+    .review_box .btn_box{margin-left:0;}
+}
+
+@media screen and (max-width: 319px) {
+    /* 게시판 상세 : 커뮤니티 > 상세 */
+    .comment_wrap .reply_area .textarea_wrap .cnt_bottom{flex-wrap:wrap;}
+}

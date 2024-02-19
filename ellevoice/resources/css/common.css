@@ -949,6 +949,9 @@ background:#fff;overflow:hidden;z-index:230}
 	.cate_wrap .cate_inner .cate_item + .cate_item {margin-left: 12px;}
 	.cate_wrap.on .cate_inner {display: flex;flex-wrap: wrap;gap: 8px 12px;justify-content: flex-start;}
 	.cate_wrap.on .cate_inner .cate_item + .cate_item {margin-left: 0;}
+
+	.textarea_wrap{padding: 20px 5px 20px 20px;}
+	.textarea {padding-right: 15px;font-size: 14px;}
 }
 
 @media (max-width:425px){

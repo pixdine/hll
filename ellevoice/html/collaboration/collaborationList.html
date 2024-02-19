@@ -16,35 +16,94 @@
 	<div id="wrap" class="wrap">
 		<!-- header -->
 		<header id="header" class="header">
-			<div class="cont_inner">
-				<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_ellevoice.svg" alt="엘르보이스"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+			<div class="header_wrap">
+				<div class="header_cont">
+					<div class="cont_inner">
+						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_ellevoice.svg" alt="엘르보이스"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
 
-				<div class="header_navi">
-					<ul>
-						<li class="has_sub_menu">
-							<a href="#">ESSAY</a>
-							<div class="sub_menu">
-								<ul class="sub_menu_list">
-									<li class="ssm_item"><a href="#">WRITERS</a></li>
-								</ul>
+						<div class="header_navi">
+							<ul> 
+								<li class="has_sub_menu">
+									<a href="#">ESSAY</a>
+									<div class="sub_menu">
+										<ul class="sub_menu_list">
+											<li class="ssm_item"><a href="#">WRITERS</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">NEWSLETTER</a></li>
+								<li><a href="#">COLLABORATION</a></li>
+								<li><a href="#">COMMUNITY</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>
+						</div>
+						<div class="header_util">
+							<div class="aside">
+								<a href="#">LOGIN</a><!-- D: LOGOUT -->
+								<a href="https://trend.jtbcplus.kr/member/regist">SIGNUP</a><!-- D: MYPAGE -->
 							</div>
-						</li>
-						<li><a href="#">NEWSLETTER</a></li>
-						<li><a href="#">COLLABORATION</a></li>
-						<li><a href="#">COMMUNITY</a></li>
-						<li><a href="#">MYPAGE</a></li>
-					</ul>
-				</div>
-				<div class="header_util">
-					<div class="aside">
-						<a href="#">LOGIN</a><!-- D: LOGOUT -->
-						<a href="https://trend.jtbcplus.kr/member/regist">SIGNUP</a><!-- D: MYPAGE -->
+							<a href="https://page.stibee.com/subscriptions/104414" class="btn_subscription">구독신청</a><!-- D: 구독신청 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+						</div>
+
+						<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
 					</div>
-					<a href="https://page.stibee.com/subscriptions/104414" class="btn_subscription">구독신청</a><!-- D: 구독신청 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
 				</div>
 
-				<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+				<!-- D: 플로팅바 영역 -->
+				<div class="floating_bar">
+					<div class="cont_inner">
+						<div class="detail_info">
+							<!-- 브레드크럼 -->
+							<div class="breadcrumb">
+								<a href="#" class="home">HOME</a>
+								<a href="#" class="cate_dep">COLLABORATION</a>
+							</div>
+							<!-- //브레드크럼 -->
+							<!-- 기사 타이틀 -->
+							<div class="txtbox">
+								<p class="tit"> 
+									여성의 삶, 레퍼런스가 필요하다면? 뉴스레터 <엘르보이스>!
+								</p>
+							</div>
+							<!-- //기사 타이틀 -->
+							<!-- 스크랩, 공유하기 -->
+							<div class="sharebox">
+								<button type="button" class="btn_ico scrap js-btn-scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+							</div>
+							<!-- //스크랩, 공유하기 -->
+						</div>
+					</div>
+				</div>
+				<!-- //D: 플로팅바 영역 -->
 			</div>
+
+			<!-- D: [팝업] 공유하기 -->
+			<div class="popup_layer pop_share" data-layer="popup_share">
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_tit">
+							<h3 class="tit">공유하기</h3>
+						</div>
+						<div class="popup_close">
+							<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+						</div>
+					</div>
+					<div class="popup_cont">
+						<div class="sns_list">
+							<ul>
+								<li><button type="button" class="btn_sns instagram"><span class="tit">인스타그램</span></button></li>
+								<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+								<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+								<li><button type="button" class="btn_sns naverblog"><span class="tit">네이버블로그</span></button></li>
+								<li><button type="button" class="btn_sns kakaostory"><span class="tit">카카오스토리</span></button></li>
+								<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //D: [팝업] 공유하기 -->
 		</header>
 		<!-- //header -->
 
@@ -64,109 +123,31 @@
 							<!-- 로그인/회원가입 -->
 							<div class="allmenu_util">
 								<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
-								<a href="#">SIGNUP</a><!-- D: MYPAGE -->
+								<a href="https://trend.jtbcplus.kr/member/regist" target="_blank" title="새창열림">SIGNUP</a>
 							</div>
 							<!-- //로그인/회원가입 -->
-
-							<!-- 단일메뉴 및 버티컬 -->
-							<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
-							<div class="allmenu_single">
-								<li><a href="#">LOOK</a></li>
-								<li><a href="#">ELLEVOICE</a></li>
-							</div>
-							<!-- //단일메뉴 및 버티컬 -->
 
 							<!-- 메뉴 -->
 							<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
 							<div class="allmenu_list">
 								<ul class="depth1">
-									<li>
-										<a href="#">NEWS<span><em class="blind">열기</em></span></a>
-									</li>
 									<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
-										<a href="#">FASHION<span><em class="blind">열기</em></span></a>
+										<a href="#">ESSAY<span><em class="blind">열기</em></span></a>
 										<ul class="depth2">
-											<li><a href="#">TRENDS</a></li>
-											<li><a href="#">CELEB STYLE</a></li>
-											<li><a href="#">WATCH&amp;JEWELRY</a></li>
-											<li><a href="#">FASHION WEEK</a></li>
-											<li><a href="#">DESIGNERS</a></li>
-											<li><a href="#">SHOPPING</a></li>
+											<li><a href="#">WRITER</a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="#">STYLE<span><em class="blind">열기</em></span></a>
+										<a href="#">NEWSLETTER<span><em class="blind">열기</em></span></a>
 									</li>
 									<li>
-										<a href="#">BEAUTY<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">MAKE-UP&amp;NAILS</a></li>
-											<li><a href="#">SKINCARE</a></li>
-											<li><a href="#">HAIR</a></li>
-											<li><a href="#">WELLNESS</a></li>
-											<li><a href="#">DIET</a></li>
-										</ul>
+										<a href="#">COLLABORATION<span><em class="blind">열기</em></span></a>
 									</li>
 									<li>
-										<a href="#">STAR<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">INTERVIEW</a></li>
-										</ul>
+										<a href="#">COMMUNITY<span><em class="blind">열기</em></span></a>
 									</li>
 									<li>
-										<a href="#">CULTURE<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">ENTERTAINMENT</a></li>
-											<li><a href="#">OTT</a></li>
-											<li><a href="#">BOOKS</a></li>
-											<li><a href="#">ART&amp;DESIGN</a></li>
-											<li><a href="#">SPORTS</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">LIFE&amp;LOVE<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">FOOD</a></li>
-											<li><a href="#">PLACE</a></li>
-											<li><a href="#">TRAVEL</a></li>
-											<li><a href="#">RELATIONSHIP</a></li>
-											<li><a href="#">CAR&amp;TECH</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">SOCIETY<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">WOMEN</a></li>
-											<li><a href="#">SOCIETY</a></li>
-											<li><a href="#">GREEN</a></li>
-											<li><a href="#">MONEY</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">ELLE DECOR<span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">TRENDS</a></li>
-											<li><a href="#">DESIGN</a></li>
-											<li><a href="#">PEOPLE</a></li>
-											<li><a href="#">HOUSE</a></li>
-											<li><a href="#">SPACE</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">BRILLIANT<span><em class="blind">열기</em></span></a>
-									</li>
-									<li>
-										<a href="#">HOROSCOPE<span><em class="blind">열기</em></span></a>
-									</li>
-									<li>
-										<a href="#">EVENT <span><em class="blind">열기</em></span></a>
-										<ul class="depth2">
-											<li><a href="#">ONGOING EVENT</a></li>
-											<li><a href="#">NOTICE</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">COVER<span><em class="blind">열기</em></span></a>
+										<a href="#">MY PAGE<span><em class="blind">열기</em></span></a>
 									</li>
 								</ul>
 							</div>
@@ -175,22 +156,24 @@
 							<!-- 외부링크 -->
 							<div class="etc_link">
 								<ul>
-									<li><a href="#" target="_blank" title="새창열림">광고&middot;제휴문의</a></li>
-									<li><a href="#" target="_blank" title="새창열림">미디어킷</a></li>
-									<li><a href="#" target="_blank" title="새창열림">RSSFEED</a></li>
-									<li><a href="#" target="_blank" title="새창열림">포인트제도 안내</a></li>
-									<li><a href="#" target="_blank" title="새창열림">고객센터</a></li>
+									<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
 								</ul>
 							</div>
 							<!-- //외부링크 -->
 
+							<div class="banner">
+								<a href="#">
+									<picture>
+										<source media="(max-width:768px)" srcset="../../resources/images/img_subscription_allmenu_mo.png">
+										<img src="../../resources/images/img_subscription_allmenu.png" alt="뉴스레터 구독하기">
+									</picture>
+								</a>
+							</div>
+
 							<!-- sns -->
 							<div class="sns_list">
 								<ul>
-									<li><a href="https://www.facebook.com/ellemagazine.kr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
-									<li><a href="https://www.instagram.com/ellekorea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
-									<li><a href="https://www.youtube.com/user/ellemagazinekr" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
-									<li><a href="https://story.kakao.com/ch/ellekorea" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
+									<li><a href="https://www.instagram.com/elle_voice/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
 									<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
 								</ul>
 							</div>
@@ -203,7 +186,7 @@
 		<!-- //전체메뉴 -->
 
 		<!-- container -->
-		<div id="container" class="container community">
+		<div id="container" class="container collaboration">
             <div id="content" class="content sub">
                 <!--sub title-->
                 <div class="heading_wrap">
@@ -221,7 +204,7 @@
                             <div class="subtit_wrap">
                                 <div class="subtit_area">
                                     <h3 class="tit">엘르보이스 콜라보레이션</h3>
-                                    <p>까르띠에 여성창업이니셔티브, 벨리곰, 서울국제도서전 등 엘르보이스와 협업한 레퍼런스를 살펴볼 수 있습니다.</p>
+                                    <p class="txt">까르띠에 여성창업이니셔티브, 벨리곰, 서울국제도서전 등 엘르보이스와 협업한 레퍼런스를 살펴볼 수 있습니다.</p>
                                 </div>
                             </div>
 

@@ -1164,12 +1164,22 @@ $.fn.commentToggle = function () {
         var commentTxtChild = cBox.find(".comment_txt .txt");
         var lineHeight = commentTxtChild.css("line-height").split("px")[0];
 
+        if(!commentTxtChild.parent().hasClass('comment_txt_inner')){
+            commentTxtChild.wrap("<div class='comment_txt_inner'></div>");
+            setTimeout(function(){
+                commentTxtChild.unwrap();
+            }, 100);
+        }
+
         // 3줄이 넘어가면 더보기 버튼이 보여야 합니다.
         if (commentTxtChild.height() > lineHeight * 3) {
             cBoxBtnWrap.css("display", "flex");
             commentTxt.addClass("hide");
             cBoxToggle.removeClass("on");
             cBoxToggleTxt.text("더보기");
+        } else {
+            cBoxBtnWrap.css("display", "none");
+            commentTxt.removeClass("hide");
         }
 
         //리사이징시 재호출되어 중복을 방지하기 위한 이벤트 리스너 제거
@@ -1210,9 +1220,8 @@ $.fn.moreDrop = function () {
 };
 
 //디바이스 체크
-let cachedWidth = $(window).width();
+var cachedWidth = $(window).width();
 $(window).on("load resize", function () {
-    let newWidth = $(window).width();
     if (window.innerWidth > 768) {
         //PC
         $("body").removeClass("is_mobile").addClass("is_pc");
@@ -1222,10 +1231,13 @@ $(window).on("load resize", function () {
     }
     initOnDevice();
 
-    if(newWidth !== cachedWidth) {
+    if(cachedWidth != $(this).width()){
         // 상세페이지 댓글 접기
         $(".comment_box").commentToggle();
+        $(".comment_box .has_toggle").removeClass('on');
+        $(".comment_box .has_toggle span").text("더보기");
     }
+    cachedWidth = $(this).width();
 }).resize();
 
 // 공통탭 컨텐츠

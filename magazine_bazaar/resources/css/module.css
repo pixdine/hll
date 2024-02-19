@@ -282,8 +282,9 @@
 .comment_info .user_info .date{display:block;white-space:nowrap;font-weight:400;color:#999;}
 .comment_info .more_drop{margin-left:auto;}
 .comment_box .btn_box{display:none;margin-top:4px;}
-.comment_txt .txt{position:relative;max-height:100%;font-size:14px;font-weight:400;line-height:20px;}
-.comment_txt.hide .txt{overflow:hidden;max-height:60px;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
+.comment_txt .comment_txt_inner{overflow:auto;}
+.comment_txt.hide{position:relative;overflow:hidden;max-height:60px;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
+.comment_txt .txt{font-size:14px;font-weight:400;line-height:20px;}
 .comment_txt~ .comment_img{margin-top:16px;}
 .comment_img img{display:block;}
 .comment_modify{display:none;}
@@ -387,8 +388,8 @@
 .map_wrap .map_exp{margin-top:20px;padding-top:20px;border-top:1px solid #dbdbdb;}
 .map_wrap .map_exp .tit_box{margin-bottom:8px;font-size:16px;line-height:23px;}
 .map_wrap .map_exp .tit_box .tit{font-weight:400;}
-.map_wrap .map_exp .txt_box .txt{font-size:16px;font-weight:400;color:#666;line-height:28px;}
-.map_wrap .map_exp .txt_box.hide .txt{overflow:hidden;position:relative;max-height:84px;}
+.map_wrap .map_exp .comment_txt.hide{max-height:84px;}
+.map_wrap .map_exp .comment_txt .txt{font-size:16px;font-weight:400;color:#666;line-height:28px;}
 .map_wrap .map_exp .btn_box{margin-top:4px;}
 .is_pc .map_wrap .map_exp .btn_box .has_toggle{font-size:16px;}
 .is_pc .map_wrap .map_exp .btn_box .has_toggle:after{width:16px;height:16px;}
@@ -773,8 +774,8 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 	.map_wrap .map_list > li > em{width:76px;}
 	.map_wrap .map_list > li ~ li{margin-top:8px;}
 	.map_wrap .map_exp .tit_box{font-size:14px;line-height:20px;}
-	.map_wrap .map_exp .txt_box .txt{font-size:14px;line-height:22px;}
-	.map_wrap .map_exp .txt_box.hide .txt{max-height:66px;}
+	.map_wrap .map_exp .comment_txt.hide{max-height:66px;}
+	.map_wrap .map_exp .comment_txt .txt{font-size:14px;line-height:22px;}
 
 	/* 서브메인 > 기타모듈 (금주의 인기 기사) */
 	.article_slide_pc {height: 0; overflow: hidden; padding: 0; margin: 0;}

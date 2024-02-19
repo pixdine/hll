@@ -51,6 +51,18 @@
 	font-weight: 500;
 	src: url(../font/Gotham-Medium.woff2) format("woff2"), url(../font/Gotham-Medium.woff) format("woff");
 }
+@font-face{
+	font-family: SaolDisplay;
+	font-style: normal;
+	font-weight: 400;
+	src: url(../font/SaolDisplay-Regular.woff2) format("woff2"), url(../font/SaolDisplay-Regular.woff) format("woff"), url(../font/SaolDisplay-Regular.otf) format("opentype");
+}
+@font-face{
+	font-family: NotoSans;
+	font-style: normal;
+	font-weight: 400;
+	src: url(../font/NotoSansKR-Regular.woff2) format("woff2"), url(../font/NotoSansKR-Regular.woff) format("woff"), url(../font/NotoSansKR-Regular.otf) format("opentype");
+}
 
 /* reset */
 html, body {font-size:10px;}
@@ -700,16 +712,6 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_error .err_comment01 { font-size:36px; font-weight:700; line-height:1.45; letter-spacing:-0.01em; margin:0 20px;}
 .comm_error .err_comment02 { font-size:18px; font-weight:500; line-height:1.45; color:#666; margin:16px 20px 0 }
 
-/* 뉴스레터 목록 */
-.newsletter-list > li {display: flex;flex-wrap: wrap;align-items: center;height: 80px;border-bottom: 1px solid #999;}
-.newsletter-list > li:first-of-type {border-top: 1px solid #999;}
-.newsletter-list > li .times {position: relative;flex-shrink: 0;padding: 0 2.41vw 0 1.61vw;}
-.newsletter-list > li .times::before {content: "";display: inline-block;position: relative;top: -1px;width: 28px;height: 28px;margin-right: 3vw;background: url("../images/ico_newsletter.svg") no-repeat center center / contain;vertical-align: middle;}
-.newsletter-list > li .tit {overflow: hidden;flex: 1;padding: 0 1.61vw;}
-.newsletter-list > li .tit p {font-size: 18px;}
-.newsletter-list > li .date {margin-left: auto;padding-left: 1.61vw;color: #666}
-.newsletter-list > li:hover {background-color: rgba(0,160,94,0.04);color: var(--point)}
-.newsletter-list > li:hover .times::before {background-image: url("../images/ico_newsletter_open.svg");}
 
 /* 에세이 목록 */
 .essay_list > li {position: relative;}
@@ -931,14 +933,6 @@ background:#fff;overflow:hidden;z-index:230}
 	.essay_list .cont .writer {margin-top:16px;font-size: 12px;}
 	.essay_list .util {top: 8px;right: 8px;gap: 4px;}
 	.essay_list .util .new {width: 28px;height: 28px;}
-
-	/* 뉴스레터 목록 */
-	.newsletter-list > li {flex-direction: column;align-items: flex-start;height: 158px;padding: 25px 0;font-size: 14px;}
-	.newsletter-list > li .times {margin-bottom: 8px;}
-	.newsletter-list > li .times::before {width: 20px;height: 20px;margin-right: 8px;background-image: url("../images/ico_newsletter_mo.svg");}
-	.newsletter-list > li .tit {overflow: inherit;}
-	.newsletter-list > li .tit p {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 16px;}
-	.newsletter-list > li .date {margin-left: 0;font-weight: 400;}
 
 	.cate_wrap {margin: 0 -20px;}
 	.cate_wrap .btnbox {display: block;}

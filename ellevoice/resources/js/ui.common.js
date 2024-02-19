@@ -110,6 +110,10 @@ $(() => {
     }
 });
 
+$(window).on("load", function () {
+    $(".comment_box").commentToggle();
+});
+
 // 좋아요 버튼
 (function($) {
     $.fn.btnScrap = function (options) {

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>엘르보이스 | No.1 Fashion Media</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+    <link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../resources/css/content.css" />
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+<body>
+	<div id="wrap" class="wrap">
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="header_wrap">
+				<div class="header_cont">
+					<div class="cont_inner">
+						<h1 class="logo"><a href="./index.html"><img src="../../resources/images/logo_ellevoice.svg" alt="엘르보이스"></a>
+						</h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+
+						<div class="header_navi">
+							<ul>
+								<li class="has_sub_menu">
+									<a href="#">ESSAY</a>
+									<div class="sub_menu">
+										<ul class="sub_menu_list">
+											<li class="ssm_item"><a href="#">WRITERS</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">NEWSLETTER</a></li>
+								<li><a href="#">COLLABORATION</a></li>
+								<li><a href="#">COMMUNITY</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>
+						</div>
+						<div class="header_util">
+							<div class="aside">
+								<a href="#">LOGIN</a><!-- D: LOGOUT -->
+								<a href="https://trend.jtbcplus.kr/member/regist" target="_blank" title="새창열림">SIGNUP</a>
+							</div>
+							<a href="#" class="btn_subscription">구독신청</a><!-- D: 구독신청 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+						</div>
+
+						<button type="button" class="btn_menu"><span class="blind">전체 메뉴
+								열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+					</div>
+				</div>
+
+				<!-- D: 플로팅바 영역 -->
+				<div class="floating_bar">
+					<div class="cont_inner">
+						<div class="detail_info">
+							<!-- 브레드크럼 -->
+							<div class="breadcrumb">
+								<a href="#" class="home">HOME</a>
+								<a href="#" class="cate_dep">COLLABORATION</a>
+							</div>
+							<!-- //브레드크럼 -->
+							<!-- 기사 타이틀 -->
+							<div class="txtbox">
+								<p class="tit">
+									우리 마음 빼빼로로 말해요.
+								</p>
+							</div>
+							<!-- //기사 타이틀 -->
+							<!-- 스크랩, 공유하기 -->
+							<div class="sharebox">
+								<button type="button" class="btn_ico scrap js-btn-scrap"><span
+										class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+								<button type="button" class="btn_ico share" data-layer-open="popup_share"><span
+										class="blind">공유하기</span></button>
+							</div>
+							<!-- //스크랩, 공유하기 -->
+						</div>
+					</div>
+				</div>
+				<!-- //D: 플로팅바 영역 -->
+			</div>
+
+			<!-- D: [팝업] 공유하기 -->
+			<div class="popup_layer pop_share" data-layer="popup_share">
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_tit">
+							<h3 class="tit">공유하기</h3>
+						</div>
+						<div class="popup_close">
+							<button type="button" class="btn_close" data-layer-close="popup_share"><span
+									class="blind">닫기</span></button>
+						</div>
+					</div>
+					<div class="popup_cont">
+						<div class="sns_list">
+							<ul>
+								<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+								<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+								<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+								<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span
+											class="tit">복사</span></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //D: [팝업] 공유하기 -->
+		</header>
+		<!-- //header -->
+
+		<!-- 전체메뉴 -->
+		<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+			<div class="allmenu_dimmed"></div>
+			<div class="allmenu_area">
+				<div class="allmenu_cont">
+					<!-- 상단 닫기 영역 -->
+					<div class="top_area">
+						<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+					</div>
+					<!-- //상단 닫기 영역 -->
+
+					<div class="scroll_custom">
+						<div class="allmenu_inner">
+							<!-- 로그인/회원가입 -->
+							<div class="allmenu_util">
+								<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+								<a href="https://trend.jtbcplus.kr/member/regist" target="_blank" title="새창열림">SIGNUP</a>
+							</div>
+							<!-- //로그인/회원가입 -->
+
+							<!-- 메뉴 -->
+							<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+							<div class="allmenu_list">
+								<ul class="depth1">
+									<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+										<a href="#">ESSAY<span><em class="blind">열기</em></span></a>
+										<ul class="depth2">
+											<li><a href="#">WRITER</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">NEWSLETTER<span><em class="blind">열기</em></span></a>
+									</li>
+									<li>
+										<a href="#">COLLABORATION<span><em class="blind">열기</em></span></a>
+									</li>
+									<li>
+										<a href="#">COMMUNITY<span><em class="blind">열기</em></span></a>
+									</li>
+									<li>
+										<a href="#">MY PAGE<span><em class="blind">열기</em></span></a>
+									</li>
+								</ul>
+							</div>
+							<!-- //메뉴 -->
+
+							<!-- 외부링크 -->
+							<div class="etc_link">
+								<ul>
+									<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+								</ul>
+							</div>
+							<!-- //외부링크 -->
+
+							<div class="banner">
+								<a href="#">
+									<picture>
+										<source media="(max-width:768px)" srcset="../resources/images/img_subscription_allmenu_mo.png">
+										<img src="../resources/images/img_subscription_allmenu.png" alt="뉴스레터 구독하기">
+									</picture>
+								</a>
+							</div>
+
+							<!-- sns -->
+							<div class="sns_list">
+								<ul>
+									<li><a href="https://www.instagram.com/elle_voice/" class="btn_sns instagram" target="_blank"
+											title="새창열림"><span class="blind">인스타그램</span></a></li>
+									<li><a href="https://twitter.com/elle_korea" class="btn_sns twitter" target="_blank"
+											title="새창열림"><span class="blind">트위터 X</span></a></li>
+								</ul>
+							</div>
+							<!-- //sns -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //전체메뉴 -->
+
+		<!-- container -->
+		<div id="container" class="container mypage">
+            <div id="content" class="content sub">
+                <!--sub title-->
+                <div class="heading_wrap">
+                    <div class="heading_area">
+                        <h2 class="tit">
+                            <span>MYPAGE</span>
+                        </h2>
+                    </div>
+                </div>
+                <!--//sub title-->
+                <div class="bodycont_wrap">
+                    <!--나의 커뮤니티 -->
+                    <div class="bodycont_section">
+                        <div class="cont_inner">
+                            <div class="mytit_wrap">
+                                <div class="mytit_area">
+                                    <h2 class="tit">나의 커뮤니티 <strong class="num">93</strong></h2>
+                                </div>
+                            </div>
+
+                            <div class="cont_body">
+                                <div class="board_wrap">
+                                    <div class="board_list">
+                                        <ul class="cnt_list">
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                정말 기대되네요!
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                현장에 나가면 남성 형사에게는 형사님이라면서 여성 형사는 ‘아가씨’라고 부른다는 출연자의 말은 과장이 아닐 테다. 어디 경찰뿐일까? 식당에만 가도 여성은 여성으로만 호명되기 일쑤다. 카운터에 앉은 남성은 사장님으로, 주방에 있는 남성은 셰프라 불린다. 그러나 30년간 한식 요리를 펼쳐낸 여성 셰프의 전문성은 이모 혹은 어머님이라는 이름 앞에 지워진다. 가족 내에서 여성의 노동과 전문성을 그렇게 취급했듯, 여성 인력을 그렇게 호명하는 환경은 그의 능력을 아무나 할 수 있는 것처럼 취급하고 좀처럼 권위를 내어주지 않는다. 사회가 직업을 가진 여성을 바라보는 방식은 오랫동안 기만적이었다. 심지어 ‘직업여성’이라는 기괴한 단어는 ‘직업’으로 ‘여성’성을 판매하는 사람을 지칭하며, 〈표준국어대사전〉마저 유사한 설명으로 등재돼 있다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                우리가 이 프로그램에 열광하는 이유는 다양하겠지만, 그간 미디어가 여성 캐릭터를 소비하는 방식에서 느껴온 피로감을 소거하고 완전히 열광할 자유를 얻은 것이 가장 달콤했다. 늘 남성이 다수인 출연진 중 어쩌다 선망하던 여성 유명인이 포함되면 그거라도 감지덕지라며 기뻐하면서도 혹시 그의 외모만 언급될까, 러브라인의 재료로 쓰일까, 똑똑하고 강인하면 드센 여자가 되고 멍청하면 백치미라는 이름으로 조롱당할까 늘 마음 졸였다. 무엇보다 그의 빛나는 재능과 입체적인 자아를 외면한 채 ‘여성’이라는 이름만으로 불리는 것이 마치 70분으로 축약해 TV로 전시된 내 현실 같아 쓰라렸다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                〈사이렌〉에서 단 한 명도 누구의 아내로, 딸로, 엄마로 소개되지 않은 이 여성들을 철저히 직업인으로 볼 수 있었던 해방감이 이 시리즈에 기꺼이 시간을 헌납하게 만든다. 기 싸움, 시샘, 뒷담화로 쉽게 사용됐던 여성들의 관계도 대신 전문가 집단의 전략과 연대, 의리로 펼쳐놓았다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                〈사이렌〉에서 단 한 명도 누구의 아내로, 딸로, 엄마로 소개되지 않은 이 여성들을 철저히 직업인으로 볼 수 있었던 해방감이 이 시리즈에 기꺼이 시간을 헌납하게 만든다. 기 싸움, 시샘, 뒷담화로 쉽게 사용됐던 여성들의 관계도 대신 전문가 집단의 전략과 연대, 의리로 펼쳐놓았다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                〈사이렌〉에서 단 한 명도 누구의 아내로, 딸로, 엄마로 소개되지 않은 이 여성들을 철저히 직업인으로 볼 수 있었던 해방감이 이 시리즈에 기꺼이 시간을 헌납하게 만든다. 기 싸움, 시샘, 뒷담화로 쉽게 사용됐던 여성들의 관계도 대신 전문가 집단의 전략과 연대, 의리로 펼쳐놓았다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                〈사이렌〉에서 단 한 명도 누구의 아내로, 딸로, 엄마로 소개되지 않은 이 여성들을 철저히 직업인으로 볼 수 있었던 해방감이 이 시리즈에 기꺼이 시간을 헌납하게 만든다. 기 싸움, 시샘, 뒷담화로 쉽게 사용됐던 여성들의 관계도 대신 전문가 집단의 전략과 연대, 의리로 펼쳐놓았다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="board_item reply"><!-- D: 내가 쓴 댓글일 경우 reply 클래스 추가 -->
+                                                    <a href="#">
+                                                        <div class="detail_box">
+                                                            <span class="date">2023.07.06</span>
+                                                            <strong class="tit">왜 대한민국에는 이렇게 멋진 여자들이 많을까요?</strong>
+                                                            <p class="txt">왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? 왜 대한민국에는 이렇게 멋진 여자들이 많을까요? </p>
+                                                        </div>
+                                                        <!--댓글/답급(대댓글)-->
+                                                        <div class="reply_box">
+                                                            <p class="reply_txt">
+                                                                〈사이렌〉에서 단 한 명도 누구의 아내로, 딸로, 엄마로 소개되지 않은 이 여성들을 철저히 직업인으로 볼 수 있었던 해방감이 이 시리즈에 기꺼이 시간을 헌납하게 만든다. 기 싸움, 시샘, 뒷담화로 쉽게 사용됐던 여성들의 관계도 대신 전문가 집단의 전략과 연대, 의리로 펼쳐놓았다.
+                                                            </p>
+                                                        </div>
+                                                        <!--//댓글/답급(대댓글)-->
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="btn_more_wrap type1">
+                                        <button type="button" class="btn more"><span>더보기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 마이페이지 메인으로 이동 -->
+                            <div class="btn_area">
+                                <a href="#" class="btn bctype1"><span>마이페이지 메인으로</span></a>
+                            </div>
+                            <!-- //마이페이지 메인으로 이동 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!--구독신청 고정 배너영역-->
+                <div class="banner_wrap">
+                    <div class="cont_inner">
+                        <div class="one_ban_swiper">
+                            <div class="swiper-wrapper">
+                                <a href="#none" class="swiper-slide ban01" title="엘르보이스 뉴스레터 구독 신청">
+                                    <img class="pc_img" src="../../resources/images/img-obs01.png" alt="엘르보이스 뉴스레터 구독 신청하시고 다양한 여성들의 삶의 이야기를 만나보세요!">
+                                    <img class="mo_img" src="../../resources/images/img-obs01-mo.png" alt="엘르보이스 뉴스레터 구독 신청하시고 다양한 여성들의 삶의 이야기를 만나보세요!">
+                                </a>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--//구독신청 고정 배너영역-->
+                
+            </div>
+        </div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footer_top">
+				<div class="cont_inner">
+					<div class="footer_link">
+						<ul>
+							<li><a href="#" target="_blank">매체소개</a></li>
+							<li><a href="#" target="_blank">고객센터</a></li>
+							<li><a href="#" target="_blank">포인트정책</a></li>
+							<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+							<li><a href="#" target="_blank">이용약관</a></li>
+							<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+							<li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+							<li><a href="#" target="_blank">윤리경영</a></li>
+						</ul>
+					</div>
+					<div class="footer_sns">
+						<ul>
+							<li><a href="https://www.facebook.com/ellemagazine.kr/" target="_blank" title="페이스북 바로가기"><img
+										src="../../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+							<li><a href="https://www.instagram.com/ellekorea/" target="_blank" title="인스타그램 바로가기"><img
+										src="../../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+							<li><a href="https://www.youtube.com/user/ellemagazinekr" target="_blank" title="유튜브 바로가기"><img
+										src="../../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+							<li><a href="https://story.kakao.com/ch/ellekorea" target="_blank" title="카카오스토리 바로가기"><img
+										src="../../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
+							<li><a href="https://twitter.com/elle_korea" target="_blank" title="트위터X 바로가기"><img
+										src="../../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="cont_inner">
+					<div class="footer_logo">
+						<img src="../../resources/images/logo_elle.svg" alt="ELLE">
+					</div>
+					<div class="footer_info">
+						<address class="addr_wrap">
+							<em>허스트중앙(유)</em>
+							<div class="addr_txt">
+								<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+								<span class="ceo">대표자 : 강주연</span>
+								<br class="pc_br">
+								<span class="num">사업자등록번호 : 104-81-55280</span>
+								<br class="mo_br">
+								<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+								<span class="email">이메일 : <a href="mailto:elle@hll.kr">elle@hll.kr</a></span>
+							</div>
+						</address>
+						<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+			<div class="family_wrap">
+				<button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+				<div class="familysite">
+					<div class="cont_inner">
+						<div class="tab_wrap">
+							<div class="tab_menu type02">
+								<ul>
+									<li class="on"><a href="javascript:;">FAMILY</a></li><!-- D: 선택 시 on 클래스 추가 -->
+									<li><a href="javascript:;">GLOBAL</span></a></li>
+								</ul>
+							</div>
+
+							<div class="tab_cont_wrap">
+								<!-- Family 탭 내용 -->
+								<div class="tab_cont active">
+									<!-- 리스트 -->
+									<div class="familysite_list family">
+										<ul>
+											<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">Harper’s BAZAAR</a></li>
+											<li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CLOSE UP</a></li>
+											<li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
+											<li><a href="#" target="_blank" title="새창열림">eee</a></li>
+										</ul>
+									</div>
+									<!-- //리스트 -->
+								</div>
+								<!-- //Family 탭 내용 -->
+
+								<!-- Global 탭 내용 -->
+								<div class="tab_cont">
+									<!-- 리스트 -->
+									<div class="familysite_list global">
+										<ul>
+											<li><a href="#" target="_blank" title="새창열림">BELGIUM</a></li>
+											<li><a href="#" target="_blank" title="새창열림">HONG-KONG</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SLOVENIA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">BRAZIL</a></li>
+											<li><a href="#" target="_blank" title="새창열림">HUNGARY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SOUTH AFRICA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CANADA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">INDIA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CHINA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">SWEDEN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">CZECH REPUBLIC </a></li>
+											<li><a href="#" target="_blank" title="새창열림">JAPAN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">TAIWAN</a></li>
+											<li><a href="#" target="_blank" title="새창열림">DENMARK</a></li>
+											<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+											<li><a href="#" target="_blank" title="새창열림">THAILAND</a></li>
+											<li><a href="#" target="_blank" title="새창열림">FINLAND</a></li>
+											<li><a href="#" target="_blank" title="새창열림">NORWAY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">TURKEY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">FRANCE</a></li>
+											<li><a href="#" target="_blank" title="새창열림">QUEBEC</a></li>
+											<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+											<li><a href="#" target="_blank" title="새창열림">GERMANY</a></li>
+											<li><a href="#" target="_blank" title="새창열림">RUSSIA</a></li>
+											<li><a href="#" target="_blank" title="새창열림">USA</a></li>
+										</ul>
+									</div>
+									<!-- //리스트 -->
+								</div>
+								<!-- //Global 탭 내용 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button type="button" class="btn_top"><span class="blind">상단으로 이동</span></button>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- js -->
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<!-- //js -->
+
+	<script>
+		$(() => {
+			$(".js-btn-scrap").btnScrap();
+		});
+	</script>
+</body>
+</html>

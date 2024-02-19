@@ -7,7 +7,6 @@ $(() => {
     }
     console.log(currentPage);
     $(".header").addClass(currentPage);
-
     $("header").length && headerSticky(); // 헤더 스티키
 
     setCSS();
@@ -133,6 +132,84 @@ $(() => {
     }
 })(jQuery);
 
+//iOS vh 대응
+function setCSS() {
+    var setVh = () => {
+        document.documentElement.style.setProperty("--vh", `${window.innerHeight}px`);
+    };
+    window.addEventListener("resize", setVh);
+    setVh();
+}
+
+//header sticky
+function headerSticky() {
+    let lastScroll = 0;
+    const $header = $(".header");
+    const $container = $(".container");
+    const containerTop = $container.offset().top;
+    const headerHeight = $header.outerHeight();
+    const wHeight = $(window).outerHeight();
+    const docHeight = $(document).outerHeight();
+
+    function scrollCallback(scrollTop) {
+        let atBottom = scrollTop + wHeight;
+
+        // body lock scroll 상태 계산 안함
+        if ($("body").hasClass("lockbody") === false) {
+            const delta = Math.abs(lastScroll - scrollTop);// ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
+
+            // 새로고침 했을 때, 실행
+            if (lastScroll === 0) {
+                lastScroll = scrollTop;
+                return;
+            };
+            // ios 스크롤 모두 내려갔을 때, 헤더 바뀌는 이슈 방지
+            if(atBottom >= docHeight) {
+                //is bottom
+                lastScroll = scrollTop;
+                return;
+            };
+            if (scrollTop > containerTop - headerHeight && delta > 0) {
+                if (scrollTop > lastScroll) {
+                    //down
+                    // console.log("down");
+                    if ($header.hasClass("view")) {
+                        $header.addClass("active");
+                    }
+                } else {
+                    // up
+                    // console.log("up");
+                    if ($header.hasClass("view")) {
+                        $header.removeClass("active");
+                        $(".popup_layer", $header).fadeOut(100);
+                    }
+                }
+
+                lastScroll = scrollTop;
+            }
+
+            
+        }
+
+        // ios 16 이상 bouncing 오류 대응
+        // if (scrollTop > headerHeight) {
+        //     document.documentElement.classList.add('non-oby')
+        // } else {
+        //     document.documentElement.classList.remove('non-oby')
+        // }
+    }
+
+    // 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
+    $(window).on("scroll", function (e) {
+        let scrollTop = $(this).scrollTop();
+        scrollCallback(scrollTop);
+
+        window.requestAnimationFrame(function () {
+            scrollCallback(scrollTop);
+        });
+    });
+}
+
 // 카테고리 펼치기/닫기
 (function($) {
     $.fn.toggleBtnCate = function (options) {
@@ -159,77 +236,6 @@ $(() => {
         });
     }
 })(jQuery);
-
-//iOS vh 대응
-function setCSS() {
-    var setVh = () => {
-        document.documentElement.style.setProperty("--vh", `${window.innerHeight}px`);
-    };
-    window.addEventListener("resize", setVh);
-    setVh();
-}
-
-//header sticky
-function headerSticky() {
-    var lastScroll = 0;
-    var header = $(".header");
-    var container = $(".container");
-    var containerTop = container.offset().top;
-    // var delta = 100; // ios bouce 오작동 방지를 위해 값에 여유를 두어야 합니다.
-
-    var headerHeight = header.outerHeight();
-    var delta = headerHeight;
-
-    function scrollCallback(scrollTop) {
-        // ios 15 이하 및 공통 처리
-        var atTop = scrollTop <= 0;
-        var atBottom = scrollTop >= window.scrollHeight - window.clientHeight;
-
-        // body lock scroll 상태 계산 안함
-        if (!$("body").hasClass("lockbody")) {
-            // if (atTop) lastScroll = 0;
-            // if (atBottom) lastScroll = window.scrollHeight - window.clientHeight;
-            /* 2023-12-13 : 개발에서 수정한 부분 반영 */
-            // if (atTop) {
-            //     header.removeAttr("style");
-            // }
-            /* //2023-12-13 : 개발에서 수정한 부분 반영 */
-
-            if (scrollTop > containerTop - headerHeight) {
-                if ($("body").hasClass("scroll_down")) {
-                    //down
-                    if (header.hasClass("view")) {
-                        header.addClass("active");
-                    }
-                } else if ($("body").hasClass("scroll_up")) {
-                    // up
-                    if (header.hasClass("view")) {
-                        header.removeClass("active");
-                        $(".popup_layer", header).fadeOut(100);
-                    }
-                }
-            }
-        }
-
-        // ios 16 이상 bouncing 오류 대응
-        // if (scrollTop > headerHeight) {
-        //     document.documentElement.classList.add('non-oby')
-        // } else {
-        //     document.documentElement.classList.remove('non-oby')
-        // }
-    }
-
-    // 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
-    $(window).on("scroll", function () {
-        var scrollTop =
-        document.body.scrollTop || document.documentElement.scrollTop;
-        scrollCallback(scrollTop);
-
-        window.requestAnimationFrame(function () {
-            scrollCallback(scrollTop);
-        });
-    });
-}
 
 //전체메뉴
 function allmenuOpen() {

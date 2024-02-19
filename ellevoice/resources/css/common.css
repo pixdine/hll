@@ -341,7 +341,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .cate_wrap .cate_item .essay_cate::before {top: 0;}
 .cate_wrap .cate_item .essay_cate .txt {position: relative;top: 1px;}
 .cate_wrap .cate_item input {position: absolute;width: 0;height: 0;}
-.cate_wrap .cate_item input + label {display: inline-flex;align-items: center;height: 100%;padding: 0 10px;border: 1px solid #999;border-radius: 100px;cursor: pointer;}
+.cate_wrap .cate_item input + label {display: inline-flex;align-items: center;height: 100%;padding: 0 12px 0 10px;border: 1px solid #999;border-radius: 100px;cursor: pointer;}
 .cate_wrap .cate_item input:checked + label::before {background-color: #fff;}
 .cate_wrap .cate_item input:checked + label .txt {color: #fff;}
 .cate_wrap .cate_item input:checked + label.culture {background-color: #FF7A30;border-color: #FF7A30;}

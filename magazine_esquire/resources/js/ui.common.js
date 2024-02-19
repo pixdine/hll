@@ -36,7 +36,7 @@ $(document).ready(function () {
     squareAtcList();//클럽 에스콰이어 메인 > 하이라이츠 추가
 
     // 지도 상세 설명 더보기 토글
-    $(".comment_box").commentToggle();
+    // $(".comment_box").commentToggle();
 
     $(".tab_wrap").commonTab(); // 탭메뉴, 탭컨텐츠
 
@@ -146,6 +146,10 @@ $(document).ready(function () {
             enableScroll();
         }
     });
+});
+
+$(window).on("load", function () {
+    $(".comment_box").commentToggle();
 });
 
 //iOS vh 대응

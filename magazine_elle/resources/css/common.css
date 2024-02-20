@@ -998,8 +998,8 @@ background:#fff;overflow:hidden;z-index:230}
 	.subvisual .imgbox .pc{display:none;}
 	.subvisual .imgbox .mo{display:block;}
 	.subvisual .heading_area{padding:0 20px;}
-	.subvisual .cate{font-size:10px;}
-	.subvisual .tit{font-size:44px;line-height:58px;}
+	.subvisual .cate{margin-bottom:7px;font-size:10px;}
+	.subvisual .tit{font-size:40px;line-height:52px;}
 	/* 서브비주얼 - 브랜딩 */
 	.subvisual.branding{height:270px;margin-bottom:40px;}
 	.subvisual.branding .heading_area{padding:0 30px;}

@@ -24,6 +24,8 @@
 .subtit_wrap .subtit_area{text-align:center;}
 .subtit_wrap .subtit_area .tit{color:#111;font-size:40px;font-weight:700;line-height:50px;letter-spacing:-0.01em;}
 .subtit_wrap .subtit_area .txt{font-size:18px;font-weight:500;line-height:32px;margin-top:20px;letter-spacing:-0.01em;}
+.newsletter .subtit_wrap{margin-bottom:105px;}
+
 
 /*고정 배너 영역*/
 .banner_wrap{margin-top: 120px;overflow: hidden;}
@@ -300,10 +302,10 @@ contents
 .newsletter .newsletter_head .from {position: absolute;font-family: NotoSans;font-size: 18px;line-height: 24px;}
 .newsletter .newsletter_head .to em,
 .newsletter .newsletter_head .from em {font-family: SaolDisplay;}
-.newsletter .newsletter_head .to {left: 60px;}
-.newsletter .newsletter_head .from {right: 63px;}
+.newsletter .newsletter_head .to {left: 161px;}
+.newsletter .newsletter_head .from {right:161px;}
 .newsletter .newsletter_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
-.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);min-height: 309px; background: no-repeat 0 0 / 100% 100%;}
+.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);min-height: 279px; background: no-repeat 0 0 / 100% 100%;}
 .newsletter .newsletter_list > li > a {position: relative;display: flex;flex-direction: column;padding: 52px 32px 32px;height: 100%;}
 .newsletter .newsletter_list > li > a::after {content: "";position: absolute;bottom: 32px;right: 32px;width: 24px;height: 24px;background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 3L17 12L8 21' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat 0 0 / contain;}
 .newsletter .newsletter_list > li .times {margin-bottom: 16px;font-family: ElleGaborStd;font-weight: 500;font-size: 24px;line-height: 25px;}
@@ -393,9 +395,10 @@ contents
     /* 서브 상단 페이지 타이틀 영역 */
     .container .sub .heading_wrap {margin:0; height:150px; background-image:url('../../resources/images/bg_top_tit_mo.png'); background-size:375px 150px;}
     .container .sub .heading_wrap h2.tit{font-size:32px;line-height:32px;}
-    .subtit_wrap{margin-bottom:40px;}
+    .subtit_wrap,.newsletter .subtit_wrap{margin-bottom:40px;}
     .subtit_wrap .subtit_area .tit{font-size:22px;line-height:32px;}
     .subtit_wrap .subtit_area .txt{font-size:14px;font-weight:400;line-height:22px;}
+    
 
     /* 마이페이지 상단 페이지 타이틀 영역 */
     .mypage .sub .heading_wrap{background-image:url('../../resources/images/bg_top_mypage_mo.png');}
@@ -540,9 +543,9 @@ contents
     .newsletter .newsletter_head .to,
     .newsletter .newsletter_head .from {position: relative;font-size: 12px;line-height: 17px;}
     .newsletter .newsletter_head .to {left: 0;order: 1;}
-    .newsletter .newsletter_head .from {right: 0;order: 3;}
+    .newsletter .newsletter_head .from {right: 0;order: 3;text-align:right;}
     .newsletter .newsletter_list {row-gap: 24px;}
-    .newsletter .newsletter_list > li {width: 100%;min-height: 260px;}
+    .newsletter .newsletter_list > li {width: 100%;min-height: 210px;}
     .newsletter .newsletter_list > li > a {padding: 44px 24px 32px;}
     .newsletter .newsletter_list > li > a::after {bottom: 32px;right: 24px;width: 16px;height: 16px;}
     .newsletter .newsletter_list > li .times {margin-bottom: 12px;font-size: 16px;line-height: 1;}
@@ -559,7 +562,7 @@ contents
     .newsletter .newsletter_review {padding: 0;margin: 0 -24px;}
     .newsletter .newsletter_review .swiper-button-prev, 
     .newsletter .newsletter_review .swiper-button-next {display: none;}
-    .newsletter .review_box {min-height: 306px;padding: 32px 20px;}
+    .newsletter .review_box {min-height: 290px;padding: 32px 20px;}
     .newsletter .review_box .txt {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 6;word-break: break-all;}
     .newsletter .review_box .info {flex-direction: column;align-items: flex-start;padding-top: 48px;}
     .newsletter .review_box .info .magazine {top: 0;font-size: 14px;}

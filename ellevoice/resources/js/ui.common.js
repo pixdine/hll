@@ -847,3 +847,100 @@ function viewImgSlide() {
         });
     });
 }
+
+// 뉴스레터 구독자 리뷰 swiper
+function swiperNewsletterReview() { 
+    const $swiperNewsletterReview = $('.swiper_newsletter_review');
+    if ($swiperNewsletterReview.length === 0) return;
+
+    $swiperNewsletterReview.each(function () {
+        if (!this.swiper) {
+            const $btnNext = $(this).find(".swiper-button-next");
+            const $btnPrev = $(this).find(".swiper-button-prev");
+            new Swiper(this, {
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1.7,
+                spaceBetween: 12,
+                centeredSlides: true,
+                loop: true,
+                navigation: {
+                    nextEl: $btnNext,
+                    prevEl: $btnPrev,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    }
+                }
+            });
+        }
+        
+    });
+}
+
+/*Accordion*/
+class Accordion {
+    static #defaultOptions = {
+        btn: ".accordion_btn",
+        panel: ".accordion_panel",
+        item: ".accordion_item",
+        multiple: false
+    };
+    
+    #options;
+    #$wrap;
+    #$item;
+    #$panel;
+    #isOpen;
+    
+    constructor(selector, _options = null) {
+      this.#init(selector, _options);
+    }
+  
+    #init(selector, _options) {
+        this.#options = $.extend({}, Accordion.#defaultOptions, _options);
+        this.#$wrap = $(selector);
+
+        this.#initEvent();
+    }
+    #initEvent() {
+        const self = this;
+        this.#$wrap.find(this.#options.btn).each(function () {
+            $(this).on("click", function () {
+                self.#$item = $(this).closest(self.#options.item);
+                self.#$panel = self.#$item.find(self.#options.panel);
+                self.#isOpen = self.#$panel.is(":visible");
+
+                if (self.#options.multiple === true) {
+                    if (self.#isOpen) {
+                        self.hide();
+                    } else {
+                        self.show();
+                    }
+                } else {
+                    if (self.#isOpen) {
+                        self.hide();
+                    } else {
+                        self.#$wrap.find(self.#options.item).removeClass("active");
+                        self.#$wrap.find(self.#options.panel).slideUp();
+                        self.show();
+                    }
+                }
+
+            });
+        });
+    }
+
+    show() {
+        // console.log("show");
+        this.#$item.addClass("active");
+        this.#$panel.slideDown();
+    }
+    hide() {
+        // console.log("hide");
+        this.#$item.removeClass("active");
+        this.#$panel.slideUp();
+    }
+}

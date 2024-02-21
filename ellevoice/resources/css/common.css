@@ -36,6 +36,12 @@
 @font-face {
 	font-family: ElleGaborStd;
 	font-style: normal;
+	font-weight: 700;
+	src: url(../font/ElleGaborStd-Bold.woff2) format("woff2"), url(../font/ElleGaborStd-Bold.woff) format("woff"), url(../font/ElleGaborStd-Bold.otf) format("opentype");
+}
+@font-face {
+	font-family: ElleGaborStd;
+	font-style: normal;
 	font-weight: 600;
 	src: url(../font/ElleGaborStd-DemiBold.woff2) format("woff2"), url(../font/ElleGaborStd-DemiBold.woff) format("woff"), url(../font/ElleGaborStd-DemiBold.otf) format("opentype");
 }

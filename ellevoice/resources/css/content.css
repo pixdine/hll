@@ -298,10 +298,10 @@ contents
 .newsletter .newsletter_head .from {position: absolute;font-family: NotoSans;font-size: 18px;line-height: 24px;}
 .newsletter .newsletter_head .to em,
 .newsletter .newsletter_head .from em {font-family: SaolDisplay;}
-.newsletter .newsletter_head .to {left: 13.34%;}
-.newsletter .newsletter_head .from {right: 11.25%;}
+.newsletter .newsletter_head .to {left: 60px;}
+.newsletter .newsletter_head .from {right: 63px;}
 .newsletter .newsletter_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
-.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);min-height: 279px; background: no-repeat 0 0 / 100% 100%;}
+.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);min-height: 309px; background: no-repeat 0 0 / 100% 100%;}
 .newsletter .newsletter_list > li > a {position: relative;display: flex;flex-direction: column;padding: 52px 32px 32px;height: 100%;}
 .newsletter .newsletter_list > li > a::after {content: "";position: absolute;bottom: 32px;right: 32px;width: 24px;height: 24px;background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 3L17 12L8 21' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat 0 0 / contain;}
 .newsletter .newsletter_list > li .times {margin-bottom: 16px;font-family: ElleGaborStd;font-weight: 500;font-size: 24px;line-height: 25px;}
@@ -321,7 +321,7 @@ contents
 .newsletter .review_list > li:nth-of-type(3n) .review_box {background-color: rgba(0,160,94,0.15);}
 .newsletter .review_list > li:nth-of-type(3n + 1) .review_box {background-color: rgba(153,153,153,0.15);}
 .newsletter .review_list > li:nth-of-type(3n + 2) .review_box {background-color: #F8F0E5;}
-.newsletter .review_box {display: flex;flex-direction: column;min-height: 281px;padding: 32px 32px 24px;}
+.newsletter .review_box {display: flex;flex-direction: column;min-height: 281px;padding: 32px;}
 .newsletter .review_box .txt {font-weight: 400;line-height: 23px;word-break: break-all;}
 .newsletter .review_box .info {display: flex;align-items: center;gap: 8px 12px;margin-top: auto;padding-top: 56px;}
 .newsletter .review_box .info .magazine {position: relative;top: 1px;}
@@ -333,7 +333,7 @@ contents
 /*faq*/
 .faq_wrap {margin-top: 120px;}
 .faq_wrap .faq_head {margin-bottom: 40px;text-align: center;}
-.faq_wrap .faq_head h4 {font-size: 40px;font-weight: 700;line-height: 50px;}
+.faq_wrap .faq_head h4 {font-size: 40px;font-weight: 700;font-family: ElleGaborStd;line-height: 50px;}
 
 .faq_list_wrap {border-top: 2px solid #111;}
 .faq_list .accordion_btn {position: relative;display: block;width: 100%;min-height: 83px;padding: 28px 30px 28px 0;text-align: left;}
@@ -533,13 +533,13 @@ contents
     .newsletter .newsletter_head {justify-content: space-between;min-height: 70px;margin-bottom: 32px;border-top-color: #111;border-bottom-color: #111;}
     .newsletter .newsletter_head h4 {font-size: 18px;line-height: 26px;order: 2;}
     .newsletter .newsletter_head .to,
-    .newsletter .newsletter_head .from {position: relative;font-size: 14px;line-height: 20px;}
+    .newsletter .newsletter_head .from {position: relative;font-size: 12px;line-height: 17px;}
     .newsletter .newsletter_head .to {left: 0;order: 1;}
     .newsletter .newsletter_head .from {right: 0;order: 3;}
     .newsletter .newsletter_list {row-gap: 24px;}
-    .newsletter .newsletter_list > li {width: 100%;min-height: 210px;}
-    .newsletter .newsletter_list > li > a {padding: 39px 24px 24px;}
-    .newsletter .newsletter_list > li > a::after {bottom: 24px;right: 24px;width: 16px;height: 16px;}
+    .newsletter .newsletter_list > li {width: 100%;min-height: 260px;}
+    .newsletter .newsletter_list > li > a {padding: 44px 24px 32px;}
+    .newsletter .newsletter_list > li > a::after {bottom: 32px;right: 24px;width: 16px;height: 16px;}
     .newsletter .newsletter_list > li .times {margin-bottom: 12px;font-size: 16px;line-height: 1;}
     .newsletter .newsletter_list > li .tit {font-size: 18px;line-height: 24px;}
     .newsletter .newsletter_list > li .date {padding-top: 29px;font-size: 14px;line-height: 1;}
@@ -554,13 +554,13 @@ contents
     .newsletter .newsletter_review {padding: 0;margin: 0 -24px;}
     .newsletter .newsletter_review .swiper-button-prev, 
     .newsletter .newsletter_review .swiper-button-next {display: none;}
-    .newsletter .review_box {min-height: 290px;padding: 32px 20px 16px;}
+    .newsletter .review_box {min-height: 306px;padding: 32px 20px;}
     .newsletter .review_box .txt {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 6;word-break: break-all;}
     .newsletter .review_box .info {flex-direction: column;align-items: flex-start;padding-top: 48px;}
     .newsletter .review_box .info .magazine {top: 0;font-size: 14px;}
 
     /*faq*/
-    .faq_wrap {margin-top: 80px;}
+    .faq_wrap {margin-top: 60px;}
     .faq_wrap .faq_head {margin-bottom: 32px;}
     .faq_wrap .faq_head h4 {font-size: 22px;line-height: 32px;}
     .faq_list .accordion_btn {min-height: 61px;padding: 20px 20px 20px 0;}

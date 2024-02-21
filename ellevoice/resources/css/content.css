@@ -284,8 +284,8 @@ contents
 
 /*mypage*/
 .mytit_wrap{margin-bottom:24px;}
-.mytit_wrap .mytit_area{display:flex;position: relative;background-color:#00A05E;padding:20px 23px;}
-.mytit_wrap .mytit_area .tit{overflow: hidden;font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
+.mytit_wrap .mytit_area{display:flex;align-items: center;position: relative;background-color:#00A05E;padding:20px 23px;}
+.mytit_wrap .mytit_area .tit{font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
 .mytit_wrap .mytit_area .tit .num{font-family:ElleGaborStd;font-size: 26px;font-weight:600;line-height:25px;}
 .mytit_wrap .mytit_area .side{margin-left: auto;flex-shrink: 0;}
 .mytit_wrap .mytit_area .side .btn_more{display: inline-flex;align-items: center;position: relative;margin-right: -10px;padding: 2px 10px;font-size: 16px;color: #fff;line-height: 28px;}
@@ -294,6 +294,8 @@ contents
 .mypage .board_list{border-top:0}
 .mypage .nodata{padding: 170px 40px;background-color: #f7f7f7;text-align:center;}
 .mypage .nodata .txt{font-size: 24px;line-height: 32px;color: #666;}
+.mypage .nodata .btn_box{margin-top:12px;}
+.mypage .nodata .btn_box .btn_plus:after{margin-top:-3px;;}
 
 /*newsletter*/
 .newsletter .newsletter_head {position: relative;display: flex;align-items: center;min-height: 83px;justify-content: center; margin-bottom: 50px;border-top: 1px solid #999;border-bottom: 1px solid #999;}
@@ -440,8 +442,8 @@ contents
     .set_wrap .box .txt p{margin-top: 16px;font-size: 16px;line-height:23px;}
     
     /* 에세이 목록 */
-	.essay_list {gap: 24px 12px;}
-	.essay_list > li {width: calc(100% / 2 - 6px);}
+	.essay_list {gap: 24px 11px;}
+	.essay_list > li {width: calc(100% / 2 - 5.5px);}
 
 	/* ESSAYS */
     .essay .search {margin-bottom: 24px;} 
@@ -486,6 +488,8 @@ contents
 	.writer_view .subtit_wrap .writer_img .btn_ico.dibs {width: 32px;height: 32px;}
 
     /*mypage*/
+    .container.mypage .bodycont_section{margin-top:60px;}
+
     .board_item .detail_box .date{margin-bottom:12px;}
     .board_item .detail_box .tit{font-size: 16px;line-height: 24px;}
     .board_item .detail_box .txt{margin-top: 6px;font-size: 14px;line-height: 20px;}
@@ -493,9 +497,9 @@ contents
 
     .mypage .bodycont_section .btn_area{margin-top:40px;}
     .bodycont_section .btn_area .btn{width:100%;}
+    .mytit_wrap .mytit_area{padding:12px 12px 12px 16px;height:48px;}
     .mytit_wrap .mytit_area .tit{font-size:16px;font-weight:400;line-height:23px;}
     .mytit_wrap .mytit_area .tit .num{font-size: 18px;font-weight: 600;line-height: 17px;}
-    .mytit_wrap .mytit_area{padding:13px 16px;}
     .mytit_wrap .mytit_area .side .btn_more{display: block;width: 28px;height: 28px;margin-right: -4px;padding: 0;}
     .mytit_wrap .mytit_area .side .btn_more::after{position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);margin: -1px 0 0 0;width: 24px;height: 24px;background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2V22' stroke='%23ffffff' stroke-width='2'/%3E%3Cpath d='M22 12L2 12' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");background-size: 24px auto;}
     .mytit_wrap .mytit_area .side .btn_more span{display:none;}
@@ -504,6 +508,7 @@ contents
     .mypage .nodata .btn_box{margin-top: 8px;}
     .btn_plus{font-size:14px;line-height:20px;}
     .btn_plus:after{margin-top:-3px}
+    .mypage .nodata .btn_box .btn_plus:after{width:12px;height:12px;margin-top:-2px;}
 }   
 
 @media screen and (max-width: 359px) {

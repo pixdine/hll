@@ -731,7 +731,7 @@ background:#fff;overflow:hidden;z-index:230}
 .essay_list .cont {margin-top: 12px;}
 .essay_list .cont > span {display:flex;align-items:center;}
 .essay_list .cont .essay_cate::before {width: 16px;height: 16px;background-color: #111;top:-1px;}
-.essay_list .cont .tit {height: 56px;margin-top: 8px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 20px;font-weight: 700;}
+.essay_list .cont .tit {height: 52px;margin-top: 8px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 20px;font-weight: 700;}
 .essay_list .cont .writer {margin-top: 24px;font-size: 14px;}
 .essay_list .util {position: absolute;top: 16px;right: 16px;display: flex;gap: 6px;align-items: center;}
 .essay_list .util .new {display: inline-block;width: 32px;height: 32px;background: url("../images/ico_new.svg") no-repeat 0 0 / contain;}

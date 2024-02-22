@@ -1007,7 +1007,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.subvisual .cate{margin-bottom:16px;font-size:14px;}
 	.subvisual .tit{font-size:32px;line-height:38px;}
 	/* 서브비주얼 - 브랜딩 */
-	.subvisual.branding{height:270px;margin-bottom:40px;}
+	.subvisual.branding{height:180px;margin-bottom:40px;}
 	.subvisual.branding .heading_area{padding:0 30px;}
 	.subvisual.branding .tit{font-size:30px;line-height:36px;}
 	.subvisual.branding .txt{margin-top:12px;font-size:14px;line-height:20px;}

@@ -807,11 +807,13 @@ function swiperWriter() {
                     prevEl: $btnPrev,
                 },
                 breakpoints: {
-                    768: {
+                    600: {
                         slidesPerView: 3.5,
                     },
                     1024: {
-                        slidesPerView: 4.5,
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                        // slidesPerView: 4.5,
                     },
                     1140: {
                         slidesPerView: 4,

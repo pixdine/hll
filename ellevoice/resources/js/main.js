@@ -34,3 +34,37 @@ const swiperEssay = new Swiper(".swiper-essay .swiper", {
         }
     }
 });
+
+const swiperWriters = new Swiper(".writer_list_wrap .swiper", {
+    slidesPerView: 2.976,
+    spaceBetween: 12,
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
+    breakpoints: {
+        550: {
+            slidesPerView: 3.8,
+            spaceBetween: 15,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 75,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+        },
+        1280: {
+            slidesPerView: 5,
+            spaceBetween: 75,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+        }
+    }
+});

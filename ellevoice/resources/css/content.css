@@ -246,7 +246,7 @@ contents
 /* writer */
 .writer_list > li {position: relative;}
 .writer_list > li > a {display: flex;flex-direction: column;align-items: center;}
-.writer_list .btn_ico.dibs {position: absolute;top: 182px;left: 50%;transform: translateX(-50%);width: 40px;height: 40px;margin-left: 71px;}
+.writer_list .btn_ico.dibs {position: absolute;top: 180px;left: 50%;transform: translateX(-50%);width: 40px;height: 40px;margin-left: 70px;}
 .writer_list .img_area {position: relative;width: 180px;height: 180px;}
 .writer_list .img {overflow: hidden;position: relative;width: 100%;padding-top: 100%;background: url("../images/img_writer_default.png") no-repeat center center / contain;border-radius: 50%;}
 .writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;}
@@ -490,18 +490,19 @@ contents
     .dtline_wrap .dtline_box .cate_wrap .cate_inner .cate_item+.cate_item{margin-left:0;}
 
 	/* WRITER */
-	.writer_list .btn_ico.dibs {top:134px;margin-left: 56px;}
+	.writer_list .btn_ico.dibs {top:134px;margin-left: 56px;width: 32px;height: 32px;}
 	.writer_list .img_area {width: 140px;height: 140px;}
-	.writer_list .cont .nm {font-size: 16px;line-height: 22px;font-weight: 500;}
+	.writer_list .cont .nm {font-size: 16px;line-height: 22px;}
 	.writer_list .cont .desc {overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-top: 8px;font-size: 14px;line-height: 24px;}
 
 	.new_essay .cont_inner {padding-top: 40px;padding-bottom: 40px;}
 	.new_essay .tit {margin-bottom: 32px;font-size: 20px;line-height: 29px;}
 
 	.swiper_new_essay {padding: 0 20px;margin: 0 -20px;}
-	.swiper_new_essay .writer_list .btn_ico.dibs {top: calc(118px - 28px);left: auto;right: 0;transform: inherit; margin-left: 0;}
+	.swiper_new_essay .writer_list .btn_ico.dibs {top: calc(118px - 32px);margin-left: 43px;}
+	/* .swiper_new_essay .writer_list .btn_ico.dibs {top: calc(118px - 32px);left: auto;right: 0;transform: inherit; margin-left: 0;} */
 	.swiper_new_essay .writer_list .img_area {width: 118px;height: 118px;}
-	.swiper_new_essay .writer_list .cont .nm {font-size: 14px;}
+	.swiper_new_essay .writer_list .cont .nm {font-size: 14px;line-height: 22px;font-weight: 500;}
 
 	.writer_list_wrap {padding-top: 40px;}
 	.writer_list_wrap .writer_list {gap: 20px;}

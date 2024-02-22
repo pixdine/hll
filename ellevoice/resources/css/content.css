@@ -24,7 +24,6 @@
 .subtit_wrap .subtit_area{text-align:center;}
 .subtit_wrap .subtit_area .tit{color:#111;font-size:40px;font-weight:700;line-height:50px;letter-spacing:-0.01em;}
 .subtit_wrap .subtit_area .txt{font-size:18px;font-weight:500;line-height:32px;margin-top:20px;letter-spacing:-0.01em;}
-.newsletter .subtit_wrap{margin-bottom:105px;}
 
 
 /*고정 배너 영역*/
@@ -282,7 +281,7 @@ contents
 
 /*mypage*/
 .mytit_wrap{margin-bottom:24px;}
-.mytit_wrap .mytit_area{display:flex;align-items: center;position: relative;background-color:#00A05E;padding:20px 23px;}
+.mytit_wrap .mytit_area{display:flex;align-items: center;position: relative;background-color:#00A05E;padding:16px 24px;}
 .mytit_wrap .mytit_area .tit{font-size: 24px;font-weight: 500;line-height: 35px;color: #fff;}
 .mytit_wrap .mytit_area .tit .num{font-family:ElleGaborStd;font-size: 26px;font-weight:600;line-height:25px;}
 .mytit_wrap .mytit_area .side{margin-left: auto;flex-shrink: 0;}
@@ -305,7 +304,7 @@ contents
 .newsletter .newsletter_head .to {left: 161px;}
 .newsletter .newsletter_head .from {right:161px;}
 .newsletter .newsletter_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
-.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);min-height: 279px; background: no-repeat 0 0 / 100% 100%;}
+.newsletter .newsletter_list > li {width: calc(100% / 3 - 16px);min-height: 309px; background: no-repeat 0 0 / 100% 100%;}
 .newsletter .newsletter_list > li > a {position: relative;display: flex;flex-direction: column;padding: 52px 32px 32px;height: 100%;}
 .newsletter .newsletter_list > li > a::after {content: "";position: absolute;bottom: 32px;right: 32px;width: 24px;height: 24px;background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 3L17 12L8 21' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat 0 0 / contain;}
 .newsletter .newsletter_list > li .times {margin-bottom: 16px;font-family: ElleGaborStd;font-weight: 500;font-size: 24px;line-height: 25px;}
@@ -395,7 +394,7 @@ contents
     /* 서브 상단 페이지 타이틀 영역 */
     .container .sub .heading_wrap {margin:0; height:150px; background-image:url('../../resources/images/bg_top_tit_mo.png'); background-size:375px 150px;}
     .container .sub .heading_wrap h2.tit{font-size:32px;line-height:32px;}
-    .subtit_wrap,.newsletter .subtit_wrap{margin-bottom:40px;}
+    .subtit_wrap{margin-bottom:40px;}
     .subtit_wrap .subtit_area .tit{font-size:22px;line-height:32px;}
     .subtit_wrap .subtit_area .txt{font-size:14px;font-weight:400;line-height:22px;}
     
@@ -525,7 +524,7 @@ contents
 
     .mypage .bodycont_section .btn_area{margin-top:40px;}
     .bodycont_section .btn_area .btn{width:100%;}
-    .mytit_wrap .mytit_area{padding:12px 12px 12px 16px;height:48px;}
+    .mytit_wrap .mytit_area{padding:10px 10px 10px 12px;height:44px;}
     .mytit_wrap .mytit_area .tit{font-size:16px;font-weight:400;line-height:23px;}
     .mytit_wrap .mytit_area .tit .num{font-size: 18px;font-weight: 600;line-height: 17px;}
     .mytit_wrap .mytit_area .side .btn_more{display: block;width: 28px;height: 28px;margin-right: -4px;padding: 0;}
@@ -546,7 +545,7 @@ contents
     .newsletter .newsletter_head .to {left: 0;order: 1;}
     .newsletter .newsletter_head .from {right: 0;order: 3;text-align:right;}
     .newsletter .newsletter_list {row-gap: 24px;}
-    .newsletter .newsletter_list > li {width: 100%;min-height: 210px;}
+    .newsletter .newsletter_list > li {width: 100%;min-height: 260px;}
     .newsletter .newsletter_list > li > a {padding: 44px 24px 32px;}
     .newsletter .newsletter_list > li > a::after {bottom: 32px;right: 24px;width: 16px;height: 16px;}
     .newsletter .newsletter_list > li .times {margin-bottom: 12px;font-size: 16px;line-height: 1;}

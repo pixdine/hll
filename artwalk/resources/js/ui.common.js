@@ -617,7 +617,7 @@ $.fn.moreDrop = function () {
         var moreDropBody = $(this);
         var toggleBtn = moreDropBody.find(".btn_ico");
         var layerBox = moreDropBody.find(".layer_box");
-        toggleBtn.on("click", function (e) {
+        toggleBtn.on("click", function (e) {//2024-02-08 : 수정/삭제/취소 버튼 클릭시 이벤트가 간헐적으로 작동하는 부분 수정(e추가)
             if (moreDropBody.hasClass("on")) {
                 moreDropBody.removeClass("on");
             } else {
@@ -629,7 +629,7 @@ $.fn.moreDrop = function () {
         toggleBtn.on("blur", function () {
             setTimeout(function () {
                 moreDropBody.removeClass("on");
-            }, 200);
+            }, 200);//2024-02-08 : 수정/삭제/취소 버튼 클릭시 이벤트가 간헐적으로 작동하는 부분 수정(200으로 수정)
         });
     });
 };

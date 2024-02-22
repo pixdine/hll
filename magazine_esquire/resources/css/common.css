@@ -967,7 +967,8 @@ background:#fff;overflow:hidden;z-index:230}
 .mem_box .mem_info .pers{display:flex;align-items:baseline;}
 .mem_box .mem_info .name{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:24px;line-height:35px;}
 .mem_box .mem_info .age{margin-left:12px;}
-.mem_box .mem_info .instagram{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom:6px;font-family:'Pretendard';font-weight:500;color:#999;}
+.mem_box .mem_info .instagram{margin-bottom:6px;font-family:'Pretendard';font-weight:500;color:#999;}
+.mem_box .mem_info .instagram a{display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .mem_box .mem_info .job{display:flex;}
 .mem_box .mem_info .job span{display:block;position:relative;margin-right:8px;padding-right:9px;white-space:nowrap;}
 .mem_box .mem_info .job span:after{content:'';display:block;position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:12px;margin-top:1px;background-color:rgba(255,255,255,0.2);}

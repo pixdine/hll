@@ -946,3 +946,44 @@ class Accordion {
         this.#$panel.slideUp();
     }
 }
+
+
+// 화보 딤 슬라이드 열기
+function openPhotoViewer() {
+    $(".photoViewer").addClass("active");
+    $("body").addClass("lockbody");
+    document.ontouchmove = function (event) {
+        event.preventDefault();
+    };
+}
+
+// 화보 딤 슬라이드
+$.fn.photoViewerSwiper = function () {
+    var photoViewerArr = [];
+    var pvSwiper = [];
+    return this.each(function (i) {
+        photoViewerArr[i] = $(this);
+        pvSwiper[i] = photoViewerArr[i].find(".pvSwiper");
+        var next = photoViewerArr[i].find(".pv_next");
+        var prev = photoViewerArr[i].find(".pv_prev");
+        var close = photoViewerArr[i].find(".pv_close");
+        pvSwiper[i] = new Swiper(pvSwiper[i], {
+            navigation: {
+                nextEl: next,
+                prevEl: prev,
+            },
+        });
+        close.on("click", function () {
+            console.log("close");
+            photoViewerArr[i].removeClass("active");
+            $("body").removeClass("lockbody");
+            enableScroll();
+        });
+
+        if (pvSwiper[i].slides.length <= 1) {
+            pvSwiper[i].navigation.nextEl.style.display = "none";
+            pvSwiper[i].navigation.prevEl.style.display = "none";
+        }
+    });
+    document.ontouchmove = null;
+};

@@ -9,6 +9,7 @@
 	<!-- css, Jquery -->
 	<link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
 	<link rel="stylesheet" type="text/css" href="../resources/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css"/>
 	<script src="../resources/js/jquery-3.6.0.min.js"></script>
 	<!-- //css, Jquery -->
 </head>
@@ -191,7 +192,8 @@
                 <button type="button" data-alert-open="alert_3"><span>얼럿3_텍스트1줄_버튼2개</span></button><br>
 				<br/>
 				<button type="button" data-popup-open="popup_1"><span>커뮤니티 &gt; 운영규정</span></button><br>
-				<button type="button" data-popup-open="popup_terms_agree"><span>개인정보 수집 및 이용에 대한 동의(필수)</span></button>
+				<button type="button" data-popup-open="popup_terms_agree"><span>개인정보 수집 및 이용에 대한 동의(필수)</span></button><br/>
+				<button type="button" onclick="openPhotoViewer();"><span>화보 슬라이드 팝업(콜라보레이션 상세)</span></button>
             </div>
 		</main>
 		<!-- //container -->
@@ -319,10 +321,71 @@
         </div>
     </div>
 
+
+	<!-- D : 화보 슬라이드 -->
+	<div class="photoViewer">
+        <div class="pv_container">
+            <div class="pv_cont">
+                <div class="swiper pvSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view01.png" />
+                                <p class="caption">사진1 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view01.png" />
+                                <p class="caption">사진2 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view01.png" />
+                                <p class="caption">사진3 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view01.png" />
+                                <p class="caption">사진4 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img src="../resources/images/temp/temp_view01.png" />
+                                <p class="caption">사진5 / Gucci</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="pv_img">
+                                <img
+                                    src="https://image.jtbcplus.kr/data/contents/jam_photo/202307/12/fd670c20-50c8-47fb-98e3-fb246bb1f51a.jpg" />
+                                <p class="caption">사진6 / Gucci</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="pv_next"><img src="../resources/images/photo_viewer_next.png" alt="다음"></button>
+                <button class="pv_prev"><img src="../resources/images/photo_viewer_prev.png" alt="이전"></button>
+            </div>
+
+            <button class="pv_close" title="닫기"><img src="../resources/images/close_photoviewer.png" alt="닫기"></button>
+        </div>
+    </div>
+
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
 	<script src="../resources/js/ui.common.js"></script>
 	<!-- //js -->
+
+
+	<script>
+        $(document).ready(function () {
+            $('.photoViewer').photoViewerSwiper();
+        });
+    </script>
 
 <script>
 </script>

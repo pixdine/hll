@@ -188,9 +188,10 @@
 			<div class="cont_inner" style="padding-top: 100px;">
                 <button type="button" data-alert-open="alert_1"><span>얼럿1_텍스트2줄이상_버튼2개</span></button><br>
                 <button type="button" data-alert-open="alert_2"><span>얼럿2_텍스트1줄_버튼1개</span></button><br>
-                <button type="button" data-alert-open="alert_2"><span>얼럿3_텍스트1줄_버튼2개</span></button><br>
+                <button type="button" data-alert-open="alert_3"><span>얼럿3_텍스트1줄_버튼2개</span></button><br>
 				<br/>
-				<button type="button" data-popup-open="popup_1"><span>커뮤니티 &gt; 운영규정</span></button>
+				<button type="button" data-popup-open="popup_1"><span>커뮤니티 &gt; 운영규정</span></button><br>
+				<button type="button" data-popup-open="popup_terms_agree"><span>개인정보 수집 및 이용에 대한 동의(필수)</span></button>
             </div>
 		</main>
 		<!-- //container -->
@@ -228,7 +229,6 @@
             </div>
             <div class="popup_alert_bottom">
                 <div class="btn_wrap">
-					<button type="button" class="btn bctype2"><span>나의 스크랩</span></button>
                     <button type="button" class="btn bctype1"><span>확인</span></button>
                 </div>
             </div>
@@ -253,7 +253,7 @@
                 </div>
             </div>
             <div class="popup_close">
-                <button type="button" class="btn_close" data-alert-close="alert_2"><span class="blind">닫기</span></button>
+                <button type="button" class="btn_close" data-alert-close="alert_3"><span class="blind">닫기</span></button>
             </div>
         </div>
     </div>
@@ -277,6 +277,43 @@
             <div class="popup_bottom">
                 <div class="btn_wrap">
                     <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!--D : 이용약관-->
+    <div class="popup_full" data-popup="popup_terms_agree">
+        <div class="popup_inner agree">
+            <div class="popup_head">
+                <h2 class="tit">개인정보 수집 및 이용에 대한 동의(필수)</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_1"><span class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont">
+				<div class="p_agree">
+                    <div class="agree_cont">
+                        <p class="agree_txt">본인은 광고 제휴 및 관련 문의 작성과 관련하여 귀사가 아래와 같이 본인의 개인정보를 수집, 이용하는데 동의합니다.</p><br>
+						<p class="agree_txt">1.개인정보의수집•이용목적<br/>
+							-고객문의 및 상담요청에 대한 회신,상담을 위한 서비스 이용기록 조회 등의 목적
+						</p>
+						<p class="agree_txt"><br>
+							2.개인정보 수집 항목<br/>
+							- 필수입력사항 : 회사명, 담당자명, 이메일, 연락처<br/>
+							※서비스 이용 과정이나 사업처리 과정에서 접속로그, 쿠키, 접속IP와 같은 정보들이 생성되어 수집될 수 있습니다.
+						</p>
+						<p class="agree_txt"><br>
+							3.개인정보 처리 및 보유기간<br/>
+							-  홈페이지 탈퇴 시까지
+						</p><br>
+						<p>※ 귀하의 개인정보 수집, 이용에 대한 동의를 거부하실 권리가 있으며, 동의를 거부하실 경우 문의를 작성하실 수 없습니다. 본인은 상기 개인정보 수집 및 이용 동의서 내용을 이해하고 동의합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1" data-popup-close="popup_terms_agree"><span>확인</span></button>
                 </div>
             </div>
         </div>

@@ -62,9 +62,12 @@ newsletter
 .section_newsletter .subscription_apply .input input {flex: 1;height: 100%;width: 100%;text-indent: 10px;border: none;font-weight: 500;}
 .section_newsletter .subscription_apply .input + .input {margin-top: 16px;}
 .section_newsletter .check_group {margin-top: 32px;display: flex;flex-wrap: wrap;gap: 20px;}
+.section_newsletter .check_group .btn_terms {font-family: NotoSans;font-weight: 500;color: #666;}
 .section_newsletter .check_group .underline {position: relative;text-decoration: none;}
 .section_newsletter .check_group .underline::after {content: "";position: absolute;left: 0;bottom: 2px;height: 1px;width: 100%;background-color: #666;}
+.section_newsletter .check_group .chk_in {display: inline-flex;}
 .section_newsletter .check_group .chk_in input[type="checkbox"]:checked + label .underline::after {background-color: #111;}
+.section_newsletter .check_group .chk_in.checked .btn_terms {color: #111;}
 .section_newsletter .btn_subscription {margin-top: 40px;height: 52px;padding: 0 35px;font-weight: 500;color: #fff;background-color: var(--point);}
 @media (max-width:1100px){
 	.section_newsletter .subscription_apply {margin-top: 20px;padding-top: 375px;}
@@ -78,61 +81,54 @@ newsletter
 
 /* 뉴스레터 미리보기 */
 .section_newsletter_preview .cont_inner {padding-bottom: 0;}
-.swiper-newsletter_preview {position: relative;}
-.swiper-newsletter_preview .swiper {overflow: hidden;margin-left: -50px;margin-right: -50px;}
-/* .swiper-newsletter_preview .swiper-slide {height: revert-layer;}
-.swiper-newsletter_preview .swiper-slide figure {position: relative;text-align: center;}
-.swiper-newsletter_preview .swiper-slide:not(.swiper-slide-active) figure {top: 100px;}
-.swiper-newsletter_preview .swiper-slide figure img {width: 325px;transition: 0.4s ease;}
-.swiper-newsletter_preview .swiper-slide-active figure img {width: 432px !important;} */
-.swiper-newsletter_preview figcaption {margin-top: 28px;text-align: center;font-size: 36px;font-family: ElleGaborStd;font-weight: 600;color: var(--point);line-height: 1.1;}
-.swiper-newsletter_preview .swiper-slide {transform: scale(0.75);transition: 0.4s ease;}
-.swiper-newsletter_preview .swiper-slide-active {transform: scale(1) !important;}
-.swiper-newsletter_preview .swiper-slide-active figcaption {font-size: 28px;}
-/* .swiper-newsletter_preview .swiper-slide-active {width: 432px !important;} */
-
-.swiper-newsletter_preview .swiper-button-next,
-.swiper-newsletter_preview .swiper-button-prev {top: 50%;transform: translateY(-50%); width: 48px;height: 48px;background: url("../images/ico_arrow_right_48.svg") no-repeat center center / contain;cursor: pointer;}
-.swiper-newsletter_preview .swiper-button-next {right: auto;left: 100%;margin-left: 20px;}
-.swiper-newsletter_preview .swiper-button-prev {left: auto;right: 100%;margin-right: 20px;transform: rotate(180deg);}
+.swiper_newsletter_preview {position: relative;}
+.swiper_newsletter_preview .swiper {overflow: hidden;margin-left: -50px;margin-right: -50px;}
+.swiper_newsletter_preview .swiper-slide {transform: scale(0.75);transition: 0.4s ease;}
+.swiper_newsletter_preview .swiper-slide .img {overflow: hidden;position: relative;padding-bottom: 163.4%;background-color: coral;}
+.swiper_newsletter_preview .swiper-slide .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+.swiper_newsletter_preview .swiper-slide figcaption {margin-top: 28px;text-align: center;font-size: 36px;font-family: ElleGaborStd;font-weight: 600;color: var(--point);line-height: 1.1;}
+.swiper_newsletter_preview .swiper-slide-active {transform: scale(1) !important;}
+.swiper_newsletter_preview .swiper-slide-active figcaption {font-size: 28px;}
+.swiper_newsletter_preview .swiper-button-next {right: auto;left: 100%;margin-left: 20px;}
+.swiper_newsletter_preview .swiper-button-prev {left: auto;right: 100%;margin-right: 20px;}
 @media (max-width:1400px){
 	.section_newsletter_preview {overflow: hidden;}
-	.swiper-newsletter_preview .swiper-button-next {right: 0;left: auto;margin-left: 0;margin-right: -40px;}
-	.swiper-newsletter_preview .swiper-button-prev {left: 0;margin-right: 0;margin-left: -40px;}
+	.swiper_newsletter_preview .swiper-button-next {right: 0;left: auto;margin-left: 0;margin-right: -40px;}
+	.swiper_newsletter_preview .swiper-button-prev {left: 0;margin-right: 0;margin-left: -40px;}
 }
 @media (max-width:768px){
-	.swiper-newsletter_preview .swiper {margin-left: 0;margin-right: 0;}
-	.swiper-newsletter_preview .swiper-slide {transform: scale(0.8)}
-	.swiper-newsletter_preview .swiper-button-next,
-	.swiper-newsletter_preview .swiper-button-prev {display: none;}
-	.swiper-newsletter_preview figcaption {margin-top: 16px;font-size: 20px;font-weight: 700;}
-	.swiper-newsletter_preview .swiper-slide-active figcaption {font-size: 20px;}
+	.swiper_newsletter_preview .swiper {margin-left: 0;margin-right: 0;}
+	.swiper_newsletter_preview .swiper-slide {transform: scale(0.8)}
+	.swiper_newsletter_preview .swiper-slide figcaption {margin-top: 16px;font-size: 20px;font-weight: 700;}
+	.swiper_newsletter_preview .swiper-slide-active figcaption {font-size: 20px;}
+	.swiper_newsletter_preview .swiper-button-next,
+	.swiper_newsletter_preview .swiper-button-prev {display: none;}
 }
 
 /* 최신 뉴스레스 */
 .section_latest_newsletter .cont_inner {padding-top: 80px;}
 
 /* 뉴스레터 목록 */
-.newsletter-list > li {display: flex;flex-wrap: wrap;align-items: center;height: 80px;border-bottom: 1px solid #999;}
-.newsletter-list > li:first-of-type {border-top: 1px solid #999;}
-.newsletter-list > li .times {position: relative;flex-shrink: 0;padding: 0 2.41vw 0 1.61vw;}
-.newsletter-list > li .times::before {content: "";display: inline-block;position: relative;top: -1px;width: 28px;height: 28px;margin-right: 3vw;background: url("../images/ico_newsletter.svg") no-repeat center center / contain;vertical-align: middle;}
-.newsletter-list > li .tit {overflow: hidden;flex: 1;padding: 0 1.61vw;}
-.newsletter-list > li .tit p {font-size: 18px;line-height: 26px;}
-.newsletter-list > li .date {margin-left: auto;padding-left: 1.61vw;color: #666}
-.newsletter-list > li:hover {background-color: rgba(0,160,94,0.04);color: var(--point)}
-.newsletter-list > li:hover .times::before {background-image: url("../images/ico_newsletter_open.svg");}
+.newsletter_list > li {display: flex;flex-wrap: wrap;align-items: center;height: 80px;border-bottom: 1px solid #999;}
+.newsletter_list > li:first-of-type {border-top: 1px solid #999;}
+.newsletter_list > li .times {position: relative;flex-shrink: 0;padding: 0 2.41vw 0 1.61vw;}
+.newsletter_list > li .times::before {content: "";display: inline-block;position: relative;top: -1px;width: 28px;height: 28px;margin-right: 3vw;background: url("../images/ico_newsletter.svg") no-repeat center center / contain;vertical-align: middle;}
+.newsletter_list > li .tit {overflow: hidden;flex: 1;padding: 0 1.61vw;}
+.newsletter_list > li .tit p {font-size: 18px;line-height: 26px;}
+.newsletter_list > li .date {margin-left: auto;padding-left: 1.61vw;color: #666}
+.newsletter_list > li:hover {background-color: rgba(0,160,94,0.04);color: var(--point)}
+.newsletter_list > li:hover .times::before {background-image: url("../images/ico_newsletter_open.svg");}
 @media (max-width:768px){
 	/* 최신 뉴스레스 */
 	.section_latest_newsletter .cont_inner {padding-top: 40px;}
 
 	/* 뉴스레터 목록 */
-	.newsletter-list > li {flex-direction: column;align-items: flex-start;height: 158px;padding: 25px 0;font-size: 14px;}
-	.newsletter-list > li .times {margin-bottom: 8px;}
-	.newsletter-list > li .times::before {width: 20px;height: 20px;margin-right: 8px;background-image: url("../images/ico_newsletter_mo.svg");}
-	.newsletter-list > li .tit {overflow: inherit;}
-	.newsletter-list > li .tit p {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 16px;line-height: 23px;}
-	.newsletter-list > li .date {margin-left: 0;font-weight: 400;}
+	.newsletter_list > li {flex-direction: column;align-items: flex-start;height: 158px;padding: 25px 0;font-size: 14px;}
+	.newsletter_list > li .times {margin-bottom: 8px;}
+	.newsletter_list > li .times::before {width: 20px;height: 20px;margin-right: 8px;background-image: url("../images/ico_newsletter_mo.svg");}
+	.newsletter_list > li .tit {overflow: inherit;}
+	.newsletter_list > li .tit p {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 16px;line-height: 23px;}
+	.newsletter_list > li .date {margin-left: 0;font-weight: 400;}
 }
 
 
@@ -150,12 +146,12 @@ essay
 }
 
 /* 최신 에세이 */
-.swiper-essay {overflow: hidden;position: relative;}
-.swiper-essay .swiper {padding-bottom: 48px;}
-.swiper-essay .swiper .swiper-pagination {top: auto;bottom: 0;height: 2px;background-color: #DBDBDB;}
-.swiper-essay .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {background-color: #111;}
+.swiper_essay {overflow: hidden;position: relative;}
+.swiper_essay .swiper {padding-bottom: 48px;}
+.swiper_essay .swiper .swiper-pagination {top: auto;bottom: 0;height: 2px;background-color: #DBDBDB;}
+.swiper_essay .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {background-color: #111;}
 @media (max-width:768px){
-	.swiper-essay .swiper {padding-bottom: 28px;}
+	.swiper_essay .swiper {padding-bottom: 28px;}
 }
 
 
@@ -166,7 +162,7 @@ writer
 .writer_list_wrap {overflow: hidden;}
 .writer_list .img_area {width: 180px;height: 180px;margin: 0 auto;}
 .writer_list .img {overflow: hidden;position: relative;width: 100%;padding-top: 100%;background: url("../images/img_writer_default.png") no-repeat center center / contain;border-radius: 50%;}
-.writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;}
+.writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;background-color: #fff;}
 .writer_list .cont {margin-top: 16px;text-align: center;}
 .writer_list .cont .nm {font-size: 18px;font-weight: 700;}
 .writer_list .btn_ico.dibs {position: absolute;top: calc(180px - 40px);left: 50%;transform: translateX(-50%);width: 40px;height: 40px;margin-left: 70px;}

@@ -1,4 +1,36 @@
-const swiperNewsletter = new Swiper(".swiper-newsletter_preview .swiper", {
+$(() => {
+    $(".chk_in").choose();
+});
+
+(function($){
+    $.CHOOSE_DEFALUT_OPTION = {
+        active : "checked"
+    }
+    $.fn.choose = function(_option) {
+        const option = $.extend({}, $.CHOOSE_DEFALUT_OPTION, _option);
+
+        this.each((i, item) => {
+            let $this = this;
+            const $btn = $(item).find("input");
+          
+            $btn.on("change", (e) => {
+                const $item = $(e.currentTarget);
+        
+                checkActive($item);
+            });
+    
+            function checkActive(item) {
+                if(item.is(":checked") === true) {
+                    item.closest($this).addClass(option.active);
+                } else {
+                    item.closest($this).removeClass(option.active);
+                }
+            }
+        });
+    }
+})(jQuery);
+
+const swiperNewsletter = new Swiper(".swiper_newsletter_preview .swiper", {
     slidesPerView: 1.5,
     // spaceBetween: 60,
     centeredSlides: true,
@@ -10,21 +42,21 @@ const swiperNewsletter = new Swiper(".swiper-newsletter_preview .swiper", {
         768: {
             slidesPerView: 3,
             navigation: {
-                nextEl: ".swiper-newsletter_preview .swiper-button-next",
-                prevEl: ".swiper-newsletter_preview .swiper-button-prev",
+                nextEl: ".swiper_newsletter_preview .swiper-button-next",
+                prevEl: ".swiper_newsletter_preview .swiper-button-prev",
             },
         }
     }
 });
 
-const swiperEssay = new Swiper(".swiper-essay .swiper", {
+const swiperEssay = new Swiper(".swiper_essay .swiper", {
     slidesPerView: 2,
     spaceBetween: 11,
     observer: true,
     observeParents: true,
     watchOverflow: true,
     pagination: {
-      el: ".swiper-essay .swiper-pagination",
+      el: ".swiper_essay .swiper-pagination",
       type: "progressbar",
     },
     breakpoints: {

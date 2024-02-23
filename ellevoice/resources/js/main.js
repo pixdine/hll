@@ -32,7 +32,7 @@ $(() => {
 
 const swiperNewsletter = new Swiper(".swiper_newsletter_preview .swiper", {
     slidesPerView: 1.5,
-    // spaceBetween: 60,
+    // spaceBetween: 21,
     centeredSlides: true,
     loop: true,
     observer: true,

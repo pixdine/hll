@@ -82,13 +82,16 @@ newsletter
 
 /* 뉴스레터 미리보기 */
 .section_newsletter_preview .cont_inner {padding-bottom: 0;}
-.swiper_newsletter_preview {position: relative;}
+.swiper_newsletter_preview {position: relative;height: 775px;}
 .swiper_newsletter_preview .swiper {overflow: hidden;margin-left: -50px;margin-right: -50px;}
-.swiper_newsletter_preview .swiper-slide {transform: scale(0.75);transition: 0.4s ease;width: 0;}
+.swiper_newsletter_preview .swiper-slide {width: 0;}
+.swiper_newsletter_preview .swiper-slide figure {transform: scale(0.75);transition: 0.4s ease;}
+/* .swiper_newsletter_preview .swiper-slide {width: 325px; transform: scale(0.75);transition: 0.4s ease;width: 0;} */
 .swiper_newsletter_preview .swiper-slide .img {overflow: hidden;position: relative;padding-bottom: 163.4%;background-color: coral;}
 .swiper_newsletter_preview .swiper-slide .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
 .swiper_newsletter_preview .swiper-slide figcaption {margin-top: 28px;text-align: center;font-size: 36px;font-family: ElleGaborStd;font-weight: 600;color: var(--point);line-height: 1.1;}
-.swiper_newsletter_preview .swiper-slide-active {transform: scale(1) !important;}
+.swiper_newsletter_preview .swiper-slide-active {width: 433px;}
+.swiper_newsletter_preview .swiper-slide-active figure {transform: scale(1) !important;}
 .swiper_newsletter_preview .swiper-slide-active figcaption {font-size: 28px;}
 .swiper_newsletter_preview .swiper-button-next {right: auto;left: 100%;margin-left: 20px;}
 .swiper_newsletter_preview .swiper-button-prev {left: auto;right: 100%;margin-right: 20px;}

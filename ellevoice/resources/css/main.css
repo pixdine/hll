@@ -80,10 +80,17 @@ newsletter
 .section_newsletter_preview .cont_inner {padding-bottom: 0;}
 .swiper-newsletter_preview {position: relative;}
 .swiper-newsletter_preview .swiper {overflow: hidden;margin-left: -50px;margin-right: -50px;}
+/* .swiper-newsletter_preview .swiper-slide {height: revert-layer;}
+.swiper-newsletter_preview .swiper-slide figure {position: relative;text-align: center;}
+.swiper-newsletter_preview .swiper-slide:not(.swiper-slide-active) figure {top: 100px;}
+.swiper-newsletter_preview .swiper-slide figure img {width: 325px;transition: 0.4s ease;}
+.swiper-newsletter_preview .swiper-slide-active figure img {width: 432px !important;} */
+.swiper-newsletter_preview figcaption {margin-top: 28px;text-align: center;font-size: 36px;font-family: ElleGaborStd;font-weight: 600;color: var(--point);line-height: 1.1;}
 .swiper-newsletter_preview .swiper-slide {transform: scale(0.75);transition: 0.4s ease;}
 .swiper-newsletter_preview .swiper-slide-active {transform: scale(1) !important;}
+.swiper-newsletter_preview .swiper-slide-active figcaption {font-size: 28px;}
 /* .swiper-newsletter_preview .swiper-slide-active {width: 432px !important;} */
-.swiper-newsletter_preview figcaption {margin-top: 28px;text-align: center;font-size: 28px;font-family: ElleGaborStd;font-weight: 600;color: var(--point);}
+
 .swiper-newsletter_preview .swiper-button-next,
 .swiper-newsletter_preview .swiper-button-prev {top: 50%;transform: translateY(-50%); width: 48px;height: 48px;background: url("../images/ico_arrow_right_48.svg") no-repeat center center / contain;cursor: pointer;}
 .swiper-newsletter_preview .swiper-button-next {right: auto;left: 100%;margin-left: 20px;}
@@ -99,6 +106,7 @@ newsletter
 	.swiper-newsletter_preview .swiper-button-next,
 	.swiper-newsletter_preview .swiper-button-prev {display: none;}
 	.swiper-newsletter_preview figcaption {margin-top: 16px;font-size: 20px;font-weight: 700;}
+	.swiper-newsletter_preview .swiper-slide-active figcaption {font-size: 20px;}
 }
 
 /* 최신 뉴스레스 */

@@ -400,11 +400,11 @@ contents
     
 
     /* 마이페이지 상단 페이지 타이틀 영역 */
-    .mypage .sub .heading_wrap{background-image:url('../../resources/images/bg_top_mypage_mo.png');}
+    .mypage .sub .heading_wrap{background-image:url('../../resources/images/bg_top_mypage_mo.png');height:226px;background-size:375px 226px;}
     .mypage .sub .heading_wrap h2.tit{color:#111;}
     .mypage .sub .heading_wrap .btn_box{margin-top:24px;}
-    .mypage.main .sub .heading_wrap{height:226px;background-image:url('../../resources/images/bg_top_mypage_mo2.png');background-size:375px 226px;}
     .mypage .tit_wrap{margin-bottom:32px;}
+    .mypage.main .sub .heading_wrap{height:226px;background-image:url('../../resources/images/bg_top_mypage_mo2.png');background-size:375px 226px;}
     
     .btn_link{font-size:14px;line-height:20px;}
 

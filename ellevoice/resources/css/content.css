@@ -275,7 +275,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 .writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: contain;}
 .writer_list .cont {margin-top: 16px;text-align: center;}
 .writer_list .cont .nm {font-size: 20px;line-height: 28px;font-weight:700;}
-.writer_list .cont .desc {margin-top: 12px;line-height: 26px;font-weight: 400;}
+.writer_list .cont .desc {margin-top: 12px;line-height: 26px;font-weight: 400;overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
 
 .new_essay {background-color: #F7F1E5;}
 .new_essay .cont_inner {padding-top: 60px;padding-bottom: 60px;}

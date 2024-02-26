@@ -722,7 +722,7 @@ function viewImgSlide() {
         var swiper = new Swiper($this, {
             observer: true,
             observeParents: true,
-            watchOverflow: true,
+            watchOverflow: true,//2024-02-26 추가 : 1개일 때 이전, 다음 버튼 삭제
             scrollbar: {
                 el: thisScrollBar,
                 hide: true,

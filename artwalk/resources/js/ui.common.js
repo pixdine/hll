@@ -722,6 +722,7 @@ function viewImgSlide() {
         var swiper = new Swiper($this, {
             observer: true,
             observeParents: true,
+            watchOverflow: true,
             scrollbar: {
                 el: thisScrollBar,
                 hide: true,

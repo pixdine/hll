@@ -66,7 +66,7 @@ $(document).ready(function () {
     $(".btn_familysite").click(function () {
         familySite($(this));
     });
-    
+
     // 전시정보 스와이퍼
     $(".swiper_pc_3_mo_auto").exSwiper();
 
@@ -76,12 +76,15 @@ $(document).ready(function () {
     //전시리뷰 스와이퍼
     $(".swiper_pc_2_mo_auto").rvSwiper();
 
-    // 통이미지 배너 1개짜리 스와이퍼(PC, MO 이미지 따로) 
+    // 통이미지 배너 1개짜리 스와이퍼(PC, MO 이미지 따로)
     $(".one_ban_swiper").oneImgSwiper(); // 매개변수로 시간과 루프 조절 기본값 4000, true 예)$(".one_ban_swiper").oneImgSwiper(3000, true);
 
     // 설명 더보기
     $(".desc_more").descMore();
-    
+
+    // 필터
+    $(".filter_comp").exFilter();
+
     //셀렉트박스
     $.fn.selectbox = function () {
         this.each(function (index, element) {
@@ -188,14 +191,14 @@ function headerSticky() {
 
     if (currentPage === "main") {
         new IntersectionObserver(
-        ([e]) => {
-            if (e.intersectionRatio < 0.1 && !$("body").hasClass("is_mobile")) {
-            bottomLogo.stop().fadeIn(200);
-            } else {
-            bottomLogo.stop().fadeOut(200);
-            }
-        },
-        { threshold: [0.1, 1] }
+            ([e]) => {
+                if (e.intersectionRatio < 0.1 && !$("body").hasClass("is_mobile")) {
+                    bottomLogo.stop().fadeIn(200);
+                } else {
+                    bottomLogo.stop().fadeOut(200);
+                }
+            },
+            { threshold: [0.1, 1] }
         ).observe($(".header_top")[0]);
     }
 
@@ -233,7 +236,7 @@ function headerSticky() {
                         /* 상세페이지 공유하기 레이어 관련 */
 
                         /* //상세페이지 공유하기 레이어 관련 */
-                } else {
+                    } else {
                         container.removeAttr("style");
                     }
                 }
@@ -247,7 +250,7 @@ function headerSticky() {
     // 스크롤 이벤트 내부에서 repaint redrww 개선위해 requestAnimationFrame 사용
     $(window).on("scroll", function () {
         var scrollTop =
-        document.body.scrollTop || document.documentElement.scrollTop;
+            document.body.scrollTop || document.documentElement.scrollTop;
         scrollCallback(scrollTop);
 
         window.requestAnimationFrame(function () {
@@ -315,7 +318,7 @@ const popup = {
             case "popup":
                 var popupCount = $(`.open[data-${_type}`).length || 0;
                 if (popupCount > 0) targetEl.css("z-index", 200 + popupCount);
-                    targetEl.fadeIn(100, function () {
+                targetEl.fadeIn(100, function () {
                     $(this).addClass("open");
                 });
                 // disableScroll();
@@ -364,7 +367,7 @@ const popup = {
             default:
                 console.log("pop open default !");
                 break;
-            }
+        }
 
         // console.log("_type %o _hasDimmed %o",_type,_hasDimmed);
         if (_type !== "layer") {
@@ -493,7 +496,7 @@ function cate_swiper() {
                     },
                     loop: settings.loop
                 });
-    
+
                 $(this).hover(function () {
                     swiper.autoplay.stop();
                 }, function () {
@@ -606,17 +609,19 @@ function onScrollUp() {
     $("body").removeClass("scroll_down");
     if ($("body").hasClass("is_mobile")) {
         if (currentPage == "main" || currentPage == "sub") {
-        $(".header").css("transform", "translate(0, 0)");
+            $(".header").css("transform", "translate(0, 0)");
         }
     }
 }
 
 // 상세페이지 댓글 더보기 MORE DROP
 $.fn.moreDrop = function () {
+    this.off();
     return this.each(function (i) {
         var moreDropBody = $(this);
         var toggleBtn = moreDropBody.find(".btn_ico");
         var layerBox = moreDropBody.find(".layer_box");
+        toggleBtn.off("click");
         toggleBtn.on("click", function (e) {//2024-02-08 : 수정/삭제/취소 버튼 클릭시 이벤트가 간헐적으로 작동하는 부분 수정(e추가)
             if (moreDropBody.hasClass("on")) {
                 moreDropBody.removeClass("on");
@@ -625,7 +630,6 @@ $.fn.moreDrop = function () {
                 $(this).focus();
             }
         });
-
         toggleBtn.on("blur", function () {
             setTimeout(function () {
                 moreDropBody.removeClass("on");
@@ -654,12 +658,16 @@ $.fn.commonTab = function () {
 // 좋아요 버튼
 (function($) {
     $.fn.btnScrap = function (options) {
+        this.off();
+
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
 
         return this.each(function (i){
             var scrapBtn = $(this);
+            //리사이징시 재호출되어 중복을 방지하기 위한 이벤트 리스너 제거
+            scrapBtn.off("click");
             scrapBtn.on("click", function () {
                 if(!$(this).hasClass("on")){
                     $(this).addClass("on");
@@ -677,8 +685,8 @@ $.fn.commonTab = function () {
 function setCSS() {
     var setVh = () => {
         document.documentElement.style.setProperty(
-        "--vh",
-        `${window.innerHeight}px`
+            "--vh",
+            `${window.innerHeight}px`
         );
     };
     window.addEventListener("resize", setVh);
@@ -705,7 +713,7 @@ function progress_bar() {
         }
         // }, 300);
     });
-} 
+}
 
 // 상세, 화보 슬라이드
 function viewImgSlide() {
@@ -741,7 +749,7 @@ function viewImgSlide() {
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
-    
+
         return this.each(function (i){
             var swiperBody = $(this);
             var swiperContainer = $(this).find(".swiper");
@@ -765,7 +773,7 @@ function viewImgSlide() {
                         slidesPerView: 3,
                         spaceBetween: 40,
                     }
-                },  
+                },
             });
         });
     }
@@ -790,7 +798,7 @@ function viewImgSlide() {
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
-    
+
         return this.each(function (i){
             var swiperBody = $(this);
             var swiperContainer = $(this).find(".swiper");
@@ -819,7 +827,7 @@ function viewImgSlide() {
                         slidesPerView: 3,
                         spaceBetween: 24,
                     }
-                },  
+                },
             });
         });
     }
@@ -867,7 +875,6 @@ function viewImgSlide() {
             defaultMaxSizeMB: 10,
             defaultCurrentFiles: 0
         }
-
         var settings = $.extend({}, defaults, options);
         return this.each(function (i) {
             if (!$(this).hasClass("attached")) {
@@ -882,21 +889,28 @@ function viewImgSlide() {
                 var inpFile = apBody.find("#image-upload");
                 var btnAttach = apBody.find(".btn_attach");
                 totalCnt.text(settings.maxFiles);
-    
+
                 // 파일 선택 창을 열기 위한 버튼 핸들러
                 btnAttach.click(function () {
+                    if(btnAttach.val() != null && btnAttach.val() != '') {
+                        maxFiles = btnAttach.val();
+                    }else {
+                        maxFiles = settings.defaultMaxFiles;
+                    }
                     if (currentFiles < maxFiles) {
                         inpFile.click();
                     } else {
                         alert("첨부파일은 " + maxFiles + "개 까지 등록 가능합니다.");
                     }
                 });
-    
                 // 파일이 선택되면 실행
                 inpFile.change(function () {
                     var files = $(this)[0].files;
+
                     var newSizeMB = Array.from(files).reduce((total, file) => total + file.size, 0) / 1024 / 1024; // Size in MB of the new files
-    
+
+                    //기존에 파일이 있을시(수정시)
+
                     // 파일의 수가 최대 허용 수를 초과하거나 파일 크기가 최대 허용 크기를 초과하는 경우 검사
                     if (files.length + currentFiles > maxFiles) {
                         // 파일 수 제한 초과 경고
@@ -907,66 +921,79 @@ function viewImgSlide() {
                     } else {
                         currentFiles += files.length;
                         totalSizeMB += newSizeMB;
-                        updateCounter();
-    
                         // 선택된 각 파일에 대한 처리
-                        Array.from(files).forEach(file => {
+                        Array.from(files).forEach((file,index) => {
+                            fileArr.push(file);
                             var fileSizeMB = file.size / 1024 / 1024; // Size in MB of the current file
-    
                             var reader = new FileReader();
                             reader.onload = function (e) {
                                 // 첨부 이미지 및 삭제 버튼을 포함한 컨테이너 생성
                                 var imgContainer = $('<div class="attach_img"></div>');
                                 var img = $('<div class="att_img"><img src="' + e.target.result + '"></div>');
                                 var btnDel = $('<button class="btn_del" title="첨부 이미지 삭제"><span class="blind">첨부 이미지 삭제</span></button>');
-    
+
                                 // 데이터에 파일 크기 저장
                                 imgContainer.data('size', fileSizeMB);
-    
-                                btnDel.click(function () {
+
+                                btnDel.click(function (index) {
                                     // 파일 크기 줄이기
                                     totalSizeMB -= imgContainer.data('size');
-    
+                                    //fileArr 에서 제거
+                                    let delIndex = $(".attach_img .btn_del").index(this);
+                                    fileArr.splice(delIndex,1);
                                     // 이미지 컨테이너 제거
                                     imgContainer.remove();
-    
                                     currentFiles--;
                                     updateCounter();
                                     console.log(totalSizeMB);
                                 });
-    
                                 imgContainer.append(img).append(btnDel);
                                 attachPic.append(imgContainer);
                             };
+                            //팝업 취소 후 다시 누를시 이전 데이터가 먹고 들어가서 fileArr length로 수정
+                            currentFiles = fileArr.length;
                             reader.readAsDataURL(file);
-                            console.log(totalSizeMB);
+
                         });
+                        updateCounter();
                         // 파일 처리가 완료된 후 input 필드 초기화
                         $(this).val(null);  // 현재 input의 값을 null로 설정하여 초기화
-                    } 
-                });                    
-    
+                    }
+                });
+
                 // 현재 파일 수 업데이트
                 function updateCounter() {
-                    currentCnt.text(currentFiles);
-                    totalCnt.text(settings.defaultMaxFiles);
-    
+                    //수정일경우
+                    let existFiles = Number($(".modify_popup .attach_pic_comp").find(".modifyFiles").val());
+                    if(Object.is(existFiles, NaN)) {
+                        existFiles = 0;
+                    }
+                    currentCnt.text(currentFiles + existFiles);
+                    totalCnt.text(maxFiles);
+
+                    console.log("settings.defaultMaxFiles",settings.defaultMaxFiles)
+
                     // 이미지개수에 따른 버튼 활성화 조절
                     updateUploadButtonState();
                 }
-    
+
                 // 버튼의 활성화 또는 비활성화 상태를 설정합니다.
                 function updateUploadButtonState() {
-                    if (currentFiles >= maxFiles) {
+                    let existFiles = Number($(".modify_popup .attach_pic_comp").find(".modifyFiles").val());
+                    if(Object.is(existFiles, NaN)) {
+                        existFiles = 0;
+                    }
+                    if ((existFiles + currentFiles) >= maxFiles) {
                         btnAttach.prop('disabled', true); // 파일이 maxFiles 이상이면 버튼을 비활성화합니다.
                     } else {
                         btnAttach.prop('disabled', false); // 그렇지 않으면 버튼을 활성화합니다.
                     }
                 }
-    
+
                 updateCounter();  // 초기 카운터 설정
             }
         });
+
     }
 })(jQuery);
 
@@ -976,7 +1003,7 @@ function viewImgSlide() {
         var settings = $.extend({
             // 기본 옵션값 필요한 경우에만 작성
         }, options)
-    
+
         return this.each(function (i){
             var swiperBody = $(this);
             var swiperContainer = $(this).find(".swiper");
@@ -1006,8 +1033,59 @@ function viewImgSlide() {
                         spaceBetween: 24,
                         slidesPerGroup: 2,
                     }
-                },  
+                },
             });
+        });
+    }
+})(jQuery);
+
+// 필터
+(function($) {
+    $.fn.exFilter = function (options) {
+        return this.each(function(){
+            var filterBody = $(this);
+            var filterToggle = filterBody.find(".js-filter-toggle");
+            var filterListWrap = filterBody.find(".fc_list_wrap");
+            var checkAll = filterBody.find("[data-check='all']");
+            var checkboxes = filterBody.find(".fc_checkbox_sub");
+            var cancel = filterBody.find(".fc_btn_cancel");
+            var countEl = filterBody.find(".fc_cnt"); // 체크박스가 체크된 갯수를 표시할 위치
+            filterToggle.on("click", function(){
+                filterBody.toggleClass("open");
+                if(filterBody.hasClass("open")){
+                    filterListWrap.stop().slideDown(200);
+                } else {
+                    filterListWrap.stop().slideUp(200);
+                }
+            });
+            // 전체선택
+            checkAll.on("change", function (){
+                var isChecked = $(this).prop('checked');
+                checkboxes.prop('checked', false);
+                // 전체 선택이 되면 체크박스의 총 갯수를, 해제되면 0을 표시합니다.
+                updateCount('');
+            });
+
+            // 개별 체크박스 클릭 시 "전체 선택" 체크박스 상태 업데이트
+            checkboxes.on("change", function() {
+                var checkedLength = checkboxes.filter(":checked").length;
+                checkAll.prop('checked', false);
+                updateCount(checkedLength); // 체크된 체크박스 갯수 업데이트
+            });
+
+            // 선택해제
+            cancel.on("click", function (){
+                // 모든 체크박스의 선택을 취소합니다.
+                checkboxes.prop('checked', false);
+                // "전체 선택" 체크박스도 해제합니다.
+                checkAll.prop('checked', false);
+                updateCount(''); // 체크된 갯수를 0으로 업데이트
+            });
+
+            // 체크된 체크박스의 갯수를 업데이트하는 함수
+            function updateCount(count) {
+                countEl.text(count); // 체크된 체크박스의 갯수를 텍스트로 설정
+            }
         });
     }
 })(jQuery);

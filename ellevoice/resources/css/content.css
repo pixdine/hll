@@ -79,7 +79,7 @@ contents
 .profile_area .user_info .date{white-space: nowrap;}
 
 .view_detail_body{position: relative;border-bottom: 1px solid #dbdbdb;}
-.view_detail_body_cont{max-width: 996px;margin: 0 auto;padding-bottom: 80px;font-family: 'Noto Sans KR';font-size: 16px;font-weight: 400;line-height: 28px;color: #111;}
+.view_detail_body_cont{max-width: 996px;margin: 0 auto;padding-bottom: 80px;font-family: 'Noto Sans KR';font-size: 16px;font-weight: 400;line-height: 28px;color: #111;letter-spacing: 0.04em;}
 .view_detail_body_cont .detail_slide{margin-top:24px;}
 .view_detail_body ~ .view_detail_footer{border-top:0;}
 .view_detail_footer{border-top:1px solid #dbdbdb;border-bottom:2px solid #111;}

@@ -488,7 +488,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
     .set_wrap .box{width:100%;padding:48px 20px;}
     .set_wrap .box .txt strong{font-size:14px;line-height:13px;}
     .set_wrap .box .txt h4{font-size:20px;line-height:29px;margin-top:8px;}
-    .set_wrap .box .txt p{margin-top: 16px;font-size: 16px;line-height:23px;}
+    .set_wrap .box .txt p{margin-top: 16px;font-size: 16px;line-height:23px;height:69px;}
 
     /* photoViewer */
 	.photoViewer .pv_cont .swiper-slide{display: block; width: 100vw !important; height: 100%;}
@@ -584,7 +584,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
     .newsletter .newsletter_list {row-gap: 24px;}
     .newsletter .newsletter_list > li {width: 100%;min-height: 260px;}
     .newsletter .newsletter_list > li > a {padding: 44px 24px 32px;}
-    .newsletter .newsletter_list > li > a::after {bottom: 32px;right: 24px;width: 16px;height: 16px;}
+    .newsletter .newsletter_list > li > a::after {bottom: 32px;right: 24px;width: 16px;height: 16px;background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 14L11 8L5 2' stroke='%23111111' stroke-width='1'/%3E%3C/svg%3E%0A") no-repeat 0 0 / contain;}
     .newsletter .newsletter_list > li .times {margin-bottom: 12px;font-size: 16px;line-height: 1;}
     .newsletter .newsletter_list > li .tit {font-size: 18px;line-height: 24px;}
     .newsletter .newsletter_list > li .date {padding-top: 29px;font-size: 14px;line-height: 1;}

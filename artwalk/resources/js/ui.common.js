@@ -906,13 +906,23 @@ function viewImgSlide() {
                 // 파일이 선택되면 실행
                 inpFile.change(function () {
                     var files = $(this)[0].files;
-
                     var newSizeMB = Array.from(files).reduce((total, file) => total + file.size, 0) / 1024 / 1024; // Size in MB of the new files
 
-                    //기존에 파일이 있을시(수정시)
+                    // 2024-02-28 : 파일 확장자 제한 추가
+                    var allowedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
+                    var isAllowedFile = true;
+                    Array.from(files).forEach((file,index) => {
+                        var extension = file.name.split('.').pop().toLowerCase();
+                        if (allowedExtensions.indexOf(extension) === -1) {
+                            isAllowedFile = false;
+                            return false;
+                        }
+                    });
 
                     // 파일의 수가 최대 허용 수를 초과하거나 파일 크기가 최대 허용 크기를 초과하는 경우 검사
-                    if (files.length + currentFiles > maxFiles) {
+                    if (!isAllowedFile) {
+                        alert('지원하는 않는 확장자입니다.(허용 확장자: ' + allowedExtensions.join(', ') + ')');
+                    } else if (files.length + currentFiles > maxFiles) {
                         // 파일 수 제한 초과 경고
                         alert("최대 " + maxFiles + "개의 파일만 업로드할 수 있습니다.");
                     } else if (totalSizeMB + newSizeMB > maxSizeMB) {
@@ -945,7 +955,6 @@ function viewImgSlide() {
                                     imgContainer.remove();
                                     currentFiles--;
                                     updateCounter();
-                                    console.log(totalSizeMB);
                                 });
                                 imgContainer.append(img).append(btnDel);
                                 attachPic.append(imgContainer);
@@ -970,8 +979,6 @@ function viewImgSlide() {
                     }
                     currentCnt.text(currentFiles + existFiles);
                     totalCnt.text(maxFiles);
-
-                    console.log("settings.defaultMaxFiles",settings.defaultMaxFiles)
 
                     // 이미지개수에 따른 버튼 활성화 조절
                     updateUploadButtonState();

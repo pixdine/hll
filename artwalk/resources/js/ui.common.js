@@ -855,11 +855,11 @@ function viewImgSlide() {
                 currentCnt.text(maxlength);
             });
             taBody.on('focusin', function(){
-                $(".is_mobile .popup_bottom").hide();
+                //$(".is_mobile .popup_bottom").hide();
                 taBody.addClass('on');
             });
             taBody.on('focusout', function(){
-                $(".popup_bottom").show();
+                //$(".popup_bottom").show();
                 taBody.removeClass('on');
             });
         });

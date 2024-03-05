@@ -855,11 +855,11 @@ function viewImgSlide() {
                 currentCnt.text(maxlength);
             });
             taBody.on('focusin', function(){
-                //$(".is_mobile .popup_bottom").hide();
+                //$(".is_mobile .popup_bottom").hide(); 2024-03-05 : textarea 포커스 시 팝업 하단 버튼 히든 관련 주석처리
                 taBody.addClass('on');
             });
             taBody.on('focusout', function(){
-                //$(".popup_bottom").show();
+                //$(".popup_bottom").show(); 2024-03-05 : textarea 포커스 시 팝업 하단 버튼 히든 관련 주석처리
                 taBody.removeClass('on');
             });
         });

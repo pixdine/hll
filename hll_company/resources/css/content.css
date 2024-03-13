@@ -99,7 +99,7 @@ body.is_mobile  img.pc {display:none}
 .table{display: table;table-layout: fixed;width: 100%;}
 .table_cell{display: table-cell;vertical-align: middle;width: 100%;height: 100%;}
 .row_first{width: 40%;}
-.row_last {padding-left:40%}
+.row_last {padding-left:40%;}
 .row_last .txt{color:#fff;margin-top:48px;}
 .row_last .txt h4{font-size:36px;line-height:52px;}
 .row_last .txt strong{display:inline-block;position:relative;font-family:'Gotham';font-size:60px;line-height:64px;font-weight:500;z-index: 1;}
@@ -111,6 +111,10 @@ body.is_mobile  img.pc {display:none}
 .row_last .txt .txt_cont dl+dl{margin-top:32px;}
 .row_last .txt .txt_cont dl dt{font-size:22px;line-height:35px;font-weight:700;}
 .row_last .txt .txt_cont dl dd{margin-top:8px;font-size:18px;line-height:26px;}
+.row_last + .row_last {margin-top:100px;}/*2024-03-14 스튜디오닷 컨텐츠 추가 s*/
+.row_last.type2 {padding-left:0%;padding-right:40%;}
+.row_last.type2 img {float: right;}
+.row_last.type2 .img::after {content:'';display:block;clear:both;}/*2024-03-14 스튜디오닷 컨텐츠 추가 e*/
 
 .cosmopolitan .row_last .txt strong:before{background-color:#EF88AB; }
 .bazzar .row_last .txt strong:before{background-color: #B30010;}
@@ -848,6 +852,9 @@ body.is_mobile  img.pc {display:none}
     .row_last .txt .txt_cont dl dt{font-size:18px;line-height:26px;}
     .row_last .txt .txt_cont dl dd{font-size:16px;line-height:23px;margin-top:12px;}
     .row_last .txt strong::before{height:16px;bottom: 5px;}
+    .row_last.type2 {padding-right:0;}/*2024-03-14 스튜디오닷 컨텐츠 추가 s*/
+    .row_last.type2 img {float: none;}
+    .row_last.type2 .img::after{display:none;}/*2024-03-14 스튜디오닷 컨텐츠 추가 e*/
 
 
     .slide_magazine .item .txt p{font-size:16px;line-height:23px}

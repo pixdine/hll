@@ -1017,60 +1017,6 @@
         // 이미지 첨부 옵션값은 ui.common.js 참고
         $(".attach_pic_comp").attachPicture();
 
-        // 필터
-        (function($) {
-            $.fn.exFilter = function (options) {
-                return this.each(function(){
-                    var filterBody = $(this);
-                    var filterToggle = filterBody.find(".js-filter-toggle");
-                    var filterListWrap = filterBody.find(".fc_list_wrap");
-                    var checkAll = filterBody.find("[data-check='all']");
-                    var checkboxes = filterBody.find(".fc_checkbox_sub");
-                    var cancel = filterBody.find(".fc_btn_cancel");
-                    var countEl = filterBody.find(".fc_cnt"); // 체크박스가 체크된 갯수를 표시할 위치
-                    filterToggle.on("click", function(){
-                        filterBody.toggleClass("open");
-                        if(filterBody.hasClass("open")){
-                            filterListWrap.stop().slideDown(200);
-                        } else {
-                            filterListWrap.stop().slideUp(200);
-                        }
-                    });
-                    // 전체선택
-                    checkAll.on("change", function (){
-                        var isChecked = $(this).prop('checked');
-                        checkboxes.prop('checked', false);
-                        // 전체 선택이 되면 체크박스의 총 갯수를, 해제되면 0을 표시합니다.
-                        updateCount('');
-                    });
-
-                     // 개별 체크박스 클릭 시 "전체 선택" 체크박스 상태 업데이트
-                    checkboxes.on("change", function() {
-                        var checkedLength = checkboxes.filter(":checked").length;
-                        checkAll.prop('checked', false);
-                        updateCount(checkedLength); // 체크된 체크박스 갯수 업데이트
-                    });
-
-                    // 선택해제
-                    cancel.on("click", function (){
-                        // 모든 체크박스의 선택을 취소합니다.
-                        checkboxes.prop('checked', false);
-                        // "전체 선택" 체크박스도 해제합니다.
-                        checkAll.prop('checked', false);
-                        updateCount(''); // 체크된 갯수를 0으로 업데이트
-                    });
-
-                    // 체크된 체크박스의 갯수를 업데이트하는 함수
-                    function updateCount(count) {
-                        countEl.text(count); // 체크된 체크박스의 갯수를 텍스트로 설정
-                    }
-                });
-            }
-        })(jQuery);
-
-        // 필터
-        $(".filter_comp").exFilter();
-
         // 필터 체크박스 전체해제
         function filterCheckboxCancel(eliment){
             var checkboxEl = $(eliment);

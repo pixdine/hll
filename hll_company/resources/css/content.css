@@ -22,7 +22,7 @@
 .bg_sky .cont_sec .tit_wrap, .bg_sky .cont_inner .tit_wrap  { margin-bottom:24px;}
 .tit_area{display:flex;position:relative; flex-direction:row;}
 .tit_wrap .tit{overflow:hidden;font-size:36px;font-weight:700;line-height:52px;color:var(--point);}
-.tit_wrap .tit.en {font-size:48px; font-weight:500; font-family: 'Gotham';}
+.tit_wrap .tit.en {font-size:48px; font-weight:500;font-family:Montserrat;}/* 2024-03-15 폰트 수정 */
 .tit_wrap .tit.en span{color:#999}
 .tit_wrap h3.tit{font-size:28px;line-height:41px;}
 .tit_wrap p{font-size:18px;line-height:26px;margin-top:24px;padding-bottom:20px;color:#666;}
@@ -46,11 +46,11 @@ body.is_mobile  img.pc {display:none}
 .top_visual{position:relative; max-width:1920px;max-height:624px; width:100%; margin:0 auto; height:800px; }
 .top_visual img {position:absolute; top:0; left:0; display:block; height:100%;width: 100%; object-fit:cover; }
 .top_visual .txt_box{position: absolute;top: 50%;left: 50%;transform: translate(-50% ,-50%);color: #fff;max-width: 680px;text-align: center;z-index:1;}
-.top_visual .txt_box .txt{font-family: 'Gotham';font-size: 36px;font-weight: 500;line-height: 48px;}
+.top_visual .txt_box .txt{font-family:Montserrat;font-size: 36px;font-weight: 500;line-height: 48px;}/* 2024-03-15 폰트 수정 */
 .top_visual::after{content: '';display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: rgba(25, 25, 25, .2);overflow: hidden;}
-.elle .top_visual .txt_box .txt{font-family:'ElleGaborStd';font-weight:600;}
-.cosmopolitan .top_visual .txt_box .txt{font-family:'NewsGothicExtraCondensedBold';font-weight:700;}
-.esquire .top_visual .txt_box .txt{font-family:'TTNorms-Medium';}
+.elle .top_visual .txt_box .txt{font-family:Montserrat;font-weight:600;}/* 2024-03-15 폰트 수정 */
+.cosmopolitan .top_visual .txt_box .txt{font-family:Montserrat;font-weight:700;}/* 2024-03-15 폰트 수정 */
+.esquire .top_visual .txt_box .txt{font-family:Montserrat;}/* 2024-03-15 폰트 수정 */
 .studio .top_visual .txt_box .txt{font-family:'Noto Sans KR';font-weight:700;}
 
 
@@ -77,7 +77,7 @@ body.is_mobile  img.pc {display:none}
 .section2 .sec_list ul li:nth-last-child(-n+3){border-bottom:0;margin-bottom:0;padding-bottom:0;}
 .section2 .sec_list ul li i{display: block;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px; width: 48px;}
 .section2 .sec_list ul li h4{margin-top:20px;font-size:22px;line-height:32px;color:var(--point);font-weight:700;}
-.section2 .sec_list ul li h4 span{font-weight:500;display:block;font-family: 'Gotham';line-height:28px;letter-spacing: 0;}
+.section2 .sec_list ul li h4 span{font-weight:500;display:block;font-family:Montserrat;line-height:28px;letter-spacing: 0;}/* 2024-03-15 폰트 수정 */
 .section2 .sec_list ul li p{font-size:18px;line-height:26px;margin-top:12px;letter-spacing: -0.015em;color:#666}
 
 .section2 .sec_list ul li i.icon1{background-image: url('../images/ico_insta.png');}
@@ -91,7 +91,7 @@ body.is_mobile  img.pc {display:none}
 .cont_wrap .sec_cont:nth-child(even){flex-direction:row-reverse}
 .cont_wrap .sec_cont+.sec_cont{margin-top:80px;}
 .sec_cont .txt_area{width:39%}
-.sec_cont .txt_area strong{font-family:'Gotham';font-size: 28px;font-weight: 500;line-height: 32px;}
+.sec_cont .txt_area strong{font-family:Montserrat;font-size: 28px;font-weight: 500;line-height: 32px;}/* 2024-03-15 폰트 수정 */
 .sec_cont .txt_area p{font-size:18px;line-height:26px;margin-top:16px;color:#666}
 .sec_cont .img_area{overflow: hidden;position: relative;width: 59%;height: 0;padding-top: 20%;}
 .sec_cont .img_area img{display: block; position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
@@ -102,9 +102,9 @@ body.is_mobile  img.pc {display:none}
 .row_last {padding-left:40%;}
 .row_last .txt{color:#fff;margin-top:48px;}
 .row_last .txt h4{font-size:36px;line-height:52px;}
-.row_last .txt strong{display:inline-block;position:relative;font-family:'Gotham';font-size:60px;line-height:64px;font-weight:500;z-index: 1;}
+.row_last .txt strong{display:inline-block;position:relative;font-family:Montserrat;font-size:60px;line-height:64px;font-weight:500;z-index: 1;}/* 2024-03-15 폰트 수정 */
 .row_last .txt strong::before{content:'';position:absolute;bottom:-6px;left:0;background-color:#fff;width:100%;height:24px;opacity:0.5;z-index: -1;}
-.row_last .txt em{display:block;font-size:40px;line-height:48px;font-family:'Gotham';margin-top:12px;}
+.row_last .txt em{display:block;font-size:40px;line-height:48px;font-family:Montserrat;margin-top:12px;}/* 2024-03-15 폰트 수정 */
 .row_last .txt p{font-size:18px;line-height:26px;margin-top:16px;}
 .row_last .img img{width: 57vw;max-width: none;}
 .row_last .txt .txt_cont{margin-top:40px;}
@@ -177,7 +177,7 @@ body.is_mobile  img.pc {display:none}
 
 /* .txt_wrap h5{font-weight:500;font-size: 24px;line-height:35px;}
 .txt_wrap h5 strong{font-size:28px;line-height:32px;display: block;} */
-.txt_wrap h4{font-weight:500;font-size:28px;line-height:32px;font-family: 'Gotham';}
+.txt_wrap h4{font-weight:500;font-size:28px;line-height:32px;font-family:Montserrat;}/* 2024-03-15 폰트 수정 */
 .txt_wrap h4 span{display:block;font-size:24px;line-height:35px;font-family: 'Noto Sans KR';margin-bottom:8px}
 .txt_wrap h5{font-family: 'Noto Sans KR';font-size: 24px;font-weight: 500;line-height: 35px;letter-spacing: -0.01em;text-align: left;}
 .txt_wrap p+h5{margin-top:60px;}
@@ -196,7 +196,7 @@ body.is_mobile  img.pc {display:none}
 .sec_yeet .list+.list{margin-top:180px;}
 .sec_yeet .cont_box .txt_wrap .txt_p p+p{margin-top:32px;}
 .txt_wrap dl{margin-top:40px;}
-.txt_wrap dl dt{font-size:20px;line-height:28px;font-family: 'Gotham';}
+.txt_wrap dl dt{font-size:20px;line-height:28px;font-family:Montserrat;}/* 2024-03-15 폰트 수정 */
 .txt_wrap dl dd{margin-top:12px;font-size:18px;line-height:26px;font-family: 'Noto Sans KR';color:#666;}
 .txt_wrap dl dd+dt{margin-top:24px;}
 .txt_wrap dl dd a{text-decoration:underline;}
@@ -311,7 +311,7 @@ body.is_mobile  img.pc {display:none}
 .life_list li:nth-last-child(-n+3) {border-bottom:0;}
 .life_list li i{display: block;background-repeat: no-repeat;background-position: center;background-size: 48px 48px;height: 48px;width: 48px;}
 .life_list li .tit_txt{position: relative;margin-top:20px;color:var(--point);font-size:22px;}
-.life_list li .tit_txt span{display: inline-block;line-height:28px;font-family: 'Gotham';}
+.life_list li .tit_txt span{display: inline-block;line-height:28px;font-family:Montserrat;}/* 2024-03-15 폰트 수정 */
 .life_list li .tit_txt strong{position: relative;display: inline-block;font-weight:700;line-height:32px;padding-left:24px;font-family: 'Noto Sans KR';}
 .life_list li .tit_txt strong::before{content: '';display: inline-block;position: absolute;left:11.5px;top:calc(50% - 6px);width:1px;height:16px;background-color:var(--point);}
 .life_list li p{font-size:18px;font-weight:500;color:#666;line-height:26px;margin-top:12px;}
@@ -420,7 +420,7 @@ body.is_mobile  img.pc {display:none}
 .list_ad ul li .img_info img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 .list_ad ul li .txt_info{width:calc(100% - 55%);}
 .list_ad ul li .txt_info strong{font-size:24px;font-weight:700;line-height:35px;}
-.list_ad ul li .txt_info strong span{display:block;font-size:18px;font-weight:500;line-height:24px;color:#666;margin-bottom:8px;font-family:'Gotham';}
+.list_ad ul li .txt_info strong span{display:block;font-size:18px;font-weight:500;line-height:24px;color:#666;margin-bottom:8px;font-family:Montserrat;}/* 2024-03-15 폰트 수정 */
 .list_ad ul li .txt_info dl{margin-top:32px;}
 .list_ad ul li .txt_info dl dt{font-size:18px;font-weight:500;line-height:26px;margin-bottom:8px;}
 .list_ad ul li .txt_info dl dd{font-size:18px;line-height:26px;color:#666;font-weight:400;}
@@ -500,7 +500,7 @@ body.is_mobile  img.pc {display:none}
 .slide_adinfo .item .img{overflow: hidden;position: relative;width: 100%;height: 0;padding-top: 100%;}
 .slide_adinfo .item .img img{display: block;position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
 .slide_adinfo .item .txt p{font-family:'Noto Sans KR';font-size:22px;line-height:28px;color:var(--point);text-align:center;margin-top:16px;font-weight:700;}
-.slide_adinfo .item .txt p.en{font-family:'Gotham';font-weight:500;}
+.slide_adinfo .item .txt p.en{font-family:Montserrat;font-weight:500;}/* 2024-03-15 폰트 수정 */
 .slide_adinfo .btn_move{display:none;}
 
 .cont_wrap .cont_list ul li.table_group{padding:0;border-bottom: 0;}

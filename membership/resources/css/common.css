@@ -49,6 +49,13 @@
 	src: url(../font/TTNorms-Medium.woff2) format("woff2"), url(../font/TTNorms-Medium.woff) format("woff"), url(../font/TTNorms-Medium.ttf) format("truetype");
 }
 
+/* 2024-03-19 폰트추가 */
+@font-face {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	src: url(../font/Montserrat-SemiBold.woff) format("woff"), url(../font/Montserrat-SemiBold.ttf) format("truetype");
+}
 
 
 /* reset */
@@ -102,7 +109,7 @@ a:hover{text-decoration:none;}
 .tac{text-align:center !important;}
 .pc_br{display: block !important;}
 .mo_br{display:none;}
-.font_type01 { font-family:'Gotham'}
+.font_type01 {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 
 .tp_uline { color:var(--point); text-decoration:1px solid underline; text-underline-position: under; }
 
@@ -143,7 +150,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 /* txt button + icon */
 .btn_txt{display:inline-flex;position:relative;padding:10px;font-size:16px;font-weight:500;line-height:23px;align-items:center;}
 .btn_txt.only_tx { padding:0}
-.btn_txt02{display:inline-flex;position:relative;padding:10px;font-size:14px;font-weight:500; font-family:'Gotham'; line-height:24px;align-items:center;} /* D: 영문 */
+.btn_txt02{display:inline-flex;position:relative;padding:10px;font-size:14px;font-weight:500; font-family:Montserrat; line-height:24px;align-items:center;} /* 2024-03-19 폰트 수정 *//* D: 영문 */
 .btn_txt03 {display:inline-flex; padding:10px;font-size:14px;font-weight:500;line-height:24px;align-items:center;text-decoration:underline; text-underline-position:under; color:#333}
 .has_plus:after{content:'';display:inline-block;width:14px;height:14px;margin:1px 0 0 8px;background:url('../images/ico_plus.svg') no-repeat center center / 100% auto;}
 .has_arr1:after{content:'';display:inline-block;width:16px;height:16px;transform:rotate(90deg);margin:1px 0 0 8px;background:url('../images/ico_arrow04.svg') no-repeat center center / 100% auto;}
@@ -201,7 +208,7 @@ button[disabled], a.disabled{cursor:default;pointer-events:none; border-color:#c
 body.is_pc .header_top .logo object {width:97px; height:33px;} 
 body.is_mobile .header_top .logo object {width:72px; height:24px;} 
 .header_top .btn_menu {display:none}
-.header_top .btn_login {position:absolute; top:31px; right:3.125%; font-size:14px; font-family:'Gotham'; font-weight: 500; color:#666}
+.header_top .btn_login {position:absolute; top:31px; right:3.125%; font-size:14px; font-family:Montserrat; font-weight: 500; color:#666}/* 2024-03-19 폰트 수정 */
 .header .header_util_area { position:absolute; z-index:1; top:15px; right:3.125%;}
 .header_wrap .header_gnb ul {position:relative; display:flex; flex-wrap:nowrap; justify-content: center;}
 .header_wrap .header_gnb li {display:inline-block; font-size:16px; font-weight:700; /*margin-left:4%;*/ line-height:72px; letter-spacing:-0.01em; }
@@ -417,7 +424,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .atcbox .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
 .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;transition:all .3s linear;}
 .atcbox a:hover .imgbox img{transform:scale(1.1);}
-.atcbox .cate{display:block;position:relative;margin-bottom:6px;font-family:Gotham;font-size:11px;line-height:1;letter-spacing:0;color:var(--point);}
+.atcbox .cate{display:block;position:relative;margin-bottom:6px;font-family:Montserrat;font-size:11px;line-height:1;letter-spacing:0;color:var(--point);}/* 2024-03-19 폰트 수정 */
 .atcbox .txtbox{margin-top:16px;}
 .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:52px;font-size:18px;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
 
@@ -429,7 +436,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .tab_menu.type01 > ul > li:last-child:after{display:none;}
 .tab_menu.type01 > ul > li > a{display:block;padding:0 16px;font-size:18px;font-weight:500;color:#ccc;line-height:26px;}
 .tab_menu.type01 > ul > li.on > a{font-weight:700;color:var(--point);}
-.tab_menu.type01 > ul > li > a > span{display:inline-block;margin-left:8px;font-family:Gotham;}
+.tab_menu.type01 > ul > li > a > span{display:inline-block;margin-left:8px;font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 
 .tab_menu.type02 > ul{display:flex;flex-wrap:wrap;gap:8px 0;margin:0 -16px;}
 .tab_menu.type02 > ul > li{position:relative;}
@@ -463,7 +470,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .ui-datepicker .ui-datepicker-calendar th:first-child{color:#B30010}
 .ui-datepicker .ui-datepicker-calendar th,
 .ui-datepicker .ui-datepicker-calendar td {width:32px;height:32px;font-size:12px;box-sizing:border-box}
-.ui-datepicker .ui-datepicker-calendar td{font-family:Gotham;padding:3px;}
+.ui-datepicker .ui-datepicker-calendar td{font-family:Montserrat;padding:3px;}/* 2024-03-19 폰트 수정 */
 .ui-datepicker-group {padding:0 10px;box-sizing:border-box}
 #ui-datepicker-div.ui-datepicker .ui-datepicker-multi .ui-datepicker-group table {margin:0 auto}
 #ui-datepicker-div .ui-state-highlight,
@@ -663,7 +670,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 
 /* pagination */
 .pagination{display:flex;align-items:center;justify-content:center;column-gap:4px;margin-top:120px;}
-.pagination a{display:inline-block;width:32px;height:32px;font-family:Gotham;font-size:16px;color:#999;line-height:32px;text-align:center;vertical-align:top;}
+.pagination a{display:inline-block;width:32px;height:32px;font-family:Montserrat;font-size:16px;color:#999;line-height:32px;text-align:center;vertical-align:top;}/* 2024-03-19 폰트 수정 */
 .pagination .on{background-color:#f7f7f7;color:#111;}
 .pagination .btn_prev{width:24px;height:24px;margin-right:12px;background:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 21L7 12L16 3' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 24px auto;}
 .pagination .btn_next{width:24px;height:24px;margin-left:12px;background:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 21L17 12L8 3' stroke='%23111111' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center center / 24px auto;}
@@ -740,7 +747,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .input_type02.data_read li {margin-top:0;}
 .input_type02.data_read li dl { padding:16px 0}
 .input_type02.data_read li dl dt { padding-top:0;} 
-.input_type02.data_read li dl .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500 }
+.input_type02.data_read li dl .point_total { font-size:24px; font-family:Montserrat; line-height:1; color:var(--point); font-weight:500 }/* 2024-03-19 폰트 수정 */
 
 .input_type02 li dl dd.modify {display:flex}
 .input_type02 li dl dd.modify.nobtn {display:block}
@@ -793,7 +800,7 @@ body.is_pc .wrap.main-page .allmenu_wrap {position:fixed}
 .tooltip_layer::before {content:''; position:absolute; top:-8px; left:9px; width:12px; height:8px;background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L12 8H0L6 0Z' fill='%23410C86'/%3E%3C/svg%3E%0A");}
 .tooltip_layer.revert::before { left: auto; right: 9px; }
 
-.point_total {font-size:24px; line-height:23px; font-weight:500; font-family:'Gotham'; color:var(--point)}
+.point_total {font-size:24px; line-height:23px; font-weight:500; font-family:Montserrat;color:var(--point)}/* 2024-03-19 폰트 수정 */
 
 /* 시스템 접속 장애 */
 .comm_error { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; width:100%}

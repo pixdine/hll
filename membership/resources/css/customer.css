@@ -6,12 +6,12 @@ body.is_pc .container.customer #content { padding-top:60px}
 .gray_box.search .box_inner {padding:52px 0; }
 .gray_box.search .box_inner .inputbox { width:49%; margin:0 auto}
 .board_tot_num { font-size:18px; color:#666; font-size:16px; font-weight:500 }
-.board_tot_num strong {display:inline-block; font-size:18px; margin:0 4px; font-family:"Gotham"; color:var(--point) }
+.board_tot_num strong {display:inline-block; font-size:18px; margin:0 4px;font-family:Montserrat; color:var(--point) }/* 2024-03-19 폰트 수정 */
 .board_tot_num ~ .board_st01 { margin-top:26px }
 
 .search_res { font-size:24px; line-height:1.4; font-weight:700; margin-bottom:24px }
 .search_res strong {color:var(--point) }
-.search_res span { font-family:"Gotham";color:var(--point); font-size:26px; font-weight:500 }
+.search_res span { font-family:Montserrat;color:var(--point); font-size:26px; font-weight:500 }/* 2024-03-19 폰트 수정 */
 
  .board_st01.faq_cont .b_tit a {white-space:normal; text-overflow:clip }
 

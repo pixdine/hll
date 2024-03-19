@@ -70,7 +70,7 @@ body.is_mobile .top_visual img.pc {display:none}
 .point_card .card_body dl dt { font-size:18px; font-weight:500; line-height:1.4}
 .point_card .card_body dl dd { display:flex; flex-direction:row;align-items: center; justify-content: space-between; margin-top:24px;  }
 .point_card .card_body dl dd .c_state { color:var(--point); font-size:18px; font-weight:500}
-.point_card .card_body dl dd .c_point { color:var(--point); font-size:48px; font-weight:500; line-height:1.1; font-family:'Gotham'}
+.point_card .card_body dl dd .c_point { color:var(--point); font-size:48px; font-weight:500; line-height:1.1; font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 .point_card .card_body dl dd .c_point span { font-size:36px; display:inline-block; margin-left:4px}
 .point_card .card_body dl dd .c_txt { font-family:'Noto Sans KR';color:var(--point); font-size:40px; font-weight:700; line-height:1.1; }
 .point_card .card_btm {display:flex; align-items: center;justify-content: space-around;  background:#F7F7F7; border-radius:0 0 20px 20px; text-align:center; height:60px; box-sizing:border-box;} 

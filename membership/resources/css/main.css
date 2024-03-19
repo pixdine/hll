@@ -57,14 +57,14 @@
 .mm .media .m-t2 {margin-top: 24px; color: #fff; font-weight: 500; font-size: 18px; line-height: 28px;}
 .mm .media .link-btn-wrap {margin-top: 60px;}
 
-.mm .media.m1 .m-t1 {font-family: 'ElleGaborStd';color: #111;}
+.mm .media.m1 .m-t1 {font-family:Montserrat;color: #111;}/* 2024-03-19 폰트 수정 */
 .mm .media.m1 .m-t2 {color: #666;}
 .mm .media.m2 {background-color: #EF88AB;}
-.mm .media.m2 .m-t1 {font-family: 'NewsGothicExtraCondensedBold';}
+.mm .media.m2 .m-t1 {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 .mm .media.m3 {background-color: #111;}
-.mm .media.m3 .m-t1 {font-family: 'Gotham';}
+.mm .media.m3 .m-t1 {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 .mm .media.m4 {background-color: #969C98;}
-.mm .media.m4 .m-t1 {font-family: 'TTNorms-Medium';}
+.mm .media.m4 .m-t1 {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 
 .mm .w-bo .w-t1 {color: #111; font-weight: 700; font-size: 80px; line-height: 116px; text-align: center;}
 .mm .w-bo .w-t2 {margin-top: 20px; color: #666; font-weight: 500; font-size: 20px; line-height: 29px; text-align: center;}
@@ -154,7 +154,7 @@
     .mm .media.m1 .m-logo {width: 132px;}
     .mm .media.m2 .m-logo {width: 220px;}
     .mm .media.m3 .m-logo {width: 172px;}
-    .mm .media.m3 .m-t1 {font-family: 'Gotham Book';}
+    .mm .media.m3 .m-t1 {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
     .mm .media.m4 .m-logo {width: 211px;}
 
     .mm .w-bo .w-t1 {font-size: 36px; line-height: 1.5;}

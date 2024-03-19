@@ -29,10 +29,10 @@ body.is_mobile .about_cont_right .magazine_list .m_img .mo {display:block}
 body.is_mobile .about_cont_right .magazine_list .m_img .pc {display:none}
 .about_cont_right .magazine_list .txt_box { position:relative; padding:40px 0px 40px 40px; box-sizing:border-box; border-width:0 1px 1px 1px; border-style: solid; border-color:#DBDBDB}
 .about_cont_right .magazine_list .txt_box dt {font-size:24px; line-height:1.2; font-weight:500; padding-right:180px}
-.about_cont_right .magazine_list.elle .txt_box dt {font-family: 'ElleGaborStd';}
-.about_cont_right .magazine_list.cosmo .txt_box dt {font-family: 'NewsGothicExtraCondensedBold';}
-.about_cont_right .magazine_list.bazaar .txt_box dt {font-family: 'Gotham';}
-.about_cont_right .magazine_list.esquire .txt_box dt {font-family: 'TTNorms-Medium';}
+.about_cont_right .magazine_list.elle .txt_box dt {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
+.about_cont_right .magazine_list.cosmo .txt_box dt {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
+.about_cont_right .magazine_list.bazaar .txt_box dt {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
+.about_cont_right .magazine_list.esquire .txt_box dt {font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 .about_cont_right .magazine_list .txt_box dd {font-size:16px; font-weight:500; color:#666; line-height:1.5; margin-top:24px; padding-right:268px}
 .about_cont_right .magazine_list dd.btn_area { position:absolute; right:40px; top:9px; padding-right:0 }
 .about_cont_right .magazine_list ~ .magazine_list { margin-top:80px }

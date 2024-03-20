@@ -288,6 +288,8 @@ body.is_pc .shopping_list li.only .ab_shoppingbox  .prd_info dt { margin-top:0}
 body.is_pc .shopping_list li.only .ab_shoppingbox .prd_info dd.store { margin-top:82px }
 body.is_pc .shopping_list li.only .ab_shoppingbox .bt_area {left:406px; transform:none}
 
+body.is_mobile .shopping_list ul:has(li:only-child) {justify-content:center;padding-left:6px;}/* 2024-03-20 모바일에서 하나만 나올때 */
+
 /* 컨텐츠 > 로그인 레이어 */
 .atc_cont_hidden { position:relative; height:1000px; overflow:hidden;}
 .atc_mask_login { display:none }

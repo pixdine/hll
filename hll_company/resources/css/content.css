@@ -6,7 +6,7 @@
 
 .container .heading_wrap{position:relative;height: 360px;background-repeat: no-repeat;background-position: 50% 0%;}
 .container .heading_wrap .heading_area{display: flex;max-width: 1920px;height: 360px;margin: 0 auto;justify-content: center;align-items: center;flex-direction: column;}
-.container .heading_wrap h2.tit{color:#fff;text-align: center;font-size: 56px;font-weight: 500;line-height:56px;max-width: 1920px;font-family: 'Gotham';}
+.container .heading_wrap h2.tit{color:#fff;text-align: center;font-size: 56px;font-weight: 500;line-height:56px;max-width: 1920px;font-family:Montserrat;}/* 2024-03-21 폰트수정 추가*/
 .container .heading_wrap h2.tit em{display:block;font-size:24px;line-height:32px;}
 .container .heading_wrap p{color:#fff;font-size:20px;font-weight:500;line-height:29px;text-align:center;margin-top:12px;}
 

@@ -884,6 +884,8 @@ background:#fff;overflow:hidden;z-index:230}
 .horoscope_box .fortune_list li{display:flex;flex-direction:row;font-weight:400;}
 .horoscope_box .fortune_list li ~ li{margin-top:4px;}
 .horoscope_box .fortune_list li em{margin-right:12px;color:#666;font-weight:500;white-space:nowrap;}
+.horoscope_box .fortune_list .source_info {margin-top:32px;}/* 2024-03-27 출처 추가 */
+.horoscope_box .fortune_list .source_info span {font-weight:500;}/* 2024-03-27 출처 추가 */
 
 /* 바자커버 */
 .cover_atc_wrap{margin-bottom:180px;}
@@ -1325,6 +1327,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.horoscope_box .txtbox .txt p ~ p{margin-top:10px;}
 	.horoscope_box .fortune_list{margin-top:24px;font-size:14px;line-height:20px;}
 	.horoscope_box .fortune_list li em{font-weight:400;}
+	.horoscope_box .fortune_list .source_info {margin-top:24px;}/* 2024-03-27 출처 추가 */
 
 	/* 바자커버 */
 	.cover_atc_wrap{margin-bottom:80px;}

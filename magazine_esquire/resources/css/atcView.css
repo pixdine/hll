@@ -149,10 +149,10 @@ hr.ab_h_line01::after {content:''; position:relative;display:block; height:1px; 
 .ab_h_line02 .ab_sub_headingline02 { padding:0; margin:18px 0 20px}
 
 /* 인터뷰 질문/답변 파티클 */
-.tag_interview .tag_question {position:relative; font-weight:700; padding:20px 0 0px 64px;}
-.tag_interview .tag_question:before {content: "Q"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1;}
-.tag_interview .tag_answer {position:relative; padding:12px 0 24px 64px;}
-.tag_interview .tag_answer:before {content: "A"; position:absolute; top:0px; left:0; font-size:56px; font-family: TTFirs-ExtraBold;line-height:1;}
+.tag_interview .tag_question {position:relative; font-weight:700; padding:20px 0 0px 43px;}/* 2024-03-26 수정 */
+.tag_interview .tag_question:before {content: "Q"; position:absolute; top:22px; left:0; font-size:40px; font-family: TTFirs-ExtraBold;line-height:1;}/* 2024-03-26 수정 */
+.tag_interview .tag_answer {position:relative; padding:26px 0 40px 43px;}/* 2024-03-26 수정 */
+.tag_interview .tag_answer:before {content: "A"; position:absolute; top:28px; left:0; font-size:40px; font-family: TTFirs-ExtraBold;line-height:1;}/* 2024-03-26 수정 */
 
 /*인용구 파티클 > 기존 파티클*/
 .tag_quotation { position:relative; width:652px; margin:24px auto; padding:32px; font-size:20px; line-height:36px; letter-spacing:-0.03em; text-align:center }

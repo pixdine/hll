@@ -2,7 +2,7 @@
 
 /* font */
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean);
-@import url("https://use.typekit.net/opw2oyn.css");/* 2024-03-26 폰트 변경 */
+@import url("https://use.typekit.net/opw2oyn.css");/* 2024-03-27 폰트 변경 */
 
 @font-face {
 	font-family: 'Pretendard';
@@ -17,12 +17,6 @@
 	font-weight: 500;
 	src: url(../font/Pretendard-Medium.woff2) format("woff2"), url(../font/Pretendard-Medium.woff) format("woff"), url(../font/Pretendard-Medium.otf) format("opentype");
 	unicode-range: U+0020-007E; /*영문, 숫자, 특수문자를 포함 한 유니코드 범위*/
-}
-@font-face {
-	font-family: ElleGaborStd;
-	font-style: normal;
-	font-weight: 500;
-	src: url(../font/ElleGaborStd-Medium.woff2) format("woff2"), url(../font/ElleGaborStd-Medium.woff) format("woff"), url(../font/ElleGaborStd-Medium.otf) format("opentype");
 }
 @font-face {
 	font-family: SaolDisplay;
@@ -330,10 +324,10 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .header_navi ul{font-size:0;}
 .header_navi ul li{position:relative;display:inline-block;}
 .header_navi ul li + li{padding-left:24px;}
-.header_navi ul li a{display:block;padding:7px 0;font-family:ElleGaborStd, 'Noto Sans KR';font-size:18px;color:#111;line-height:24px;letter-spacing:0;font-family:futura-pt;}/* 2024-03-26 폰트 변경 */
+.header_navi ul li a{display:block;padding:7px 0;font-size:18px;color:#111;line-height:24px;letter-spacing:0;font-family:futura-pt, 'Noto Sans KR';}/* 2024-03-27 폰트 변경 */
 .header_util{display:flex;margin-left:auto;margin-right:-5px;}
 .header_util .aside{display:flex;column-gap:24px}
-.header_util .aside a{display:inline-block;padding:9px 0;font-family:ElleGaborStd, 'Noto Sans KR';font-size:14px;color:#666;line-height:20px;letter-spacing:0;font-family:futura-pt;}/* 2024-03-26 폰트 변경 */
+.header_util .aside a{display:inline-block;padding:9px 0;font-size:14px;color:#666;line-height:20px;letter-spacing:0;font-family:futura-pt, 'Noto Sans KR';}/* 2024-03-27 폰트 변경 */
 .header_util .aside a:first-child{margin-left:0;}
 
 /* pc header gnb 구분선 */

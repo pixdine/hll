@@ -885,7 +885,6 @@ background:#fff;overflow:hidden;z-index:230}
 .horoscope_box .fortune_list li ~ li{margin-top:4px;}
 .horoscope_box .fortune_list li em{margin-right:12px;color:#666;font-weight:500;white-space:nowrap;}
 .horoscope_box .fortune_list .source_info {margin-top:32px;}/* 2024-03-27 출처 추가 */
-.horoscope_box .fortune_list .source_info span {font-weight:500;}/* 2024-03-27 출처 추가 */
 
 /* 바자커버 */
 .cover_atc_wrap{margin-bottom:180px;}

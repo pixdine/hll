@@ -40,7 +40,7 @@
 .ab_photo_1200 {position:relative;left:50%;transform:translateX(-50%);width:1200px;margin:24px auto;}
 .ab_photo_1200 img {width:100%;}
 
-.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: 0em;}/* 2024-03-27 자간수정*/
+.atc_body .atc_body_cont {font-size:16px; line-height:32px; font-weight:400; letter-spacing: inherit;}/* 2024-03-28 자간수정*/
 body.is_mobile .atc_body .atc_body_cont {line-height:28px; letter-spacing: -0.03em;}
 .atc_body .ab_photo { width: 100%;margin:24px auto;} /* 기사상세 > 본문 이미지 792 */
 .atc_body .ab_photo img { width: 100%; display:block}

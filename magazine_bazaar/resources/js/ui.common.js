@@ -1403,10 +1403,6 @@ const filterKeyword = {
     multipleState: false,
     $chipWrap: null,
     $chipInner: null,
-    chipValue1: null,
-    chipValue2: null,
-    chipValue1Index: null,
-    chipValue2Index: null,
     $btnReset: null,
     init: function() {
         if($("[data-filter]").length === 0) return;
@@ -1423,7 +1419,7 @@ const filterKeyword = {
     },
     initEvent: function($dataListDepth1, $dataListDepth2) {
         this.activeDepth1Item($dataListDepth1, $dataListDepth2);
-        this.activeDepth2Item($dataListDepth2);
+        this.activeDepth2Item($dataListDepth1, $dataListDepth2);
     },
     activeDepth1Item: function($dataListDepth1, $dataListDepth2) {
         let self = this;
@@ -1440,7 +1436,7 @@ const filterKeyword = {
             });
         });
     },
-    activeDepth2Item: function($dataListDepth2) {
+    activeDepth2Item: function($dataListDepth1, $dataListDepth2) {
         let self = this;
 
         $dataListDepth2.each((index, data) => {
@@ -1455,8 +1451,8 @@ const filterKeyword = {
                         self.$chipInner = $chipWrap.append(`<div class="chip_inner"></div>`);
                     }
                     self.createChip();
-                    self.delChip(self.$itemsDepth2);
-                    self.reset(self.$itemsDepth2);
+                    self.delChip($dataListDepth2);
+                    self.reset($dataListDepth1, $dataListDepth2);
                 });
             });
         });
@@ -1467,19 +1463,21 @@ const filterKeyword = {
                 <button type="button" class="btn_del"><span class="blind">삭제</span></button>
             </span>`);
     },
-    delChip: function(itemsDepth2) {
+    delChip: function(dataListDepth2) {
         let $btnDel = $(".chip .btn_del");
 
         $btnDel.on("click", function(){
             let $chip = $(this).closest(".chip");
             let index2 = $chip.data("index-2");
             $chip.remove();
-            $(itemsDepth2).eq(index2).removeClass("on");
+            $(dataListDepth2).children("li").eq(index2).removeClass("on");
         });
     },
-    reset: function(itemsDepth2) {
+    reset: function(dataListDepth1, dataListDepth2) {
         $btnReset.on("click", function(){
-            $(itemsDepth2).removeClass("on");
+            $(dataListDepth1).children("li").removeClass("on");
+            $(dataListDepth2).children("li").removeClass("on");
+            $(dataListDepth2).removeClass("active");
             $(".chip").remove();
         });
     }

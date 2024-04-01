@@ -29,9 +29,14 @@
 .popup_filter .region_wrap .region_sigun .region_list > li::after {right: 20px;background-image: url("../images/region_checkbox.svg");}
 .popup_filter .region_wrap .region_sigun .region_list > li.on::after {background-image: url("../images/region_checkbox_on.svg");}
 .popup_filter .chip_wrap {margin-top: auto;}
-.popup_filter .chip_inner {padding: 16px 20px;}
+.popup_filter .chip_inner {display: flex;flex-wrap: wrap;gap: 8px;padding: 16px 20px;}
 .popup_filter .chip_inner .chip {display: inline-flex;gap: 4px;align-items: center;justify-content: center;height: 32px;padding: 0 16px;background-color: var(--point);color: #fff;font-size: 12px;;border-radius: 20px;}
 .popup_filter .chip_inner .btn_del {width: 16px;height: 16px;background: url("../images/ico_close_20_be.svg") no-repeat center center / contain;}
+
+.popup_filter .cate_list {display: flex;gap: 20px;padding: 28px;}
+.popup_filter .cate_list > li {cursor: pointer;font-size: 16px;}
+.popup_filter .cate_list > li.on {color:var(--point);}
+.popup_filter .detail_cate {border-top: 1px solid #DBDBDB;}
 
 .popup_filter .tab_cont[data-filter] .filter_depth2 {display: none;}
 .popup_filter .tab_cont[data-filter] .filter_depth2.active {display: flex;}

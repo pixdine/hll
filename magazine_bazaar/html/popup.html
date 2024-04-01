@@ -747,12 +747,90 @@
                 </div>
             </div>
             <div class="popup_cont">
-                내용넣는곳<br><br><br><br><br>
+                <div class="inputbox search">
+                    <input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off" value="">
+                    <button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 입력중일 때 삭제버튼 노출 -->
+                    <button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+                </div>
+
+                <div class="select_wrap">
+                    <div class="tab_wrap">
+                        <div class="tab_menu type02">
+                            <ul>
+                                <li class="on"><a href="javascript:;">지역 선택</a></li><!-- D: 선택 시 on 클래스 추가 -->
+                                <li><a href="javascript:;">태그 선택</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab_cont_wrap">
+                            <!-- 지역 탭 내용 -->
+                            <div class="tab_cont active" data-filter>
+                                <div class="info_area">
+                                    <p class="txt">시/도 (인기지역 포함)와 구/시는 최대 3개 선택이 가능합니다. (총 9개 지역 설정 가능)</p>
+                                </div>
+                
+                                <div class="region_wrap">
+                                    <div class="region_do">
+                                        <ul class="region_list filter_depth1">
+                                            <li><span class="value">강원</span> <span class="total">28</span></li>
+                                            <li><span class="value">경기</span></li>
+                                            <li><span class="value">경남</span></li>
+                                            <li><span class="value">경북</span></li>
+                                            <li><span class="value">광주</span></li>
+                                            <li><span class="value">대구</span></li>
+                                            <li><span class="value">대전</span></li>
+                                            <li><span class="value">부산</span></li>
+                                            <li><span class="value">서울</span></li>
+                                            <li><span class="value">세종특별자치시></span></li>
+                                            <li><span class="value">울산</span></li>
+                                            <li><span class="value">인천</span></li>
+                                            <li><span class="value">전북</span></li>
+                                            <li><span class="value">제주</span></li>
+                                            <li><span class="value">충남</span></li>
+                                            <li><span class="value">충북</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="region_sigun">
+                                        <ul class="region_list filter_depth2">
+                                            <li><span class="value">강원 전체</span></li>
+                                            <li><span class="value">강릉시</span></li>
+                                            <li><span class="value">고성군</span></li>
+                                            <li><span class="value">동해시</span></li>
+                                            <li><span class="value">삼척시</span></li>
+                                            <li><span class="value">양양군</span></li>
+                                            <li><span class="value">영월군</span></li>
+                                            <li><span class="value">원주시</span></li>
+                                            <li><span class="value">인제군</span></li>
+                                            <li><span class="value">정선군</span></li>
+                                            <li><span class="value">철원군</span></li>
+                                            <li><span class="value">춘천시</span></li>
+                                            <li><span class="value">태백시</span></li>
+                                            <li><span class="value">평창군</span></li>
+                                            <li><span class="value">홍천군</span></li>
+                                            <li><span class="value">화천군</span></li>
+                                            <li><span class="value">횡성군</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //지역 탭 내용 -->
+
+                            <!-- 태그 탭 내용 -->
+                            <div class="tab_cont" data-filter>
+                                태그 탭 내용
+                            </div>
+                            <!-- //태그 탭 내용 -->
+                        </div>
+                    </div>
+
+                    <div class="chip_wrap">
+                    </div>
+                </div>
             </div>
             <div class="popup_bottom">
                 <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                    <button type="button" class="btn bctype2 btn_reset"><span>설정 초기화</span></button>
+                    <button type="button" class="btn bctype1"><span>검색하기</span></button>
                 </div>
             </div>
         </div>
@@ -792,6 +870,7 @@
 
         $(document).ready(function () {
             $('.photoViewer').photoViewerSwiper();
+            filterKeyword.init(); //상세 검색 설정관련 함수
         });
     </script>
     <!-- //js -->

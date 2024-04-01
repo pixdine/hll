@@ -1392,3 +1392,95 @@ document.addEventListener("click", function (event) {
         enableScroll();
     }
 });
+
+// 상세 검색 설정 팝업
+const filterKeyword = {
+    $filter: null,
+    $dataListDepth1: null,
+    $dataListDepth2: null,
+    $itemsDepth1: null,
+    $itemsDepth2: null,
+    multipleState: false,
+    $chipWrap: null,
+    $chipInner: null,
+    chipValue1: null,
+    chipValue2: null,
+    chipValue1Index: null,
+    chipValue2Index: null,
+    $btnReset: null,
+    init: function() {
+        if($("[data-filter]").length === 0) return;
+
+        $filter = $("[data-filter]");
+        $chipWrap = $(".chip_wrap");
+        $btnReset = $(".btn_reset");
+        $filter.each((index, filter) => {
+            $dataListDepth1 = $(filter).find(".filter_depth1");
+            $dataListDepth2 = $(filter).find(".filter_depth2");
+
+            this.initEvent($dataListDepth1, $dataListDepth2);
+        });
+    },
+    initEvent: function($dataListDepth1, $dataListDepth2) {
+        this.activeDepth1Item($dataListDepth1, $dataListDepth2);
+        this.activeDepth2Item($dataListDepth2);
+    },
+    activeDepth1Item: function($dataListDepth1, $dataListDepth2) {
+        let self = this;
+        
+        $dataListDepth1.each((index, data) => {
+            this.$itemsDepth1 = $(data).children("li");
+            this.$itemsDepth1.on("click", function() {
+                // console.log(this);
+                self.$itemsDepth1.removeClass("on");
+                self.chipValue1 = $(this).children(".value").text();
+                self.chipValue1Index = index;
+                $(this).addClass("on");
+                $dataListDepth2.addClass("active");
+            });
+        });
+    },
+    activeDepth2Item: function($dataListDepth2) {
+        let self = this;
+
+        $dataListDepth2.each((index, data) => {
+            this.$itemsDepth2 = $(data).children("li");
+
+            this.$itemsDepth2.each((index, item) => {
+                $(item).on("click", function(){
+                    self.chipValue2 = $(this).children(".value").text();
+                    self.chipValue2Index = index;
+                    $(this).addClass("on");
+                    if(self.$chipInner === null) {
+                        self.$chipInner = $chipWrap.append(`<div class="chip_inner"></div>`);
+                    }
+                    self.createChip();
+                    self.delChip(self.$itemsDepth2);
+                    self.reset(self.$itemsDepth2);
+                });
+            });
+        });
+    },
+    createChip: function() {
+        $(".chip_inner").append(`<span class="chip" data-index-1="${this.chipValue1Index}" data-index-2="${this.chipValue2Index}">
+                <em class="value">${this.chipValue1} ${this.chipValue2}</em>
+                <button type="button" class="btn_del"><span class="blind">삭제</span></button>
+            </span>`);
+    },
+    delChip: function(itemsDepth2) {
+        let $btnDel = $(".chip .btn_del");
+
+        $btnDel.on("click", function(){
+            let $chip = $(this).closest(".chip");
+            let index2 = $chip.data("index-2");
+            $chip.remove();
+            $(itemsDepth2).eq(index2).removeClass("on");
+        });
+    },
+    reset: function(itemsDepth2) {
+        $btnReset.on("click", function(){
+            $(itemsDepth2).removeClass("on");
+            $(".chip").remove();
+        });
+    }
+}

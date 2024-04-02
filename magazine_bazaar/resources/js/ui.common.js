@@ -1482,3 +1482,46 @@ const filterKeyword = {
         });
     }
 }
+
+
+///////////////////////지도보기팝업용 js/////////////////////
+const swiperEssay = new Swiper(".swiper_essay .swiper", {
+    slidesPerView: 2,
+    spaceBetween: 11,
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    pagination: {
+      el: ".swiper_essay .swiper-pagination",
+      type: "progressbar",
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2.2,
+            spaceBetween: 24,
+        }
+    }
+});
+
+(function($) {
+    $.fn.btnScrap = function (options) {
+        var settings = $.extend({
+            // 기본 옵션값 필요한 경우에만 작성
+        }, options)
+
+        return this.each(function (i){
+            var scrapBtn = $(this);
+            scrapBtn.on("click", function () {
+                if(!$(this).hasClass("on")){
+                    $(this).addClass("on");
+                    // console.log(i+1 + "번째 좋아요 버튼")
+                } else {
+                    $(this).removeClass("on");
+                    // console.log(i+1 + "번째 좋아요 버튼 취소")
+                }
+            })
+        });
+    }
+})(jQuery);
+
+$(".js-btn-scrap").btnScrap();

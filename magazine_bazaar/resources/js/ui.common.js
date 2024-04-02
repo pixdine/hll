@@ -1483,25 +1483,47 @@ const filterKeyword = {
     }
 }
 
+// 지도보기 팝업 cate swiper
+function swiperMapCate() {
+    if ($(".swiper_cate .swiper").length < 1) return;
+    const $swiper = $(".swiper_cate .swiper");
+    const $pagination = $swiper.find(".swiper-pagination");
 
-///////////////////////지도보기팝업용 js/////////////////////
-const swiperEssay = new Swiper(".swiper_essay .swiper", {
-    slidesPerView: 2,
-    spaceBetween: 11,
-    observer: true,
-    observeParents: true,
-    watchOverflow: true,
-    pagination: {
-      el: ".swiper_essay .swiper-pagination",
-      type: "progressbar",
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2.2,
-            spaceBetween: 24,
+    const swiper = new Swiper($swiper, {
+        // freeMode: true,
+        slidesPerView: "auto",
+        spaceBetween: 8,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        clickable: true
+    });
+}
+
+// 지도보기 팝업 store swiper
+function swiperMapStore() {
+    if ($(".swiper_store .swiper").length < 1) return;
+    const $swiper = $(".swiper_store .swiper");
+    const $pagination = $swiper.find(".swiper-pagination");
+
+    const swiper = new Swiper($swiper, {
+        slidesPerView: 2.2,
+        spaceBetween: 12,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        pagination: {
+            el: $pagination,
+            type: "progressbar",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2.4,
+                spaceBetween: 16,
+            }
         }
-    }
-});
+    });
+}
 
 (function($) {
     $.fn.btnScrap = function (options) {

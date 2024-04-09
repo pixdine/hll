@@ -284,7 +284,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 
 /* 구글광고배너 */
 .ad_google{text-align:center;}
-.ad_top{position:relative;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
+.ad_top{position:relative;text-align:center;z-index:3;} /* 2024-04-09 z-index 수정*//* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_top .ad_google div {margin:20px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread{position:relative;width:100%;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread .ad_google div {margin:180px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
@@ -296,7 +296,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .cont_inner .ad_interscroller {margin: 0 -20px 13.3vw;}/* 2024-03-27 인터스크롤러 광고 여백 조절 */
 
 /* header 공통스타일 */
-.header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}
+.header{position:sticky;top:0;background-color:#fff;z-index:100;transition:transform 0.3s;}/* 2024-04-09 z-index 수정*/
 .header .logo a{display:block;font-size:0;}
 .header .logo img{width:100%;vertical-align:baseline;}
 .header .btn_menu{display:block;position:relative;z-index:1;width:38px;height:38px;margin-left:-4px;}
@@ -368,7 +368,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .progress_bar{position:absolute;bottom:-2px;left:0;height:2px;max-width: 100%;background-color:#111;z-index:2;transition:width .4s ease-out;overflow:hidden;}
 
 /* 전체메뉴 */
-.allmenu_wrap{display:none;position:fixed;left:0;top:0;right:0;bottom:0;z-index:101;}
+.allmenu_wrap{display:none;position:fixed;left:0;top:0;right:0;bottom:0;z-index:101;}/* 2024-04-09 z-index 수정*/
 .allmenu_wrap .allmenu_dimmed{display:block;content:'';position:absolute;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,0.7)}
 .allmenu_area{position:relative;width:480px;height:100%;background-color:#fff;}
 .allmenu_cont{display:flex;flex-direction:column;width:100%;height:100%;}

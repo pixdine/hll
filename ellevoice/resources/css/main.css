@@ -3,16 +3,16 @@
 /***********************************************************************
 common
 ***********************************************************************/
-.main_container {padding-bottom: 180px;}
+.main_container {padding-bottom: 130px;}/* 2024-04-11 수정 */
 .desc {font-size: 18px;font-weight: 500;line-height: 1.8;}
 h2 {font-size: 40px;font-weight: 700;}
 h2 + .desc {margin-top: 20px;}
 .tit_area {align-items: center;}
 
-.section .cont_inner {position: relative;padding-top: 120px;padding-bottom: 120px;}
+.section .cont_inner {position: relative;padding-top: 80px;padding-bottom: 100px;}/* 2024-04-11 수정 */
 
 @media (max-width:768px){
-	.main_container {padding-bottom: 80px;}
+	.main_container {padding-bottom: 60px;}/* 2024-04-11 수정 */
 	.desc {font-size: 14px;}
 	h2 {font-size: 22px;}
 	.tit_wrap {margin-bottom: 32px;}
@@ -28,11 +28,19 @@ banner
 .main_banner .banner .txt {display: inline-block;font-size: 64px;font-weight: 700;letter-spacing: -4px;}
 .main_banner .banner .txt:nth-of-type(2) {order: 3;}
 .main_banner .banner .slogan {order: 1;display: inline-flex;justify-content: center;align-items: center;width: 362px;height: 300px;background: no-repeat center center / contain;vertical-align: bottom;}
-.main_banner .banner .slogan em {position: relative;top: 25px;font-size: 40px;font-weight: 500;font-family: ElleGaborStd;color: #fff;line-height: 1;}
+.main_banner .banner .slogan em {position: relative;top: 25px;font-size: 40px;font-weight: 500;font-family:futura-pt;color: #fff;line-height: 1;}/* 2024-04-11 폰트수정 */
 .main_banner .banner .slogan.relationship {background-image: url("../images/main/slogan_relationship.png");}
 .main_banner .banner .slogan.career {background-image: url("../images/main/slogan_career.png");}
 .main_banner .banner .slogan.green {background-image: url("../images/main/slogan_green.png");}
 .main_banner .banner .slogan.love {background-image: url("../images/main/slogan_love.png");}
+.main_banner .main_visual {position:relative;max-width:1920px;min-height:680px;width:100%;margin:0 auto;}/* 2024-04-11 수정 */
+.main_banner .main_visual img {display:block;margin:0 auto;}/* 2024-04-11 수정 */
+body.is_pc .main_visual img.pc {display:block;min-height:680px;object-fit:cover; }/* 2024-04-11 수정 */
+body.is_pc .main_visual img.mo {display:none;}/* 2024-04-11 수정 */
+body.is_mobile  .main_visual img.pc {display:none;}/* 2024-04-11 수정 */
+body.is_mobile  .main_visual img.mo {display:block;width:100%;}/* 2024-04-11 수정 */
+
+
 @media (max-width:1280px){
 	.main_banner .banner {top: 0;flex-direction: column;gap: 0;align-items: flex-start;}
 	.main_banner .banner .txt:nth-of-type(2) {order: 2;}
@@ -49,7 +57,16 @@ banner
 	.main_banner .banner .slogan.career {background-image: url("../images/main/slogan_career_mo.png");}
 	.main_banner .banner .slogan.green {background-image: url("../images/main/slogan_green_mo.png");}
 	.main_banner .banner .slogan.love {background-image: url("../images/main/slogan_love_mo.png");}
+	.main_banner .main_visual {min-height:auto;}/* 2024-04-11 수정 */
 }
+
+/* 2024-04-11 추가 :: 메인 영상형 배너 모듈 */
+.kv_video{position:relative;max-width:1920px;width:100%;margin:0 auto;overflow:hidden;}
+.kv_video .itembox{position:relative;padding-top:56.25%;}
+.kv_video .itembox iframe{position:absolute;top:0;left:50%;width:100%;height:100%;transform:translateX(-50%);}
+.kv_video .itembox iframe.pc{display:block;}
+.kv_video .itembox iframe.mo{display:none;}
+.kv_video .itembox .link{display:block;position:absolute;left:0;top:0;bottom:0;right:0;}
 
 /***********************************************************************
 newsletter
@@ -70,8 +87,8 @@ newsletter
 .section_newsletter .check_group .chk_in.checked .btn_terms {color: #111;}
 .section_newsletter .btn_subscription {margin-top: 40px;height: 52px;padding: 0 35px;font-weight: 500;color: #fff;background-color: var(--point);}
 @media (max-width:1100px){
-	.section_newsletter .subscription_apply {margin-top: 20px;padding-top: 375px;}
-	.section_newsletter .subscription_apply::after {top: 0;right: auto;left: 50%;transform: translate(-50%, 0);width: 100%;max-width: 335px;height: 335px;margin-top: 0;}
+	.section_newsletter .subscription_apply {margin-top: 0px;padding-top:320px;}/* 2024-04-11 수정 */
+	.section_newsletter .subscription_apply::after {top: 0;right: auto;left: 50%;transform: translate(-50%, 0);width: 100%;max-width: 300px;height: 300px;margin-top: 0;}/* 2024-04-11 수정 */
 	.section_newsletter .subscription_apply .input {width: 100%;}
 }
 @media (max-width:768px){
@@ -87,15 +104,16 @@ newsletter
 .swiper_newsletter_preview .swiper-slide {width: 0;}
 .swiper_newsletter_preview .swiper-slide figure {transform: scale(0.75);transition: 0.4s ease;}
 /* .swiper_newsletter_preview .swiper-slide {width: 325px; transform: scale(0.75);transition: 0.4s ease;width: 0;} */
-.swiper_newsletter_preview .swiper-slide .img {overflow: hidden;position: relative;padding-bottom: 163.4%;}
+.swiper_newsletter_preview .swiper-slide .img {overflow: hidden;position: relative;padding-bottom: 136.2%;}/* 2024-04-11 수정 */
 .swiper_newsletter_preview .swiper-slide .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
-.swiper_newsletter_preview .swiper-slide figcaption {margin-top: 28px;text-align: center;font-size: 36px;font-family: ElleGaborStd;font-weight: 600;color: var(--point);line-height: 1.1;}
+.swiper_newsletter_preview .swiper-slide figcaption {margin-top: 28px;text-align: center;font-size: 36px;font-family:futura-pt;font-weight: 600;color: var(--point);line-height: 1.1;}/* 2024-04-11 폰트수정 */
 .swiper_newsletter_preview .swiper-slide-active {width: 433px;}
 .swiper_newsletter_preview .swiper-slide-active figure {transform: scale(1) !important;}
 .swiper_newsletter_preview .swiper-slide-active figcaption {font-size: 28px;}
 .swiper_newsletter_preview .swiper-button-next {right: auto;left: 100%;margin-left: 20px;}
 .swiper_newsletter_preview .swiper-button-prev {left: auto;right: 100%;margin-right: 20px;}
 @media (max-width:1400px){
+	.section_newsletter_preview .cont_inner {padding-bottom:40px;}/* 2024-04-11 수정 */
 	.section_newsletter_preview {overflow: hidden;}
 	.swiper_newsletter_preview .swiper-button-next {right: 0;left: auto;margin-left: 0;margin-right: -40px;}
 	.swiper_newsletter_preview .swiper-button-prev {left: 0;margin-right: 0;margin-left: -40px;}
@@ -104,7 +122,7 @@ newsletter
 	.swiper_newsletter_preview .swiper {margin-left: 0;margin-right: 0;}
 	.swiper_newsletter_preview .swiper-slide:not(.swiper-slide-active) figure {transform: scale(0.776);}
 	/* .swiper_newsletter_preview .swiper-slide:not(.swiper-slide-active) figure {transform: scale(0.776);margin: 0 -12%;} */
-	.swiper_newsletter_preview .swiper-slide .img {padding-bottom: 162.965%;}
+	.swiper_newsletter_preview .swiper-slide .img {padding-bottom: 136.5%;}/* 2024-04-11 수정 */
 	.swiper_newsletter_preview .swiper-slide figcaption {margin-top: 16px;font-size: 20px;font-weight: 700;}
 	/* .swiper_newsletter_preview .swiper-slide-active {width: 243px !important;} */
 	.swiper_newsletter_preview .swiper-slide-active figcaption {font-size: 20px;}
@@ -122,20 +140,20 @@ newsletter
 .newsletter_list > li .times::before {content: "";display: inline-block;position: relative;top: -1px;width: 28px;height: 28px;margin-right: 3vw;background: url("../images/ico_newsletter.svg") no-repeat center center / contain;vertical-align: middle;}
 .newsletter_list > li .tit {overflow: hidden;flex: 1;padding: 0 1.61vw;}
 .newsletter_list > li .tit p {font-size: 18px;line-height: 26px;}
-.newsletter_list > li .date {margin-left: auto;padding-left: 1.61vw;color: #666}
+.newsletter_list > li .date {margin-left: auto;padding-left: 1.61vw;padding-right: 1.61vw;color: #666}/* 2024-04-11 수정 */
 .newsletter_list > li:hover {background-color: rgba(0,160,94,0.04);color: var(--point)}
 .newsletter_list > li:hover .times::before {background-image: url("../images/ico_newsletter_open.svg");}
 @media (max-width:768px){
 	/* 최신 뉴스레스 */
-	.section_latest_newsletter .cont_inner {padding-top: 40px;}
+	.section_latest_newsletter .cont_inner {padding-top: 60px;}/* 2024-04-11 수정 */
 
 	/* 뉴스레터 목록 */
-	.newsletter_list > li {flex-direction: column;align-items: flex-start;height: 158px;padding: 25px 0;font-size: 14px;}
+	.newsletter_list > li {flex-direction: column;align-items: flex-start;height:auto;padding: 24px 0;font-size: 14px;}/* 2024-04-11 수정 */
 	.newsletter_list > li .times {margin-bottom: 8px;}
 	.newsletter_list > li .times::before {width: 20px;height: 20px;margin-right: 8px;background-image: url("../images/ico_newsletter_mo.svg");}
 	.newsletter_list > li .tit {overflow: inherit;}
 	.newsletter_list > li .tit p {display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 16px;line-height: 23px;}
-	.newsletter_list > li .date {margin-left: 0;font-weight: 400;}
+	.newsletter_list > li .date {margin-left: 0;font-weight: 400;margin-top:16px;}/* 2024-04-11 수정 */
 }
 
 
@@ -143,13 +161,12 @@ newsletter
 essay
 ***********************************************************************/
 .section_essay {background-color: #F7F1E5;}
-.section_essay .cont_inner {position: relative;display: flex;flex-direction: column;justify-content: center;min-height: 527px;}
-.section_essay .cont_inner::after {content: "";display: block;position: absolute;top: 50%;right: 0;transform: translateY(-50%);width: 26.7412vw;height: 407px;background: url("../images/main/obj_essay.png") no-repeat center center / contain;
-}
+.section_essay .cont_inner {position: relative;display: flex;flex-direction: column;justify-content: center;min-height: 400px;}/* 2024-04-11 수정 */
+.section_essay .cont_inner::after {content: "";display: block;position: absolute;top: 50%;right: 0;transform: translateY(-50%);width: 26.7412vw;height: 350px;background: url("../images/main/obj_essay.png") no-repeat center center / contain;}/* 2024-04-11 수정 */
 @media (max-width:768px){
-	.section_essay .cont_inner {min-height: auto;padding-top: 40px;padding-bottom: 40px;}
-	.section_essay .cont_inner::after {position: relative;top: auto;transform: inherit;margin-top: 24px;width: 100%;height: 335px;background-image: url("../images/main/obj_essay_mo.png");}
-	.section_essay .cont_inner .desc {font-weight: 400;}
+	.section_essay .cont_inner {min-height: auto;padding-top: 60px;padding-bottom: 40px;}/* 2024-04-11 수정 */
+	.section_essay .cont_inner::after {position: relative;top: auto;transform: inherit;margin-top: 0px;width: 100%;height: 300px;background-image: url("../images/main/obj_essay_mo.png");}/* 2024-04-11 수정 */
+	/* .section_essay .cont_inner .desc {font-weight: 400;} *//* 2024-04-11 수정 */
 }
 
 /* 최신 에세이 */

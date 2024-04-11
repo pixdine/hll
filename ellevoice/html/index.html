@@ -14,9 +14,13 @@
 </head>
 <body>
 	<div id="wrap" class="wrap">
-		<!-- 광고배너영역(탑배너) -->
+		<!-- 2024-04-11 추가 광고배너영역(탑배너) -->
 		<div class="ad_top"> 
-			<div>광고배너</div>
+			<div class="ad_google">
+				<div><!-- pc : 970 * 90 / mo : 320 * 100-->
+					<img src="../resources/images/temp/temp_ad_top.png" > 
+				</div>
+			</div>
 		</div>
 		<!--//광고배너영역(탑배너) -->
 
@@ -191,17 +195,25 @@
 
 		<!-- container -->
 		<main id="container" class="container main_container">
-			<!-- banner -->
+			<!-- 2024-04-11 수정 main_banner -->
 			<div class="section main_banner">
-				<div class="cont_inner">
-					<div class="banner">
-						<span class="txt">여성의 삶,</span>
-						<span class="txt">레퍼런스가 필요할 때</span>
-						<span class="slogan relationship"><em>Relationship</em></span><!-- D: 슬로건 클래스 relationship, career, green, love -->
-					</div>
+				<div class="main_visual">
+					<img src="../resources/images/main_visual.jpg" class="pc">
+					<img src="../resources/images/main_visual_mo.jpg" class="mo">
 				</div>
 			</div>
-			<!-- //banner -->
+
+			<!-- 메인 영상형 배너 사용할 경우 모듈 :::  class="pc"는 PC에서 노출 / class="mo"는 모바일에서 노출-->
+			<!-- <div class="kv_video">
+				<div class="itembox">
+					<iframe video class="pc" src="https://player.vimeo.com/video/764012741?autoplay=1&loop=1&title=0&background=1"></iframe>
+					<iframe video class="mo" src="https://player.vimeo.com/video/764012741?autoplay=1&loop=1&title=0&background=1"></iframe>
+					<a href="#" class="link"><span class="blind">내용보기</span></a>
+				</div>
+			</div> -->
+			<!-- //메인 영상형 배너 모듈 -->
+
+			<!-- // 2024-04-11 수정 main_banner -->
 
 			<!-- 뉴스레터 -->
 			<section class="section section_newsletter">
@@ -371,7 +383,7 @@
 										<div class="cont">
 											<span class="essay_cate advice">ADVICE</span>
 											<p class="tit ellipsis">IT회사에 취업한 문과생, 아마존 본사에서 일하게 됐다?</p>
-											<span class="writer">BY 염지원 작가</span>
+											<span class="writer">BY 염지원</span><!-- 2024-04-11 작가 삭제(공통) -->
 										</div>
 									</a>
 									<div class="util">
@@ -390,7 +402,7 @@
 										<div class="cont">
 											<span class="essay_cate society">SOCIETY</span>
 											<p class="tit ellipsis">질식하는 청년들의 사회, 심수미 기자가 현장에서 본 것</p>
-											<span class="writer">BY 심수미 작가</span>
+											<span class="writer">BY 심수미</span><!-- 작가 삭제 -->
 										</div>
 									</a>
 									<div class="util">
@@ -409,7 +421,7 @@
 										<div class="cont">
 											<span class="essay_cate travel">TRAVEL</span>
 											<p class="tit ellipsis">엔데믹 시대, 파워유성애자는 다시 예전처럼 뜨거운 밤을 꿈꿀 수 있을까?</p>
-											<span class="writer">BY 곽민지 작가</span>
+											<span class="writer">BY 곽민지</span><!-- 작가 삭제 -->
 										</div>
 									</a>
 									<div class="util">
@@ -428,7 +440,7 @@
 										<div class="cont">
 											<span class="essay_cate relationship">RELATIONSHIP</span>
 											<p class="tit ellipsis">서울을 떠도는 사람의 희한한 집 취향</p>
-											<span class="writer">BY 이두루 작가</span>
+											<span class="writer">BY 이두루</span><!-- 작가 삭제 -->
 										</div>
 									</a>
 									<div class="util">
@@ -464,7 +476,7 @@
 								<li class="swiper-slide">
 									<div class="img_area"><div class="img"><img src="../resources/images/temp/writer01.png" alt="황선우 작가"></div></div>
 									<div class="cont">
-										<span class="nm">황선우 작가</span>
+										<span class="nm">황선우</span><!-- 2024-04-11 작가 삭제(공통) -->
 									</div>
 									<button class="btn_ico dibs js-btn-scrap">
 										<span class="blind">찜하기</span>
@@ -473,7 +485,7 @@
 								<li class="swiper-slide">
 									<div class="img_area"><div class="img"><img src="../resources/images/temp/writer02.png" alt="심수미 작가"></div></div>
 									<div class="cont">
-										<span class="nm">심수미 작가</span>
+										<span class="nm">심수미</span><!-- 작가 삭제 -->
 									</div>
 									<button class="btn_ico dibs js-btn-scrap">
 										<span class="blind">찜하기</span>
@@ -482,7 +494,7 @@
 								<li class="swiper-slide">
 									<div class="img_area"><div class="img"><img src="../resources/images/temp/writer03.png" alt="임현주 작가"></div></div>
 									<div class="cont">
-										<span class="nm">임현주 작가</span>
+										<span class="nm">임현주</span><!-- 작가 삭제 -->
 									</div>
 									<button class="btn_ico dibs js-btn-scrap">
 										<span class="blind">찜하기</span>
@@ -491,7 +503,7 @@
 								<li class="swiper-slide">
 									<div class="img_area"><div class="img"><img src="../resources/images/temp/writer04.png" alt="김사월 작가"></div></div>
 									<div class="cont">
-										<span class="nm">김사월 작가</span>
+										<span class="nm">김사월</span><!-- 작가 삭제 -->
 									</div>
 									<button class="btn_ico dibs js-btn-scrap">
 										<span class="blind">찜하기</span>
@@ -500,7 +512,7 @@
 								<li class="swiper-slide">
 									<div class="img_area"><div class="img"></div></div>
 									<div class="cont">
-										<span class="nm">엘르보이스 작가</span>
+										<span class="nm">엘르보이스</span><!-- 작가 삭제 -->
 									</div>
 									<button class="btn_ico dibs js-btn-scrap">
 										<span class="blind">찜하기</span>

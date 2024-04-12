@@ -190,7 +190,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .point_change_cont .p_logo { height:auto; margin-right:64px}
 .point_change_cont .p_logo object { height:auto}
 .point_change_cont .p_logo.ok object { width:144px;}
-.point_change_cont .p_logo.cj object { width:121px;}
+.point_change_cont .p_logo.cj object { width:140px;display:block;}/* 2024-04-12 수정 */
 .point_change_cont .p_logo.hpoint object { width:97px;}
 .point_change_cont .p_logo.payco object { width:97px;}
 .point_change_cont .p_txt {font-size:18px; font-weight:500; flex-grow:2 }
@@ -337,7 +337,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
     .point_change_cont .p_logo { width:auto; margin-right:0 }
     .point_change_cont .p_logo.ok object { width:106px;}
     .point_change_cont .p_logo.cj object { width:84px;}
-    .point_change_cont .p_logo.hpoint object { width:72px;}
+    .point_change_cont .p_logo.hpoint object { width:73px;}/* 2024-04-12 수정 */
     .point_change_cont .p_logo.payco object { width:65.62px;}
  
 }

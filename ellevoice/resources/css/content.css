@@ -267,7 +267,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 /*에세이*/
 .essay .search {margin-bottom: 40px;}
 .essay_list_wrap {margin-top: 40px;}/* 2024-04-11 수정 */
-.essay_list_wrap .total_cont {margin-bottom: 40px;margin-top:60px;}/* 2024-04-15 수정 */
+.essay_list_wrap .total_cont {margin-bottom: 40px;margin-top:80px;}/* 2024-04-15 수정 */
 .essay_list_wrap .total_cont .txt {font-size: 24px;line-height: 35px;font-weight: 400;}
 .essay_list_wrap .total_cont .cnt {display: inline-block;margin: 0 8px;color: var(--point);font-family:futura-pt;font-size: 26px;font-weight: 600;}/* 2024-04-11 폰트수정 */
 .essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}

@@ -917,6 +917,22 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_error .err_comment02 { font-size:18px; font-weight:500; line-height:1.45; color:#666; margin:16px 20px 0 }
 
 
+/* 2024-04-15 추가 검색결과 엘르보이스 */
+.essay_list_wrap {margin-bottom:180px;}
+.essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
+.essay_list > li {position: relative;width: calc(100% / 3 - 16px);}
+.essay_list > li > a {position: relative;display: block;}
+.essay_list .thumb {overflow: hidden;position: relative;height: 0;padding-top: 100%;}
+.essay_list .thumb img {position: absolute;top: 0;left: 0;object-fit: cover;width: 100%;height: 100%;}
+.essay_list .cont {margin-top: 12px;}
+.essay_list .cont > span {display:flex;align-items:center;}
+.essay_list .cont .essay_cate::before {width: 16px;height: 16px;background-color: #111;top:-1px;}
+.essay_list .cont .tit {height: 56px;margin-top: 8px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;white-space: inherit;font-size: 20px;font-weight: 700;line-height: 29px;}
+.essay_list .cont .writer {margin-top: 24px;font-size: 14px;}
+.essay_list .util {position: absolute;top: 16px;right: 16px;display: flex;gap: 6px;align-items: center;}
+.essay_list .util .new {display: inline-block;width: 32px;height: 32px;background: url("../images/ico_new.svg") no-repeat 0 0 / contain;}
+
+
 
 /************************* Media Query *************************/
 @media (max-width:1280px){
@@ -1334,6 +1350,19 @@ background:#fff;overflow:hidden;z-index:230}
 	.comm_error .err_comment01 { font-size:22px;}
 	.comm_error .err_comment02 { font-size:14px;margin:12px 20px 0}
 	.comm_error .err_comment01 span, .comm_error .err_comment02 span{ display:block}
+
+	/* 2024-04-15 추가 검색결과 엘르보이스 */
+	.essay_list {gap: 24px 11px;}
+	.essay_list > li {width: calc(100% / 2 - 5.5px);}
+	.essay .search {margin-bottom: 24px;} 
+	.essay_list_wrap {margin-bottom:80px;}
+	.essay_list .cont {margin-top: 8px;}
+	.essay_list .cont .essay_cate {font-size: 11px;}
+	.essay_list .cont .essay_cate::before {top: -2px;}
+	.essay_list .cont .tit {height: 39px;margin-top: 4px;font-size: 14px;line-height: 20px;}
+	.essay_list .cont .writer {margin-top:16px;font-size: 12px;}
+	.essay_list .util {top: 8px;right: 8px;gap: 4px;}
+	.essay_list .util .new {width: 28px;height: 28px;}
 }
 
 @media (max-width:425px){

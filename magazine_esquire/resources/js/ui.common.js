@@ -1433,14 +1433,14 @@ document.addEventListener("click", function (event) {
 });
 
 
-//찜한공간, 전체보기 교체
+//2024-04-18 추가 찜한공간, 전체보기 교체
 $.fn.toggleDibs = function() {
     this.click(function() {
       $(this).toggleClass("on").siblings().toggleClass("on");
     });
   };
 
-// eee 찜하기 버튼
+//2024-04-18 추가 eee 찜하기 버튼
 $.fn.btnScrap = function (options) {
     var settings = $.extend({
         // 기본 옵션값 필요한 경우에만 작성

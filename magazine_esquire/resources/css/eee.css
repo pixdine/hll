@@ -17,7 +17,7 @@
 .hotplace_list_wrap .top_area a:first-child::before {display:none;}
 .hotplace_list_wrap .top_area a:first-child {margin-left:0px;}
 .hotplace_list_wrap .top_area a:last-child {margin-right:0px;}
-.hotplace_list_wrap .top_area a span {padding-right:20px;position:relative;}
+.hotplace_list_wrap .top_area a span {padding-right:20px;position:relative;line-height:20px;}
 .hotplace_list_wrap .top_area a span.all {background:url(../images/ico_all.svg) no-repeat right 3px / 16px 16px;}
 .hotplace_list_wrap .top_area a span.dibs {background:url(../images/ico_dibs_line.svg) no-repeat right 3px / 16px 16px;}
 .hotplace_list_wrap .top_area a span.map {background:url(../images/ico_marker_s.svg) no-repeat right 3px / 16px 16px;}
@@ -68,7 +68,7 @@
 
 	.hotplace_list_wrap {margin-bottom:80px;}
 	.hotplace_list_wrap .top_area {flex-wrap:wrap;flex-direction:column-reverse;margin-bottom:24px;}
-	.hotplace_list_wrap .top_area .right_box {margin-bottom:16px;}
+	.hotplace_list_wrap .top_area .right_box {margin-bottom:16px;height:20px;}
 	.filter dl {margin-top:12px;font-size:14px;}
 	.filter dt {flex:1 0 71px;max-width:71px;padding:0 16px;}
 

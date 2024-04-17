@@ -1,16 +1,15 @@
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2266_14177)">
-<rect width="8" height="1" transform="matrix(1 0 0 -1 4 4)" fill="#111111"/>
+<g clip-path="url(#clip0_2420_14719)">
+<rect width="10" height="1" transform="matrix(1 0 0 -1 2 4)" fill="#111111"/>
 <rect width="1" height="1" transform="matrix(1 0 0 -1 2 4)" fill="#111111"/>
 <rect width="1" height="1" transform="matrix(1 0 0 -1 2 8)" fill="#111111"/>
 <rect width="1" height="1" transform="matrix(1 0 0 -1 2 12)" fill="#111111"/>
-<rect width="8" height="1" transform="matrix(1 0 0 -1 4 8)" fill="#111111"/>
-<rect width="8" height="1" transform="matrix(1 0 0 -1 4 12)" fill="#111111"/>
-<circle cx="4" cy="4" r="4.5" transform="matrix(1 0 0 -1 7 14)" fill="#111111" stroke="white"/>
-<path d="M11.9294 9.02885C11.9115 9.00877 11.8991 9.00254 11.8959 9.00108C11.8951 9.00069 11.8944 9.00042 11.8939 9.00024C11.8934 9.00042 11.8927 9.00069 11.8918 9.00108C11.8886 9.00254 11.8762 9.00877 11.8583 9.02885L11.7465 9.1543L10.9999 9.99213L10.2534 9.1543L10.1417 9.02897C10.1238 9.00889 10.1114 9.00265 10.1082 9.00119C10.1073 9.0008 10.1066 9.00054 10.1061 9.00036C10.1056 9.00054 10.1049 9.0008 10.1041 9.00119C10.1009 9.00265 10.0885 9.00889 10.0706 9.02897C9.97648 9.13455 9.97648 9.34828 10.0706 9.45386L11 10.4969L11.9294 9.45377L11.9294 9.45375C12.0235 9.34816 12.0235 9.13444 11.9294 9.02885ZM11.9294 9.02885L12.676 8.36357L11.9294 9.02885Z" fill="white" stroke="white" stroke-width="2"/>
+<rect width="10" height="1" transform="matrix(1 0 0 -1 2 8)" fill="#111111"/>
+<rect width="10" height="1" transform="matrix(1 0 0 -1 2 12)" fill="#111111"/>
+<path d="M6.72894 6.81829C5.75702 7.90899 5.75702 9.67738 6.72894 10.7681L10.5 15L14.2711 10.7678C15.243 9.67711 15.243 7.90873 14.2711 6.81803C13.2991 5.72732 11.7233 5.72732 10.7514 6.81803L10.4999 7.10029L10.2486 6.81829C9.27667 5.72758 7.70087 5.72758 6.72894 6.81829Z" fill="black"/>
 </g>
 <defs>
-<clipPath id="clip0_2266_14177">
+<clipPath id="clip0_2420_14719">
 <rect width="16" height="16" fill="white"/>
 </clipPath>
 </defs>

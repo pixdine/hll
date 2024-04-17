@@ -59,6 +59,7 @@
 
 
 
+
 /************************* Media Query *************************/
 @media (max-width:1199px){
 	.hotplace_list ul li {width:calc(50% - 12px);}
@@ -68,9 +69,12 @@
 
 	.hotplace_list_wrap {margin-bottom:80px;}
 	.hotplace_list_wrap .top_area {flex-wrap:wrap;flex-direction:column-reverse;margin-bottom:24px;}
-	.hotplace_list_wrap .top_area .right_box {margin-bottom:16px;height:20px;}
-	.filter dl {margin-top:12px;font-size:14px;}
-	.filter dt {flex:1 0 71px;max-width:71px;padding:0 16px;}
+	.hotplace_list_wrap .top_area .right_box {margin-bottom:14px;height:22px;}
+	.hotplace_list_wrap .top_area a span {padding-bottom:2px;}
+	.hotplace_list_wrap .top_area a span.all {background:url(../images/ico_all.svg) no-repeat right 2px / 16px 16px;}
+	.hotplace_list_wrap .top_area a span.dibs {background:url(../images/ico_dibs_line.svg) no-repeat right 2px / 16px 16px;}
+	.hotplace_list_wrap .top_area a span.map {background:url(../images/ico_marker_s.svg) no-repeat right 2px / 16px 16px;}
+	.hotplace_list_wrap .top_area a span.detail {background:url(../images/ico_detail.svg) no-repeat right 2px / 16px 16px;}
 
 	.g_box + .hotplace_list {margin-top:40px;}
 	.hotplace_list {}
@@ -83,6 +87,9 @@
 	.hotplace_list ul li .dibs.on {background:url(../images/ico_dibs_line_on.svg) no-repeat;} 
 
 	.g_box.filter {padding:24px 16px;}
+	.filter dl {margin-top:12px;font-size:14px;}
+	.filter dt {flex:1 0 71px;max-width:71px;padding:0 16px;}
+
 	.g_box.no_data {height:208px;font-size:14px;}
 	.g_box.no_data p span {display:block;text-align:center;}
 

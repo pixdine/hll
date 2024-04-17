@@ -1431,3 +1431,30 @@ document.addEventListener("click", function (event) {
         enableScroll();
     }
 });
+
+
+//찜한공간, 전체보기 교체
+$.fn.toggleDibs = function() {
+    this.click(function() {
+      $(this).toggleClass("on").siblings().toggleClass("on");
+    });
+  };
+
+// eee 찜하기 버튼
+$.fn.btnScrap = function (options) {
+    var settings = $.extend({
+        // 기본 옵션값 필요한 경우에만 작성
+    }, options)
+    return this.each(function (i){
+        var scrapBtn = $(this);
+        scrapBtn.on("click", function () {
+            if(!$(this).hasClass("on")){
+                $(this).addClass("on");
+                // console.log(i+1 + "번째 좋아요 버튼")
+            } else {
+                $(this).removeClass("on");
+                // console.log(i+1 + "번째 좋아요 버튼 취소")
+                }
+            })
+        });
+    }

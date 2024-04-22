@@ -36,10 +36,10 @@
 .hotplace_list ul li .txtbox {border:1px solid #C8C8C8;border-radius:0 0 24px 24px;padding:20px;padding-bottom:28px;height:140px;display:flex;flex-direction:column;justify-content: space-between;}
 .hotplace_list ul li .txtbox dt {font-size:18px;line-height:24px;font-weight:700;}
 .hotplace_list ul li .txtbox dd {margin:8px 0;font-size:12px;line-height:18px;color:#999;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
-.hotplace_list ul li .txtbox .tag_box {display:flex;gap:4px;}
-.hotplace_list ul li .txtbox .tag_box .tag {display:block;font-size:12px;line-height:24px;padding:0 8px;background-color:#C8C8C84D;color:#666;}
-.hotplace_list ul li .dibs {position:absolute;width:28px;height:28px;bottom:86px;right:20px;background:url(../images/ico_dibs_line.svg) no-repeat;}
+.hotplace_list ul li .dibs {position:absolute;width:28px;height:28px;bottom:90px;right:20px;background:url(../images/ico_dibs_line.svg) no-repeat;}
 .hotplace_list ul li .dibs.on {background:url(../images/ico_dibs_line_on.svg) no-repeat;} 
+.eee .tag_box {display:flex;gap:4px;}
+.eee .tag_box .tag {display:block;font-size:12px;line-height:24px;padding:0 8px;background-color:#C8C8C84D;color:#666;}
 
 .g_box {background-color:var(--bg_gray);}
 .g_box.filter {padding:32px;}
@@ -57,6 +57,17 @@
 .eee .banner_wrap {margin-top:120px;}
 .eee .banner_wrap .mo_img {display:none;}
 
+/* eee 상세 */
+.eee_veiw_wrap {padding-top:80px;margin-bottom:180px;}
+.eee_veiw {padding:0 102px;}
+.eee_veiw .tit {font-size:36px;line-height:48px;font-weight:700;margin-bottom:60px;text-align:center;}
+.eee_veiw .caption {font-size:14px;line-height:24px;letter-spacing:0.08em;color:#666;font-weight:400;text-align:left;}
+.eee_veiw_wrap .g_box {margin-top:120px;}
+.eee_veiw_wrap .tit_wrap {margin-top:120px;margin-bottom:48px;}
+.eee_veiw_wrap .tit_wrap .tit {font-size:28px;line-height:32px;font-weight:700;}
+.eee_veiw_wrap .g_box.edit_cmt {padding:60px;}
+
+.eee .line20 {height:20px;background-color:var(--bg_gray);margin:120px 0;}
 
 
 
@@ -82,9 +93,7 @@
 	.hotplace_list ul li {width:100%;}
 	.hotplace_list ul li .imgbox .cate {font-size:14px;}
 	.hotplace_list ul li .txtbox {padding:16px;padding-bottom:20px;height:130px;}
-	.hotplace_list ul li .txtbox .tag_box {}
 	.hotplace_list ul li .dibs {bottom:86px;right:18px;}
-	.hotplace_list ul li .dibs.on {background:url(../images/ico_dibs_line_on.svg) no-repeat;} 
 
 	.g_box.filter {padding:24px 16px;}
 	.filter dl {margin-top:12px;font-size:14px;}
@@ -96,4 +105,21 @@
 	.eee .banner_wrap {margin-top:40px;}
 	.eee .banner_wrap .pc_img {display:none;}
 	.eee .banner_wrap .mo_img {display:block;}
+
+	.eee_veiw_wrap {padding-top:40px;margin-bottom:80px;}
+	.eee_veiw {padding:0px;margin:0 -20px;}
+	.eee_veiw .tag_photobundle {margin:0;}
+	.eee_veiw .tit {font-size:24px;line-height:32px;margin-bottom:24px;}
+	.eee_veiw .caption {margin-top:8px;letter-spacing:0.02em;padding:0 20px;word-break:break-all;}
+	.eee_veiw .txt_box {margin-top:52px;padding:0 20px;}
+	.eee_veiw .txt_box dl + dl {margin-top:0;} 
+	.eee_veiw .txt_box dl {flex-wrap:wrap;}
+	.eee_veiw .txt_box dl dt {font-size:16px;line-height:24px;width:88px;flex:0 1 88px;margin-top:20px;}
+	.eee_veiw .txt_box dl dt:nth-of-type(2) {flex:0 1 88px;}
+	.eee_veiw .txt_box dl dd {font-size:16px;line-height:24px;flex:0 1 calc(100% - 88px);margin-top:20px;}
+	.eee_veiw .txt_box .pop_map {margin-left:0px;margin-top:6px;display:block;}
+	.eee_veiw_wrap .tit_wrap {margin-top:80px;margin-bottom:24px;}
+	.eee_veiw_wrap .tit_wrap .tit {font-size:20px;line-height:29px;}
+
+	.eee .line20 {height:12px;margin:80px 0;}
 }

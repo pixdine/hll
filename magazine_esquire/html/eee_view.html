@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>에스콰이어 코리아 | Esquire Korea</title>
+	<meta name="format-detection" content="telephone=no">
+	<!-- css, Jquery -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/module.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/eee.css"/><!-- D: eee에서만 해당 css 로드합니다. -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" /><!-- D: eee에서도 해당 css 로드합니다. -->
+	<script src="../resources/js/jquery-3.6.0.min.js"></script>
+	<!-- //css, Jquery -->
+</head>
+
+<body>
+	<div id="esquire"><!-- D: 해당 매체별 아이디명 지정 (bazaar, elle, cosmo, esquire) -->
+		<div id="wrap" class="wrap">
+			<!-- header -->
+			<header id="header" class="header">
+				<!-- header_wrap -->
+				<div class="header_wrap">
+					<div class="header_top">
+						<div class="cont_inner">
+							<h1 class="logo"><a href="./index.html"><img src="../resources/images/logo_esquire.svg" alt="ESQUIRE"></a></h1><!-- D: 로고 (PC 메인, 모바일에서 노출) -->
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC에서 미노출, 모바일에서 노출) -->
+							<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC에서 미노출, 모바일에서 노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+						</div>
+					</div>
+					<div class="header_bottom">
+						<div class="cont_inner">
+							<button type="button" class="btn_menu"><span class="blind">전체 메뉴 열기</span></button><!-- D: 전체메뉴 (PC 메인, 서브에서 노출, 모바일에서 미노출) -->
+							<strong class="logo"><a href="./index.html"><img src="../resources/images/logo_esquire.svg" alt="ESQUIRE"></a></strong><!-- D: 로고 (PC 서브에서 노출) -->
+							<div class="header_navi">
+								<ul>
+									<li><a href="#">STYLE</a></li>
+									<li><a href="#">WATCH</a></li>
+									<li><a href="#">FOOD</a></li>
+									<li><a href="#">CAR&amp;TECH</a></li>
+									<li><a href="#">CLUB ESQUIRE</a></li>
+								</ul>
+							</div>
+							<div class="header_util">
+								<div class="aside">
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
+								</div>
+								<button type="button" class="btn_search"><span class="blind">검색</span></button><!-- D: 검색 (PC 메인, 서브에서 노출, 모바일에서 미노출) / 검색버튼 클릭 시 on 클래스 추가 -->
+							</div>
+						</div>
+					</div>
+
+					<!-- D: 플로팅바 영역 -->
+					<div class="floating_bar">
+						<div class="cont_inner">
+							<div class="detail_info">
+								<!-- 브레드크럼 -->
+								<div class="breadcrumb">
+									<a href="#" class="home">HOME</a>
+									<a href="#" class="cate_dep">eee</a>
+								</div>
+								<!-- //브레드크럼 -->
+								<!-- 기사 타이틀 -->
+								<div class="txtbox">
+									<p class="tit">벽돌해피푸드 스타필드 수원점</p>
+								</div>
+								<!-- //기사 타이틀 -->
+								<!-- 스크랩, 공유하기 -->
+								<div class="sharebox">
+									<button type="button" class="btn_ico scrap"><span class="blind">스크랩</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+									<button type="button" class="btn_ico share" data-layer-open="popup_share"><span class="blind">공유하기</span></button>
+								</div>
+								<!-- //스크랩, 공유하기 -->
+							</div>
+						</div>
+					</div>
+					<!-- //D: 플로팅바 영역 -->
+				</div>
+				<!-- //header_wrap -->
+
+				<!-- 검색 레이어 -->
+				<div class="search_layer"><!-- D: 오픈 시 open 클래스 추가 -->
+					<div class="cont_inner">
+						<div class="search_box">
+							<div class="inputbox search">
+								<input type="search" class="inp" id="name" name="name" placeholder="검색어를 입력해주세요." title="검색어 입력" autocomplete="off">
+								<button type="button" class="btn_ico del"><span class="blind">삭제</span></button><!-- D: 검색어 입력 시 노출 -->
+								<button type="button" class="btn_ico search"><span class="blind">검색</span></button>
+							</div>
+
+							<!-- 추천 키워드 -->
+							<!-- D: 추천 키워드가 없는 경우 해당 영역 전체 미노출 -->
+							<div class="search_keyword">
+								<h3 class="search_tit">추천 키워드</h3>
+								<!-- 키워드 리스트 -->
+								<!-- D: 최대 10개까지 노출 -->
+								<ul class="word_list">
+									<li><a href="#">#어윈올라프</a></li>
+									<li><a href="#">#불가리</a></li>
+									<li><a href="#">#블랙핑크하퍼스바자커버</a></li>
+									<li><a href="#">#갤러리</a></li>
+									<li><a href="#">#5월전시</a></li>
+									<li><a href="#">#패션아이템</a></li>
+									<li><a href="#">#백남준</a></li>
+									<li><a href="#">#반팔재킷</a></li>
+									<li><a href="#">#구찌 패션쇼</a></li>
+									<li><a href="#">#STAR일링</a></li>
+								</ul>
+								<!-- //키워드 리스트 -->
+							</div>
+							<!-- //추천 키워드 -->
+						</div>
+					</div>
+				</div>
+				<!-- //검색 레이어 -->
+
+				<!-- D: [팝업] 공유하기 -->
+				<div class="popup_layer pop_share" data-layer="popup_share">
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_tit">
+								<h3 class="tit">공유하기</h3>
+							</div>
+							<div class="popup_close">
+								<button type="button" class="btn_close" data-layer-close="popup_share"><span class="blind">닫기</span></button>
+							</div>
+						</div>
+						<div class="popup_cont">
+							<div class="sns_list">
+								<ul>
+									<li><button type="button" class="btn_sns talk"><span class="tit">카카오톡</span></button></li>
+									<li><button type="button" class="btn_sns facebook"><span class="tit">페이스북</span></button></li>
+									<li><button type="button" class="btn_sns twitter"><span class="tit">X</span></button></li>
+									<li><button type="button" class="btn_sns copy" data-alert-open="alert_1"><span class="tit">복사</span></button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //D: [팝업] 공유하기 -->
+			</header>
+			<!-- //header -->
+
+			<!-- 전체메뉴 -->
+			<div class="allmenu_wrap"><!-- D: 오픈 시 open 클래스 추가 -->
+				<div class="allmenu_dimmed"></div>
+				<div class="allmenu_area">
+					<div class="allmenu_cont">
+						<!-- 상단 닫기 영역 -->
+						<div class="top_area">
+							<button type="button" class="btn_menu_close"><span class="blind">닫기</span></button>
+						</div>
+						<!-- //상단 닫기 영역 -->
+
+						<div class="scroll_custom">
+							<div class="allmenu_inner">
+								<!-- 로그인/회원가입 -->
+								<div class="allmenu_util">
+									<a href="#" data-popup-open="popup_login">LOGIN</a><!-- D: LOGOUT -->
+									<a href="#">SIGNUP</a><!-- D: MYPAGE -->
+								</div>
+								<!-- //로그인/회원가입 -->
+
+								<!-- 단일메뉴 및 버티컬 -->
+								<!-- D: 단일메뉴가 없는 경우 해당 영역 전체 미노출 -->
+								<div class="allmenu_single">
+									<li><a href="#">LOOK</a></li>
+									<li><a href="#">eee</a></li>
+								</div>
+								<!-- //단일메뉴 및 버티컬 -->
+
+								<!-- 메뉴 -->
+								<!-- D: PC는 디폴트가 메뉴 모두 펼쳐진 상태, MO는 디폴트가 메뉴 모두 닫힌 상태 -->
+								<div class="allmenu_list">
+									<ul class="depth1">
+										<li><!-- D: 2depth가 있는 경우 has_menu 클래스 추가. 클릭했을 때 open 클래스 추가 -->
+											<a href="#">STYLE<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">FASHION</a></li>
+												<li><a href="#">GROOMING</a></li>
+												<li><a href="#">CELEBRITY</a></li>
+												<li><a href="#">NOW</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">WATCH<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">REVIEW</a></li>
+												<li><a href="#">FAIR</a></li>
+												<li><a href="#">INTERVIEW</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">FOOD<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">RESTAURANT</a></li>
+												<li><a href="#">BAR</a></li>
+												<li><a href="#">CAFE</a></li>
+												<li><a href="#">PLACE</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">CAR &amp; TECH<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">CAR</a></li>
+												<li><a href="#">BIKE</a></li>
+												<li><a href="#">TECH</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">LIFE<span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">PEOPLE</a></li>
+												<li><a href="#">SPACE</a></li>
+												<li><a href="#">ART&amp;DESIGN</a></li>
+												<li><a href="#">ENTERTAINMENT</a></li>
+												<li><a href="#">TRAVEL</a></li>
+												<li><a href="#">RELATION</a></li>
+												<li><a href="#">HEALTH</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">VIDEO<span><em class="blind">열기</em></span></a>
+										</li>
+										<li>
+											<a href="#">Club Esquire<span><em class="blind">열기</em></span></a>
+										</li>
+										<li>
+											<a href="#">EVENT <span><em class="blind">열기</em></span></a>
+											<ul class="depth2">
+												<li><a href="#">ONGOING EVENT</a></li>
+												<li><a href="#">NOTICE</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">COVER<span><em class="blind">열기</em></span></a>
+										</li>
+									</ul>
+								</div>
+								<!-- //메뉴 -->
+
+								<!-- 외부링크 -->
+								<div class="etc_link">
+									<ul>
+										<li><a href="#" target="_blank" title="새창열림">광고&middot;제휴문의</a></li>
+										<li><a href="#" target="_blank" title="새창열림">미디어킷</a></li>
+										<li><a href="#" target="_blank" title="새창열림">RSSFEED</a></li>
+										<li><a href="#" target="_blank" title="새창열림">포인트제도 안내</a></li>
+										<li><a href="#" target="_blank" title="새창열림">고객센터</a></li>
+									</ul>
+								</div>
+								<!-- //외부링크 -->
+
+								<!-- sns -->
+								<div class="sns_list">
+									<ul>
+										<li><a href="https://www.facebook.com/esquiremagazinekr/" class="btn_sns facebook" target="_blank" title="새창열림"><span class="blind">페이스북</span></a></li>
+										<li><a href="https://www.instagram.com/esquire.korea/" class="btn_sns instagram" target="_blank" title="새창열림"><span class="blind">인스타그램</span></a></li>
+										<li><a href="https://www.youtube.com/c/ESQUIREKorea" class="btn_sns youtube" target="_blank" title="새창열림"><span class="blind">유튜브</span></a></li>
+										<li><a href="https://story.kakao.com/ch/esquirekr" class="btn_sns kakao" target="_blank" title="새창열림"><span class="blind">카카오스토리</span></a></li>
+										<li><a href="https://twitter.com/esquirekr" class="btn_sns twitter" target="_blank" title="새창열림"><span class="blind">트위터 X</span></a></li>
+									</ul>
+								</div>
+								<!-- //sns -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //전체메뉴 -->
+
+			<!-- container -->
+			<div id="container" class="container">
+				<div id="content" class="content eee">
+					<div class="eee_veiw_wrap">
+						<div class="cont_inner">
+
+							<!-- eee_veiw -->
+							<div class="eee_veiw">
+								<h2 class="tit">벽돌해피푸드 스타필드 수원점</h2>
+								<!-- 사진묶음 슬라이드 컨텐츠 -->
+								<div class="tag_photobundle">
+									<div class="swiper viewSwiper" data-slide="slider-type01">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="../resources/images/temp/temp_place01.png" />
+												<p class="caption">caption text</p>
+											</div>
+											<div class="swiper-slide">
+												<img src="../resources/images/temp/temp_place02.png" />
+												<p class="caption">caption text2</p>
+											</div>
+											<div class="swiper-slide">
+												<img src="../resources/images/temp/temp_place03.png" />
+												<p class="caption">caption text3</p>
+											</div>
+											<div class="swiper-slide">
+												<img src="../resources/images/temp/temp_place04.png" />
+												<p class="caption">caption text4</p>
+											</div>
+											<div class="swiper-slide">
+												<img src="../resources/images/temp/temp_place05.png" />
+												<p class="caption">사진5 / Gucci</p>
+											</div>
+											<div class="swiper-slide">
+												<img src="../resources/images/temp/temp_place06.png" alt="">
+												<p class="caption">사진6 / Gucci</p>
+											</div>
+										</div>
+										<div class="swiper-button-next"></div> 
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-scrollbar"></div>
+									</div>
+								</div>
+								<!--// 사진묶음 슬라이드 컨텐츠 -->
+								<div class="txt_box">
+									<dl>
+										<dt>주소지</dt>
+										<dd>경기 수원시 장안구 수성로 175 스타필드 수원 2층 고메스트리트<button class="pop_map">지도보기</button></dd>
+									</dl>
+									<dl>
+										<dt>대표번호</dt>
+										<dd>0507-1368-3258</dd>
+										<dt>영업시간</dt>
+										<dd>매일 12:00-21:00 (월 OFF)</dd>
+									</dl>
+									<dl>
+										<dt>주차</dt>
+										<dd>주차불가</dd>
+										<dt>인스타그램</dt>
+										<dd>@oafuoafu</dd>
+									</dl>
+									<dl>
+										<dt>장소태그</dt>
+										<dd class="tag_box"><span class="tag">커피/음료</span><span class="tag">디저트</span> </dd>
+									</dl>
+								</div>
+							</div>
+							<!-- //eee_veiw -->
+
+							<!-- Editor’s Comment -->
+							<div class="g_box edit_cmt">
+								<div class="tit">Editor’s Comment</div>
+								<p>대표적인 설치 구조물 <행동 부피>에는 64명의 하루가 담겨있는다. 소속, 성별, 나이, 이념과 무관한 대중의 행동을 수집한다. 산책, 기도, 커피 마시기, 다이어리 쓰기 등의 반복되는 일상의 행동을 지속한 시간을 계산한다. 각각의 시간을 부피로 재해석하여 각기 다른 풍선의 크기로 표현한다. 맹목적인 목표 지향이나 성과와는 상관없는 모든 행동을 시각화한 결과물이다. 작가는 맹목적인 성장만을 강요하는 현대 사회가 인간에게 주는 피로감과 무기력함에 대해 이야기하며 공생을 위한 대안적 삶을 함께 고민할 것을 제안한다.</p>
+								<p class="cmt_by"><em>Commented by. </em>에디터 park</p>
+							</div>
+							<!-- //Editor’s Comment -->
+							
+							<!-- 관련 기사 -->
+							<div class="tit_wrap">
+								<div class="tit-area">
+									<h2 class="tit">관련 기사</h2>
+								</div>
+							</div>
+							<div class="eee_atc">
+								<a href="#n">
+									<div class="img"><img src="../resources/images/temp/temp_eeeatc01.png" alt=""></div>
+									<div class="txt"><strong>아는 사람만 아는 서순라길 핫플 4</strong></div>
+								</a>
+							</div>
+							<div class="eee_atc">
+								<a href="#n">
+									<div class="img"><img src="../resources/images/temp/temp_eeeatc02.png" alt=""></div>
+									<div class="txt"><strong>쇼콜라티에가 운영하는 수제 초콜릿 전문점 4쇼콜라티에가 운영하는 수제 초콜릿 전문점 4</strong></div>
+								</a>
+							</div>
+							<!-- //관련 기사 -->
+						</div>
+						<div class="line20"></div>
+
+						<div class="cont_inner">
+							<!-- 가까운 핫플 -->
+							<div class="tit_wrap">
+								<div class="tit-area">
+									<h2 class="tit">지금 가까운 핫플! 이 곳은 어떠세요?</h2>
+								</div>
+							</div>
+							<div class="hotplace_list">
+								<ul>
+									<li>
+										<a href="#n">
+											<div class="imgbox">
+												<img src="../resources/images/temp/temp_place01.png" alt="">
+												<em class="cate">카페</em>
+											</div>
+											<div class="txtbox">
+												<dl>
+													<dt>턴다운 서비스</dt>
+													<dd>서울 마포구 동교로 50길 7 반지층</dd>
+												</dl>
+												<div class="tag_box">
+													<span class="tag">커피/음료</span>
+													<span class="tag">베이커리</span>
+													<span class="tag">디저트</span>
+												</div>
+											</div>
+										</a>
+										<button class="dibs js-btn-scrap on"><span class="blind">찜하기</span></button><!-- D: 클릭 시 on 클래스 추가 -->
+									</li>
+									<li>
+										<a href="#n">
+											<div class="imgbox">
+												<img src="../resources/images/temp/temp_place02.png" alt="">
+												<em class="cate">카페</em>
+											</div>
+											<div class="txtbox">
+												<dl>
+													<dt>오푸</dt>
+													<dd>서울 성동구 뚝섬로 408-7 3층</dd>
+												</dl>
+												<div class="tag_box">
+													<span class="tag">커피/음료</span>
+													<span class="tag">디저트</span>
+												</div>
+											</div>
+										</a>
+										<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+									</li>
+									<li>
+										<a href="#n">
+											<div class="imgbox">
+												<img src="../resources/images/temp/temp_place03.png" alt="">
+												<em class="cate">카페</em>
+											</div>
+											<div class="txtbox">
+												<dl>
+													<dt>올더어글리&트레몽</dt>
+													<dd>서울 마포구 토정로 45</dd>
+												</dl>
+												<div class="tag_box">
+													<span class="tag">베이커리</span>
+													<span class="tag">디저트</span>
+												</div>
+											</div>
+										</a>
+										<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+									</li>
+								</ul>
+							</div>
+							<!-- //가까운 핫플 -->
+
+							<!-- 핫플 추천 -->
+							<div class="tit_wrap">
+								<div class="tit-area">
+									<h2 class="tit">이 핫플도 추천해요!</h2>
+								</div>
+							</div>
+							<div class="hotplace_list">
+								<ul>
+									<li>
+										<a href="#n">
+											<div class="imgbox">
+												<img src="../resources/images/temp/temp_place04.png" alt="">
+												<em class="cate">음식점</em>
+											</div>
+											<div class="txtbox">
+												<dl>
+													<dt>나우시스</dt>
+													<dd>서울 강서구 마곡중앙로 161-11 힐스테이트에코마곡나루역 2층</dd>
+												</dl>
+												<div class="tag_box">
+													<span class="tag">양식</span>
+												</div>
+											</div>
+										</a>
+										<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+									</li>
+									<li>
+										<a href="#n">
+											<div class="imgbox">
+												<img src="../resources/images/temp/temp_place05.png" alt="">
+												<em class="cate">카페</em>
+											</div>
+											<div class="txtbox">
+												<dl>
+													<dt>온화가</dt>
+													<dd>강원 강릉시 화부산로18번길 5</dd>
+												</dl>
+												<div class="tag_box">
+													<span class="tag">한옥</span>
+													<span class="tag">펜션</span>
+												</div>
+											</div>
+										</a>
+										<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+									</li>
+									<li>
+										<a href="#n">
+											<div class="imgbox">
+												<img src="../resources/images/temp/temp_place06.png" alt="">
+												<em class="cate">카페</em>
+											</div>
+											<div class="txtbox">
+												<dl>
+													<dt>삐뻣버거 스타필드 수원점</dt>
+													<dd>경기 수원시 장안구 수성로 175</dd>
+												</dl>
+												<div class="tag_box">
+													<span class="tag">한옥</span>
+													<span class="tag">펜션</span>
+												</div>
+											</div>
+										</a>
+										<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+									</li>
+								</ul>
+							</div> 
+							<!-- //핫플 추천 -->
+						</div>
+					</div>
+					<!-- //eee_veiw_wrap -->
+				</div>
+			</div>
+			<!-- //container -->
+
+			<!-- footer -->
+			<footer id="footer" class="footer">
+				<div class="footer_top">
+					<div class="cont_inner">
+						<div class="footer_link">
+							<ul>
+								<li><a href="#" target="_blank">매체소개</a></li>
+								<li><a href="#" target="_blank">고객센터</a></li>
+								<li><a href="#" target="_blank">포인트정책</a></li>
+								<li class="impt"><a href="#" target="_blank">개인정보처리방침</a></li>
+								<li><a href="#" target="_blank">이용약관</a></li>
+								<li><a href="#" target="_blank">이메일무단수집금지</a></li>
+								<li><a href="#" target="_blank">광고&middot;제휴문의</a></li>
+								<li><a href="#" target="_blank">윤리경영</a></li>
+							</ul>
+						</div>
+						<div class="footer_sns">
+							<ul>
+								<li><a href="https://www.facebook.com/esquiremagazinekr/" target="_blank" title="페이스북 바로가기"><img src="../resources/images/ico_facebook.svg" alt="페이스북"></a></li>
+								<li><a href="https://www.instagram.com/esquire.korea/" target="_blank" title="인스타그램 바로가기"><img src="../resources/images/ico_instagram.svg" alt="인스타그램"></a></li>
+								<li><a href="https://www.youtube.com/c/ESQUIREKorea" target="_blank" title="유튜브 바로가기"><img src="../resources/images/ico_youtube.svg" alt="유튜브"></a></li>
+								<li><a href="https://story.kakao.com/ch/esquirekr" target="_blank" title="카카오스토리 바로가기"><img src="../resources/images/ico_kakao.svg" alt="카카오스토리"></a></li>
+								<li><a href="https://twitter.com/esquirekr" target="_blank" title="트위터X 바로가기"><img src="../resources/images/ico_twitter.svg" alt="트위터X"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="cont_inner">
+						<div class="footer_logo">
+							<img src="../resources/images/logo_esquire.svg" alt="ESQUIRE">
+						</div>
+						<div class="footer_info">
+							<address class="addr_wrap">
+								<em>허스트중앙(유)</em>
+								<div class="addr_txt">
+									<span class="addr">서울시 강남구 도산대로 156(논현동)</span>
+									<span class="ceo">대표자 : 강주연</span>
+									<br class="pc_br">
+									<span class="num">사업자등록번호 : 104-81-55280</span>
+									<br class="mo_br">
+									<span class="report">통신판매업신고 : 제 2014-서울강남-00333호</span>
+									<span class="email">이메일 : <a href="mailto:esquirekr@hll.kr">esquirekr@hll.kr</a></span>
+								</div>
+							</address>
+							<p class="copyright">© 2024 Hearst Joongang. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+				<div class="family_wrap">
+					<button type="button" class="btn_familysite"><span>Family &amp; Global</span></button>
+					<div class="familysite">
+						<div class="cont_inner">
+							<div class="tab_wrap">
+								<div class="tab_menu type02">
+									<ul>
+										<li class="on"><a href="javascript:;">FAMILY</a></li><!-- D: 선택 시 on 클래스 추가 -->
+										<li><a href="javascript:;">GLOBAL</span></a></li>
+									</ul>
+								</div>
+
+								<div class="tab_cont_wrap">
+									<!-- Family 탭 내용 -->
+									<div class="tab_cont active">
+										<!-- 리스트 -->
+										<div class="familysite_list family">
+											<ul>
+												<li><a href="#" target="_blank" title="새창열림">ELLE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">COSMOPOLITAN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">Harper’s  BAZAAR</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ESQUIRE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ELLEVOICE</a></li>
+												<li><a href="#" target="_blank" title="새창열림">예술산책</a></li>
+												<li><a href="#" target="_blank" title="새창열림">eee</a></li>
+											</ul>
+										</div>
+										<!-- //리스트 -->
+									</div>
+									<!-- //Family 탭 내용 -->
+
+									<!-- Global 탭 내용 -->
+									<div class="tab_cont">
+										<!-- 리스트 -->
+										<div class="familysite_list global">
+											<ul>
+												<li><a href="#" target="_blank" title="새창열림">USA</a></li>
+												<li><a href="#" target="_blank" title="새창열림">UNITED KINGDOM</a></li>
+												<li><a href="#" target="_blank" title="새창열림">SPAIN</a></li>
+												<li><a href="#" target="_blank" title="새창열림">ITALY</a></li>
+												<li><a href="#" target="_blank" title="새창열림">NETHERLANDS</a></li>
+											</ul>
+										</div>
+										<!-- //리스트 -->
+									</div>
+									<!-- //Global 탭 내용 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+	</div>
+
+	<!-- 팝업 : 복사하기 알럿 -->
+	<div class="popup_alert" data-alert="alert_1">
+		<div class="popup_alert_inner">
+			<div class="popup_alert_cont">
+				<p class="alert_txt">클립보드에 복사되었습니다.</p>
+			</div>
+			<div class="popup_alert_bottom">
+				<div class="btn_wrap">
+					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
+				</div>
+			</div>
+			<div class="popup_close">
+				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 : 복사하기 알럿 -->
+
+	<!-- js -->
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
+	<script>
+		currentPage = 'view';
+
+		viewImgSlide()
+
+		$(document).ready(function () {
+
+			progress_bar(); //D: 상세페이지 프로그래스바
+			
+		});
+
+	</script>
+	<!-- //js -->
+
+</body>
+
+</html>

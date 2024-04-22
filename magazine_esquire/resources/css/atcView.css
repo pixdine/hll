@@ -326,7 +326,7 @@ body.is_mobile .shopping_list ul:has(li:only-child) {justify-content:center;padd
 .atc_body .eee_atc {margin:24px auto;height:158px;}
 .atc_body .eee_atc .img {padding-top:158px;}
 .atc_body .eee_atc .txt {padding:40px;} 
-
+/* 2024-04-22 추가 장소파티클 */
 .place_ptc {margin:80px auto;height:248px;overflow:hidden;}
 .place_ptc a {display:flex;height:100%;}
 .place_ptc .img {width:248px;flex:0 1 248px;height:0;position:relative;overflow:hidden;padding-top:248px;}
@@ -551,7 +551,7 @@ body.is_mobile .shopping_list ul:has(li:only-child) {justify-content:center;padd
     .atc_body .eee_atc {margin:20px auto;height:104px;}
     .atc_body .eee_atc .img {padding-top:104px;}
     .atc_body .eee_atc .txt {padding:16px;} 
-
+    /* 2024-04-22 추가 장소파티클 */
     .place_ptc {margin:60px auto;height:120px;}
     .place_ptc .img {width:120px;flex:0 1 120px;height:0;position:relative;overflow:hidden;padding-top:120px;}
     .place_ptc .txt {max-width:calc(100% - 120px);padding:12px;}

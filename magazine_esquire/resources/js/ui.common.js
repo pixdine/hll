@@ -1436,9 +1436,9 @@ document.addEventListener("click", function (event) {
 //2024-04-18 추가 찜한공간, 전체보기 교체
 $.fn.toggleDibs = function() {
     this.click(function() {
-      $(this).toggleClass("on").siblings().toggleClass("on");
+        $(this).toggleClass("on").siblings().toggleClass("on");
     });
-  };
+};
 
 //2024-04-18 추가 eee 찜하기 버튼
 $.fn.btnScrap = function (options) {
@@ -1458,3 +1458,99 @@ $.fn.btnScrap = function (options) {
             })
         });
     }
+
+
+    
+// 2024-04-25 추가 상세 검색 설정 팝업
+const filterKeyword = {
+    $filter: null,
+    $dataListDepth1: null,
+    $dataListDepth2: null,
+    $itemsDepth1: null,
+    $itemsDepth2: null,
+    multipleState: false,
+    $chipWrap: null,
+    $chipInner: null,
+    $btnReset: null,
+    init: function() {
+        if($("[data-filter]").length === 0) return;
+
+        $filter = $("[data-filter]");
+        $chipWrap = $(".chip_wrap");
+        $btnReset = $(".btn_reset");
+        $filter.each((index, filter) => {
+            $dataListDepth1 = $(filter).find(".filter_depth1");
+            $dataListDepth2 = $(filter).find(".filter_depth2");
+
+            this.initEvent($dataListDepth1, $dataListDepth2);
+        });
+    },
+    initEvent: function($dataListDepth1, $dataListDepth2) {
+        this.activeDepth1Item($dataListDepth1, $dataListDepth2);
+        this.activeDepth2Item($dataListDepth1, $dataListDepth2);
+    },
+    activeDepth1Item: function($dataListDepth1, $dataListDepth2) {
+        let self = this;
+        
+        $dataListDepth1.each((index, data) => {
+            this.$itemsDepth1 = $(data).children("li");
+            this.$itemsDepth1.on("click", function() {
+                // console.log(this);
+                self.$itemsDepth1.removeClass("on");
+                self.chipValue1 = $(this).children(".value").text();
+                self.chipValue1Index = index;
+                $(this).parents(".tab_cont").addClass("on");
+                $(this).addClass("on");
+                $(this).siblings("li").removeClass("on");
+                $dataListDepth2.addClass("active");
+
+            });
+        });
+    },
+    activeDepth2Item: function($dataListDepth1, $dataListDepth2) {
+        let self = this;
+
+        $dataListDepth2.each((index, data) => {
+            this.$itemsDepth2 = $(data).children("li");
+
+            this.$itemsDepth2.each((index, item) => {
+                $(item).on("click", function(){
+                    self.chipValue2 = $(this).children(".value").text();
+                    self.chipValue2Index = index;
+                    $(this).addClass("on");
+                    if(self.$chipInner === null) {
+                        self.$chipInner = $chipWrap.append(`<div class="chip_inner"></div>`);
+                    }
+                    self.createChip();
+                    self.delChip($dataListDepth2);
+                    self.reset($dataListDepth1, $dataListDepth2);
+                });
+            });
+        });
+    },
+    createChip: function() {
+        $(".chip_inner").append(`<span class="chip" data-index-1="${this.chipValue1Index}" data-index-2="${this.chipValue2Index}">
+                <em class="value"><i>${this.chipValue1}</i> ${this.chipValue2}</em>
+                <button type="button" class="btn_del"><span class="blind">삭제</span></button>
+            </span>`);
+    },
+    delChip: function(dataListDepth2) {
+        let $btnDel = $(".chip .btn_del");
+
+        $btnDel.on("click", function(){
+            let $chip = $(this).closest(".chip");
+            let index2 = $chip.data("index-2");
+            $chip.remove();
+            $(dataListDepth2).children("li").eq(index2).removeClass("on");
+        });
+    },
+    reset: function(dataListDepth1, dataListDepth2) {
+        $btnReset.on("click", function(){
+            $(dataListDepth1).children("li").removeClass("on");
+            $(dataListDepth1).parents(".tab_cont").removeClass("on");
+            $(dataListDepth2).children("li").removeClass("on");
+            $(dataListDepth2).removeClass("active");
+            $(".chip").remove();
+        });
+    }
+}

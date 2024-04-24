@@ -1461,7 +1461,7 @@ $.fn.btnScrap = function (options) {
 
 
     
-// 2024-04-25 추가 상세 검색 설정 팝업
+// 2024-04-24 추가 상세 검색 설정 팝업
 const filterKeyword = {
     $filter: null,
     $dataListDepth1: null,

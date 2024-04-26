@@ -702,6 +702,11 @@ function moveTop() {
     
                 // 파일 선택 창을 열기 위한 버튼 핸들러
                 btnAttach.click(function () {
+                    if(btnAttach.val() != null && btnAttach.val() != '') {
+                        maxFiles = btnAttach.val();
+                    }else {
+                        maxFiles = settings.defaultMaxFiles;
+                    }
                     if (currentFiles < maxFiles) {
                         inpFile.click();
                     } else {
@@ -713,9 +718,22 @@ function moveTop() {
                 inpFile.change(function () {
                     var files = $(this)[0].files;
                     var newSizeMB = Array.from(files).reduce((total, file) => total + file.size, 0) / 1024 / 1024; // Size in MB of the new files
-    
+
+                    // 2024-02-28 : 파일 확장자 제한 추가
+                    var allowedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
+                    var isAllowedFile = true;
+                    Array.from(files).forEach((file,index) => {
+                        var extension = file.name.split('.').pop().toLowerCase();
+                        if (allowedExtensions.indexOf(extension) === -1) {
+                            isAllowedFile = false;
+                            return false;
+                        }
+                    });
+
                     // 파일의 수가 최대 허용 수를 초과하거나 파일 크기가 최대 허용 크기를 초과하는 경우 검사
-                    if (files.length + currentFiles > maxFiles) {
+                    if (!isAllowedFile) {
+                        alert('지원하는 않는 확장자입니다.(허용 확장자: ' + allowedExtensions.join(', ') + ')');
+                    } else if (files.length + currentFiles > maxFiles) {
                         // 파일 수 제한 초과 경고
                         alert("최대 " + maxFiles + "개의 파일만 업로드할 수 있습니다.");
                     } else if (totalSizeMB + newSizeMB > maxSizeMB) {
@@ -724,12 +742,11 @@ function moveTop() {
                     } else {
                         currentFiles += files.length;
                         totalSizeMB += newSizeMB;
-                        updateCounter();
-    
+                        // updateCounter();
                         // 선택된 각 파일에 대한 처리
                         Array.from(files).forEach(file => {
+                            fileArr.push(file);
                             var fileSizeMB = file.size / 1024 / 1024; // Size in MB of the current file
-    
                             var reader = new FileReader();
                             reader.onload = function (e) {
                                 // 첨부 이미지 및 삭제 버튼을 포함한 컨테이너 생성
@@ -743,10 +760,12 @@ function moveTop() {
                                 btnDel.click(function () {
                                     // 파일 크기 줄이기
                                     totalSizeMB -= imgContainer.data('size');
+                                    //fileArr 에서 제거
+                                    let delIndex = $(".attach_img .btn_del").index(this);
+                                    fileArr.splice(delIndex,1);
     
                                     // 이미지 컨테이너 제거
                                     imgContainer.remove();
-    
                                     currentFiles--;
                                     updateCounter();
                                     console.log(totalSizeMB);
@@ -755,9 +774,12 @@ function moveTop() {
                                 imgContainer.append(img).append(btnDel);
                                 attachPic.append(imgContainer);
                             };
+                            //팝업 취소 후 다시 누를시 이전 데이터가 먹고 들어가서 fileArr length로 수정
+                            currentFiles = fileArr.length;
                             reader.readAsDataURL(file);
                             console.log(totalSizeMB);
                         });
+                        updateCounter();
                         // 파일 처리가 완료된 후 input 필드 초기화
                         $(this).val(null);  // 현재 input의 값을 null로 설정하여 초기화
                     } 
@@ -765,7 +787,12 @@ function moveTop() {
     
                 // 현재 파일 수 업데이트
                 function updateCounter() {
-                    currentCnt.text(currentFiles);
+                    //수정일경우
+                    let existFiles = Number($(".modify_popup .attach_pic_comp").find(".modifyFiles").val());
+                    if(Object.is(existFiles, NaN)) {
+                        existFiles = 0;
+                    }
+                    currentCnt.text(currentFiles + existFiles);
                     totalCnt.text(settings.defaultMaxFiles);
     
                     // 이미지개수에 따른 버튼 활성화 조절
@@ -774,7 +801,11 @@ function moveTop() {
     
                 // 버튼의 활성화 또는 비활성화 상태를 설정합니다.
                 function updateUploadButtonState() {
-                    if (currentFiles >= maxFiles) {
+                    let existFiles = Number($(".modify_popup .attach_pic_comp").find(".modifyFiles").val());
+                    if(Object.is(existFiles, NaN)) {
+                        existFiles = 0;
+                    }
+                    if ((existFiles + currentFiles) >= maxFiles) {
                         btnAttach.prop('disabled', true); // 파일이 maxFiles 이상이면 버튼을 비활성화합니다.
                     } else {
                         btnAttach.prop('disabled', false); // 그렇지 않으면 버튼을 활성화합니다.

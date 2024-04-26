@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="../resources/css/module.css"/>
     <link rel="stylesheet" type="text/css" href="../resources/css/eee.css"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/atcView.css" />
     <script src="../resources/js/jquery-3.6.0.min.js"></script>
     <!-- //css, Jquery -->
 </head>
@@ -285,9 +286,9 @@
                             <li>
                                 <button type="button" data-popup-open="popup_filter"><span>팝업_eee > 상세 검색 설정 </span></button>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <button type="button" data-popup-open="popup_map"><span>팝업_eee > 지도보기 팝업</span></button>
-                            </li> -->
+                            </li>
                         </ul>
                     </div>
                     <!-- //팝업버튼 -->
@@ -404,7 +405,7 @@
 
     <!-- 팝업 : eee 상세 검색 설정 팝업 -->
     <div class="popup_full popup_filter" data-popup="popup_filter">
-        <div class="popup_inner"  style="outline:1px solid ;">
+        <div class="popup_inner">
             <div class="popup_head">
                 <h2 class="tit">상세 검색 설정</h2>
                 <div class="popup_close">
@@ -530,8 +531,8 @@
     </div>
     <!-- 팝업 : eee 상세 검색 설정 팝업 -->
 
-    <!-- 팝업 : eee 지도보기 팝업 -->
-    <div class="popup_full popup_map" data-popup="popup_map">
+    <!-- 팝업 : eee 지도보기 팝업 2024-04-29 추가-->
+    <div class="popup_full popup_eee_map" data-popup="popup_map">
         <div class="popup_inner">
             <div class="popup_head">
                 <h2 class="tit">지도보기</h2>
@@ -540,13 +541,44 @@
                 </div>
             </div>
             <div class="popup_cont">
+				<dl class="tit_wrap"><!-- D: 특정장소 선택 시 보여줌 -->
+					<dt>올더어글리 & 트레몽</dt>
+					<dd>서울 마포구 토정로 45</dd>
+				</dl>
+
+				<!-- 지도영역 -->
+				<div class="map_area">
+					<div class="map_item">
+						<div class="map_inner">
+							<div class="map_api">
+								<!--
+									D: 개발에서 지도 API 연동 필요. 
+									현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
+									마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
+									API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40 , 24*24)
+								-->
+								<img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지" style="display:block;width:100%;height:100%;object-fit:cover;"><!-- D: 지도 샘플 이미지 -->
+								<span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)" class="point"><img src="../resources/images/ico_marker_org.svg" alt="마커"></span><!-- D: 샘플 point 마커 -->
+								<span style="position:absolute;left:10%;top:60%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+								<span style="position:absolute;left:20%;top:30%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+								<span style="position:absolute;left:70%;top:20%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+								<span style="position:absolute;left:10%;top:10%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
+								<button type="button" class="btn_ico reset"><span class="blind">현재 지도에서 다시 찾기</span></button><!-- D: 현재 지도에서 다시 찾기 버튼-->
+								<button type="button" class="btn_ico kakao "><span class="blind">카카오 지도 보기</span></button><!-- D: 카카오 지도 보기 버튼-->  
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //지도영역 -->
+
+				<!-- 주변 핫플 목록 -->
                 <div class="store_wrap">
                     <div class="swiper_cate">
                         <div class="swiper">
                             <ul class="swiper-wrapper cate_list">
                                 <li class="swiper-slide">
                                     <span class="cate">
-                                        <input type="radio" id="cate-1" name="cate">
+                                        <input type="radio" id="cate-1" name="cate" checked>
                                         <label for="cate-1">음식점</label>
                                     </span>
                                 </li>
@@ -585,70 +617,84 @@
                     </div>
 
                     <div class="swiper_store">
-                        <div class="swiper">
-                            <ul class="swiper-wrapper store_list">
+                        <div class="swiper map_hotplace_list">
+                            <ul class="swiper-wrapper ">
                                 <li class="swiper-slide">
-                                    <a href="#">
-                                        <div class="thumb">
-                                            <img src="../resources/images/temp/temp_rect01.jpg" alt="">
-                                        </div>
-    
-                                        <div class="cont">
-                                            <p class="nm">샌도</p>
-                                            <p class="adress ellipsis">서울 마포구 성지 3길 60 1F 101호</p>
-                                        </div>
-                                    </a>
-                                    <div class="util">
-                                        <button class="btn_ico dibs js-btn-scrap">
-                                            <span class="blind">찜하기</span>
-                                        </button>
-                                    </div>
+                                    <a href="#n">
+										<div class="imgbox">
+											<img src="../resources/images/temp/temp_place01.png" alt="">
+										</div>
+										<div class="txtbox">
+											<dl>
+												<dt>턴다운 서비스</dt>
+												<dd>서울 마포구 동교로 50길 7 반지층</dd>
+											</dl>
+										</div>
+									</a>
+									<button class="dibs js-btn-scrap on"><span class="blind">찜하기</span></button><!-- D: 클릭 시 on 클래스 추가 -->
                                 </li>
                                 <li class="swiper-slide">
-                                    <a href="#">
-                                        <div class="thumb">
-                                            <img src="../resources/images/temp/temp_rect01.jpg" alt="">
-                                        </div>
-    
-                                        <div class="cont">
-                                            <p class="nm">메트로폴리티션</p>
-                                            <p class="adress ellipsis">서울 마포구 토정로3안길 28</p>
-                                        </div>
-                                    </a>
-                                    <div class="util">
-                                        <button class="btn_ico dibs js-btn-scrap">
-                                            <span class="blind">찜하기</span>
-                                        </button>
-                                    </div>
+                                    <a href="#n">
+										<div class="imgbox">
+											<img src="../resources/images/temp/temp_place02.png" alt="">
+										</div>
+										<div class="txtbox">
+											<dl>
+												<dt>오푸</dt>
+												<dd>서울 성동구 뚝섬로 408-7 3층</dd>
+											</dl>
+										</div>
+									</a>
+									<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
                                 </li>
                                 <li class="swiper-slide">
-                                    <a href="#">
-                                        <div class="thumb">
-                                            <img src="../resources/images/temp/temp_rect01.jpg" alt="">
-                                        </div>
-    
-                                        <div class="cont">
-                                            <p class="nm">올더어글리&트레몽</p>
-                                            <p class="adress ellipsis">서울 마포구 토정로 45</p>
-                                        </div>
-                                    </a>
-                                    <div class="util">
-                                        <button class="btn_ico dibs js-btn-scrap">
-                                            <span class="blind">찜하기</span>
-                                        </button>
-                                    </div>
+                                    <a href="#n">
+										<div class="imgbox">
+											<img src="../resources/images/temp/temp_place03.png" alt="">
+										</div>
+										<div class="txtbox">
+											<dl>
+												<dt>올더어글리&트레몽</dt>
+												<dd>서울 마포구 토정로 45</dd>
+											</dl>
+										</div>
+									</a>
+									<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
                                 </li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<div class="imgbox">
+											<img src="../resources/images/temp/temp_place04.png" alt="">
+										</div>
+										<div class="txtbox">
+											<dl>
+												<dt>나우시스</dt>
+												<dd>서울 강서구 마곡중앙로 161-11 힐스테이트에코마곡나루역 2층</dd>
+											</dl>
+										</div>
+									</a>
+									<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<div class="imgbox">
+											<img src="../resources/images/temp/temp_place05.png" alt="">
+										</div>
+										<div class="txtbox">
+											<dl>
+												<dt>온화가</dt>
+												<dd>강원 강릉시 화부산로18번길 5</dd>
+											</dl>
+										</div>
+									</a>
+									<button class="dibs js-btn-scrap"><span class="blind">찜하기</span></button>
+								</li>
                             </ul>
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="popup_bottom">
-                <div class="btn_wrap">
-                    <button type="button" class="btn bctype2"><span>취소</span></button>
-                    <button type="button" class="btn bctype1"><span>확인</span></button>
-                </div>
+				<!-- //주변 핫플 목록 -->
             </div>
         </div>
     </div>
@@ -666,8 +712,9 @@
         $(document).ready(function () {
             $('.photoViewer').photoViewerSwiper();
             filterKeyword.init(); //상세 검색 설정관련 함수
-            swiperMapCate();
-            swiperMapStore();
+            swiperMapCate(); //지도팝업 카테고리 스와이퍼 2024-04-29 추가
+            swiperMapStore(); //지도팝업 핫플리스트 스와이퍼 2024-04-29 추가
+			$(".js-btn-scrap").btnScrap(); //지도팝업 찝하기 버튼 2024-04-29 추가
         });
     </script>
     <!-- //js -->

@@ -620,23 +620,6 @@
 		</div>
 	</div>
 
-	<!-- 팝업 : 복사하기 알럿 -->
-	<div class="popup_alert" data-alert="alert_1">
-		<div class="popup_alert_inner">
-			<div class="popup_alert_cont">
-				<p class="alert_txt">클립보드에 복사되었습니다.</p>
-			</div>
-			<div class="popup_alert_bottom">
-				<div class="btn_wrap">
-					<button type="button" class="btn bctype1" data-alert-close="alert_1"><span>확인</span></button>
-				</div>
-			</div>
-			<div class="popup_close">
-				<button type="button" class="btn_close" data-alert-close="alert_1"><span class="blind">닫기</span></button>
-			</div>
-		</div>
-	</div>
-	<!-- //팝업 : 복사하기 알럿 -->
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>
@@ -646,6 +629,8 @@
 		currentPage = 'view';
 
 		viewImgSlide()
+		swiperMapCate(); //지도팝업 카테고리 스와이퍼 2024-04-29 추가
+        swiperMapStore(); //지도팝업 핫플리스트 스와이퍼 2024-04-29 추가
 
 		$(document).ready(function () {
 

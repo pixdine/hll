@@ -588,6 +588,8 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* title */
 .tit_wrap{margin-bottom:48px;}
+.tit_wrap > a {display:block;}/* 2024-05-09 모듈 타이틀 링크영역 수정 */
+.tit_wrap > a .side.btn_more {height:46px;}/* 2024-05-09 모듈 타이틀 링크영역 수정 */
 .tit_wrap .tit{overflow:hidden;font-size:32px;font-weight:500;line-height:46px;color:#111;letter-spacing:0;}
 .tit_wrap .side{margin-left:auto;flex-shrink:0;}
 .tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:11.5px 10px;font-size:16px;color:#111;line-height:23px;}
@@ -949,6 +951,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.btn_wrap.type2{margin-top:60px;}
 
 	.tit_wrap{margin-bottom:32px;}
+	.tit_wrap > a .side.btn_more {height:32px;}/* 2024-05-09 모듈 타이틀 링크영역 수정 */
 	.tit_wrap .tit{font-size:22px;line-height:32px;}
 	.tit_wrap .btn_more{display:block;width:32px;height:32px;margin-right:-5px;padding:0;}
 	.tit_wrap .btn_more span{display:none;}

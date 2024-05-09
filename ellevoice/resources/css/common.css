@@ -785,7 +785,7 @@ background:#fff;overflow:hidden;z-index:230}
 }
 @media (max-width:768px){
 	/* 구글광고배너 */
-	.ad_inread .ad_google div{margin:80px auto;}
+	.ad_inread .ad_google div{margin:80px auto;}/* 2024-05-08 수정 */
 
 	.header .cont_inner{justify-content: space-between;}
 	.header .logo{margin-left:0;}

@@ -277,7 +277,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 /* writer */
 .writer_list > li {position: relative;}
 .writer_list > li > a {display: flex;flex-direction: column;align-items: center;}
-.writer_list .btn_ico.dibs {position: absolute;top: 180px;left: 50%;transform: translateX(-50%);width: 40px;height: 40px;margin-left: 70px;}
+.writer_list .btn_ico.dibs {position: absolute;top: 156px;left: 50%;transform: translateX(-50%);width: 40px;height: 40px;margin-left: 70px;}
 .writer_list .img_area {position: relative;width: 180px;height: 180px;}
 .writer_list .img {overflow: hidden;position: relative;width: 100%;padding-top: 100%;background: url("../images/img_writer_default.png") no-repeat center center / contain;border-radius: 50%;}
 .writer_list .img img {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;background-color:#fff;}
@@ -333,7 +333,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
 .newsletter .newsletter_head {position: relative;display: flex;align-items: center;min-height: 83px;justify-content: center; margin-bottom: 50px;border-top: 1px solid #999;border-bottom: 1px solid #999;}
 .newsletter .newsletter_head h4 {font-size: 28px;font-weight: 700;line-height: 41px;}
 .newsletter .newsletter_head .to,
-.newsletter .newsletter_head .from {position: absolute;font-family: NotoSans;font-size: 18px;line-height: 24px;}
+.newsletter .newsletter_head .from {position: absolute;font-family: NotoSans;font-size: 18px;line-height: 24px;font-weight: 400;}
 .newsletter .newsletter_head .to em,
 .newsletter .newsletter_head .from em {font-family: SaolDisplay;}
 .newsletter .newsletter_head .to {left: 161px;}
@@ -604,7 +604,7 @@ body.is_pc .photoViewer .pv_cont .swiper-slide .pv_img img { height:100%}
     .newsletter .newsletter_head {justify-content: space-between;min-height: 70px;margin-bottom: 32px;border-top-color: #111;border-bottom-color: #111;}
     .newsletter .newsletter_head h4 {font-size: 18px;line-height: 26px;order: 2;}
     .newsletter .newsletter_head .to,
-    .newsletter .newsletter_head .from {position: relative;font-size: 12px;line-height: 17px;width:66px;}/* 2024-04-11 수정 */
+    .newsletter .newsletter_head .from {position: relative;font-size: 12px;line-height: 17px;width:66px;font-weight:400;}/* 2024-05-13 수정 */
     .newsletter .newsletter_head .to {left: 0;order: 1;}
     .newsletter .newsletter_head .from {right: 0;order: 3;text-align:right;}
     .newsletter .newsletter_list {row-gap: 15px;}/* 2024-04-11 수정 */

@@ -67,6 +67,15 @@ body.is_mobile  .main_visual img.mo {display:block;width:100%;}/* 2024-04-11 수
 .kv_video .itembox iframe.pc{display:block;}
 .kv_video .itembox iframe.mo{display:none;}
 .kv_video .itembox .link{display:block;position:absolute;left:0;top:0;bottom:0;right:0;}
+/* 2024-05-13 추가 */
+@media (max-width:768px){
+	.kv_video{overflow:hidden;height:600px;margin-bottom:20px;}
+	.kv_video .itembox{height:100%;padding:0;}
+	.kv_video .itembox iframe{width:1080px;height:605px;left:50%;transform:translateX(-50%);overflow:hidden;}
+	.kv_video .itembox iframe.pc{display:none;}
+	.kv_video .itembox iframe.mo{display:block;}
+}
+
 
 /***********************************************************************
 newsletter

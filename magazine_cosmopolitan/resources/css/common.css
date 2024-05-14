@@ -77,7 +77,7 @@ a:hover{text-decoration:none;}
 /* common */
 :root{
 	/* --vh:100vh; */
-	--point : #EE7BAE;
+	--point : #FF1493;
 	--module-gap : 180px;
 }
 
@@ -603,6 +603,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* title */
 .tit_wrap{margin-bottom:40px;}
+.tit_wrap > a {display:block;}/* 2024-05-14 모듈 타이틀 링크영역 수정 */
 .tit_wrap .tit{overflow:hidden;position:relative;font-size:32px;font-weight:500;line-height:46px;color:#111;letter-spacing:0;}
 .tit_wrap .side{margin-left:auto;flex-shrink:0;}
 .tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:11.5px 10px;font-size:16px;color:#111;line-height:23px;}
@@ -692,7 +693,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* 공통 : D모듈 & 3열 리스트 */
 .atc_list_wrap{margin-bottom:var(--module-gap);}
-.atc_list_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.atc_list_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #FF1493 100%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .atc_list li{width:33.333%;padding:0 12px;}
 .atc_list .atcbox .unitbox{display:flex;align-items:center;position:relative;margin-top:16px;}
@@ -703,7 +704,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* O모듈 (비디오모듈) */
 .vdo_atc_wrap{margin-bottom:var(--module-gap);}
-.vdo_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #EE7BAE 0%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.vdo_atc_wrap .tit_wrap .tit{font-family:'Druk Wide Web', 'Noto Sans KR';font-size:44px;line-height:53px;background:linear-gradient(180deg, #FF1493 100%, rgba(238, 123, 174, 0.38) 116.98%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .vdo_atc_list ul{display:flex;flex-wrap:wrap;gap:50px 0;margin:0 -12px 0;}
 .vdo_atc_list li{width:50%;padding:0 12px;}
 .vdo_atc_list .atcbox .imgbox{padding-top:62.585%;}

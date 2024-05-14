@@ -1,0 +1,12 @@
+
+/* 기본 스타일: 모든 항목 표시 */
+li.article-item {
+    display: block;
+}
+
+/* 모바일 화면에서 11번째 항목부터 숨김 */
+@media (max-width: 768px) {
+    li.article-item:nth-child(n+11) {
+        display: none;
+    }
+}

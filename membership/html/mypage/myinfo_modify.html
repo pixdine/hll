@@ -423,6 +423,35 @@
             </div>
             <p class="col_txt">* 취향 맞춤 뉴스레터 / 알림 서비스를 신청하시면, 서비스와 관련된 새로운 소식, 이벤트 안내, 혜택 등 다양한 정보를 빠르게 제공해드려요!</p>
           </div>
+          <!--D: 관심 카테고리 선택 2024-05-16 추가-->
+          <div class="body_cont01 bc_space01 interest">
+            <div class="tit_wrap02">
+              <h3 class="stit">관심 카테고리 선택</h3>
+            </div>
+            <div class="input_chk_type">
+              <div class="chk_all">
+                <span class="chk_in">
+                  <input type="checkbox" id="checkAll03" name="interest">
+                  <label for="checkAll03"><span>전체</span></label>
+                </span>
+              </div>
+              <ul class="chk_list">
+                <li><span class="chk_in"><input type="checkbox" id="check8" name="interest"><label for="check8"><span>패션</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check9" name="interest"><label for="check9"><span>뷰티</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check10" name="interest"><label for="check10"><span>셀럽</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check11" name="interest"><label for="check11"><span>엔터테인먼트</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check12" name="interest"><label for="check12"><span>여행&음식</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check13" name="interest"><label for="check13"><span>테크</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check14" name="interest"><label for="check14"><span>커리어</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check15" name="interest"><label for="check15"><span>사회&정책</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check16" name="interest"><label for="check16"><span>아트&디자인</span></label></span></li>
+                <li><span class="chk_in"><input type="checkbox" id="check17" name="interest"><label for="check17"><span>릴레이션십&연애</span></label></span></li>
+              </ul>
+            </div>
+            <p class="col_txt">*  관심 카테고리를 선택하시면, 연관 콘텐츠를 알아서 추천해 드려요!</p>
+          </div>
+          <!-- // D: 관심 카테고리 선택 -->
+          
           <div class="tbl_btm_area">
             <button type="button" class="btn_txt03"><span>회원탈퇴하기</span></button>
             <div class="btn_area btm_only">
@@ -478,8 +507,8 @@
 
   <script>
     $(document).ready(function () {
-      // "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수
-      $("#checkAll, #checkAll02").on("click", function () {
+      // "전체 선택" 체크 박스가 클릭되었을 때 호출되는 함수 2024-05-16 #checkAll03추가
+      $("#checkAll, #checkAll02, #checkAll03").on("click", function () {
         toggleAllSubCheckboxes(this.name, this.checked);
       });
 

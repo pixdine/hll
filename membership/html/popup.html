@@ -180,6 +180,7 @@
                         <!-- <button type="button" data-popup-open="popup_11"><span>통합로그인 >  iframe</span></button><br>-->
                         <button type="button" data-popup-open="popup_8"><span>회원가입 불가</span></button><br>
                         <button type="button" data-popup-open="popup_12"><span>통합로그인</span></button><br>
+                        <button type="button" data-popup-open="popup_17"><span>관심 카테고리 선택</span></button><br><!-- 2024-05-16 추가 -->
 						<button type="button" data-alert-open="alert_1"><span>얼럿1_개인정보수정</span></button><br>
 						<button type="button" data-alert-open="alert_2"><span>얼럿2_개인정보수정 완료</span></button><br>
                         <button type="button" data-alert-open="alert_3"><span>얼럿3_쿠폰재발송</span></button><br>
@@ -195,6 +196,7 @@
                         <button type="button" data-alert-open="login_al1"><span>얼럿1_로그인실패</span></button><br>
                         <button type="button" data-alert-open="login_al2"><span>얼럿2_로그인실패_비밀번호재설정</span></button><br>
                         <!--E: 2023-12-28 : 로그인 실패 팝업 추가 -->
+                        <button type="button" data-alert-open="alert_13"><span>얼럿13_관심카테고리</span></button><br><!-- 2024-05-16 추가 -->
 					</div>
                 </div>
             </div>
@@ -1545,6 +1547,116 @@
     </div>
     <!--E: 2023-12-28 : 로그인 실패 팝업 추가 --> 
 
+    <!-- 관심카테고리 alter 2024-05-16 추가 -->
+    <div class="popup_alert" data-alert="alert_13">
+        <div class="popup_alert_inner">
+            <div class="popup_alert_cont">
+                <p class="alert_txt">
+                    카테고리 저장 완료!
+                </p>
+                <p class="alert_subtxt type02">
+                    카테고리 저장이 완료되었습니다.<br>관심 카테고리는 <strong>[마이페이지 > 회원정보 수정]</strong><br>페이지에서 수정하실 수 있습니다.
+                </p>
+            </div>
+            <div class="popup_alert_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype1"><span>확인</span></button>
+                </div>
+            </div>
+            <div class="popup_close">
+                <button type="button" class="btn_close" data-alert-close="alert_13"><span class="blind">닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- // 관심카테고리 alter --> 
+
+    <!-- 관심 카테고리 선택 팝업 2024-05-16 추가-->
+    <div class="popup_full" data-popup="popup_17">
+        <div class="popup_inner">
+            <div class="popup_head">
+                <h2 class="tit">관심 카테고리 선택</h2>
+                <div class="popup_close">
+                    <button type="button" class="btn_close" data-popup-close="popup_17"><span
+                            class="blind">닫기</span></button>
+                </div>
+            </div>
+            <div class="popup_cont int">
+                <div class="pop_tit_wrap">
+                    <p>관심 있는 카테고리를 선택하시면 연관 콘텐츠를 알아서 추천해드려요!</p>
+                </div>
+                <ul class="int_list">
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int01" name="int" checked>
+                            <label for="int01">패션</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int02" name="int"ㄴ>
+                            <label for="int02">뷰티</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int03" name="int">
+                            <label for="int03">셀럽</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int04" name="int">
+                            <label for="int04">엔터테인먼트</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int05" name="int">
+                            <label for="int05">여행&amp;음식</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int06" name="int">
+                            <label for="int06">테크</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int07" name="int">
+                            <label for="int07">커리어</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int08" name="int">
+                            <label for="int08">사회&amp;정책</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int09" name="int">
+                            <label for="int09">아트&amp;디자인</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="cate">
+                            <input type="checkbox" id="int10" name="int">
+                            <label for="int10">릴레이션십&amp;연애</label>
+                        </span>
+                    </li>
+                </ul>
+      
+            </div>
+            <div class="popup_bottom">
+                <div class="btn_wrap">
+                    <button type="button" class="btn bctype2"><span>건너뛰기</span></button>
+                    <button type="button" class="btn bctype1"><span>저장하기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// 관심 카테고리 선택 팝업-->
 
 	<!-- js -->
 	<script src="../resources/js/swiper.min.js"></script>

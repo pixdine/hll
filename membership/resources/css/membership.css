@@ -67,6 +67,8 @@ body.is_mobile .top_visual img.pc {display:none}
 .point_card.bazaar .logo {width:124.06px; height:32.32px}
 .point_card.esquire .logo {width:125px; height:26px}
 .point_card.eee .logo {width:93px; height:28px}
+.point_card.ellevoice .logo {width:164px; height:32px}/*2024-05-16 추가*/
+.point_card.artwalk .logo {width:132px; height:30px}/*2024-05-16 추가*/
 .point_card .card_body { padding-top:40px; margin:0 40px; height:209px }
 .point_card .card_body dl dt { font-size:18px; font-weight:500; line-height:1.4}
 .point_card .card_body dl dd { display:flex; flex-direction:row;align-items: center; justify-content: space-between; margin-top:24px;  }
@@ -124,6 +126,8 @@ body.is_mobile .top_visual img.pc {display:none}
     .point_card.bazaar .logo object {width:66.85%}
     .point_card.esquire .logo object {width:91.2%}
     .point_card.eee .logo object {width:67.74%}
+    .point_card.ellevoice .logo object {width:70%}/*2024-05-16 추가*/
+    .point_card.artwalk .logo object {width:70%;}/*2024-05-16 추가*/
     .point_card .card_body { padding-top:20px; margin:0 20px}
     .point_card .card_body dl dt { font-size:14px}
     .point_card .card_body dl dd .c_point { font-size:32px}

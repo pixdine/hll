@@ -288,6 +288,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .ad_top .ad_google div {margin:20px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread{position:relative;width:100%;text-align:center;z-index:2;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
 .ad_inread .ad_google div {margin:180px auto;} /* 2024-01-09 > google 광고구좌 마진값 수정 */
+.ad_inread .ad_google div span.ad_txt {display:block;width:100%;text-align:center;font-size:14px;line-height:24px;letter-spacing:0.02em;font-weight:400;color:#666;}/* 2024-05-17 광고문구 추가*/
 .atc_list li.ad_inread,
 .vdo_atc_list li.ad_inread{width:100%;padding:0;}
 .atc_list li.ad_inread div,
@@ -610,6 +611,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 /* title */
 .tit_wrap{margin-bottom:40px;}
+.tit_wrap > a {display:block;}/* 2024-05-17 모듈 타이틀 링크영역 수정 */
 .tit_wrap .tit{overflow:hidden;position:relative;font-size:32px;font-weight:500;line-height:46px;color:#111;letter-spacing:0;}
 .tit_wrap .side{margin-left:auto;flex-shrink:0;}
 .tit_wrap .btn_more{display:inline-flex;align-items:center;position:relative;margin-right:-10px;padding:11.5px 10px;font-size:16px;color:#111;line-height:23px;}
@@ -916,7 +918,6 @@ background:#fff;overflow:hidden;z-index:230}
 .comm_error .err_comment01 { font-size:36px; font-weight:700; line-height:1.45; letter-spacing:-0.01em; margin:0 20px;}
 .comm_error .err_comment02 { font-size:18px; font-weight:500; line-height:1.45; color:#666; margin:16px 20px 0 }
 
-
 /* 2024-04-15 추가 검색결과 엘르보이스 */
 .essay_list_wrap {margin-bottom:180px;}
 .essay_list {display: flex;flex-wrap: wrap;gap: 50px 24px;}
@@ -943,7 +944,6 @@ background:#fff;overflow:hidden;z-index:230}
 .essay_cate.money::before {mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2815 15.2796V13.5277L16.899 12.8581L16.2294 11.2389L17.4672 10.0012L16.2294 8.76181L16.899 7.14424L15.2815 6.47461V4.72279H13.5297L12.86 3.10522L11.2425 3.77484L10.0031 2.53711L8.76538 3.77484L7.14782 3.10522L6.47656 4.72279H4.72638V6.47461L3.10718 7.14424L3.77843 8.76181L2.53906 10.0012L3.77843 11.2389L3.10718 12.8581L4.72638 13.5277V15.2796H6.47656L7.14782 16.8971L8.76538 16.2259L10.0031 17.4652L11.2425 16.2259L12.86 16.8971L13.5297 15.2796H15.2815Z' fill='%23E5B65A'/%3E%3C/svg%3E");background-color: #E5B65A;}
 .essay_cate.green::before {mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6331 6.78688C16.6331 4.69616 14.9369 3 12.8462 3C11.6052 3 10.5066 3.59922 9.81735 4.52261C9.12645 3.60086 8.02788 3 6.78687 3C4.69615 3 3 4.69616 3 6.78688C3 8.02789 3.59922 9.12646 4.52261 9.81737C3.59922 10.5066 3 11.6052 3 12.8462C3 14.9369 4.69615 16.6331 6.78687 16.6331C8.02788 16.6331 9.12481 16.0339 9.81572 15.1121C10.5066 16.0339 11.6052 16.6331 12.8446 16.6331C14.9353 16.6331 16.6314 14.9369 16.6314 12.8462C16.6314 11.6052 16.0322 10.5083 15.1105 9.81737C16.0322 9.12646 16.6314 8.02953 16.6314 6.78852' fill='%23008C80'/%3E%3C/svg%3E%0A");background-color: #008C80;}
 .essay_cate.love::before {mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.1342 6.82789C17.1342 4.63729 15.3595 2.86255 13.1689 2.86255C11.8689 2.86255 10.7196 3.4896 9.99598 4.45556C9.27233 3.4896 8.12301 2.86255 6.8247 2.86255C4.63411 2.86255 2.85938 4.63729 2.85938 6.82789C2.85938 7.25847 2.92977 7.67269 3.05747 8.06071C4.20352 11.9671 9.99598 17.1374 9.99598 17.1374C9.99598 17.1374 15.7901 11.9671 16.9361 8.06071C17.0638 7.67269 17.1342 7.25847 17.1342 6.82789Z' fill='%23FF80B7'/%3E%3C/svg%3E");background-color: #FF80B7;}
-
 
 
 /************************* Media Query *************************/
@@ -984,6 +984,7 @@ background:#fff;overflow:hidden;z-index:230}
 
 	/* 구글광고배너 */
 	.ad_inread .ad_google div{margin:80px auto;}
+	.ad_inread .ad_google div span.ad_txt {font-size:12px;}/* 2024-05-17 광고문구 추가*/
 
 	.btn{min-width:auto;}
 	.has_plus:after{background-size:12px auto;}

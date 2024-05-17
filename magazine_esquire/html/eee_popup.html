@@ -551,20 +551,23 @@
 					<div class="map_item">
 						<div class="map_inner">
 							<div class="map_api">
+								<div id="kakao_map" style="display:block;position:relative;overflow:hidden;width:100%;z-index:-1;"><!-- 2024-05-17 지도 height값: pc-333px/mo-209px (css에 잡아놓은 값 적용 안될경우 inline으로 넣어주세요.) -->
+									<img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지" style="display:block;width:100%;height:100%;object-fit:cover;"><!-- D: 지도 샘플 이미지 -->
+								</div>
 								<!--
 									D: 개발에서 지도 API 연동 필요. 
 									현재는 지도 샘플 이미지를 넣어두었습니다. API 연동 시 샘플 이미지 삭제 바랍니다.
 									마커 아이콘은 우선 샘플로 위치값을 잡아두었습니다. API 연동 시 삭제 바랍니다.
 									API 연동 시 마커 아이콘 이미지 활용 필요 (이미지 사이즈 40*40 , 24*24)
 								-->
-								<img src="../resources/images/temp/temp_map.jpg" alt="샘플 이미지" style="display:block;width:100%;height:100%;object-fit:cover;"><!-- D: 지도 샘플 이미지 -->
 								<span style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)" class="point"><img src="../resources/images/ico_marker_org.svg" alt="마커"></span><!-- D: 샘플 point 마커 -->
 								<span style="position:absolute;left:10%;top:60%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
 								<span style="position:absolute;left:20%;top:30%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
 								<span style="position:absolute;left:70%;top:20%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
 								<span style="position:absolute;left:10%;top:10%;transform:translate(-50%, -50%);"><img src="../resources/images/ico_marker_gry.svg" alt="마커"></span><!-- D: 샘플 마커 -->
 								<button type="button" class="btn_ico reset"><span class="blind">현재 지도에서 다시 찾기</span></button><!-- D: 현재 지도에서 다시 찾기 버튼-->
-								<button type="button" class="btn_ico kakao "><span class="blind">카카오 지도 보기</span></button><!-- D: 카카오 지도 보기 버튼-->  
+								<button type="button" class="btn_ico kakao "><span class="blind">카카오 지도 보기</span></button><!-- D: 카카오 지도 보기 버튼-->
+								<button type="button" class="btn_return">내 위치로 다시 오기</button><!-- D:내 위치로 다시 오기 버튼 2024-05-17 추가-->  
 							</div>
 						</div>
 					</div>

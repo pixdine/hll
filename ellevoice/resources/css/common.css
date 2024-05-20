@@ -361,7 +361,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .ad_google {text-align:center;}/* 2024-04-11 수정 */
 .ad_top .ad_google div {margin:20px auto;}/* 2024-04-11 수정 */
 .ad_inread{position:relative;width:100%;text-align:center;z-index:2;}/* 2024-05-08 수정 */
-.ad_inread .ad_google div span.ad_txt {display:block;width:100%;text-align:center;font-size:14px;line-height:24px;letter-spacing:0.02em;font-weight:400;color:#666;cursor:default;}/* 2024-05-16 광고문구 추가*/
+.ad_inread .ad_google div::before {display:block;content:'ADVERTISEMENT';width:100%;text-align:center;font-size:14px;line-height:24px;letter-spacing:0.02em;font-weight:400;color:#666;}/* 2024-05-20 수정*/
 .ad_inread .ad_google div {margin:180px auto;}/* 2024-05-08 수정 */
 .atc_list li.ad_inread,
 .vdo_atc_list li.ad_inread{width:100%;padding:0;}/* 2024-05-08 수정 */
@@ -787,7 +787,7 @@ background:#fff;overflow:hidden;z-index:230}
 @media (max-width:768px){
 	/* 구글광고배너 */
 	.ad_inread .ad_google div{margin:80px auto;}/* 2024-05-08 수정 */
-	.ad_inread .ad_google div span.ad_txt {font-size:12px;}
+	.ad_inread .ad_google div::before {font-size:12px;}/* 2024-05-20 수정*/
 
 	.header .cont_inner{justify-content: space-between;}
 	.header .logo{margin-left:0;}

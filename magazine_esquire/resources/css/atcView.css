@@ -368,6 +368,7 @@ body.is_mobile .shopping_list ul:has(li:only-child) {justify-content:center;padd
 .map_hotplace_list ul li .txtbox dd {margin:8px 0;margin-bottom:0;font-size:12px;line-height:18px;color:#999;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
 .map_hotplace_list ul li .dibs {position:absolute;width:24px;height:24px;bottom:45px;right:12px;background:url(../images/ico_dibs_line.svg) no-repeat;background-size:100%;}
 .map_hotplace_list ul li .dibs.on {background:url(../images/ico_dibs_line_on.svg) no-repeat;background-size:100%;} 
+.map_hotplace_list ul li.select .txtbox dt {color:#FF4100;} /* 2024-05-27 추가 */
 
 
 /************************* Media Query *************************/

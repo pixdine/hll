@@ -25,7 +25,7 @@
 .hotplace_list_wrap .top_area  .js-btn-dibs {display:none;}
 .hotplace_list_wrap .top_area  .js-btn-dibs.on {display:block;}
 
-.g_box + .hotplace_list {margin-top:120px;}
+/* .g_box + .hotplace_list {margin-top:120px;} 2024-05-27 삭제 */
 .hotplace_list {}
 .hotplace_list ul {display:flex;flex-wrap:wrap;gap:50px 24px;}
 .hotplace_list ul li {width:calc(33.33% - 16px);border-radius:24px 24px 0 0 ;overflow:hidden;position:relative;}
@@ -51,8 +51,10 @@
 .filter dl dd {display:flex;gap:8px;flex-wrap:wrap;padding:10px;padding-left:0;}
 .filter dl .chip {display: inline-flex;gap: 4px;align-items: center;justify-content: center;height: 32px;padding: 0 12px;background-color: var(--point);color: #fff;font-size: 12px;;border-radius: 20px;}
 .filter dl .chip .btn_del {width: 16px;height: 16px;background: url("../images/ico_close_20_be.svg") no-repeat center center / contain;}
-.g_box.filter + .g_box.no_data {margin-top:40px;}
+/* .g_box.filter + .g_box.no_data {margin-top:40px;} 2024-05-27 삭제 */
 .g_box.no_data {height:412px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#666;}
+.g_box.filter.open ~ .g_box.no_data {margin-top:40px;}/* 2024-05-27 추가 */
+.g_box.filter.open ~ .hotplace_list {margin-top:120px;}/* 2024-05-27 추가 */
 
 .eee .banner_wrap {margin-top:120px;}
 .eee .banner_wrap .mo_img {display:none;}
@@ -74,7 +76,7 @@
 .popup_filter .popup_cont {overflow-y: hidden;margin: 0 !important;padding-right: 28px;}
 .popup_filter .select_wrap {overflow-y: hidden;display: flex;flex-direction: column;margin: 40px -28px 0;height: 330px;max-height:330px;}
 .popup_filter .tab_wrap {flex: 1;border-bottom: 1px solid #DBDBDB;overflow: hidden;}
-.popup_filter .tab_wrap .tab_menu.type02{padding: 13px 0;border-bottom: 1px solid #DBDBDB;}
+.popup_filter .tab_wrap .tab_menu.type02{padding: 13px 12px;border-bottom: 1px solid #DBDBDB;}/* 2024-05-27 수정 */
 .popup_filter .tab_wrap .tab_menu.type02 > ul {margin: 0;}
 .popup_filter .tab_wrap .tab_menu.type02 > ul > li > a {font-size: 18px;}
 .popup_filter .tab_wrap .tab_menu.type02 > ul > li.on > a {color: var(--point);}
@@ -139,6 +141,7 @@
 
 	.hotplace_list_wrap {margin-bottom:80px;}
 	.hotplace_list_wrap .top_area {flex-wrap:wrap;flex-direction:column-reverse;margin-bottom:24px;}
+	.hotplace_list_wrap .top_area .count {font-weight:700;}/* 2024-05-27 추가 */
 	.hotplace_list_wrap .top_area .right_box {margin-bottom:14px;height:22px;}
 	.hotplace_list_wrap .top_area a span {padding-bottom:2px;}
 	.hotplace_list_wrap .top_area a span.all {background:url(../images/ico_all.svg) no-repeat right 2px / 16px 16px;}
@@ -146,7 +149,7 @@
 	.hotplace_list_wrap .top_area a span.map {background:url(../images/ico_marker_s.svg) no-repeat right 2px / 16px 16px;}
 	.hotplace_list_wrap .top_area a span.detail {background:url(../images/ico_detail.svg) no-repeat right 2px / 16px 16px;}
 
-	.g_box + .hotplace_list {margin-top:40px;}
+	.g_box + .hotplace_list {margin-top:32px;}/* 2024-05-27 수정 */
 	.hotplace_list {}
 	.hotplace_list ul {row-gap:24px;}
 	.hotplace_list ul li {width:100%;}
@@ -160,6 +163,7 @@
 
 	.g_box.no_data {height:208px;font-size:14px;}
 	.g_box.no_data p span {display:block;text-align:center;}
+	.g_box.filter.open ~ .hotplace_list {margin-top:40px;}/* 2024-05-27 추가 */
 
 	.eee .banner_wrap {margin-top:40px;}
 	.eee .banner_wrap .pc_img {display:none;}
@@ -180,7 +184,7 @@
 	.popup_filter .popup_cont .inputbox.search {margin-top:-16px;}
 	.popup_filter .select_wrap {margin-top:20px;height:calc(100% - 56px);max-height:calc(100% - 56px);}
 	.popup_filter .tab_wrap {border-bottom:none;height:100%;}
-	.popup_filter .tab_wrap .tab_menu.type02 {padding:14px 8px;}
+	.popup_filter .tab_wrap .tab_menu.type02 {padding:14px 12px;}/* 2024-05-27 수정 */
 	.popup_filter .tab_wrap .tab_menu.type02 > ul > li > a {font-size:16px;padding:0 12px;}
 	.popup_filter .tab_cont:not(.on) .region_wrap .region_do .region_list::before {left:50%;}
 	.popup_filter .tab_cont:not(.on) .region_wrap .region_do .region_list::after {display:none;}

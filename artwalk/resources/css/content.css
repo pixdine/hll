@@ -39,7 +39,7 @@
 .dtl_info .cont .btn_link{font-size:inherit;}
 .dtl_info .flag_area{line-height:1;}
 .dtl_info .date_box{display:flex;flex-direction:column;}
-.dtl_info .date_box .date{font-family:Gotham;font-weight:500;}
+.dtl_info .date_box .date{font-weight:500;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .dtl_info .date_box .flag_area{margin-top:8px;}
 .dtl_info .place_box{display:flex;flex-wrap:wrap;gap:4px;}
 .dtl_info  .item_list li ~ li{margin-top:8px;}
@@ -93,7 +93,7 @@
 .editor_comment .imgbox{overflow:hidden;position:relative;width:27.963%;height:0;margin-right:40px;padding-top:17.5%;}
 .editor_comment .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
 .editor_comment .txtbox{flex:1;}
-.editor_comment .txtbox .tit{position:relative;margin-bottom:12px;font-family:Gotham;font-size:24px;font-weight:500;line-height:32px;}
+.editor_comment .txtbox .tit{position:relative;margin-bottom:12px;font-size:24px;font-weight:500;line-height:32px;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .editor_comment .txtbox .tit:before{content: '';position:absolute;top:50%;left:0;z-index:1;width:100%;height:1px;background-color:#ccc;}
 .editor_comment .txtbox .tit strong{display:inline-block;position:relative;padding-right:24px;z-index:2;background-color:#f7f7f7;font-weight:500;}
 .editor_comment .editor_by{margin-top:8px;color:#666;}
@@ -102,7 +102,7 @@
 /* 리스트상단 */
 .list_top{display:flex;flex-wrap:wrap;align-items:center;}
 .list_top .total{font-size:16px;line-height:23px;color:#666;}
-.list_top .total .count{font-family:Gotham;font-size:18px;color:#111;}
+.list_top .total .count{font-size:18px;color:#111;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .list_top .side{display:flex;margin-left:auto;}
 
 /* 리뷰 모듈 */
@@ -131,7 +131,7 @@
 .comment_wrap{width:100%;margin-top:80px;padding-top:80px;border-top:1px solid #dbdbdb;}
 .comment_wrap .tit_wrap{margin-bottom:24px;}
 .comment_wrap .tit_wrap .tit{font-size:16px;line-height:23px;}
-.comment_wrap .tit_wrap .tit .num{font-family:Gotham;font-weight:500;color:#FF5081;line-height:22px;}
+.comment_wrap .tit_wrap .tit .num{font-weight:500;color:#FF5081;line-height:22px;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .comment_wrap .btn_more_wrap{max-width:996px;margin:80px auto 0;}
 .comment_list_area ~ .comment_write_area{margin-top:60px;}
 .comment_list{max-width:996px;margin:0 auto;}
@@ -155,7 +155,7 @@
 .comment_txt~ .comment_img{margin-top:16px;}
 .comment_img{max-width:384px;}/* 2024-02-26 : 댓글 이미지 최대 사이즈 설정 */
 .comment_img a{display:block;width:100%;height:100%;}
-.comment_img .total{display:block;height:24px;padding:0 8px;position:absolute;right:0;bottom:0;background-color:rgba(0,0,0,.6);font-family:Gotham;font-size:12px;font-weight:500;line-height:26px;color:#fff;}
+.comment_img .total{display:block;height:24px;padding:0 8px;position:absolute;right:0;bottom:0;background-color:rgba(0,0,0,.6);font-size:12px;font-weight:500;line-height:26px;color:#fff;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .comment_modify{display:none;}
 
 /* 더보기(수정/삭제/취소) */
@@ -190,7 +190,7 @@
 .atcbox a{display:block;position:relative;width:100%;height:100%;}
 .atcbox .imgbox{overflow:hidden;position:relative;width:100%;height:0;padding-top:100%;}
 .atcbox .imgbox img{display:block;position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;}
-.atcbox .cate{display:block;position:relative;margin-bottom:6px;font-family:Gotham;font-size:11px;line-height:1;color:var(--point);}
+.atcbox .cate{display:block;position:relative;margin-bottom:6px;font-size:11px;line-height:1;color:var(--point);font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .atcbox .txtbox{margin-top:16px;}
 .atcbox .txtbox .tit{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;position:relative;height:72px;font-size:18px;font-weight:500;line-height:26px;color:#111;word-break:break-all;letter-spacing:-0.01em;}
 
@@ -267,7 +267,7 @@
 .sub .masonry_list li:nth-child(3n+1) { margin-left:0}
 .sub .masonry_list li .item_img img {width:100%}
 .sub .masonry_list li .item_info { height:119px; border:1px solid #111; padding:24px}
-.sub .masonry_list li .item_sbj{color: #111;font-family: gotham;font-weight: 500;font-size: 11px;line-height: 1;}
+.sub .masonry_list li .item_sbj{color: #111;font-weight: 500;font-size: 11px;line-height: 1;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .sub .masonry_list li .item_desc{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: ellipsis;overflow: hidden;height: 48px;margin-top: 12px;color: #111;font-weight: 500;font-size: 18px;line-height: 24px;word-break: break-all;}
 
 /*작가정보*/
@@ -447,7 +447,7 @@
 .profile_area  .user_info > span ~ span{margin-left:12px;padding-left:12px;}
 .profile_area  .user_info > span ~ span:before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:12px;background-color:#dbdbdb;}
 .profile_area .user_info .name{display:block;overflow:hidden;min-width:0;text-overflow:ellipsis;white-space:nowrap;}
-.profile_area .user_info .date{white-space:nowrap;font-family:Gotham;}
+.profile_area .user_info .date{white-space:nowrap;font-family:Montserrat;}/* 2024-05-29 폰트 수정 */
 .view_detail_body{position:relative;border-bottom:1px solid #dbdbdb;}
 .view_detail_body_cont{max-width:996px;margin:0 auto;padding-bottom:80px;font-family:'Noto Sans KR';font-size:16px;font-weight:400;line-height:28px;color:#111;}
 .view_detail_body_cont .detail_slide{margin-top:24px;}

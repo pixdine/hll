@@ -273,7 +273,7 @@ body.is_pc .moa_list .atcbox .imgbox img.is_mobile {display:none }
 .prd_info_detail .prd_detail_list li:first-child { margin-top:0}
 .prd_info_detail .prd_detail_list li:before { content:''; position:absolute; left:0; top:10px; width:3px; height:3px; border-radius: 3px 3px; background-color:#ccc}
 
-/*.input_type02 .point_total { font-size:24px; font-family:"Gotham"; line-height:1; color:var(--point); font-weight:500}*/
+/*.input_type02 .point_total { font-size:24px; font-family:Montserrat; line-height:1; color:var(--point); font-weight:500}*/
 
 .point_prd_info .prd_price {position:absolute; top:0; right:0; font-size:24px; font-weight:500; font-family:Montserrat;}/* 2024-03-19 폰트 수정 */
 .point_prd_info .prd_price span { font-size:20px; display:inline-block; margin-left:4px}

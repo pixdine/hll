@@ -532,7 +532,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_layer .popup_head{position:relative;min-height:60px;padding:28px 56px 16px;}
 .popup_layer .popup_head .tit{font-size:18px;font-weight:500;line-height:26px;text-align:center;}
 .popup_layer .popup_close{right:16px;top:20px;}
-.pop_share{max-width:320px;width:calc(100% - 40px);top:76px;right:50%;margin-right:-600px;}
+.pop_share{max-width:calc(100% - 40px);width:fit-content;top:76px;right:50%;margin-right:-600px;}/*2024-05-29 수정*/
 .pop_share .popup_cont{padding:16px 28px 28px;}
 
 /* alert */
@@ -1112,7 +1112,7 @@ background:#fff;overflow:hidden;z-index:230}
 	.popup_layer .popup_head{padding:24px 60px 16px;}
 	.popup_layer .popup_head .tit{font-size:16px;line-height:23px;}
 	.popup_layer .popup_close{right:13px;top:14px;}
-	.pop_share{max-width:320px;right:20px;top:54px;}
+	.pop_share{right:20px;top:54px;}/*2024-05-29 수정*/
 	.pop_share .popup_cont{padding:16px 32px 24px;}
 
 	.pagination{margin-top:40px;}

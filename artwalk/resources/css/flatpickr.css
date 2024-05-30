@@ -561,7 +561,7 @@ span.flatpickr-weekday:first-child {
     align-items: center;
     text-align: center;
     font-size: 12px;
-    font-family: gotham;
+    font-family: Montserrat; /* 2024-05-29 폰트수정 */
     font-weight: 500;
 }
 

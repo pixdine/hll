@@ -9,7 +9,7 @@
 .eee .subvisual .imgbox:before {display:none;}
 .hotplace_list_wrap {margin-bottom:180px;}
 .hotplace_list_wrap .top_area {display:flex;justify-content:space-between;font-weight:500;font-size:14px;margin-bottom:40px;}
-.hotplace_list_wrap .top_area .count {font-family:'Pretendard';}
+.hotplace_list_wrap .top_area .count {font-family:'Pretendard';font-weight:700;}/*2024-05-30 수정*/
 .hotplace_list_wrap .top_area .count em {font-weight:700;color: var(--point);}
 .hotplace_list_wrap .top_area .right_box {font-size:0;}
 .hotplace_list_wrap .top_area a {margin:0 12px;position:relative;font-size:14px;}
@@ -38,6 +38,8 @@
 .hotplace_list ul li .txtbox dd {margin:8px 0;font-size:12px;line-height:18px;color:#999;overflow:hidden;display:block;white-space:nowrap;text-overflow:ellipsis;}
 .hotplace_list ul li .dibs {position:absolute;width:28px;height:28px;bottom:90px;right:20px;background:url(../images/ico_dibs_line.svg) no-repeat;}
 .hotplace_list ul li .dibs.on {background:url(../images/ico_dibs_line_on.svg) no-repeat;}
+.hotplace_list ul li > .tag_box {position:absolute;bottom:28px;left:20px;}/* 2024-05-30 추가 */
+.hotplace_list ul li > .tag_box .tag {cursor: pointer;}/* 2024-05-30 추가 */
 .eee .tag_box {display:flex;gap:4px;}
 .eee .tag_box .tag {display:block;font-size:12px;line-height:24px;padding:0 8px;background-color:#C8C8C84D;color:#666;}
 
@@ -141,7 +143,6 @@
 
 	.hotplace_list_wrap {margin-bottom:80px;}
 	.hotplace_list_wrap .top_area {flex-wrap:wrap;flex-direction:column-reverse;margin-bottom:24px;}
-	.hotplace_list_wrap .top_area .count {font-weight:700;}/* 2024-05-27 추가 */
 	.hotplace_list_wrap .top_area .right_box {margin-bottom:14px;height:22px;}
 	.hotplace_list_wrap .top_area a span {padding-bottom:2px;}
 	.hotplace_list_wrap .top_area a span.all {background:url(../images/ico_all.svg) no-repeat right 2px / 16px 16px;}
@@ -156,6 +157,7 @@
 	.hotplace_list ul li .imgbox .cate {font-size:14px;}
 	.hotplace_list ul li .txtbox {padding:16px;padding-bottom:20px;height:130px;}
 	.hotplace_list ul li .dibs {bottom:86px;right:18px;}
+	.hotplace_list ul li > .tag_box {bottom:20px;left:16px;}/* 2024-05-30 추가 */
 
 	.g_box.filter {padding:24px 16px;}
 	.filter dl {margin-top:12px;font-size:14px;}

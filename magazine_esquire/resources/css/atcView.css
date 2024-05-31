@@ -308,6 +308,9 @@ body.is_mobile .shopping_list ul:has(li:only-child) {justify-content:center;padd
 .eee_veiw .txt_box dl dt:nth-of-type(2) {flex:0 1 106px;}
 .eee_veiw .txt_box dl dd {font-size:18px;line-height:24px;flex:1;}
 .eee_veiw .txt_box dl dd a {text-decoration:underline;}/* 2024-04-24 추가*/
+.eee_veiw .tag_box {display:flex;gap:4px;}/* 2024-05-30 추가*/
+.eee_veiw .txt_box dl dd.tag_box a {text-decoration:none;}/* 2024-05-30 추가*/
+.eee_veiw .tag_box .tag {display:block;font-size:12px;line-height:24px;padding:0 8px;background-color:#C8C8C84D;color:#666;}/* 2024-05-30 추가*/
 .eee_veiw .txt_box .pop_map {margin-left:12px;padding-left:20px;font-size:14px;line-height:24px;color:#FF4100;font-weight:500;text-decoration:underline;background:url(../images/ico_marker_s_org.svg) no-repeat left center;}
 .g_box.edit_cmt {padding:40px;background-color:#F7F7F7;}
 .atc_body .g_box.edit_cmt {margin:48px auto;}

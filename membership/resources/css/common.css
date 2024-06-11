@@ -589,7 +589,7 @@ input[type="search"]::-webkit-search-results-decoration{display:none;}
 .popup_cont .gray_box + .btn_wrap{margin-top:32px;}
 
 /*2024-05-16 관심카테고리 팝업 추가*/
-.popup_cont.int {min-height:381px;}
+.popup_cont.int {min-height:454px;}/* 2024-06-11 높이값 수정*/
 .popup_cont.int .pop_tit_wrap {text-align:left;margin-bottom:40px;}
 .popup_cont .int_list {display:flex;gap:16px 12px;flex-wrap:wrap;}
 .popup_cont .int_list > li {}

@@ -315,7 +315,7 @@ body.is_mobile .shopping_list ul:has(li:only-child) {justify-content:center;padd
 .g_box.edit_cmt {padding:40px;background-color:#F7F7F7;}
 .atc_body .g_box.edit_cmt {margin:48px auto;}
 .edit_cmt {font-size:16px;font-weight:400;line-height:28px;}
-.edit_cmt .tit {font-size:24px;font-weight:700;line-height:32px;font-family:'Pretendard', sans-serif;margin-bottom:12px;position:relative;}
+.edit_cmt .tit {font-size:24px;font-weight:700;line-height:32px;font-family:'Pretendard', sans-serif;margin-bottom:12px;position:relative;}/* 2024-06-03 수정*/
 .edit_cmt .tit::before {content:'';display:block;position:absolute;top:16px;right:0px;height:1px;width:calc(100% - 226px); background-color:#ccc;}
 .edit_cmt .cmt_by {margin-top:8px;}
 .edit_cmt .cmt_by em {color:#666;}

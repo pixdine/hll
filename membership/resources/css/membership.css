@@ -113,7 +113,6 @@ body.is_mobile .top_visual img.pc {display:none}
     
     .point_change_info { align-items: flex-end;}
     .point_change_info .p_logo object {width:103px; height:auto}
-    .point_change_info .p_logo.t1 object {width:71.53%; height:auto}
     .point_info_area .coupon object {width:80px; height:40px}
 
     .info_box_cont {padding:20px;margin-bottom:20px;}/* 2024-04-12 수정 */

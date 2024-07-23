@@ -88,7 +88,7 @@
 .mm .vertical.close-up .col-img {margin-left: 60px;}
 .mm .vertical.artwalk {background-color: #111;}
 .mm .vertical.artwalk .col-img {margin-left: 15px;}
-.mm .vertical.eee {background-color: #F7F7F7;}
+.mm .vertical.eee {background-color: #FAF0E1;} /* 2024-07-22 background 수정 */
 .mm .vertical.eee .col-img {margin-left: 207px;}
  
 .floating-menu {position: fixed; bottom: 80px; right: 80px; z-index: 50; transition: 0.5s; opacity: 0;}

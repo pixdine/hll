@@ -41,7 +41,7 @@
 .hotplace_list ul li > .tag_box {position:absolute;bottom:28px;left:20px;}/* 2024-05-30 추가 */
 .hotplace_list ul li > .tag_box .tag {cursor: pointer;}/* 2024-05-30 추가 */
 .eee .tag_box {display:flex;gap:4px;}
-.eee .tag_box .tag {display:block;font-size:12px;line-height:24px;padding:0 8px;background-color:#C8C8C84D;color:#666;}
+.eee .tag_box .tag {display:block;font-size:12px;line-height:24px;padding:0 8px;background-color:#C8C8C84D;color:#666; white-space: nowrap} /* 2024-08-05 수정 */
 
 .g_box {background-color:var(--bg_gray);}
 .g_box.filter {padding:32px;}
